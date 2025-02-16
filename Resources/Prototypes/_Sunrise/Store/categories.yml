@@ -186,3 +186,16 @@
   id: NTEquipment
   name: store-category-ntequipment
   priority: 8
+
+# Starlight Salvage
+- type: storeCategory
+  id: SalvageEquipment
+  name: Equipment
+
+- type: storeCategory
+  id: SalvageWeapons
+  name: Weapons
+
+- type: storeCategory
+  id: SalvageConsumeables
+  name: Consumeables

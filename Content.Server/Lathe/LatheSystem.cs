@@ -248,6 +248,11 @@ namespace Content.Server.Lathe
                     var result = Spawn(resultProto, Transform(uid).Coordinates);
                     EnsureComp<DontSellComponent>(result); // Sunrise-Edit
                     _stack.TryMergeToContacts(result);
+                    if (comp.CurrentRecipe.PrintTicket)
+                    {
+                        var tickets = Spawn(comp.CurrentRecipe.TicketProtoId, Transform(uid).Coordinates);
+                        _stack.TryMergeToContacts(tickets);
+                    }
                 }
 
                 if (currentRecipe.ResultReagents is { } resultReagents &&
