@@ -45,3 +45,9 @@
   name: collective-mind-changeling
   keycode: 'г'
   color: "#ff75a8"
+
+- type: collectiveMind
+  id: Spider
+  name: collective-mind-spider
+  keycode: 'у'
+  color: "#3f2f20"

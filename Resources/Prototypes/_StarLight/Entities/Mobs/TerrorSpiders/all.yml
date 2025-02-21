@@ -76,6 +76,10 @@
   - type: NoSlip
   - type: Spider
   - type: IgnoreSpiderWeb
+  - type: CollectiveMind
+    minds:
+    - Arachnids
+    - Spider
   - type: Bloodstream
     bloodMaxVolume: 150
     bloodReagent: CopperBlood
@@ -134,7 +138,7 @@
   parent: MobTerrorSpider
   id: MobTerrorRed
   components:
-  - type: VentCrawler
+  #- type: VentCrawler
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -174,7 +178,7 @@
     - map: ["enum.DamageStateVisualLayers.Base", "movement"]
       state: alive
       sprite: _Starlight/Mobs/Animals/Spiders/terror_gray2.rsi
-  - type: VentCrawler
+  #- type: VentCrawler
   - type: StealthOnWeb
   - type: MobThresholds
     thresholds:
@@ -220,7 +224,7 @@
     - map: ["enum.DamageStateVisualLayers.Base", "movement"]
       state: alive
       sprite: _Starlight/Mobs/Animals/Spiders/terror_green.rsi
-  - type: VentCrawler
+  #- type: VentCrawler
   - type: MobThresholds
     thresholds:
       0: Alive

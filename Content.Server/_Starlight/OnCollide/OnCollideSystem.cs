@@ -1,6 +1,6 @@
-using Content.Shared.Starlight.Antags.Abductor;
-using Content.Shared.Starlight.Medical.Surgery;
-using Content.Shared.Starlight.OnHit;
+//using Content.Shared.Starlight.Antags.Abductor;
+//using Content.Shared.Starlight.Medical.Surgery;
+//using Content.Shared.Starlight.OnHit;
 using Content.Shared.Actions;
 using Content.Shared.DoAfter;
 using Robust.Shared.Prototypes;
@@ -11,7 +11,7 @@ using Content.Server.Atmos.Components;
 using Robust.Shared.Physics.Events;
 using Content.Shared._Starlight.OnCollide;
 
-namespace Content.Server.Starlight.Antags.Abductor;
+//namespace Content.Server.Starlight.Antags.Abductor;
 
 public sealed partial class OnCollideSystem : EntitySystem
 {

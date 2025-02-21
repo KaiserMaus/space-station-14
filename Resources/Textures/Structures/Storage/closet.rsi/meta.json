@@ -8,27 +8,6 @@
   "license": "CC-BY-SA-3.0",
   "states": [
     {
-      "name": "abductor"
-    },
-    {
-      "name": "abductor_door"
-    },
-    {
-      "name": "abductor_open"
-    },
-    {
-      "name": "agentbox"
-    },
-    {
-      "name": "alien"
-    },
-    {
-      "name": "alien_door"
-    },
-    {
-      "name": "alien_open"
-    },
-    {
       "name": "brigmedic_door"
     },
     {
