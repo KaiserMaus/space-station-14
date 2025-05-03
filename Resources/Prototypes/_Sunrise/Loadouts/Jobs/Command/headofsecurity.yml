@@ -2,8 +2,3 @@
   id: HeadofSecurityScarf
   equipment:
     neck: ClothingNeckScarfHos
-
-- type: loadout
-  id: HeadofSecurityScarf
-  equipment:
-    neck: ClothingNeckScarfHos
