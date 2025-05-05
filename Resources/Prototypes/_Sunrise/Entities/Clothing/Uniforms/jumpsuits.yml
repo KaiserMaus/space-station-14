@@ -348,6 +348,7 @@
     sprite: _Sunrise/Clothing/Uniforms/Jumpsuit/blueshield-js.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Uniforms/Jumpsuit/blueshield-js.rsi
+
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitMiningSpecialist
