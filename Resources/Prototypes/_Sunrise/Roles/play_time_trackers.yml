@@ -126,3 +126,6 @@
 
 - type: playTimeTracker
   id: AntagBloodCultist
+
+- type: playTimeTracker
+  id: JobMiningSpecialist
