@@ -270,6 +270,7 @@
   - type: ConditionalSpawner
     prototypes:
       - MechSecPod
+
 - type: entity
   name: Mining Pod Spawner
   suffix: Filled
