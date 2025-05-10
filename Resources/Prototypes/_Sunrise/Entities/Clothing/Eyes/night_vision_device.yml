@@ -122,3 +122,5 @@
   - type: PowerCellDraw
     drawRate: 0
     useRate: 50
+  - type: VisionDarkener
+    strength: 1
