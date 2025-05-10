@@ -31,7 +31,7 @@
     role: JobMedicalDoctor
     time: 18000 # 5h # Sunrise-RoleTime
   - !type:DepartmentTimeRequirement
-    department: Security
+    department: AntagNuclearOperative # Sunrise-Edit
     time: 18000 # 5h # Sunrise-RoleTime
   guides: [ NuclearOperatives ]
   # Sunrise-Edit
@@ -50,7 +50,7 @@
   - !type:OverallPlaytimeRequirement
     time: 72000 # 20h # Sunrise-RoleTime
   - !type:DepartmentTimeRequirement
-    department: Security
+    department: AntagNuclearOperative # Sunrise-Edit
     time: 36000 # 10h # Sunrise-RoleTime
   # should be changed to nukie playtime when thats tracked (wyci)
   guides: [ NuclearOperatives ]
