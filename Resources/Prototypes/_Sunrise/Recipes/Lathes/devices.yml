@@ -16,7 +16,7 @@
     Steel: 1000
     Plastic: 400
     Silver: 300
-    Uranium: 100
+    Uranium: 300
 
 - type: latheRecipe
   id: BasicThermals
