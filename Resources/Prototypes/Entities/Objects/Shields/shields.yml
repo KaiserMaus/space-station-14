@@ -68,6 +68,12 @@
   id: RiotShield
   description: A large tower shield. Good for controlling crowds.
   components:
+    - type: MeleeWeapon #Sunrise-Start
+      wideAnimationRotation: 90
+      damage:
+        types:
+          Blunt: 8
+      bluntStaminaDamageFactor: 2.0 #Sunrise-End
     - type: StaticPrice
       price: 90
     - type: Blocking
@@ -105,11 +111,11 @@
     - type: LimitedCharges
       maxCharges: 5
     - type: MeleeWeapon
-      wideAnimationRotation: 180
+      wideAnimationRotation: 90
       damage:
         types:
-          Blunt: 5 # melee weapon to allow flashing individual targets
-      angle: 10
+          Blunt: 8
+      bluntStaminaDamageFactor: 2.0
     - type: Item
       size: Ginormous
       sprite: _Sunrise/Objects/Weapons/Melee/shields.rsi
@@ -137,8 +143,8 @@
           Blunt: 0.5
           Slash: 0.5
         flatReductions:
-          Blunt: 1
-          Slash: 1
+          Blunt: 3
+          Slash: 3
     - type: Damageable
       damageContainer: Shield
     - type: Destructible
@@ -169,9 +175,6 @@
                 CableApcStack1:
                   min: 1
                   max: 2
-                Flash:
-                  min: 0
-                  max: 1
     - type: Construction
       graph: RiotShieldStrobeConstruction
       node: shieldstrobe
