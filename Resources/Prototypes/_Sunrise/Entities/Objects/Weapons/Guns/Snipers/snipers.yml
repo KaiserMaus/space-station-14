@@ -270,6 +270,18 @@
     sprite: _Sunrise/Objects/Weapons/Guns/Snipers/mosin/tiny.rsi
   - type: Gun
     fireRate: 0.8
+    useKey: true
+    selectedMode: SemiAuto
+  - type: MeleeWeapon
+    angle: 60
+    range: 1.2
+    damage:
+      types:
+        Blunt: 14  # Длинная винтовка, считай бита
+    attackRate: 0.9
+    autoAttack: false
+  - type: AltFireMelee
+    attackType: Heavy  # Light/Heavy/Disarm
   - type: Wieldable
   - type: UseDelay
     delay: 0.5
