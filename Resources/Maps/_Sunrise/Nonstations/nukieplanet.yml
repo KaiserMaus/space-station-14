@@ -24820,14 +24820,14 @@ entities:
     - type: Transform
       pos: -18.093945,-12.162229
       parent: 2
-- proto: WeaponSubMachineGunC20r
+- proto: WeaponSubMachineGunC20rBiocode
   entities:
   - uid: 4103
     components:
     - type: Transform
       pos: -3.376362,16.50411
       parent: 2
-- proto: WeaponTaser
+- proto: WeaponPistolCHIMP
   entities:
   - uid: 4104
     components:
