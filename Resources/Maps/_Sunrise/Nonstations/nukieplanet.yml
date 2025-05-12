@@ -52,7 +52,7 @@ entities:
     - type: Broadphase
     - type: OccluderTree
     - type: Parallax
-      parallax: TrainStation
+      parallax: Sky
     - type: MapAtmosphere
       space: False
       mixture:
