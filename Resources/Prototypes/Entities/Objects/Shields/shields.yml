@@ -72,11 +72,11 @@
       distance: 0.7
       speed: 7
     - type: MeleeWeapon
-      wideAnimationRotation: 60
+      wideAnimationRotation: -135
       damage:
         types:
           Blunt: 7
-      bluntStaminaDamageFactor: 2.0 #Sunrise-End
+      bluntStaminaDamageFactor: 3.0 #Sunrise-End
     - type: StaticPrice
       price: 90
     - type: Blocking
@@ -114,14 +114,14 @@
     - type: LimitedCharges
       maxCharges: 5
     - type: MeleeThrowOnHit
-      distance: 0.7
-      speed: 7
+      distance: 0.5
+      speed: 5
     - type: MeleeWeapon
-      wideAnimationRotation: 60
+      wideAnimationRotation: -135
       damage:
         types:
           Blunt: 7
-      bluntStaminaDamageFactor: 2.0
+      bluntStaminaDamageFactor: 3.0
     - type: Item
       size: Ginormous
       sprite: _Sunrise/Objects/Weapons/Melee/shields.rsi
