@@ -68,11 +68,14 @@
   id: RiotShield
   description: A large tower shield. Good for controlling crowds.
   components:
-    - type: MeleeWeapon #Sunrise-Start
-      wideAnimationRotation: 90
+    - type: MeleeThrowOnHit #Sunrise-Start
+      distance: 0.7
+      speed: 7
+    - type: MeleeWeapon
+      wideAnimationRotation: 60
       damage:
         types:
-          Blunt: 8
+          Blunt: 7
       bluntStaminaDamageFactor: 2.0 #Sunrise-End
     - type: StaticPrice
       price: 90
@@ -110,11 +113,14 @@
     - type: Flash
     - type: LimitedCharges
       maxCharges: 5
+    - type: MeleeThrowOnHit
+      distance: 0.7
+      speed: 7
     - type: MeleeWeapon
-      wideAnimationRotation: 90
+      wideAnimationRotation: 60
       damage:
         types:
-          Blunt: 8
+          Blunt: 7
       bluntStaminaDamageFactor: 2.0
     - type: Item
       size: Ginormous
