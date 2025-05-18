@@ -10,3 +10,22 @@
               doAfter: 2
     - node: shotgun4034sawn
       entity: WeaponShotgunTrenchgun4034SawnEmpty
+
+- type: constructionGraph
+  id: Glock22Auto
+  start: start
+  graph:
+    - node: start
+      entity: WeaponPistolG22
+      edges:
+        - to: auto
+          steps:
+            - tag: ModularReceiverAuto
+              amount: 1
+              doAfter: 10
+          completed:
+            - !type:AdminLog
+              message: "Converted Glock22 to Auto"
+              impact: High
+    - node: auto
+      entity: WeaponPistolG22Auto

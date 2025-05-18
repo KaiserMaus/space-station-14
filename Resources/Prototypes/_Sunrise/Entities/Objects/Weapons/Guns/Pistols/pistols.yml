@@ -1,6 +1,59 @@
 - type: entity
-  name: combat pistol VP-70
+  name: BasePistol
   parent: BaseWeaponPistol
+  id: BaseWeaponPistolSunrise
+  suffix: Sunrise
+  description: A rooty tooty point and shooty.
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Pistols/viper.rsi
+    quickEquip: false
+    slots:
+    - suitStorage
+    - Belt
+  - type: Gun
+    minAngle: 4.7 #Max Effect Range 8
+    maxAngle: 14.1
+    angleIncrease: 1
+    angleDecay: 0.5
+    fireRate: 4
+    useKey: true
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/pistol.ogg
+  - type: MeleeWeapon
+    angle: 60
+    range: 0.9
+    damage:
+      types:
+        Blunt: 8
+    bluntStaminaDamageFactor: 2.0
+    attackRate: 1
+    autoAttack: false
+  - type: AltFireMelee
+    attackType: Light
+
+- type: entity
+  name: combat pistol VP-70
+  parent: BaseWeaponPistolSunrise
   id: WeaponPistolVP78
   components:
   - type: Sprite
@@ -47,18 +100,79 @@
 
 - type: entity
   name: Glock-22
-  parent: BaseWeaponPistol
+  parent: BaseWeaponPistolSunrise
   id: WeaponPistolG22
-  suffix: Lethal
+  suffix: Sunrise, Security
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Weapons/Guns/Pistols/glock22/big.rsi
+  - type: Item
+    sprite: _Sunrise/Objects/Weapons/Guns/Pistols/glock22/tiny.rsi
+  - type: Tag
+    tags:
+    - WeaponPistolG22
+    - Sidearm
+  - type: Construction
+    graph: Glock22Auto
+    node: start
+  - type: Gun
+    fireRate: 4
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      collection: glock22
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineGlock22
+        insertSound: /Audio/_Sunrise/Weapons/Guns/Pistols/glock22/glock22_reload.ogg
+        ejectSound: /Audio/_Sunrise/Weapons/Guns/Pistols/glock22/glock22_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MagazinePistol
+          - MagazinePistolHighCapacity
+          - MagazineGlock22
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+          - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Sunrise/Weapons/Guns/Pistols/glock22/glock22_cocked.ogg
+
+- type: entity
+  name: Glock-22 Auto
+  parent: WeaponPistolG22
+  id: WeaponPistolG22Auto
+  description: Designed by Nanotrasen’s Small Arms Division, the Glock-22 Auto is a premium full-automatic sidearm built for superior performance and reliability. Featuring a simple yet robust recoil-operated mechanism, it serves as a high-end replacement for the standard Glock 22. Favored by station security and emergency response teams, it delivers greater firepower and durability in high-risk scenarios. Uses .35 pistol magazines.
+  suffix: Sunrise, Security
   components:
   - type: Sprite
     sprite: _Sunrise/Objects/Weapons/Guns/Pistols/glock22/big.rsi
   - type: Item
     sprite: _Sunrise/Objects/Weapons/Guns/Pistols/glock22/tiny.rsi
   - type: Gun
+    minAngle: 6.2 #Max Effect Range 6
+    maxAngle: 18.6
+    angleIncrease: 1
+    angleDecay: 0.5
+    fireRate: 4
     selectedMode: FullAuto
     availableModes:
-    - SemiAuto
     - FullAuto
     soundGunshot:
       collection: glock22
@@ -96,7 +210,7 @@
 
 - type: entity
   name: HI Browning-88 M4
-  parent: BaseWeaponPistol
+  parent: BaseWeaponPistolSunrise
   id: WeaponPistolHIB88M4
   components:
   - type: Sprite
@@ -143,7 +257,7 @@
 
 - type: entity
   name: ACP-14
-  parent: BaseWeaponPistol
+  parent: WeaponPistolG22
   id: WeaponPistolACP14
   components:
   - type: Sprite
@@ -154,7 +268,6 @@
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
-    - FullAuto
     soundGunshot:
       collection: glock22
   - type: ChamberMagazineAmmoProvider
@@ -205,7 +318,7 @@
 
 - type: entity
   name: Desert Eagle
-  parent: BaseWeaponPistol
+  parent: BaseWeaponPistolSunrise
   id: WeaponPistolDeagle
   components:
   - type: Sprite

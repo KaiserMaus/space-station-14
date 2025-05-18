@@ -151,6 +151,12 @@
 - type: Tag
   id: SyndicateRapier
 
+- type: Tag
+  id: ModularReceiverAuto
+
+- type: Tag
+  id: WeaponPistolG22
+
 # Material bag:
 
 - type: Tag

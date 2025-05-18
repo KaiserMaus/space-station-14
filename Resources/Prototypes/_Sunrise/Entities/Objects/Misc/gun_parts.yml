@@ -1,0 +1,15 @@
+#The entire game mysteriously shits itself and dies if you uncomment the item size. I have no idea why.
+#TODO: Assimilate these into the same RSI.
+- type: entity
+  parent: BaseItem
+  id: ModularReceiverAuto
+  name: modular Auto receiver
+  description: A vital part used in the creation of Auto firearms.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/modular_receiver.rsi
+      state: icon
+    - type: Tag
+      tags:
+      - ModularReceiverAuto
+      - Metal
