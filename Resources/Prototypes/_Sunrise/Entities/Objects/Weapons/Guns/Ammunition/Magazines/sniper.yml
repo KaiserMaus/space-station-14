@@ -71,31 +71,30 @@
     zeroVisible: false
   - type: Appearance
 
+
 - type: entity
-  id: MagazineBauer127
-  name: Bauer127 magazine
+  id: BaseMagazineBauer127
+  name: "magazine (.20 rifle)"
   description: Standart EarthGov type of heavy magazines.
-  parent: BaseItem
+  parent: [ BaseItem, BaseMajorContraband ]
+  abstract: true
   components:
   - type: Tag
     tags:
       - MagazineBauer127
+  - type: Item
+    size: Small
   - type: BallisticAmmoProvider
     mayTransfer: true
-    capacity: 7
-    proto: CartridgeAntiMateriel  # AntiMateriel
     whitelist:
       tags:
-        - CartridgeAntiMateriel  # AntiMateriel
+        - CartridgeAntiMateriel
+    capacity: 7
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
-  - type: Item
-    size: Small
-    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
   - type: Sprite
-    netsync: false
-    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Rifle/rifle_mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -106,6 +105,105 @@
     steps: 2
     zeroVisible: false
   - type: Appearance
+
+- type: entity
+  id: MagazineBauer127
+  name: Bauer127 magazine
+  description: Standart EarthGov type of heavy magazines.
+  parent: BaseMagazineBauer127
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeAntiMateriel  # AntiMateriel
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#9b0000"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#9b0000"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#9b0000"
+
+- type: entity
+  id: MagazineBauer127HV
+  name: Bauer127 magazine (.60 anti-materiel HV)
+  description: Standart EarthGov type of heavy magazines.
+  parent: BaseMagazineBauer127
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeAntiMaterielHV
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#16330dce"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#16330dce"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#16330dce"
+
+- type: entity
+  id: MagazineBauer127EMP
+  name: Bauer127 magazine (.60 anti-materiel EMP)
+  description: Standart EarthGov type of heavy magazines.
+  parent: BaseMagazineBauer127
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeAntiMaterielEMP
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#00b0cfe1"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00b0cfe1"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00b0cfe1"
 
 - type: entity
   parent: MagazineDragunov

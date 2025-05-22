@@ -72,35 +72,6 @@
     - Energy
 
 - type: entity
-  categories: [ HideSpawnMenu ]
-  parent: BaseBullet
-  id: BulletAntiMaterielAP
-  name: bullet (.60 anti-materiel AP)
-  components:
-  - type: Sprite
-    noRot: true
-    sprite: _Sunrise/Objects/Weapons/Guns/Projectiles/antimat_tracer.rsi
-    layers:
-    - state: ap_bullet
-      shader: unshaded
-  - type: Projectile
-    deleteOnCollide: false
-    damage:
-      types:
-        Piercing: 60
-        Structural: 123
-    penetrationThreshold: 800
-    penetrationDamageTypeRequirement:
-    - Structural
-  - type: StaminaDamageOnCollide
-    damage: 55
-  - type: TimedDespawn
-    lifetime: 1.5
-  - type: StunOnCollide
-    knockdownAmount: 0.25
-
-
-- type: entity
   parent: BaseBullet
   id: RadiationBullet
   name: radiation particle
