@@ -308,6 +308,16 @@
     Silver: 200
 
 - type: latheRecipe
+  id: ModularReceiverAuto
+  result: ModularReceiverAuto
+  categories:
+  - Weapons
+  completetime: 12
+  materials:
+    Steel: 800
+    Plastic: 100
+
+- type: latheRecipe
   id: MagazinePistolHighCapacity
   result: MagazinePistolHighCapacity
   categories:

@@ -120,6 +120,7 @@
   cost: 7500
   recipeUnlocks:
   - ClothingShoesBootsMagCombat
+  - ModularReceiverAuto
   technologyPrerequisites:
   - AdvancedRiotControl
 
