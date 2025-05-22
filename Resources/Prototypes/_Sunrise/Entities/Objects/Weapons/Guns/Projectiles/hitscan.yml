@@ -264,6 +264,7 @@
 
 - type: hitscan
   id: BulletAntiMaterielHitscan
+  maxLength: 60
   damage:
     types:
       Piercing: 115

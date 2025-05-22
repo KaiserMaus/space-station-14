@@ -17,10 +17,10 @@ uplink-grenade-emp-name = ЭМИ граната
 uplink-grenade-emp-desc = ЭМИ граната. Совместима с "China-Lake".
 uplink-magazine-siar52-name = Магазин ПП (.25 безгильзовый)
 uplink-magazine-siar52-desc = Магазин ПП на 30 патронов. Совместим с SIAR-52.
-uplink-magazine-bauer127-extended-name = расширенный магазин Bauer127 (.60 антиматериальные)
+uplink-magazine-bauer127-name = магазин Bauer127 (.60 антиматериальные)
 uplink-mechpaint-mauler-name = балончик краски "МЯУЛЕР"
 uplink-mechpaint-mauler-desc = Содержит краску для Маулера. Превратите огромного МЕХа в милого котика!.
-uplink-magazine-bauer127-extended-desc = Магазин для Bauer127. Содержит 15 патронов калибра .60 антиматериальный.
+uplink-magazine-bauer127-desc = Магазин для Bauer127. Содержит 7 патронов калибра .60 антиматериальный.
 uplink-magazine-dl6902-name = Короб-магазин DL6902 (.30 винтовочные)
 uplink-magazine-dl6902-desc = Магазин для Dl6902. Содержит 200 патронов калибра .30.
 

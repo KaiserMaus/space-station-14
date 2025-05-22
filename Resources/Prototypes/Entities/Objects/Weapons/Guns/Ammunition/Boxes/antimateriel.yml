@@ -42,11 +42,11 @@
 #Sunrise-Start
 - type: entity
   parent: BaseMagazineBoxAntiMateriel
-  id: MagazineBoxAntiMaterielAP
-  name: ammunition box (.60 anti-materiel AP)
+  id: MagazineBoxAntiMaterielHV
+  name: ammunition box (.60 anti-materiel HV)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeAntiMaterielAP
+    proto: CartridgeAntiMaterielHV
   - type: Sprite
     sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Boxes/anti_materiel.rsi
     layers:
@@ -55,4 +55,111 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
 
+- type: entity
+  id: MagazineBauer127HV
+  name: Bauer127 magazine (.60 anti-materiel HV)
+  description: Standart EarthGov type of heavy magazines.
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazineBauer127
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    capacity: 7
+    proto: CartridgeAntiMaterielHV
+    whitelist:
+      tags:
+        - CartridgeAntiMateriel
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Item
+    size: Small
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
+    layers:
+    - state: hv
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: MagazineBauer127EMP
+  name: Bauer127 magazine (.60 anti-materiel EMP)
+  description: Standart EarthGov type of heavy magazines.
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazineBauer127
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    capacity: 7
+    proto: CartridgeAntiMaterielEMP
+    whitelist:
+      tags:
+        - CartridgeAntiMateriel
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Item
+    size: Small
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
+    layers:
+    - state: emp
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: MagazineBauer127AP
+  name: Bauer127 magazine (.60 anti-materiel AP)
+  description: Standart EarthGov type of heavy magazines.
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazineBauer127
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    capacity: 7
+    proto: CartridgeAntiMaterielAP
+    whitelist:
+      tags:
+        - CartridgeAntiMateriel
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Item
+    size: Small
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
+    layers:
+    - state: ap
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
 #Sunrise-End

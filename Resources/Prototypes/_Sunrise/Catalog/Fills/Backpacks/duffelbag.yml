@@ -6,9 +6,9 @@
   components:
   - type: StorageFill
     contents:
-      - id: WeaponRifleBauer127
-      - id: MagazineBauer127Extended
-      - id: MagazineBauer127Extended
+      - id: WeaponRifleBauer127Biocode
+      - id: MagazineBauer127
+      - id: MagazineBauer127
 
 #ERT_Uplink
 - type: entity

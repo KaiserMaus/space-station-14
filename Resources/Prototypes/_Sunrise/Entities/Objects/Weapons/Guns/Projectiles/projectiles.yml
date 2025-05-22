@@ -27,7 +27,7 @@
     layers:
     - state: emp_pulse
   - type: EmpOnTrigger
-    range: 4
+    range: 2
     energyConsumption: 30000
     disableDuration: 10
   - type: Ammo
@@ -36,6 +36,69 @@
     radius: 3.5
     color: blue
     energy: 0.5
+
+# Sunrise-AntiMateriel
+- type: entity
+  name: EMP Bullet
+  parent: BaseBulletTrigger
+  id: BulletAntiMaterielEMP
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _Sunrise/Objects/Weapons/Guns/Projectiles/antimat_tracer.rsi
+    layers:
+    - state: emp_bullet
+      shader: unshaded
+  - type: EmpOnTrigger
+    range: 1.5
+    energyConsumption: 20000
+    disableDuration: 8
+  # - type: Ammo
+  #   muzzleFlash: null
+  - type: PointLight
+    enabled: true
+    radius: 1
+    color: blue
+    energy: 0.5
+  - type: Projectile
+    damage:
+      types:
+        Shock: 15 # Sunrise-Edit
+  - type: StaminaDamageOnCollide
+    damage: 25
+  - type: Reflective
+    reflective:
+    - Energy
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BulletAntiMaterielAP
+  name: bullet (.60 anti-materiel AP)
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _Sunrise/Objects/Weapons/Guns/Projectiles/antimat_tracer.rsi
+    layers:
+    - state: ap_bullet
+      shader: unshaded
+  - type: Projectile
+    deleteOnCollide: false
+    damage:
+      types:
+        Piercing: 60
+        Structural: 123
+    penetrationThreshold: 800
+    penetrationDamageTypeRequirement:
+    - Structural
+  - type: StaminaDamageOnCollide
+    damage: 55
+  - type: TimedDespawn
+    lifetime: 1.5
+  - type: StunOnCollide
+    knockdownAmount: 0.25
+
 
 - type: entity
   parent: BaseBullet

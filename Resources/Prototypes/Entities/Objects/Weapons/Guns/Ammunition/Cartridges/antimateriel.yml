@@ -21,9 +21,30 @@
 
 #Sunrise-Start
 - type: entity
+  id: BaseCartridgeAntiMateriel
+  name: cartridge (.60 anti-materiel)
   parent: [ BaseCartridge, BaseMajorContraband ]
-  id: CartridgeAntiMaterielAP
-  name: cartridge (.60 anti-materiel AP)
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CartridgeAntiMateriel
+  - type: CartridgeAmmo
+    proto: BulletAntiMateriel
+  - type: Sprite
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Casings/large_ammo_casing.rsi
+    scale: 0.85, 0.85
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+
+- type: entity
+  id: CartridgeAntiMaterielHV
+  name: cartridge (.60 anti-materiel HV)
+  parent: [ BaseCartridge, BaseMajorContraband ]
   components:
   - type: Tag
     tags:
@@ -32,12 +53,45 @@
   - type: HitScanCartridgeAmmo
     proto: BulletAntiMaterielHitscan
   - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Casings/large_ammo_casing.rsi
+    scale: 0.85, 0.85
     layers:
-    - state: base
-      map: ["enum.AmmoVisualLayers.Base"]
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#65fe08"
   - type: Appearance
   - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 20
+
+- type: entity
+  id: CartridgeAntiMaterielEMP
+  name: cartridge (.60 anti-materiel EMP)
+  parent: BaseCartridgeAntiMateriel
+  components:
+  - type: CartridgeAmmo
+    proto: BulletAntiMaterielEMP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#0856fed6"
+
+- type: entity
+  id: CartridgeAntiMaterielAP
+  name: cartridge (.60 anti-materiel AP)
+  parent: BaseCartridgeAntiMateriel
+  components:
+  - type: CartridgeAmmo
+    proto: BulletAntiMaterielAP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#000000d5"
+
 #Sunrise-End

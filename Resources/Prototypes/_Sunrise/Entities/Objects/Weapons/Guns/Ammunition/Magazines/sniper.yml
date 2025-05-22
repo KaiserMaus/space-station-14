@@ -82,7 +82,7 @@
       - MagazineBauer127
   - type: BallisticAmmoProvider
     mayTransfer: true
-    capacity: 10
+    capacity: 7
     proto: CartridgeAntiMateriel  # AntiMateriel
     whitelist:
       tags:
@@ -120,10 +120,3 @@
   components:
   - type: BallisticAmmoProvider
     capacity: 36
-
-- type: entity
-  parent: MagazineBauer127
-  id: MagazineBauer127Extended
-  components:
-  - type: BallisticAmmoProvider
-    capacity: 15

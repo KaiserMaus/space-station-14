@@ -165,22 +165,19 @@
   - type: Item
     size: Huge
     shape:
-    - 0,0,7,2
+    - 0,0,8,2
     sprite: _Sunrise/Objects/Weapons/Guns/Snipers/bauer127/tiny.rsi
-  - type: GunWieldBonus
-    minAngle: -23
-    maxAngle: -43
   - type: Gun
-    selectedMode: SemiAuto
+    selectedMode: SemiAuto #Todo: Сделать ей затвор)
     availableModes:
     - SemiAuto
-    fireRate: 0.65
-    minAngle: 24
-    maxAngle: 45
+    fireRate: 0.4
     soundGunshot:
-      path: /Audio/_Sunrise/Weapons/Guns/Snipers/Bauer127/bauer127_shot.ogg
-      params:
-        volume: -1
+      collection: awp #Вместо старого
+    projectileSpeed: 55 # Sunrise-Edit
+      # path: /Audio/_Sunrise/Weapons/Guns/Snipers/Bauer127/bauer127_shot.ogg
+      # params:
+      #   volume: -1
     soundEmpty:
       path: /Audio/_Sunrise/Weapons/Guns/Snipers/Different/empty.ogg
   - type: ChamberMagazineAmmoProvider
@@ -224,8 +221,8 @@
     sprintModifier: 0.25
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 3
-    pvsIncrease: 0.3
+    maxOffset: 15
+    pvsIncrease: 2
 
 - type: entity
   name: M1 Garand

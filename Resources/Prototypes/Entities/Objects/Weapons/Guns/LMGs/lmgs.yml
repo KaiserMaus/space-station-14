@@ -51,11 +51,11 @@
             - MagazineLightRifleBox
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifle
+        startingItem: CartridgeRifle #Sunrise-Edit 5.56
         priority: 1
         whitelist:
           tags:
-            - CartridgeLightRifle
+            - CartridgeRifle #Sunrise-Edit 5.56
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

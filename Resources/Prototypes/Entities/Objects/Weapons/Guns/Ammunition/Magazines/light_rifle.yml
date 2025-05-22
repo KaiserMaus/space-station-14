@@ -44,7 +44,12 @@
     tags:
       - MagazineLightRifleBox
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifle
+    #Sunrise-start
+    whitelist:
+      tags:
+        - CartridgeRifle
+    proto: CartridgeRifle
+    #Sunrise-end
     capacity: 100
   - type: Item
   - type: Sprite
@@ -62,7 +67,7 @@
   parent: MagazineLightRifleBox
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifleIncendiary
+    proto: CartridgeRifleIncendiary #5.56
   - type: Sprite
     layers:
     - state: red
@@ -76,7 +81,7 @@
   parent: MagazineLightRifleBox
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifleUranium
+    proto: CartridgeRifleUranium #5.56
   - type: Sprite
     layers:
     - state: uranium
