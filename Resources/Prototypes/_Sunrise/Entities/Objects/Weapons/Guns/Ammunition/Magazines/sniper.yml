@@ -10,10 +10,10 @@
   - type: BallisticAmmoProvider
     mayTransfer: true
     capacity: 10
-    proto: CartridgeAntiMateriel  # 762x54
+    proto: CartridgeHeavyLightRifle  # 762x54
     whitelist:
       tags:
-        - CartridgeAntiMateriel  # 762x54
+        - CartridgeHeavyRifle  # 762x54
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container

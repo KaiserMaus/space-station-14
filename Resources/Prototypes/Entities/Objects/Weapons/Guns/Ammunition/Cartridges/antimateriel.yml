@@ -21,19 +21,6 @@
 
 #Sunrise-Start
 - type: entity
-  id: BaseCartridgeAntiMateriel
-  name: cartridge (.60 anti-materiel)
-  parent: [ BaseCartridge, BaseMajorContraband ]
-  abstract: true
-  components:
-  - type: Tag
-    tags:
-    - Cartridge
-    - CartridgeAntiMateriel
-  - type: CartridgeAmmo
-    proto: BulletAntiMateriel
-  - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Casings/large_ammo_casing.rsi
     scale: 0.80, 0.80
     layers:
     - state: base
@@ -53,7 +40,7 @@
   - type: HitScanCartridgeAmmo
     proto: BulletAntiMaterielHitscan
   - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Casings/large_ammo_casing.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Casings/12.7x99.rsi
     scale: 0.80, 0.80
     layers:
       - state: base

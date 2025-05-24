@@ -218,16 +218,65 @@
     sprite: _Sunrise/Objects/Weapons/Guns/Projectiles/hitscan_tracer.rsi
     state: uranium
 
+# Heavy Rifles
 - type: hitscan
   id: BulletHeavyRifle
+  maxLength: 60
   damage:
     types:
-      Piercing: 19
+      Piercing: 24
+      Structural: 16
+  staminaDamage: 10
   collisionMask: BulletImpassable
   reflective: NonEnergy
   bulletTracer:
     sprite: _Sunrise/Objects/Weapons/Guns/Projectiles/hitscan_tracer.rsi
     state: bullet
+
+- type: hitscan
+  id: BulletHeavyRiflePractice
+  maxLength: 60
+  damage:
+    types:
+      Blunt: 6
+      Structural: 3
+  staminaDamage: 10
+  collisionMask: BulletImpassable
+  reflective: NonEnergy
+  bulletTracer:
+    sprite: _Sunrise/Objects/Weapons/Guns/Projectiles/hitscan_tracer.rsi
+    state: practice
+
+- type: hitscan
+  id: BulletHeavyRifleIncendiary
+  maxLength: 60
+  damage:
+    types:
+      Blunt: 1
+      Piercing: 8
+      Heat: 5
+      Structural: 8
+  staminaDamage: 5
+  collisionMask: BulletImpassable
+  reflective: NonEnergy
+  bulletTracer:
+    sprite: _Sunrise/Objects/Weapons/Guns/Projectiles/hitscan_tracer.rsi
+    state: practice
+
+- type: hitscan
+  id: BulletHeavyRifleUranium
+  maxLength: 60
+  damage:
+    types:
+      Radiation: 11
+      Piercing: 13
+      Structural: 16
+  staminaDamage: 10
+  collisionMask: BulletImpassable
+  reflective: NonEnergy
+  bulletTracer:
+    sprite: _Sunrise/Objects/Weapons/Guns/Projectiles/hitscan_tracer.rsi
+    state: uranium
 
 - type: hitscan
   id: BulletMinigun

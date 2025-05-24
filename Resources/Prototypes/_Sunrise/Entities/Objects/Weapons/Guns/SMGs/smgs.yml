@@ -49,11 +49,11 @@
       unwieldOnUse: false
     - type: GunWieldBonus
       minAngle: -3
-      maxAngle: -15
+      maxAngle: -18
     - type: Gun
       fireRate: 8
       minAngle: 7
-      maxAngle: 35
+      maxAngle: 38
       angleIncrease: 4
       angleDecay: 0.5
     soundGunshot:
@@ -240,7 +240,7 @@
     - Burst
     - FullAuto
     shotsPerBurst: 3
-    burstCooldown: 0.20
+    burstCooldown: 0.15
     soundGunshot:
       collection: mp5
       params:
@@ -417,10 +417,10 @@
     minAngle: -20
     maxAngle: -40
   - type: Gun
-    minAngle: 35
-    maxAngle: 65
+    minAngle: 30
+    maxAngle: 60
     angleIncrease: 6
-    angleDecay: 1
+    angleDecay: 2
     fireRate: 9
     soundGunshot:
       path: /Audio/_Sunrise/Weapons/Guns/SMGs/ppsh41/ppsh_shot.ogg
