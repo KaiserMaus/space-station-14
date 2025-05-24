@@ -762,6 +762,9 @@
     pilotBlacklist:
       species:
       - Felinid
+  - type: MeleeThrowOnHit
+    distance: 1
+    speed: 8
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -832,6 +835,9 @@
     pilotBlacklist:
       species:
       - Felinid
+  - type: MeleeThrowOnHit
+    distance: 1
+    speed: 8
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -981,6 +987,9 @@
     pilotBlacklist:
       species:
       - Felinid
+  - type: MeleeThrowOnHit
+    distance: 1
+    speed: 8
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -1070,6 +1079,9 @@
     pilotBlacklist:
       species:
       - Felinid
+  - type: MeleeThrowOnHit
+    distance: 1
+    speed: 8
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -1154,6 +1166,9 @@
     pilotBlacklist:
       species:
       - Felinid
+  - type: MeleeThrowOnHit
+    distance: 1
+    speed: 8
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -1241,6 +1256,9 @@
     pilotBlacklist:
       species:
       - Felinid
+  - type: MeleeThrowOnHit
+    distance: 1
+    speed: 8
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -1328,6 +1346,9 @@
     pilotBlacklist:
       species:
       - Felinid
+  - type: MeleeThrowOnHit
+    distance: 1
+    speed: 8
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
