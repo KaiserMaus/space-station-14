@@ -87,6 +87,7 @@
     shape:
     - 0,0,5,3
     sprite: _Sunrise/Objects/Weapons/Guns/LMGs/rpd/tiny.rsi
+  - type: GunRequiresWield
   - type: GunWieldBonus
     minAngle: -30
     maxAngle: -45
@@ -226,7 +227,7 @@
   - type: Gun
     minAngle: 40
     maxAngle: 60
-    fireRate: 8.25
+    fireRate: 8
     selectedMode: FullAuto
     availableModes:
       - FullAuto
