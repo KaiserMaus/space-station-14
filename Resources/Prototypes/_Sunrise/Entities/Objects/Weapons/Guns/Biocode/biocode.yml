@@ -109,6 +109,16 @@
     alertText: Данное оружие биокодировано. Вы не можете его использовать.
 
 - type: entity
+  parent: WeaponSniperDragunov
+  id: WeaponSniperDragunovBiocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    alertText: Данное оружие биокодировано. Вы не можете его использовать.
+
+- type: entity
   parent: WeaponSIAR52
   id: WeaponSIAR52Biocode
   suffix: BIOCODE

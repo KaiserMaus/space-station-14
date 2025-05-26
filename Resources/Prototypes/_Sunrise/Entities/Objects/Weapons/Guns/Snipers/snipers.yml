@@ -1,6 +1,76 @@
 - type: entity
+  name: BaseWeaponSniper
+  parent: BaseWeaponSniper
+  id: BaseWeaponSniperSunrise
+  description: A rooty tooty point and shooty.
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Item
+    size: Huge
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 0.75
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: BallisticAmmoProvider
+    capacity: 10
+    proto: CartridgeLightRifle
+    whitelist:
+      tags:
+      - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+  - type: StaticPrice
+    price: 500
+  - type: EmitSoundOnPickup
+    sound:
+      collection: SnipersPickUp
+  - type: EmitSoundOnDrop
+    sound:
+      collection: SnipersDrop
+  - type: EmitSoundOnLand
+    sound:
+      collection: SnipersDrop
+  - type: UseDelay
+    delay: 1
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.5
+    sprintModifier: 0.5
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3
+    pvsIncrease: 0.3
+  - type: MeleeWeapon
+    angle: 60
+    range: 1.3
+    damage:
+      types:
+        Blunt: 15
+        Structural: 6
+    bluntStaminaDamageFactor: 2.0
+    attackRate: 0.75
+    autoAttack: false
+  - type: AltFireMelee
+    attackType: Heavy
+
+- type: entity
   name: Dragunov
-  parent: [ BaseWeaponRifle, BaseGunWieldable ]
+  parent: [ BaseWeaponRifleSunrise, BaseSyndicateContraband ]
   id: WeaponSniperDragunov
   components:
   - type: Sprite
@@ -18,15 +88,17 @@
     - 0,0,7,2
     sprite: _Sunrise/Objects/Weapons/Guns/Snipers/dragunov/tiny.rsi
   - type: GunWieldBonus
-    minAngle: -23
-    maxAngle: -44
+    minAngle: -0
+    maxAngle: -0
   - type: Gun
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
-    minAngle: 25
-    maxAngle: 46
-    fireRate: 3.5
+    angleIncrease: 2
+    angleDecay: 3
+    minAngle: 1
+    maxAngle: 14
+    fireRate: 3.25
     soundGunshot:
       path: /Audio/_Sunrise/Weapons/Guns/Snipers/Dragunov/dragunov_shot.ogg
       params:
@@ -64,6 +136,7 @@
     zeroVisible: true
   - type: Appearance
   - type: GunRequiresWield
+  - type: Wieldable
   - type: UseDelay
     delay: 1
   - type: SpeedModifiedOnWield
@@ -76,7 +149,7 @@
 
 - type: entity
   name: BR-64
-  parent: [ BaseWeaponRifle, BaseGunWieldable ]
+  parent: [ BaseWeaponRifleSunrise, BaseMajorContraband ]
   id: WeaponRifleBR64
   components:
   - type: Sprite
@@ -94,12 +167,17 @@
     - 0,0,6,2
     sprite: _Sunrise/Objects/Weapons/Guns/Snipers/br-64/tiny.rsi
   - type: GunWieldBonus
-    minAngle: -20
-    maxAngle: -40
+    minAngle: 0
+    maxAngle: 0
   - type: Gun
-    fireRate: 2
-    minAngle: 28
-    maxAngle: 48
+    fireRate: 3.5
+    angleIncrease: 2.5
+    angleDecay: 3
+    minAngle: 2
+    maxAngle: 13
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
     soundGunshot:
       path: /Audio/_Sunrise/Weapons/Guns/Snipers/SR-64/SR64_shot.ogg
       params:
@@ -119,11 +197,11 @@
             - MagazineBR64
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeMagnum  # 062
+        startingItem: CartridgeHeavyRifleNT  # 062
         priority: 1
         whitelist:
           tags:
-          - CartridgeMagnum  # 062
+          - CartridgeHeavyRifleNT  # 062
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -142,15 +220,15 @@
     sprintModifier: 0.5
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 3
-    pvsIncrease: 0.3
+    maxOffset: 9
+    pvsIncrease: 1.25
   - type: ChamberMagazineAmmoProvider
     autoEject: true
     boltClosed: null
 
 - type: entity
   name: SR-127 Bauer bolt action rifle
-  parent: [ BaseWeaponRifle, BaseGunWieldable ]
+  parent: [ BaseWeaponRifleSunrise, BaseSyndicateContraband ]
   id: WeaponRifleBauer127
   components:
   - type: Sprite
@@ -226,7 +304,7 @@
 
 - type: entity
   name: M1 Garand
-  parent: BaseWeaponSniper
+  parent: BaseWeaponSniperSunrise
   id: WeaponSniperGarand
   components:
   - type: Sprite
@@ -253,7 +331,7 @@
 
 - type: entity
   name: Kardashev-Mosin
-  parent: BaseWeaponSniper
+  parent: BaseWeaponSniperSunrise
   id: WeaponSniperMosinNew
   components:
   - type: Sprite
@@ -286,7 +364,7 @@
 
 - type: entity
   name: N2524 Repeater
-  parent: [ BaseWeaponSniper, BaseGunWieldable, BaseMinorContraband ]
+  parent: [ BaseWeaponSniperSunrise, BaseGunWieldable, BaseMinorContraband ]
   id: WeaponSniperRepeater
   description: A civilian grade lever action firearm, favored by space cowboys for its reliability and stopping power. Uses .45 magnum ammo.
   components:

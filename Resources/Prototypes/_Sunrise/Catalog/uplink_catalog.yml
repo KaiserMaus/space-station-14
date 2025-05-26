@@ -416,6 +416,82 @@
       tags:
       - NukeOpsUplink
 
+- type: listing
+  id: UplinkMagazineBauer127HV
+  # name: uplink-magazine-bauer127-name
+  # description: uplink-magazine-bauer127-desc
+  icon: { sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi, state: hv }
+  productEntity: MagazineBauer127HV
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 1
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkMagazineBauer127EMP
+  # name: uplink-magazine-bauer127-name
+  # description: uplink-magazine-bauer127-desc
+  icon: { sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi, state: emp }
+  productEntity: MagazineBauer127EMP
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 3
+  categories:
+  - UplinkAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkMagazineDragunov
+  # name: uplink-magazine-dragunov-name
+  description: uplink-magazine-dragunov-desc
+  icon: { sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/dragunov_mag.rsi, state: base }
+  productEntity: MagazineDragunov
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 1
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - AssaultOpsUplink
+
+- type: listing
+  id: UplinkMagazineDragunovExtended
+  # name: uplink-magazine-dragunov-extended-name
+  description: uplink-magazine-dragunov-extended-desc
+  icon: { sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/dragunov_mag.rsi, state: base }
+  productEntity: MagazineDragunovExtended
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 1
+  cost:
+    Telecrystal: 3
+  categories:
+  - UplinkAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
 # for the hristov
 - type: listing
   id: UplinkHristovAmmoHV
@@ -642,6 +718,25 @@
       - NukeOpsUplink
 
 - type: listing
+  id: UplinkWeaponDragunov
+  name: uplink-weapon-dragunov-name
+  productEntity: ClothingBackpackDuffelSyndicateFilledDragunov
+  description: uplink-weapon-dragunov-desc
+  icon: { sprite: _Sunrise/Objects/Weapons/Guns/Snipers/dragunov/big.rsi, state: icon }
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 10
+  cost:
+    Telecrystal: 20
+  categories:
+  - UplinkWeaponry
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - AssaultOpsUplink
+
+- type: listing
   id: UplinkWeaponBauer127
   name: uplink-weapon-bauer-127-name
   productEntity: ClothingBackpackDuffelSyndicateFilledBauer
@@ -656,9 +751,9 @@
   - UplinkWeaponry
   conditions:
   - !type:StoreWhitelistCondition
-    blacklist:
+    whitelist:
       tags:
-      - AssaultOpsUplink
+      - NukeOpsUplink
 
 # - type: listing
 #   id: UplinkHardsuitSyndieCommander

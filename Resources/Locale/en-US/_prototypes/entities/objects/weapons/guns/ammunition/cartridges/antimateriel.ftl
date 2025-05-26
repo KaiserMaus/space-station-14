@@ -1,4 +1,6 @@
-ent-CartridgeAntiMateriel = cartridge (.60 anti-materiel)
+ent-CartridgeAntiMateriel = cartridge (12,7mm anti-materiel)
     .desc = { ent-BaseCartridge.desc }
-ent-CartridgeAntiMaterielAP = cartridge (.60 anti-materiel AP)
+ent-CartridgeAntiMaterielHV = cartridge (12,7mm anti-materiel HV)
+    .desc = { ent-BaseCartridge.desc }
+ent-CartridgeAntiMaterielEMP = cartridge (12,7mm anti-materiel EMP)
     .desc = { ent-BaseCartridge.desc }

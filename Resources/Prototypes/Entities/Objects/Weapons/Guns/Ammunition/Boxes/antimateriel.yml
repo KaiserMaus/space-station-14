@@ -43,7 +43,7 @@
 - type: entity
   parent: BaseMagazineBoxAntiMateriel
   id: MagazineBoxAntiMaterielHV
-  name: ammunition box (.60 anti-materiel HV)
+  name: ammunition box (12,7mm anti-materiel HV)
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeAntiMaterielHV

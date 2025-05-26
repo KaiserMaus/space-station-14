@@ -47,10 +47,10 @@
   - type: BallisticAmmoProvider
     mayTransfer: true
     capacity: 32
-    proto: CartridgeMagnum  # 062
+    proto: CartridgeHeavyRifleNT  # 062
     whitelist:
       tags:
-        - CartridgeMagnum  # 062
+        - CartridgeHeavyRifleNT  # 062
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
@@ -74,7 +74,7 @@
 
 - type: entity
   id: BaseMagazineBauer127
-  name: "magazine (.20 rifle)"
+  name: Bauer127 magazine (12,7mm anti-materiel)
   description: Standart EarthGov type of heavy magazines.
   parent: [ BaseItem, BaseMajorContraband ]
   abstract: true
@@ -108,7 +108,7 @@
 
 - type: entity
   id: MagazineBauer127
-  name: Bauer127 magazine
+  name: Bauer127 magazine (12,7mm anti-materiel)
   description: Standart EarthGov type of heavy magazines.
   parent: BaseMagazineBauer127
   components:
@@ -141,7 +141,7 @@
 
 - type: entity
   id: MagazineBauer127HV
-  name: Bauer127 magazine (.60 anti-materiel HV)
+  name: Bauer127 magazine (12,7mm anti-materiel HV)
   description: Standart EarthGov type of heavy magazines.
   parent: BaseMagazineBauer127
   components:
@@ -174,7 +174,7 @@
 
 - type: entity
   id: MagazineBauer127EMP
-  name: Bauer127 magazine (.60 anti-materiel EMP)
+  name: Bauer127 magazine (12,7mm anti-materiel EMP)
   description: Standart EarthGov type of heavy magazines.
   parent: BaseMagazineBauer127
   components:

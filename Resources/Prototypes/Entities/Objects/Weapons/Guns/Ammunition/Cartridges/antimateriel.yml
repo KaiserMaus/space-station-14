@@ -21,6 +21,19 @@
 
 #Sunrise-Start
 - type: entity
+  id: BaseCartridgeAntiMateriel
+  name: cartridge (12,7mm anti-materiel)
+  parent: [ BaseCartridge, BaseMajorContraband ]
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CartridgeAntiMateriel
+  - type: CartridgeAmmo
+    proto: BulletAntiMateriel
+  - type: Sprite
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Casings/large_ammo_casing.rsi
     scale: 0.80, 0.80
     layers:
     - state: base
@@ -30,7 +43,7 @@
 
 - type: entity
   id: CartridgeAntiMaterielHV
-  name: cartridge (.60 anti-materiel HV)
+  name: cartridge (12,7mm anti-materiel HV)
   parent: [ BaseCartridge, BaseMajorContraband ]
   components:
   - type: Tag
@@ -53,7 +66,7 @@
 
 - type: entity
   id: CartridgeAntiMaterielEMP
-  name: cartridge (.60 anti-materiel EMP)
+  name: cartridge (12,7mm anti-materiel EMP)
   parent: BaseCartridgeAntiMateriel
   components:
   - type: CartridgeAmmo

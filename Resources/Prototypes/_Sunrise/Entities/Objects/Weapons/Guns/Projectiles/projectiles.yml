@@ -45,7 +45,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    noRot: true
+    noRot: false
     sprite: _Sunrise/Objects/Weapons/Guns/Projectiles/antimat_tracer.rsi
     layers:
     - state: emp_bullet
@@ -54,8 +54,6 @@
     range: 1.5
     energyConsumption: 20000
     disableDuration: 8
-  # - type: Ammo
-  #   muzzleFlash: null
   - type: PointLight
     enabled: true
     radius: 1

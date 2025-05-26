@@ -10,6 +10,18 @@
       - id: MagazineBauer127
       - id: MagazineBauer127
 
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelSyndicateFilledDragunov
+  name: Dragunov bundle
+  description: "The iconic Dragunov magazine rifle with 2 raspy magazines in the set."
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponSniperDragunovBiocode
+      - id: MagazineDragunov
+      - id: MagazineDragunov
+
 #ERT_Uplink
 - type: entity
   id: ClothingBackpackDuffelWeaponSubMachineGunMP5Filled
@@ -149,7 +161,7 @@
   id: ClothingBackpackDuffelWeaponSniperHristovFilled
   parent: ClothingBackpackDuffelMilitary
   name: Bundle Hristov
-  description: Hristov with 4 raspy .60 10-rounds Box.
+  description: Hristov with 4 raspy 12,7mm 10-rounds Box.
   components:
     - type: StorageFill
       contents:
