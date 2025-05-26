@@ -94,10 +94,7 @@
     steps: 4
     zeroVisible: true
   - type: Appearance
-  - type: GunRequiresWield #Sunrise-Start
-  - type: SpeedModifiedOnWield
-    walkModifier: 0.85
-    sprintModifier: 0.85 #Sunrise-End
+  - type: GunRequiresWield
 
 - type: entity
   name: L6C ROW
