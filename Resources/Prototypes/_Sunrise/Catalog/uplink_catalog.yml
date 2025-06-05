@@ -832,9 +832,9 @@
   icon: { sprite: _Sunrise/Mobs/Silicon/chassis.rsi, state: syndi_reaper }
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 45
+    Telecrystal: 35
   cost:
-    Telecrystal: 65
+    Telecrystal: 55
   categories:
   - UplinkAllies
   conditions:
