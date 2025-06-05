@@ -453,6 +453,7 @@
 - type: entity
   name: cyborg's DL6902
   id: DL6902Borg
+  categories: [ HideSpawnMenu ]
   parent: BaseItem
   description: Cybersun cyborg heavy machine gun with extended magazine.
   components:
@@ -491,10 +492,11 @@
     autoRechargePauseTime: 5
 
 - type: entity
-  id: HeavyRifleBorg
   name: cyborg's Heavy Rifle Gun
-  description: A gun for battle cyborg's, firing Antimaterial bullet.
+  id: HeavyRifleBorg
+  categories: [ HideSpawnMenu ]
   parent: BaseItem
+  description: A gun for battle cyborg's, firing Antimaterial bullet.
   components:
   - type: Sprite
     sprite: Objects/Specific/Mech/mecha_equipment.rsi
@@ -520,11 +522,11 @@
   - type: AmmoCounter
 
 - type: entity
-  id: WeaponLauncherDusterBorg
   name: cyborg's EXP-220 Duster
-  description: An  heavy Auto Cannon as a mech-mounted gun with light Frag ammo
-  suffix: Mech Weapon, Gun, Combat
+  id: WeaponLauncherDusterBorg
+  categories: [ HideSpawnMenu ]
   parent: BaseItem
+  description: An  heavy Auto Cannon as a mech-mounted gun with light Frag ammo
   components:
   - type: Sprite
     sprite: Objects/Specific/Mech/mecha_equipment.rsi
@@ -560,8 +562,9 @@
 
 - type: entity
   name: cyborg's IAR-52
-  parent: BaseItem
   id: WeaponIAR52Borg
+  categories: [ HideSpawnMenu ]
+  parent: BaseItem
   description: High-speed SMG, equipped with a universal connector for other types of pistol magazines.
   components:
   - type: Sprite
