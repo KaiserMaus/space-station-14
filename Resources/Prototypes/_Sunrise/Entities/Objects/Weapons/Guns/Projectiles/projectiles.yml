@@ -88,10 +88,10 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 2
-    intensitySlope: 1
-    totalIntensity: 8
-    maxTileBreak: 1
+    maxIntensity: 5
+    intensitySlope: 3
+    totalIntensity: 60
+    maxTileBreak: 0
 
 # Shells that used for friendship and duster
 
