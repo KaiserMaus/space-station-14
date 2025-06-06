@@ -489,7 +489,7 @@
     autoRecharge: true
     autoRechargeRate: 250
     autoRechargePause: true
-    autoRechargePauseTime: 5
+    autoRechargePauseTime: 10
 
 - type: entity
   name: cyborg's Heavy Rifle Gun
@@ -518,7 +518,7 @@
     autoRecharge: true
     autoRechargeRate: 150
     autoRechargePause: true
-    autoRechargePauseTime: 5
+    autoRechargePauseTime: 15
   - type: AmmoCounter
 
 - type: entity
@@ -538,7 +538,7 @@
     angleIncrease: 8
     angleDecay: 10
     fireRate: 1.25
-    burstFireRate: 3
+    burstFireRate: 2.75
     selectedMode: Burst
     availableModes:
     - Burst
@@ -557,7 +557,7 @@
     autoRecharge: true
     autoRechargeRate: 750
     autoRechargePause: true
-    autoRechargePauseTime: 5
+    autoRechargePauseTime: 20
   - type: AmmoCounter
 
 - type: entity
