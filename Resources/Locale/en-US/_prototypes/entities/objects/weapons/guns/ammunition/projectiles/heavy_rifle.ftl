@@ -1,10 +1,10 @@
-ent-BulletHeavyRifle = bullet (7.62mmR)
+ent-BulletHeavyRifle = bullet (7,62mmR)
     .desc = { ent-BaseBullet.desc }
 ent-BulletMinigun = minigun bullet (.10 rifle)
     .desc = { ent-BulletHeavyRifle.desc }
-ent-BulletHeavyRiflePractice = bullet (7.62mmR)
+ent-BulletHeavyRiflePractice = bullet (7,62mmR)
     .desc = { ent-BaseBullet.desc }
-ent-BulletHeavyRifleIncendiary = bullet (7.62mmR)
+ent-BulletHeavyRifleIncendiary = bullet (7,62mmR)
     .desc = { ent-BaseBullet.desc }
-ent-BulletHeavyRifleUranium = bullet (7.62mmR)
+ent-BulletHeavyRifleUranium = bullet (7,62mmR)
     .desc = { ent-BaseBullet.desc }
