@@ -189,7 +189,7 @@ uplink-sunrise-clothing-neck-cloak-black-sec-name = Плащ службы без
 uplink-sunrise-weapon-disabler-name = Станнер
 uplink-sunrise-clothing-outer-armor-bulletproof-name = Пуленепробиваемый жилет
 uplink-sunrise-medkit-filled-name = Аптечка первой помощи
-uplink-sunrise-magazine-box-pistol-name = Коробка патронов (.35 авто)
+uplink-sunrise-magazine-box-pistol-name = Коробка патронов (9мм)
 uplink-sunrise-box-body-bag-name = Коробка мешков для тел
 
 ## Quartermaster

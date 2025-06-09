@@ -1,5 +1,5 @@
 ent-BaseCartridgeLightRifle = cartridge (.30 rifle)
-    .desc = { ent-BaseCartridge.desc }
+    .desc = A classic intermediate cartridge used by many combat rifles and LMGs. Standard kinetic ammunition is common and useful in most situations.
 ent-CartridgeLightRifle = cartridge (.30 rifle)
     .desc = A classic intermediate cartridge used by many combat rifles and LMGs. Standard kinetic ammunition is common and useful in most situations.
 ent-CartridgeLightRiflePractice = cartridge (.30 rifle practice)
