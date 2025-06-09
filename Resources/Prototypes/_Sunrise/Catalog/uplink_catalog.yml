@@ -399,8 +399,6 @@
       tags:
       - NukeOpsUplink
 
-    Telecrystal: 3
-
 - type: listing
   id: UplinkMagazineDragunov
   # name: uplink-magazine-dragunov-name
