@@ -110,7 +110,7 @@
           - MagazineRPD
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifle  # 762x39
+        startingItem: SunriseCartridgeLightRifle  # 762x39
         priority: 1
         whitelist:
           tags:
@@ -256,7 +256,7 @@
             - MagazineLightRifleBox
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifle
+        startingItem: SunriseCartridgeLightRifle
         priority: 1
         whitelist:
           tags:
