@@ -1,6 +1,6 @@
 - type: entity
   id: BaseCartridgeHeavyLightRifle
-  name: cartridge (7.62mmR)
+  name: cartridge (7,62mmR)
   parent: [ BaseCartridge, BaseRestrictedContraband ]
   abstract: true
   components:
@@ -8,7 +8,7 @@
     tags:
       - Cartridge
       - CartridgeHeavyRifle
-  - type: HitScanCartridgeAmmo #CartridgeAmmo Увы
+  - type: HitScanCartridgeAmmo #CartridgeAmmo =( FFF
     proto: BulletHeavyRifle
   - type: Sprite
     sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Casings/7.62x54.rsi
@@ -23,9 +23,9 @@
 
 - type: entity
   id: CartridgeHeavyLightRifle
-  name: cartridge (7.62mmR)
+  name: cartridge (7,62mmR)
   parent: [ BaseCartridgeHeavyLightRifle, BaseRestrictedContraband ]
-  description: A classic full-power 7.62×54mmR cartridge used by many combat rifles, marksman rifles, and medium machine guns. Its improved range over intermediate cartridges is generally less practical in cramped spacecraft environments, making it more common in surface combat or legacy weaponry.
+  description: A classic full-power 7.62x54mmR cartridge used by many combat rifles, marksman rifles, and medium machine guns. Its improved range over intermediate cartridges is generally less practical in cramped spacecraft environments, making it more common in surface combat or legacy weaponry.
   components:
   - type: Tag
   - type: HitScanCartridgeAmmo
@@ -33,9 +33,9 @@
 
 - type: entity
   id: CartridgeHeavyLightRiflePractice
-  name: cartridge (7.62mmR practice)
+  name: cartridge (7,62mmR practice)
   parent: BaseCartridgeHeavyLightRifle
-  description: A classic full-power 7.62×54mmR cartridge used by many combat rifles, marksman rifles, and medium machine guns. Its improved range over intermediate cartridges is generally less practical in cramped spacecraft environments, making it more common in surface combat or legacy weaponry. Chalk ammunition is generally non-harmful, used for practice.
+  description: A classic full-power 7.62x54mmR cartridge used by many combat rifles, marksman rifles, and medium machine guns. Its improved range over intermediate cartridges is generally less practical in cramped spacecraft environments, making it more common in surface combat or legacy weaponry. Chalk ammunition is generally non-harmful, used for practice.
   components:
   - type: HitScanCartridgeAmmo
     proto: BulletHeavyRiflePractice
@@ -49,9 +49,9 @@
 
 - type: entity
   id: CartridgeHeavyLightRifleIncendiary
-  name: cartridge (7.62mmR incendiary)
+  name: cartridge (7,62mmR incendiary)
   parent: BaseCartridgeHeavyLightRifle
-  description: A classic full-power 7.62×54mmR cartridge used by many combat rifles, marksman rifles, and medium machine guns. Its improved range over intermediate cartridges is generally less practical in cramped spacecraft environments, making it more common in surface combat or legacy weaponry. Incendiary ammunition contains a self-igniting compound that sets the target ablaze.
+  description: A classic full-power 7.62x54mmR cartridge used by many combat rifles, marksman rifles, and medium machine guns. Its improved range over intermediate cartridges is generally less practical in cramped spacecraft environments, making it more common in surface combat or legacy weaponry. Incendiary ammunition contains a self-igniting compound that sets the target ablaze.
   components:
   - type: HitScanCartridgeAmmo
     proto: BulletHeavyRifleIncendiary
@@ -67,9 +67,9 @@
 
 - type: entity
   id: CartridgeHeavyLightRifleUranium
-  name: cartridge (7.62mmR uranium)
+  name: cartridge (7,62mmR uranium)
   parent: BaseCartridgeHeavyLightRifle
-  description: A classic full-power 7.62×54mmR cartridge used by many combat rifles, marksman rifles, and medium machine guns. Its improved range over intermediate cartridges is generally less practical in cramped spacecraft environments, making it more common in surface combat or legacy weaponry. Uranium ammunition replaces the lead core of the bullet with fissile material, irradiating the target from the inside.
+  description: A classic full-power 7.62x54mmR cartridge used by many combat rifles, marksman rifles, and medium machine guns. Its improved range over intermediate cartridges is generally less practical in cramped spacecraft environments, making it more common in surface combat or legacy weaponry. Uranium ammunition replaces the lead core of the bullet with fissile material, irradiating the target from the inside.
   components:
   - type: HitScanCartridgeAmmo
     proto: BulletHeavyRifleUranium
@@ -80,33 +80,6 @@
       - state: tip
         map: [ "enum.AmmoVisualLayers.Tip" ]
         color: "#65fe08"
-
-
-
-# - type: entity
-#   abstract: true
-#   parent: BaseItem
-#   id: BaseMagazineBoxHeavyRifle
-#   components:
-#   - type: BallisticAmmoProvider
-#     mayTransfer: true
-#     whitelist:
-#       tags:
-#         - CartridgeHeavyRifle
-#     proto: CartridgeHeavyRifle
-#     capacity: 50
-#   - type: Item
-#     size: Small
-#   - type: ContainerContainer
-#     containers:
-#       ballistic-ammo: !type:Container
-#   - type: Sprite
-#     sprite: Objects/Weapons/Guns/Ammunition/Boxes/light_rifle.rsi
-#   - type: MagazineVisuals
-#     magState: mag
-#     steps: 4
-#     zeroVisible: false
-#   - type: Appearance
 
 # # Boxes
 

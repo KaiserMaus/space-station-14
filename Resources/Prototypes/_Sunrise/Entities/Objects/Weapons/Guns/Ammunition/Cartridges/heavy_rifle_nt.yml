@@ -25,7 +25,7 @@
   id: CartridgeHeavyRifleNT
   name: cartridge (7,62mm NT)
   parent: [ BaseCartridgeHeavyRifleNT, BaseRestrictedContraband ]
-  description: A NanoTrasen full-power 7.62×51mm cartridge designed for frontier and planetary combat. While powerful and long-ranged, it's ill-suited for close-quarters shipboard use, making it more common in legacy armories and colonial outposts.
+  description: A NanoTrasen full-power 7.62x51mm cartridge designed for frontier and planetary combat. While powerful and long-ranged, it's ill-suited for close-quarters shipboard use, making it more common in legacy armories and colonial outposts.
   components:
   - type: Tag
   - type: HitScanCartridgeAmmo
@@ -35,7 +35,7 @@
   id: CartridgeHeavyRifleNTPractice
   name: cartridge (7,62mm NT practice)
   parent: BaseCartridgeHeavyRifleNT
-  description: A NanoTrasen full-power 7.62×51mm cartridge designed for frontier and planetary combat. While powerful and long-ranged, it's ill-suited for close-quarters shipboard use, making it more common in legacy armories and colonial outposts. Chalk ammunition is generally non-harmful, used for practice.
+  description: A NanoTrasen full-power 7.62x51mm cartridge designed for frontier and planetary combat. While powerful and long-ranged, it's ill-suited for close-quarters shipboard use, making it more common in legacy armories and colonial outposts. Chalk ammunition is generally non-harmful, used for practice.
   components:
   - type: HitScanCartridgeAmmo
     proto: BulletHeavyRifleNTPractice
@@ -51,7 +51,7 @@
   id: CartridgeHeavyRifleNTIncendiary
   name: cartridge (7,62mm NT incendiary)
   parent: BaseCartridgeHeavyRifleNT
-  description: A NanoTrasen full-power 7.62×51mm cartridge designed for frontier and planetary combat. While powerful and long-ranged, it's ill-suited for close-quarters shipboard use, making it more common in legacy armories and colonial outposts. Incendiary ammunition contains a self-igniting compound that sets the target ablaze.
+  description: A NanoTrasen full-power 7.62x51mm cartridge designed for frontier and planetary combat. While powerful and long-ranged, it's ill-suited for close-quarters shipboard use, making it more common in legacy armories and colonial outposts. Incendiary ammunition contains a self-igniting compound that sets the target ablaze.
   components:
   - type: HitScanCartridgeAmmo
     proto: BulletHeavyRifleNTIncendiary
@@ -69,7 +69,7 @@
   id: CartridgeHeavyRifleNTUranium
   name: cartridge (7,62mm NT uranium)
   parent: BaseCartridgeHeavyRifleNT
-  description: A NanoTrasen full-power 7.62×51mm cartridge designed for frontier and planetary combat. While powerful and long-ranged, it's ill-suited for close-quarters shipboard use, making it more common in legacy armories and colonial outposts. Uranium ammunition replaces the lead core of the bullet with fissile material, irradiating the target from the inside.
+  description: A NanoTrasen full-power 7.62x51mm cartridge designed for frontier and planetary combat. While powerful and long-ranged, it's ill-suited for close-quarters shipboard use, making it more common in legacy armories and colonial outposts. Uranium ammunition replaces the lead core of the bullet with fissile material, irradiating the target from the inside.
   components:
   - type: HitScanCartridgeAmmo
     proto: BulletHeavyRifleNTUranium
@@ -80,33 +80,6 @@
       - state: tip
         map: [ "enum.AmmoVisualLayers.Tip" ]
         color: "#65fe08"
-
-
-
-# - type: entity
-#   abstract: true
-#   parent: BaseItem
-#   id: BaseMagazineBoxHeavyRifle
-#   components:
-#   - type: BallisticAmmoProvider
-#     mayTransfer: true
-#     whitelist:
-#       tags:
-#         - CartridgeHeavyRifle
-#     proto: CartridgeHeavyRifle
-#     capacity: 50
-#   - type: Item
-#     size: Small
-#   - type: ContainerContainer
-#     containers:
-#       ballistic-ammo: !type:Container
-#   - type: Sprite
-#     sprite: Objects/Weapons/Guns/Ammunition/Boxes/light_rifle.rsi
-#   - type: MagazineVisuals
-#     magState: mag
-#     steps: 4
-#     zeroVisible: false
-#   - type: Appearance
 
 # # Boxes
 
