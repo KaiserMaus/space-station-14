@@ -27,7 +27,6 @@
   parent: [ BaseCartridgeHeavyLightRifle, BaseRestrictedContraband ]
   description: A classic full-power 7.62x54mmR cartridge used by many combat rifles, marksman rifles, and medium machine guns. Its improved range over intermediate cartridges is generally less practical in cramped spacecraft environments, making it more common in surface combat or legacy weaponry.
   components:
-  - type: Tag
   - type: HitScanCartridgeAmmo
     proto: BulletHeavyRifle
 

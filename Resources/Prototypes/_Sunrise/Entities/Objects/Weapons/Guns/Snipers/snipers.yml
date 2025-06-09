@@ -27,7 +27,7 @@
     - SemiAuto
     minAngle: 25
     maxAngle: 46
-    fireRate: 0.75
+    fireRate: 2.25
     soundGunshot:
       path: /Audio/_Sunrise/Weapons/Guns/Snipers/Dragunov/dragunov_shot.ogg
       params:
@@ -331,7 +331,7 @@
     proto: null
     whitelist:
       tags:
-      - CartridgeLightRifle
+      - CartridgeHeavyRifle
   - type: Lubed
     slipStrength: 3
     slipsLeft: 3

@@ -139,7 +139,7 @@
     tags:
     - MagazineRPD
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifle  # 762x39
+    proto: SunriseCartridgeLightRifle  # 762x39
     capacity: 100
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/pk_box.rsi

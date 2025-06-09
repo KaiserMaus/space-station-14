@@ -39,7 +39,7 @@
             - MagazineLightRifle
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifle  # 762x39
+        startingItem: SunriseCartridgeLightRifle  # 762x39
         priority: 1
         whitelist:
           tags:
@@ -99,7 +99,7 @@
           - MagazineLightRifle
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifle  # 762x39
+        startingItem: SunriseCartridgeLightRifle  # 762x39
         priority: 1
         whitelist:
           tags:
@@ -394,11 +394,11 @@
   - type: Item
     size: Huge
     shape:
+      - 0,0,4,2
+    sprite: _Sunrise/Objects/Weapons/Guns/Rifles/ar18/tiny.rsi
   - type: GunWieldBonus
     minAngle: -22
     maxAngle: -40
-    - 0,0,4,2
-    sprite: _Sunrise/Objects/Weapons/Guns/Rifles/ar18/tiny.rsi
   - type: Gun
     minAngle: 24
     maxAngle: 45
@@ -539,7 +539,7 @@
           - MagazineLightRifle
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifle  # 762x39
+        startingItem: SunriseCartridgeLightRifle  # 762x39
         priority: 1
         whitelist:
           tags:
