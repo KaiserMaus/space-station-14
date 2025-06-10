@@ -137,7 +137,7 @@
             - HandGrenadeAmmo
   - type: UseDelayOnShoot
   - type: UseDelay
-    delay: 1 #No script abuse
+    delay: 0.75 #No script abuse
   - type: ContainerContainer
     containers:
       gun_chamber: !type:ContainerSlot
