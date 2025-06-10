@@ -8,7 +8,6 @@
     state: closed
   - type: Item
     sprite: _RMC14/Objects/Storage/procase_mini.rsi
-    state: closed
     size: Large
     shape:
     - 0,0,2,1
