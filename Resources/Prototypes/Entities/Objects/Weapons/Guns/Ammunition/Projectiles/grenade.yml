@@ -45,10 +45,10 @@
   parent: BaseBulletIncendiary
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Projectiles/shrapnel.rsi #Sunrise-Start
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:
-    - state: shrapnel_human
-      shader: unshaded  #Sunrise-End
+    - state: buckshot-flare
+      shader: unshaded
   - type: Projectile
     deleteOnCollide: false
     damage:
