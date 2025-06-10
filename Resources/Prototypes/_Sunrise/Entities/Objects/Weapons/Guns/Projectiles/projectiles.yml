@@ -244,8 +244,6 @@
   - type: EmitSoundOnTrigger
     sound:
       path: "/Audio/Weapons/Guns/Gunshots/batrifle.ogg"
-  - type: SpawnOnTrigger
-    proto: GrenadeFlashEffect
   - type: OnUseTimerTrigger
     initialBeepDelay: 0
     beepInterval: 2
