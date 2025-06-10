@@ -54,6 +54,9 @@
 - type: Tag
   id: MiniSyringe
 
+- type: Tag
+  id: HandGrenadeAmmo
+
 # Weapons
 - type: Tag
   id: WrappedWeapon

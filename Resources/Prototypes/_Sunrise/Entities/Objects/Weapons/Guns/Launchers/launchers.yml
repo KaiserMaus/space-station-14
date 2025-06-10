@@ -110,3 +110,84 @@
     capacity: 6
     chambers: [ True, True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null, null ]
+
+- type: entity
+  name: hand grenade launcher
+  parent: WeaponFlareGun
+  id: WeaponGrenadeLauncher
+  abstract: true
+  description: A compact, single-shot pistol that fires shotgun shells. Comes with a safety feature that prevents the user from fitting lethal shells inside.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Shotguns/flaregun.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Item
+    size: Small
+    sprite: Objects/Weapons/Guns/Shotguns/flaregun.rsi
+  - type: ItemSlots
+    slots:
+      gun_chamber:
+        name: Chamber
+        startingItem: ShellShotgunFlare
+        priority: 1
+        whitelist:
+          tags:
+            - HandGrenadeAmmo
+  - type: UseDelayOnShoot
+  - type: UseDelay
+    delay: 1 #No script abuse
+  - type: ContainerContainer
+    containers:
+      gun_chamber: !type:ContainerSlot
+  - type: ChamberMagazineAmmoProvider
+    autoCycle: false
+    boltClosed: false
+    canRack: false
+    soundBoltClosed: /Audio/Weapons/Guns/Cock/revolver_cock.ogg
+    soundBoltOpened: /Audio/Weapons/Guns/Cock/revolver_cock.ogg
+    soundRack: /Audio/Weapons/Guns/Cock/revolver_cock.ogg
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Shotguns/flaregun.rsi
+    quickEquip: false
+    slots:
+    - Belt
+    - suitStorage
+  - type: Appearance
+  - type: Gun
+    projectileSpeed: 20
+    fireRate: 8
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/flaregun.ogg
+    bigTrigger: true
+
+- type: entity
+  name: security grenade Launcher
+  parent: [WeaponGrenadeLauncher, BaseSecurityContraband]
+  id: WeaponGrenadeLauncherSecurity
+  description: A modification of flare gun originally designed to be used by security to launch non-lethal hand grenade, however it can also fire lethal grenade without risk.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/grenadegun_security.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Item
+    size: Normal
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/grenadegun_security.rsi
+  - type: ItemSlots
+    slots:
+      gun_chamber:
+        name: Chamber
+        priority: 1
+        whitelist:
+          tags:
+            - ShellShotgun
+            - HandGrenadeAmmo
+  - type: Tag
+    tags:
+    - Sidearm
