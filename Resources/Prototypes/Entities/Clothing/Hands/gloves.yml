@@ -207,6 +207,7 @@
   - type: FingerprintMask
   # Sunrise-start
   - type: Insulated
+    preventOpperatinGuns: true # Sunrise-Edit
   # Sunrise-end
 
 - type: entity
