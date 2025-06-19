@@ -128,10 +128,10 @@
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
     fireRate: 3
-  - type: GunSpreadModifier # Sunrise-add #Port WZ #37731
-    spread: 0.6 # Sunrise-add
     soundGunshot:
       collection: m3 # Sunrise-Edit
+  - type: GunSpreadModifier # Sunrise-add #Port WZ #37731
+    spread: 0.6 # Sunrise-add
   - type: BallisticAmmoProvider
     capacity: 2
   - type: Construction
@@ -220,10 +220,10 @@
     sprite: Objects/Weapons/Guns/Shotguns/sawn_inhands_64x.rsi
   - type: Gun
     fireRate: 3
-  - type: GunSpreadModifier # Sunrise-add #Port WZ #37731
-    spread: 1.4 # Sunrise-add
     soundGunshot:
       collection: m3 # Sunrise-Edit
+  - type: GunSpreadModifier # Sunrise-add #Port WZ #37731
+    spread: 1.4 # Sunrise-add
   - type: BallisticAmmoProvider
     capacity: 2
   - type: Construction
