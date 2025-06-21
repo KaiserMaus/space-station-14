@@ -1,0 +1,18 @@
+- type: constructionGraph
+  id: Glock22Auto
+  start: start
+  graph:
+    - node: start
+      entity: WeaponPistolG22
+      edges:
+        - to: auto
+          steps:
+            - tag: ModularReceiverAuto
+              amount: 1
+              doAfter: 8
+          completed:
+            - !type:AdminLog
+              message: "Converted Glock22 to Auto"
+              impact: High
+    - node: auto
+      entity: WeaponPistolG22Auto
