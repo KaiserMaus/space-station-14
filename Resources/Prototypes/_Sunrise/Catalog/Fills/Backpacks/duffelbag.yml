@@ -126,7 +126,7 @@
   id: ClothingBackpackDuffelWeaponShotgun4034Filled
   parent: ClothingBackpackDuffelMilitary
   name: Bundle Trenchgun 4034
-  description: Дешёвый дробовик полицейской службы. with 1 Box ammo.
+  description: Trenchgun 4034 with 1 Box ammo.
   components:
     - type: StorageFill
       contents:
