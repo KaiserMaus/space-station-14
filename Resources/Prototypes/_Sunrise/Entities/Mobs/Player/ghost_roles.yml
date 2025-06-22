@@ -329,7 +329,7 @@
     pocket1: Holoprojector
     pocket2: HoloprojectorField
   inhand:
-  - WeaponEnergyGun
+  - WeaponLauncherHydra
   - AdvMopItem
   storage:
     back:
@@ -357,7 +357,7 @@
     pocket1: Holoprojector
     pocket2: HoloprojectorField
   inhand:
-  - WeaponEnergyGun
+  - WeaponLauncherHydra
   - AdvMopItem
   storage:
     back:
