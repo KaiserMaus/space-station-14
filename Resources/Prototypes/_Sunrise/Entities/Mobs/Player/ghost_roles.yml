@@ -71,10 +71,10 @@
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltCentCom
     belt: ClothingBeltSecurityFilled
-    pocket1: WeaponPistolN1984
+    pocket1: MagazineMagnum
     pocket2: BaseUplinkNTERT200BC
   inhand:
-  - null
+  - WeaponPistolN1984
   storage:
     back:
     - BoxErtLeaderKit
