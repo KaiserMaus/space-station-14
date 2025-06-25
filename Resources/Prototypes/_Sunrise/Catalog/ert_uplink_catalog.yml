@@ -422,18 +422,6 @@
     stock: 6
 
 - type: listing
-  id: NTUplinkSunriseMagazineBoxMagnumUranium
-  productEntity: MagazineBoxMagnumUranium
-  icon: { sprite: _Sunrise/Interface/Misc/nt_icons.rsi, state: box_magnum_uran }
-  cost:
-    Crystallite: 8
-  categories:
-    - NTAmmo
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 6
-
-- type: listing
   id: NTUplinkSunriseMagazineP90
   productEntity: MagazineP90Extended
   icon: { sprite: _Sunrise/Interface/Misc/nt_icons.rsi, state: mag_p90 }
@@ -468,18 +456,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 4
-
-- type: listing
-  id: NTUplinkSunriseSMGUraniumAmmoKit
-  productEntity: SMGUraniumAmmoKit
-  icon: { sprite: _Sunrise/Interface/Misc/nt_icons.rsi, state: box_smg_uran }
-  cost:
-    Crystallite: 24
-  categories:
-  - NTAmmo
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 2
 
 - type: listing
   id: NTUplinkSunriseBoxMagazineShotgun
