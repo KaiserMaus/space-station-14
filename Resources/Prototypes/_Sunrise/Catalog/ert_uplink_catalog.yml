@@ -263,17 +263,17 @@
     stock: 4
 
 # Пистолеты:
-# - type: listing
-#   id: NTUplinkSunriseWeaponRevolverSpearhead
-#   productEntity: WeaponRevolverSpearhead
-#   icon: { sprite: _Sunrise/Interface/Misc/nt_icons.rsi, state: spearhead }
-#   cost:
-#     Bluecrystal: 6
-#   categories:
-#   - NTPistols
-#   conditions:
-#   - !type:ListingLimitedStockCondition
-#     stock: 4
+- type: listing
+  id: NTUplinkSunriseWeaponRevolverSpearhead
+  productEntity: WeaponRevolverSpearhead
+  icon: { sprite: _Sunrise/Interface/Misc/nt_icons.rsi, state: spearhead }
+  cost:
+    Bluecrystal: 6
+  categories:
+  - NTPistols
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 4
 
 - type: listing
   id: NTUplinkSunriseWeaponSubMachineGunSkorpion
@@ -782,6 +782,30 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 8
+
+- type: listing
+  id: NTUplinkSunriseStimpackNT
+  productEntity: StimpackNT
+  icon: { sprite: _Sunrise/Interface/Misc/nt_icons.rsi, state: stim }
+  cost:
+    Crystallite: 4
+  categories:
+  - NTMedicine
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 12
+
+- type: listing
+  id: NTUplinkSunriseStimkitFilledNT
+  productEntity: StimkitFilledNT
+  icon: { sprite: _Sunrise/Interface/Misc/nt_icons.rsi, state: stimkit }
+  cost:
+    Crystallite: 12
+  categories:
+  - NTMedicine
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
 
 - type: listing
   id: NTUplinkSunriseDuffelNanotrasenMedicalBundleFilled

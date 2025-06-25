@@ -378,6 +378,12 @@
 	},
 	{
 		"name": "speedloader45"
+	},
+	{
+		"name": "stimkit"
+	},
+	{
+		"name": "stim"
 	}
     ]
 }
