@@ -2,3 +2,14 @@ ent-CartridgeRail = { ent-BaseCartridge }
     .desc = { ent-BaseCartridge.desc }
 ent-CartridgeRifleRubber = cartridge (.20 rifle rubber)
     .desc = { ent-BaseCartridgeRifle.desc }
+
+ent-SunriseBaseCartridgeRifle = cartridge (5,56mm)
+    .desc = A widely used intermediate cartridge favored by modern service rifles and squad support weapons. Offers good accuracy and manageable recoil, making it effective for sustained engagements.
+ent-SunriseCartridgeRifle = cartridge (5,56mm)
+    .desc = { ent-SunriseBaseCartridgeRifle.desc }
+ent-SunriseCartridgeRiflePractice = cartridge (5,56mm practice)
+    .desc = A widely used intermediate cartridge favored by modern service rifles and squad support weapons. Chalk ammunition is generally non-harmful, used for practice.
+ent-SunriseCartridgeRifleIncendiary = cartridge (5,56mm incendiary)
+    .desc = A widely used intermediate cartridge favored by modern service rifles and squad support weapons. Incendiary ammunition contains a self-igniting compound that sets the target ablaze.
+ent-SunriseCartridgeRifleUranium = cartridge (5,56mm uranium)
+    .desc = A widely used intermediate cartridge favored by modern service rifles and squad support weapons. Uranium ammunition replaces the lead core of the bullet with fissile material, irradiating the target from the inside.
