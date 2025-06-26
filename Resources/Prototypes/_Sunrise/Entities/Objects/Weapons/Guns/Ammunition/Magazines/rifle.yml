@@ -44,7 +44,7 @@
     size: Small
   - type: BallisticAmmoProvider
     mayTransfer: true
-    proto: CartridgeRifle
+    proto: SunriseCartridgeRifle
     whitelist:
       tags:
       - CartridgeRifle
@@ -77,7 +77,7 @@
     size: Small
   - type: BallisticAmmoProvider
     mayTransfer: true
-    proto: CartridgeRifle
+    proto: SunriseCartridgeRifle
     whitelist:
       tags:
       - CartridgeRifle
@@ -176,7 +176,7 @@
     size: Small
   - type: BallisticAmmoProvider
     mayTransfer: true
-    proto: CartridgeRifle  # 556
+    proto: SunriseCartridgeRifle  # 556
     whitelist:
       tags:
       - CartridgeRifle  # 556
