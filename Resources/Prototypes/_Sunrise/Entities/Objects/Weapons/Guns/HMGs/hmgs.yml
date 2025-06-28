@@ -129,7 +129,7 @@
     targetSlot: BACK
     containerWhitelist:
       tags:
-      - PowerpackMinigunMG100
+      - PowerpackDL6902
   - type: Appearance
   - type: Wieldable
   - type: UseDelay
@@ -194,3 +194,6 @@
       - WeaponDL6902PowerPack
   - type: StaticPrice
     price: 5500
+  - type: Tag
+    tags:
+    - PowerpackDL6902

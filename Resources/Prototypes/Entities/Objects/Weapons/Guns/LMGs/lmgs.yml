@@ -142,7 +142,7 @@
       containers:
         ballistic-ammo: !type:Container
     - type: HitscanBatteryAmmoProvider
-      proto: SunriseCartridgeRifle  # Sunrise-Edit
+      proto: BulletLightRifle
       fireCost: 100
     - type: Battery
       maxCharge: 10000

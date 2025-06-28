@@ -276,7 +276,6 @@
         whitelist:
           tags:
             - MagazineDl6902
-            - MagazineLightRiflePkBox
             - MagazineRPD
       gun_chamber:
         name: Chamber

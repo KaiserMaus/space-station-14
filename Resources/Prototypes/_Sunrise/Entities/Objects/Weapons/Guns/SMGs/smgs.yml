@@ -177,12 +177,12 @@
     - 0,0,2,2
     sprite: _Sunrise/Objects/Weapons/Guns/SMGs/mp7/tiny.rsi
   - type: GunWieldBonus
-    minAngle: -6
+    minAngle: -5
     maxAngle: -17
   - type: Gun
-    minAngle: 7
+    minAngle: 6.6
     maxAngle: 30
-    angleIncrease: 2.2
+    angleIncrease: 1.2
     angleDecay: 28
     fireRate: 6.55
     soundGunshot:
@@ -325,7 +325,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazinePistolHighCapacity
+        startingItem: MagazineScorpion
         insertSound: /Audio/_Sunrise/Weapons/Guns/SMGs/scorpion/scorpion_reload.ogg
         ejectSound: /Audio/_Sunrise/Weapons/Guns/SMGs/scorpion/scorpion_unload.ogg
         priority: 2
@@ -333,6 +333,7 @@
           tags:
           - MagazinePistolSubMachineGun
           - MagazinePistolHighCapacity
+          - MagazineScorpion
       gun_chamber:
         name: Chamber
         startingItem: CartridgePistol  # 57x28

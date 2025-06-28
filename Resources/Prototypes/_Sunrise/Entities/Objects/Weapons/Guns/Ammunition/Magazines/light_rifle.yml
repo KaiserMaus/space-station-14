@@ -41,11 +41,11 @@
     - MagazineMP38
   - type: BallisticAmmoProvider
     mayTransfer: true
-    proto: CartridgeLightRifle  # 57x28
+    proto: CartridgePistol  # 57x28
     whitelist:
       tags:
-      - CartridgeLightRifle  # 57x28
-    capacity: 45
+      - CartridgePistol  # 57x28
+    capacity: 32
   - type: Item
     size: Small
   - type: ContainerContainer
@@ -74,10 +74,10 @@
     - MagazineScorpion
   - type: BallisticAmmoProvider
     mayTransfer: true
-    proto: CartridgeLightRifle  # 57x28
+    proto: CartridgePistol  # 57x28
     whitelist:
       tags:
-      - CartridgeLightRifle  # 57x28
+      - CartridgePistol  # 57x28
     capacity: 20
   - type: Item
     size: Small

@@ -19,8 +19,8 @@
     unwieldOnUse: false
   - type: GunRequiresWield
   - type: GunWieldBonus
-    minAngle: -0 # Set to 0 because GunRequiresWield
-    maxAngle: -0
+    minAngle: 0 # Set to 0 because GunRequiresWield
+    maxAngle: 0
   - type: Gun
     minAngle: 3
     maxAngle: 9
@@ -318,13 +318,13 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineFamas
+        startingItem: MagazineRifle
         insertSound: /Audio/_Sunrise/Weapons/Guns/Rifles/Famas/famas_reload.ogg
         ejectSound: /Audio/_Sunrise/Weapons/Guns/Rifles/Famas/famas_unload.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineFamas
+            - MagazineM16A4
             - MagazineRifle
       gun_chamber:
         name: Chamber
@@ -380,13 +380,13 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineG36
+        startingItem: MagazineM16A4
         insertSound: /Audio/_Sunrise/Weapons/Guns/Snipers/Different/reload.ogg
         ejectSound: /Audio/_Sunrise/Weapons/Guns/Snipers/Different/unload.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineG36
+            - MagazineM16A4
             - MagazineRifle
       gun_chamber:
         name: Chamber
@@ -569,7 +569,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineRifle
+        startingItem: MagazineM16A4
         insertSound: /Audio/_Sunrise/Weapons/Guns/Rifles/AK/ak_reload.ogg
         ejectSound: /Audio/_Sunrise/Weapons/Guns/Rifles/AK/ak_unload.ogg
         priority: 2

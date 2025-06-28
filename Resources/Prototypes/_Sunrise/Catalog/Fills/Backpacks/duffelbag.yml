@@ -94,7 +94,7 @@
     - type: StorageFill
       contents:
         - id: WeaponRifleG36
-        - id: MagazineG36Extended
+        - id: MagazineM16A4
           amount: 4
 
 - type: entity
