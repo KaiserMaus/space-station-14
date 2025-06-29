@@ -324,7 +324,6 @@
         priority: 2
         whitelist:
           tags:
-            - MagazineM16A4
             - MagazineRifle
       gun_chamber:
         name: Chamber
@@ -380,13 +379,12 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineM16A4
+        startingItem: SunriseMagazineRifle
         insertSound: /Audio/_Sunrise/Weapons/Guns/Snipers/Different/reload.ogg
         ejectSound: /Audio/_Sunrise/Weapons/Guns/Snipers/Different/unload.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineM16A4
             - MagazineRifle
       gun_chamber:
         name: Chamber
@@ -569,14 +567,13 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineM16A4
+        startingItem: SunriseMagazineRifle
         insertSound: /Audio/_Sunrise/Weapons/Guns/Rifles/AK/ak_reload.ogg
         ejectSound: /Audio/_Sunrise/Weapons/Guns/Rifles/AK/ak_unload.ogg
         priority: 2
         whitelist:
           tags:
           - MagazineRifle
-          - MagazineM16A4
       gun_chamber:
         name: Chamber
         startingItem: SunriseCartridgeRifle  # 556

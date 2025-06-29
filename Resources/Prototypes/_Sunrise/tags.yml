@@ -150,9 +150,6 @@
   id: NoSpinOnThrow
 
 - type: Tag
-  id: MagazineM16A4
-
-- type: Tag
   id: MagazineSTG44
 
 - type: Tag

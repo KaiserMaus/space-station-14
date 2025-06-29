@@ -70,8 +70,8 @@
     Steel: 145
 
 - type: latheRecipe
-  id: MagazineM16A4
-  result: MagazineM16A4
+  id: SunriseMagazineRifle
+  result: SunriseMagazineRifle
   categories:
   - Ammo
   completetime: 5
@@ -376,13 +376,13 @@
     Plastic: 50
 
 - type: latheRecipe
-  id: MagazineM16A4Extended
-  result: MagazineM16A4Extended
+  id: SunriseMagazineRifleExtended
+  result: SunriseMagazineRifleExtended
   categories:
   - Weapons
   completetime: 12
   materials:
-    Steel: 650
+    Steel: 450
 
 - type: latheRecipe
   id: MagazineAR18Extended
