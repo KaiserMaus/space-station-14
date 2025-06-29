@@ -2260,3 +2260,20 @@
   - type: AccessReader
     access: [["SyndicateAgent"]]
 
+  #Sunrise-Start
+- type: entity
+  parent: VendingMachineChemicals
+  id: VendingMachineChemicalsNanotrasen
+  name: ChemVend
+  description: Probably not the coffee machine.
+  components:
+  - type: VendingMachine
+    pack: ChemVendInventoryNanotrasen
+    offState: off
+    brokenState: broken
+    normalState: normal
+    denyState: deny
+    ejectDelay: 2
+  - type: AccessReader
+    access: [["Chemistry"]]
+  #Sunrise-End

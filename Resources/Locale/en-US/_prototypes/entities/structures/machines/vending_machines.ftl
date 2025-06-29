@@ -154,3 +154,5 @@ ent-VendingMachineChemicals = ChemVend
     .desc = Probably not the coffee machine.
 ent-VendingMachineChemicalsSyndicate = SyndieJuice
     .desc = Not made with freshly squeezed syndies I hope.
+ent-VendingMachineChemicalsNanotrasen = ChemVend
+    .desc = { desc-VendingMachineChemicals.desc }

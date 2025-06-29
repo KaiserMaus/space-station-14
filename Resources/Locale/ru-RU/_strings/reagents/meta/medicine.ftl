@@ -98,3 +98,7 @@ reagent-name-potassium-iodide = иодид калия
 reagent-desc-potassium-iodide = Снижает разрушительное воздействие радиации на 90%. Используется только в профилактических целях.
 reagent-name-haloperidol = галоперидол
 reagent-desc-haloperidol = Выводит из организма большинство стимулирующих и галлюциногенных препаратов. Уменьшает наркотический эффект и дрожание. Вызывает сонливость.
+
+reagent-name-pyrazine-dermaline = пиразин и дермалин
+reagent-name-puncturase-tranexamic = пунктураз и транексамовая кислота
+reagent-name-dexalin-plus-saline = дексалин плюс и физраствор

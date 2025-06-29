@@ -147,3 +147,7 @@ reagent-desc-potassium-iodide = Will reduce the damaging effects of radiation by
 
 reagent-name-haloperidol = haloperidol
 reagent-desc-haloperidol = Removes most stimulating and hallucinogenic drugs. Reduces druggy effects and jitteriness. Causes drowsiness.
+
+reagent-name-pyrazine-dermaline = pyrazine-dermaline
+reagent-name-puncturase-tranexamic = puncturase-tranexamic
+reagent-name-dexalin-plus-saline = dexalin plus-saline

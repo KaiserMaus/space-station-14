@@ -154,3 +154,5 @@ ent-VendingMachineChemicals = ХимкоМат
     .desc = Вероятно, не кофемашина.
 ent-VendingMachineChemicalsSyndicate = СиндиСоки
     .desc = Надеюсь, не из свежевыжатых синдикатовцев?
+ent-VendingMachineChemicalsNanotrasen = ХимкоМат
+    .desc = { desc-VendingMachineChemicals.desc }
