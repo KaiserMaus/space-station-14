@@ -445,6 +445,7 @@
   id: CentcomTechFab
   parent: BaseLatheLube
   name: centcom techfab
+  suffix: ERT
   description: Prints equipment for CentCom rapid response squads. "Cost-optimized model" has reduced fabrication speed and limited selection.
   components:
   - type: Sprite
@@ -469,13 +470,13 @@
     timeMultiplier: 1.75
     staticPacks:
     - SecurityAmmoStatic
-    - SecurityStaticSunrise # Sunrise-Add
+    - SecurityStaticSunrise
     dynamicPacks:
     - SecurityEquipment
     - SecurityExplosives
     - SecurityAmmo
     - SecurityWeapons
-    - SecurityDynamicSunrise # Sunrise-Add
+    - SecurityDynamicSunrise
   - type: MaterialStorage
     whitelist:
       tags:
