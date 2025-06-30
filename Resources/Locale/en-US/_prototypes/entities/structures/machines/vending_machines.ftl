@@ -155,4 +155,5 @@ ent-VendingMachineChemicals = ChemVend
 ent-VendingMachineChemicalsSyndicate = SyndieJuice
     .desc = Not made with freshly squeezed syndies I hope.
 ent-VendingMachineChemicalsNanotrasen = ChemVend
+    .suffix = ERT
     .desc = { desc-VendingMachineChemicals.desc }

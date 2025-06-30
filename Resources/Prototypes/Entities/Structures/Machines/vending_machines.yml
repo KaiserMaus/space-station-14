@@ -2265,6 +2265,7 @@
   parent: VendingMachineChemicals
   id: VendingMachineChemicalsNanotrasen
   name: ChemVend
+  suffix: ERT
   description: Probably not the coffee machine.
   components:
   - type: VendingMachine

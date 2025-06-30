@@ -217,7 +217,7 @@
       settings: ERTSecurityAmber
 
 - type: entity
-  id: RandomHumanoidSpawnerERTLeaderRedLock
+  id: RandomHumanoidSpawnerERTSecurityAmberLock
   parent: RandomHumanoidSpawnerERTSecurityAmber
   suffix: ERTRole, Amber, Uplink, Lock
   components:
@@ -602,7 +602,7 @@
       prototypes: [ ERTMedicalGearAmber ]
 
 - type: randomHumanoidSettings
-  id: ERTMedicalGammaLock
+  id: ERTMedicalAmberLock
   parent: ERTMedicalAmber
   components:
     - type: GhostRole
