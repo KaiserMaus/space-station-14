@@ -285,7 +285,4 @@
     endAudio: "/Audio/_Sunrise/Announcements/sunrise_ert_accepted" # Если изменить будет двоиться
   - type: LoadMapRule
     gridPath: "/Maps/_Sunrise/Shuttles/DSO/ERT/ert_medium_gamma.yml"
-    weight: 1
-    earliestStart: 1 # +5 минут на шаттле обязательно
-    minimumPlayers: 1
 # Sunrise-End
