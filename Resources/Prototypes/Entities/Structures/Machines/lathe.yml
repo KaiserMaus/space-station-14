@@ -484,7 +484,6 @@
         - RawMaterial
         - Ingot
   - type: OreSiloClient
-  - type: BlockedTool
   # Sunrise-End
 
 - type: entity
