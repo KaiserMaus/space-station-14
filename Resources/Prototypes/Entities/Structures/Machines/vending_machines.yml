@@ -2269,7 +2269,7 @@
   description: Probably not the coffee machine.
   components:
   - type: VendingMachine
-    pack: ChemVendInventoryNanotrasen
+    pack: ChemVendInventorySyndicate
     offState: off
     brokenState: broken
     normalState: normal
