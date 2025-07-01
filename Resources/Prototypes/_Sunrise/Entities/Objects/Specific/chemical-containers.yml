@@ -126,7 +126,7 @@
     currentLabel: reagent-name-bicaridine
   - type: SolutionContainerManager
     solutions:
-      beakers:
+      beaker:
         reagents:
         - ReagentId: Bicaridine
           Quantity: 200
@@ -140,7 +140,7 @@
     currentLabel: reagent-name-dermaline
   - type: SolutionContainerManager
     solutions:
-      beakers:
+      beaker:
         reagents:
         - ReagentId: Dermaline
           Quantity: 200
@@ -154,7 +154,7 @@
     currentLabel: reagent-name-dexalin
   - type: SolutionContainerManager
     solutions:
-      beakers:
+      beaker:
         reagents:
         - ReagentId: Dexalin
           Quantity: 200
@@ -168,7 +168,7 @@
     currentLabel: reagent-name-dexalin-plus
   - type: SolutionContainerManager
     solutions:
-      beakers:
+      beaker:
         reagents:
         - ReagentId: DexalinPlus
           Quantity: 200
@@ -182,7 +182,7 @@
     currentLabel: reagent-name-dylovene
   - type: SolutionContainerManager
     solutions:
-      beakers:
+      beaker:
         reagents:
         - ReagentId: Dylovene
           Quantity: 200
@@ -196,7 +196,7 @@
     currentLabel: reagent-name-saline
   - type: SolutionContainerManager
     solutions:
-      beakers:
+      beaker:
         reagents:
         - ReagentId: Saline
           Quantity: 200
