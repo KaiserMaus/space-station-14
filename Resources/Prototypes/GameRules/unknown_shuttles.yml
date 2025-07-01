@@ -280,9 +280,9 @@
   components:
   - type: StationEvent
     startAnnouncement: null
-    startAudio: "/Audio/_Sunrise/Announcements/sunrise_ert_accepted.ogg"
+    startAudio: /Audio/_Sunrise/Announcements/sunrise_ert_accepted.ogg
     duration: -0 # Если изменить будет двоиться
-    endAudio: "/Audio/_Sunrise/Announcements/sunrise_ert_accepted" # Если изменить будет двоиться
+    endAudio: /Audio/_Sunrise/Announcements/sunrise_ert_accepted.ogg
   - type: LoadMapRule
     gridPath: "/Maps/_Sunrise/Shuttles/DSO/ERT/ert_medium_gamma.yml"
 # Sunrise-End
