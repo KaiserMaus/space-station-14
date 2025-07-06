@@ -297,6 +297,17 @@
   - type: Implanter
     implant: FakeMindShieldImplant
 
+# Sunrise-Start
+- type: entity
+  id: CreepyLaughImplanter
+  name: creepy laugh implanter
+  suffix: Sunrise, Laugh
+  parent: BaseImplantOnlyImplanter
+  components:
+    - type: Implanter
+      implant: CreepyLaughImplant
+# Sunrise-End
+
 # Security and Command implanters
 
 - type: entity
