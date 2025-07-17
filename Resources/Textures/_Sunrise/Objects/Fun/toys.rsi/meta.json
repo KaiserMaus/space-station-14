@@ -205,10 +205,12 @@
         "name": "plushie-CFB"
       },
       {
-        "name": "cfb_inhand-right"
+        "name": "cfb-inhand-right",
+        "directions": 4
       },
       {
-        "name": "cfb_inhand-left"
+        "name": "cfb-inhand-left",
+        "directions": 4
       },
       {
         "name": "plushie-sebastian"
