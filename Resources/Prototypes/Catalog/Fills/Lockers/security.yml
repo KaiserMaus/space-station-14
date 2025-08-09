@@ -218,7 +218,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: SpeedLoaderMagnumBasic
+    - id: SpeedLoaderShellShotgun
       amount: 2
     - id: WeaponShotgunEnforcer
       amount: 2
@@ -232,7 +232,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: SpeedLoaderMagnumBasic
+    - id: SpeedLoaderShellShotgun
       amount: 2
     - id: WeaponShotgunKammerer
       amount: 2
