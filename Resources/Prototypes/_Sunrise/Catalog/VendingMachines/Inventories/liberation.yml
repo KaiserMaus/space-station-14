@@ -23,6 +23,18 @@
     WeaponRevolverSnubRevolver: 1
 
     WeaponRifleAk: 1
+    WeaponRifleAKM: 1
+    WeaponRifleAKMU: 1
+    WeaponRifleAK514: 1
+    WeaponRifleFamas: 1
+    WeaponRifleG36: 1
+    WeaponRifleM28: 1
+    WeaponRifleAR18: 1
+    WeaponRifleV31: 1
+    WeaponRifleScarH: 1
+    WeaponRifleLecterMk2: 1
+    WeaponRifleFoam: 1
+    WeaponSTG44: 1
     WeaponRifleM90GrenadeLauncher: 1
     WeaponRifleLecter: 1
     #Sunrise
@@ -39,14 +51,41 @@
     WeaponEnergyShotgun: 1
     #Sunrise
     WeaponShotgunTrenchgun4034: 1
+    WeaponShotgunRiot: 1
+    WeaponShotgunRiotSawn: 1
+    WeaponShotgunCombat: 1
+    WeaponShotgunCycler: 1
+    WeaponShotgunGA12: 1
+    WeaponShotgunMinotaur: 1
+    WeaponShotgunForged: 1
+    WeaponShotgunMakeshift: 1
 
     WeaponSubMachineGunAtreides: 1
     WeaponSubMachineGunC20r: 1
     WeaponSubMachineGunDrozd: 1
+    WeaponSubMachineGunDrozdMk2: 1
+    WeaponSubMachineGunP90: 1
+    WeaponSubMachineGunMP38: 1
+    WeaponSubMachineGunMP7: 1
+    WeaponSubMachineGunMP5: 1
+    WeaponSubMachineGunSkorpion: 1
+    WeaponSubMachineGunNewVector: 1
+    WeaponSubMachineGunPPSH41: 1
+    WeaponAMS-42: 1
+    WeaponAJ100: 1
+    WeaponSIAR52: 1
     WeaponDisablerSMG: 1
+    WeaponSubMachineGunSP91RC: 1
+    WeaponSubMachineGunPPSH: 1
+    WeaponSubMachineGunMakeshift: 1
+    WeaponSubMachineGunImprovised: 1
+    WeaponSubMachineGunForged: 1
 
     WeaponSniperMosin: 1
     WeaponSniperHristov: 1
+    WeaponSniperMakeshift: 1
+    WeaponSniperImprovised: 1
+    WeaponSniperForged: 1
 
     WeaponLauncherChinaLake: 1
     WeaponLauncherRocket: 1
@@ -57,6 +96,13 @@
     WeaponGrapplingGun: 1
 
     WeaponLightMachineGunL6: 1
+    WeaponLightMachineGunL6C: 1
+    WeaponLightMachineGunMG60: 1
+    WeaponLightMachineGunRPD: 1
+    WeaponMachineGunMG42: 1
+    PowerpackMinigunMG100: 1
+    PowerpackDL6902: 1
+    WeaponDL6902: 1
     WeaponMinigun: 1
 
     WeaponLaserSvalinn: 1
@@ -77,6 +123,13 @@
     WeaponDisablerPractice: 1
     WeaponDisabler: 1
     WeaponTaser: 1
+    WeaponAdvancedTaser: 1
+    WeaponMiniEnergyGun: 1
+    WeaponDominator: 1
+    WeaponMultiphaseGun: 1
+    WeaponIonRifle: 1
+    WeaponIonCarbine: 1
+    WeaponLaserImmolator: 1
 
     BowImprovised: 1
 
@@ -88,18 +141,8 @@
     WeaponWaterBlaster: 1
     WeaponWaterBlasterSuper: 1
 
-  # Надо отсортировать по типу
     WeaponGunLaserCarbineSemi: 1
     WeaponGunLaserCarbineAutomatic: 1
-    # WeaponRifleARG: 1
-    #WeaponRifleM52: 1
-    WeaponAdvancedTaser: 1
-    WeaponMiniEnergyGun: 1
-    WeaponDominator: 1
-    WeaponMultiphaseGun: 1
-    WeaponIonRifle: 1
-    WeaponIonCarbine: 1
-    WeaponLaserImmolator: 1
     WeaponM1911: 1
     WeaponPDW9: 1
     LWAP: 1
@@ -107,26 +150,3 @@
     WeaponToecloner: 1
     WeaponMiniEnergyCrossbow: 1
     WeaponEnergyCrossbow: 1
-#    WeaponLightMachineGunM492: 1
-#    WeaponLightMachineGunDP28: 1
-    WeaponShotgunRiot: 1
-    WeaponShotgunRiotSawn: 1
-    WeaponShotgunCombat: 1
-    WeaponShotgunCycler: 1
-    WeaponShotgunGA12: 1
-    WeaponShotgunMinotaur: 1
-    WeaponShotgunForged: 1
-    WeaponShotgunMakeshift: 1
-    WeaponSubMachineGunSP91RC: 1
-#    WeaponSubMachineGunUzi: 1
-    WeaponSubMachineGunPPSH: 1
-    WeaponSubMachineGunMakeshift: 1
-    WeaponSubMachineGunImprovised: 1
-    WeaponSubMachineGunForged: 1
-    WeaponSniperMakeshift: 1
-    WeaponSniperImprovised: 1
-    WeaponSniperForged: 1
-
-
-  # contrabandInventory:
-  # emaggedInventory:
