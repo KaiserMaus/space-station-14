@@ -788,10 +788,7 @@ GrenadeBlast: GrenadeBlastTimer
 GrenadeEMP: GrenadeEMPTimer
 GrenadeFlash: GrenadeFlashTimer
 GrenadeFrag: GrenadeFragTimer
-<<<<<<< HEAD
-
-=======
->>>>>>> upstream/master
+WeaponEnergyGunMini: WeaponMiniEnergyGun
 # SL HITSCAN START
 BoxMagazineRifle: BoxMagazineRifleSP
 MagazineBoxLightRifle: MagazineBoxLightRifleSP
@@ -804,9 +801,5 @@ MagazineBoxMagnum: MagazineBoxMagnumSP
 SpeedLoaderMagnum: SpeedLoaderMagnumSP
 MagazineBoxRifle: MagazineBoxRifleSP
 BaseCartridgeLightRifle: BaseCartridgeLightRifleSP
-<<<<<<< HEAD
-WeaponEnergyGunMini: WeaponMiniEnergyGun
-=======
->>>>>>> upstream/master
 # SL HITSCAN END
 # Sunrise-End
