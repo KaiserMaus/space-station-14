@@ -13718,13 +13718,6 @@ entities:
     - type: Transform
       pos: 74.5,35.5
       parent: 1
-  - uid: 2706
-    components:
-    - type: Transform
-      pos: 70.5,39.5
-      parent: 1
-    - type: Physics
-      canCollide: False
   - uid: 2780
     components:
     - type: Transform
