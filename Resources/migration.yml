@@ -758,13 +758,6 @@ LauncherSyringeMed: null
 PlushieUunaMiira: null
 AbductorDispencer: VendingMachineAbductorDispenser
 SpawnMechRipley: SpawnMechHauler
-BoxMagazineRifle: BoxMagazineRifleSP
-MagazineBoxLightRifle: MagazineBoxLightRifleSP
-MagazineBoxPistol: MagazineBoxPistolSP
-MagazineLightRifleBox: MagazineLightRifleBoxSP
-MagazineLightRifle: MagazineLightRifleSP
-MagazinePistolSubMachineGun: MagazinePistolSubMachineGunSP
-MagazineRifle: MagazineRifleSP
 PrintedDocumentClosingIndictment: null
 PrintedDocumentPermissionDisposeBody: null
 PrintedDocumentDeathCertificate: null
@@ -795,5 +788,19 @@ GrenadeBlast: GrenadeBlastTimer
 GrenadeEMP: GrenadeEMPTimer
 GrenadeFlash: GrenadeFlashTimer
 GrenadeFrag: GrenadeFragTimer
+
+# SL HITSCAN START
+BoxMagazineRifle: BoxMagazineRifleSP
+MagazineBoxLightRifle: MagazineBoxLightRifleSP
+MagazineBoxPistol: MagazineBoxPistolSP
+MagazineLightRifleBox: MagazineLightRifleBoxSP
+MagazineLightRifle: MagazineLightRifleSP
+MagazinePistolSubMachineGun: MagazinePistolSubMachineGunSP
+MagazineRifle: MagazineRifleSP
+MagazineBoxMagnum: MagazineBoxMagnumSP
+SpeedLoaderMagnum: SpeedLoaderMagnumSP
+MagazineBoxRifle: MagazineBoxRifleSP
+BaseCartridgeLightRifle: BaseCartridgeLightRifleSP
 WeaponEnergyGunMini: WeaponMiniEnergyGun
+# SL HITSCAN END
 # Sunrise-End

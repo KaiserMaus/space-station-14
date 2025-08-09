@@ -323,17 +323,17 @@
   - !type:ListingLimitedStockCondition
     stock: 4
 
-- type: listing
-  id: ERTUplinkWeaponEnergyGunPistolSecurity
-  productEntity: WeaponEnergyGunPistolSecurity
-  icon: { sprite: _Sunrise/Interface/Misc/nt_icons.rsi, state: energygun-psec }
-  cost:
-    Bluecrystal: 4
-  categories:
-  - NTPistols
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 4
+# - type: listing
+#   id: ERTUplinkWeaponEnergyGunPistolSecurity
+#   productEntity: WeaponEnergyGunPistolSecurity
+#   icon: { sprite: _Sunrise/Interface/Misc/nt_icons.rsi, state: energygun-psec }
+#   cost:
+#     Bluecrystal: 4
+#   categories:
+#   - NTPistols
+#   conditions:
+#   - !type:ListingLimitedStockCondition
+#     stock: 4
 
 - type: listing
   id: ERTUplinkWeaponPistolN1984
