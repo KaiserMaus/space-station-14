@@ -164,13 +164,13 @@
 
 - type: loadout
   id: WeaponEnergyGunPistolSecurity
-  startingGear: WeaponEnergyGunPistolSecurity
+  startingGear: WeaponDominator
 
 - type: startingGear
   id: WeaponEnergyGunPistolSecurity
   storage:
     back:
-    - WeaponEnergyGunPistolSecurity
+    - WeaponDominator
 
 - type: loadout
   id: WeaponDisabler

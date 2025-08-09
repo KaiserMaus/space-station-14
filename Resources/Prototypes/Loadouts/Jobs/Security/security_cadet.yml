@@ -53,7 +53,7 @@
 
 - type: loadout
   id: CadetWeaponEnergyGunPistolSecurity
-  startingGear: WeaponEnergyGunPistolSecurity
+  startingGear: WeaponMiniEnergyGun
   effects:
   - !type:GroupLoadoutEffect
     proto: MasterCadet5h

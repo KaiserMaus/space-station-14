@@ -790,8 +790,10 @@ CrateArmoryMagazineBoxLightRifleBig: null
 CrateArmoryMagazineBoxRifleBig: null
 CrateArmoryM16A4: null
 CrateArmoryMP7: null
+HandheldCamera: null # Не надо маппить, оно есть в автоматах
 GrenadeBlast: GrenadeBlastTimer
 GrenadeEMP: GrenadeEMPTimer
 GrenadeFlash: GrenadeFlashTimer
 GrenadeFrag: GrenadeFragTimer
+WeaponEnergyGunMini: WeaponMiniEnergyGun
 # Sunrise-End
