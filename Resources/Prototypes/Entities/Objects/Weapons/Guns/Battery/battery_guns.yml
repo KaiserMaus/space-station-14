@@ -795,21 +795,21 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/energy_shotgun.rsi
   - type: Gun
-    fireRate: 2 # Sunrise-edit
+    fireRate: 2
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: HitscanBatteryAmmoProvider
-    proto: LaserTraceSpread
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletLaserSpread
     fireCost: 150
   - type: BatteryWeaponFireModes
     fireModes:
-    - proto: LaserTraceSpread # Sunrise-Edit
+    - proto: BulletLaserSpread
       fireCost: 150
       name: energy-gun-shotgun-spread # Sunrise-Edit
-    - proto: LaserTraceSpreadNarrow # Sunrise-Edit
+    - proto: BulletLaserSpreadNarrow
       fireCost: 200
-      name: energy-gun-shotgun-spread-narrow # Sunrise-Edit
-    - proto: DisablerBoltSmgSpreadTrace # Sunrise-Edit
+      name: energy-gun-disable # Sunrise-Edit
+    - proto: BulletDisablerSmgSpread
       fireCost: 120
       name: energy-gun-disable # Sunrise-Edit
   - type: Item
@@ -825,13 +825,23 @@
     stealGroup: WeaponEnergyShotgun
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Battery
-    maxCharge: 1201 #sunrise-fix
-    startingCharge: 1201 #sunrise-fix
+    maxCharge: 1201
+    startingCharge: 1201
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 24
     autoRechargePause: true
     autoRechargePauseTime: 30
+# Sunrise-start
+  - type: KnockbackByUserTag
+    doestContain:
+      Resomi:
+        knockback: 2
+        staminaMultiplier: 15
+      Felinid:
+        knockback: 1 #half of what resomi take
+        staminaMultiplier: 15
+# Sunrise-end
 
 - type: entity
   name: temperature gun
