@@ -11473,7 +11473,7 @@ entities:
     - type: Transform
       pos: 70.625,39.375
       parent: 1
-- proto: HandheldHealthAnalyzer
+- proto: VendingMachineWeaponDev
   entities:
   - uid: 2707
     components:

@@ -1,0 +1,132 @@
+- type: vendingMachineInventory
+  id: LiberationInventory
+  startingInventory:
+    WeaponPistolViper: 1
+    WeaponPistolCobra: 1
+    WeaponPistolMk58: 1
+    WeaponPistolN1984: 1
+    WeaponPistolFlintlock: 1
+    WeaponPistolCHIMP: 1
+    WeaponPulsePistol: 1
+
+    WeaponRevolverDeckard: 1
+    WeaponRevolverInspector: 1
+    WeaponRevolverMateba: 1
+    WeaponRevolverPython: 1
+    WeaponRevolverPirate: 1
+    RevolverCapGun: 1
+    RevolverCapGunFake: 1
+    #Sunrise
+    WeaponRevolverMakeshift: 1
+    WeaponRevolverImprovised: 1
+    WeaponRevolverForged: 1
+    WeaponRevolverSnubRevolver: 1
+
+    WeaponRifleAk: 1
+    WeaponRifleM90GrenadeLauncher: 1
+    WeaponRifleLecter: 1
+    #Sunrise
+    WeaponRifleM16A4: 1
+
+    WeaponShotgunBulldog: 1
+    WeaponShotgunDoubleBarreled: 1
+    WeaponShotgunEnforcer: 1
+    WeaponShotgunSawn: 1
+    WeaponShotgunHandmade: 1
+    WeaponShotgunBlunderbuss: 1
+    WeaponShotgunImprovised: 1
+    Musket: 1
+    WeaponEnergyShotgun: 1
+    #Sunrise
+    WeaponShotgunTrenchgun4034: 1
+
+    WeaponSubMachineGunAtreides: 1
+    WeaponSubMachineGunC20r: 1
+    WeaponSubMachineGunDrozd: 1
+    WeaponDisablerSMG: 1
+
+    WeaponSniperMosin: 1
+    WeaponSniperHristov: 1
+
+    WeaponLauncherChinaLake: 1
+    WeaponLauncherRocket: 1
+    WeaponLauncherPirateCannon: 1
+
+    WeaponTetherGun: 1
+    WeaponForceGun: 1
+    WeaponGrapplingGun: 1
+
+    WeaponLightMachineGunL6: 1
+    WeaponMinigun: 1
+
+    WeaponLaserSvalinn: 1
+    WeaponLaserGun: 1
+    WeaponMakeshiftLaser: 1
+    WeaponTeslaGun: 1
+    WeaponLaserCarbinePractice: 1
+    WeaponLaserCarbine: 1
+    WeaponLaserCannon: 1
+    WeaponParticleDecelerator: 1
+    WeaponXrayCannon: 1
+    WeaponPulseCarbine: 1
+    WeaponPulseRifle: 1
+    WeaponBehonkerLaser: 1
+    WeaponAntiqueLaser: 1
+    WeaponAdvancedLaser: 1
+
+    WeaponDisablerPractice: 1
+    WeaponDisabler: 1
+    WeaponTaser: 1
+
+    BowImprovised: 1
+
+    WeaponFlareGun: 1
+
+    WeaponImprovisedPneumaticCannon: 1
+
+    WeaponWaterPistol: 1
+    WeaponWaterBlaster: 1
+    WeaponWaterBlasterSuper: 1
+
+  # Надо отсортировать по типу
+    WeaponGunLaserCarbineSemi: 1
+    WeaponGunLaserCarbineAutomatic: 1
+    # WeaponRifleARG: 1
+    #WeaponRifleM52: 1
+    WeaponAdvancedTaser: 1
+    WeaponMiniEnergyGun: 1
+    WeaponDominator: 1
+    WeaponMultiphaseGun: 1
+    WeaponIonRifle: 1
+    WeaponIonCarbine: 1
+    WeaponLaserImmolator: 1
+    WeaponM1911: 1
+    WeaponPDW9: 1
+    LWAP: 1
+    WeaponANNIHILATOR: 1
+    WeaponToecloner: 1
+    WeaponMiniEnergyCrossbow: 1
+    WeaponEnergyCrossbow: 1
+#    WeaponLightMachineGunM492: 1
+#    WeaponLightMachineGunDP28: 1
+    WeaponShotgunRiot: 1
+    WeaponShotgunRiotSawn: 1
+    WeaponShotgunCombat: 1
+    WeaponShotgunCycler: 1
+    WeaponShotgunGA12: 1
+    WeaponShotgunMinotaur: 1
+    WeaponShotgunForged: 1
+    WeaponShotgunMakeshift: 1
+    WeaponSubMachineGunSP91RC: 1
+#    WeaponSubMachineGunUzi: 1
+    WeaponSubMachineGunPPSH: 1
+    WeaponSubMachineGunMakeshift: 1
+    WeaponSubMachineGunImprovised: 1
+    WeaponSubMachineGunForged: 1
+    WeaponSniperMakeshift: 1
+    WeaponSniperImprovised: 1
+    WeaponSniperForged: 1
+
+
+  # contrabandInventory:
+  # emaggedInventory:
