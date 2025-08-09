@@ -808,7 +808,7 @@
       name: energy-gun-shotgun-spread # Sunrise-Edit
     - proto: BulletLaserSpreadNarrow
       fireCost: 200
-      name: energy-gun-disable # Sunrise-Edit
+      name: energy-gun-shotgun-spread-narrow # Sunrise-Edit
     - proto: BulletDisablerSmgSpread
       fireCost: 120
       name: energy-gun-disable # Sunrise-Edit
