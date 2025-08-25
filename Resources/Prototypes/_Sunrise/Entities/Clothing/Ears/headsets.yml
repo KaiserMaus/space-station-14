@@ -168,3 +168,18 @@
     sprite: _Sunrise/Abductor/Clothing/Ears/Headsets/abductor.rsi
   - type: Clothing
     sprite: _Sunrise/Abductor/Clothing/Ears/Headsets/abductor.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetAltCentComSunrise
+  name: CentComm over-ear headset
+  suffix: Без ключа ЦК
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyStationMaster
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/centcom.rsi

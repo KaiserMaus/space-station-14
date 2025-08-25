@@ -13,7 +13,7 @@
     - 0,0,5,3
   - type: StorageFill
     contents:
-    - id: TrackingImplanterERT
+    - id: DeathRattleImplantCentcomm
       amount: 6
 
 - type: entity
@@ -158,7 +158,7 @@
     - id: MedipenCombatInjector
     - id: DoubleEmergencyOxygenTankFilled
     - id: FreedomImplant
-    - id: TrackingImplantErt
+
     - id: FoodSnackMaysonEnergy
     - id: FoodTinMRE
     - id: DrinkMREFlask
@@ -186,7 +186,7 @@
     - id: HandHeldMassScanner
     - id: WeaponFlareGun
     - id: Implanter
-    - id: TrackingImplantErt
+
     - id: FreedomImplant
     - id: Telebaton
     - id: ShellShotgunFlare
