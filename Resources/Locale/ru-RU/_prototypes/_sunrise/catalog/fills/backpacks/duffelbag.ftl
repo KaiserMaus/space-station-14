@@ -51,3 +51,5 @@ ent-ClothingBackpackDuffelWeaponSubMachineGunWt550Filled = Набор WT550
     .desc = WT550 c 3мя магазинами.
 ent-ClothingBackpackDuffelWeaponLightMachineGunMG42 = Набор MG-342
     .desc = MG-342 c 2мя магазинами.
+ent-ClothingBackpackDuffelSyndicateSuperAmmoFilled = Набор "Оружейная Лавка"
+    .desc = Большой боекомплект для всего отряда! В набор входят: коробка магазинов для C-20r, коробка барабанов для Бульдог, коробка магазинов для L6 SAW и россыпные патроны, коробка магазинов для DL6902 и дополнительная россыпь патронов, коробка магазинов для Эсток, коробка магазинов для Драгунов, а также коробка безгильзовых патронов.

@@ -718,19 +718,20 @@
   name: uplink-ammo-bundle-name
   description: uplink-ammo-bundle-desc
   productEntity: ClothingBackpackDuffelSyndicateAmmoFilled
-  discountCategory: rareDiscounts
-  discountDownTo:
-    Telecrystal: 15
   cost:
-    Telecrystal: 24 # Sunrise-Edit
+    Telecrystal: 15
   categories:
   - UplinkAmmo
   conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
-      - LoneOpsUplink
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink
+          - LoneOpsUplink # Sunrise-Edit
+    - !type:BuyerWhitelistCondition
+      blacklist:
+        components:
+          - SurplusBundle
 
 #Chemicals
 

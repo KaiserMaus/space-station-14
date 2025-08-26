@@ -304,6 +304,44 @@
       - NukeOpsUplink
       - LoneOpsUplink
 
+# For the mosin
+- type: listing
+  id: UplinkSpeedLoaderHRFMJ
+  name: uplink-mosin-speedloader-name
+  description: uplink-mosin-speedloader-desc
+  icon: { sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/LightRifle/light_rifle_speed_loader.rsi, state: icon }
+  productEntity: SpeedLoaderHeavyRifleRFMJ
+  cost:
+    Telecrystal: 1
+  categories:
+  - UplinkAmmo
+  #Sunrise-start
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - AssaultOpsUplink
+  #Sunrise-end
+
+- type: listing
+  id: UplinkAmmoBundleSuper
+  name: uplink-ammo-bundlenew-name
+  description: uplink-ammo-bundlenew-desc
+  productEntity: ClothingBackpackDuffelSyndicateSuperAmmoFilled
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 18
+  cost:
+    Telecrystal: 30
+  categories:
+  - UplinkAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+      - LoneOpsUplink
+
 # For the China-Lake
 - type: listing
   id: UplinkGrenadeFragTimer
