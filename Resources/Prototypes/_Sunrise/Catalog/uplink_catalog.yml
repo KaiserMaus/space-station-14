@@ -1589,6 +1589,26 @@
 #   - UplinkWeaponry
 
 - type: listing
+  id: UplinkGrenadeLauncherM79
+  name: uplink-grenade-launcher-m79-name
+  description: uplink-grenade-launcher-m79-desc
+  icon: { sprite: /Textures/_RMC14/Objects/Weapons/Guns/Launchers/m79/big.rsi, state: base }
+  productEntity: WeaponLauncherM79Biocode
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 2 # Good morning Vietnam!
+  cost:
+    Telecrystal: 6
+  categories:
+  - UplinkWeaponry
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+      - LoneOpsUplink
+
+- type: listing
   id: UplinkGrenadeLauncherGL70
   name: uplink-grenade-launcher-gl70-name
   description: uplink-grenade-launcher-gl70-desc
@@ -1596,9 +1616,9 @@
   productEntity: WeaponGrenadeLauncherGL70Biocode
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 30
+    Telecrystal: 18
   cost:
-    Telecrystal: 40
+    Telecrystal: 25
   categories:
   - UplinkWeaponry
   conditions:
@@ -1656,30 +1676,30 @@
   productEntity: MantisBladeArmsKit #ClothingBackpackDufelSyndicateFilledMantisBladeArms #Скучно и не практично в сумке ради 4 слота
   discountCategory: rareDiscounts
   discountDownTo:
-    Telecrystal: 12
+    Telecrystal: 8
   cost:
-    Telecrystal: 15
+    Telecrystal: 12
   categories:
   - UplinkCybernetics
 
-- type: listing
-  id: UplinkMagillitisSerumImplant
-  name: uplink-magillitis-serum-implanter-name
-  description: uplink-magillitis-serum-implanter-desc
-  icon: { sprite: _Starlight/Actions/implants.rsi, state: gorilla_rampage }
-  productEntity: MagillitisSerumImplanter
-  discountDownTo:
-    Telecrystal: 4
-  cost:
-    Telecrystal: 6
-  categories:
-  - UplinkJob
-  conditions:
-  - !type:BuyerJobCondition
-    whitelist:
-    - ResearchAssistant
-    - Scientist
-    - ResearchDirector
+# - type: listing
+#   id: UplinkMagillitisSerumImplant
+#   name: uplink-magillitis-serum-implanter-name
+#   description: uplink-magillitis-serum-implanter-desc
+#   icon: { sprite: _Starlight/Actions/implants.rsi, state: gorilla_rampage }
+#   productEntity: MagillitisSerumImplanter # Sunrise-TODO: FIX this Shit!
+#   discountDownTo:
+#     Telecrystal: 4
+#   cost:
+#     Telecrystal: 6
+#   categories:
+#   - UplinkJob
+#   conditions:
+#   - !type:BuyerJobCondition
+#     whitelist:
+#     - ResearchAssistant
+#     - Scientist
+#     - ResearchDirector
 
 - type: listing
   id: UplinkCaneShotgun
