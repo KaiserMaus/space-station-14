@@ -148,7 +148,6 @@
     - state: boxwidetoy
     - state: wide_ert
   - type: Storage
-    sprite: _Sunrise/Objects/Storage/boxes_sunrise.rsi
     grid:
     - 0,0,4,3
   - type: StorageFill
@@ -177,7 +176,6 @@
     - state: boxwidetoy
     - state: wide_ert
   - type: Storage
-    sprite: _Sunrise/Objects/Storage/boxes_sunrise.rsi
     grid:
     - 0,0,4,3
   - type: StorageFill
