@@ -13,7 +13,7 @@
     - 0,0,5,3
   - type: StorageFill
     contents:
-    - id: TrackingImplanterERT
+    - id: DeathRattleImplantCentcomm
       amount: 6
 
 - type: entity
@@ -145,8 +145,8 @@
   - type: Sprite
     sprite: _Sunrise/Objects/Storage/boxes_sunrise.rsi
     layers:
-    - state: internals
-    - state: id
+    - state: boxwidetoy
+    - state: wide_ert
   - type: Storage
     sprite: _Sunrise/Objects/Storage/boxes_sunrise.rsi
     grid:
@@ -157,14 +157,13 @@
     - id: HandheldCriminalRecordsMonitorUnpowered
     - id: PinpointerUniversal
     - id: PinpointerNuclear
-    - id: MedipenCombatInjector
     - id: DoubleEmergencyOxygenTankFilled
-    - id: FreedomImplant
-    - id: TrackingImplantErt
-    - id: FoodSnackMaysonEnergy
+    - id: MedipenCombatInjector
+    - id: AutoMenderBruteFilled
+    - id: AutoMenderBurnFilled
     - id: FoodTinMRE
+    - id: FoodSnackMaysonEnergy
     - id: DrinkMREFlask
-    - id: Implanter
 
 - type: entity
   name: ERT base kit box
@@ -175,8 +174,8 @@
   - type: Sprite
     sprite: _Sunrise/Objects/Storage/boxes_sunrise.rsi
     layers:
-    - state: internals
-    - state: id
+    - state: boxwidetoy
+    - state: wide_ert
   - type: Storage
     sprite: _Sunrise/Objects/Storage/boxes_sunrise.rsi
     grid:
@@ -184,17 +183,15 @@
   - type: StorageFill
     contents:
     - id: DoubleEmergencyOxygenTankFilled
+      amount: 2
     - id: DrinkMREFlask
+    - id: FoodSnackNutribrick
     - id: FireExtinguisherMini
     - id: MedipenCombatInjector
+    - id: AutoMenderBruteFilled
+    - id: AutoMenderBurnFilled
     - id: HandHeldMassScanner
-    - id: WeaponFlareGun
-    - id: Implanter
-    - id: TrackingImplantErt
-    - id: FreedomImplant
     - id: Telebaton
-    - id: ShellShotgunFlare
-    - id: FoodSnackMaysonEnergy
     - id: FoodTinMRE
 
 #ammo kits
