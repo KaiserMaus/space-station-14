@@ -2,11 +2,11 @@
   id: MedicalStaticSunrise
   recipes:
   - HandheldCrewMonitor
-  - ClothingHandsGlovesNitrileBlack
-  - ClothingHandsGlovesNitrileGreen
-  - ClothingHandsGlovesNitrileOrange
-  - ClothingHandsGlovesNitrileRed
-  - ClothingHandsGlovesNitrileBlue
+  # - ClothingHandsGlovesNitrileBlack
+  # - ClothingHandsGlovesNitrileGreen
+  # - ClothingHandsGlovesNitrileOrange
+  # - ClothingHandsGlovesNitrileRed
+  # - ClothingHandsGlovesNitrileBlue
   - ClothingEyesGlassesChemical
   - WhiteCane
   - PatchPack
