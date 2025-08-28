@@ -203,7 +203,7 @@
 # #Gloves
 
 # - type: loadout
-#   id: Sunrise-GlovesNitrileBlack
+#   id: Sunrise-GlovesNitrileBlack # Sunrise-TODO: Не добавлять, пока не сделаете им уникальные для каждой волокна, ибо на момент комита тут все "нитриловые"
 #   equipment:
 #     gloves: ClothingHandsGlovesNitrileBlack
 

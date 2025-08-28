@@ -2,7 +2,7 @@
   id: MedicalStaticSunrise
   recipes:
   - HandheldCrewMonitor
-  # - ClothingHandsGlovesNitrileBlack
+  # - ClothingHandsGlovesNitrileBlack # Sunrise-TODO: Не добавлять, пока не сделаете им уникальные для каждой волокна, ибо на момент комита тут все "нитриловые"
   # - ClothingHandsGlovesNitrileGreen
   # - ClothingHandsGlovesNitrileOrange
   # - ClothingHandsGlovesNitrileRed
