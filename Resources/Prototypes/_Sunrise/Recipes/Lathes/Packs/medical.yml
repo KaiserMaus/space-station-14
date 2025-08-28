@@ -44,37 +44,31 @@
   - LeftFootCyber
   - RightFootCyber
   ####
-  - LeftArmCyberReaper
-  - RightArmCyberReaper
+  - ImplantCaseReaper
   #
-  - LeftArmCyberMechwright
-  - RightArmCyberMechwright
+  - ImplantCaseMechwright
   #
-  - LeftArmCyberBulwark
-  - RightArmCyberBulwark
+  - ImplantCaseBulwark
   #
-  - LeftArmCyberGorilla
-  - RightArmCyberGorilla
+  - ImplantCaseGorillaR
+  - ImplantCaseGorillaL
   #
-  - LeftArmCyberMantisBladeMaxGuard
-  - RightArmCyberMantisBladeMaxGuard
+  - ImplantCaseMantisBladeMaxGuard
   #
-  - LeftArmCyberLaserEmitter
-  - RightArmCyberLaserEmitter
+  - ImplantCaseLaserEmitter
   #
-  - LeftArmCyberGrenadeThrower
-  - RightArmCyberGrenadeThrower
+  - ImplantCaseGrenadeThrower
 
 - type: latheRecipePack
   id: MedicalCyberOrgansDynamic
   recipes:
-  - CyberEyeNightVision
-  - CyberEyeThermal
+  - ImplantCaseNightVision
+  - ImplantCaseThermal
 
 - type: latheRecipePack
   id: MedicalImplantDynamic
   recipes:
-  - EyeImplantWelding
-  - EyeImplantMedical
-  - EyeImplantSecurity
-  - EyeImplantChemical
+  - ImplantCaseImplantWelding
+  - ImplantCaseImplantMedical
+  - ImplantCaseImplantChemical
+  - ImplantCaseImplantSecurity
