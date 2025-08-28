@@ -29,13 +29,9 @@
   cost: 4000
   recipeUnlocks:
     - LeftArmCyber
-    # - RightArmCyber
     - LeftHandCyber
-    # - RightHandCyber
     - LeftLegCyber
-    # - RightLegCyber
     - LeftFootCyber
-    # - RightFootCyber
 
 # Tier 2
 - type: technology

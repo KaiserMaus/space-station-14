@@ -691,7 +691,7 @@
       parts:
         left hand: LeftHandCyber
     - type: Construction
-      graph: ImplantSwitchArmCyberLaserEmitter
+      graph: ImplantSwitchArmCyberGrenadeThrower
       node: start
 
 - type: entity
