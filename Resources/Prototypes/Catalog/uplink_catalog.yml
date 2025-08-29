@@ -489,6 +489,8 @@
     blacklist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
+      - AssaultOpsUplink
 
 - type: listing
   id: UplinkSyndicateBombNukie
@@ -1923,6 +1925,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink # Sunrise-Edit
 
 - type: listing
   id: UplinkClothingOuterHardsuitJuggernaut
@@ -1955,6 +1958,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink # Sunrise-Edit
 
 - type: listing
   id: UplinkClothingConductingGloves
@@ -1975,31 +1979,6 @@
     Telecrystal: 2
   categories:
     - UplinkWearables
-
-- type: listing
-  id: UplinkOuterHardsuitChameleon
-  name: uplink-clothing-outer-hardsuit-chameleon-name
-  description: uplink-clothing-hardsuit-chameleon-desc
-  productEntity: ClothingOuterHardsuitChameleon
-  discountCategory: rareDiscounts
-  discountDownTo:
-    Telecrystal: 4 # Sunrise-Edit
-  cost:
-    Telecrystal: 6 # Sunrise-Edit
-  categories:
-  - UplinkWearables
-
-#Sunrise-Start
-- type: listing
-  id: UplinkMiscSyndiePowercage
-  name: uplink-objects-power-syndie-powercell-name
-  description: uplink-objects-power-syndie-powercell-desc
-  productEntity: PowerCellSyndicate
-  cost:
-    Telecrystal: 6
-  categories:
-  - UplinkWearables
-#Sunrise-End
 
  # Pointless
 

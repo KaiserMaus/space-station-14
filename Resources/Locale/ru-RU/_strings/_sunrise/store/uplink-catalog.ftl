@@ -54,13 +54,18 @@ uplink-hardsuit-syndie-commander-name = скафандр Командира Си
 uplink-hardsuit-syndie-commander-desc = Скафандр предназначеный для командиров отрядов Горлекса.
 uplink-hardsuit-syndie-medic-name = скафандр Медика Синдиката
 uplink-hardsuit-syndie-medic-desc = Скафандр предназначеный для боевых врачей отрядов Горлекса.
+uplink-hardsuit-infiltration-name = скафандр Инфильтратора Синдиката
+uplink-hardsuit-infiltration-desc = Набор с новейшими технологиями Синдиката! Стандартный кроваво-красный скафандр со встроенными новейшими разработками по активной маскировки!
 uplink-energy-dome-personal-name = Поясной Энергетический барьер
 uplink-energy-dome-personal-desc = Генератор малого щита, защищающий владельца от лазеров и пуль, но не позволяющий самому использовать оружие дальнего боя. Использует батареи.
 uplink-energy-dome-backpack-name = Наспинный Энергетический барьер
 uplink-energy-dome-backpack-desc = Генератор большого барьера, защищающий владельца от лазеров и пуль, но не позволяющий самому использовать оружие дальнего боя. Использует батареи.
 uplink-armoured-jumpsuit-name = бронированный черный адвокатский костюм
 uplink-armoured-jumpsuit-desc = Казалось бы, простой деловой костюм... пока не отлетела пуля...
-
+uplink-clothing-thieving-gloves-name = Воровские перчатки
+uplink-clothing-thieving-gloves-desc = Незаметно обчищайте карманы и повышайте свой навык воровства с помощью этих новых модных перчаток, которые выглядят как обычные!
+uplink-clothing-chameleon-thieving-gloves-name = Воровские перчатки "Хамелеон"
+uplink-clothing-chameleon-thieving-gloves-desc = Незаметно обчищайте карманы и повышайте свой навык воровства с помощью этих новых модных перчаток, которые могут менять свой облик! Учтите что волокна остануться уникальные для этих перчаток.
 ## Weapon
 
 uplink-syndicate-rapier-name = Рапира Синдиката
