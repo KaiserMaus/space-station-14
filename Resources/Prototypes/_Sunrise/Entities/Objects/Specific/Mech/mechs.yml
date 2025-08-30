@@ -43,6 +43,7 @@
         Piercing: -15
         Caustic: -15
         Structural: -15
+        Mangleness: 7.5
   - type: UserInterface
     interfaces:
       enum.MechUiKey.Key:
@@ -82,6 +83,7 @@
       - Piercing
       - Heat
       - Shock
+      - Mangleness
     locPrefix: mech
   - type: Appearance
   - type: ContainerContainer

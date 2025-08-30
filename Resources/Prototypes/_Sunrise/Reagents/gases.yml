@@ -125,6 +125,8 @@
             Burn: -0.7
             Toxin: -0.7
             Brute: -0.7
+          types:
+            Mangleness: 0.04
       - !type:ModifyBleedAmount
         amount: -0.15
       - !type:PopupMessage
@@ -177,6 +179,15 @@
       - !type:MovespeedModifier
         walkSpeedModifier: 1.4
         sprintSpeedModifier: 1.4
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Nitrium
+          min: 0.5
+        ignoreResistances: true
+        damage:
+          types:
+            Mangleness: 0.4
       - !type:HealthChange
         conditions:
           - !type:ReagentThreshold
