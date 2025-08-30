@@ -1840,11 +1840,6 @@ entities:
     - type: Transform
       pos: -4.5,2.5
       parent: 1
-  - uid: 248
-    components:
-    - type: Transform
-      pos: -4.5,2.5
-      parent: 1
 - proto: WaterCooler
   entities:
   - uid: 188
