@@ -252,8 +252,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      25: Critical  # Sunrise-edit
-      30: Dead  # Sunrise-edit
+      35: Critical  # Sunrise-edit
+      40: Dead  # Sunrise-edit
   - type: Destructible
     thresholds:
     - trigger:
