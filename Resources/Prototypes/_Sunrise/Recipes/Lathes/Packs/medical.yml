@@ -1,7 +1,6 @@
 - type: latheRecipePack
   id: MedicalStaticSunrise
   recipes:
-  - HandheldCrewMonitor
   - ClothingHandsGlovesNitrileBlack
   - ClothingHandsGlovesNitrileGreen
   - ClothingHandsGlovesNitrileOrange
@@ -22,6 +21,7 @@
   - HyposprayMedical
   - AutoMenderBurn
   - AutoMenderBrute
+  - HandheldCrewMonitor
 
 - type: latheRecipePack
   id: SurgeryDynamicSunrise
