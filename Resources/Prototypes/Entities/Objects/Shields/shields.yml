@@ -346,9 +346,8 @@
 
 - type: entity
   name: makeshift shield
-  parent: BaseShield
   id: MakeshiftShield
-  name: makeshift shield
+  parent: BaseShield
   description: A rundown looking shield, not good for much.
   components:
   - type: Sprite
@@ -537,19 +536,19 @@
   name: energy shield
   description: Exotic energy shield, when folded, can even fit in your pocket.
   components:
-  - type: EnergySword
-  - type: ItemToggle
-    soundActivate:
-      path: /Audio/Weapons/ebladeon.ogg
-    soundDeactivate:
-      path: /Audio/Weapons/ebladeoff.ogg
-      deactivateUnequippedHand: true
+    - type: EnergySword
+    - type: ItemToggle
+      soundActivate:
+        path: /Audio/Weapons/ebladeon.ogg
+      soundDeactivate:
+        path: /Audio/Weapons/ebladeoff.ogg
+        deactivateUnequippedHand: true
       # Sunrise-Start
-      predictable: false
-      soundFailToActivate:
-        path: /Audio/Machines/button.ogg
-        params:
-          variation: 0.250
+        predictable: false
+        soundFailToActivate:
+          path: /Audio/Machines/button.ogg
+          params:
+            variation: 0.250
       # Sunrise-End
     - type: ItemToggleActiveSound
       activeSound:
