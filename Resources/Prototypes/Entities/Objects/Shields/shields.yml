@@ -542,13 +542,13 @@
         path: /Audio/Weapons/ebladeon.ogg
       soundDeactivate:
         path: /Audio/Weapons/ebladeoff.ogg
-        deactivateUnequippedHand: true
+      deactivateUnequippedHand: true
       # Sunrise-Start
-        predictable: false
-        soundFailToActivate:
-          path: /Audio/Machines/button.ogg
-          params:
-            variation: 0.250
+      predictable: false
+      soundFailToActivate:
+        path: /Audio/Machines/button.ogg
+        params:
+          variation: 0.250
       # Sunrise-End
     - type: ItemToggleActiveSound
       activeSound:
