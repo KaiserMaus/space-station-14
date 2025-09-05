@@ -134,7 +134,62 @@
   radioChannels:
   - Medical
 
+- type: technology
+  id: FunctionalCyberLimbsTech
+  name: research-technology-functional-cyberlimbs
+  icon:
+    sprite: _Starlight/Interface/Actions/actions_cyber.rsi
+    state: cyber-hand-left
+  discipline: Biochemical
+  tier: 2
+  cost: 14000
+  recipeUnlocks:
+    - ImplantCaseReaper
+    - ImplantCaseMechwright
+  technologyPrerequisites:
+    - CyberLimbsTech
+  radioChannels:
+  - Security
+  - Medical
+  - Engineering
+
+- type: technology
+  id: FunctionalCyberLimbsTech
+  name: research-technology-functional-cyberlimbs
+  icon:
+    sprite: _Starlight/Interface/Actions/actions_cyber.rsi
+    state: cyber-hand-left
+  discipline: Biochemical
+  tier: 2
+  cost: 14000
+  recipeUnlocks:
+    # - ImplantCaseMechwright # Атмос рука
+  technologyPrerequisites:
+    - FunctionalCyberLimbsTech
+  radioChannels:
+  - Medical
+  - Engineering
+
 # Tier 3
+- type: technology
+  id: HachCyberLimbsTech
+  name: research-technology-functional-cyberlimbs
+  icon:
+    sprite: _Starlight/Interface/Actions/actions_cyber.rsi
+    state: cyber-hand-left
+  discipline: Biochemical
+  tier: 3
+  cost: 4040
+  recipeUnlocks:
+    # - ImplantCaseMechwright # Продвинутый набор улучшения руки
+    # - ImplantCaseMechwright # Хак рука
+  technologyPrerequisites:
+    - FunctionalCyberLimbsTech
+    - AdvancedToolsTechnology
+  radioChannels:
+  - Medical
+  - Engineering
+
 - type: technology
   id: ImplantExtractor
   name: research-technology-implant-extractor
@@ -162,24 +217,6 @@
   technologyPrerequisites:
   - MedicalHyposprays
   radioChannels:
-  - Medical
-
-- type: technology
-  id: FunctionalCyberLimbsTech
-  name: research-technology-functional-cyberlimbs
-  icon:
-    sprite: _Starlight/Interface/Actions/actions_cyber.rsi
-    state: cyber-hand-left
-  discipline: Biochemical
-  tier: 3
-  cost: 9220
-  recipeUnlocks:
-    - ImplantCaseReaper
-    - ImplantCaseMechwright
-  technologyPrerequisites:
-    - CyberLimbsTech
-  radioChannels:
-  - Security
   - Medical
 
 - type: technology
