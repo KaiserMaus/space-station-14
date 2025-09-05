@@ -105,8 +105,8 @@
   materials:
     Steel: 330
     Glass: 120
-    Plastic: 50
-    Plasma: 50
+    Plastic: 25
+    Plasma: 25
 
 - type: latheRecipe
   id: ImplantCaseImplantMedical
