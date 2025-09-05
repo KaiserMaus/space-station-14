@@ -132,16 +132,7 @@
 # Civil Arms
 - type: entity
   parent: BaseImplantCase
-  id: ImplantCaseGorillaR
-  description: "A small ID locked case. The label reads: Right Gorilla CyberArm."
-  components:
-  - type: StorageFill
-    contents:
-    - id: RightArmCyberGorilla
-
-- type: entity
-  parent: BaseImplantCase
-  id: ImplantCaseGorillaL
+  id: ImplantCaseGorilla
   description: "A small ID locked case. The label reads: Left Gorilla CyberArm."
   components:
   - type: StorageFill

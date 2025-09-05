@@ -67,21 +67,8 @@
 
 #
 - type: latheRecipe
-  id: ImplantCaseGorillaL
-  result: ImplantCaseGorillaL
-  categories:
-  - Cyberlimbs
-  completetime: 25
-  materials:
-    Steel: 1500
-    Plastic: 450
-    Glass: 450
-    Plasma: 500
-    Silver: 800
-
-- type: latheRecipe
-  id: ImplantCaseGorillaR
-  result: ImplantCaseGorillaR
+  id: ImplantCaseGorilla
+  result: ImplantCaseGorilla
   categories:
   - Cyberlimbs
   completetime: 25

@@ -548,8 +548,8 @@
       parts:
         left hand: LeftHandCyber
     - type: Construction
-      graph: UpgradeCyberArmGorillaL
-      node: start
+      graph: UpgradeCyberArmGorilla
+      node: base_left
 
 - type: entity
   id: RightArmCyberGorilla
@@ -577,8 +577,8 @@
       parts:
         right hand: RightHandCyber
     - type: Construction
-      graph: UpgradeCyberArmGorillaR
-      node: start
+      graph: UpgradeCyberArmGorilla
+      node: base_right
 
 # Upgraded G.O.R.I.L.L.A. Arm
 #Gorilla Arms
@@ -594,6 +594,9 @@
       items:
         - CyberGorillaArm
         - CyberPistolCHIMPUpgraded
+    - type: Construction
+      graph: UpgradeCyberArmGorilla
+      node: upgraded_left
 
 - type: entity
   id: RightArmCyberGorillaUpgraded
@@ -607,6 +610,9 @@
       items:
         - CyberGorillaArm
         - CyberPistolCHIMPUpgraded
+    - type: Construction
+      graph: UpgradeCyberArmGorilla
+      node: upgraded_right
 
 #Laser pulser Arms
 - type: entity

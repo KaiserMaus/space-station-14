@@ -229,8 +229,7 @@
   tier: 3
   cost: 3500
   recipeUnlocks:
-    - ImplantCaseGorillaL
-    - ImplantCaseGorillaR
+    - ImplantCaseGorilla
   technologyPrerequisites:
     - FunctionalCyberLimbsTech
     - AnomalyCoreHarnessing
