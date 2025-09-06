@@ -149,8 +149,11 @@
         - to: upgraded_left
           steps:
             - tag: JawsOfLife
+              name: construction-graph-tag-jawsoflife
             - tag: Powerdrill
+              name: construction-graph-tag-powerdrill
             - tag: TrayScanner
+              name: construction-graph-tag-trayscanner
               doAfter: 5
     - node: base_right
       entity: RightArmCyberMechwright
@@ -162,8 +165,11 @@
         - to: upgraded_right
           steps:
             - tag: JawsOfLife
+              name: construction-graph-tag-jawsoflife
             - tag: Powerdrill
+              name: construction-graph-tag-powerdrill
             - tag: TrayScanner
+              name: construction-graph-tag-trayscanner
               doAfter: 5
     - node: upgraded_left
       entity: LeftArmCyberUpgradedMechwright
