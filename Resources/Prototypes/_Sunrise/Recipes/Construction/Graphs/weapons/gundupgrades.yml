@@ -55,6 +55,21 @@
     - node: upgraded
       entity: ClothingOuterVestWebSec
 
+# Gorilla Gauntlet
+- type: constructionGraph
+  id: UpgradeCyberGorilla
+  start: start
+  graph:
+    - node: start
+      entity: WeaponGauntletGorilla
+      edges:
+        - to: upgraded
+          steps:
+            - tag: GorillaUpgradeKit
+              name: construction-graph-tag-gorilla-upgrade-kit
+              doAfter: 2
+    - node: upgraded
+      entity: CyberGorillaArm
 
 # Gorilla
 - type: constructionGraph
