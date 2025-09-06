@@ -149,19 +149,18 @@
   technologyPrerequisites:
     - CyberLimbsTech
   radioChannels:
-  - Security
   - Medical
   - Engineering
 
 - type: technology
-  id: FunctionalCyberLimbsTech
+  id: AtmosCyberLimbsTech
   name: research-technology-functional-cyberlimbs
   icon:
     sprite: _Starlight/Interface/Actions/actions_cyber.rsi
     state: cyber-hand-left
   discipline: Biochemical
   tier: 2
-  cost: 14000
+  cost: 6500
   recipeUnlocks:
     # - ImplantCaseMechwright # Атмос рука
   technologyPrerequisites:
@@ -172,7 +171,7 @@
 
 # Tier 3
 - type: technology
-  id: HachCyberLimbsTech
+  id: HackCyberLimbsTech
   name: research-technology-functional-cyberlimbs
   icon:
     sprite: _Starlight/Interface/Actions/actions_cyber.rsi
@@ -181,11 +180,11 @@
   tier: 3
   cost: 4040
   recipeUnlocks:
-    # - ImplantCaseMechwright # Продвинутый набор улучшения руки
     # - ImplantCaseMechwright # Хак рука
   technologyPrerequisites:
     - FunctionalCyberLimbsTech
     - AdvancedToolsTechnology
+    - BasicXenoArcheology
   radioChannels:
   - Medical
   - Engineering
