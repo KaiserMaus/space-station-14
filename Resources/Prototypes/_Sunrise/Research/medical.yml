@@ -146,15 +146,17 @@
   recipeUnlocks:
     - ImplantCaseReaper
     - ImplantCaseMechwright
+    - ImplantCaseRobust
   technologyPrerequisites:
     - CyberLimbsTech
   radioChannels:
   - Medical
   - Engineering
+  - Service
 
 - type: technology
   id: AtmosCyberLimbsTech
-  name: research-technology-functional-cyberlimbs
+  name: research-technology-atmos-cyberlimbs
   icon:
     sprite: _Starlight/Interface/Actions/actions_cyber.rsi
     state: cyber-hand-left
@@ -165,20 +167,39 @@
     # - ImplantCaseMechwright # Атмос рука
   technologyPrerequisites:
     - FunctionalCyberLimbsTech
+    - AtmosphericTech
   radioChannels:
   - Medical
   - Engineering
 
+- type: technology
+  id: JanitorialCyberLimbsTech
+  name: research-technology-jani-cyberlimbs
+  icon:
+    sprite: _Starlight/Interface/Actions/actions_cyber.rsi
+    state: cyber-hand-left
+  discipline: Biochemical
+  tier: 2
+  cost: 1984
+  recipeUnlocks:
+    # - ImplantCaseMechwright # Убор рука
+  technologyPrerequisites:
+    - FunctionalCyberLimbsTech
+    - AdvancedCleaning
+  radioChannels:
+  - Medical
+  - Service
+
 # Tier 3
 - type: technology
   id: HackCyberLimbsTech
-  name: research-technology-functional-cyberlimbs
+  name: research-technology-hack-cyberlimbs
   icon:
     sprite: _Starlight/Interface/Actions/actions_cyber.rsi
     state: cyber-hand-left
   discipline: Biochemical
   tier: 3
-  cost: 4040
+  cost: 404 # ERROR #ERR*?*%!
   recipeUnlocks:
     # - ImplantCaseMechwright # Хак рука
   technologyPrerequisites:

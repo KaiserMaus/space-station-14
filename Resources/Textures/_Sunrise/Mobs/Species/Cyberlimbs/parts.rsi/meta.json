@@ -175,6 +175,26 @@
     {
       "name": "r_hephaestus_titan_thrower",
       "directions": 4
+    },
+    {
+      "name": "l_hephaestus",
+      "directions": 4
+    },
+    {
+      "name": "r_hephaestus",
+      "directions": 4
+    },
+    {
+      "name": "l_hephaestus_TOOLS",
+      "directions": 4
+    },
+    {
+      "name": "r_hephaestus_TOOLS",
+      "directions": 4
+    },
+    {
+      "name": "hand_folder",
+      "directions": 4
     }
   ]
 }

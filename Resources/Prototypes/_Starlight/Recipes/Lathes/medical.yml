@@ -51,7 +51,18 @@
     Steel: 1100
     Silver: 800
     Glass: 450
-
+#
+- type: latheRecipe
+  id: ImplantCaseRobust
+  result: ImplantCaseRobust
+  categories:
+  - Cyberlimbs
+  completetime: 20
+  materials:
+    Plastic: 500
+    Steel: 1100
+    Silver: 800
+    Glass: 150
 #
 - type: latheRecipe
   id: ImplantCaseMechwright

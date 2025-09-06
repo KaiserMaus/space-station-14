@@ -327,3 +327,51 @@
   baseSprite:
     sprite: _Sunrise/Mobs/Species/Cyberlimbs/parts.rsi
     state: r_hephaestus_titan_thrower
+
+#Green
+- type: humanoidBaseSprite
+  id: CyberLArmGreen
+  matchSkin: false
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: _Sunrise/Mobs/Species/Cyberlimbs/parts.rsi
+    state: l_hephaestus
+
+- type: humanoidBaseSprite
+  id: CyberRArmGreen
+  matchSkin: false
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: _Sunrise/Mobs/Species/Cyberlimbs/parts.rsi
+    state: r_hephaestus
+
+# Botanical
+- type: humanoidBaseSprite
+  id: CyberLArmGreenRobust
+  matchSkin: false
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: _Sunrise/Mobs/Species/Cyberlimbs/parts.rsi
+    state: l_hephaestus_TOOLS
+
+- type: humanoidBaseSprite
+  id: CyberRArmGreenRobust
+  matchSkin: false
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: _Sunrise/Mobs/Species/Cyberlimbs/parts.rsi
+    state: r_hephaestus_TOOLS
+
+
+# Folder Hand
+- type: humanoidBaseSprite
+  id: CyberLHandFolder
+  baseSprite:
+    sprite: _Sunrise/Mobs/Species/Cyberlimbs/parts.rsi
+    state: hand_folder
+
+- type: humanoidBaseSprite
+  id: CyberRHandFolder
+  baseSprite:
+    sprite: _Sunrise/Mobs/Species/Cyberlimbs/parts.rsi
+    state: hand_folder

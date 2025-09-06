@@ -157,6 +157,15 @@
     contents:
     - id: LeftArmCyberReaper
 
+- type: entity
+  parent: BaseImplantCase
+  id: ImplantCaseRobust
+  description: "A small ID locked case. The label reads: Robust CyberArm."
+  components:
+  - type: StorageFill
+    contents:
+    - id: LeftArmCyberRobust
+
 # Security Hud
 - type: entity
   parent: SecurityImplantCase

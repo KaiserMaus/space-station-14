@@ -94,6 +94,25 @@
               doAfter: 1
 
 - type: constructionGraph
+  id: ImplantSwitchArmCyberRobust
+  start: start
+  graph:
+    - node: start
+      entity: RightArmCyberRobust
+      edges:
+        - to: left
+          steps:
+            - tool: Screwing
+              doAfter: 1
+    - node: left
+      entity: LeftArmCyberRobust
+      edges:
+        - to: start
+          steps:
+            - tool: Screwing
+              doAfter: 1
+
+- type: constructionGraph
   id: ImplantSwitchArmCyberMechwright
   start: start
   graph:
