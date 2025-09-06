@@ -7,7 +7,7 @@ ent-RightArmCyber = правая кибер рука
     .desc = { ent-PartCyber.desc }
 
 ent-LeftHandCyber = левая кибер кисть
-    .desc = .desc = { ent-PartCyber.desc }
+    .desc = { ent-PartCyber.desc }
 ent-RightHandCyber = правая кибер кисть
     .desc = { ent-PartCyber.desc }
 
@@ -26,9 +26,9 @@ ent-LeftArmCyberReaper = левая кибер рука Рипера
 ent-RightArmCyberReaper = правая кибер рука Рипера
     .desc = { ent-PartCyber.desc }
 
-ent-RightArmCyberRobust = левая кибер рука «Робаст»
+ent-RightArmCyberRobust = правая кибер рука «Робаст»
     .desc = { ent-PartCyber.desc }
-ent-LeftArmCyberRobust = правая кибер рука «Робаст»
+ent-LeftArmCyberRobust = левая кибер рука «Робаст»
     .desc = { ent-PartCyber.desc }
 
 ent-LeftArmCyberJanitorial = левая кибер убор-рука
