@@ -464,3 +464,61 @@
       collection: MetalThud
   - type: Shovel
     speedModifier: 1.25 # slower at digging than a full-sized shovel
+
+# Janitor
+- type: entity
+  parent: BaseItem
+  name: advanced mop
+  id: AdvMopCyber
+  description: Motorized mop that has a bigger reservoir and quickly replaces reagents inside with water. Automatic Clown Countermeasure not included.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Objects/Tools/cyber_advmop.rsi
+      layers:
+      - state: advmop
+      - map: ["enum.SolutionContainerLayers.Fill"]
+        state: fill-2
+        visible: false
+    - type: Appearance
+    - type: SolutionContainerVisuals
+      maxFillLevels: 2
+      fillBaseName: fill-
+      inHandsFillBaseName: -fill-
+      inHandsMaxFillLevels: 2
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 10
+      soundHit:
+         collection: MetalThud
+    - type: Spillable
+      solution: absorbed
+      spillWhenThrown: false
+      preventMelee: false
+    - type: DrainableSolution
+      solution: absorbed
+    - type: Wieldable
+    - type: IncreaseDamageOnWield
+      damage:
+        types:
+          Blunt: 5
+    - type: Absorbent
+      pickupAmount: 100
+      useAbsorberSolution: true
+    - type: UseDelay
+      delay: 0.5
+    - type: SolutionRegeneration
+      solution: absorbed
+      generated:
+        reagents:
+        - ReagentId: Water
+          Quantity: 0.5
+    - type: SolutionPurge
+      solution: absorbed
+      preserve:
+      - Water
+      quantity: 10
+    - type: SolutionContainerManager
+      solutions:
+        absorbed:
+          maxVol: 100

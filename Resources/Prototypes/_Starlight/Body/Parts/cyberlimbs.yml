@@ -399,6 +399,67 @@
 # Atmos Arm
 
 # Janitorial Arm
+- type: entity
+  id: LeftArmCyberJanitorial
+  name: "left jani-arm"
+  parent: [PartCyber, BaseLeftArm]
+  components:
+    - type: BaseLayerId
+      layer: CyberLArmZenghu
+    - type: BaseLayerIdToggled
+      layer: CyberLArmZenghuJani
+    - type: Sprite
+      sprite: _Sunrise/Mobs/Species/Cyberlimbs/parts.rsi
+      state: "l_zenghu"
+    - type: Icon
+      sprite: _Sunrise/Mobs/Species/Cyberlimbs/parts.rsi
+      state: "l_zenghu"
+    - type: LimbWithItems
+      action: ActionToggleCyberHandLeft
+      sound:
+        path: /Audio/_Starlight/Medical/Cyber/deploy.ogg
+      items:
+        - AdvMopCyber
+        - BorgMegaSprayBottle
+        - HoloprojectorJanitorBorg
+        - LightReplacer
+    - type: WithAttachedBodyParts
+      parts:
+        left hand: LeftHandCyberFolder
+    - type: Construction
+      graph: ImplantSwitchArmCyberJanitorial
+      node: start
+
+- type: entity
+  id: RightArmCyberJanitorial
+  name: "right jani-arm"
+  parent: [PartCyber, BaseRightArm]
+  components:
+    - type: BaseLayerId
+      layer: CyberRArmZenghu
+    - type: BaseLayerIdToggled
+      layer: CyberRArmZenghuJani
+    - type: Sprite
+      sprite: _Sunrise/Mobs/Species/Cyberlimbs/parts.rsi
+      state: "r_zenghu"
+    - type: Icon
+      sprite: _Sunrise/Mobs/Species/Cyberlimbs/parts.rsi
+      state: "r_zenghu"
+    - type: LimbWithItems
+      action: ActionToggleCyberHandRight
+      sound:
+        path: /Audio/_Starlight/Medical/Cyber/deploy.ogg
+      items:
+        - AdvMopCyber
+        - BorgMegaSprayBottle
+        - HoloprojectorJanitorBorg
+        - LightReplacer
+    - type: WithAttachedBodyParts
+      parts:
+        right hand: RightHandCyberFolder
+    - type: Construction
+      graph: ImplantSwitchArmCyberJanitorial
+      node: start
 
 #Botanical Arm
 - type: entity

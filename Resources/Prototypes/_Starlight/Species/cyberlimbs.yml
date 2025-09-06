@@ -362,6 +362,40 @@
     sprite: _Sunrise/Mobs/Species/Cyberlimbs/parts.rsi
     state: r_hephaestus_TOOLS
 
+#zenghu
+- type: humanoidBaseSprite
+  id: CyberLArmZenghu
+  matchSkin: false
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: _Sunrise/Mobs/Species/Cyberlimbs/parts.rsi
+    state: l_zenghu
+
+- type: humanoidBaseSprite
+  id: CyberRArmZenghu
+  matchSkin: false
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: _Sunrise/Mobs/Species/Cyberlimbs/parts.rsi
+    state: r_zenghu
+
+# Janitorial
+- type: humanoidBaseSprite
+  id: CyberLArmZenghuJani
+  matchSkin: false
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: _Sunrise/Mobs/Species/Cyberlimbs/parts.rsi
+    state: l_zenghu_Jani
+
+- type: humanoidBaseSprite
+  id: CyberRArmZenghuJani
+  matchSkin: false
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: _Sunrise/Mobs/Species/Cyberlimbs/parts.rsi
+    state: r_zenghu_Jani
+
 
 # Folder Hand
 - type: humanoidBaseSprite

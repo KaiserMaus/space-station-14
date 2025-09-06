@@ -31,6 +31,11 @@ ent-RightArmCyberRobust = левая кибер рука «Робаст»
 ent-LeftArmCyberRobust = правая кибер рука «Робаст»
     .desc = { ent-PartCyber.desc }
 
+ent-LeftArmCyberJanitorial = левая кибер убор-рука
+    .desc = { ent-PartCyber.desc }
+ent-RightArmCyberJanitorial = правая кибер убор-рука
+    .desc = { ent-PartCyber.desc }
+
 ent-LeftArmCyberMechwright = левая кибер рука Механика
     .desc = { ent-PartCyber.desc }
 ent-RightArmCyberMechwright = правая кибер рука Механика

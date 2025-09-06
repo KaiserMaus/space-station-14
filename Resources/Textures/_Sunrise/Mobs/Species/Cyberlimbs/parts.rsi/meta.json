@@ -195,6 +195,22 @@
     {
       "name": "hand_folder",
       "directions": 4
+    },
+    {
+      "name": "l_zenghu",
+      "directions": 4
+    },
+    {
+      "name": "r_zenghu",
+      "directions": 4
+    },
+    {
+      "name": "l_zenghu_Jani",
+      "directions": 4
+    },
+    {
+      "name": "r_zenghu_Jani",
+      "directions": 4
     }
   ]
 }
