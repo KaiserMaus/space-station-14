@@ -9,7 +9,7 @@
   - !type:ListingLimitedStockCondition
     stock: 3
   - !type:BuyerAccessCondition
-    
+
 - type: listing
   id: VendorMechClarke
   productEntity: MechClarke
@@ -21,7 +21,7 @@
   - !type:ListingLimitedStockCondition
     stock: 1
   - !type:BuyerAccessCondition
-  
+
 - type: listing
   id: VendorClothingOuterHardsuitMaxim
   productEntity: ClothingOuterHardsuitMaxim
@@ -33,7 +33,7 @@
   - !type:ListingLimitedStockCondition
     stock: 3
   - !type:BuyerAccessCondition
-  
+
 - type: listing
   id: VendorClothingOuterHardsuitLuxury
   productEntity: ClothingOuterHardsuitLuxury
@@ -43,7 +43,7 @@
   - SalvageEquipment
   conditions:
   - !type:BuyerAccessCondition
-  
+
 - type: listing
   id: VendorClothingOuterHardsuitSalvage
   productEntity: ClothingOuterHardsuitSalvage
@@ -53,7 +53,7 @@
   - SalvageEquipment
   conditions:
   - !type:BuyerAccessCondition
-  
+
 - type: listing
   id: VendorClothingOuterHardsuitSpatio
   productEntity: ClothingOuterHardsuitSpatio
@@ -63,7 +63,7 @@
   - SalvageEquipment
   conditions:
   - !type:BuyerAccessCondition
-  
+
 - type: listing
   id: VendorMiningDrill
   productEntity: MiningDrill
@@ -73,7 +73,7 @@
   - SalvageEquipment
   conditions:
   - !type:BuyerAccessCondition
-  
+
 - type: listing
   id: VendorMiningDrillDiamond
   productEntity: MiningDrillDiamond
@@ -83,7 +83,7 @@
   - SalvageEquipment
   conditions:
   - !type:BuyerAccessCondition
-  
+
 - type: listing
   id: VendorWeaponMechMelleDrill
   productEntity: WeaponMechMelleDrill
@@ -93,7 +93,7 @@
   - SalvageEquipment
   conditions:
   - !type:BuyerAccessCondition
-  
+
 - type: listing
   id: VendorWeaponMechMelleDrillDiamond
   productEntity: WeaponMechMelleDrillDiamond
@@ -103,7 +103,7 @@
   - SalvageEquipment
   conditions:
   - !type:BuyerAccessCondition
-  
+
 - type: listing
   id: VendorWeaponLaserImmolator
   productEntity: WeaponLaserImmolator
@@ -113,7 +113,7 @@
   - SalvageWeapons
   conditions:
   - !type:BuyerAccessCondition
-  
+
 - type: listing
   id: VendorWeaponShotgunGA12
   productEntity: WeaponShotgunGA12
@@ -123,17 +123,19 @@
   - SalvageWeapons
   conditions:
   - !type:BuyerAccessCondition
-  
+
 - type: listing
   id: VendorWeaponShotgunCycler
   productEntity: WeaponShotgunCycler
   cost:
-    SalvageTicket: 500
+    SalvageTicket: 1200
   categories:
   - SalvageWeapons
   conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 3
   - !type:BuyerAccessCondition
-  
+
 - type: listing
   id: VendorWeaponLr30
   productEntity: WeaponLr30
@@ -143,7 +145,7 @@
   - SalvageWeapons
   conditions:
   - !type:BuyerAccessCondition
-  
+
 - type: listing
   id: VendorSpeedLoaderShotgunEmpty
   productEntity: SpeedLoaderShotgunEmpty
@@ -153,7 +155,7 @@
   - SalvageConsumeables
   conditions:
   - !type:BuyerAccessCondition
-  
+
 - type: listing
   id: VendorBoxLethalshot
   productEntity: BoxLethalshot
@@ -163,7 +165,7 @@
   - SalvageConsumeables
   conditions:
   - !type:BuyerAccessCondition
-  
+
 - type: listing
   id: VendorMagazineBatteryLr30
   productEntity: MagazineBatteryLr30
@@ -173,7 +175,7 @@
   - SalvageConsumeables
   conditions:
   - !type:BuyerAccessCondition
-  
+
 - type: listing
   id: VendorMedkitAdvancedFilled
   productEntity: MedkitAdvancedFilled
@@ -183,7 +185,7 @@
   - SalvageConsumeables
   conditions:
   - !type:BuyerAccessCondition
-  
+
 - type: listing
   id: VendorMedkitFilled
   productEntity: MedkitFilled
@@ -193,7 +195,7 @@
   - SalvageConsumeables
   conditions:
   - !type:BuyerAccessCondition
-  
+
 - type: listing
   id: VendorMedkitCombatFilled
   productEntity: MedkitCombatFilled

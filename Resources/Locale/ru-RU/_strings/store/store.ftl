@@ -12,3 +12,4 @@ store-not-account-owner = Этот { $store } не привязан к вам!
 store-preset-name-uplink = Аплинк
 store-preset-name-spellbook = Книга заклинаний
 store-preset-name-ntuplink = Визионер
+vendor-salvage-ticket-machine = вендор утилизационных талонов
