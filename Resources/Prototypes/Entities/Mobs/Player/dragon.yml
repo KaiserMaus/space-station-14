@@ -86,8 +86,8 @@
       700: Dead #Sunrise-Edit
   - type: SlowOnDamage
     speedModifierThresholds:
-      400: 0.7 # Sunrise-Edit
-      550: 0.5 # Sunrise-Edit
+      360: 0.7 # Sunrise-Edit
+      580: 0.5 # Sunrise-Edit
   # disable taking damage from fire, since its a fire breathing dragon
   - type: Flammable
     damage:
@@ -136,7 +136,7 @@
       components:
       - MobState
     chemical: Ichor
-    healRate: 20.0 #Sunrise-edit
+    healRate: 25.0 #Sunrise-edit
     whitelist:
       components:
       - MobState
