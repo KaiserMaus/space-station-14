@@ -164,7 +164,7 @@
   # Sunrise-Start
   - type: ExplosionResistance
     damageCoefficient: 0.3
-  - type: StaminaResistance
+  - type: StaminaResistance # Sunrise-TODO: По дракон должен получать урон по стамине, но в крит не падать а только замедлятся.
     damageCoefficient: 0.3
   - type: CollectiveMind
     minds:
