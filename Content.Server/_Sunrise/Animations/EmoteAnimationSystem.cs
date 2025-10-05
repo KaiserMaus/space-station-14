@@ -31,6 +31,7 @@ public sealed class EmoteAnimationSystem : EntitySystem
         SubscribeLocalEvent<EmoteAnimationComponent, ComponentGetState>(OnGetState);
         SubscribeLocalEvent<EmoteAnimationComponent, EmoteEvent>(OnEmote);
         SubscribeLocalEvent<EmoteAnimationComponent, PlayEmoteMessage>(OnPlayEmote);
+        SubscribeNetworkEvent<PlayEmoteMessage>(OnPlayEmoteNet);
     }
 
     private void OnPlayEmote(EntityUid uid, EmoteAnimationComponent component, PlayEmoteMessage args)
@@ -81,11 +82,24 @@ public sealed class EmoteAnimationSystem : EntitySystem
 
         if (emoteId == "FallOnNeck")
         {
-            var damage = new DamageSpecifier(_prototypeManager.Index<DamageTypePrototype>("Blunt"), 100);
+            var damage = new DamageSpecifier(_prototypeManager.Index<DamageTypePrototype>("Blunt"), 100); // Зачем, почему... Почему магические числа..
             _damageableSystem.TryChangeDamage(uid, damage, true, useVariance: false, useModifier: false);
         }
 
         component.AnimationId = emoteId;
         Dirty(uid, component);
     }
+
+    private void OnPlayEmoteNet(PlayEmoteMessage msg, EntitySessionEventArgs args)
+    {
+        if (args.SenderSession?.AttachedEntity is not { Valid: true } uid)
+            return;
+
+        if (!_prototypeManager.TryIndex(msg.ProtoId, out var proto))
+            return;
+
+        EnsureComp<EmoteAnimationComponent>(uid);
+        _chat.TryEmoteWithChat(uid, proto.ID);
+    }
+
 }
