@@ -1,1 +1,1 @@
-station-ai-hologram-girl = Holo Girl
+station-ai-hologram-girl = Голографическая Girl

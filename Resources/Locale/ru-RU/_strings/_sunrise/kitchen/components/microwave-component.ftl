@@ -9,4 +9,4 @@ assembler-menu-medical-title = Мед-О-Мат
 assembler-menu-start-button = Начать сборку
 
 assembler-menu-medical-footer-flavor-left = На 99.99% стерильно.
-assembler-menu-footer-flavor-right = v0.2.1
+assembler-menu-footer-flavor-right = версия 0.2.1
