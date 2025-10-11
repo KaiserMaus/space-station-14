@@ -8,6 +8,8 @@ using Content.Shared.Administration;
 using Content.Shared.Database;
 using Content.Shared.Eui;
 using Robust.Shared.Network;
+using System.Linq;  //Sunrise
+using System.Collections.Generic; //Sunrise
 
 namespace Content.Server.Administration;
 
@@ -147,7 +149,28 @@ public sealed class BanPanelEui : BaseEui
                     now
                 );
             }
+            // Sunrise - start
+            var roles = new List<string>();
 
+            if (ban.BannedJobs is { Length: > 0 })
+                roles.AddRange(ban.BannedJobs.Select(j => j.ToString()));
+
+            if (ban.BannedAntags is { Length: > 0 })
+                roles.AddRange(ban.BannedAntags.Select(a => a.ToString()));
+
+            _banManager.WebhookUpdateRoleBans(
+                targetUid,
+                ban.Target,
+                Player.UserId,
+                addressRange,
+                targetHWid,
+                roles,
+                ban.BanDurationMinutes,
+                ban.Severity,
+                ban.Reason,
+                now
+            );
+            // Sunrise - end
             Close();
 
             return;
