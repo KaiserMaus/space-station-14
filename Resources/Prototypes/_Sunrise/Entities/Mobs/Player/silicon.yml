@@ -299,7 +299,6 @@
   - BaseItem
   - AiHolder
   suffix: Empty
-  noSpawn: false
   components:
   - type: ContainerComp
     proto: AiHeldIntellicard
