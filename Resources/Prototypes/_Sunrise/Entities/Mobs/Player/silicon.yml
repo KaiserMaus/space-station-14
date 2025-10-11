@@ -299,6 +299,7 @@
   - BaseItem
   - AiHolder
   suffix: Empty
+  noSpawn: false
   components:
   - type: ContainerComp
     proto: AiHeldIntellicard
@@ -307,16 +308,18 @@
     sprite: _Sunrise/Objects/Devices/ai_card.rsi
     layers:
     - state: base
-    - state: full
+    - state: empty
       map: ["unshaded"]
       shader: unshaded
   - type: Appearance
-  # - type: GenericVisualizer
-  #   visuals:
-  #     enum.StationAiVisualState.Key:
-  #       unshaded:
-  #         Empty: { state: empty }
-  #         Occupied: { state: full }
+  - type: GenericVisualizer
+    visuals:
+      enum.StationAiVisualLayers.Icon:
+        unshaded:
+          Empty: { state: empty }
+          Occupied: { state: full }
+          Rebooting: { state: dead }
+          Dead: { state: dead }
   - type: Intellicard
   - type: StaticPrice
     price: 500
