@@ -103,9 +103,9 @@ public sealed class AccessReaderSystem : EntitySystem
         args.State = new AccessReaderComponentState(
             component.Enabled,
             component.DenyTags,
-            component.AccessLists,
-            component.AccessListsOriginal, // <-- 4-й аргумент: список оригинальных доступов
-            component.Group,               // <-- 5-й аргумент: группа доступа
+            component.AccessLists, // Sunrise-Edit
+            component.AccessListsOriginal, // Sunrise-Edit
+            component.Group,               // Sunrise-Edit
             _recordsSystem.Convert(component.AccessKeys),
             component.AccessLog,
             component.AccessLogLimit); // Sunrise-edit

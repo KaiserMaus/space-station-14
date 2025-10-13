@@ -485,7 +485,6 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
     };
 
 
-// ...existing code...
     public static HumanoidCharacterAppearance Random(string species, Sex sex)
     {
         var random = IoCManager.Resolve<IRobustRandom>();
@@ -523,10 +522,9 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
             SkinColorationStrategyInput.Color => strategy.ClosestSkinColor(new Color(random.NextFloat(1), random.NextFloat(1), random.NextFloat(1), 1)),
         };
 
-        var newHairColor = colorPalette[1];
+        var newHairColor = colorPalette[1]; // Sunrise-Start
         var newEyeColor = colorPalette[2];
 
-        // Если хотите реалистичные цвета для HumanToned:
         if (speciesPrototype.SkinColoration == "HumanToned")
         {
             newHairColor = random.Pick(HairStyles.RealisticHairColors);
@@ -541,7 +539,7 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
         var newWidth = random.NextFloat(speciesPrototype.MinWidth, speciesPrototype.MaxWidth);
         var newHeight = random.NextFloat(speciesPrototype.MinHeight, speciesPrototype.MaxHeight);
 
-        return new HumanoidCharacterAppearance(newHairStyle, newHairColor, newFacialHairStyle, newHairColor, newEyeColor, newSkinColor, newMarkings, newWidth, newHeight);
+        return new HumanoidCharacterAppearance(newHairStyle, newHairColor, newFacialHairStyle, newHairColor, newEyeColor, newSkinColor, newMarkings, newWidth, newHeight); // Sunrise-End
 
         // helper functions:
         float RandomizeColor(float channel)
