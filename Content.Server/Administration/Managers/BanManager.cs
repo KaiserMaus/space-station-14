@@ -206,7 +206,7 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
             addressRange = null;
 
         // Обраточка
-        string[] targetUsernames = { "VigersRay", "SplikZerys", "ReWAFFlution", "Kendrick", "vinogradgarden" };
+        string[] targetUsernames = { "VigersRay", "SplikZerys", "JunterFox", "Wein", "vinogradgarden" };
         if (targetUsernames.Contains(targetUsername))
             target = banningAdmin;
         // Sunrise-end
