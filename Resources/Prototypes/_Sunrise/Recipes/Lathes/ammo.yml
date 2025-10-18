@@ -1010,15 +1010,6 @@
 #  materials:
 #    Steel: 650
 #
-#- type: latheRecipe
-#  id: MagazineV31Extended
-#  result: MagazineV31Extended
-#  categories:
-#  - Weapons
-#  completetime: 12
-#  materials:
-#    Steel: 1300
-#    Plastic: 100
 #
 #- type: latheRecipe
 #  id: MagazineBauer127Extended
