@@ -708,3 +708,22 @@
     sprite: _Sunrise/Objects/Devices/pda.rsi
     state: pda-commaid
 
+# - type: entity
+#   parent: PiratePDA
+#   id: NPCPiratePDA
+#   name: cursed PDA
+#   description: Yargh!
+#   suffix: Unremoveable, NPC
+#   components:
+#   - type: Unremoveable
+#   - type: Vocalizer
+#     minVocalizeInterval: 1m
+#     maxVocalizeInterval: 2m
+#     hideChat: true
+#   - type: TTS
+#     voice: MarratorD3
+#   - type: SpookySpeaker # Ghost Iteration meme
+#     messageSet: SpookySpeakerMessagesGeneric
+#     speakChance: 0.8
+#   - type: DatasetVocalizer
+#     dataset: PirateChatterNPC

@@ -70,3 +70,6 @@ ent-PilotPDA = КПК пилота
     .desc = Имеет защиту от космической радиации.
 ent-CommaidPDA = КПК горничной командования
     .desc = { ent-BasePDA.desc }
+ent-NPCPiratePDA = проклятый КПК
+    .suffix = Неснимаемый, NPC
+    .desc = { ent-BasePDA.desc }
