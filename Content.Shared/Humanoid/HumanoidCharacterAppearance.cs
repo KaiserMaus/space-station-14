@@ -492,13 +492,13 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
 
         var newFacialHairStyle = HairStyles.DefaultFacialHairStyle;
         var newHairStyle = HairStyles.DefaultHairStyle;
-        List<Marking> newMarkings = [];
+        var newMarkings = new List<Marking>();
 
         // grab a completely random color.
         var baseColor = new Color(random.NextFloat(1), random.NextFloat(1), random.NextFloat(1), 1);
 
         // create a new color palette based on BaseColor. roll to determine what type of palette it is.
-        List<Color> colorPalette = [];
+        var colorPalette = new List<Color>();
         switch (random.Next(3))
         {
             case 0:
@@ -510,6 +510,18 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
             case 2:
                 colorPalette = GetOneComplementary(baseColor);
                 break;
+        }
+
+        var hairDict = markingManager.MarkingsByCategory(MarkingCategories.Hair);
+        if (hairDict != null && hairDict.Count > 0)
+        {
+            newHairStyle = random.Pick(hairDict.Keys.ToList());
+        }
+
+        var facialDict = markingManager.MarkingsByCategory(MarkingCategories.FacialHair);
+        if (facialDict != null && facialDict.Count > 0)
+        {
+            newFacialHairStyle = random.Pick(facialDict.Keys.ToList());
         }
 
         var protoMan = IoCManager.Resolve<IPrototypeManager>();

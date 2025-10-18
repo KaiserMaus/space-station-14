@@ -1,5 +1,5 @@
 - files: ["box.yml"]
-  editors: Odleer
+  editors: Gpxgji, George69, SliZen
 
 - files: ["barratry.yml"]
   editors: Focstor, Furo, non_stop_smetana
@@ -8,7 +8,7 @@
   editors: KaiserMaus, Hatiko, CallMeOwO, ktenanta, Odleer
 
 - files: ["delta.yml"]
-  editors: meowstushka, JunterFox, Odleer
+  editors: Gpxgji, George69, SliZen, ReWAFFlution, Kendrick
 
 - files: ["planet_prison.yml"]
   editors: Odleer, ZavanickTEP
@@ -29,4 +29,4 @@
   editors: J C Denton, freychik
 
 - files: ["bagel.yml"]
-  editors: pacable, Francus41 
+  editors: pacable, Francus41
