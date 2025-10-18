@@ -1,0 +1,181 @@
+# Pirate has a pirate setting, with old spacesuits and ancient weapons.
+###
+# Privateer(Каппер) mix of mercenary, ussp and syndicate style, with USSP variant spacesuits and USSP and Syndi tier weapons.
+###
+# Scrappers has a Salvage style, with Salvage variant spacesuits and industrial tier weapons. PKA, Crushers etc.
+###
+# region  Pirate Tier1
+- type: startingGear
+  id: MobPirateGearMeleeT1
+  equipment:
+    gloves: ClothingHandsGlovesColorMercCombatKnife
+    outerClothing: ClothingOuterArmorBasicSlim
+    belt: ClothingBeltUtility
+    pocket1: SpaceCash500
+    pocket2: CombatKnife
+    shoes: ClothingShoesBootsLaceup
+
+- type: startingGear
+  id: MobPirateGearRangedT1
+  equipment:
+    gloves: ClothingHandsGlovesColorMercFlintlock
+    belt: ClothingBeltSalvageWebbingTier1Flintlock
+    shoes: ClothingShoesBootsLaceup
+
+# - type: startingGear
+#   id: MobPirateGearRangedAlt2T1
+#   equipment:
+#     gloves: ClothingHandsGlovesColorMercRepeater
+#     outerClothing: ClothingOuterCoatHoSOvercoat
+#     pocket1: PatchOmni
+#     pocket2: DrinkNukieCan
+#     belt: ClothingBeltBandolier
+#     shoes: ClothingShoesBootsCowboyBrownFilled
+
+# - type: startingGear
+#   id: MobPirateGearRangedAlt3T1
+#   equipment:
+#     gloves: ClothingHandsGlovesColorBlackPistol
+#     outerClothing: ClothingOuterVestWebMerc
+#     back: ClothingBackpackDuffelMecranaryTier1Pistol
+#     belt: ClothingBeltWebbingMecranaryTier1Pistol
+#     shoes: ClothingShoesBootsMerc
+
+# Privateer
+- type: startingGear
+  id: MobPirateGearRangedAltT1
+  equipment:
+    head: ClothingHeadHatUshanka
+    gloves: ClothingHandsGlovesColorMercMosin
+    belt: ClothingSalvageWebbingScrapperTier1Mosin
+    shoes: ClothingShoesBootsWork
+
+# Scrapper
+- type: startingGear
+  id: MobScrapperGearMeleeT1
+  equipment:
+    gloves: ClothingHandsGlovesWeaponWieldedPickaxe
+    back: ClothingBackpackExplorerMeleeT1
+    belt: OreBag
+    shoes: ClothingShoesBootsSalvage
+    suitstorage: AirTankFilled
+
+
+- type: startingGear
+  id: MobScrapperGearRangedT1
+  equipment:
+    gloves: ClothingHandsGlovesWeaponPkaFlashlight
+    back: ClothingBackpackExplorerRangedT1
+    belt: ConstructionBag
+    shoes: ClothingShoesBootsSalvage
+    suitstorage: AirTankFilled
+
+# region  Pirate Tier2
+- type: startingGear
+  id: MobPirateGearMeleeT2
+  equipment:
+    gloves: ClothingHandsGlovesColorMercCutlass
+    pocket1: Cutlass
+    pocket2: SyringeStimulants
+
+- type: startingGear
+  id: MobPirateGearRangedT2
+  equipment:
+    gloves: ClothingHandsGlovesColorMercRevolvers
+    belt: ClothingBeltWebbingMecranaryTier2Revolver
+    pocket1: FlippoLighterSunriseContractor
+    pocket2: CigPackSyndicate
+
+- type: startingGear
+  id: MobPirateGearRangedAltT2
+  equipment:
+    gloves: ClothingHandsGlovesColorMercShotgun
+    back: ClothingBackpackPirateMessengerTier2Shotgun
+    belt: ClothingBeltWebbingMecranaryTier2Shotgun
+    shoes: ClothingShoesBootsMagPirate
+
+- type: startingGear
+  id: MobPirateGearRangedAlt2T2
+  equipment:
+    gloves: ClothingHandsGlovesColorMercRepeater
+    outerClothing: ClothingOuterCoatHoSOvercoat
+    pocket1: PatchOmni
+    pocket2: DrinkNukieCan
+    belt: ClothingBeltBandolier
+    shoes: ClothingShoesBootsCowboyBrownFilled
+
+# Scrapper
+- type: startingGear
+  id: MobScrapperGearMeleeT2
+  equipment:
+    gloves: ClothingHandsGlovesWeaponWieldedGlaive
+    outerClothing: ClothingOuterHardsuitSpatio
+    back: ClothingBackpackExplorerMeleeT2
+    belt: OreBag
+    shoes: ClothingShoesBootsSalvage
+
+
+- type: startingGear
+  id: MobScrapperGearRangedT2
+  equipment:
+    gloves: ClothingHandsGlovesWeaponSawnOffPkaDagger
+    outerClothing: ClothingOuterHardsuitSpatio
+    back: ClothingBackpackExplorerRangedT2
+    belt: ConstructionBag
+    shoes: ClothingShoesBootsSalvage
+
+
+# region  Pirate Tier3
+- type: startingGear
+  id: MobPirateGearRangedT3
+  equipment:
+    gloves: ClothingHandsGlovesColorMercLaserNSaw
+    back: ClothingBackpackDuffelMecranaryTier3Medic
+    belt: ClothingBeltMecranaryTier3Medic
+    shoes: ClothingShoesBootsCombat
+
+# Scrapper
+- type: startingGear
+  id: MobScrapperGearMeleeT3
+  equipment:
+    gloves: ClothingHandsGlovesWeaponDrill
+    outerClothing: ClothingOuterHardsuitSalvage
+    back: ClothingBackpackExplorerMeleeT3
+    belt: OreBag
+    shoes: ClothingShoesBootsSalvage
+
+
+- type: startingGear
+  id: MobScrapperGearRangedT3
+  equipment:
+    gloves: ClothingHandsGlovesWeaponWieldedPka
+    outerClothing: ClothingOuterHardsuitLuxury
+    back: ClothingBackpackExplorerRangedT3
+    belt: ConstructionBag
+    shoes: ClothingShoesBootsSalvage
+
+
+- type: startingGear
+  id: MobScrapperGearMechT3
+  equipment:
+    pocket1: RipleyCentralElectronics
+    pocket2: RipleyPeripheralsElectronics
+
+# region  Pirate Tier4
+- type: startingGear
+  id: MobPirateGearTier4Captain
+  equipment:
+    gloves: ClothingHandsGlovesColorMercRepeater
+    back: ClothingBackpackDuffelMecranaryTier4Captain
+    shoes: ClothingShoesBootsCombat
+
+# Scrapper
+- type: startingGear
+  id: MobScrapperGearBoss
+  equipment:
+    gloves: ClothingHandsGlovesWeaponSawnOffPkas
+    outerClothing: ClothingOuterHardsuitMaximPrototype
+    back: ClothingBackpackExplorerBoss
+    belt: ConstructionBag
+    shoes: ClothingShoesBootsSalvage
+

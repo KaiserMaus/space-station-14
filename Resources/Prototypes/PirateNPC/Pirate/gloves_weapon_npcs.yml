@@ -1,0 +1,451 @@
+# Gloves with fake weapon visuals for NPCs
+- type: entity
+  parent: ClothingHandsGlovesCombat
+  id: ClothingHandsGlovesColorBlackSMG
+  name: combat gloves
+  suffix: smg
+  description: Regular black gloves that do not keep you from frying.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/Color/color.rsi
+    layers:
+    - state: icon
+      color: "#535353"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: Objects/Weapons/Guns/SMGs/atreides.rsi
+        state: inhand-left
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackAK
+  name: combat gloves
+  suffix: ak
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: Objects/Weapons/Guns/Rifles/ak.rsi
+        state: inhand-left
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackChinaLake
+  name: combat gloves
+  suffix: china lake
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: Objects/Weapons/Guns/Launchers/china_lake.rsi
+        state: inhand-left
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackPirateCannon
+  name: combat gloves
+  suffix: pirate cannon
+  noSpawn: true
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: Objects/Weapons/Guns/Launchers/pirate_cannon.rsi
+        state: inhand-left
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackPistol
+  name: combat gloves
+  suffix: pistol
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: Objects/Weapons/Guns/Pistols/viper.rsi
+        state: inhand-left
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorMercFlintlock
+  name: combat gloves
+  suffix: flintlock
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/mercbattle.rsi
+        state: equipped-HAND
+      - sprite: Objects/Weapons/Guns/Snipers/flintlock.rsi
+        state: inhand-right
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorMercRevolvers
+  name: combat gloves
+  suffix: double revolvers
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/fingerless.rsi
+        state: equipped-HAND
+      - sprite: _Starlight/Objects/Weapons/Guns/Revolvers/snub.rsi
+        state: inhand-right
+      - sprite: _Starlight/Objects/Weapons/Guns/Revolvers/snub.rsi
+        state: inhand-left
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorMercShotgun
+  name: combat gloves
+  suffix: shotgun
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/fingerless.rsi
+        state: equipped-HAND
+      - sprite: Objects/Weapons/Guns/Shotguns/blunderbuss.rsi
+        state: wielded-inhand-right
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorMercMosin
+  name: combat gloves
+  suffix: mosin
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/mercbattle.rsi
+        state: equipped-HAND
+      - sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
+        state: wielded-inhand-right
+  - type: MeleeWeapon
+    attackRate: 1
+    altDisarm: false
+    angle: 0
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Piercing: 12
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorMercRepeater
+  name: combat gloves
+  suffix: repeater
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/fingerless.rsi
+        state: equipped-HAND
+      - sprite: _Sunrise/Objects/Weapons/Guns/Snipers/n2524/repeater_inhands_64x.rsi
+        state: wielded-inhand-right
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorMercGestio
+  name: combat gloves
+  suffix: gestio
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/mercbattle.rsi
+        state: equipped-HAND
+      - sprite: _NF/Objects/Weapons/Guns/Rifles/gestio.rsi
+        state: wielded-inhand-right
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorMercNovalite
+  name: combat gloves
+  suffix: novalite
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/mercbattle.rsi
+        state: equipped-HAND
+      - sprite: _NF/Objects/Weapons/Guns/Rifles/novalitec1.rsi
+        state: wielded-inhand-right
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorMercCombatKnife
+  name: combat gloves
+  suffix: knife
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/mercbattle.rsi
+        state: equipped-HAND
+      - sprite: Objects/Weapons/Melee/shields.rsi
+        state: makeshift-inhand-right
+      - sprite: Objects/Weapons/Melee/combat_knife.rsi
+        state: inhand-left
+  - type: MeleeWeapon
+    attackRate: 1.5
+    altDisarm: false
+    angle: 0
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Slash: 12
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorMercCutlass
+  name: combat gloves
+  suffix: cutlass
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/fingerless.rsi
+        state: equipped-HAND
+      - sprite: _Starlight/Objects/Weapons/Melee/forged_buckler_shield.rsi
+        state: inhand-left
+      - sprite: Objects/Weapons/Melee/cutlass.rsi
+        state: inhand-right
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorMercLaserNSaw
+  name: combat gloves
+  suffix: laser and saw
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/fingerless.rsi
+        state: equipped-HAND
+      - sprite: Objects/Weapons/Guns/Battery/laser_retro.rsi
+        state: inhand-left-3
+      - sprite: Objects/Specific/Medical/Surgery/saw.rsi
+        state: electric-inhand-right
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackPython
+  name: combat gloves
+  suffix: python
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: Objects/Weapons/Guns/Revolvers/python.rsi
+        state: inhand-left
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackShotgun
+  name: combat gloves
+  suffix: shotgun
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: Objects/Weapons/Guns/Shotguns/pump_inhands_64x.rsi
+        state: inhand-left
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackSprayNozzle
+  name: combat gloves
+  suffix: spray nozzle
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: Objects/Weapons/Guns/Basic/spraynozzle.rsi
+        state: inhand-left
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackCrossbow
+  name: combat gloves
+  suffix: crossbow
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: _NF/Objects/Weapons/Guns/Crossbow/cult.rsi
+        state: inhand-left
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackLaserPistol
+  name: combat gloves
+  suffix: laser pistol
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: Objects/Weapons/Guns/Battery/advancedlasergun.rsi
+        state: inhand-left
+
+# This is some proper cursed stuff: due to layering of clothes sprites, gloves displayed under outer clothes
+# So in order to make wielded weapon visible, I'm using neck slot which is drawn on top of outer suit layer.
+- type: entity
+  id: PunkHandsGlovesBaseballBat
+  parent: ClothingNeckBase
+  name: punk gloves
+  description: Colorful gloves that do not keep you from frying.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/Color/color.rsi
+    layers:
+      - state: icon
+        map: [ "gloves_decor" ]
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      # Gloves
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        map: [ "gloves_decor" ]
+      # Weapon
+      - sprite: Objects/Weapons/Melee/baseball_bat.rsi
+        state: wielded-inhand-right
+  - type: RandomSprite
+    available:
+      - gloves_decor:
+          equipped-HAND: CyberpunkNeon
+
+- type: entity
+  id: PunkHandsGlovesFireaxe
+  parent: PunkHandsGlovesBaseballBat
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      # Gloves
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        map: [ "gloves_decor" ]
+      # Weapon
+      - sprite: Objects/Weapons/Melee/fireaxe.rsi
+        state: wielded-inhand-right
+
+- type: entity
+  id: PunkHandsGlovesSledgehammer
+  parent: PunkHandsGlovesBaseballBat
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      # Gloves
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        map: [ "gloves_decor" ]
+      # Weapon
+      - sprite: Objects/Weapons/Melee/sledgehammer.rsi
+        state: wielded-inhand-right
+
+- type: entity
+  id: PunkHandsGlovesShotgun
+  parent: PunkHandsGlovesBaseballBat
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      # Gloves
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        map: [ "gloves_decor" ]
+      # Weapon
+      - sprite: Objects/Weapons/Guns/Shotguns/pump_inhands_64x.rsi
+        state: wielded-inhand-right
+
+- type: entity
+  id: PunkHandsGlovesSmg
+  parent: PunkHandsGlovesBaseballBat
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      # Gloves
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        map: [ "gloves_decor" ]
+      # Weapon
+      - sprite: Objects/Weapons/Guns/SMGs/drozd.rsi
+        state: wielded-inhand-right
+
+- type: entity
+  id: PunkHandsGlovesLaserGun
+  parent: PunkHandsGlovesBaseballBat
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      # Gloves
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        map: [ "gloves_decor" ]
+      # Weapon
+      - sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
+        state: wielded-inhand-right
