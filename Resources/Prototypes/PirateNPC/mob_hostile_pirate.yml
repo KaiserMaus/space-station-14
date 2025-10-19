@@ -151,18 +151,18 @@
     soundGunshot: /Audio/Weapons/Guns/Gunshots/sniper.ogg
 
 # Variations
-# region Tier 1
+# Tier 1
 - type: entity
   name: scrapper # TODO Киркас (Ближний бой)
   parent:
   - MobPirateBase
   - MobHumanoidHostileAISimpleMelee
-  id: MobScrapperMeleeT1
+  id: MobPirateScrapperMeleeT1
   noSpawn: true
   components:
   - type: Loadout
     prototypes:
-    - MobScrapperGearMeleeT1
+    - MobPirateScrapperGearMeleeT1
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -182,12 +182,12 @@
   name: scrapper # Старомодный Лазер
   parent:
   - MobPirateBase
-  id: MobScrapperRangedT1
+  id: MobPirateScrapperRangedT1
   noSpawn: true
   components:
   - type: Loadout
     prototypes:
-    - MobScrapperGearRangedT1
+    - MobPirateScrapperGearRangedT1
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -273,20 +273,23 @@
       state: equipped-HELMET
     - sprite: Clothing/Head/Hats/cowboyhatbountyhunter.rsi
       state: equipped-HELMET
-  - type: BasicEntityAmmoProvider
+  - type: ProjectileBatteryAmmoProvider
     proto: CartridgePistol40SP
-    capacity: 12
-    count: 12
-  - type: RechargeBasicEntityAmmo
-    rechargeCooldown: 2
-    rechargeSound:
-      path: /Audio/_Sunrise/Effects/silence.ogg
+    fireCost: 100
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargePause: true
+    autoRechargePauseTime: 6
+    autoRechargeRate: 9999
+  - type: Battery
+    maxCharge: 600
+    startingCharge: 600
   - type: Gun
     showExamineText: false
-    burstFireRate: 6
+    burstFireRate: 8
     shotsPerBurst: 2
-    burstCooldown: 1.75
-    minAngle: 2
+    burstCooldown: 0.75
+    minAngle: 1
     maxAngle: 8
     selectedMode: Burst
     availableModes:
@@ -331,6 +334,91 @@
     availableModes:
     - Burst
     soundGunshot: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+
+# Tier 2
+- type: entity
+  name: scrapper
+  parent:
+  - MobPirateBase
+  - MobHumanoidHostileAISimpleMelee
+  id: MobPirateScrapperMeleeT2  # TODO Алебарда
+  noSpawn: true
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateScrapperGearMeleeT2
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
+      state: equipped-head
+    - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
+      state: equipped-head-unshaded
+      shader: unshaded
+    - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
+      state: equipped-head-light
+      shader: unshaded
+      color: "#47f8ff"
+  - type: PointLight
+    enabled: true
+    autoRot: true
+    netsync: false
+    radius: 3
+    energy: 1
+    mask: /Textures/Effects/LightMasks/cone.png
+    color: "#47f8ff"
+
+- type: entity
+  name: scrapper
+  parent:
+  - MobPirateBase
+  id: MobPirateScrapperRangedT2 # TODO Upgraded PKA to Reload and Range
+  noSpawn: true
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateScrapperGearRangedT2
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
+      state: equipped-head
+    - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
+      state: equipped-head-unshaded
+      shader: unshaded
+    - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
+      state: equipped-head-light
+      shader: unshaded
+      color: "#47f8ff"
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 0.75
+    rechargeSound:
+      path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
+  - type: BasicEntityAmmoProvider
+    proto: BulletKinetic
+    capacity: 1
+    count: 1
+  - type: Gun
+    showExamineText: false
+    fireRate: 8
+    selectedMode: FullAuto
+    minAngle: 31
+    maxAngle: 45
+    availableModes:
+    - FullAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
+  - type: PointLight
+    enabled: true
+    autoRot: true
+    netsync: false
+    radius: 3
+    energy: 1
+    mask: /Textures/Effects/LightMasks/cone.png
+    color: "#47f8ff"
 
 # region Tier 3
 - type: entity
@@ -417,145 +505,18 @@
     - SemiAuto
     soundGunshot: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
 
-# region Tier 4 - Boss
-- type: entity
-  name: Pirate captain
-  parent: MobPirateBase
-  id: MobPirateCaptain # Сабля капитана Рефлект+Питон
-  noSpawn: true
-  components:
-  - type: Loadout
-    prototypes:
-    - MobPirateGearTier4Captain
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
-      state: human
-    - sprite: Clothing/Uniforms/Jumpsuit/color.rsi
-      state: equipped-INNERCLOTHING
-      color: "#d3bf86"
-    - sprite: Clothing/OuterClothing/Armor/bulletproof.rsi
-      state: equipped-OUTERCLOTHING
-    - sprite: Clothing/Mask/gassecurity.rsi
-      state: equipped-MASK
-    - sprite: Clothing/Head/Helmets/security.rsi
-      state: equipped-HELMET
-    - sprite: Clothing/Belt/militarywebbing.rsi
-      state: equipped-BELT
-    - sprite: Clothing/Neck/mantles/qmmantle.rsi
-      state: equipped-NECK
-  - type: BasicEntityAmmoProvider
-    proto: CartridgeMagnum
-    capacity: 10
-    count: 10
-  - type: Gun
-    showExamineText: false
-    fireRate: 0.6
-    minAngle: 1
-    maxAngle: 10
-    selectedMode: SemiAuto
-    availableModes:
-    - SemiAuto
-    soundGunshot: /Audio/Weapons/Guns/Gunshots/sniper.ogg
-
-# region Tier 2
-- type: entity
-  name: scrapper
-  parent:
-  - MobPirateBase
-  - MobHumanoidHostileAISimpleMelee
-  id: MobScrapperMeleeT2  # TODO Алебарда
-  noSpawn: true
-  components:
-  - type: Loadout
-    prototypes:
-    - MobScrapperGearMeleeT2
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
-      state: human
-    - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
-      state: equipped-head
-    - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
-      state: equipped-head-unshaded
-      shader: unshaded
-    - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
-      state: equipped-head-light
-      shader: unshaded
-      color: "#47f8ff"
-  - type: PointLight
-    enabled: true
-    autoRot: true
-    netsync: false
-    radius: 3
-    energy: 1
-    mask: /Textures/Effects/LightMasks/cone.png
-    color: "#47f8ff"
-
-- type: entity
-  name: scrapper
-  parent:
-  - MobPirateBase
-  id: MobScrapperRangedT2 # TODO Upgraded PKA to Reload and Range
-  noSpawn: true
-  components:
-  - type: Loadout
-    prototypes:
-    - MobScrapperGearRangedT2
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
-      state: human
-    - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
-      state: equipped-head
-    - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
-      state: equipped-head-unshaded
-      shader: unshaded
-    - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
-      state: equipped-head-light
-      shader: unshaded
-      color: "#47f8ff"
-  - type: RechargeBasicEntityAmmo
-    rechargeCooldown: 0.75
-    rechargeSound:
-      path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
-  - type: BasicEntityAmmoProvider
-    proto: BulletKinetic
-    capacity: 1
-    count: 1
-  - type: Gun
-    showExamineText: false
-    fireRate: 8
-    selectedMode: FullAuto
-    minAngle: 31
-    maxAngle: 45
-    availableModes:
-    - FullAuto
-    soundGunshot: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
-  - type: PointLight
-    enabled: true
-    autoRot: true
-    netsync: false
-    radius: 3
-    energy: 1
-    mask: /Textures/Effects/LightMasks/cone.png
-    color: "#47f8ff"
-
 # region Tier 3
 - type: entity
   name: scrapper # Энерго Сабля Пиратов
   parent:
   - MobPirateBase
   - MobHumanoidHostileAISimpleMelee
-  id: MobScrapperMeleeT3
+  id: MobPirateScrapperMeleeT3
   noSpawn: true
   components:
   - type: Loadout
     prototypes:
-    - MobScrapperGearMeleeT3
+    - MobPirateScrapperGearMeleeT3
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -592,12 +553,12 @@
   name: scrapper # Upgraded PKA to Reload and Damage and Range
   parent:
   - MobPirateBase
-  id: MobScrapperRangedT3
+  id: MobPirateScrapperRangedT3
   noSpawn: true
   components:
   - type: Loadout
     prototypes:
-    - MobScrapperGearRangedT3
+    - MobPirateScrapperGearRangedT3
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -640,13 +601,13 @@
   noSpawn: true
   parent:
   - MobPirateBase
-  id: MobScrapperMech
+  id: MobPirateMech
   components:
   - type: Loadout
     prototypes:
-    - MobScrapperGearMechT3
+    - MobPirateScrapperGearMechT3
   - type: Damageable
-    damageModifierSet: MobPirateT1
+    damageModifierSet: MobPirateT2
   - type: Sprite
     drawdepth: Mobs
     noRot: true
@@ -669,7 +630,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      550: Dead
+      500: Dead
   - type: Stamina
     critThreshold: 999
   - type: MovementSpeedModifier
@@ -722,12 +683,12 @@
   name: scrapper # TODO scrappers Перчатка Синди горилла+ беск отталкивание (Лут Чип Улучшение перчатки гориллы)
   parent:
   - MobPirateBase
-  id: MobScrapperBoss
+  id: MobPirateScrapperBoss
   noSpawn: true
   components:
   - type: Loadout
     prototypes:
-    - MobScrapperGearBoss
+    - MobPirateScrapperGearBoss
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -764,3 +725,42 @@
     energy: 3
     mask: /Textures/Effects/LightMasks/cone.png
     color: "#47f8ff"
+
+- type: entity
+  name: pirate captain
+  parent: MobPirateBase
+  id: MobPirateCaptain
+  noSpawn: true
+  components:
+  - type: Damageable
+    damageModifierSet: MobPirateT3
+  - type: Loadout
+    prototypes:
+    - MobPirateGearTier4Captain
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/Uniforms/Jumpsuit/color.rsi
+      state: equipped-INNERCLOTHING
+      color: "#d3bf86"
+    - sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/piratecaptain.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: _Sunrise/Clothing/Head/Hardsuits/piratecaptainhelm.rsi
+      state: equipped-HELMET
+    # - sprite: Clothing/Neck/mantles/qmmantle.rsi
+    #   state: equipped-NECK
+  - type: BasicEntityAmmoProvider
+    proto: CartridgePistol40AP
+    capacity: 10
+    count: 10
+  - type: Gun
+    showExamineText: false
+    fireRate: 4
+    minAngle: 1
+    maxAngle: 8
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot: /Audio/_RMC14/Weapons/Guns/Gunshots/gun_cmb_1.ogg
