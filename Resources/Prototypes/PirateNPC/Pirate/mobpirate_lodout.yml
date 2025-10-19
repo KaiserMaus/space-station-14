@@ -8,7 +8,7 @@
 - type: startingGear
   id: MobPirateGearMeleeT1
   equipment:
-    gloves: ClothingHandsGlovesColorMercCombatKnife
+    gloves: ClothingHandsMercCombatKnife
     outerClothing: ClothingOuterArmorBasicSlim
     belt: ClothingBeltUtility
     pocket1: SpaceCash500
@@ -18,14 +18,14 @@
 - type: startingGear
   id: MobPirateGearRangedT1
   equipment:
-    gloves: ClothingHandsGlovesColorMercFlintlock
+    gloves: ClothingHandsMercFlintlock
     belt: ClothingBeltSalvageWebbingTier1Flintlock
     shoes: ClothingShoesBootsLaceup
 
 # - type: startingGear
 #   id: MobPirateGearRangedAlt2T1
 #   equipment:
-#     gloves: ClothingHandsGlovesColorMercRepeater
+#     gloves: ClothingHandsMercRepeater
 #     outerClothing: ClothingOuterCoatHoSOvercoat
 #     pocket1: PatchOmni
 #     pocket2: DrinkNukieCan
@@ -35,7 +35,7 @@
 # - type: startingGear
 #   id: MobPirateGearRangedAlt3T1
 #   equipment:
-#     gloves: ClothingHandsGlovesColorBlackPistol
+#     gloves: ClothingHandsBlackPistol
 #     outerClothing: ClothingOuterVestWebMerc
 #     back: ClothingBackpackDuffelMecranaryTier1Pistol
 #     belt: ClothingBeltWebbingMecranaryTier1Pistol
@@ -46,42 +46,42 @@
   id: MobPirateGearRangedAltT1
   equipment:
     head: ClothingHeadHatUshanka
-    gloves: ClothingHandsGlovesColorMercMosin
+    gloves: ClothingHandsMercMosin
     belt: ClothingSalvageWebbingScrapperTier1Mosin
     shoes: ClothingShoesBootsWork
 
 # Scrapper
-- type: startingGear
-  id: MobPirateScrapperGearMeleeT1
-  equipment:
-    gloves: ClothingHandsGlovesWeaponWieldedPickaxe
-    back: ClothingBackpackScrapperMeleeT1
-    belt: OreBag
-    shoes: ClothingShoesBootsSalvage
-    suitstorage: AirTankFilled
+# - type: startingGear
+#   id: MobPirateScrapperGearMeleeT1
+#   equipment:
+#     gloves: ClothingHandsGlovesWeaponWieldedPickaxe
+#     back: ClothingBackpackScrapperMeleeT1
+#     belt: OreBag
+#     shoes: ClothingShoesBootsSalvage
+#     suitstorage: AirTankFilled
 
 
-- type: startingGear
-  id: MobPirateScrapperGearRangedT1
-  equipment:
-    gloves: ClothingHandsGlovesWeaponPkaFlashlight
-    back: ClothingBackpackScrapperRangedT1
-    belt: MaterialBag
-    shoes: ClothingShoesBootsSalvage
-    suitstorage: AirTankFilled
+# - type: startingGear
+#   id: MobPirateScrapperGearRangedT1
+#   equipment:
+#     gloves: ClothingHandsGlovesWeaponPkaFlashlight
+#     back: ClothingBackpackScrapperRangedT1
+#     belt: MaterialBag
+#     shoes: ClothingShoesBootsSalvage
+#     suitstorage: AirTankFilled
 
 # region  Pirate Tier2
 - type: startingGear
   id: MobPirateGearMeleeT2
   equipment:
-    gloves: ClothingHandsGlovesColorMercCutlass
+    gloves: ClothingHandsMercCutlass
     pocket1: Cutlass
     pocket2: SyringeStimulants
 
 - type: startingGear
   id: MobPirateGearRangedT2
   equipment:
-    gloves: ClothingHandsGlovesColorMercRevolvers
+    gloves: ClothingHandsMercRevolvers
     belt: ClothingBeltWebbingMecranaryTier2Revolver
     pocket1: FlippoLighterSunriseContractor
     pocket2: CigPackSyndicate
@@ -89,7 +89,7 @@
 - type: startingGear
   id: MobPirateGearRangedAltT2
   equipment:
-    gloves: ClothingHandsGlovesColorMercShotgun
+    gloves: ClothingHandsMercShotgun
     back: ClothingBackpackPirateMessengerTier2Shotgun
     belt: ClothingBeltWebbingMecranaryTier2Shotgun
     shoes: ClothingShoesBootsMagPirate
@@ -97,7 +97,7 @@
 - type: startingGear
   id: MobPirateGearRangedAlt2T2
   equipment:
-    gloves: ClothingHandsGlovesColorMercRepeater
+    gloves: ClothingHandsMercRepeater
     outerClothing: ClothingOuterCoatHoSOvercoat
     pocket1: PatchOmni
     pocket2: DrinkNukieCan
@@ -115,30 +115,35 @@
     shoes: ClothingShoesBootsSalvage
 
 
-- type: startingGear
-  id: MobPirateScrapperGearRangedT2
-  equipment:
-    gloves: ClothingHandsGlovesWeaponSawnOffPkaDagger
-    outerClothing: ClothingOuterHardsuitSpatio
-    back: ClothingBackpackScrapperRangedT2
-    belt: MaterialBag
-    shoes: ClothingShoesBootsSalvage
-
+# - type: startingGear
+#   id: MobPirateScrapperGearRangedT2
+#   equipment:
+#     gloves: ClothingHandsGlovesWeaponSawnOffPkaDagger
+#     outerClothing: ClothingOuterHardsuitSpatio
+#     back: ClothingBackpackScrapperRangedT2
+#     belt: MaterialBag
+#     shoes: ClothingShoesBootsSalvage
 
 # region  Pirate Tier3
 - type: startingGear
   id: MobPirateGearRangedT3
   equipment:
-    gloves: ClothingHandsGlovesColorMercLaserNSaw
-    back: ClothingBackpackDuffelMecranaryTier3Medic
-    belt: ClothingBeltMecranaryTier3Medic
-    shoes: ClothingShoesBootsCombat
+    gloves: ClothingHandsBlackPirateCannon
+    back: ClothingBackpackPirateMessengerTier3Grenade
+    shoes: ClothingShoesBootsJump
+
+- type: startingGear
+  id: MobPirateGearRangedAltT3
+  equipment:
+    gloves: ClothingHandsBlackM79
+    back: ClothingBackpackDuffelMecranaryTier3Grenade
+    shoes: ClothingShoesBootsJump
 
 # Scrapper
 - type: startingGear
   id: MobPirateScrapperGearMeleeT3
   equipment:
-    gloves: ClothingHandsGlovesWeaponDrill
+    # gloves: ClothingHandsGlovesWeaponDrill TODO
     outerClothing: ClothingOuterHardsuitSalvage
     back: ClothingBackpackScrapperMeleeT3
     belt: OreBag
@@ -148,7 +153,7 @@
 - type: startingGear
   id: MobPirateScrapperGearRangedT3
   equipment:
-    gloves: ClothingHandsGlovesWeaponWieldedPka
+    gloves: #ClothingHandsGlovesWeaponWieldedPka TODO
     outerClothing: ClothingOuterHardsuitLuxury
     back: ClothingBackpackScrapperRangedT3
     belt: MaterialBag
@@ -167,7 +172,7 @@
 - type: startingGear
   id: MobPirateGearTier4Captain
   equipment:
-    gloves: ClothingHandsGlovesColorMercECutlass
+    gloves: ClothingHandsMercECutlass
     belt: ClothingBeltSalvageWebbingTier4Captain
     shoes: ClothingShoesBootsMagSyndie
     pocket1: PouchAmmo
@@ -177,9 +182,15 @@
 - type: startingGear
   id: MobPirateScrapperGearBoss
   equipment:
-    gloves: ClothingHandsGlovesWeaponSawnOffPkas
     outerClothing: ClothingOuterHardsuitMaximPrototype
     back: ClothingBackpackScrapperBoss
     belt: MaterialBag
     shoes: ClothingShoesBootsSalvage
 
+# Jugger Murmillo
+- type: startingGear
+  id: MobPirateBoss
+  equipment:
+    back: ClothingBackpackOreCrateBoss
+    pocket1: ClothingHeadHatGladiator
+    pocket2: StimkitFilled

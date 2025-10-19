@@ -66,9 +66,25 @@
       gloves:
       - sprite: Clothing/Hands/Gloves/Color/color.rsi
         state: equipped-HAND
-        color: "#535353"
+        color: "#53535329"
       - sprite: Objects/Weapons/Guns/Launchers/pirate_cannon.rsi
         state: inhand-left
+
+- type: entity
+  parent: ClothingHandsBlackSMG
+  id: ClothingHandsBlackM79
+  name: combat gloves
+  suffix: m79
+  noSpawn: true
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#53535329"
+      - sprite: _RMC14/Objects/Weapons/Guns/Launchers/m79/tiny.rsi
+        state: wielded-inhand-left
 
 - type: entity
   parent: ClothingHandsBlackSMG
