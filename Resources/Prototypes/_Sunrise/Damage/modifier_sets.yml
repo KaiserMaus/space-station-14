@@ -84,10 +84,10 @@
   coefficients:
     Blunt: 0.75
     Slash: 0.75
-    Piercing: 0.7
+    Piercing: 0.6
     Heat: 0.8
     Caustic: 0.9
-    Bloodloss: 0.3
+    Bloodloss: 0.7
     Mangleness: 0.3
 
 - type: damageModifierSet
@@ -96,7 +96,18 @@
     Blunt: 0.7
     Slash: 0.7
     Piercing: 0.5
-    Heat: 0.4
+    Heat: 0.6
     Caustic: 0.9
-    Bloodloss: 0.3
+    Bloodloss: 0.5
     Mangleness: 0.3
+
+- type: damageModifierSet
+  id: MobPirateT3
+  coefficients:
+    Blunt: 0.6
+    Slash: 0.6
+    Piercing: 0.4
+    Heat: 0.5
+    Caustic: 0.5
+    Bloodloss: 0.3
+    Mangleness: 0.2
