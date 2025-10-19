@@ -71,7 +71,7 @@
   - BloodCult
   - Pirate
 
-- type: npcFaction # TODO add to all factions
+- type: npcFaction
   id: Pirate
   hostile:
     - NanoTrasen

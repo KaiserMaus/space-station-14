@@ -8,3 +8,5 @@ ent-ExosuitFabricatorHyperConvectionMachineCircuitboard = hyper convection exosu
     .desc = A machine printed circuit board for a hyper convection fabricator.
 ent-MedicalAssemblerMachineCircuitboard = Medical assembler machine board
     .desc = { ent-BaseMachineCircuitboard.desc }
+ent-PirateTechFabCircuitboard = pirate techfab machine board
+    .desc = { ent-BaseMachineCircuitboard.desc }

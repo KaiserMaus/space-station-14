@@ -8,3 +8,5 @@ ent-ExosuitFabricatorHyperConvectionMachineCircuitboard = гиперконвек
     .desc = { ent-BaseMachineCircuitboard.desc }
 ent-MedicalAssemblerMachineCircuitboard = Мед-О-Мат (машинная плата)
     .desc = { ent-BaseMachineCircuitboard.desc }
+ent-PirateTechFabCircuitboard = плата пиратского фабрикатора
+    .desc = { ent-BaseMachineCircuitboard.desc }

@@ -87,3 +87,42 @@
     - PowerCellsStatic
     - ElectronicsStaticPrison
     - HydroponicsStatic
+
+- type: entity
+  id: PirateTechFab
+  parent: BaseLathe
+  name: pirate techfab
+  suffix: pirate
+  description: Prints basic weapons, ammo and gear for unruly gangs. The cost-optimized model sacrifices speed and variety for lower resource use
+  components:
+  - type: Transform
+    noRot: false
+  - type: Sprite
+    sprite: _Sunrise/Structures/Machines/pirate_stitcher.rsi
+    snapCardinals: false
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+  - type: Machine
+    board: PirateTechFabCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    materialUseMultiplier: 0.75
+    timeMultiplier: 1.75
+    staticPacks:
+    #- SecurityAmmoStatic
+    - SecurityStaticSunrise
+    dynamicPacks:
+    - SecurityEquipment
+    - SecurityExplosives
+    - SecurityAmmo
+    - SecurityWeapons
+    - SecurityDynamicSunrise
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+  - type: OreSiloClient
