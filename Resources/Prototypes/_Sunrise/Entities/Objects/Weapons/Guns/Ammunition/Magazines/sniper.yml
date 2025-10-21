@@ -36,7 +36,7 @@
 
 - type: entity
   id: BaseMagazineBauer127
-  name: Bauer127 magazine (12,7mm anti-materiel)
+  name: magazine (12,7mm anti-materiel)
   description: Standart EarthGov type of heavy magazines.
   parent: [ BaseItem, BaseMajorContraband ]
   abstract: true
@@ -70,7 +70,7 @@
 
 - type: entity
   id: MagazineBauer127
-  name: Bauer127 magazine (12,7mm anti-materiel)
+  name: magazine (12,7mm anti-materiel)
   description: Standart EarthGov type of heavy magazines.
   parent: BaseMagazineBauer127
   components:
@@ -99,6 +99,38 @@
       - state: inhand-right-mag
       - state: inhand-right-stripe
         color: "#9b0000"
+
+- type: entity
+  id: MagazineBauer127Artillery
+  name: magazine (12,7mm space anti-materiel)
+  description: Standart EarthGov type of heavy magazines.
+  parent: BaseMagazineBauer127
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeAntiMaterielArtillery  # AntiMateriel
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#7f009b"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#7f009b"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#7f009b"
 
 #Magazine
 - type: entity

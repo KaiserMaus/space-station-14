@@ -1,9 +1,11 @@
 ent-MagazineBR64 = магазин BR64
     .desc = Стандартный тип тяжелых магазинов Земного Правительства.
-ent-BaseMagazineBauer127 = магазин Bauer127 (12,7 мм противоматериальный)
-    .desc = Стандартный тип тяжелых магазинов Земного Правительства.
-ent-MagazineBauer127 = магазин Bauer-127
-    .desc = Использует патроны калибра .60 антиматериальные.
+ent-BaseMagazineBauer127 = магазин (12,7мм антиматериальный)
+    .desc = Использует патроны калибра 12,7мм антиматериальные.
+ent-MagazineBauer127 = магазин (12,7мм антиматериальный)
+    .desc = { ent-BaseMagazineBauer127.desc }
+ent-MagazineBauer127Artillery = магазин (12,7мм космо антиматериальный)
+    .desc = { ent-BaseMagazineBauer127.desc }
 ent-BaseMagazineDragunov = магазин Драгунова (7,62mmR)
     .desc = { ent-BaseItem.desc }
 ent-MagazineDragunovExtended = магазин Драгунова (7,62mmR)

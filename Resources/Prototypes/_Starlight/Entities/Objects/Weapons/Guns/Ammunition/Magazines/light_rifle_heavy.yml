@@ -163,3 +163,23 @@
     steps: 8
     zeroVisible: false
   - type: Appearance
+
+- type: entity
+  id: RifleHeavyMagazineArtillery
+  name: "Magazine Box (.308 space)"
+  parent: RifleHeavyMagazineHP
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeRifleHeavyArtillery
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: space
+  - type: MagazineVisuals
+    magState: mag
+    steps: 8
+    zeroVisible: false
+  - type: Appearance

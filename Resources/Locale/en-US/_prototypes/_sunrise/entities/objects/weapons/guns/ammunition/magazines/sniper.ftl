@@ -1,9 +1,13 @@
 ent-MagazineBR64 = BR64 magazine
     .desc = Standart EarthGov type of heavy magazines.
-ent-BaseMagazineBauer127 = Bauer127 magazine (12,7mm anti-materiel)
+ent-BaseMagazineBauer127 = magazine (12,7mm anti-materiel)
     .desc = Standart EarthGov type of heavy magazines.
-ent-MagazineBauer127 = Bauer127 magazine
+ent-MagazineBauer127 = magazine (12,7mm anti-materiel)
     .desc = Standart EarthGov type of heavy magazines.
+ent-MagazineBauer127 = магазин (12,7mm anti-materiel)
+    .desc = { ent-BaseMagazineBauer127.desc }
+ent-MagazineBauer127Artillery = магазин (12,7mm space anti-materiel)
+    .desc = { ent-BaseMagazineBauer127.desc }
 ent-BaseMagazineDragunov = magazine Dragunov (7,62mmR)
     .desc = { ent-BaseItem.desc }
 ent-MagazineDragunovExtended = magazine Dragunov (7,62mmR)
