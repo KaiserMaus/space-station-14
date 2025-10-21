@@ -85,3 +85,56 @@
       Manipulator: 5
       Steel: 5
       CableHV: 2
+
+# Sunrise-start
+- type: entity
+  id: ShuttleGunLongbowCircuitboard
+  parent: BaseMachineCircuitboard
+  name: BAL-127 "Longbow" machine board
+  description: A machine printed circuit board for an BAL-127 "Longbow".
+  suffix: DO NOT MAP, Machine Board
+  categories: [ DoNotMap ]
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: ShuttleGunLongbow
+    stackRequirements:
+      Manipulator: 5
+      Steel: 7
+      CableHV: 5
+
+- type: entity
+  id: ShuttleGunVympelCircuitboard
+  parent: BaseMachineCircuitboard
+  name: BAL-127-2 "Vympel" machine board
+  description: A machine printed circuit board for an BAL-127-2 "Vympel".
+  suffix: DO NOT MAP, Machine Board
+  categories: [ DoNotMap ]
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: ShuttleGunVympel
+    stackRequirements:
+      Manipulator: 10
+      Steel: 7
+      CableHV: 5
+
+- type: entity
+  id: ShuttleGunSquallCircuitboard
+  parent: BaseMachineCircuitboard
+  name: BAL-308 "Squall" machine board
+  description: A machine printed circuit board for an BAL-308 "Squall".
+  suffix: DO NOT MAP, Machine Board
+  categories: [ DoNotMap ]
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: ShuttleGunSquall
+    stackRequirements:
+      Manipulator: 5
+      Steel: 5
+      CableHV: 5
+# Sunrise-end

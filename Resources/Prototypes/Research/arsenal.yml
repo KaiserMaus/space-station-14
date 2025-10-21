@@ -40,6 +40,8 @@
   - MagazinePistolHighCapacityIncendiary # Sunrise-Add
   - MagazineRifleHeavyIncendiary # Sunrise-Add
   - MagazineBoxHeavyRifleIncendiary # Sunrise-Add
+  radioChannels: # Sunrise-Add
+  - Security
 
 - type: technology
   id: WeaponizedLaserManipulation
@@ -77,6 +79,8 @@
   - MagazinePistolSubMachineGunTopMountedRubber
   - MagazinePistolSubMachineGunRubber
   # Sunrise-End
+  radioChannels: # Sunrise-Add
+  - Security
 
 - type: technology
   id: UraniumMunitions
@@ -103,6 +107,8 @@
   - MagazinePistolHighCapacityUranium # Sunrise-Add
   - MagazineRifleHeavyUranium # Sunrise-Add
   - MagazineBoxHeavyRifleUranium # Sunrise-Add
+  radioChannels: # Sunrise-Add
+  - Security
 
 - type: technology
   id: AdvancedRiotControl
@@ -122,6 +128,8 @@
   - VestSecUpgradePlate # Sunrise-Add
   - VestSecUpgradeStab # Sunrise-Add
   - VestSecUpgradeHeat # Sunrise-Add
+  radioChannels: # Sunrise-Add
+  - Security
 
 - type: technology
   id: ExplosiveTechnology
@@ -213,11 +221,15 @@
   - MagazineGrenadeEmpty
   - ShellFlashArtillery # Sunrise-Edit
   - ShellBlastArtillery # Sunrise-Edit
+  - ShellFragArtillery # Sunrise-Add
   - ShuttleGunSvalinnMachineGunCircuitboard
   - ShuttleGunPerforatorCircuitboard
   - ShuttleGunFriendshipCircuitboard
+  - ShuttleGunSquallCircuitboard # Sunrise-Add
   technologyPrerequisites:
   - SalvageWeapons
+  radioChannels: # Sunrise-Add
+  - Security
 
 - type: technology
   id: DualWieldingTechnology
@@ -230,6 +242,8 @@
   cost: 10000
   recipeUnlocks:
   - ClothingBackpackHarmpack
+  radioChannels: # Sunrise-Add
+  - Security
 
 # Tier 3
 
@@ -247,6 +261,8 @@
   - PortableRecharger
   - WeaponMechCombatImmolationGun # Sunrise-Add
   - WeaponMechCombatIon # Sunrise-Add
+  radioChannels: # Sunrise-Add
+  - Security
 
 - type: technology
   id: ThermalWeaponry
@@ -273,5 +289,11 @@
   - ShellEMPArtillery # Sunrise-Edit
   - PowerCageHigh
   - ShuttleGunDusterCircuitboard
+  - ShuttleGunLongbowCircuitboard # Sunrise-Add
+  - ShuttleGunVympelCircuitboard # Sunrise-Add
+  - MagazineBauer127Artillery # Sunrise-Add
+  - MagazineBoxAntiMaterielBig127Artillery # Sunrise-Add
   technologyPrerequisites:
   - BasicShuttleArmament
+  radioChannels: # Sunrise-Add
+  - Security

@@ -84,6 +84,9 @@
   - ShuttleGunFriendshipCircuitboard
   - ShuttleGunPerforatorCircuitboard
   - ShuttleGunSvalinnMachineGunCircuitboard
+  - ShuttleGunLongbowCircuitboard # Sunrise-add
+  - ShuttleGunVympelCircuitboard # Sunrise-add
+  - ShuttleGunSquallCircuitboard # Sunrise-add
 
 - type: latheRecipePack
   parent:

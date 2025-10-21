@@ -126,6 +126,9 @@
     - ShellBlastArtillery
     - ShellEMPArtillery
     - ShellFlashArtillery
+    - MagazineBauer127Artillery
+    - RifleHeavyMagazineArtillery
+    - MagazineBoxAntiMaterielBig127Artillery
     - EnergyDomeDirectionalTurtle
     - WeaponTemperatureGun
     - ModularReceiverAuto
@@ -239,3 +242,96 @@
     - WeaponMechCombatDisabler
     - WeaponMechCombatFlashbangLauncher
     - WeaponMechCombatMissileRack8
+
+- type: latheRecipePack
+  id: ShuttleBattleStatic
+  recipes:
+    #####################MAGAZINE#######################
+    # LMG
+    - LightRifleMagazineSP
+    - LightRifleMagazineHP
+    - LightRifleMagazineFMJ
+    # Light Rifle
+    - MagazineLightRifleSP
+    - MagazineLightRifleHP
+    - MagazineLightRifleFMJ
+    # Magnum
+    - SpeedLoaderMagnumSP
+    - SpeedLoaderMagnumHP
+    - SpeedLoaderMagnumFMJ
+    # Pistol
+    - MagazinePistolSP
+    - MagazinePistolHP
+    - MagazinePistolFMJ
+    - MagazinePistol40SP
+    - MagazinePistol40HP
+    - MagazinePistol40FMJ
+    # Pistol High Capacity
+    - MagazinePistolHighCapacitySP
+    - MagazinePistolHighCapacityHP
+    - MagazinePistolHighCapacityFMJ
+    # SMG
+    - MagazinePistolSubMachineGunSP
+    - MagazinePistolSubMachineGunHP
+    - MagazinePistolSubMachineGunFMJ
+    # SMG Top Mounted
+    - MagazinePistolSubMachineGunTopMounted # FMJ
+    - MagazinePistolSubMachineGunTopMountedSP
+    - MagazinePistolSubMachineGunTopMountedHP
+    # Rifle
+    - MagazineRifleSP
+    - MagazineRifleHP
+    - MagazineRifleFMJ
+    # Rifle Heavy
+    - MagazineRifleHeavyFMJ
+    - MagazineRifleHeavyHP
+    - MagazineRifleHeavySP
+    # Shotgun Speedloader
+    - SpeedLoaderShellShotgun
+    - SpeedLoaderShotgunSlug
+    # Shuttle stuff
+    - MagazineGrenadeEmpty
+    - ShellFragArtillery
+    - ShellEMPArtillery
+    - MagazineBauer127
+    - MagazineBauer127Artillery
+    - RifleHeavyMagazineArtillery
+    - RifleHeavyMagazineFMJ
+    - RifleHeavyMagazineHP
+    - RifleHeavyMagazineSP
+    - PowerCageRechargerCircuitboard
+
+- type: latheRecipePack
+  id: ShuttleBattleDynamic
+  recipes:
+    # Shuttle stuff
+  - ShellBlastArtillery
+    # # # #
+  - ShuttleGunDusterCircuitboard
+  - ShuttleGunFriendshipCircuitboard
+  - ShuttleGunPerforatorCircuitboard
+  - ShuttleGunSvalinnMachineGunCircuitboard
+  - TurboItemRechargerCircuitboard
+  # Shotgun Magazine
+  - MagazineShotgun
+  - MagazineShotgunEmpty
+  - MagazineShotgunSlug
+  # # # AP
+  - RifleHeavyMagazineAP
+  - MagazineBoxLightRifleAP
+  - MagazineBoxMagnumAP
+  - MagazineBoxPistolAP
+  - MagazineBoxPistol40AP
+  - MagazineBoxRifleAP
+  - MagazineBoxHeavyRifleAP
+  - LightRifleMagazineAP
+  - MagazineLightRifleAP
+  - SpeedLoaderMagnumAP
+  - MagazineMagnumAP
+  - MagazinePistolAP
+  - MagazinePistol40AP
+  - MagazinePistolHighCapacityAP
+  - MagazinePistolSubMachineGunAP
+  - MagazinePistolSubMachineGunTopMountedAP
+  - MagazineRifleAP
+  - MagazineRifleHeavyAP
