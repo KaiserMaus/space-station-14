@@ -57,7 +57,7 @@
   damage:
     types:
       Piercing: 75
-      Structural: 226
+      Structural: 125
   staminaDamage: 35
   armorPenetration: 0.35
   pierceChance: 0.95 # Sunrise-TODO: Отдельный патрон Пенетратор как в ЫЫ13

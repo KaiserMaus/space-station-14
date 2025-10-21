@@ -851,8 +851,9 @@ WeaponShotgunZauer: null
 HandheldCamera: null # Не надо маппить, оно есть в автоматах
 GrenadeBlast: GrenadeBlastTimer
 GrenadeEMP: GrenadeEMPTimer
-GrenadeFlash: GrenadeFlashTimer
-GrenadeFrag: GrenadeFragTimer
+GrenadeFlash: GrenadeFlashContact
+GrenadeFlashTimer: GrenadeFlashContact
+GrenadeFrag: GrenadeFlashContact
 WeaponEnergyGunMini: WeaponMiniEnergyGun
 GunSafeCombineSmallArms: SpawnerSafeSmallArms
 # SL HITSCAN START
