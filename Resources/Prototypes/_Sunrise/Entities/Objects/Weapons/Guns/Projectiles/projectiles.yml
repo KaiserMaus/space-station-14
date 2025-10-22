@@ -585,3 +585,72 @@
     color: blue
     energy: 0.5
   - type: DeleteOnTrigger
+
+# .60 small grenade
+- type: entity
+  id: BulletAntiMaterielFrag
+  name: frag bullet
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    scale: 0.5, 0.5
+    layers:
+      - state: grenade
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 25
+    intensitySlope: 1
+    maxIntensity: 5
+    canCreateVacuum: false
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+  - type: ProjectileGrenade
+    triggerKey: trigger
+    fillPrototype: PelletClusterLessLethal
+    capacity: 15
+
+- type: entity
+  id: BulletAntiMaterielBlast
+  name: blast bullet
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    scale: 0.5, 0.5
+    layers:
+      - state: grenade
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 75 # a ~1.5 tile radius
+    intensitySlope: 4
+    maxIntensity: 10
+    canCreateVacuum: false
+
+- type: entity
+  id: BulletAntiMaterielEMP
+  name: EMP bullet
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    scale: 0.5, 0.5
+    layers:
+      - state: grenade #Sunrise-edit
+  - type: EmpOnTrigger
+    range: 3
+    energyConsumption: 10000
+    disableDuration: 10
+  - type: Ammo
+    muzzleFlash: null
+  - type: PointLight
+    radius: 1.5
+    color: blue
+    energy: 0.5
+  - type: DeleteOnTrigger #Sunrise-edit

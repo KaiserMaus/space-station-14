@@ -46,7 +46,7 @@
 # Sunrise-start
 - type: entity
   id: MagazineBoxAntiMaterielBig127
-  name: heavy ammo belt (12,7mm anti-materiel)
+  name: heavy ammo belt (13mm anti-materiel)
   description: Big ammo belt for big beast.
   parent: BaseMagazineBoxAntiMateriel
   components:
@@ -81,10 +81,37 @@
 
 - type: entity
   id: MagazineBoxAntiMaterielBig127Artillery
-  name: heavy ammo belt (12,7mm space anti-materiel)
+  name: heavy ammo belt (13mm space anti-materiel)
   description: Big ammo belt for big beast.
   parent: MagazineBoxAntiMaterielBig127
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeAntiMaterielArtillery
+
+- type: entity
+  id: MagazineBoxAntiMaterielBig127Frag
+  name: heavy ammo belt (13mm frag anti-materiel)
+  description: Big ammo belt for big beast.
+  parent: MagazineBoxAntiMaterielBig127
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeAntiMaterielBlast
+
+- type: entity
+  id: MagazineBoxAntiMaterielBig127Blast
+  name: heavy ammo belt (13mm blast anti-materiel)
+  description: Big ammo belt for big beast.
+  parent: MagazineBoxAntiMaterielBig127
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeAntiMaterielArtillery
+
+- type: entity
+  id: MagazineBoxAntiMaterielBig127Emp
+  name: heavy ammo belt (13mm emp anti-materiel)
+  description: Big ammo belt for big beast.
+  parent: MagazineBoxAntiMaterielBig127
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeAntiMaterielEmp
 # Sunrise-end

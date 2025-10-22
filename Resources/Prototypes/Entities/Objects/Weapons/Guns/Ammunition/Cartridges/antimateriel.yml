@@ -32,12 +32,60 @@
   - type: CartridgeAmmo
     proto: BulletAntiMateriel
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Casings/12.7x99.rsi
     layers:
     - state: base
-      map: ["enum.AmmoVisualLayers.Base"]
+      map: [ "enum.AmmoVisualLayers.Base" ]
+    - state: tip
+      map: [ "enum.AmmoVisualLayers.Tip" ]
+      color: "#7f009b"
   - type: Appearance
   - type: SpentAmmoVisuals
   - type: StaticPrice
     price: 20
+
+- type: entity
+  parent: CartridgeAntiMaterielArtillery
+  id: CartridgeAntiMaterielFrag
+  name: cartridge (.60 frag anti-materiel)
+  components:
+  - type: CartridgeAmmo
+    proto: BulletAntiMaterielFrag
+  - type: Sprite
+    layers:
+    - state: base
+      map: [ "enum.AmmoVisualLayers.Base" ]
+    - state: tip
+      map: [ "enum.AmmoVisualLayers.Tip" ]
+      color: "#455529"
+
+- type: entity
+  parent: CartridgeAntiMaterielArtillery
+  id: CartridgeAntiMaterielBlast
+  name: cartridge (.60 blast anti-materiel)
+  components:
+  - type: CartridgeAmmo
+    proto: BulletAntiMaterielBlast
+  - type: Sprite
+    layers:
+    - state: base
+      map: [ "enum.AmmoVisualLayers.Base" ]
+    - state: tip
+      map: [ "enum.AmmoVisualLayers.Tip" ]
+      color: "#442e28"
+
+- type: entity
+  parent: CartridgeAntiMaterielArtillery
+  id: CartridgeAntiMaterielEmp
+  name: cartridge (.60 emp anti-materiel)
+  components:
+  - type: CartridgeAmmo
+    proto: BulletAntiMaterielEMP
+  - type: Sprite
+    layers:
+    - state: base
+      map: [ "enum.AmmoVisualLayers.Base" ]
+    - state: tip
+      map: [ "enum.AmmoVisualLayers.Tip" ]
+      color: "#2e677d"
 # Sunrise-end

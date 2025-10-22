@@ -36,7 +36,7 @@
 
 - type: entity
   id: BaseMagazineBauer127
-  name: magazine (12,7mm anti-materiel)
+  name: magazine (13mm anti-materiel)
   description: Standart EarthGov type of heavy magazines.
   parent: [ BaseItem, BaseMajorContraband ]
   abstract: true
@@ -70,7 +70,7 @@
 
 - type: entity
   id: MagazineBauer127
-  name: magazine (12,7mm anti-materiel)
+  name: magazine (13mm anti-materiel)
   description: Standart EarthGov type of heavy magazines.
   parent: BaseMagazineBauer127
   components:
@@ -102,7 +102,7 @@
 
 - type: entity
   id: MagazineBauer127Artillery
-  name: magazine (12,7mm space anti-materiel)
+  name: magazine (13mm space anti-materiel)
   description: Standart EarthGov type of heavy magazines.
   parent: BaseMagazineBauer127
   components:
@@ -131,6 +131,102 @@
       - state: inhand-right-mag
       - state: inhand-right-stripe
         color: "#7f009b"
+
+- type: entity
+  id: MagazineBauer127Frag
+  name: magazine (13mm frag anti-materiel)
+  description: Standart EarthGov type of heavy magazines.
+  parent: BaseMagazineBauer127
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeAntiMaterielFrag
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#455529"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#455529"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#455529"
+
+- type: entity
+  id: MagazineBauer127Blast
+  name: magazine (13mm blast anti-materiel)
+  description: Standart EarthGov type of heavy magazines.
+  parent: BaseMagazineBauer127
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeAntiMaterielBlast
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#442e28"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#442e28"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#442e28"
+
+- type: entity
+  id: MagazineBauer127Emp
+  name: magazine (13mm emp anti-materiel)
+  description: Standart EarthGov type of heavy magazines.
+  parent: BaseMagazineBauer127
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeAntiMaterielEmp
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#2e677d"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#2e677d"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#2e677d"
 
 #Magazine
 - type: entity
