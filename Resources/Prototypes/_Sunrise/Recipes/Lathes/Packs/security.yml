@@ -128,7 +128,17 @@
     - ShellFlashArtillery
     - MagazineBauer127Artillery
     - RifleHeavyMagazineArtillery
-    - MagazineBoxAntiMaterielBig127Artillery
+    - MagazineBoxBelt127Artillery
+    - MagazineBauer127Blast
+    - MagazineBauer127Frag
+    - MagazineBauer127Emp
+    - MagazineBoxBelt127Empty
+    - MagazineBoxBelt127
+    - MagazineBoxBelt127Artillery
+    - MagazineBoxBelt127Blast
+    - MagazineBoxBelt127Frag
+    - MagazineBoxBelt127Emp
+    #
     - EnergyDomeDirectionalTurtle
     - WeaponTemperatureGun
     - ModularReceiverAuto
@@ -247,29 +257,10 @@
   id: ShuttleBattleStatic
   recipes:
     #####################MAGAZINE#######################
-    # LMG
-    - LightRifleMagazineSP
-    - LightRifleMagazineHP
-    - LightRifleMagazineFMJ
     # Light Rifle
     - MagazineLightRifleSP
     - MagazineLightRifleHP
     - MagazineLightRifleFMJ
-    # Magnum
-    - SpeedLoaderMagnumSP
-    - SpeedLoaderMagnumHP
-    - SpeedLoaderMagnumFMJ
-    # Pistol
-    - MagazinePistolSP
-    - MagazinePistolHP
-    - MagazinePistolFMJ
-    - MagazinePistol40SP
-    - MagazinePistol40HP
-    - MagazinePistol40FMJ
-    # Pistol High Capacity
-    - MagazinePistolHighCapacitySP
-    - MagazinePistolHighCapacityHP
-    - MagazinePistolHighCapacityFMJ
     # SMG
     - MagazinePistolSubMachineGunSP
     - MagazinePistolSubMachineGunHP
@@ -282,10 +273,6 @@
     - MagazineRifleSP
     - MagazineRifleHP
     - MagazineRifleFMJ
-    # Rifle Heavy
-    - MagazineRifleHeavyFMJ
-    - MagazineRifleHeavyHP
-    - MagazineRifleHeavySP
     # Shotgun Speedloader
     - SpeedLoaderShellShotgun
     - SpeedLoaderShotgunSlug
@@ -293,25 +280,36 @@
     - MagazineGrenadeEmpty
     - ShellFragArtillery
     - ShellEMPArtillery
+    # .60/14mm cannon
     - MagazineBauer127
     - MagazineBauer127Artillery
-    - RifleHeavyMagazineArtillery
+    - MagazineBauer127Blast
+    - MagazineBauer127Frag
+    - MagazineBauer127Emp
+    # .60/14mm auto-cannon
+    - MagazineBoxBelt127Empty
+    - MagazineBoxBelt127
+    - MagazineBoxBelt127Artillery
+    # .308 Cannon
     - RifleHeavyMagazineFMJ
     - RifleHeavyMagazineHP
     - RifleHeavyMagazineSP
+    - RifleHeavyMagazineArtillery
+    # Structure
     - PowerCageRechargerCircuitboard
-
+    - ShuttleGunDusterCircuitboard
+    - ShuttleGunFriendshipCircuitboard
+    - ShuttleGunPerforatorCircuitboard
+    - ShuttleGunSvalinnMachineGunCircuitboard
+    - TurboItemRechargerCircuitboard
 - type: latheRecipePack
   id: ShuttleBattleDynamic
   recipes:
     # Shuttle stuff
   - ShellBlastArtillery
-    # # # #
-  - ShuttleGunDusterCircuitboard
-  - ShuttleGunFriendshipCircuitboard
-  - ShuttleGunPerforatorCircuitboard
-  - ShuttleGunSvalinnMachineGunCircuitboard
-  - TurboItemRechargerCircuitboard
+  - MagazineBoxBelt127Frag
+  - MagazineBoxBelt127Blast
+  - MagazineBoxBelt127Emp
   # Shotgun Magazine
   - MagazineShotgun
   - MagazineShotgunEmpty
@@ -335,3 +333,26 @@
   - MagazinePistolSubMachineGunTopMountedAP
   - MagazineRifleAP
   - MagazineRifleHeavyAP
+  # Rifle Heavy
+  - MagazineRifleHeavyFMJ
+  - MagazineRifleHeavyHP
+  - MagazineRifleHeavySP
+  # Magnum
+  - SpeedLoaderMagnumSP
+  - SpeedLoaderMagnumHP
+  - SpeedLoaderMagnumFMJ
+  # Pistol
+  - MagazinePistolSP
+  - MagazinePistolHP
+  - MagazinePistolFMJ
+  - MagazinePistol40SP
+  - MagazinePistol40HP
+  - MagazinePistol40FMJ
+  # Pistol High Capacity
+  - MagazinePistolHighCapacitySP
+  - MagazinePistolHighCapacityHP
+  - MagazinePistolHighCapacityFMJ
+  # LMG
+  - LightRifleMagazineSP
+  - LightRifleMagazineHP
+  - LightRifleMagazineFMJ

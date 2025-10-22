@@ -783,41 +783,97 @@
     Steel: 1312
     Uranium: 1312
 
-## 12.7
+## 12.7/14мм/.60
 - type: latheRecipe
-  parent: BaseAmmoRecipe
   id: MagazineBauer127
   result: MagazineBauer127
   materials:
-    Steel: 1000
+    Steel: 980
 
 - type: latheRecipe
-  parent: BaseAmmoRecipe
   id: MagazineBauer127Artillery
   result: MagazineBauer127Artillery
   materials:
-    Steel: 750
+    Steel: 735
 
 - type: latheRecipe
-  parent: BaseAmmoRecipe
+  id: MagazineBauer127Emp
+  result: MagazineBauer127Emp
+  completetime: 3
+  materials:
+    Steel: 350
+    Plastic: 200
+    Glass: 35
+
+- type: latheRecipe
+  id: MagazineBauer127Blast
+  result: MagazineBauer127Blast
+  completetime: 3
+  materials:
+    Steel: 1050
+    Plastic: 700
+    Gold: 350
+
+- type: latheRecipe
+  id: MagazineBauer127Frag
+  result: MagazineBauer127Frag
+  completetime: 3
+  materials:
+    Steel: 1050
+    Plastic: 350
+    Gold: 100
+
+- type: latheRecipe
+  id: MagazineBoxBelt127Empty
+  result: MagazineBoxBelt127Empty
+  materials:
+    Steel: 150
+
+- type: latheRecipe
+  id: MagazineBoxBelt127
+  result: MagazineBoxBelt127
+  materials:
+    Steel: 4000
+
+- type: latheRecipe
+  id: MagazineBoxBelt127Artillery
+  result: MagazineBoxBelt127Artillery
+  materials:
+    Steel: 3000
+
+- type: latheRecipe
+  id: MagazineBoxBelt127Emp
+  result: MagazineBoxBelt127Emp
+  completetime: 3
+  materials:
+    Steel: 1500
+    Plastic: 900
+    Glass: 150
+
+- type: latheRecipe
+  id: MagazineBoxBelt127Blast
+  result: MagazineBoxBelt127Blast
+  completetime: 3
+  materials:
+    Steel: 4500
+    Plastic: 3000
+    Gold: 1500
+
+- type: latheRecipe
+  id: MagazineBoxBelt127Frag
+  result: MagazineBoxBelt127Frag
+  completetime: 3
+  materials:
+    Steel: 4500
+    Plastic: 1500
+    Gold: 450
+
+# .308 belt box
+- type: latheRecipe
   id: RifleHeavyMagazineArtillery
   result: RifleHeavyMagazineArtillery
   materials:
     Steel: 750
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: MagazineBoxAntiMaterielBig127
-  result: MagazineBoxAntiMaterielBig127
-  materials:
-    Steel: 2500
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: MagazineBoxAntiMaterielBig127Artillery
-  result: MagazineBoxAntiMaterielBig127Artillery
-  materials:
-    Steel: 2000
 
 # Moved from ammo.yml
 # Base prototypes

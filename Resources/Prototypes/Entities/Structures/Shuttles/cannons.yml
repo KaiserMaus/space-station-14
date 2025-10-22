@@ -578,9 +578,9 @@
     - FullAuto
     projectileSpeed: 30
     fireRate: 13
-    burstFireRate: 25
-    shotsPerBurst: 25
-    burstCooldown: 1.25
+    burstFireRate: 20
+    shotsPerBurst: 20
+    burstCooldown: 1.5
     minAngle: 3
     maxAngle: 75
     angleIncrease: 1.15

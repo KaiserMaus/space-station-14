@@ -292,7 +292,7 @@
   - ShuttleGunLongbowCircuitboard # Sunrise-Add
   - ShuttleGunVympelCircuitboard # Sunrise-Add
   - MagazineBauer127Artillery # Sunrise-Add
-  - MagazineBoxAntiMaterielBig127Artillery # Sunrise-Add
+  - MagazineBoxBelt127Artillery # Sunrise-Add
   technologyPrerequisites:
   - BasicShuttleArmament
   radioChannels: # Sunrise-Add

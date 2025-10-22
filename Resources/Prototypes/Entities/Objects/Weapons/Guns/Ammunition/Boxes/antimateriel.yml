@@ -45,10 +45,11 @@
 
 # Sunrise-start
 - type: entity
-  id: MagazineBoxAntiMaterielBig127
-  name: heavy ammo belt (13mm anti-materiel)
+  id: BaseMagazineBoxBelt127
+  name: heavy ammo belt (14mm anti-materiel)
   description: Big ammo belt for big beast.
-  parent: BaseMagazineBoxAntiMateriel
+  parent: [ BaseItem, BaseSecurityContraband ]
+  abstract: true
   components:
   - type: MultiHandedItem
   - type: HeldSpeedModifier
@@ -67,51 +68,156 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/pk_box.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/heavyammobelt.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
-    - state: mag-7
+    - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: MagazineVisuals
     magState: mag
-    steps: 8
+    steps: 2
     zeroVisible: false
   - type: Appearance
 
 - type: entity
-  id: MagazineBoxAntiMaterielBig127Artillery
-  name: heavy ammo belt (13mm space anti-materiel)
-  description: Big ammo belt for big beast.
-  parent: MagazineBoxAntiMaterielBig127
+  id: MagazineBoxBelt127Empty
+  name: heavy ammo belt (14mm any)
+  suffix: empty
+  parent: BaseMagazineBoxBelt127
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      right:
+      - state: inhand-right-mag
+
+- type: entity
+  id: MagazineBoxBelt127
+  name: heavy ammo belt (14mm armor-pierce)
+  parent: BaseMagazineBoxBelt127
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeAntiMateriel
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#9b0000"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#9b0000"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#9b0000"
+
+- type: entity
+  id: MagazineBoxBelt127Artillery
+  name: heavy ammo belt (14mm anti-materiel)
+  parent: BaseMagazineBoxBelt127
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeAntiMaterielArtillery
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#7f009b"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      right:
+      - state: inhand-right-mag
 
 - type: entity
-  id: MagazineBoxAntiMaterielBig127Frag
-  name: heavy ammo belt (13mm frag anti-materiel)
-  description: Big ammo belt for big beast.
-  parent: MagazineBoxAntiMaterielBig127
+  id: MagazineBoxBelt127Frag
+  name: heavy ammo belt (14mm frag)
+  parent: BaseMagazineBoxBelt127
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeAntiMaterielFrag
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#7ea53b"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#7ea53b"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#7ea53b"
+
+- type: entity
+  id: MagazineBoxBelt127Blast
+  name: heavy ammo belt (14mm blast)
+  parent: BaseMagazineBoxBelt127
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeAntiMaterielBlast
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#8d6425"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#8d6425"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#8d6425"
 
 - type: entity
-  id: MagazineBoxAntiMaterielBig127Blast
-  name: heavy ammo belt (13mm blast anti-materiel)
-  description: Big ammo belt for big beast.
-  parent: MagazineBoxAntiMaterielBig127
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgeAntiMaterielArtillery
-
-- type: entity
-  id: MagazineBoxAntiMaterielBig127Emp
-  name: heavy ammo belt (13mm emp anti-materiel)
-  description: Big ammo belt for big beast.
-  parent: MagazineBoxAntiMaterielBig127
+  id: MagazineBoxBelt127Emp
+  name: heavy ammo belt (14mm emp)
+  parent: BaseMagazineBoxBelt127
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeAntiMaterielEmp
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#008cff"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#008cff"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#008cff"
 # Sunrise-end

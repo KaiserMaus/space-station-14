@@ -57,7 +57,7 @@
       map: [ "enum.AmmoVisualLayers.Base" ]
     - state: tip
       map: [ "enum.AmmoVisualLayers.Tip" ]
-      color: "#455529"
+      color: "#7ea53b"
 
 - type: entity
   parent: CartridgeAntiMaterielArtillery
@@ -72,7 +72,7 @@
       map: [ "enum.AmmoVisualLayers.Base" ]
     - state: tip
       map: [ "enum.AmmoVisualLayers.Tip" ]
-      color: "#442e28"
+      color: "#8d6425"
 
 - type: entity
   parent: CartridgeAntiMaterielArtillery
@@ -87,5 +87,5 @@
       map: [ "enum.AmmoVisualLayers.Base" ]
     - state: tip
       map: [ "enum.AmmoVisualLayers.Tip" ]
-      color: "#2e677d"
+      color: "#005396"
 # Sunrise-end

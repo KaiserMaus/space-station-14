@@ -36,7 +36,7 @@
 
 - type: entity
   id: BaseMagazineBauer127
-  name: magazine (13mm anti-materiel)
+  name: magazine (14mm anti-materiel)
   description: Standart EarthGov type of heavy magazines.
   parent: [ BaseItem, BaseMajorContraband ]
   abstract: true
@@ -70,7 +70,7 @@
 
 - type: entity
   id: MagazineBauer127
-  name: magazine (13mm anti-materiel)
+  name: magazine (14mm anti-materiel)
   description: Standart EarthGov type of heavy magazines.
   parent: BaseMagazineBauer127
   components:
@@ -102,7 +102,7 @@
 
 - type: entity
   id: MagazineBauer127Artillery
-  name: magazine (13mm space anti-materiel)
+  name: magazine (14mm space anti-materiel)
   description: Standart EarthGov type of heavy magazines.
   parent: BaseMagazineBauer127
   components:
@@ -134,7 +134,7 @@
 
 - type: entity
   id: MagazineBauer127Frag
-  name: magazine (13mm frag anti-materiel)
+  name: magazine (14mm frag anti-materiel)
   description: Standart EarthGov type of heavy magazines.
   parent: BaseMagazineBauer127
   components:
@@ -152,21 +152,21 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     - state: stripe
-      color: "#455529"
+      color: "#7ea53b"
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left-mag
       - state: inhand-left-stripe
-        color: "#455529"
+        color: "#7ea53b"
       right:
       - state: inhand-right-mag
       - state: inhand-right-stripe
-        color: "#455529"
+        color: "#7ea53b"
 
 - type: entity
   id: MagazineBauer127Blast
-  name: magazine (13mm blast anti-materiel)
+  name: magazine (14mm blast anti-materiel)
   description: Standart EarthGov type of heavy magazines.
   parent: BaseMagazineBauer127
   components:
@@ -184,21 +184,21 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     - state: stripe
-      color: "#442e28"
+      color: "#8d6425"
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left-mag
       - state: inhand-left-stripe
-        color: "#442e28"
+        color: "#8d6425"
       right:
       - state: inhand-right-mag
       - state: inhand-right-stripe
-        color: "#442e28"
+        color: "#8d6425"
 
 - type: entity
   id: MagazineBauer127Emp
-  name: magazine (13mm emp anti-materiel)
+  name: magazine (14mm emp anti-materiel)
   description: Standart EarthGov type of heavy magazines.
   parent: BaseMagazineBauer127
   components:
@@ -216,17 +216,17 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     - state: stripe
-      color: "#2e677d"
+      color: "#005396"
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left-mag
       - state: inhand-left-stripe
-        color: "#2e677d"
+        color: "#005396"
       right:
       - state: inhand-right-mag
       - state: inhand-right-stripe
-        color: "#2e677d"
+        color: "#005396"
 
 #Magazine
 - type: entity

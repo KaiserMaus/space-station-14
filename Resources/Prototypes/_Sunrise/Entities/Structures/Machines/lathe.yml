@@ -144,3 +144,4 @@
         - RawMaterial
         - Ingot
   - type: OreSiloClient
+  - type: Godmode

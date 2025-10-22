@@ -119,23 +119,6 @@
 # Shells that used for friendship and duster
 
 - type: entity
-  id: BulletShellFragArtillery
-  name: artillery frag shell
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
-    layers:
-      - state: grenade
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: Default
-    totalIntensity: 175 # about a ~6 tile radius
-    intensitySlope: 1
-    maxIntensity: 10
-
-- type: entity
   id: BulletShellBatonArtillery
   name: baton shell
   parent: BaseBullet
@@ -154,23 +137,6 @@
       path: /Audio/Effects/gen_hit.ogg
   - type: StaminaDamageOnCollide
     damage: 80
-
-- type: entity
-  id: BulletShellBlastArtillery
-  name: blast shell
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
-    layers:
-      - state: grenade
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: Default
-    totalIntensity: 150 # a ~2 tile radius
-    intensitySlope: 5
-    maxIntensity: 10
 
 - type: entity
   id: BulletShellFlashArtillery
@@ -281,8 +247,29 @@
       path: /Audio/Items/smoke_grenade_prime.ogg
       params:
         volume: 15
-  - type: TimedDespawn
-    lifetime: 4
+
+- type: entity
+  id: BulletEMPGrenade
+  name: emp grenade
+  parent: BulletGrenadeEMPTimer
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/empgrenade.rsi
+    layers:
+      - state: primed
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Effects/countdown.ogg
+  - type: EmpOnTrigger
+    keysIn:
+    - timer
+    range: 11
+    energyConsumption: 50000
+    disableDuration: 60
+  - type: Ammo
+    muzzleFlash: null
+  - type: DeleteOnTrigger
 
 - type: entity
   id: BulletAirGrenade
@@ -292,9 +279,7 @@
     sprite: Objects/Weapons/Grenades/airboom.rsi
     layers:
       - state: active
-  - type: EmitSoundOnTrigger
-    keysIn:
-    - timer
+  - type: EmitSoundOnSpawn
     sound: /Audio/Items/smoke_grenade_smoke.ogg
   - type: TimerTriggerVisuals
     primingSound:
@@ -311,8 +296,6 @@
       - 654.7464 # oxygen
       - 2463.0936 # nitrogen
       temperature: 293.15
-  - type: TimedDespawn
-    lifetime: 8
 
 - type: entity
   id: BulletTearGasGrenade
@@ -377,7 +360,7 @@
   - type: TimedDespawn
     lifetime: 2.75
 
-- type: entity
+- type: entity # не работает флеш тригер
   id: BulletGrenadeFlashBang
   name: flashbang
   parent: BaseBulletGrenade
@@ -388,7 +371,7 @@
     layers:
       - state: primed
   - type: TimerTrigger
-    delay: 2.98
+    delay: 1.5
   - type: FlashOnTrigger
     keysIn:
     - timer
@@ -407,8 +390,6 @@
   - type: EmitSoundOnSpawn
     sound:
       path: /Audio/Effects/countdown.ogg
-  - type: TimedDespawn
-    lifetime: 3.3
 
 # Grenades Handheld  Pellet
 - type: entity
@@ -432,7 +413,7 @@
     - timer
     proto: GrenadeFlashEffect
   - type: TimerTrigger
-    delay: 3.5
+    delay: 1.75
   - type: EmitSoundOnSpawn
     sound:
       path: "/Audio/Effects/beep1.ogg"
@@ -516,25 +497,6 @@
     maxIntensity: 10
     canCreateVacuum: false
 
-- type: entity
-  id: BulletGrenadeFlashTimer
-  name: flash grenade
-  parent: BaseBulletGrenade
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
-    layers:
-    - state: grenade
-  - type: FlashOnTrigger
-    keysIn:
-    - timer
-    range: 7
-  - type: SpawnOnTrigger
-    proto: GrenadeFlashEffect
-  - type: ActiveTimerTrigger
-  - type: DeleteOnTrigger
-
 # This is supposed to spawn shrapnel and stuff so uhh... TODO?
 - type: entity
   id: BulletGrenadeFragTimer
@@ -602,8 +564,8 @@
   - type: Explosive
     explosionType: Default
     totalIntensity: 25
-    intensitySlope: 1
-    maxIntensity: 5
+    intensitySlope: 4
+    maxIntensity: 8
     canCreateVacuum: false
   - type: ContainerContainer
     containers:
@@ -611,7 +573,7 @@
   - type: ProjectileGrenade
     triggerKey: trigger
     fillPrototype: PelletClusterLessLethal
-    capacity: 15
+    capacity: 10
 
 - type: entity
   id: BulletAntiMaterielBlast
@@ -627,7 +589,7 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 75 # a ~1.5 tile radius
+    totalIntensity: 50 # a ~1.5 tile radius
     intensitySlope: 4
     maxIntensity: 10
     canCreateVacuum: false
