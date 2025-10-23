@@ -222,6 +222,10 @@
   - ShellFlashArtillery # Sunrise-Edit
   - ShellBlastArtillery # Sunrise-Edit
   - ShellFragArtillery # Sunrise-Add
+  - RifleHeavyMagazineFMJ # Sunrise-Add
+  - RifleHeavyMagazineHP # Sunrise-Add
+  - RifleHeavyMagazineSP # Sunrise-Add
+  - RifleHeavyMagazineArtillery # Sunrise-Add
   - ShuttleGunSvalinnMachineGunCircuitboard
   - ShuttleGunPerforatorCircuitboard
   - ShuttleGunFriendshipCircuitboard
@@ -289,10 +293,19 @@
   - ShellEMPArtillery # Sunrise-Edit
   - PowerCageHigh
   - ShuttleGunDusterCircuitboard
-  - ShuttleGunLongbowCircuitboard # Sunrise-Add
-  - ShuttleGunVympelCircuitboard # Sunrise-Add
-  - MagazineBauer127Artillery # Sunrise-Add
-  - MagazineBoxBelt127Artillery # Sunrise-Add
+  - ShuttleGunLongbowCircuitboard # Sunrise-start
+  - ShuttleGunVympelCircuitboard
+  - MagazineBauer127
+  - MagazineBauer127Artillery
+  - MagazineBauer127Blast
+  - MagazineBauer127Frag
+  - MagazineBauer127Emp
+  - MagazineBoxBelt127Empty
+  - MagazineBoxBelt127
+  - MagazineBoxBelt127Artillery
+  - MagazineBoxBelt127Blast
+  - MagazineBoxBelt127Frag
+  - MagazineBoxBelt127Emp # Sunrise-end
   technologyPrerequisites:
   - BasicShuttleArmament
   radioChannels: # Sunrise-Add
