@@ -63,12 +63,8 @@
     soundRack:
       path: /Audio/_Sunrise/Weapons/Guns/LMGs/cocked.ogg
   - type: SpeedModifiedOnWield
-    walkModifier: 0.6
-    sprintModifier: 0.6
-  - type: CursorOffsetRequiresWield
-  - type: EyeCursorOffset
-    maxOffset: 6
-    pvsIncrease: 0.6
+    walkModifier: 0.75
+    sprintModifier: 0.75
   - type: ClothingSpeedModifier
     walkModifier: 0.85
     sprintModifier: 0.85
@@ -140,10 +136,6 @@
   - type: SpeedModifiedOnWield
     walkModifier: 0.85
     sprintModifier: 0.85
-  - type: CursorOffsetRequiresWield
-  - type: EyeCursorOffset
-    maxOffset: 4
-    pvsIncrease: 0.4
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
@@ -171,8 +163,8 @@
     maxAngle: 0
   - type: Gun
     minAngle: 5
-    maxAngle: 140
-    angleIncrease: 4.5
+    maxAngle: 125
+    angleIncrease: 3
     angleDecay: 70
     fireRate: 12
     soundGunshot:
@@ -215,12 +207,8 @@
     soundRack:
       path: /Audio/_Sunrise/Weapons/Guns/LMGs/cocked.ogg
   - type: SpeedModifiedOnWield
-    walkModifier: 0.6
-    sprintModifier: 0.6
-  - type: CursorOffsetRequiresWield
-  - type: EyeCursorOffset
-    maxOffset: 6
-    pvsIncrease: 0.6
+    walkModifier: 0.75
+    sprintModifier: 0.75
   - type: ClothingSpeedModifier
     walkModifier: 0.85
     sprintModifier: 0.85

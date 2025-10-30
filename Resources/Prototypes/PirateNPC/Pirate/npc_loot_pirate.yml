@@ -662,12 +662,8 @@
     - id: SpaceCash1000
       prob: 0.2
     # Weapons
-    - id: ClothingShoesBootsJump
-      prob: 0.9
     - id: WeaponLauncherM79
       prob: 0.6
-    - id:  WeaponLauncherChinaLake
-      prob: 0.1
     - id:  PouchExplosive
       prob: 0.9
     - id:  PouchExplosiveFilled
@@ -951,9 +947,6 @@
       prob: 0.75
     - id: EnergyCutlass
       prob: 0.4
-    # Armor
-    - id: ClothingShoesBootsMagSyndie
-      prob: 0.4
     # Items
     - id: MagazinePistolEmpty
       prob: 0.8
@@ -1048,13 +1041,13 @@
     - id: ScrapSteel
       prob: 0.75
     - id: ClothingOuterArmorPodWars
-      prob: 0.7
+      prob: 0.6
     - id: ClothingOuterArmorScrap
       prob: 0.5
     - id: ClothingUniformJumpsuitGladiator
       prob: 0.5
-    - id: FireAxeFlaming
-      prob: 0.35
+    - id: WeaponCrusherBroadAxe
+      prob: 0.8
     # Bonus Loot T3
     - id: SpaceCash1000
       prob: 0.9
