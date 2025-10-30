@@ -260,3 +260,54 @@
         Blunt: 2
         Slash: 6
         Structural: 20
+
+# Sunrise-start
+- type: entity
+  parent: [ WeaponCrusher, BaseSecurityCargoContraband]
+  id: WeaponCrusherBroadAxe
+  name: crusher broad-axe
+  description: An early design of the proto-kinetic accelerator, in broad-axe form. Provides better healing without exchange for less charged damage.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Weapons/Melee/crusher_broadaxe.rsi
+    state: icon
+  - type: Item
+    size: Ginormous
+    sprite: _Sunrise/Objects/Weapons/Melee/crusher_broadaxe-inhands.rsi
+  - type: Clothing
+    sprite: _Sunrise/Objects/Weapons/Melee/crusher_broadaxe.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: UseDelay
+    delay: 0.9
+  - type: BasicEntityAmmoProvider
+    proto: BulletCharge
+    capacity: 1
+    count: 1
+  - type: LeechOnMarker
+    leech:
+      groups:
+        Brute: -20
+      types:
+        Heat: -5
+        Bloodloss: -5
+        Mangleness: -5
+  - type: Tag
+    tags:
+      - Pickaxe
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 4
+        Slash: 6
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 4
+        Slash: 6
+        Structural: 30
+# Sunrise-end

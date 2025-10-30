@@ -69,9 +69,9 @@
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
     maxOffset: 14
-    pvsIncrease: 1.65
+    pvsIncrease: 1.4
   - type: UseDelay
-    delay: 0.5
+    delay: 0.75
   - type: GunRequiresWield
   - type: StaticPrice
     price: 5000
@@ -145,7 +145,7 @@
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
     maxOffset: 10
-    pvsIncrease: 1.25
+    pvsIncrease: 1
   - type: ChamberMagazineAmmoProvider
     autoEject: true
     boltClosed: null
@@ -229,7 +229,7 @@
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
     maxOffset: 15
-    pvsIncrease: 2
+    pvsIncrease: 1.5
   - type: StaticPrice
     price: 10000
 

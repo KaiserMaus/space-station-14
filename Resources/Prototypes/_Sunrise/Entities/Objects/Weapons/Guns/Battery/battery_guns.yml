@@ -550,7 +550,7 @@
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
     maxOffset: 8
-    pvsIncrease: 0.5
+    pvsIncrease: 0.8
 
 # Sunrise Colonial Marines
 
