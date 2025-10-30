@@ -1,2 +1,2 @@
-ent-BulletAntiMaterial = bullet (.60 anti-material)
+ent-BulletAntiMaterial = bullet (14mm anti-material)
     .desc = { ent-BaseBulletHighVelocity.desc }

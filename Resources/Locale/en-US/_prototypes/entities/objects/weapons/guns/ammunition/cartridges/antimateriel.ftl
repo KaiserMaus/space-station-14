@@ -1,10 +1,10 @@
-ent-CartridgeAntiMateriel = cartridge (.60 armor-pierce)
+ent-CartridgeAntiMateriel = cartridge (14mm armor-pierce)
     .desc = { ent-BaseCartridge.desc }
-ent-CartridgeAntiMaterielArtillery = cartridge (.60 anti-materiel)
+ent-CartridgeAntiMaterielArtillery = cartridge (14mm anti-materiel)
     .desc = { ent-BaseCartridge.desc }
-ent-CartridgeAntiMaterielBlast = cartridge (.60 blast)
+ent-CartridgeAntiMaterielBlast = cartridge (14mm blast)
     .desc = { ent-BaseCartridge.desc }
-ent-CartridgeAntiMaterielFrag = cartridge (.60 frag)
+ent-CartridgeAntiMaterielFrag = cartridge (14mm frag)
     .desc = { ent-BaseCartridge.desc }
-ent-CartridgeAntiMaterielEmp = cartridge (.60 blast)
+ent-CartridgeAntiMaterielEmp = cartridge (14mm emp)
     .desc = { ent-BaseCartridge.desc }

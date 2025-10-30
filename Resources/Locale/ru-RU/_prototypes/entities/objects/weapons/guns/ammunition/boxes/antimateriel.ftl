@@ -1,11 +1,10 @@
-ent-BaseMagazineBoxAntiMateriel = ящик с боеприпасами (.60 антиматериальные)
+ent-BaseMagazineBoxAntiMateriel = ящик с боеприпасами (14мм антиматериальные)
     .desc = { ent-BaseItem.desc }
-ent-MagazineBoxAntiMateriel = ящик с боеприпасами (.60 антиматериальные)
+ent-MagazineBoxAntiMateriel = ящик с боеприпасами (14мм антиматериальные)
     .desc = { ent-BaseMagazineBoxAntiMateriel.desc }
 ent-BaseMagazineBoxBelt127 = ammunition box (14мм антиматериальные)
     .desc = { ent-BaseMagazineBoxAntiMateriel.desc }
 ent-MagazineBoxBelt127Empty = патронная лента (14мм любые)
-    .suffix = empty
     .desc = { ent-BaseMagazineBoxBelt127.desc }
 ent-MagazineBoxBelt127 = патронная лента (14мм бронебойные)
     .desc = { ent-BaseMagazineBoxBelt127.desc }

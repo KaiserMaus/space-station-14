@@ -853,7 +853,7 @@ GrenadeBlast: GrenadeBlastTimer
 GrenadeEMP: GrenadeEMPTimer
 GrenadeFlash: GrenadeFlashContact
 GrenadeFlashTimer: GrenadeFlashContact
-GrenadeFrag: GrenadeFlashContact
+GrenadeFrag: GrenadeFragContact
 WeaponEnergyGunMini: WeaponMiniEnergyGun
 GunSafeCombineSmallArms: SpawnerSafeSmallArms
 # SL HITSCAN START

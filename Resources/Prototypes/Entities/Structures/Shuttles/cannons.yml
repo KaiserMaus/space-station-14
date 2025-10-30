@@ -745,7 +745,7 @@
     steps: 10
     zeroVisible: true
   - type: Machine
-    board: ShuttleGunSvalinnMachineGunCircuitboard
+    board: ShuttleGunBeamstormMachineGunCircuitboard
   - type: PowerCellSlot
     cellSlotId: cell_slot
   - type: ItemSlots
@@ -804,7 +804,7 @@
     steps: 5
     zeroVisible: true
   - type: Machine
-    board: ShuttleGunSvalinnMachineGunCircuitboard
+    board: ShuttleGunTeslaOrionCircuitboard
   - type: PowerCellSlot
     cellSlotId: cell_slot
   - type: ItemSlots
@@ -874,7 +874,7 @@
     steps: 5
     zeroVisible: true
   - type: Machine
-    board: ShuttleGunSvalinnMachineGunCircuitboard
+    board: ShuttleGunTeslaHyperionCircuitboard
   - type: PowerCellSlot
     cellSlotId: cell_slot
   - type: ItemSlots

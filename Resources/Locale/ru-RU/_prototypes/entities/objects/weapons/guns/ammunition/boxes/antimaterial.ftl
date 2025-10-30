@@ -1,2 +1,2 @@
-ent-MagazineBoxAntiMaterial = коробка патронов (.60 антиматериальные)
+ent-MagazineBoxAntiMaterial = коробка патронов (14мм антиматериальные)
     .desc = { ent-BaseItem.desc }
