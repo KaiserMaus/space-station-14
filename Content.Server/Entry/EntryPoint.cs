@@ -139,9 +139,9 @@ namespace Content.Server.Entry
             _ghostKick.Initialize();
             _serverInfo.Initialize();
             _serverApi.Initialize();
-            IoCManager.Resolve<PlayerCacheManager>().Initialize(); // Sunrise-Edit
 
             // Sunrise-Sponsors-Start
+            _ttsManager.Initialize(); // Sunrise-Edit
             SunriseServerEntry.Init();
             IoCManager.Instance!.TryResolveType(out _sponsorsManager);
             // Sunrise-Sponsors-End
@@ -191,7 +191,6 @@ namespace Content.Server.Entry
             _contributorsManager.Initialize(); // Sunrise-Edit
             _serversHubManager.Initialize(); // Sunrise-Edit
             _playerCacheManager.Initialize(); // Sunrise-Edit
-            _ttsManager.Initialize(); // Sunrise-Edit
 
             // Sunrise-Sponsors-Start
             SunriseServerEntry.PostInit();

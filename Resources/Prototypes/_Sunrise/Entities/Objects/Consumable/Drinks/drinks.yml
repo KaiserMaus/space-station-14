@@ -79,7 +79,7 @@
     state: icon
 
 - type: entity
-  parent: DrinkGlassBase
+  parent: DrinkGlass
   id: DrinkKvassGlass
   suffix: kvass
   components:
@@ -90,11 +90,9 @@
           reagents:
             - ReagentId: Kvass
               Quantity: 30
-    - type: Sprite
-      sprite: _Sunrise/Objects/Consumable/Drinks/kvass.rsi
 
 - type: entity
-  parent: DrinkGlassBase
+  parent: DrinkGlass
   name: chamomile tincture
   id: DrinkChamomileTincture
   components:
@@ -105,8 +103,6 @@
           reagents:
             - ReagentId: ChamomileTincture
               Quantity: 30
-    - type: Sprite
-      sprite: _Sunrise/Objects/Consumable/Drinks/chamomileTincture.rsi
 
 - type: entity
   parent: DrinkGlass
