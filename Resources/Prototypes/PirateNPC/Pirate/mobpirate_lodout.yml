@@ -77,6 +77,7 @@
     gloves: ClothingHandsMercCutlass
     pocket1: Cutlass
     pocket2: SyringeStimulants
+    shoes: ClothingShoesBootsWork
 
 - type: startingGear
   id: MobPirateGearRangedT2
@@ -85,6 +86,7 @@
     belt: ClothingBeltWebbingMecranaryTier2Revolver
     pocket1: FlippoLighterSunriseContractor
     pocket2: CigPackSyndicate
+    shoes: ClothingShoesBootsSalvage
 
 - type: startingGear
   id: MobPirateGearRangedAltT2

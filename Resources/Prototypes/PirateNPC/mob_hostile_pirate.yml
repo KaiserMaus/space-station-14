@@ -704,7 +704,7 @@
 
 - type: entity
   name: Jugger Murmillo # Джагер Мурмилло
-  description: Clad in a heavily armored ancient spacesuit. Slow but incredibly resilient, held deadly a flaming axe. # Одет в тяжело бронированный древний скафандр. Медлительный, но чрезвычайно живучий, размахивает поджигающим топором.
+  description: Clad in a heavily armored ancient spacesuit. Slow but incredibly resilient. # Одет в тяжело бронированный древний скафандр. Медлительный, но чрезвычайно живучий.
   noSpawn: true
   parent: MobPirateBaseT3
   id: MobPirateJuggernaut
@@ -720,13 +720,13 @@
     - sprite: _Sunrise/Mobs/Species/Templates/gladiator.rsi
       state: human-unshaded
       shader: unshaded
-    - sprite: Objects/Weapons/Melee/fireaxeflaming.rsi
-      state: wielded-inhand-right
+    - sprite: _Sunrise/Objects/Weapons/Melee/crusher_broadaxe-inhands.rsi
+      state: wielded-inhand-left
   - type: MobThresholds
     thresholds:
       0: Alive
-      220: Critical
-      240: Dead
+      240: Critical
+      250: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
       25: 1.1
@@ -734,7 +734,9 @@
       100: 1.2
       125: 1.3
       150: 1.4
-      175: 1.6
+      175: 1.5
+      200: 1.6
+      225: 1.75
   - type: Stamina
     critThreshold: 500
   - type: MovementSpeedModifier
@@ -744,18 +746,35 @@
     footstepSoundCollection:
       collection: FootstepCyborgLegs
       params:
-        volume: -5
-  - type: IgniteOnMeleeHit
-    fireStacks: 4
+        volume: -8
+  - type: Gun
+    soundGunshot: /Audio/Weapons/plasma_cutter.ogg
+    fireRate: 1
+    useKey: false
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 5.5
+    rechargeSound:
+      path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
+  - type: BasicEntityAmmoProvider
+    proto: BulletCharge
+    capacity: 1
+    count: 1
+  - type: LeechOnMarker
+    leech:
+      groups:
+        Brute: -20
+      types:
+        Heat: -5
+        Bloodloss: -5
+        Mangleness: -5
   - type: MeleeWeapon
-    wideAnimationRotation: 135
-    swingLeft: true
     attackRate: 1
+    wideAnimationRotation: -135
     damage:
       types:
-        Blunt: 5
-        Slash: 25
-        Structural: 60
+        Blunt: 8
+        Slash: 12
+        Structural: 50
     bluntStaminaDamageFactor: 1
     soundHit:
       collection: MetalThud
@@ -773,11 +792,15 @@
     energy: 1.5
     mask: /Textures/Effects/LightMasks/soft_cone.png
     color: "#8cff00"
+  - type: AmbientSound
+    range: 4
+    volume: -8
+    sound:
+      path: /Audio/Effects/internals.ogg
   - type: Tag
     tags:
     - DoorBumpOpener
     - FootstepSound
-    - Clarke
     - Pickaxe
 
 
