@@ -4,7 +4,7 @@
   parent: ClothingBackpack
   id: ClothingMessenger
   components:
-  ## One 4x4 pocket, four 2x2 pockets
+  ## One 4x5 pocket, two 3x2 pockets
   - type: Storage
     grid:
     - 0,0,1,3

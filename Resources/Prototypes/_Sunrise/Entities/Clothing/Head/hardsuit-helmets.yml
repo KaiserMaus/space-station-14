@@ -277,31 +277,6 @@
   - type: EyeProtection
 
 - type: entity
-  parent: ClothingHeadHardsuitBase
-  id: ClothingHeadHelmetHardsuitPirateSun
-  categories: [ HideSpawnMenu ]
-  name: pirate hardsuit helmet
-  suffix: Pirate, Sunrise
-  description: A special hardsuit helmet, made for Scooner.
-  components:
-  - type: Sprite
-    sprite: _Sunrise/Clothing/Head/Hardsuits/piratebasichelm.rsi
-  - type: Clothing
-    sprite: _Sunrise/Clothing/Head/Hardsuits/piratebasichelm.rsi
-  - type: PressureProtection
-    highPressureMultiplier: 0.3
-    lowPressureMultiplier: 1000
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.85
-        Slash: 0.85
-        Piercing: 0.85
-        Heat: 0.85
-  - type: FlashImmunity
-  - type: EyeProtection
-
-- type: entity
   parent: ClothingHeadHardsuitBase #[ ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitInfiltration
   categories: [ HideSpawnMenu ]
