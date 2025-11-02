@@ -97,6 +97,12 @@
   id: Coin
 
 - type: Tag
+  id: CannonBallMini
+
+- type: Tag
+  id: MagazineCannonBallMini
+
+- type: Tag
   id: ImprovisedAmmoBox
 
 # Weapons

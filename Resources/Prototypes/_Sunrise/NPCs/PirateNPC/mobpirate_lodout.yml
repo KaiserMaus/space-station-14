@@ -6,10 +6,27 @@
 ###
 # region  Pirate Tier1
 - type: startingGear
+  id: MobPirateMonkeyGearMeleeT1
+  equipment:
+    pocket1: PiratePouchTier1KnuckleDusters
+    pocket2: CigaretteSyndicate
+
+- type: startingGear
+  id: MobPirateMonkeyGearRangedT1
+  equipment:
+    pocket1: PiratePouchTier1FlareGun
+    pocket2: CigaretteSyndicate
+
+- type: startingGear
+  id: MobPirateMonkeyGearRangedAltT1
+  equipment:
+    pocket1: PiratePouchTier1FireBomb
+    pocket2: CigaretteSyndicate
+
+- type: startingGear
   id: MobPirateGearMeleeT1
   equipment:
     gloves: ClothingHandsMercCombatKnife
-    outerClothing: ClothingOuterArmorBasicSlim
     belt: ClothingBeltUtility
     pocket1: SpaceCash500
     pocket2: CombatKnife
@@ -67,6 +84,23 @@
     shoes: ClothingShoesBootsWork
 
 - type: startingGear
+  id: MobPirateGearMeleeAltT2
+  equipment:
+    gloves: ClothingSledgehammer
+    pocket1: Sledgehammer
+    pocket2: MedkitCombatFilled
+    shoes: ClothingShoesBootsMagCombat
+
+- type: startingGear
+  id: MobPirateGearMeleeAlt2T2
+  equipment:
+    gloves: ClothingWeaponGauntletDrill
+    back: NitrousOxideTankFilled
+    pocket1: WeaponGauntletDrill
+    pocket2: MedipenCombatInjector
+    shoes: ClothingShoesBootsWork
+
+- type: startingGear
   id: MobPirateGearRangedT2
   equipment:
     gloves: ClothingHandsMercRevolvers
@@ -86,12 +120,25 @@
 - type: startingGear
   id: MobPirateGearRangedAlt2T2
   equipment:
-    gloves: ClothingHandsMercRepeater
-    outerClothing: ClothingOuterCoatHoSOvercoat
-    pocket1: PatchOmni
-    pocket2: DrinkNukieCan
-    belt: ClothingBeltBandolier
-    shoes: ClothingShoesBootsCowboyBrownFilled
+    gloves: ClothingHandsPlasmaCutter
+    back: ClothingBackScrapperRangeT2
+    belt: OreBag
+    shoes: ClothingShoesBootsSalvage
+
+- type: startingGear
+  id: MobPirateGearRangedAlt3T2
+  equipment:
+    gloves: ClothingLightMachineGunPirateCannon
+    back: ClothingBackPirateMessengerTier2MG
+    belt: ClothingBeltSalvageWebbingTier1Flintlock
+    shoes: ClothingShoesBootsMagPirate
+
+- type: startingGear
+  id: MobPirateGearRangedAlt4T2
+  equipment:
+    gloves: ClothingMusket
+    back: NitrogenTankFilled
+    belt: ClothingAmmoBeltTier2Musket
 
 # Scrapper
 - type: startingGear
@@ -121,7 +168,7 @@
   equipment:
     gloves: ClothingHandsBlackM79
     back: ClothingBackDuffelMercenaryTier3Grenade
-    shoes: ClothingShoesBootsJump
+    shoes: ClothingShoesBootsCombat
 
 # Scrapper
 - type: startingGear
@@ -144,10 +191,24 @@
 - type: startingGear
   id: MobPirateScrapperGearRangedT3
   equipment:
-    gloves: ClothingHandsSKM28
+    gloves: ClothingHandsSKM24
     back: ClothingBackScrapperRangedT3
     pocket1: PouchAmmo
     shoes: ClothingShoesBootsLaceup
+
+- type: startingGear
+  id: MobPirateScrapperGearRangedT3Alt
+  equipment:
+    gloves: ClothingHandsMp38
+    back: ClothingBackScrapperRangedT3Alt
+    pocket1: PouchAmmoFilledSMG
+    shoes: ClothingShoesBootsLaceup
+
+- type: startingGear
+  id: MobPirateMonkeyGearMeleeT3
+  equipment:
+    pocket1: PiratePouchTier3EDagger
+    pocket2: CigPackSyndicate
 
 - type: startingGear
   id: MobPirateScrapperGearMechT3

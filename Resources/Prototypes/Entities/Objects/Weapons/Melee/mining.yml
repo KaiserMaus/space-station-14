@@ -310,4 +310,29 @@
         Blunt: 4
         Slash: 6
         Structural: 30
+
+- type: entity
+  name: M.O.L.E gauntlet
+  parent: BaseItem
+  id: WeaponGauntletDrill
+  description: A robust piece of salvage equipment. The drill is ready to pierce the heavens
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Weapons/Melee/moledrill.rsi
+    state: icon
+  - type: Item
+    size: Large
+  - type: MeleeWeapon
+    autoAttack: true
+    angle: 0
+    wideAnimationRotation: -90
+    soundHit:
+      path: "/Audio/Items/drill_use.ogg"
+    attackRate: 5
+    damage:
+      groups:
+        Brute: 9
+      types:
+        Structural: 25
+    bluntStaminaDamageFactor: 1.5
 # Sunrise-end

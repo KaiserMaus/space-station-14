@@ -102,7 +102,7 @@
 - type: entity
   id: CannonBallEMPshot
   name: EMPshot
-  suffix: Pirate, Sunrise
+  suffix: Pirate
   parent: BaseCannonBall
   components:
   - type: CartridgeAmmo
@@ -115,7 +115,7 @@
 - type: entity
   id: CannonBallFuze
   name: fuzed cannonball
-  suffix: Pirate, Sunrise
+  suffix: Pirate
   parent: BaseCannonBall
   components:
   - type: CartridgeAmmo
@@ -125,6 +125,40 @@
     sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     state: fuzeball
 
+- type: entity
+  id: CannonBallMini
+  name: cannonball
+  suffix: Pirate
+  parent: BaseCannonBall
+  components:
+  - type: Item
+    size: Tiny
+  - type: CartridgeAmmo
+    proto: PelletGrapeshot
+    deleteOnSpawn: true
+  - type: Sprite
+    scale: 0.6,0.6
+    sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    state: ball
+  - type: Tag
+    tags:
+    - CannonBallMini
+
+- type: entity
+  id: CannonBallGrapeshotMini
+  name: grapeshot
+  suffix: Pirate
+  parent: CannonBallMini
+  components:
+  - type: HitScanCartridgeAmmo
+    hitscan: PelletShotgunImprovisedSpreadTraceLarge
+    deleteOnSpawn: true
+  - type: Sprite
+    scale: 0.75,0.75
+    sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    state: grapeshot
+
+# Launcher
 - type: entity
   id: GrenadeBlastTimer
   name: timer blast grenade

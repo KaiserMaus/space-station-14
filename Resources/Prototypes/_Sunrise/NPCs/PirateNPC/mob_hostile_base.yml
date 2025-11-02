@@ -37,7 +37,7 @@
       groups:
         Brute: -0.5
         Burn: -0.5
-        Airloss: -1
+        Airloss: -0.05
 
 - type: entity
   id: MobPassiveRegen
@@ -52,7 +52,7 @@
       groups:
         Brute: -0.5
         Burn: -0.5
-        Airloss: -1
+        Airloss: -0.05
 
 - type: entity
   id: MobPassiveRegenMedium
@@ -67,7 +67,7 @@
       groups:
         Brute: -1
         Burn: -1
-        Airloss: -3
+        Airloss: -0.1
 
 - type: entity
   id: MobPassiveRegenStrong
