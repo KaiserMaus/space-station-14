@@ -3,7 +3,7 @@
   parent: ClothingHandsGlovesCombat
   id: ClothingHandsNoGloves
   abstract: true
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Unremoveable
   - type: Sprite
@@ -18,7 +18,7 @@
   name: combat gloves
   suffix: smg
   description: Regular black gloves that do not keep you from frying.
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Unremoveable
   - type: Sprite
@@ -40,7 +40,7 @@
   id: ClothingHandsBlackAK
   name: combat gloves
   suffix: ak
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -56,7 +56,7 @@
   id: ClothingHandsBlackChinaLake
   name: combat gloves
   suffix: china lake
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -72,7 +72,7 @@
   id: ClothingHandsBlackPirateCannon
   name: combat gloves
   suffix: pirate cannon
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -88,7 +88,7 @@
   id: ClothingHandsBlackM79
   name: combat gloves
   suffix: m79
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -104,7 +104,7 @@
   id: ClothingHandsBlackPistol
   name: combat gloves
   suffix: pistol
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -120,7 +120,7 @@
   id: ClothingHandsMercFlintlock
   name: combat gloves
   suffix: flintlock
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -133,7 +133,7 @@
   id: ClothingHandsMercRevolvers
   name: combat gloves
   suffix: double revolvers
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -146,26 +146,72 @@
         state: inhand-left
 
 - type: entity
-  parent: ClothingHandsBlackSMG
+  parent: ClothingHandsNoGloves
   id: ClothingHandsMercShotgun
   name: combat gloves
   suffix: shotgun
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
       gloves:
-      - sprite: Clothing/Hands/Gloves/fingerless.rsi
-        state: equipped-HAND
       - sprite: Objects/Weapons/Guns/Shotguns/blunderbuss.rsi
         state: wielded-inhand-right
+
+- type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingLightMachineGunPirateCannon
+  name: combat gloves
+  suffix: lmg pirate cannon
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: _Sunrise/Objects/Weapons/Guns/LMGs/piratecannon_inhands_64x.rsi
+        state: wielded-inhand-right
+  - type: MeleeThrowOnHit
+    distance: 0.7
+    speed: 10
+  - type: MeleeWeapon
+    attackRate: 0.5
+    soundHit:
+      path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+      params:
+        volume: -6
+        pitch: 0.5
+
+- type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingMusket
+  name: combat gloves
+  suffix: musket
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Objects/Weapons/Guns/Snipers/musket.rsi
+        state: wielded-inhand-right
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    altDisarm: false
+    angle: 0
+    animation: WeaponArcSlash
+    damage:
+      types:
+        Piercing: 15
+        Bloodloss: 2
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
 
 - type: entity
   parent: ClothingHandsBlackSMG
   id: ClothingHandsMercMosin
   name: combat gloves
   suffix: mosin
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -189,7 +235,7 @@
   id: ClothingHandsMercRepeater
   name: combat gloves
   suffix: repeater
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -204,7 +250,7 @@
   id: ClothingHandsMercECutlass
   name: combat gloves
   suffix: golden mk58
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -250,7 +296,7 @@
   id: ClothingHandsECutlass
   name: combat gloves
   suffix: energy cutlass
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -294,7 +340,7 @@
   id: ClothingHandsEPickaxe
   name: combat gloves
   suffix: energy cutlass
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -338,7 +384,7 @@
   id: ClothingHandsSMGForged
   name: combat gloves
   suffix: Forged SMG
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -347,24 +393,37 @@
         state: wielded-inhand-right
 
 - type: entity
-  parent: ClothingHandsBlackSMG
+  parent: ClothingHandsNoGloves
   id: ClothingHandsSKM24
   name: combat gloves
   suffix: skm24
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
       gloves:
-      - sprite: _Sunrise/Objects/Weapons/Guns/Rifles/skm24/Scrap/tiny.rsi
+      - sprite: _Sunrise/Objects/Weapons/Guns/Rifles/skm24/Base/tiny.rsi
         state: wielded-inhand-right
 
 - type: entity
-  parent: ClothingHandsBlackSMG
+  parent: ClothingHandsNoGloves
+  id: ClothingHandsMp38
+  name: combat gloves
+  suffix: mp38
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: _Sunrise/Objects/Weapons/Guns/SMGs/mp38/tiny.rsi
+        state: wielded-inhand-right
+
+- type: entity
+  parent: ClothingHandsNoGloves
   id: ClothingHandsSKM28
   name: combat gloves
-  suffix: skm24
-  # categories: [ HideSpawnMenu ]
+  suffix: skm28
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -373,24 +432,11 @@
         state: wielded-inhand-right
 
 - type: entity
-  parent: ClothingHandsBlackSMG
-  id: ClothingHandsSKM28
-  name: combat gloves
-  suffix: skm24
-  # categories: [ HideSpawnMenu ]
-  components:
-  - type: Clothing
-    clothingVisuals:
-      gloves:
-      - sprite: _Sunrise/Objects/Weapons/Guns/Rifles/skm28/Base/tiny.rsi
-        state: wielded-inhand-right
-
-- type: entity
-  parent: ClothingHandsBlackSMG
+  parent: ClothingHandsNoGloves
   id: ClothingHandsSKM28S
   name: combat gloves
-  suffix: skm24
-  # categories: [ HideSpawnMenu ]
+  suffix: skm28
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -403,7 +449,7 @@
   id: ClothingHandsMercCombatKnife
   name: combat gloves
   suffix: knife
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -431,7 +477,7 @@
   id: ClothingHandsGorilla
   name: combat gloves
   suffix: Gorilla
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: Objects/Weapons/Melee/gorilla.rsi
@@ -472,7 +518,7 @@
   id: ClothingHandsMercCombatKnife
   name: combat gloves
   suffix: knife
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -500,24 +546,85 @@
   id: ClothingHandsMercCutlass
   name: combat gloves
   suffix: cutlass
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
       gloves:
-      - sprite: Clothing/Hands/Gloves/fingerless.rsi
-        state: equipped-HAND
       - sprite: _Starlight/Objects/Weapons/Melee/forged_buckler_shield.rsi
         state: inhand-left
       - sprite: Objects/Weapons/Melee/cutlass.rsi
         state: inhand-right
 
 - type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingSledgehammer
+  name: combat gloves
+  suffix: sledgehammer
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Objects/Weapons/Melee/sledgehammer.rsi
+        state: wielded-inhand-right
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 20
+        Structural: 20
+    bluntStaminaDamageFactor: 1.5
+    soundHit:
+      collection: MetalThud
+
+- type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingWeaponGauntletDrill
+  name: combat gloves
+  suffix: drill
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: _Sunrise/Objects/Weapons/Melee/moledrill.rsi
+        state: inhand-right
+  - type: MeleeWeapon
+    animation: WeaponArcThrust
+    autoAttack: true
+    angle: 0
+    wideAnimationRotation: -90
+    soundHit:
+      path: "/Audio/Items/drill_use.ogg"
+    attackRate: 5
+    damage:
+      groups:
+        Brute: 9
+      types:
+        Structural: 25
+    bluntStaminaDamageFactor: 1.5
+
+- type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingHandsPlasmaCutter
+  name: combat gloves
+  suffix: plasma cutter
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: _Sunrise/Objects/Weapons/Guns/Basic/plasma_cutter_industrial.rsi
+        state: wielded-inhand-right
+
+- type: entity
   parent: ClothingHandsBlackSMG
   id: ClothingHandsBlackPython
   name: combat gloves
   suffix: python
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -533,7 +640,7 @@
   id: ClothingHandsBlackShotgun
   name: combat gloves
   suffix: shotgun
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -549,7 +656,7 @@
   id: ClothingHandsBlackLaserPistol
   name: combat gloves
   suffix: laser pistol
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:
@@ -565,7 +672,7 @@
   id: ClothingHandsWeaponPka
   name: combat gloves
   suffix: pka
-  # categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clothing
     clothingVisuals:

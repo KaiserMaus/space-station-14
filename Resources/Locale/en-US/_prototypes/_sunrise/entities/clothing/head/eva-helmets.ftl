@@ -7,3 +7,5 @@ ent-ClothingHeadHelmetPirateAlt = пиратский космический шл
 ent-ClothingHeadHelmetPirateOld = pirate hardsuit helmet
     .desc = A special hardsuit helmet, made for Scooner.
     .suffix = Pirate, Sunrise
+ent-ClothingHeadHelmetPirateAlt2 = пиратский космический шлем
+    .desc = Шлем для скафандра

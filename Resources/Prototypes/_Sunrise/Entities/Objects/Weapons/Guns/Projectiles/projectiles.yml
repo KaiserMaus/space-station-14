@@ -470,6 +470,43 @@
     capacity: 30
 
 - type: entity
+  id: BulletFireBomb
+  name: fire bomb
+  parent: BaseBulletGrenade
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Bombs/ied.rsi
+    layers:
+      - state: primed
+      - state: wires
+  - type: ProjectileGrenade
+    fillPrototype: PelletClusterIncendiary
+    capacity: 10
+  - type: Explosive
+    explosionType: FireBomb
+    totalIntensity: 25
+    intensitySlope: 5
+    maxIntensity: 3
+    canCreateVacuum: false
+  - type: ExplodeOnTrigger
+    keysIn:
+    - timer
+  - type: TimerTrigger
+    delay: 2
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+      params:
+        volume: 1
+  - type: AmbientSound
+    range: 8
+    volume: 1
+    sound:
+      path: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+  - type: DeleteOnTrigger
+
+- type: entity
   id: BulletKineticTrash
   parent: BaseBullet
   categories: [ HideSpawnMenu ]

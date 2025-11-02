@@ -7,3 +7,5 @@ ent-ClothingHeadHelmetPirateAlt = абордажный EVA шлем
 ent-ClothingHeadHelmetPirateOld = EVA шлем
     .desc = Шлем для скафандра, чтобы брать всех на абордаж.
     .suffix = Пират
+ent-ClothingHeadHelmetPirateAlt2 = абордажный EVA шлем
+    .desc = Простой и стильный шлем EVA. Создан для скромных космических подвигов и абордажей.

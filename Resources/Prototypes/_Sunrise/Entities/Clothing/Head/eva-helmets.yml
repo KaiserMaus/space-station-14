@@ -63,8 +63,8 @@
     sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva.rsi
-    equipDelay: 1
-    unequipDelay: 1
+    equipDelay: 0.8
+    unequipDelay: 0.8
   - type: StaticPrice
     price: 1000
   - type: Appearance
@@ -117,5 +117,14 @@
     sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
-  - type: StaticPrice
-    price: 500 # Suit is 1000
+
+- type: entity
+  parent: ClothingHeadHelmetPirate
+  id: ClothingHeadHelmetPirateAlt2
+  name: boarding EVA helmet
+  description: A simple and stylish EVA helmet. Made for humble space heroics and boarding actions.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt2.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt2.rsi
