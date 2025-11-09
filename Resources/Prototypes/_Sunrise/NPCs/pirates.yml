@@ -147,8 +147,10 @@
       - MobPiratePlasmaCutter
       - MobPirateScrapSMG
       - MobPirateShotgun
-      - MobPirateRevolver
+      - MobPirateDoubleRevolver
+      - MobPirateDoubleFlintlock
     rarePrototypes:
+      - MobPirateRevolver
       - MobPirateMusket
       - MobPirateMachineCannon
       - MobPirateHunter
@@ -593,8 +595,6 @@
   - type: Sprite
     drawdepth: Mobs
     layers:
-    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
-      state: human
     - sprite: Clothing/OuterClothing/Armor/podwars_armor.rsi
       state: equipped-OUTERCLOTHING
     - sprite: Clothing/Head/Helmets/podwars_helmet.rsi
@@ -749,26 +749,120 @@
       state: equipped-HELMET
   - type: ProjectileBatteryAmmoProvider
     proto: CartridgePistol40SP
-    fireCost: 100
+    fireCost: 10
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargePause: true
-    autoRechargePauseTime: 6
-    autoRechargeRate: 9999
+    autoRechargePauseTime: 5
+    autoRechargeRate: 999
   - type: Battery
-    maxCharge: 600
-    startingCharge: 600
+    maxCharge: 60
+    startingCharge: 60
   - type: Gun
     showExamineText: false
-    burstFireRate: 8
+    burstFireRate: 10
     shotsPerBurst: 2
-    burstCooldown: 0.65
+    burstCooldown: 0.5
     minAngle: 1
     maxAngle: 8
     selectedMode: Burst
     availableModes:
     - Burst
     soundGunshot: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+
+- type: entity
+  name: pirate hunter
+  description: Armed with two an antique pirate revolvers.
+  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT2]
+  id: MobPirateDoubleRevolver
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateGearRangedAlt5T2
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: Clothing/OuterClothing/Hardsuits/pirateeva.rsi
+      state: equipped-OUTERCLOTHING-reptilian
+    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
+      state: equipped-HELMET
+    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
+      state: on-equipped-HELMET
+      shader: unshaded
+    - sprite: Clothing/Belt/assault.rsi
+      state: equipped-BELT
+  - type: ProjectileBatteryAmmoProvider
+    proto: CartridgeMagnumImprovised
+    fireCost: 10
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargePause: true
+    autoRechargePauseTime: 2
+    autoRechargeRate: 999
+  - type: Battery
+    maxCharge: 20
+    startingCharge: 20
+  - type: Gun
+    showExamineText: false
+    fireRate: 8
+    minAngle: 1
+    maxAngle: 8
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepCatwalk
+      params:
+        volume: 5
+
+- type: entity
+  name: pirate hunter
+  description: Armed with two an antique flintlocks.
+  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT2]
+  id: MobPirateDoubleFlintlock
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateGearRangedAlt6T2
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: Clothing/OuterClothing/Hardsuits/pirateeva.rsi
+      state: equipped-OUTERCLOTHING-reptilian
+    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
+      state: equipped-HELMET
+    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
+      state: on-equipped-HELMET
+      shader: unshaded
+    - sprite: Clothing/Belt/assault.rsi
+      state: equipped-BELT
+  - type: ProjectileBatteryAmmoProvider
+    proto: CartridgeMagnumAP
+    fireCost: 10
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargePause: true
+    autoRechargePauseTime: 6
+    autoRechargeRate: 999
+  - type: Battery
+    maxCharge: 20
+    startingCharge: 20
+  - type: Gun
+    showExamineText: false
+    fireRate: 8
+    minAngle: 1
+    maxAngle: 8
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepCatwalk
+      params:
+        volume: 5
 
 - type: entity
   name: pirate blunderbuss

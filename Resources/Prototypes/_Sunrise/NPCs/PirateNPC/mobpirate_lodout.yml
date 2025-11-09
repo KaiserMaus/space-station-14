@@ -130,7 +130,7 @@
   equipment:
     gloves: ClothingLightMachineGunPirateCannon
     back: ClothingBackPirateMessengerTier2MG
-    belt: ClothingBeltSalvageWebbingTier1Flintlock
+    belt: ClothingAmmoBeltTier2MG
     shoes: ClothingShoesBootsMagPirate
 
 - type: startingGear
@@ -139,6 +139,22 @@
     gloves: ClothingMusket
     back: NitrogenTankFilled
     belt: ClothingAmmoBeltTier2Musket
+
+- type: startingGear
+  id: MobPirateGearRangedAlt5T2
+  equipment:
+    gloves: ClothingRevolvers
+    belt: ClothingBeltWebbingMercenaryTier2RevolverAlt
+    pocket1: FlippoLighterSunriseGonzo
+    pocket2: CigPackSyndicate
+
+- type: startingGear
+  id: MobPirateGearRangedAlt6T2
+  equipment:
+    gloves: ClothingFlintlocks
+    belt: ClothingBeltWebbingMercenaryTier2Flintlock
+    pocket1: PatchOmni
+    pocket2: PatchBrute
 
 # Scrapper
 - type: startingGear

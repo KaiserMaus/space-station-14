@@ -129,7 +129,7 @@
         state: inhand-right
 
 - type: entity
-  parent: ClothingHandsBlackSMG
+  parent: ClothingHandsNoGloves
   id: ClothingHandsMercRevolvers
   name: combat gloves
   suffix: double revolvers
@@ -138,11 +138,39 @@
   - type: Clothing
     clothingVisuals:
       gloves:
-      - sprite: Clothing/Hands/Gloves/fingerless.rsi
-        state: equipped-HAND
       - sprite: _Starlight/Objects/Weapons/Guns/Revolvers/snub.rsi
         state: inhand-right
       - sprite: _Starlight/Objects/Weapons/Guns/Revolvers/snub.rsi
+        state: inhand-left
+
+- type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingRevolvers
+  name: combat gloves
+  suffix: double pirate revolvers
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Objects/Weapons/Guns/Revolvers/pirate_revolver.rsi
+        state: inhand-right
+      - sprite: Objects/Weapons/Guns/Revolvers/pirate_revolver.rsi
+        state: inhand-left
+
+- type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingFlintlocks
+  name: combat gloves
+  suffix: double flintlocks
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Objects/Weapons/Guns/Snipers/flintlock.rsi
+        state: inhand-right
+      - sprite: Objects/Weapons/Guns/Snipers/flintlock.rsi
         state: inhand-left
 
 - type: entity
@@ -512,34 +540,6 @@
   - type: MeleeThrowOnHit
     unanchorOnHit: true
     stunTime: 0.25
-
-- type: entity
-  parent: ClothingHandsNoGloves
-  id: ClothingHandsMercCombatKnife
-  name: combat gloves
-  suffix: knife
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Clothing
-    clothingVisuals:
-      gloves:
-      - sprite: Clothing/Hands/Gloves/mercbattle.rsi
-        state: equipped-HAND
-      - sprite: Objects/Weapons/Melee/shields.rsi
-        state: makeshift-inhand-right
-      - sprite: Objects/Weapons/Melee/combat_knife.rsi
-        state: inhand-left
-  - type: MeleeWeapon
-    hidden: true
-    attackRate: 1.5
-    altDisarm: false
-    angle: 0
-    animation: WeaponArcPunch
-    damage:
-      types:
-        Slash: 12
-    soundHit:
-      path: /Audio/Weapons/bladeslice.ogg
 
 - type: entity
   parent: ClothingHandsNoGloves
