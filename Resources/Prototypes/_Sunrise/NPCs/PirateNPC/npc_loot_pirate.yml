@@ -892,6 +892,102 @@
       path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
+  parent: MercenaryWebbingBox
+  id: ClothingBeltWebbingMercenaryTier2Flintlock
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Clothing/Belt/bandolier.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    # Cash
+    - id: SpaceCash500
+      prob: 0.9
+    - id: SpaceCash500
+      prob: 0.65
+    - id: SpaceCash500
+      prob: 0.45
+    - id: WeaponPistolFlintlock
+      prob: 0.9
+    - id: WeaponPistolFlintlock
+      prob: 0.5
+    - id: CartridgeMagnumAP
+      prob: 0.8
+    - id: CartridgeMagnumAP
+      prob: 0.4
+    - id: CartridgeMagnumAP
+      prob: 0.25
+    - id: MagazineBoxMagnumAP
+      prob: 0.05
+    - id: MagazineBoxImprovisedMagnum
+      prob: 0.9
+    - id: MagazineBoxImprovisedMagnum
+      prob: 0.3
+    - id: BruteAutoInjector
+      prob: 0.25
+    - id: BruizAutoInjector
+      prob: 0.25
+    - id: LacerAutoInjector
+      prob: 0.25
+    - id: PunctAutoInjector
+      prob: 0.25
+    - id: PatchBrute
+      prob: 0.25
+    - id: BrutepackAdvanced1
+      prob: 0.25
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+
+- type: entity
+  parent: MercenaryWebbingBox
+  id: ClothingBeltWebbingMercenaryTier2RevolverAlt
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Clothing/Belt/bandolier.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    # Cash
+    - id: SpaceCash500
+      prob: 0.9
+    - id: SpaceCash500
+      prob: 0.65
+    - id: SpaceCash500
+      prob: 0.45
+    - id: WeaponRevolverPirate
+      prob: 0.9
+    - id: WeaponRevolverPirate
+      prob: 0.5
+    - id: SpeedLoaderMagnumHP
+      prob: 0.8
+    - id: SpeedLoaderMagnumSP
+      prob: 0.4
+    - id: SpeedLoaderMagnumSP
+      prob: 0.25
+    - id: SpeedLoaderMagnumAP
+      prob: 0.05
+    - id: MagazineBoxImprovisedMagnum
+      prob: 0.9
+    - id: MagazineBoxImprovisedMagnum
+      prob: 0.3
+    - id: BruteAutoInjector
+      prob: 0.25
+    - id: BruizAutoInjector
+      prob: 0.25
+    - id: LacerAutoInjector
+      prob: 0.25
+    - id: PunctAutoInjector
+      prob: 0.25
+    - id: PatchBrute
+      prob: 0.25
+    - id: BrutepackAdvanced1
+      prob: 0.25
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+
+- type: entity
   parent: ScrapperDuffelGiftBox
   id: ClothingBackScrapperMeleeT2
   categories: [ HideSpawnMenu ]

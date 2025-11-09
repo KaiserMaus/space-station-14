@@ -1,5 +1,3 @@
-ent-BaseWeaponRifle = BaseWeaponRifle
-    .desc = A rooty tooty point and shooty.
 ent-WeaponRifleAKM = AKMS
     .desc = { ent-BaseWeaponRifle.desc }
 ent-WeaponRifleAKMU = AKM-U
