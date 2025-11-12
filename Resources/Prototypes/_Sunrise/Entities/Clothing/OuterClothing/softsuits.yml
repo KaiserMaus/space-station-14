@@ -97,10 +97,10 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.6
-        Slash: 0.65
-        Piercing: 0.7
-        Heat: 0.4
+        Blunt: 0.65
+        Slash: 0.7
+        Piercing: 0.75
+        Heat: 0.5
         Radiation: 0.5
         Caustic: 0.5
   - type: ClothingSpeedModifier
@@ -138,10 +138,10 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.55
-        Slash: 0.6
-        Piercing: 0.65
-        Heat: 0.4
+        Blunt: 0.6
+        Slash: 0.65
+        Piercing: 0.7
+        Heat: 0.5
         Radiation: 0.5
         Caustic: 0.5
   - type: ClothingSpeedModifier
@@ -162,3 +162,43 @@
     sprite: _Sunrise/Clothing/OuterClothing/Suits/pirateeva_armored_alt.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/OuterClothing/Suits/pirateeva_armored_alt.rsi
+
+- type: entity
+  parent: ClothingOuterEVASuitPirateArmored
+  id: ClothingOuterHardsuitScaf
+  name: SCAF EVA suit
+  description: A green-and-brown EVA suit used by freelance raiders and guns-for-hire. Offers little against lasers but shrugs off bullets. Made for quick getaways when the job goes sideways.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/OuterClothing/Suits/scaf.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/OuterClothing/Suits/scaf.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.4
+        Heat: 0.9
+        Caustic: 0.9
+  - type: Reflect
+    reflectProb: 0.1
+    spread: 360
+    soundOnReflect: /Audio/_Starlight/Armor/Ricochet/ricochet1_1.ogg
+    reflects:
+    - NonEnergy
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: PressureProtection
+    highPressureMultiplier: 0.5
+    lowPressureMultiplier: 1000
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: StaticPrice
+    price: 4000
+  - type: Tag
+    tags:
+    - SuitEVA
+    - FullBodyOuter
+    - WhitelistChameleon

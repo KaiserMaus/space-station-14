@@ -128,3 +128,22 @@
     sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt2.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt2.rsi
+
+- type: entity
+  parent: ClothingHeadHelmetPirate
+  id: ClothingHeadHelmetHardsuitScaf
+  name: scaf hardsuit helmet
+  description: A robust, strong helmet. On the inside smells of pent up anger.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Helmets/scaf.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Helmets/scaf.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.8
+        Radiation: 0.9
+        Caustic: 0.9

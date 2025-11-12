@@ -1322,7 +1322,7 @@
     - id: LootSpawnerMaterialsHighValueConstruction
       prob: 0.25
     - id: PirateTechFabCircuitboard
-      prob: 0.1
+      prob: 0.01
     - id: AirlossAutoInjector
       prob: 0.05
     - id: PyraAutoInjector
@@ -1349,10 +1349,13 @@
       path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: PirateMessengerGiftBox
-  id: ClothingBackPirateMessengerTier3Grenade
+  parent: SalvageWebbingBox
+  id: ClothingAmmoBeltGrapeShot
   categories: [ HideSpawnMenu ]
   components:
+  - type: Sprite
+    sprite: Clothing/Belt/bandolier.rsi
+    state: icon
   - type: SpawnItemsOnUse
     items:
     # Cash
@@ -1413,7 +1416,7 @@
     - id: LootSpawnerMaterialsHighValueConstruction
       prob: 0.25
     - id: PirateTechFabCircuitboard
-      prob: 0.1
+      prob: 0.01
     - id: AirlossAutoInjector
       prob: 0.05
     - id: PyraAutoInjector
@@ -1436,6 +1439,76 @@
       prob: 0.2
     - id: EmergencyMedipen
       prob: 0.1
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+
+- type: entity
+  parent: PirateMessengerGiftBox
+  id: ClothingBackpackMessengerMeleeT2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    # Cash
+    - id: SpaceCash500
+      prob: 0.9
+    - id: SpaceCash500
+      prob: 0.4
+    - id: SpaceCash1000
+      prob: 0.2
+    # Weapons
+    - id: EnergyCutlass
+      prob: 0.4
+    # Armor
+    - id: PirateHandyFlag
+      prob: 0.25
+      orGroup: PirateHardPool
+    - id: ClothingOuterHardsuitPirateCap
+      prob: 0.25
+      orGroup: PirateHardPool
+    - id: ClothingOuterEVASuitPirateOld
+      prob: 0.25
+      orGroup: PirateHardPool
+    - id: ClothingHeadHelmetPirateOld
+      prob: 0.25
+      orGroup: PirateHardPool
+    # Bonus Loot T3
+    - id: SpaceCash1000
+      prob: 0.9
+    - id: SpaceCash500
+      prob: 0.9
+    - id: SpaceCash1000
+      prob: 0.7
+    - id: LootSpawnerMaterialsHighValueConstruction
+      prob: 0.5
+    - id: LootSpawnerMaterialsHighValueConstruction
+      prob: 0.25
+    - id: PirateTechFabCircuitboard
+      prob: 0.01
+    - id: AirlossAutoInjector
+      prob: 0.05
+    - id: PyraAutoInjector
+      prob: 0.05
+    - id: CombatMedipen
+      prob: 0.05
+    - id: BruteAutoInjector
+      prob: 0.05
+    - id: BurnAutoInjector
+      prob: 0.05
+    - id: BruizAutoInjector
+      prob: 0.05
+    - id: PunctAutoInjector
+      prob: 0.05
+    - id: LacerAutoInjector
+      prob: 0.05
+    - id: EmergencyMedipen
+      prob: 0.4
+    - id: EmergencyMedipen
+      prob: 0.2
+    - id: EmergencyMedipen
+      prob: 0.1
+    - id: ClothingBackpackMessengerPirate
+      prob: 0.15
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
 
@@ -1490,7 +1563,7 @@
     - id: LootSpawnerMaterialsHighValueConstruction
       prob: 0.25
     - id: PirateTechFabCircuitboard
-      prob: 0.1
+      prob: 0.01
     - id: AirlossAutoInjector
       prob: 0.05
     - id: PyraAutoInjector
@@ -1569,7 +1642,7 @@
     - id: LootSpawnerMaterialsHighValueConstruction
       prob: 0.25
     - id: PirateTechFabCircuitboard
-      prob: 0.1
+      prob: 0.01
     - id: AirlossAutoInjector
       prob: 0.05
     - id: PyraAutoInjector
@@ -1675,7 +1748,7 @@
     - id: LootSpawnerMaterialsHighValueConstruction
       prob: 0.25
     - id: PirateTechFabCircuitboard
-      prob: 0.1
+      prob: 0.01
     - id: AirlossAutoInjector
       prob: 0.05
     - id: PyraAutoInjector
@@ -1766,7 +1839,7 @@
     - id: LootSpawnerMaterialsHighValueConstruction
       prob: 0.25
     - id: PirateTechFabCircuitboard
-      prob: 0.1
+      prob: 0.01
     - id: AirlossAutoInjector
       prob: 0.05
     - id: PyraAutoInjector
@@ -1838,7 +1911,7 @@
     - id: SpaceCash2500
       prob: 0.9
     - id: PirateTechFabCircuitboard
-      prob: 0.5
+      prob: 0.1
     - id: SpaceCash1000
       prob: 0.7
     - id: SpaceCash1000
@@ -1913,7 +1986,7 @@
     - id: SpaceCash2500
       prob: 0.9
     - id: PirateTechFabCircuitboard
-      prob: 0.25
+      prob: 0.1
     - id: SpaceCash1000
       prob: 0.7
     - id: SpaceCash1000
@@ -2012,7 +2085,7 @@
     - id: EmpImplanter
       orGroup: CyberPool
     # Bonus Loot T4
-    - id: ClothingBackPackDuffelSyndicate
+    - id: ClothingBackpackDuffelSyndicate
       prob: 0.9
     - id: SpaceCash1000
       prob: 0.7
@@ -2109,7 +2182,7 @@
     - id: LootSpawnerMaterialsHighValueConstruction
       prob: 0.5
     - id: PirateTechFabCircuitboard
-      prob: 0.1
+      prob: 0.01
     - id: AirlossAutoInjector
       prob: 0.05
     - id: PyraAutoInjector
