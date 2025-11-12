@@ -765,7 +765,7 @@
   components:
   - type: Construction
     graph: EnergySwordDoubleGraph
-    node: toyDouble
+    node: toy
   # Sunrise-End
 
 - type: entity
