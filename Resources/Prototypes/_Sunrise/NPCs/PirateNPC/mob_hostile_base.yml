@@ -86,152 +86,6 @@
         Airloss: -1
 #endregion
 
-# A base restriction set.
-# Should be applied on any mob base with MobEnhancedMovement,
-# or on upstream definitions.
-# This should not be used on non-abstract Frontier mobs.
-- type: entity
-  abstract: true
-  id: BaseMobRestrictions
-  components:
-  - type: SalvageMobRestrictions
-    addComponentsOnDeath:
-    - type: Unrevivable
-    - type: Strippable
-    - type: UserInterface
-      interfaces:
-        enum.StrippingUiKey.Key:
-         type: StrippableBoundUserInterface
-    removeComponentsOnDeath:
-    - type: Insulated
-    - type: Reflect
-    - type: MovementIgnoreGravity
-    - type: Tool
-    - type: Prying
-    - type: CanMoveInAir
-    - type: Tag
-    - type: Access
-    - type: Timer
-    - type: TimedSpawner
-    - type: Jittering
-
-# Restriction modifiers.
-# Will be applied on top of BaseMobRestrictions.
-- type: entity
-  abstract: true
-  id: MobBossRestrictions
-  components:
-  - type: SalvageMobRestrictions
-    addComponentsLeaveGrid:
-    - type: TimedDespawn
-      lifetime: 15
-    - type: PassiveDamage
-      allowedStates:
-      - Alive
-      damage:
-        types:
-          Cellular: 1
-    - type: Pacified
-    removeComponentsReturnGrid:
-    - type: TimedDespawn
-    - type: PassiveDamage
-    - type: Pacified
-
-- type: entity
-  abstract: true
-  id: MobRestrictionsSilicon
-  components:
-  - type: SalvageMobRestrictions
-    addComponentsOnDeath:
-    - type: Strippable
-    - type: UserInterface
-      interfaces:
-        enum.StrippingUiKey.Key:
-         type: StrippableBoundUserInterface
-    removeComponentsOnDeath:
-#    - type: Pullable # TODO: This makes the mob stuck to your hand if it dies when you pull it
-    - type: Carriable # Carrying system from nyanotrasen.
-    - type: Tool
-    - type: Prying
-    - type: MovementIgnoreGravity
-    - type: Access
-    addComponentsOnRevival:
-#    - type: Pullable # TODO: This makes the mob stuck to your hand if it dies when you pull it
-    - type: Carriable # Carrying system from nyanotrasen.
-    - type: Tool
-      speedModifier: 1.5
-      qualities:
-        - Prying
-    - type: Prying # Open door from xeno.yml.
-      pryPowered: true
-      force: true
-      speedModifier: 1.5
-      useSound:
-        path: /Audio/Items/crowbar.ogg
-    - type: MovementIgnoreGravity
-    removeComponentsOnRevival:
-    - type: Strippable
-    - type: UserInterface
-#endregion
-
-#region Despawn timers
-- type: entity
-  abstract: true
-  id: MobTimedDespawn30
-  components:
-  - type: TimedDespawn
-    lifetime: 30
-
-- type: entity
-  abstract: true
-  id: MobTimedDespawn60
-  components:
-  - type: TimedDespawn
-    lifetime: 60
-
-- type: entity
-  abstract: true
-  id: MobTimedDespawn80
-  components:
-  - type: TimedDespawn
-    lifetime: 80
-
-- type: entity
-  abstract: true
-  id: MobTimedDespawn120
-  components:
-  - type: TimedDespawn
-    lifetime: 120
-
-- type: entity
-  abstract: true
-  id: MobTimedDespawn180
-  components:
-  - type: TimedDespawn
-    lifetime: 180
-
-- type: entity
-  abstract: true
-  id: MobTimedDespawn1200
-  components:
-  - type: TimedDespawn
-    lifetime: 1200
-
-- type: entity
-  abstract: true
-  id: MobTimedDespawn1800
-  components:
-  - type: TimedDespawn
-    lifetime: 1800
-
-- type: entity
-  abstract: true
-  id: MobTimedDespawn3000
-  components:
-  - type: TimedDespawn
-    lifetime: 3000
-#endregion
-
 #region Movement
 - type: entity
   id: MobEnhancedMovement
@@ -338,8 +192,6 @@
   - MobStaminaBoss
   - MobMovementSpeedModifierBoss
   - MobPassiveRegenMedium
-  - BaseMobRestrictions
-  - MobBossRestrictions
   components:
   - type: Hands
   - type: Puller
@@ -386,8 +238,12 @@
         true
       NavPry: !type:Bool
         true
-      NavSmash: !type:Bool # They use this option too much for my liking, but I'll keep it here as an option
+      NavSmash: !type:Bool
         true
+      VisionRadius: !type:Single
+        20
+      AggroVisionRadius: !type:Single
+        20
 
 - type: entity
   id: MobHumanoidHostileAISimpleRanged
@@ -403,8 +259,14 @@
         true
       NavPry: !type:Bool
         true
-      NavSmash: !type:Bool # They use this option too much for my liking, but I'll keep it here as an option
+      NavSmash: !type:Bool
         true
+      VisionRadius: !type:Single
+        20
+      AggroVisionRadius: !type:Single
+        20
+      MeleeRange: !type:Single
+        4
 
 - type: entity
   id: MobHumanoidHostileAIComplex
@@ -420,7 +282,7 @@
         true
       NavPry: !type:Bool
         true
-      NavSmash: !type:Bool # They use this option too much for my liking, but I'll keep it here as an option
+      NavSmash: !type:Bool
         true
 #endregion
 
@@ -439,7 +301,6 @@
   - MobEnhancedMovement
   - BaseMobSpecies
   - MobHumanoidHostileAIComplex
-  - BaseMobRestrictions
   id: MobHumanoidHostileBase
   components:
   - type: NPCRetaliation
@@ -491,7 +352,6 @@
   - MobFlammable
   - MobEnhancedMovement
   - MobHumanoidHostileAIComplex
-  - BaseMobRestrictions
   id: MobNonHumanHostileBase
   components:
   - type: NPCRetaliation

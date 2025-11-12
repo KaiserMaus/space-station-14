@@ -321,6 +321,37 @@
 
 - type: entity
   parent: ClothingHandsNoGloves
+  id: ClothingCutlassRevolver
+  name: combat gloves
+  suffix: cutlass, revolver
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Objects/Weapons/Melee/cutlass.rsi
+        state: inhand-right
+      - sprite: Objects/Weapons/Guns/Revolvers/pirate_revolver.rsi
+        state: inhand-left
+  - type: Reflect
+    reflectProb: 0.15
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1.25
+    altDisarm: false
+    angle: 0
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Slash: 17
+        Structural: 15
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+      params:
+        variation: 0.250
+
+- type: entity
+  parent: ClothingHandsNoGloves
   id: ClothingHandsECutlass
   name: combat gloves
   suffix: energy cutlass
@@ -430,7 +461,7 @@
   - type: Clothing
     clothingVisuals:
       gloves:
-      - sprite: _Sunrise/Objects/Weapons/Guns/Rifles/skm24/Base/tiny.rsi
+      - sprite: _Sunrise/Objects/Weapons/Guns/Rifles/skm24/Scrap/tiny.rsi
         state: wielded-inhand-right
 
 - type: entity
@@ -521,19 +552,19 @@
     walkModifier: 1
     sprintModifier: 0.9
   - type: Reflect
-    reflectProb: 0.45
+    reflectProb: 0.4
   - type: UseDelay
-    delay: 2
+    delay: 3
   - type: UseDelayOnMeleeHit
   - type: MeleeWeapon
     attackRate: 0.75
     angle: 0
-    bluntStaminaDamageFactor: 2
+    bluntStaminaDamageFactor: 1.5
     animation: WeaponArcFist
     wideAnimationRotation: -135
     damage:
       types:
-        Blunt: 30
+        Blunt: 25
         Structural: 45
     soundHit:
       path: "/Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg"

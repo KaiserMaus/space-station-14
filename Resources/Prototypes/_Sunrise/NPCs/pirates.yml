@@ -16,7 +16,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      125: Critical
+      120: Critical
       140: Dead
   - type: Stamina
     critThreshold: 125
@@ -60,8 +60,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      100: Critical
-      125: Dead
+      80: Critical
+      100: Dead
   - type: Stamina
     critThreshold: 100
   - type: Butcherable
@@ -105,26 +105,35 @@
   - type: Sprite
     layers:
     - state: red
+    - state: one
     - sprite: Objects/Misc/Handy_Flags/pirate_handy_flag.rsi
       state: icon
   - type: RandomSpawner
     prototypes:
       # Ближний
-      - MobPirateKnife
-      - MobPirateMonkeyKnuckleDusters
-      - MobPiratePickaxe
+      - MobPirateT1Knife
+      - MobPirateT1MonkeyKnuckleDusters
+      - MobPirateT1Pickaxe
       # Дальний
-      - MobPiratePistol
-      - MobPirateMosin
-      - MobPiratePKA
-      - MobPirateMonkeyFlareGun
-      - MobPirateMonkeyFlareGunCoin
-      - MobPirateMonkeyFlareGunIncendiary
+      - MobPirateT1Pistol
+      - MobPirateT1Mosin
+      - MobPirateT1PKA
+      - MobPirateT1T1MonkeyFlareGun
+      - MobPirateT1T1MonkeyFlareGunCoin
+      - MobPirateT1T1MonkeyFlareGunIncendiary
+      - MobPirateT1MonkeyFlareGunUranium
+      - MobPirateT1ScrapSMG
+      - MobPirateT1SMG
       # Редкие
     rarePrototypes:
-      - MobPirateFlintlock
-      - MobPirateMonkeyFlareGunUranium
-      - MobPirateMonkeyFireBomb
+      - MobPirateT1MonkeyFireBomb
+      - MobPirateT1MonkeyEDagger
+      - MobPirateT1Hunter
+      - MobPirateT1ECutlass
+      - MobPirateT1EPickaxe
+      - MobPirateT1Flintlock
+      - MobPirateT1PlasmaCutter
+      - MobPirateT1ScrapRifle
     rareChance: 0.15
 
 - type: entity
@@ -135,64 +144,67 @@
   - type: Sprite
     layers:
     - state: red
+    - state: two
     - sprite: Objects/Misc/Handy_Flags/pirate_handy_flag.rsi
       state: icon
   - type: RandomSpawner
     prototypes:
       # Ближний
-      - MobPirateCutlass
-      - MobPirateSledgehammer
-      - MobPirateGauntletDrill
+      - MobPirateT2Cutlass
+      - MobPirateT2ECutlass
+      - MobPirateT2Sledgehammer
+      - MobPirateT2GauntletDrill
       # Дальний
-      - MobPiratePlasmaCutter
-      - MobPirateScrapSMG
-      - MobPirateShotgun
-      - MobPirateDoubleRevolver
-      - MobPirateDoubleFlintlock
+      - MobPirateT2Shotgun
+      - MobPirateT2Musket
+      - MobPirateT2MachineCannon
+      - MobPirateT2DoubleFlintlock
+      - MobPirateT2DoubleRevolver
     rarePrototypes:
-      - MobPirateRevolver
-      - MobPirateMusket
-      - MobPirateMachineCannon
-      - MobPirateHunter
+      - MobPirateT2RevolverCutlass
+      - MobPirateT2Grapeshot
+      - MobPirateT2Cannoball
+      - MobPirateT2Mech
+      - MobPirateT2Juggernaut
     rareChance: 0.15
 
-- type: entity
-  name: pirate T3 spawner
-  id: MobPirateT3Spawner
-  parent: MarkerBase
-  components:
-  - type: Sprite
-    layers:
-    - state: red
-    - sprite: Objects/Misc/Handy_Flags/pirate_handy_flag.rsi
-      state: icon
-  - type: RandomSpawner
-    prototypes:
-      # Ближний
-      - MobPirateECutlass
-      - MobPirateEPickaxe
-      - MobPirateMonkeyEDagger
-      # Дальний
-      - MobPirateScrapRifle
-      - MobPirateSMG
-    rarePrototypes:
-      - MobPirateGrenadier
-      - MobPirateGrapeshot
-      - MobPirateMech
-      - MobPirateJuggernaut
-    rareChance: 0.15
+# - type: entity
+#   name: pirate T3 spawner
+#   id: MobPirateT3Spawner
+#   parent: MarkerBase
+#   components:
+#   - type: Sprite
+#     layers:
+#     - state: red
+#     - sprite: Objects/Misc/Handy_Flags/pirate_handy_flag.rsi
+#       state: icon
+#   - type: RandomSpawner
+#     prototypes:
+#       # Ближний
+#       - MobPirateECutlass
+#       - MobPirateEPickaxe
+#       - MobPirateMonkeyEDagger
+#       # Дальний
+#       - MobPirateScrapRifle
+#       - MobPirateSMG
+#     rarePrototypes:
+#       - MobPirateGrenadier
+#       - MobPirateGrapeshot
+#       - MobPirateMech
+#       - MobPirateJuggernaut
+#     rareChance: 0.15
 
 # Variations
-# region Tier 1
+# region Melee Tier 1
 - type: entity
-  name: scrap monkey
+  name: Scrap monkey
   description: The cheapest rookie member of the team. Willing to do anything for a banana salary. Holds knuckle dusters branded with the blood-red S.
   parent: [MobMovementSpeedModifierEVAMelee, MobPirateMonkey, MobHumanoidHostileAISimpleMelee]
-  id: MobPirateMonkeyKnuckleDusters
+  id: MobPirateT1MonkeyKnuckleDusters
   components:
   - type: Loadout
     prototypes:
-    - MobPirateMonkeyGearMeleeT1
+    - MobPirateT1MonkeyKnuckleDustersGear
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -217,14 +229,14 @@
     animation: WeaponArcFist
 
 - type: entity
-  name: scrap monkey
+  name: Scrap monkey
   description: The cheapest rookie member of the team. Willing to do anything for a banana salary. Holds Flare Gun.
   parent: [MobMovementSpeedModifierEVARanged, MobPirateMonkey]
-  id: MobPirateMonkeyFlareGun
+  id: MobPirateT1MonkeyFlareGun
   components:
   - type: Loadout
     prototypes:
-    - MobPirateMonkeyGearRangedT1
+    - MobPirateT1MonkeyFlareGunGear
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -249,8 +261,8 @@
     soundGunshot: /Audio/Weapons/Guns/Gunshots/flaregun.ogg
 
 - type: entity
-  parent: MobPirateMonkeyFlareGun
-  id: MobPirateMonkeyFlareGunIncendiary
+  parent: MobPirateT1MonkeyFlareGun
+  id: MobPirateT1MonkeyFlareGunIncendiary
   components:
   - type: BasicEntityAmmoProvider
     proto: ShellShotgunImprovisedIncendiary
@@ -267,8 +279,8 @@
       state: inhand-left
 
 - type: entity
-  parent: MobPirateMonkeyFlareGun
-  id: MobPirateMonkeyFlareGunCoin
+  parent: MobPirateT1MonkeyFlareGun
+  id: MobPirateT1MonkeyFlareGunCoin
   components:
   - type: BasicEntityAmmoProvider
     proto: ShellShotgunCoin
@@ -287,8 +299,8 @@
       state: inhand-left
 
 - type: entity
-  parent: MobPirateMonkeyFlareGun
-  id: MobPirateMonkeyFlareGunUranium
+  parent: MobPirateT1MonkeyFlareGun
+  id: MobPirateT1MonkeyFlareGunUranium
   components:
   - type: BasicEntityAmmoProvider
     proto: ShellShotgunImprovisedUranium
@@ -307,14 +319,14 @@
       state: inhand-left
 
 - type: entity
-  name: scrap monkey
+  name: Scrap monkey
   description: The cheapest rookie member of the team. Willing to do anything for a banana salary. This one holds Fire Bomb.
   parent: [MobMovementSpeedModifierEVAMelee, MobPirateMonkey]
-  id: MobPirateMonkeyFireBomb
+  id: MobPirateT1MonkeyFireBomb
   components:
   - type: Loadout
     prototypes:
-    - MobPirateMonkeyGearRangedAltT1
+    - MobPirateT1MonkeyFireBombGear
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -344,14 +356,69 @@
     soundGunshot: /Audio/Effects/drop.ogg
 
 - type: entity
-  name: deckhand boarder
-  description: Rookie raider sent first through the breach. Usually doesn’t come back, but makes a great distraction.
-  parent: [MobMovementSpeedModifierEVAMelee, MobPirateBase, MobHumanoidHostileAISimpleMelee]
-  id: MobPirateKnife
+  name: boarder monkey
+  description: Looks like a crew member who's been through more than one boarding, but still works for bananas. Holds an energy dagger.
+  parent: [MobMovementSpeedModifierEVAMelee, MobPirateMonkey, MobHumanoidHostileAISimpleMelee]
+  id: MobPirateT1MonkeyEDagger
   components:
   - type: Loadout
     prototypes:
-    - MobPirateGearMeleeT1
+    - MobPirateT1MonkeyEDaggerGear
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: Mobs/Animals/monkey.rsi
+      state: monkey
+    - sprite: _Sunrise/Clothing/OuterClothing/Suits/pirateeva_armored_alt.rsi
+      state: equipped-OUTERCLOTHING-monkey
+    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
+      state: equipped-HELMET
+    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
+      state: on-equipped-HELMET
+      shader: unshaded
+    - sprite: Objects/Weapons/Melee/e_dagger_loud.rsi
+      state: inhand-left
+    - sprite: Objects/Weapons/Melee/e_dagger_loud.rsi
+      state: inhand-left-blade
+      color: "#e95151"
+      shader: unshaded
+  - type: PointLight
+    enabled: true
+    radius: 2
+    energy: 2
+    color: "#e95151"
+  - type: Reflect
+    reflectProb: 0.5
+  - type: AmbientSound
+    volume: 3
+    range: 5
+    sound:
+      path: /Audio/Weapons/ebladehum.ogg
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    altDisarm: false
+    angle: 0
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Slash: 10
+        Heat: 10
+        Structural: 10
+    soundHit:
+      path: /Audio/Weapons/eblade1.ogg
+      params:
+        variation: 0.250
+
+- type: entity
+  name: Scrap boarder
+  description: Rookie raider sent first through the breach. Usually doesn’t come back, but makes a great distraction.
+  parent: [MobMovementSpeedModifierEVAMelee, MobPirateBase, MobHumanoidHostileAISimpleMelee]
+  id: MobPirateT1Knife
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateT1KnifeGear
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -368,60 +435,14 @@
       shader: unshaded
 
 - type: entity
-  name: powder bird
-  description: Loves guns, hates aiming. Fires until something stops moving.
-  parent: [MobMovementSpeedModifierEVARanged, MobPirateBase]
-  id: MobPirateFlintlock
+  name: Scrap boarder
+  description: Swings with the characteristic Vshuuu Vshuuu sound of an energy sword, constantly showing off just how awesome these Eeeee-blades are.
+  parent: [MobMovementSpeedModifierEVAMelee, MobPirateBaseT3, MobHumanoidHostileAISimpleMelee]
+  id: MobPirateT1ECutlass
   components:
   - type: Loadout
     prototypes:
-    - MobPirateGearRangedT1
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: Mobs/Species/Vox/parts.rsi
-      state: vox_m
-    - sprite: _Sunrise/Clothing/OuterClothing/Suits/pirateeva.rsi
-      state: equipped-OUTERCLOTHING-vox
-    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_old.rsi
-      state: equipped-HELMET-vox
-  - type: BasicEntityAmmoProvider
-    proto: CartridgeMagnumAP
-    capacity: 1
-    count: 1
-  - type: Gun
-    showExamineText: false
-    fireRate: 0.2
-    selectedMode: FullAuto
-    availableModes:
-    - FullAuto
-    soundGunshot: /Audio/Weapons/Guns/Gunshots/sniper.ogg
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: FootstepCatwalk
-      params:
-        volume: 5
-  - type: Speech
-    speechSounds: Parrot
-    speechVerb: Parrot
-  - type: Vocal
-    sounds:
-      Unsexed: Parrot
-  - type: ActiveListener
-  - type: Vocalizer
-  - type: RadioVocalizer
-  - type: ParrotListener
-  - type: ParrotMemory
-
-- type: entity
-  name: pirate gunner
-  description: Low-ranking raider armed with a variety of surplus weapons.
-  parent: [MobMovementSpeedModifierEVARanged, MobPirateBase]
-  id: MobPiratePistol
-  components:
-  - type: Loadout
-    prototypes:
-    - MobPirateGearRangedAltT1
+    - MobPirateT1ECutlassGear
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -434,31 +455,18 @@
     - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
       state: on-equipped-HELMET
       shader: unshaded
-  - type: BasicEntityAmmoProvider
-    proto: CartridgePistolImprovised
-    capacity: 5
-    count: 5
-  - type: Gun
-    showExamineText: false
-    minAngle: 10
-    maxAngle: 21
-    angleIncrease: 4
-    angleDecay: 3
-    fireRate: 1.5
-    selectedMode: FullAuto
-    availableModes:
-    - FullAuto
-    soundGunshot: /Audio/Weapons/Guns/Gunshots/pistol.ogg
+    - sprite: Objects/Tanks/oxygen.rsi
+      state: equipped-SUITSTORAGE
 
 - type: entity
-  name: pirate rifleman
-  description: A Mosin-wielding marksman from the ancient wars. He likes to quote USSP regulations that no one has ever seen.
-  parent: [MobMovementSpeedModifierEVARanged, MobPirateBase]
-  id: MobPirateMosin
+  name: Scrap miner
+  parent: [MobMovementSpeedModifierEVAMelee, MobPirateBaseT3, MobHumanoidHostileAISimpleMelee]
+  id: MobPirateT1EPickaxe
+  description: A looter that scavenged enough coins to afford some decent equipment.
   components:
   - type: Loadout
     prototypes:
-    - MobPirateGearRangedAlt2T1
+    - MobPirateT1EPickaxeGear
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -471,35 +479,18 @@
     - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
       state: on-equipped-HELMET
       shader: unshaded
-    - sprite: Clothing/Head/Hats/ushanka.rsi
-      state: equipped-HELMET
-    - sprite: _Sunrise/Clothing/Neck/Misc/pins.rsi
-      state: comm-equipped
-  - type: BasicEntityAmmoProvider
-    proto: CartridgeHeavyRifleRFMJ
-    capacity: 5
-    count: 5
-  - type: Gun
-    showExamineText: false
-    fireRate: 0.65
-    minAngle: 1
-    maxAngle: 10
-    selectedMode: SemiAuto
-    availableModes:
-    - SemiAuto
-    soundGunshot: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+    - sprite: Objects/Tanks/oxygen.rsi
+      state: equipped-SUITSTORAGE
 
-# Variations
-# Tier 1
 - type: entity
-  name: looter
+  name: Scrap miner
   parent: [MobMovementSpeedModifierEVAMelee, MobPirateBase, MobHumanoidHostileAISimpleMelee]
-  id: MobPiratePickaxe
+  id: MobPirateT1Pickaxe
   description: Armed with a trusty pickaxe and greed, every group needs its grunts.
   components:
   - type: Loadout
     prototypes:
-    - MobPirateScrapperGearMeleeT1
+    - MobPirateT1PickaxeGear
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -536,475 +527,14 @@
       collection: MetalThud
 
 - type: entity
-  name: scrapper
-  parent: [MobMovementSpeedModifierEVARanged, MobPirateBase]
-  id: MobPiratePKA
-  description: Proto-kinetic accelerator in hands, rum in the belly. That's how you explore.
-  components:
-  - type: Loadout
-    prototypes:
-    - MobPirateScrapperGearRangedT1
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
-      state: human
-    - sprite: _Sunrise/Clothing/OuterClothing/Suits/pirateeva.rsi
-      state: equipped-OUTERCLOTHING
-    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva.rsi
-      state: equipped-HELMET
-    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva.rsi
-      state: on-equipped-HELMET
-      shader: unshaded
-  - type: RechargeBasicEntityAmmo
-    rechargeCooldown: 0.75
-    rechargeSound:
-      path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
-  - type: BasicEntityAmmoProvider
-    proto: BulletKinetic
-    capacity: 1
-    count: 1
-  - type: Gun
-    showExamineText: false
-    fireRate: 0.5
-    minAngle: 31
-    maxAngle: 45
-    selectedMode: SemiAuto
-    availableModes:
-    - SemiAuto
-    soundGunshot: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
-  - type: PointLight
-    enabled: true
-    autoRot: true
-    netsync: false
-    radius: 2
-    energy: 2
-    mask: /Textures/Effects/LightMasks/cone.png
-    color: "#FFC458FF"
-
-# region Tier 2
-- type: entity
-  name: pirate boarder
-  description: Shock troopers that specialize in using the element of surprise and swift, aggressive action to achieve their objectives.
-  parent: [MobMovementSpeedModifierEVAMelee, MobPirateBaseT2, MobHumanoidHostileAISimpleMelee]
-  id: MobPirateCutlass
-  components:
-  - type: Loadout
-    prototypes:
-    - MobPirateGearMeleeT2
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: Clothing/OuterClothing/Armor/podwars_armor.rsi
-      state: equipped-OUTERCLOTHING
-    - sprite: Clothing/Head/Helmets/podwars_helmet.rsi
-      state: equipped-HELMET
-    - sprite: _Sunrise/Clothing/Head/Hardsuits/piratecaptainhelm.rsi
-      state: on-equipped-HELMET
-      shader: unshaded
-
-- type: entity
-  name: pirate breacher
-  description: A boarding team member armed with a sledgehammer, capable of breaking through an airlock — or someone’s skull.
-  parent: [MobMovementSpeedModifierEVAMelee, MobPirateBaseT2, MobHumanoidHostileAISimpleMelee]
-  id: MobPirateSledgehammer
-  components:
-  - type: Loadout
-    prototypes:
-    - MobPirateGearMeleeAltT2
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: Clothing/OuterClothing/Armor/podwars_armor.rsi
-      state: equipped-OUTERCLOTHING
-    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt2.rsi
-      state: equipped-HELMET
-    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
-      state: on-equipped-HELMET
-      shader: unshaded
-    - sprite: Clothing/Uniforms/Jumpsuit/gladiator.rsi
-      state: equipped-INNERCLOTHING
-    - sprite: Clothing/Head/Hats/gladiator.rsi
-      state: equipped-HELMET
-
-- type: entity
-  name: pirate breacher
-  description: Drilling in the name of... drilling. No rock formation or shuttle wall can withstand the power of mining drill gauthlet.
-  parent: [MobMovementSpeedModifierEVAMelee, MobPirateBaseT2, MobHumanoidHostileAISimpleMelee]
-  id: MobPirateGauntletDrill
-  components:
-  - type: Loadout
-    prototypes:
-    - MobPirateGearMeleeAlt2T2
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: Clothing/OuterClothing/Armor/podwars_armor.rsi
-      state: equipped-OUTERCLOTHING
-    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
-      state: equipped-HELMET
-    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
-      state: on-equipped-HELMET
-      shader: unshaded
-    - sprite: Clothing/Uniforms/Jumpsuit/gladiator.rsi
-      state: equipped-INNERCLOTHING
-    - sprite: Clothing/Head/Hats/gladiator.rsi
-      state: equipped-HELMET
-  - type: RechargeBasicEntityAmmo
-    rechargeCooldown: 45
-    rechargeSound:
-      path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
-  - type: BasicEntityAmmoProvider
-    proto: ShellShotgunFlare
-    capacity: 1
-    count: 1
-  - type: Wieldable
-  - type: Gun
-    fireRate: 0.5
-    selectedMode: SemiAuto
-    minAngle: 3
-    maxAngle: 6
-    projectileSpeed: 18
-    availableModes:
-    - SemiAuto
-    soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
-  - type: Tag
-    tags:
-    - DoorBumpOpener
-    - FootstepSound
-    - Pickaxe
-
-- type: entity
-  name: pirate miner
-  description: A seasoned pirate-salvager. With a plasma cutter, capable of slicing through shuttle hulls and clearing a path for the boarding team.
-  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT2]
-  id: MobPiratePlasmaCutter
-  components:
-  - type: Loadout
-    prototypes:
-    - MobPirateGearRangedAlt2T2
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
-      state: human
-    - sprite: Clothing/OuterClothing/Armor/podwars_armor.rsi
-      state: equipped-OUTERCLOTHING
-    - sprite: Clothing/Head/Helmets/podwars_helmet.rsi
-      state: equipped-HELMET
-    - sprite: _Sunrise/Clothing/Head/Hardsuits/piratecaptainhelm.rsi
-      state: on-equipped-HELMET
-      shader: unshaded
-    - sprite: Clothing/Neck/Cloaks/goliathcloak.rsi
-      state: equipped-NECK
-    - sprite: Clothing/Head/Hoods/goliathcloak.rsi
-      state: equipped-HELMET
-  - type: RechargeBasicEntityAmmo
-    rechargeCooldown: 1
-    rechargeSound:
-      path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
-  - type: BasicEntityAmmoProvider
-    proto: BulletPlasma
-    capacity: 1
-    count: 1
-  - type: Wieldable
-  - type: Gun
-    fireRate: 0.5
-    selectedMode: SemiAuto
-    minAngle: 3
-    maxAngle: 6
-    availableModes:
-    - SemiAuto
-    soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
-  - type: JumpAbility
-    jumpDistance: 4
-    jumpSound: /Audio/Effects/stealthoff.ogg
-
-- type: entity
-  name: bounty hunter
-  description: A seasoned merc who joined the pirate ranks. Fast hands, faster trigger — and no loyalty but credits.
-  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT2]
-  id: MobPirateRevolver
-  components:
-  - type: Loadout
-    prototypes:
-    - MobPirateGearRangedT2
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
-      state: human
-    - sprite: Clothing/OuterClothing/Armor/podwars_armor.rsi
-      state: equipped-OUTERCLOTHING
-    - sprite: Clothing/OuterClothing/Coats/hos_trenchcoat.rsi
-      state: equipped-OUTERCLOTHING
-    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
-      state: equipped-HELMET
-    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
-      state: on-equipped-HELMET
-      shader: unshaded
-    - sprite: Clothing/Head/Hats/cowboyhatbountyhunter.rsi
-      state: equipped-HELMET
-  - type: ProjectileBatteryAmmoProvider
-    proto: CartridgePistol40SP
-    fireCost: 10
-  - type: BatterySelfRecharger
-    autoRecharge: true
-    autoRechargePause: true
-    autoRechargePauseTime: 5
-    autoRechargeRate: 999
-  - type: Battery
-    maxCharge: 60
-    startingCharge: 60
-  - type: Gun
-    showExamineText: false
-    burstFireRate: 10
-    shotsPerBurst: 2
-    burstCooldown: 0.5
-    minAngle: 1
-    maxAngle: 8
-    selectedMode: Burst
-    availableModes:
-    - Burst
-    soundGunshot: /Audio/Weapons/Guns/Gunshots/revolver.ogg
-
-- type: entity
-  name: pirate hunter
-  description: Armed with two an antique pirate revolvers.
-  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT2]
-  id: MobPirateDoubleRevolver
-  components:
-  - type: Loadout
-    prototypes:
-    - MobPirateGearRangedAlt5T2
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: Clothing/OuterClothing/Hardsuits/pirateeva.rsi
-      state: equipped-OUTERCLOTHING-reptilian
-    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
-      state: equipped-HELMET
-    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
-      state: on-equipped-HELMET
-      shader: unshaded
-    - sprite: Clothing/Belt/assault.rsi
-      state: equipped-BELT
-  - type: ProjectileBatteryAmmoProvider
-    proto: CartridgeMagnumImprovised
-    fireCost: 10
-  - type: BatterySelfRecharger
-    autoRecharge: true
-    autoRechargePause: true
-    autoRechargePauseTime: 2
-    autoRechargeRate: 999
-  - type: Battery
-    maxCharge: 20
-    startingCharge: 20
-  - type: Gun
-    showExamineText: false
-    fireRate: 8
-    minAngle: 1
-    maxAngle: 8
-    selectedMode: SemiAuto
-    availableModes:
-    - SemiAuto
-    soundGunshot: /Audio/Weapons/Guns/Gunshots/revolver.ogg
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: FootstepCatwalk
-      params:
-        volume: 5
-
-- type: entity
-  name: pirate hunter
-  description: Armed with two an antique flintlocks.
-  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT2]
-  id: MobPirateDoubleFlintlock
-  components:
-  - type: Loadout
-    prototypes:
-    - MobPirateGearRangedAlt6T2
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: Clothing/OuterClothing/Hardsuits/pirateeva.rsi
-      state: equipped-OUTERCLOTHING-reptilian
-    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
-      state: equipped-HELMET
-    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
-      state: on-equipped-HELMET
-      shader: unshaded
-    - sprite: Clothing/Belt/assault.rsi
-      state: equipped-BELT
-  - type: ProjectileBatteryAmmoProvider
-    proto: CartridgeMagnumAP
-    fireCost: 10
-  - type: BatterySelfRecharger
-    autoRecharge: true
-    autoRechargePause: true
-    autoRechargePauseTime: 6
-    autoRechargeRate: 999
-  - type: Battery
-    maxCharge: 20
-    startingCharge: 20
-  - type: Gun
-    showExamineText: false
-    fireRate: 8
-    minAngle: 1
-    maxAngle: 8
-    selectedMode: SemiAuto
-    availableModes:
-    - SemiAuto
-    soundGunshot: /Audio/Weapons/Guns/Gunshots/sniper.ogg
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: FootstepCatwalk
-      params:
-        volume: 5
-
-- type: entity
-  name: pirate blunderbuss
-  description: Less a gun, more a handheld cannon. Fires anything that fits the barrel.
-  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT2]
-  id: MobPirateShotgun
-  components:
-  - type: Loadout
-    prototypes:
-    - MobPirateGearRangedAltT2
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
-      state: human
-    - sprite: Clothing/OuterClothing/Hardsuits/pirateeva.rsi
-      state: equipped-OUTERCLOTHING
-    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
-      state: equipped-HELMET
-    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
-      state: on-equipped-HELMET
-      shader: unshaded
-  - type: BasicEntityAmmoProvider
-    proto: CannonBallGrapeshotMini
-  - type: Gun
-    showExamineText: false
-    fireRate: 0.5
-    selectedMode: SemiAuto
-    availableModes:
-    - SemiAuto
-    soundGunshot: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
-
-- type: entity
-  name: pirate musketeer
-  description: Armed with an antique large-caliber musket.
-  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT2]
-  id: MobPirateMusket
-  components:
-  - type: Loadout
-    prototypes:
-    - MobPirateGearRangedAlt4T2
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: Mobs/Species/Vox/parts.rsi
-      state: vox_m
-    - sprite: Clothing/OuterClothing/Hardsuits/pirateeva.rsi
-      state: equipped-OUTERCLOTHING-vox
-    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
-      state: equipped-HELMET-vox
-    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
-      state: on-equipped-HELMET-vox
-      shader: unshaded
-  - type: BasicEntityAmmoProvider
-    proto: CartridgeAntiMateriel
-  - type: Gun
-    showExamineText: false
-    fireRate: 0.25
-    selectedMode: SemiAuto
-    availableModes:
-    - SemiAuto
-    soundGunshot: /Audio/Weapons/Guns/Gunshots/sniper.ogg
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: FootstepCatwalk
-      params:
-        volume: 5
-  - type: Speech
-    speechSounds: Parrot
-    speechVerb: Parrot
-  - type: Vocal
-    sounds:
-      Unsexed: Parrot
-  - type: ActiveListener
-  - type: Vocalizer
-  - type: RadioVocalizer
-  - type: ParrotListener
-  - type: ParrotMemory
-
-- type: entity
-  name: pirate machinonner
-  description: Pirate with handheld belt feeded cannon..What?!.
-  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT2]
-  id: MobPirateMachineCannon
-  components:
-  - type: Loadout
-    prototypes:
-    - MobPirateGearRangedAlt3T2
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
-      state: human
-    - sprite: Clothing/OuterClothing/Hardsuits/pirateeva.rsi
-      state: equipped-OUTERCLOTHING
-    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
-      state: equipped-HELMET
-    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
-      state: on-equipped-HELMET
-      shader: unshaded
-    - sprite: Clothing/Belt/assault.rsi
-      state: equipped-BELT
-  - type: MovementSpeedModifier
-    baseSprintSpeed: 2.75
-  - type: ProjectileBatteryAmmoProvider
-    proto: CannonBallMini
-    fireCost: 1
-  - type: BatterySelfRecharger
-    autoRecharge: true
-    autoRechargePause: true
-    autoRechargePauseTime: 1.75
-    autoRechargeRate: 999
-  - type: Battery
-    maxCharge: 15
-    startingCharge: 15
-  - type: Gun
-    projectileSpeed: 20
-    showExamineText: false
-    fireRate: 6.5
-    minAngle: 10
-    maxAngle: 50
-    angleIncrease: 5
-    angleDecay: 15
-    selectedMode: FullAuto
-    availableModes:
-    - FullAuto
-    soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/mateba.ogg
-      params:
-        volume: -1
-        pitch: 1.2
-
-# Tier 2
-- type: entity
   name: goliath hunter
   parent: [MobMovementSpeedModifierEVAMelee, MobPirateBaseT2, MobHumanoidHostileAISimpleMelee]
-  id: MobPirateHunter
+  id: MobPirateT1Hunter
   description: Veteran scrappers, these salvagers are wealthy enough to explore abandoned ruins for the adrenaline rush and adventure alone.
   components:
   - type: Loadout
     prototypes:
-    - MobPirateScrapperGearMeleeT2
+    - MobPirateT1HunterGear
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -1034,9 +564,9 @@
   - type: LeechOnMarker
     leech:
       groups:
-        Brute: -20
+        Brute: -30
       types:
-        Heat: -5
+        Heat: -10
         Bloodloss: -5
         Mangleness: -5
   - type: MeleeWeapon
@@ -1050,16 +580,215 @@
     bluntStaminaDamageFactor: 1
     soundHit:
       collection: MetalThud
+  - type: JumpAbility
+    jumpDistance: 4
+    jumpSound: /Audio/Effects/stealthoff.ogg
+  - type: NPCUseActionWhenTargetInRange
+    actions:
+    - actionId: ActionGravityJump
+      minRange: 0
+      maxRange: 4
 
+# region Ranged Tier 1
 - type: entity
-  name: scavenger boarder
-  description: Loves guns. Has built as many weapons with his own hands as he’s blown up. Armed with an improvised SMG.
+  name: Scrap salvager
+  description: A seasoned pirate-salvager. With a plasma cutter, capable of slicing through shuttle hulls and clearing a path for the boarding team.
   parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT2]
-  id: MobPirateScrapSMG
+  id: MobPirateT1PlasmaCutter
   components:
   - type: Loadout
     prototypes:
-    - MobPirateScrapperGearRangedT2
+    - MobPirateT1PlasmaCutterGear
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: Clothing/OuterClothing/Hardsuits/salvage.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Head/Helmets/podwars_helmet.rsi
+      state: equipped-HELMET
+    - sprite: _Sunrise/Clothing/Head/Hardsuits/piratecaptainhelm.rsi
+      state: on-equipped-HELMET
+      shader: unshaded
+    - sprite: Clothing/Neck/Cloaks/goliathcloak.rsi
+      state: equipped-NECK
+    - sprite: Clothing/Head/Hoods/goliathcloak.rsi
+      state: equipped-HELMET
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 1
+    rechargeSound:
+      path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
+  - type: BasicEntityAmmoProvider
+    proto: BulletPlasma
+    capacity: 1
+    count: 1
+  - type: Wieldable
+  - type: Gun
+    fireRate: 0.5
+    selectedMode: SemiAuto
+    minAngle: 5
+    maxAngle: 8
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
+  - type: JumpAbility
+    jumpDistance: 4
+    jumpSound: /Audio/Effects/stealthoff.ogg
+  - type: NPCUseActionWhenTargetInRange
+    actions:
+    - actionId: ActionGravityJump
+      minRange: 5
+      maxRange: 0
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepAsteroid
+      params:
+        variation: 0.09
+        volume: -6
+
+- type: entity
+  name: powder bird
+  description: Loves guns, hates aiming. Fires until something stops moving.
+  parent: [MobMovementSpeedModifierEVARanged, MobPirateBase]
+  id: MobPirateT1Flintlock
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateT1FlintlockGear
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: Mobs/Species/Vox/parts.rsi
+      state: vox_m
+    - sprite: _Sunrise/Clothing/OuterClothing/Suits/pirateeva.rsi
+      state: equipped-OUTERCLOTHING-vox
+    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_old.rsi
+      state: equipped-HELMET-vox
+    - sprite: Clothing/Shoes/Boots/jumpboots.rsi
+      state: equipped-FEET-vox
+  - type: BasicEntityAmmoProvider
+    proto: CartridgeMagnumAP
+    capacity: 1
+    count: 1
+  - type: Gun
+    showExamineText: false
+    fireRate: 0.2
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: Speech
+    speechSounds: Parrot
+    speechVerb: Parrot
+  - type: Vocal
+    sounds:
+      Unsexed: Parrot
+  - type: ActiveListener
+  - type: Vocalizer
+  - type: RadioVocalizer
+  - type: ParrotListener
+  - type: ParrotMemory
+  - type: JumpAbility
+    jumpDistance: 4
+    jumpSound: /Audio/Effects/stealthoff.ogg
+  - type: NPCUseActionWhenTargetInRange
+    actions:
+    - actionId: ActionGravityJump
+      minRange: 3
+      maxRange: 0
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepCatwalk
+      params:
+        volume: 5
+
+- type: entity
+  name: Scrap handgunner
+  description: Low-ranking raider armed with a variety of surplus weapons.
+  parent: [MobMovementSpeedModifierEVARanged, MobPirateBase]
+  id: MobPirateT1Pistol
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateT1PistolGear
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: _Sunrise/Clothing/OuterClothing/Suits/pirateeva_armored_alt.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
+      state: equipped-HELMET
+    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
+      state: on-equipped-HELMET
+      shader: unshaded
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 2
+  - type: BasicEntityAmmoProvider
+    proto: CartridgePistolImprovised
+    capacity: 6
+    count: 6
+  - type: Gun
+    showExamineText: false
+    minAngle: 10
+    maxAngle: 21
+    angleIncrease: 4
+    angleDecay: 3
+    fireRate: 3
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/pistol.ogg
+
+- type: entity
+  name: Scrap rifleman
+  description: A Mosin-wielding marksman from the ancient wars. He likes to quote USSP regulations that no one has ever seen.
+  parent: [MobMovementSpeedModifierEVARanged, MobPirateBase]
+  id: MobPirateT1Mosin
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateT1MosinGear
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: _Sunrise/Clothing/OuterClothing/Suits/pirateeva_armored_alt.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt2.rsi
+      state: equipped-HELMET
+    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
+      state: on-equipped-HELMET
+      shader: unshaded
+    - sprite: Clothing/Head/Hats/ushanka.rsi
+      state: equipped-HELMET
+    - sprite: _Sunrise/Clothing/Neck/Misc/pins.rsi
+      state: comm-equipped
+  - type: BasicEntityAmmoProvider
+    proto: CartridgeHeavyRifleRFMJ
+    capacity: 5
+    count: 5
+  - type: Gun
+    showExamineText: false
+    fireRate: 0.65
+    minAngle: 1
+    maxAngle: 10
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+
+- type: entity
+  name: Scrap raider
+  description: Loves guns. Has built as many weapons with his own hands as he’s blown up. Armed with an improvised SMG.
+  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT2]
+  id: MobPirateT1ScrapSMG
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateT1ScrapSMGGear
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -1092,134 +821,15 @@
     - FullAuto
     soundGunshot: /Audio/_Starlight/Weapons/Guns/Gunshots/ppsh.ogg
 
-# region Tier 3
 - type: entity
-  name: pirate grenadier
-  description: Covered in fireworks and explosives. Hasn’t heard of safety regulations — or just ignores them loudly.
+  name: Scrap Automatic
   parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT3]
-  id: MobPirateGrenadier
-  components:
-  - type: Loadout
-    prototypes:
-    - MobPirateGearRangedAltT3
-  - type: ExplosionResistance
-    damageCoefficient: 0.01
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
-      state: human
-    - sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/ussp-heavy.rsi
-      state: equipped-OUTERCLOTHING
-    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_old.rsi
-      state: equipped-HELMET
-    - sprite: Clothing/Head/Bandanas/merc.rsi
-      state: equipped-HELMET
-  - type: BasicEntityAmmoProvider
-    proto: GrenadeFragContact
-    capacity: 1
-    count: 1
-  - type: Gun
-    projectileSpeed: 15
-    showExamineText: false
-    fireRate: 0.15
-    selectedMode: FullAuto
-    availableModes:
-    - FullAuto
-    soundGunshot: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
-
-- type: entity
-  name: Shrap'nel Thunder
-  description: Turns everything into cheese with holes. Claims that “shrapnel is just another form of art.
-  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT3]
-  id: MobPirateGrapeshot
-  components:
-  - type: Loadout
-    prototypes:
-    - MobPirateGearRangedT3
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
-      state: human
-    - sprite: Clothing/OuterClothing/Armor/podwars_armor.rsi
-      state: equipped-OUTERCLOTHING
-    - sprite: Clothing/Uniforms/Jumpsuit/gladiator.rsi
-      state: equipped-INNERCLOTHING
-    - sprite: Clothing/Head/Hardsuits/syndiemedic.rsi
-      state: off-equipped-HELMET-vox
-    - sprite: Clothing/Head/Hats/gladiator.rsi
-      state: equipped-HELMET
-  - type: BasicEntityAmmoProvider
-    proto: CannonBallGrapeshot
-    capacity: 1
-    count: 1
-  - type: Gun
-    showExamineText: false
-    fireRate: 0.2
-    selectedMode: FullAuto
-    availableModes:
-    - FullAuto
-    soundGunshot: /Audio/Weapons/Guns/Gunshots/mateba.ogg
-
-# Tier 3
-- type: entity
-  name: cutlass cutter
-  description: Swings with the characteristic Vshuuu Vshuuu sound of an energy sword, constantly showing off just how awesome these Eeeee-blades are.
-  parent: [MobMovementSpeedModifierEVAMelee, MobPirateBaseT3, MobHumanoidHostileAISimpleMelee]
-  id: MobPirateECutlass
-  components:
-  - type: Loadout
-    prototypes:
-    - MobPirateScrapperGearMeleeT3
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
-      state: human
-    - sprite: _Sunrise/Clothing/OuterClothing/Suits/pirateeva_armored_alt.rsi
-      state: equipped-OUTERCLOTHING
-    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
-      state: equipped-HELMET
-    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
-      state: on-equipped-HELMET
-      shader: unshaded
-    - sprite: Objects/Tanks/oxygen.rsi
-      state: equipped-SUITSTORAGE
-
-- type: entity
-  name: miner
-  parent: [MobMovementSpeedModifierEVAMelee, MobPirateBaseT3, MobHumanoidHostileAISimpleMelee]
-  id: MobPirateEPickaxe
-  description: A looter that scavenged enough coins to afford some decent equipment.
-  components:
-  - type: Loadout
-    prototypes:
-    - MobPirateScrapperGearMeleeT3Alt
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
-      state: human
-    - sprite: _Sunrise/Clothing/OuterClothing/Suits/pirateeva_armored_alt.rsi
-      state: equipped-OUTERCLOTHING
-    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt2.rsi
-      state: equipped-HELMET
-    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
-      state: on-equipped-HELMET
-      shader: unshaded
-    - sprite: Objects/Tanks/oxygen.rsi
-      state: equipped-SUITSTORAGE
-
-- type: entity
-  name: scrap gunner
-  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT3]
-  id: MobPirateScrapRifle
+  id: MobPirateT1ScrapRifle
   description: In a team where everyone is armed with whatever they could grab, he picked up a rifle — at least it used to be one…
   components:
   - type: Loadout
     prototypes:
-    - MobPirateScrapperGearRangedT3
+    - MobPirateT1ScrapRifleGear
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -1235,7 +845,7 @@
     - sprite: Objects/Tanks/oxygen.rsi
       state: equipped-SUITSTORAGE
   - type: ProjectileBatteryAmmoProvider
-    proto: CartridgeLightRifleSP
+    proto: CartridgeLightRifleImprovised
     fireCost: 1
   - type: BatterySelfRecharger
     autoRecharge: true
@@ -1247,12 +857,12 @@
     startingCharge: 30
   - type: Gun
     showExamineText: false
-    fireRate: 5
+    fireRate: 4.5
     selectedMode: FullAuto
     minAngle: 0
     maxAngle: 60
     angleIncrease: 4
-    angleDecay: 30
+    angleDecay: 15
     availableModes:
     - FullAuto
     soundGunshot:
@@ -1263,69 +873,14 @@
       path: /Audio/_Sunrise/Weapons/Guns/Rifles/skm24/skm_cocked.ogg
 
 - type: entity
-  name: boarder monkey
-  description: Looks like a crew member who's been through more than one boarding, but still works for bananas. Holds an energy dagger.
-  parent: [MobMovementSpeedModifierEVAMelee, MobPirateMonkey, MobHumanoidHostileAISimpleMelee]
-  id: MobPirateMonkeyEDagger
-  components:
-  - type: Loadout
-    prototypes:
-    - MobPirateMonkeyGearMeleeT3
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: Mobs/Animals/monkey.rsi
-      state: monkey
-    - sprite: _Sunrise/Clothing/OuterClothing/Suits/pirateeva_armored_alt.rsi
-      state: equipped-OUTERCLOTHING-monkey
-    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
-      state: equipped-HELMET
-    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
-      state: on-equipped-HELMET
-      shader: unshaded
-    - sprite: Objects/Weapons/Melee/e_dagger_loud.rsi
-      state: inhand-left
-    - sprite: Objects/Weapons/Melee/e_dagger_loud.rsi
-      state: inhand-left-blade
-      color: "#e95151"
-      shader: unshaded
-  - type: PointLight
-    enabled: true
-    radius: 2
-    energy: 2
-    color: "#e95151"
-  - type: Reflect
-    reflectProb: 0.5
-  - type: AmbientSound
-    volume: 3
-    range: 5
-    sound:
-      path: /Audio/Weapons/ebladehum.ogg
-  - type: MeleeWeapon
-    hidden: true
-    attackRate: 1.3
-    altDisarm: false
-    angle: 0
-    animation: WeaponArcPunch
-    damage:
-      types:
-        Slash: 10
-        Heat: 10
-        Structural: 10
-    soundHit:
-      path: /Audio/Weapons/eblade1.ogg
-      params:
-        variation: 0.250
-
-- type: entity
-  name: boarder gunner
+  name: Scrap raider
   parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT3]
-  id: MobPirateSMG
+  id: MobPirateT1SMG
   description: In a team where everyone is armed with whatever they could grab, he picked up a rifle — at least it used to be one…
   components:
   - type: Loadout
     prototypes:
-    - MobPirateScrapperGearRangedT3Alt
+    - MobPirateT1SMGGear
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -1371,16 +926,172 @@
       path: /Audio/_Sunrise/Weapons/Guns/Rifles/skm24/skm_cocked.ogg
 
 - type: entity
+  name: Scrap salvager
+  parent: [MobMovementSpeedModifierEVARanged, MobPirateBase]
+  id: MobPirateT1PKA
+  description: Proto-kinetic accelerator in hands, rum in the belly. That's how you explore.
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateT1PKAGear
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: _Sunrise/Clothing/OuterClothing/Suits/pirateeva.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva.rsi
+      state: equipped-HELMET
+    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva.rsi
+      state: on-equipped-HELMET
+      shader: unshaded
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 0.75
+    rechargeSound:
+      path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
+  - type: BasicEntityAmmoProvider
+    proto: BulletKinetic
+    capacity: 1
+    count: 1
+  - type: Gun
+    showExamineText: false
+    fireRate: 0.5
+    minAngle: 31
+    maxAngle: 45
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
+  - type: PointLight
+    enabled: true
+    autoRot: true
+    netsync: false
+    radius: 2
+    energy: 2
+    mask: /Textures/Effects/LightMasks/cone.png
+    color: "#FFC458FF"
+
+# region Melee Tier 2
+- type: entity
+  name: pirate boarder
+  description: Shock troopers that specialize in using the element of surprise and swift, aggressive action to achieve their objectives.
+  parent: [MobMovementSpeedModifierEVAMelee, MobPirateBaseT2, MobHumanoidHostileAISimpleMelee]
+  id: MobPirateT2Cutlass
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateGearMeleeT2
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: Clothing/OuterClothing/Armor/podwars_armor.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Head/Helmets/podwars_helmet.rsi
+      state: equipped-HELMET
+    - sprite: _Sunrise/Clothing/Head/Hardsuits/piratecaptainhelm.rsi
+      state: on-equipped-HELMET
+      shader: unshaded
+
+- type: entity
+  name: pirate boarder
+  description: Shock troopers that specialize in using the element of surprise and swift, aggressive action to achieve their objectives.
+  parent: [MobMovementSpeedModifierEVAMelee, MobPirateBaseT2, MobHumanoidHostileAISimpleMelee]
+  id: MobPirateT2ECutlass
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateT2ECutlassGear
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/pirate.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Head/Hardsuits/piratecaptainhelm.rsi
+      state: equipped-HELMET
+    - sprite: Clothing/Head/Hardsuits/piratecaptainhelm.rsi
+      state: equipped-HELMET-unshaded
+      shader: unshaded
+
+- type: entity
+  name: pirate breacher
+  description: A boarding team member armed with a sledgehammer, capable of breaking through an airlock — or someone’s skull.
+  parent: [MobMovementSpeedModifierEVAMelee, MobPirateBaseT2, MobHumanoidHostileAISimpleMelee]
+  id: MobPirateT2Sledgehammer
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateGearMeleeAltT2
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: Clothing/OuterClothing/Armor/podwars_armor.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt2.rsi
+      state: equipped-HELMET
+    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
+      state: on-equipped-HELMET
+      shader: unshaded
+    - sprite: Clothing/Uniforms/Jumpsuit/gladiator.rsi
+      state: equipped-INNERCLOTHING
+    - sprite: Clothing/Head/Hats/gladiator.rsi
+      state: equipped-HELMET
+
+- type: entity
+  name: pirate breacher
+  description: Drilling in the name of... drilling. No rock formation or shuttle wall can withstand the power of mining drill gauthlet.
+  parent: [MobMovementSpeedModifierEVAMelee, MobPirateBaseT2, MobHumanoidHostileAISimpleMelee]
+  id: MobPirateT2GauntletDrill
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateGearMeleeAlt2T2
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/pirate.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Head/Helmets/podwars_helmet.rsi
+      state: equipped-HELMET
+    - sprite: Clothing/Head/Hardsuits/piratecaptainhelm.rsi
+      state: equipped-HELMET-unshaded
+      shader: unshaded
+    - sprite: Clothing/Head/Hats/gladiator.rsi
+      state: equipped-HELMET
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 45
+    rechargeSound:
+      path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
+  - type: BasicEntityAmmoProvider
+    proto: ShellShotgunFlare
+    capacity: 1
+    count: 1
+  - type: Wieldable
+  - type: Gun
+    fireRate: 0.5
+    selectedMode: SemiAuto
+    minAngle: 3
+    maxAngle: 6
+    projectileSpeed: 18
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+    - Pickaxe
+
+- type: entity
   name: Big Yarrke
   description: A heavy ancient mech for cold harsh realities of deep space. It has built-in Mining Industrial Drill.
-  parent: MobPirateBase
-  id: MobPirateMech
+  parent: MobPirateBaseT2
+  id: MobPirateT2Mech
   components:
   - type: Loadout
     prototypes:
     - MobPirateScrapperGearMechT3
-  - type: Damageable
-    damageModifierSet: MobPirateT2
   - type: Sprite
     drawdepth: Mobs
     noRot: true
@@ -1469,13 +1180,13 @@
   name: Jugger Murmillo
   description: Clad in a heavily armored ancient spacesuit. Slow but incredibly resilient.
   parent: MobPirateBaseT3
-  id: MobPirateJuggernaut
+  id: MobPirateT2Juggernaut
   components:
   - type: Loadout
     prototypes:
     - MobPirateGearMeleeT4
   - type: Sprite
-    scale: 1.08,1.08
+    scale: 1.2,1.08
     drawdepth: Mobs
     layers:
     - sprite: _Sunrise/Mobs/Species/Templates/gladiator.rsi
@@ -1488,8 +1199,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      240: Critical
-      250: Dead
+      250: Critical
+      275: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
       25: 1.1
@@ -1500,7 +1211,7 @@
       175: 1.5
       200: 1.6
       215: 1.8
-      220: 2
+      225: 2
   - type: Stamina
     critThreshold: 500
   - type: MovementSpeedModifier
@@ -1516,7 +1227,7 @@
     fireRate: 1
     useKey: false
   - type: RechargeBasicEntityAmmo
-    rechargeCooldown: 5.5
+    rechargeCooldown: 5
     rechargeSound:
       path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
   - type: BasicEntityAmmoProvider
@@ -1526,8 +1237,9 @@
   - type: LeechOnMarker
     leech:
       groups:
-        Brute: -20
+        Brute: -45
       types:
+        Piercing: -10
         Heat: -5
         Bloodloss: -5
         Mangleness: -5
@@ -1538,7 +1250,7 @@
       types:
         Blunt: 8
         Slash: 12
-        Structural: 50
+        Structural: 40
     bluntStaminaDamageFactor: 1
     soundHit:
       collection: MetalThud
@@ -1567,6 +1279,428 @@
     - FootstepSound
     - Pickaxe
 
+# region Ranged Tier 2
+- type: entity
+  name: Pirate bootsman
+  description: A battle-hardened pirate boatsman. Combines the skill of a sharpshooter with the ferocity of a boarder. Prefers to shoot first and finish off what remains.
+  parent: MobPirateBaseT2
+  id: MobPirateT2RevolverCutlass
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateT2RevolverCutlassGear
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/OuterClothing/Hardsuits/piratecaptain.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_old.rsi
+      state: equipped-HELMET
+  - type: ProjectileBatteryAmmoProvider
+    proto: CartridgeMagnumHP
+    fireCost: 1
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargePause: true
+    autoRechargePauseTime: 4
+    autoRechargeRate: 999
+  - type: Battery
+    maxCharge: 5
+    startingCharge: 5
+  - type: Gun
+    showExamineText: false
+    fireRate: 1.25
+    minAngle: 1
+    maxAngle: 3
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+
+- type: entity
+  name: Shrap'nel Thunder
+  description: Turns everything into cheese with holes. Claims that “shrapnel is just another form of art.
+  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT2]
+  id: MobPirateT2Grapeshot
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateT2GrapeshotGear
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: Mobs/Species/Vox/parts.rsi
+      state: vox_m
+    - sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/pirate.rsi
+      state: equipped-OUTERCLOTHING-vox
+    - sprite: Clothing/Shoes/Boots/jumpboots.rsi
+      state: equipped-FEET-vox
+    - sprite: Clothing/Head/Hardsuits/piratecaptainhelm.rsi
+      state: equipped-HELMET-vox
+    - sprite: Clothing/Head/Hardsuits/piratecaptainhelm.rsi
+      state: equipped-HELMET-unshaded-vox
+      shader: unshaded
+  - type: BasicEntityAmmoProvider
+    proto: CannonBallGrapeshot
+    projectileSpeed: 19
+    capacity: 1
+    count: 1
+  - type: Gun
+    showExamineText: false
+    fireRate: 0.2
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/mateba.ogg
+  - type: JumpAbility
+    jumpDistance: 4
+    jumpSound: /Audio/Effects/stealthoff.ogg
+  - type: NPCUseActionWhenTargetInRange
+    actions:
+    - actionId: ActionGravityJump
+      minRange: 4
+      maxRange: 0
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepCatwalk
+      params:
+        volume: 5
+
+- type: entity
+  name: pirate cannoneer
+  description: Loads explosive shells into his cannon. After he fires, only holes and smoke remain of your ship.
+  parent: MobPirateT2Grapeshot
+  id: MobPirateT2Cannoball
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateT2CannonballGear
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/pirate.rsi
+      state: equipped-OUTERCLOTHING-reptilian
+    - sprite: Clothing/Head/Hardsuits/piratecaptainhelm.rsi
+      state: equipped-HELMET-reptilian
+    - sprite: Clothing/Head/Hardsuits/piratecaptainhelm.rsi
+      state: equipped-HELMET-unshaded-reptilian
+      shader: unshaded
+  - type: BasicEntityAmmoProvider
+    proto: CannonBall
+  - type: Gun
+    fireRate: 0.05
+    projectileSpeed: 19
+
+- type: entity
+  name: Pirate gunslinger
+  description: Wields two pirate revolvers. One revolver is good, but two are even better.
+  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT2]
+  id: MobPirateT2DoubleRevolver
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateGearRangedAlt5T2
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: Clothing/OuterClothing/Hardsuits/pirateeva.rsi
+      state: equipped-OUTERCLOTHING-reptilian
+    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
+      state: equipped-HELMET
+    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
+      state: on-equipped-HELMET
+      shader: unshaded
+    - sprite: Clothing/Belt/assault.rsi
+      state: equipped-BELT
+  - type: ProjectileBatteryAmmoProvider
+    proto: CartridgeMagnumImprovised
+    fireCost: 10
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargePause: true
+    autoRechargePauseTime: 2
+    autoRechargeRate: 999
+  - type: Battery
+    maxCharge: 20
+    startingCharge: 20
+  - type: Gun
+    showExamineText: false
+    fireRate: 12
+    minAngle: 1
+    maxAngle: 8
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepCatwalk
+      params:
+        volume: 5
+
+- type: entity
+  name: Pirate duelist
+  description: Armed with a pair of old flintlock pistols. Fires slowly, but painfully.
+  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT2]
+  id: MobPirateT2DoubleFlintlock
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateGearRangedAlt6T2
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: Clothing/OuterClothing/Hardsuits/pirateeva.rsi
+      state: equipped-OUTERCLOTHING-reptilian
+    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
+      state: equipped-HELMET
+    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
+      state: on-equipped-HELMET
+      shader: unshaded
+    - sprite: Clothing/Belt/assault.rsi
+      state: equipped-BELT
+  - type: ProjectileBatteryAmmoProvider
+    proto: CartridgeMagnumAP
+    fireCost: 10
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargePause: true
+    autoRechargePauseTime: 6
+    autoRechargeRate: 999
+  - type: Battery
+    maxCharge: 20
+    startingCharge: 20
+  - type: Gun
+    showExamineText: false
+    fireRate: 12
+    minAngle: 1
+    maxAngle: 8
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepCatwalk
+      params:
+        volume: 5
+
+- type: entity
+  name: pirate blunderbuss
+  description: Less a gun, more a handheld cannon. Fires anything that fits the barrel.
+  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT2]
+  id: MobPirateT2Shotgun
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateGearRangedAltT2
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/OuterClothing/Hardsuits/pirateeva.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
+      state: equipped-HELMET
+    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
+      state: on-equipped-HELMET
+      shader: unshaded
+  - type: BasicEntityAmmoProvider
+    proto: CannonBallGrapeshotMini
+  - type: Gun
+    showExamineText: false
+    fireRate: 0.5
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+
+- type: entity
+  name: pirate musketeer
+  description: Armed with an antique large-caliber musket.
+  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT2]
+  id: MobPirateT2Musket
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateGearRangedAlt4T2
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: Mobs/Species/Vox/parts.rsi
+      state: vox_m
+    - sprite: Clothing/OuterClothing/Hardsuits/pirateeva.rsi
+      state: equipped-OUTERCLOTHING-vox
+    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
+      state: equipped-HELMET-vox
+    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
+      state: on-equipped-HELMET-vox
+      shader: unshaded
+  - type: BasicEntityAmmoProvider
+    proto: CartridgeAntiMateriel
+  - type: Gun
+    showExamineText: false
+    fireRate: 0.25
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepCatwalk
+      params:
+        volume: 5
+  - type: Speech
+    speechSounds: Parrot
+    speechVerb: Parrot
+  - type: Vocal
+    sounds:
+      Unsexed: Parrot
+  - type: ActiveListener
+  - type: Vocalizer
+  - type: RadioVocalizer
+  - type: ParrotListener
+  - type: ParrotMemory
+
+- type: entity
+  name: pirate machinonner
+  description: Pirate with handheld belt feeded cannon..What?!.
+  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT2]
+  id: MobPirateT2MachineCannon
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateGearRangedAlt3T2
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/OuterClothing/Hardsuits/pirateeva.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
+      state: equipped-HELMET
+    - sprite: Clothing/Head/Hardsuits/pirateeva.rsi
+      state: on-equipped-HELMET
+      shader: unshaded
+    - sprite: Clothing/Belt/assault.rsi
+      state: equipped-BELT
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 2.75
+  - type: ProjectileBatteryAmmoProvider
+    proto: CannonBallMini
+    fireCost: 1
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargePause: true
+    autoRechargePauseTime: 1.75
+    autoRechargeRate: 999
+  - type: Battery
+    maxCharge: 15
+    startingCharge: 15
+  - type: Gun
+    projectileSpeed: 20
+    showExamineText: false
+    fireRate: 6.5
+    minAngle: 10
+    maxAngle: 50
+    angleIncrease: 5
+    angleDecay: 15
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/mateba.ogg
+      params:
+        volume: -1
+        pitch: 1.2
+
+# region Tier 3
+- type: entity
+  name: pirate grenadier
+  description: Covered in fireworks and explosives. Hasn’t heard of safety regulations — or just ignores them loudly.
+  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT3]
+  id: MobPirateGrenadier
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateGearRangedAltT3
+  - type: ExplosionResistance
+    damageCoefficient: 0.01
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/ussp-heavy.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_old.rsi
+      state: equipped-HELMET
+    - sprite: Clothing/Head/Bandanas/merc.rsi
+      state: equipped-HELMET
+  - type: BasicEntityAmmoProvider
+    proto: GrenadeFragContact
+    capacity: 1
+    count: 1
+  - type: Gun
+    projectileSpeed: 15
+    showExamineText: false
+    fireRate: 0.15
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+
+- type: entity
+  name: bounty hunter
+  description: A seasoned merc who joined the pirate ranks. Fast hands, faster trigger — and no loyalty but credits.
+  parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT2]
+  id: MobPirateT3Revolver
+  components:
+  - type: Loadout
+    prototypes:
+    - MobPirateGearRangedT2
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/OuterClothing/Armor/podwars_armor.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/OuterClothing/Coats/hos_trenchcoat.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
+      state: equipped-HELMET
+    - sprite: _Sunrise/Clothing/Head/Helmets/pirate_eva_alt.rsi
+      state: on-equipped-HELMET
+      shader: unshaded
+    - sprite: Clothing/Head/Hats/cowboyhatbountyhunter.rsi
+      state: equipped-HELMET
+  - type: ProjectileBatteryAmmoProvider
+    proto: CartridgePistol40SP
+    fireCost: 10
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargePause: true
+    autoRechargePauseTime: 5
+    autoRechargeRate: 999
+  - type: Battery
+    maxCharge: 60
+    startingCharge: 60
+  - type: Gun
+    showExamineText: false
+    burstFireRate: 10
+    shotsPerBurst: 2
+    burstCooldown: 0.5
+    minAngle: 1
+    maxAngle: 8
+    selectedMode: Burst
+    availableModes:
+    - Burst
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/revolver.ogg
 
 # region Tier 4 - Boss
 - type: entity
@@ -1579,7 +1713,7 @@
     prototypes:
     - MobPirateGearMeleeT4Alt
   - type: Sprite
-    scale: 1.07,1.07
+    scale: 1.18,1.08
     drawdepth: Mobs
     layers:
     - sprite: Clothing/Shoes/Boots/jumpboots.rsi
@@ -1588,17 +1722,16 @@
       state: equipped-OUTERCLOTHING
     - sprite: Clothing/Head/Hardsuits/maxim.rsi
       state: equipped-HELMET-reptilian
+    - sprite: Clothing/Shoes/Boots/jumpboots.rsi
+      state: equipped-FEET
   - type: PointLight
     color: "#ff6b58"
-    radius: 3
-    energy: 1.5
+    radius: 2.75
+    energy: 1.25
   - type: JumpAbility
-    jumpDistance: 4
+    jumpDistance: 5
     jumpSound: /Audio/Effects/stealthoff.ogg
   - type: ActionGrant
-    actions:
-    - ActionGravityJump
-  - type: ItemActionGrant
     actions:
     - ActionGravityJump
   - type: AmbientSound
@@ -1606,6 +1739,17 @@
     volume: -10
     sound:
       path: /Audio/Ambience/anomaly_drone.ogg
+  - type: NPCUseActionWhenTargetInRange
+    actions:
+    - actionId: ActionGravityJump
+      minRange: 3
+      maxRange: 0
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepSpurs
+      params:
+        variation: 0.09
+        volume: -6
 
 - type: entity
   name: Captain Gold Bolt
@@ -1680,23 +1824,21 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargePause: true
-    autoRechargePauseTime: 2
+    autoRechargePauseTime: 1
     autoRechargeRate: 999
   - type: Battery
-    maxCharge: 20
-    startingCharge: 20
+    maxCharge: 3
+    startingCharge: 3
   - type: Gun
     showExamineText: false
-    burstFireRate: 15
-    burstCooldown: 1
-    shotsPerBurst: 3
+    fireRate: 15
     minAngle: 0
     maxAngle: 25
     angleIncrease: 1
     angleDecay: 2
-    selectedMode: Burst
+    selectedMode: FullAuto
     availableModes:
-    - Burst
+    - FullAuto
     soundGunshot:
       path: /Audio/_Sunrise/Weapons/Guns/Rifles/skm28/skm28_shot.ogg
       params:
@@ -1711,3 +1853,4 @@
   - type: StealthOnMove
     passiveVisibilityRate: -0.1
     movementVisibilityRate: 0.3
+
