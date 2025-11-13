@@ -84,7 +84,7 @@
         state: inhand-left
 
 - type: entity
-  parent: ClothingHandsBlackSMG
+  parent: ClothingHandsNoGloves
   id: ClothingHandsBlackM79
   name: combat gloves
   suffix: m79
@@ -93,11 +93,119 @@
   - type: Clothing
     clothingVisuals:
       gloves:
-      - sprite: Clothing/Hands/Gloves/Color/color.rsi
-        state: equipped-HAND
-        color: "#53535329"
       - sprite: _RMC14/Objects/Weapons/Guns/Launchers/m79/tiny.rsi
         state: wielded-inhand-left
+
+- type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingHandsD1984Riot
+  name: combat gloves
+  suffix: d1984
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: _Sunrise/Objects/Weapons/Melee/shields.rsi
+        state: riot-inhand-left
+      - sprite: _RMC14/Objects/Weapons/Guns/Pistols/m1984.rsi
+        state: inhand-right
+  - type: Flash
+  - type: LimitedCharges
+    maxCharges: 5
+  - type: AutoRecharge
+    rechargeDuration: 60
+  - type: MeleeThrowOnHit
+    distance: 0.8
+    speed: 6
+  - type: MeleeWeapon
+    attackRate: 0.75
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 7
+    bluntStaminaDamageFactor: 3.0
+    soundHit:
+      collection: MetalThud
+
+- type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingHandsSkorpionRiotBullet
+  name: combat gloves
+  suffix: Skorpion
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Objects/Weapons/Melee/shields.rsi
+        state: riot_bullet-inhand-left
+      - sprite: _Sunrise/Objects/Weapons/Guns/SMGs/skorpion.rsi
+        state: inhand-right
+  - type: MeleeThrowOnHit
+    distance: 0.8
+    speed: 6
+  - type: MeleeWeapon
+    attackRate: 0.75
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 7
+    bluntStaminaDamageFactor: 3.0
+    soundHit:
+      collection: MetalThud
+
+- type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingHandsRPD
+  name: combat gloves
+  suffix: RPD
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: _Sunrise/Objects/Weapons/Guns/LMGs/rpd/tiny.rsi
+        state: wielded-inhand-right
+
+- type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingHandsL6
+  name: combat gloves
+  suffix: RPD
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Objects/Weapons/Guns/LMGs/l6.rsi
+        state: wielded-inhand-right
+
+- type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingHandsSMGLaser
+  name: combat gloves
+  suffix: SMG laser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: _Sunrise/Objects/Weapons/Guns/Battery/EG_C/tiny.rsi
+        state: wielded-inhand-right
+
+- type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingHandsSyndieLaserGun
+  name: combat gloves
+  suffix: S-13
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: _Sunrise/Objects/Weapons/Guns/Battery/syndielasergun.rsi
+        state: wielded-inhand-right
 
 - type: entity
   parent: ClothingHandsBlackSMG
@@ -439,7 +547,7 @@
         variation: 0.250
 
 - type: entity
-  parent: ClothingHandsBlackSMG
+  parent: ClothingHandsNoGloves
   id: ClothingHandsSMGForged
   name: combat gloves
   suffix: Forged SMG
@@ -453,6 +561,32 @@
 
 - type: entity
   parent: ClothingHandsNoGloves
+  id: ClothingHandsSMGC40
+  name: combat gloves
+  suffix: C40 SMG
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: _Sunrise/Objects/Weapons/Guns/SMGs/c40r.rsi
+        state: wielded-inhand-right
+
+- type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingHandsDragunov
+  name: combat gloves
+  suffix: dragunov
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: _Sunrise/Objects/Weapons/Guns/Snipers/dragunov/tiny.rsi
+        state: wielded-inhand-right
+
+- type: entity
+  parent: ClothingHandsNoGloves
   id: ClothingHandsSKM24
   name: combat gloves
   suffix: skm24
@@ -462,6 +596,32 @@
     clothingVisuals:
       gloves:
       - sprite: _Sunrise/Objects/Weapons/Guns/Rifles/skm24/Scrap/tiny.rsi
+        state: wielded-inhand-right
+
+- type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingHandsSKM24B
+  name: combat gloves
+  suffix: skm24
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: _Sunrise/Objects/Weapons/Guns/Rifles/skm24/Base/tiny.rsi
+        state: wielded-inhand-right
+
+- type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingHandsSKM24S
+  name: combat gloves
+  suffix: skm24
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: _Sunrise/Objects/Weapons/Guns/Rifles/skm24/Syndicate/tiny.rsi
         state: wielded-inhand-right
 
 - type: entity
@@ -513,8 +673,6 @@
   - type: Clothing
     clothingVisuals:
       gloves:
-      - sprite: Clothing/Hands/Gloves/mercbattle.rsi
-        state: equipped-HAND
       - sprite: Objects/Weapons/Melee/shields.rsi
         state: makeshift-inhand-right
       - sprite: Objects/Weapons/Melee/combat_knife.rsi
@@ -530,6 +688,82 @@
         Slash: 12
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
+
+- type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingKukri
+  name: combat gloves
+  suffix: kukri
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Objects/Weapons/Melee/kukri_knife.rsi
+        state: inhand-right
+      - sprite: Objects/Weapons/Throwable/bola.rsi
+        state: inhand-left
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1.5
+    altDisarm: false
+    angle: 0
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Slash: 15
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+
+- type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingHandsEshield
+  name: combat gloves
+  suffix: eshield
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Objects/Weapons/Melee/e_cutlass.rsi
+        state: inhand-right
+      - sprite: Objects/Weapons/Melee/e_cutlass.rsi
+        state: inhand-right-blade
+        color: "#e95151"
+        shader: unshaded
+      - sprite: Objects/Weapons/Melee/e_shield.rsi
+        state: eshield-inhand-left
+      - sprite: Objects/Weapons/Melee/e_shield.rsi
+        state: inhand-left-shield
+        color: "#944422"
+        shader: unshaded
+  - type: PointLight
+    enabled: true
+    radius: 2
+    energy: 2
+    color: "#e96a51"
+  - type: Reflect
+    reflectProb: 0.5
+  - type: AmbientSound
+    volume: 3
+    range: 5
+    sound:
+      path: /Audio/Weapons/ebladehum.ogg
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    altDisarm: false
+    angle: 0
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Slash: 10
+        Heat: 12
+        Structural: 15
+    soundHit:
+      path: /Audio/Weapons/eblade1.ogg
+      params:
+        variation: 0.250
 
 - type: entity
   parent: ClothingHandsNoGloves
@@ -711,5 +945,32 @@
       - sprite: Objects/Weapons/Guns/Basic/kinetic_accelerator.rsi
         state: wielded-inhand-left
 
+- type: entity
+  parent: ClothingHandsNoGloves
+  id: ClothingHandsMechMaxim
+  name: combat gloves
+  suffix: Mech Maxim
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: _Sunrise/Objects/Specific/Mech/wield.rsi
+        state: mech-wield
+  - type: MeleeThrowOnHit
+    distance: 1
+    speed: 14
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 35
+        Structural: 150
+    bluntStaminaDamageFactor: 1.5
+    soundHit:
+      collection: PunchHard
+  - type: StaminaDamageOnHit
+    staminaDamage: 10
 # This is some proper cursed stuff: due to layering of clothes sprites, gloves displayed under outer clothes
 # So in order to make wielded weapon visible, I'm using neck slot which is drawn on top of outer suit layer.

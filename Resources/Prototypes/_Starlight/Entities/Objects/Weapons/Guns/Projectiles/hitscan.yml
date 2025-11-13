@@ -1164,7 +1164,7 @@
     types:
       Piercing: 26
       Structural: 10
-  armorPenetration: -0.25
+  armorPenetration: -0.13
   pierceChance: 0.40
   ricochetChance: 0.30
   staminaDamage: 5
@@ -1181,7 +1181,7 @@
     types:
       Piercing: 28 #+ 30%
       Structural: 5
-  armorPenetration: -0.80
+  armorPenetration: -0.7
   staminaDamage: 10
   pierceChance: 0.05
   ricochetChance: 0.15
