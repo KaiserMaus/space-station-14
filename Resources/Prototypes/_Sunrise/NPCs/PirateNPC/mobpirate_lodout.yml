@@ -158,7 +158,7 @@
     shoes: ClothingShoesBootsMagCombat
 
 - type: startingGear
-  id: MobPirateGearMeleeT2
+  id: MobPirateT2CutlassGear
   equipment:
     gloves: ClothingHandsMercCutlass
     pocket1: Cutlass
@@ -166,7 +166,7 @@
     shoes: ClothingShoesBootsWork
 
 - type: startingGear
-  id: MobPirateGearMeleeAltT2
+  id: MobPirateT2SledgehammerGear
   equipment:
     gloves: ClothingSledgehammer
     pocket1: Sledgehammer
@@ -174,7 +174,7 @@
     shoes: ClothingShoesBootsMagCombat
 
 - type: startingGear
-  id: MobPirateGearMeleeAlt2T2
+  id: MobPirateT2GauntletDrillGear
   equipment:
     gloves: ClothingWeaponGauntletDrill
     back: NitrousOxideTankFilled
@@ -213,7 +213,7 @@
     shoes: ClothingShoesBootsSalvage
 
 - type: startingGear
-  id: MobPirateGearRangedAltT2
+  id: MobPirateT2ShotgunGear
   equipment:
     gloves: ClothingHandsMercShotgun
     back: ClothingBackPirateMessengerTier2Shotgun
@@ -221,7 +221,7 @@
     shoes: ClothingShoesBootsMagPirate
 
 - type: startingGear
-  id: MobPirateGearRangedAlt3T2
+  id: MobPirateT2MachineCannonGear
   equipment:
     gloves: ClothingLightMachineGunPirateCannon
     back: ClothingBackPirateMessengerTier2MG
@@ -229,7 +229,7 @@
     shoes: ClothingShoesBootsMagPirate
 
 - type: startingGear
-  id: MobPirateGearRangedAlt4T2
+  id: MobPirateT2MusketGear
   equipment:
     gloves: ClothingMusket
     back: NitrogenTankFilled
@@ -244,7 +244,7 @@
     pocket2: CigPackSyndicate
 
 - type: startingGear
-  id: MobPirateGearRangedAlt6T2
+  id: MobPirateT2DoubleFlintlockGear
   equipment:
     gloves: ClothingFlintlocks
     belt: ClothingBeltWebbingMercenaryTier2Flintlock
@@ -252,23 +252,124 @@
     pocket2: PatchBrute
 
 # region  Pirate Tier3
+- type: startingGear
+  id: MobPirateT3BolaGear
+  equipment:
+    gloves: ClothingKukri
+    # back: ClothingBackDuffelMercenaryTier3Grenade
+    shoes: ClothingShoesBootsJackFilled
+
+- type: startingGear
+  id: MobPirateT3StunGear
+  equipment:
+    gloves: ClothingHandsEshield
+    # back: ClothingBackDuffelMercenaryTier3Grenade
+    shoes: ClothingShoesBootsJackFilled
+
+- type: startingGear
+  id: MobPirateT3Shield1984Gear
+  equipment:
+    gloves: ClothingHandsD1984Riot
+    # back: ClothingBackDuffelMercenaryTier3Grenade
+    shoes: ClothingShoesBootsJackFilled
+
+- type: startingGear
+  id: MobPirateT3ShieldSMGGear
+  equipment:
+    gloves: ClothingHandsSkorpionRiotBullet
+    # back: ClothingBackDuffelMercenaryTier3Grenade
+    shoes: ClothingShoesBootsJackFilled
+
+- type: startingGear
+  id: MobPirateT3RPDGear
+  equipment:
+    gloves: ClothingHandsRPD
+    # back: ClothingBackDuffelMercenaryTier3Grenade
+    shoes: ClothingShoesBootsJackFilled
+
+- type: startingGear
+  id: MobPirateT3L6Gear
+  equipment:
+    gloves: ClothingHandsL6
+    # back: ClothingBackDuffelMercenaryTier3Grenade
+    shoes: ClothingShoesBootsMagCombat
+
+- type: startingGear
+  id: MobPirateT3LaserSMGGear
+  equipment:
+    gloves: ClothingHandsSMGLaser
+    # back: ClothingBackDuffelMercenaryTier3Grenade
+    shoes: ClothingShoesBootsMagCombat
+
+- type: startingGear
+  id: MobPirateT3LaserCannonGear
+  equipment:
+    gloves: ClothingHandsSyndieLaserGun
+    # back: ClothingBackDuffelMercenaryTier3Grenade
+    shoes: ClothingShoesBootsMagCombat
+
+- type: startingGear
+  id: MobPirateT3DMRGear
+  equipment:
+    gloves: ClothingHandsSKM28
+    belt: ClothingBeltSalvageWebbingTier4Ranged
+    # back: ClothingBackDuffelMercenaryTier3Grenade
+    pocket1: PouchAmmo
+    pocket2: PouchAmmoFilledPistol40
+    shoes: ClothingShoesBootsJackFilled
+
+- type: startingGear
+  id: MobPirateT3RifleGear
+  equipment:
+    gloves: ClothingHandsSKM24S
+    back: ClothingBackScrapperRangedT3
+    pocket1: PouchAmmo
+    pocket2: BrutepackAdvanced1
+    shoes: ClothingShoesBootsJackFilled
+
+- type: startingGear
+  id: MobPirateT3Rifle2Gear
+  equipment:
+    gloves: ClothingHandsSKM24B
+    belt: ClothingBeltMercenaryWebbingRangedT3
+    pocket1: PouchAmmo
+    pocket2: BrutepackAdvanced1
+    shoes: ClothingShoesBootsMagCombat
+
+- type: startingGear
+  id: MobPirateT3SMGGear
+  equipment:
+    gloves: ClothingHandsSMGC40
+    back: ClothingBackScrapperRangedT2
+    pocket1: PouchAmmoFilledPistol40
+    pocket2: MagazinePistol40SubMachineGunSP
+    shoes: ClothingShoesBootsJackFilled
+
+- type: startingGear
+  id: MobPirateT3SniperGear
+  equipment:
+    gloves: ClothingHandsDragunov
+    back: ClothingBackScrapperRangedT2
+    pocket1: PouchAmmoFilledPistol40
+    pocket2: MagazinePistol40SubMachineGunSP
+    shoes: ClothingShoesBootsMagCombat
 
 - type: startingGear
   id: MobPirateGearRangedAltT3
   equipment:
     gloves: ClothingHandsBlackM79
     back: ClothingBackDuffelMercenaryTier3Grenade
-    shoes: ClothingShoesBootsCombat
+    shoes: ClothingShoesBootsMagCombat
 
 - type: startingGear
-  id: MobPirateScrapperGearMechT3
+  id: MobPirateT2MechGear
   equipment:
     pocket1: RipleyCentralElectronics
     pocket2: RipleyPeripheralsElectronics
     belt: BorgOreBag
     back: ClothingBackOreCrateTier3Mech
 
-# region  Pirate Tier4
+# region Pirate Boss
 - type: startingGear
   id: MobPirateGearRangedT4
   equipment:
@@ -288,7 +389,7 @@
     pocket2: PouchAmmoFilledPistol40
 
 - type: startingGear
-  id: MobPirateGearMeleeT4
+  id: MobPirateT2JuggernautGear
   equipment:
     back: ClothingBackOreCrateBoss
     pocket1: ClothingHeadHatGladiator
@@ -299,3 +400,13 @@
   equipment:
     gloves: ClothingHandsGorilla
     back: ClothingBackScrapperBoss
+
+- type: startingGear
+  id: MobPirateT3MechGear
+  equipment:
+    gloves: ClothingHandsMechMaxim
+    pocket1: DurandCentralElectronics
+    pocket2: DurandPeripheralsElectronics
+    shoes: DurandTargetingElectronics
+    back: ClothingBackOreCrateTier3Mech
+    belt: MechPaintDurandDollhouse
