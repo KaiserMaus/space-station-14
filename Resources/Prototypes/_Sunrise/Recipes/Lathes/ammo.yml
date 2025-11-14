@@ -712,15 +712,15 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: MagazineLightRifleBoxIncendiary
-  result: MagazineLightRifleBoxIncendiary
+  id: MagazineRifleBoxIncendiary
+  result: MagazineRifleBoxIncendiary
   materials:
     Steel: 150
     Plastic: 475
     Plasma: 475
 
 - type: latheRecipe
-  id: MagazineLightRifleBox
+  id: MagazineRifleBoxSP
   result: MagazineRifleBoxSP
   categories:
   - Ammo
@@ -728,6 +728,23 @@
   materials:
     Steel: 1100
 
+- type: latheRecipe
+  id: MagazineRifleBoxFMJ
+  result: MagazineRifleBoxFMJ
+  categories:
+  - Ammo
+  completetime: 5
+  materials:
+    Steel: 1100
+
+- type: latheRecipe
+  id: MagazineRifleBoxEmpty
+  result: MagazineRifleBoxEmpty
+  categories:
+  - Ammo
+  completetime: 5
+  materials:
+    Steel: 200
 
 # Moved from ammo.yml
 # Base prototypes

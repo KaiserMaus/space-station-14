@@ -111,6 +111,7 @@
         whitelist:
           tags:
           - MagazineRPD
+          - LightRifleHeavy
       gun_chamber:
         name: Chamber
         startingItem: CartridgeLightRifleSP

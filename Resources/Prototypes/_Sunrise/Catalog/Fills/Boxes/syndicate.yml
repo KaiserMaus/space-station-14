@@ -302,10 +302,10 @@
 #   components:
 #   - type: StorageFill
 #     contents:
-#     - id: MagazineLightRifleBoxIncendiary
-#     - id: MagazineLightRifleBoxIncendiary
-#     - id: MagazineLightRifleBoxIncendiary
-#     - id: MagazineLightRifleBoxIncendiary
+#     - id: MagazineRifleBoxIncendiary
+#     - id: MagazineRifleBoxIncendiary
+#     - id: MagazineRifleBoxIncendiary
+#     - id: MagazineRifleBoxIncendiary
 #   - type: Sprite
 #     layers:
 #     - state: box_of_doom_big
@@ -318,10 +318,10 @@
 #   components:
 #   - type: StorageFill
 #     contents:
-#     - id: MagazineLightRifleBoxUranium
-#     - id: MagazineLightRifleBoxUranium
-#     - id: MagazineLightRifleBoxUranium
-#     - id: MagazineLightRifleBoxUranium
+#     - id: MagazineRifleBoxUranium
+#     - id: MagazineRifleBoxUranium
+#     - id: MagazineRifleBoxUranium
+#     - id: MagazineRifleBoxUranium
 #   - type: Sprite
 #     layers:
 #     - state: box_of_doom_big
