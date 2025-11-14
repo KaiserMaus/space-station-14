@@ -98,8 +98,8 @@
     modifiers:
       coefficients:
         Blunt: 0.65
-        Slash: 0.7
-        Piercing: 0.75
+        Slash: 0.75
+        Piercing: 0.8
         Heat: 0.5
         Radiation: 0.5
         Caustic: 0.5

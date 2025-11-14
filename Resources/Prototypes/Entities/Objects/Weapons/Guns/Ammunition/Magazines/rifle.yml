@@ -451,19 +451,40 @@
 #         color: "#40F57A"
 
 #Sunrise-start
-# Magazines L6 SAW
+# Magazines L6 SAW"
+
 - type: entity
   id: MagazineRifleBoxSP
   name: "L6 SAW magazine box (.20 rifle SP)"
   parent: BaseMagazineRifle
-  description: Box containing a 150-round belt of linked .20 rifle rounds, used by light machine guns such as the L6. Intended to hold general-purpose kinetic ammunition.
+  description: Box containing a 200-round belt of linked .20 rifle rounds, used by light machine guns such as the L6. Intended to hold general-purpose kinetic ammunition.
   components:
   - type: Tag
     tags:
       - MagazineLightRifleBox
   - type: BallisticAmmoProvider
     proto: CartridgeRifleSP
-    capacity: 150
+    capacity: 200
+  - type: Item
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_box.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 8
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: MagazineRifleBoxEmpty
+  name: "L6 SAW magazine box (.20 rifle any)"
+  parent: MagazineRifleBoxSP
+  description: Box containing a 200-round belt of linked .20 rifle rounds, used by light machine guns such as the L6.
+  components:
+  - type: Tag
+    tags:
+      - MagazineLightRifleBox
+  - type: BallisticAmmoProvider
+    proto: null
   - type: Item
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_box.rsi
@@ -476,26 +497,14 @@
 - type: entity
   id: MagazineRifleBoxFMJ
   name: "L6 SAW magazine box (.20 rifle FMJ)"
-  parent: BaseMagazineRifle
-  description: Box containing a 150-round belt of linked .20 rifle rounds, used by light machine guns such as the L6. Intended to hold FMJ kinetic ammunition.
+  parent: MagazineRifleBoxSP
+  description: Box containing a 200-round belt of linked .20 rifle rounds, used by light machine guns such as the L6. Intended to hold FMJ kinetic ammunition.
   components:
-  - type: Tag
-    tags:
-      - MagazineLightRifleBox
   - type: BallisticAmmoProvider
     proto: CartridgeRifleFMJ
-    capacity: 150
-  - type: Item
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_box.rsi
-  - type: MagazineVisuals
-    magState: mag
-    steps: 8
-    zeroVisible: false
-  - type: Appearance
 
 - type: entity
-  id: MagazineLightRifleBoxIncendiary
+  id: MagazineRifleBoxIncendiary
   name: "L6 SAW magazine box (.20 rifle incendiary)"
   parent: MagazineRifleBoxSP
   components:
@@ -509,7 +518,7 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: MagazineLightRifleBoxUranium
+  id: MagazineRifleBoxUranium
   name: "L6 SAW magazine box (.20 rifle uranium)"
   parent: MagazineRifleBoxSP
   components:

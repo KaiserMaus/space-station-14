@@ -90,7 +90,7 @@
 
 - type: entity
   id: PirateTechFab
-  parent: BaseLathe
+  parent: BaseLatheLube
   name: pirate techfab
   suffix: pirate
   description: Prints basic weapons, ammo and gear for unruly gangs. The cost-optimized model sacrifices speed and variety for lower resource use
@@ -108,11 +108,15 @@
   - type: Lathe
     idleState: icon
     runningState: building
-    materialUseMultiplier: 0.75
+    materialUseMultiplier: 0.6
     timeMultiplier: 1.75
     staticPacks:
-    #- SecurityAmmoStatic
-    - SecurityStaticSunrise
+    - PirateStaticSunrise
+    - ToolsStaticPrison
+    - PartsStatic
+    - PowerCellsStatic
+    - CablesStatic
+    - Equipment
     dynamicPacks:
     - SecurityEquipment
     - SecurityExplosives

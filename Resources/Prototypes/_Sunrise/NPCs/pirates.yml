@@ -2529,21 +2529,21 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      499: Critical
-      500: Dead
+      649: Critical
+      650: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
-      75: 0.9
-      250: 0.8
-      300: 0.7
-      400: 0.6
+      100: 0.9
+      300: 0.8
+      400: 0.7
+      550: 0.6
   - type: Stamina
     critThreshold: 9999
   - type: MovementSpeedModifier
     baseWalkSpeed: 1.5
-    baseSprintSpeed: 2
+    baseSprintSpeed: 2.25
   - type: Damageable
-    damageModifierSet: MediumArmorNT
+    damageModifierSet: MediumArmorSyndi
   - type: Repairable
     fuelCost: 25
     doAfterDelay: 10
@@ -2561,7 +2561,7 @@
   - type: Gun
     minAngle: -15
     maxAngle: 25
-    fireRate: 6
+    fireRate: 6.5
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -2573,6 +2573,8 @@
     soundOnReflect: /Audio/_Starlight/Armor/Ricochet/ricochet1_1.ogg
     reflects:
     - NonEnergy
+  - type: FireProtection
+    reduction: 0.8
   - type: PointLight
     enabled: true
     autoRot: true
@@ -2592,3 +2594,11 @@
   - type: EyeCursorOffset
     maxOffset: 4
     pvsIncrease: 0.4
+  - type: Magboots
+  - type: HellSpawnInvincibility
+  - type: HellSpawnSpiral
+  - type: AutoImplant
+    implants:
+    - SmokeScreenImplant
+    - ScramImplant
+    - CreepyLaughImplant

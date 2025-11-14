@@ -955,7 +955,7 @@
   - type: Clothing
     clothingVisuals:
       gloves:
-      - sprite: _Sunrise/Objects/Specific/Mech/wield.rsi
+      - sprite: _Sunrise/Objects/Specific/Mech/mecha_wield.rsi
         state: mech-wield
   - type: MeleeThrowOnHit
     distance: 1
