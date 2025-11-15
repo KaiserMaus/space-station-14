@@ -2066,11 +2066,11 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargePause: true
-    autoRechargePauseTime: 1
+    autoRechargePauseTime: 2
     autoRechargeRate: 999
   - type: Battery
-    maxCharge: 25
-    startingCharge: 25
+    maxCharge: 50
+    startingCharge: 50
   - type: Gun
     showExamineText: false
     fireRate: 8
@@ -2265,7 +2265,7 @@
       path: /Audio/_Sunrise/Weapons/Guns/Lasers/EG_R.ogg
 
 - type: entity
-  name: Privateer dragoon
+  name: Privateer mamba
   description: A pirate who has found sponsors, well-armed and suitably dangerous.
   parent: [MobMovementSpeedModifierEVARanged, MobPirateBaseT3]
   id: MobPirateT3LaserCannon
