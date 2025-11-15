@@ -1022,6 +1022,20 @@
     - sprite: Clothing/Head/Hardsuits/piratecaptainhelm.rsi
       state: equipped-HELMET-unshaded
       shader: unshaded
+  - type: BasicEntityAmmoProvider
+    proto: Bola
+    capacity: 1
+    count: 1
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 20
+  - type: Gun
+    projectileSpeed: 13
+    showExamineText: false
+    fireRate: 0.1
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot: /Audio/Weapons/bolathrow.ogg
 
 - type: entity
   name: pirate breacher
@@ -1069,24 +1083,23 @@
     - sprite: Clothing/Head/Hats/gladiator.rsi
       state: equipped-HELMET
   - type: RechargeBasicEntityAmmo
-    rechargeCooldown: 45
+    rechargeCooldown: 35
     rechargeSound:
-      path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
+      path: /Audio/_Sunrise/Abductor/holopaper_open.ogg
   - type: BasicEntityAmmoProvider
-    proto: ShellShotgunFlare
+    proto: BulletTearGasGrenade
     capacity: 1
     count: 1
-  - type: Wieldable
   - type: Gun
-    fireRate: 0.5
+    fireRate: 1
     selectedMode: SemiAuto
-    minAngle: 3
-    maxAngle: 6
-    projectileSpeed: 18
+    minAngle: 30
+    maxAngle: 90
+    projectileSpeed: 6
     availableModes:
     - SemiAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
+      path: /Audio/Effects/drop.ogg
   - type: Tag
     tags:
     - DoorBumpOpener

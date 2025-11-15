@@ -148,7 +148,7 @@
   id: CannonBallGrapeshotMini
   name: grapeshot
   suffix: Pirate
-  parent: CannonBallMini
+  parent: BaseCartridge
   components:
   - type: HitScanCartridgeAmmo
     hitscan: PelletShotgunImprovisedSpreadTraceLarge
@@ -157,6 +157,9 @@
     scale: 0.75,0.75
     sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     state: grapeshot
+  - type: Tag
+    tags:
+    - CannonBallMini
 
 # Launcher
 - type: entity
