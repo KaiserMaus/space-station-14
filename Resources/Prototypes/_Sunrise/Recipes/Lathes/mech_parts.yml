@@ -85,6 +85,7 @@
     Glass: 800
     Silver: 500
     Uranium: 200
+    Diamond: 200
 
 - type: latheRecipe
   id: DurandLArm
@@ -155,8 +156,8 @@
   materials:
     Steel: 1500
     Glass: 250
-    Uranium: 100
-    Diamond: 100
+    Uranium: 300
+    Diamond: 200
 
 - type: latheRecipe
   id: GygaxLArm
