@@ -91,7 +91,7 @@
         prob: 0.15
       - id: WeaponSubMachineGunPPSH41
         prob: 0.10
-      - id: UplinkPirateM24Scrap
+      - id: WeaponRifleSKM24Scrap
         prob: 0.10
       - id: WeaponIONRifle
         prob: 0.05
