@@ -75,19 +75,14 @@
   id: Pirate
   hostile:
     - NanoTrasen
-    - NanoTrasenSilicon
     - SimpleHostile
     - Xeno
     - PetsNT
     - Revolutionary
     - Syndicate
-    - SyndicateSilicon
-    - DungeonSyndicate
     - Zombie
     - Vampire
-    - Changeling
     - AllHostile
-    - Abductor
     - Thief
     - Carps
     - Flesh

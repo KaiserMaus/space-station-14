@@ -1,0 +1,51 @@
+- type: entity
+  parent: [BaseItem, BaseSyndicateContraband]
+  abstract: true
+  id: ReinforcementTeleport
+  name: syndicate reinforcement radio
+  description: Call in a syndicate agent of questionable quality, instantly! Only basic equipment provided.
+  components:
+    - type: Sprite
+      layers:
+        - sprite: _Sunrise/BloodCult/Effects/cult_inout.rsi
+          state: cultin
+          shader: unshaded
+      netsync: false
+      drawdepth: Effects
+    - type: PointLight
+      color: "#FF0000"
+    - type: EmitSoundOnSpawn
+      sound:
+        path: /Audio/Effects/electrical_short_circuit2.ogg
+    - type: TimedDespawn
+      lifetime: 90
+    - type: EvaporationSparkle
+    - type: Transform
+      noRot: true
+      anchored: true
+    - type: UserInterface
+      interfaces:
+        enum.GhostRoleRadioUiKey.Key:
+          type: GhostRoleRadioBoundUserInterface
+    - type: ActivatableUI
+      key: enum.GhostRoleRadioUiKey.Key
+    - type: EmitSoundOnUse
+      sound: /Audio/Misc/emergency_meeting.ogg
+
+- type: entity
+  parent: ReinforcementTeleport
+  id: ReinforcementPirateScooner
+  name: human teleportation
+  description: Call in a freelancer of questionable quality, instantly! Basic pirate equipment provided.
+  suffix: Pirate
+  components:
+  - type: GhostRole
+    name: ghost-role-information-nukeop-reinforcement-name
+    description: ghost-role-information-nukeop-reinforcement-description
+    rules: ghost-role-information-nukeop-reinforcement-rules
+    mindRoles:
+    - MindRoleGhostRoleTeamAntagonist
+    raffle:
+      settings: short
+  - type: GhostRoleMobSpawner
+    prototype: RandomHumanoidPirateScooner

@@ -21,7 +21,6 @@
   - type: Stamina
     critThreshold: 125
   - type: DamageStateVisuals
-    rotate: true
   - type: RotationVisuals
     defaultRotation: 90
     horizontalRotation: 90
@@ -121,9 +120,9 @@
       - MobPirateT1Pistol
       - MobPirateT1Mosin
       - MobPirateT1PKA
-      - MobPirateT1T1MonkeyFlareGun
-      - MobPirateT1T1MonkeyFlareGunCoin
-      - MobPirateT1T1MonkeyFlareGunIncendiary
+      - MobPirateT1MonkeyFlareGun
+      - MobPirateT1MonkeyFlareGunCoin
+      - MobPirateT1MonkeyFlareGunIncendiary
       - MobPirateT1MonkeyFlareGunUranium
       - MobPirateT1ScrapSMG
       - MobPirateT1SMG
@@ -1371,10 +1370,10 @@
       shader: unshaded
   - type: BasicEntityAmmoProvider
     proto: CannonBallGrapeshot
-    projectileSpeed: 19
     capacity: 1
     count: 1
   - type: Gun
+    projectileSpeed: 19
     showExamineText: false
     fireRate: 0.2
     selectedMode: FullAuto
@@ -2018,7 +2017,7 @@
       params:
         pitch: 0.8
     soundEmpty:
-      path: /Audio/_Sunrise/Weapons/Guns/Rifles/skm24/skm_cocked.og
+      path: /Audio/_Sunrise/Weapons/Guns/Rifles/skm24/skm_cocked.ogg
 
 - type: entity
   name: Privateer rifleman
