@@ -140,7 +140,7 @@
     state: icon
 
 - type: entity
-  parent: ClothingBeltAssault
+  parent: MercenaryWebbingBox
   id: BeltAssaultBox
   name: assault ammo bundle
   description: Loot boxes? Here?
