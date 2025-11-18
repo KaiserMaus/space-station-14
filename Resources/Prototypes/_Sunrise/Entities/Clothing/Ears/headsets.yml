@@ -200,3 +200,37 @@
   - type: Clothing
     sprite: Clothing/Ears/Headsets/centcom.rsi
 
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetFreelanceNoKey
+  name: freelancer headset
+  suffix: No Key
+  description: This is used by a roaming group of freelancers.
+  components:
+    - type: ContainerFill
+      containers:
+        key_slots:
+        - null
+    - type: Sprite
+      sprite: Clothing/Ears/Headsets/freelance.rsi
+    - type: Clothing
+      sprite: Clothing/Ears/Headsets/freelance.rsi
+
+- type: entity
+  parent: ClothingHeadsetAltSyndicate
+  id: ClothingHeadsetAltSyndicateNoKey
+  name: blood-red over-ear headset
+  suffix: No Key
+  description: An updated, modular syndicate intercom that fits over the head and takes encryption keys (there are 5 key slots.).
+  components:
+  - type: Headset
+  - type: EncryptionKeyHolder
+    keySlots: 5
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - null
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/syndicate.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/syndicate.rsi

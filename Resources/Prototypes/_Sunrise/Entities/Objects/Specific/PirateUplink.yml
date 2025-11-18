@@ -65,6 +65,17 @@
 
 - type: entity
   parent: Doubloon
+  id: Doubloon5
+  name: Doubloon
+  suffix: 5 DB
+  components:
+  - type: Sprite
+    state: iron_2
+  - type: Stack
+    count: 5
+
+- type: entity
+  parent: Doubloon
   id: Doubloon15
   name: Doubloon
   suffix: 15 DB
@@ -122,6 +133,7 @@
   name: debug blackmarket radio
   description: If you are not an admin please return this Debug things to the nearest admin.
   categories: [ Debug ]
+  suffix: 999
   components:
   - type: Store
     balance:

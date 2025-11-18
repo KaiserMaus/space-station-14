@@ -7,8 +7,8 @@
   components:
     - type: Sprite
       layers:
-        - sprite: _Sunrise/BloodCult/Effects/cult_inout.rsi
-          state: cultin
+        - sprite: /Textures/_Sunrise/Effects/teleports_effect.rsi
+          state: redportin
           shader: unshaded
       netsync: false
       drawdepth: Effects
@@ -40,12 +40,22 @@
   suffix: Pirate
   components:
   - type: GhostRole
-    name: ghost-role-information-nukeop-reinforcement-name
-    description: ghost-role-information-nukeop-reinforcement-description
-    rules: ghost-role-information-nukeop-reinforcement-rules
+    name: ghost-role-information-pirate-name
+    description: ghost-role-information-pirate-description
+    rules: ghost-role-information-rules-team-antagonist
     mindRoles:
     - MindRoleGhostRoleTeamAntagonist
     raffle:
       settings: short
   - type: GhostRoleMobSpawner
-    prototype: RandomHumanoidPirateScooner
+    prototype: ScoonerReinforcementSpawner
+
+- type: entity
+  parent: ReinforcementPirateScooner
+  id: ReinforcementPirateScoonerEVA
+  name: human teleportation
+  description: Call in a freelancer of questionable quality, instantly! Basic rookie-pirate equipment provided.
+  suffix: Pirate, EVA
+  components:
+  - type: GhostRoleMobSpawner
+    prototype: OldScoonerReinforcementSpawner

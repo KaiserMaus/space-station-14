@@ -858,7 +858,7 @@
   id: UplinkPirateBoxImprovisedMagnum
   productEntity: MagazineBoxImprovisedMagnum
   cost:
-    Doubloon: 2
+    Doubloon: 1
   categories:
   - UplinkPirateAmmo
 
@@ -866,7 +866,7 @@
   id: UplinkPirateBoxImprovisedShotgun
   productEntity: MagazineBoxImprovisedShotgun
   cost:
-    Doubloon: 2
+    Doubloon: 1
   categories:
   - UplinkPirateAmmo
 
@@ -874,7 +874,7 @@
   id: UplinkPirateBoxImprovisedPistol
   productEntity: MagazineBoxImprovisedPistol
   cost:
-    Doubloon: 2
+    Doubloon: 1
   categories:
   - UplinkPirateAmmo
 
@@ -882,7 +882,7 @@
   id: UplinkPirateSMGMagImprovised
   productEntity: MagazinePistolSubMachineGunImprovisedFilled
   cost:
-    Doubloon: 2
+    Doubloon: 1
   categories:
   - UplinkPirateAmmo
 
@@ -1872,6 +1872,21 @@
     stock: 2
 
 - type: listing
+  id: UplinkPirateOldScoonerTeleport
+  # name: uplink-hardsuit-infiltration-name
+  # description: uplink-hardsuit-infiltration-desc
+  icon: { sprite: _Sunrise/Objects/Tools/Decoys/pirate_decoy.rsi, state: fballoon }
+  productEntity: ReinforcementPirateScoonerEVA
+  discountCategory: rarePirateDiscounts
+  discountDownTo:
+    Doubloon: 15
+  cost:
+    Doubloon: 25
+  categories:
+  - UplinkPirateAllies
+  restockTime: 1 #900
+
+- type: listing
   id: UplinkPirateScoonerTeleport
   # name: uplink-hardsuit-infiltration-name
   # description: uplink-hardsuit-infiltration-desc
@@ -1879,12 +1894,12 @@
   productEntity: ReinforcementPirateScooner
   discountCategory: rarePirateDiscounts
   discountDownTo:
-    Doubloon: 20
+    Doubloon: 30
   cost:
-    Doubloon: 50
+    Doubloon: 45
   categories:
   - UplinkPirateAllies
-  restockTime: 1 #900
+  restockTime: 1800
 
 - type: listing
   id: UplinkPirateBorgSyndicateDerelict
