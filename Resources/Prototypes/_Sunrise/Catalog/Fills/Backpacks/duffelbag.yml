@@ -387,3 +387,56 @@
         - id: ClothingOuterEVASuitPirateOld
         - id: DoubleEmergencyOxygenTankFilled
         - id: DoubleEmergencyNitrogenTankFilled
+
+- type: entity
+  id: ClothingBackpackMessengerMercenaryBundleSKM24
+  parent: ClothingBackpackMessengerMercenary
+  name: SKM-24 bundle
+  description: "Contains the cheap assault rifle."
+  components:
+    - type: StorageFill
+      contents:
+        - id: WeaponRifleSKM24
+          orGroup: SKM24
+        - id: WeaponRifleSKM24Syndi
+          orGroup: SKM24
+        - id: WeaponRifleSKM24White
+          orGroup: SKM24
+        - id: WeaponRifleSKM24Nano
+          orGroup: SKM24
+        - id: WeaponRifleSKM24Green
+          orGroup: SKM24
+        - id: MagazineLightRifleFMJ
+        - id: MagazineLightRifleSP
+        - id: MagazineLightRifleSP
+        - id: MagazineLightRifleHP
+        - id: CigPackSyndicate
+        - id: CheapLighter
+
+- type: entity
+  id: ClothingBackpackMessengerPirateBundleSKM24Scrap
+  parent: ClothingBackpackMessengerPirate
+  name: SKM-24 bundle
+  description: "Contains the cheapest assault rifle."
+  components:
+    - type: StorageFill
+      contents:
+        - id: WeaponRifleSKM24Scrap
+        - id: MagazineLightRifleImprovised
+        - id: MagazineLightRifleImprovised
+        - id: MagazineLightRifleImprovised
+        - id: MagazineBoxImprovisedRifle
+          prob: 0.5
+          orGroup: MagRifle
+        - id: MagazineLightRifleFMJ
+          prob: 0.25
+          orGroup: MagRifle
+        - id: MagazineLightRifleAP
+          prob: 0.01
+          orGroup: MagRifle
+        - id: MagazineLightRifleHP
+          prob: 0.4
+          orGroup: MagRifle
+        - id: MagazineLightRifleSP
+          prob: 0.4
+          orGroup: MagRifle

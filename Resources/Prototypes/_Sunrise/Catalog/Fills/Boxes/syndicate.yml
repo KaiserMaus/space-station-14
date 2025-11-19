@@ -364,13 +364,68 @@
   # Sunrise edit end
 
 - type: entity
-  parent: [ CyberEyeThermalBox, BaseSyndicateContraband ]
+  parent: CyberEyeThermalBox
   id: CyberEyeNightVisionBox
   name: Cyber-Eye "Night Vision" box
   components:
   - type: SpawnItemsOnUse
     items:
     - id: CyberEyeNightVision
+
+- type: entity
+  parent: CyberEyeThermalBox
+  id: CyberArmMantisBox
+  name: Cyber-Arm "Mantis" box
+  description: A small box safety containing one Cyber Arm. Packaging disintegrates when opened, leaving no evidence behind.
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: LeftArmCyberMantisBlade
+
+- type: entity
+  parent: CyberArmMantisBox
+  id: CyberArmHackBox
+  name: Cyber-Arm "Hack" box
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: LeftArmCyberHack
+
+- type: entity
+  parent: CyberArmMantisBox
+  id: CyberArmRipperBox
+  name: Cyber-Arm "Ripper" box
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: LeftArmCyberRipper
+
+- type: entity
+  parent: CyberArmMantisBox
+  id: CyberArmAtmosBox
+  name: Cyber-Arm "Atmos" box
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: LeftArmCyberAtmos
+
+- type: entity
+  parent: CyberArmMantisBox
+  id: CyberArmMechwrightBox
+  name: Cyber-Arm "Mechwright" box
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: LeftArmCyberMechwright
+
+- type: entity
+  parent: CyberArmMantisBox
+  id: CyberArmThrowerBox
+  name: Cyber-Arm "Thrower" box
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: RightArmCyberGrenadeThrower
 
 - type: entity
   parent: [BoxCardboard, BaseSyndicateContraband]

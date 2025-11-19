@@ -177,7 +177,7 @@
 # Exchanger
 - type: entity
   parent: [BaseComputerSunrise, StorePresetPirateExchanger]
-  id: ComputerPirateExchanger
+  id: ComputerPirateExchanger # Обменник для Пиратской бухты и прочих логовищ
   name: black market exchanger
   description: An old, rusted console barely held together by loose wiring and luck. The screen flickers, but the black market network still responds to requests.
   components:
@@ -212,7 +212,7 @@
 
 - type: entity
   parent: [BaseWallmountGlass, StorePresetPirateExchanger]
-  id: ComputerPirateExchangerWallmount
+  id: ComputerPirateExchangerWallmount # Обменник для Шаттла, берет комиссию до 30%
   name: black market exchanger
   description: An old, rusted console barely held together by loose wiring and luck. The screen flickers, but the black market network still responds to requests.
   components:
@@ -238,6 +238,7 @@
   - type: Store
     balance:
       Credit: 0
+  - type: AbductorDispencer # Sunrise-TODO: Избавиться от этого костыля, когда нибудь.
   - type: Tag
     tags:
     - Commission

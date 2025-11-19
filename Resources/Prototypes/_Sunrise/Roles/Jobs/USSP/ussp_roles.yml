@@ -292,7 +292,7 @@
     outerClothing: ClothingOuterEVASuitPirate
     shoes: ClothingShoesBootsMagPirate
     id: PiratePDA
-    belt: ClothingBeltSalvageWebbing
+    belt: JetpackMiniFilled
     pocket1: WeaponRevolverPirate
     pocket2: CombatKnife
   storage:
@@ -303,7 +303,7 @@
     - SpeedLoaderMagnumSP
     - CigPackSyndicate
     - CheapLighter
-    - HandHeldMassScannerBorg
+    - PinpointerPirate
     - Doubloon5
 
 - type: startingGear
@@ -326,5 +326,5 @@
     - RadioImplanterFreelance
     - CigaretteSyndicate
     - CheapLighter
-    - HandHeldMassScannerBorg
+    - PinpointerPirate
     - Doubloon1
