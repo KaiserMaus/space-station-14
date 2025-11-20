@@ -10,7 +10,7 @@
     - Wall
   components:
   - type: Anchorable
-    flags: 
+    flags:
     - Anchorable
   - type: Rotatable
   - type: RangedDamageSound
@@ -1447,9 +1447,9 @@
   - type: IconSmooth
     key: walls
     base: mining
-  - type: RandomIconSmooth
-    randomStates:
-    - mining
+  # - type: RandomIconSmooth
+  #   randomStates:
+  #   - mining
   - type: Appearance
 
 - type: entity

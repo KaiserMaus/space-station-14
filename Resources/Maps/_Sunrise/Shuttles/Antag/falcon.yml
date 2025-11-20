@@ -708,7 +708,7 @@ entities:
     - type: Transform
       pos: 5.5,-13.5
       parent: 1
-- proto: AlwaysPoweredStrobeLight
+- proto: AlwaysPoweredStrobeDimLight
   entities:
   - uid: 407
     components:
@@ -2108,14 +2108,6 @@ entities:
       parent: 1
 - proto: ComputerPirateExchangerWallmount
   entities:
-  - uid: 367
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 6.5,-12.5
-      parent: 1
-    - type: Fixtures
-      fixtures: {}
   - uid: 457
     components:
     - type: Transform
