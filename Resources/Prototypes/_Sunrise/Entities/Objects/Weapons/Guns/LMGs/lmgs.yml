@@ -358,7 +358,7 @@
       steps: 6
       zeroVisible: true
     - type: StaticPrice
-      price: 8000
+      price: 4000
     - type: KnockbackByUserTag
       doestContain:
         Resomi:

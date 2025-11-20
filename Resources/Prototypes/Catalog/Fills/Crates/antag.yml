@@ -183,8 +183,6 @@
         orGroup: HelmetPool
       - id: ClothingHeadHelmetPirateAlt2
         orGroup: HelmetPool
-      - id: ClothingOuterEVASuitPirate
-        orGroup: HardPool
       - id: ClothingOuterEVASuitPirateArmoredAlt
         orGroup: HardPool
       - id: ClothingOuterEVASuitPirateArmored

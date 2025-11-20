@@ -137,6 +137,8 @@
     - BoxShotgunSlug
     - BoxBeanbag
     - BoxShellTranquilizer
+    # Anti-mat
+    - MagazineBoxAntiMateriel
     #####################MAGAZINE#######################
     # LMG
     - LightRifleMagazineSP
