@@ -37,6 +37,12 @@
     closeable: true
     closeSound:
       path: /Audio/Effects/pop_high.ogg
+  # Sunrise-start
+  - type: PhysicalComposition
+    materialComposition:
+      steel: 15
+      plastic: 15
+  # Sunrise-end
 
 # Paints
 
