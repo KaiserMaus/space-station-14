@@ -1674,7 +1674,7 @@
   id: uplinkHeavyCleanade
   name: uplink-heavy-cleanade-name
   description: uplink-heavy-cleanade-desc
-  productEntity: CleanerGrenadeAcid
+  productEntity: CleanerGrenadeAcidBox
   cost:
     Telecrystal: 4
   categories:
