@@ -39,8 +39,8 @@
   # Sunrise-start
   - type: PhysicalComposition
     materialComposition:
-      steel: 25
-      plastic: 25
+      Steel: 25
+      Plastic: 25
       Cloth: 500
   # Sunrise-end
 
