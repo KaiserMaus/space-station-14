@@ -179,10 +179,10 @@
       - Patch
 
 - type: entity
-  name: advanced drug storage
+  name: bluespace drug storage
   id: BluespacePillPatchCanister
   parent: BaseStorageItem
-  description: A technologically advanced device for storing small-sized medications, it has two containers of different shapes, which unite the central storage of the device.
+  description: A technologically advanced device for storing small-sized medications such as patch and pills, it has two containers of different shapes, which unite the central storage of the device.
   components:
   - type: Sprite
     sprite: _Sunrise/Objects/Specific/Chemistry/bluespace_pillcanister.rsi
