@@ -215,9 +215,9 @@
 
 - type: entity
   id: MagazineSMGCap
-  name: pistol magazine (Cap)
+  name: smg magazine (Cap)
   parent: BaseMagazinePistolSubMachineGun
-  description: 10-round single-stack magazine for pistols. Intended to Cap ammunition.
+  description: 30-round double-stack magazine for pistols. Intended to Cap ammunition.
   components:
   - type: Tag
     tags:
@@ -255,14 +255,14 @@
   description: A classic and widespread submachine gun, infamous for its use by the Clowns. Looks almost like the real thing! Ages 8 and up.
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Guns/SMGs/c20r.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/SMGs/fake_c20r.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: Objects/Weapons/Guns/SMGs/c20r.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/SMGs/fake_c20r.rsi
   - type: Wieldable
     unwieldOnUse: false
   - type: GunWieldBonus
