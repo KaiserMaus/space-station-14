@@ -68,7 +68,7 @@
 
 - type: entity
   parent: [BaseFlatpack, BaseScienceContraband]
-  id: ResearchAndDevelopmentServerFlatpack BaseScienceContraband
+  id: ResearchAndDevelopmentServerFlatpack
   name: R&D server flatpack
   description: A flatpack used for constructing a R&D server.
   components:
