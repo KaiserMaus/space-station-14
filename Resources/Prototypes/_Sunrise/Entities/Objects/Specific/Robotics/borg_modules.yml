@@ -306,7 +306,7 @@
   parent: [ BaseXenoborgModuleHeavy, BaseProviderBorgModule, BaseXenoborgContraband ]
   id: XenoborgModuleTurboLaser
   name: turbo-laser xenoborg module
-  description: Module with a heavy mahinegun laser.
+  description: Module with a heavy machinegun laser.
   components:
   - type: Sprite
     layers:

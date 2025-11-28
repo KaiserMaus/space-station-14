@@ -1283,7 +1283,7 @@
   name: xenoborg X-ray cannon
   parent: [BaseWeaponBattery, BaseXenoborgContraband]
   id: XenoborgXrayGun
-  description: Wweapon that uses concentrated x-ray energy against its target.
+  description: Weapon that uses concentrated x-ray energy against its target.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/xray.rsi
