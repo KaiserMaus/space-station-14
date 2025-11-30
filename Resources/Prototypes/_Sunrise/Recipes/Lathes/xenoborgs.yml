@@ -12,7 +12,8 @@
   id: XenoborgModuleXrayRecipe
   result: XenoborgModuleXray
   materials:
-    Glass: 3000
+    Glass: 1500
+    Steel: 1000
     Uranium: 500
 
 - type: latheRecipe
@@ -20,7 +21,8 @@
   id: XenoborgModuleTurboLaserRecipe
   result: XenoborgModuleTurboLaser
   materials:
-    Glass: 3000
+    Glass: 1500
+    Steel: 1000
     Plasma: 500
 
 # Parts
