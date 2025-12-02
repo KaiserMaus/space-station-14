@@ -60,9 +60,9 @@
     node: makeshiftcage
 
 - type: entity
-  name: xenoborg power cell
-  description: A rechargeable standardized power cell. This one looks like a rare and powerful xenoborg variant with EMP immune.
-  id: PowerCellXenoborg
+  name: small xenoborg power cell
+  description: A rechargeable standardized power cell. This one looks like massproduced combat xenoborg variant with EMP immune.
+  id: PowerCellXenoborgSmall
   parent: BasePowerCell
   components:
   - type: Sprite
@@ -73,9 +73,29 @@
       state: o2
       shader: unshaded
   - type: Battery
+    maxCharge: 740
+    startingCharge: 740
+  - type: EmpImmune
+
+- type: entity
+  name: small xenoborg power cell
+  description: A rechargeable standardized power cell. This one looks like massproduced combat xenoborg variant with EMP immune.
+  id: PowerCellXenoborgSmallPrinted
+  suffix: Empty
+  parent: PowerCellXenoborgSmall
+  components:
+  - type: Battery
+    startingCharge: 0
+
+- type: entity
+  name: xenoborg power cell
+  description: A rechargeable standardized power cell. This one looks like a rare and powerful xenoborg variant with EMP immune.
+  id: PowerCellXenoborg
+  parent: PowerCellXenoborgSmall
+  components:
+  - type: Battery
     maxCharge: 1080
     startingCharge: 1080
-  - type: EmpImmune
 
 - type: entity
   name: advance xenoborg power cell

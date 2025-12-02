@@ -21,8 +21,13 @@
   recipes:
   - XenoborgCircuitBoard
   - NanopasteFull
+  - CableStack
+  - CableMVStack
+  - CableHVStack
   - PowerCellXenoborgAdvance
   - PowerCellXenoborg
   - XenoborgModuleXrayRecipe
   - XenoborgModuleTurboLaserRecipe
+  - BorgChargerCircuitboard
+  - MicroManipulatorStockPart
 # Sunrise-End
