@@ -5,4 +5,4 @@ ent-SupermatterFlatpack = supermatter flatpack
 ent-ResearchAndDevelopmentServerFlatpack = R&D server flatpack
     .desc = A flatpack used to construct a research server.
 ent-ResearchAndDevelopmentComputerFlatpack = R&D computer flatpack
-    .desc = A flatpack used to construct a research computer.
+    .desc = A flatpack used for constructing a research computer.
