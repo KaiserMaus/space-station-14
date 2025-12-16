@@ -11,6 +11,10 @@
   background: /Textures/_Sunrise/Lobby/Arts/engineer.webp
 
 - type: lobbyBackground
+  id: BeerSlime
+  background: /Textures/_Sunrise/Lobby/Arts/beerslime.webp
+
+- type: lobbyBackground
   id: Deadsquad
   background: /Textures/_Sunrise/Lobby/Arts/deadsquad.webp
 
