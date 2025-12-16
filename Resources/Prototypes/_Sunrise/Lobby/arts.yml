@@ -15,20 +15,8 @@
   background: /Textures/_Sunrise/Lobby/Arts/deadsquad.webp
 
 - type: lobbyBackground
-  id: Detective
-  background: /Textures/_Sunrise/Lobby/Arts/detective.webp
-
-- type: lobbyBackground
   id: EngineersChill
   background: /Textures/_Sunrise/Lobby/Arts/engineers-chill.webp
-
-- type: lobbyBackground
-  id: Greytide
-  background: /Textures/_Sunrise/Lobby/Arts/greytide.webp
-
-- type: lobbyBackground
-  id: Hydroponics
-  background: /Textures/_Sunrise/Lobby/Arts/hydroponics.webp
 
 - type: lobbyBackground
   id: IntoSpace
@@ -55,24 +43,12 @@
   background: /Textures/_Sunrise/Lobby/Arts/maintenance-clown.webp
 
 - type: lobbyBackground
-  id: MedDepart
-  background: /Textures/_Sunrise/Lobby/Arts/med-depart.webp
-
-- type: lobbyBackground
   id: NukiesHere
   background: /Textures/_Sunrise/Lobby/Arts/nukies-here.webp
 
 - type: lobbyBackground
   id: RegularShift
   background: /Textures/_Sunrise/Lobby/Arts/regular-shift.webp
-
-- type: lobbyBackground
-  id: Russellmart
-  background: /Textures/_Sunrise/Lobby/Arts/russellmart.webp
-
-- type: lobbyBackground
-  id: Sidor
-  background: /Textures/_Sunrise/Lobby/Arts/sidor.webp
 
 - type: lobbyBackground
   id: Singulord
@@ -101,10 +77,6 @@
 - type: lobbyBackground
   id: NukieDudes
   background: /Textures/_Sunrise/Lobby/Arts/nukie-dudes.webp
-
-- type: lobbyBackground
-  id: LostAndPowerless
-  background: /Textures/_Sunrise/Lobby/Arts/lost-and-powerless.webp
 
 - type: lobbyBackground
   id: MenAtWork
@@ -141,10 +113,6 @@
 - type: lobbyBackground
   id: SingulordCage
   background: /Textures/_Sunrise/Lobby/Arts/singulord-cage.webp
-
-- type: lobbyBackground
-  id: YouLookLonely
-  background: /Textures/_Sunrise/Lobby/Arts/you-look-lonely.webp
 
 - type: lobbyBackground
   id: GrayTide
