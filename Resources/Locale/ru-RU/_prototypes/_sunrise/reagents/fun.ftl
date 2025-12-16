@@ -1,3 +1,6 @@
+reagent-name-aphrodisiac = Афродизиак
+reagent-desc-aphrodisiac = Вещество, которое усиливает возбуждение или удовольствие.
+reagent-physical-desc-aphrodisiac = Мерцающая, рубиново-красная жидкость, мягко светящаяся на свету.
 reagent-name-honkpower = Мощь хонка
 reagent-desc-honkpower = Хохохонк
 reagent-flavor-honkpower = Как смех хонкоматери
