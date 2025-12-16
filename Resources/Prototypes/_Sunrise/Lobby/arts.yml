@@ -158,9 +158,9 @@
 #  id: NewYearPenguins
 #  background: /Textures/_Sunrise/Lobby/Arts/new-year-penguins.webp
 
-#- type: lobbyBackground
-#  id: NewYearNuke
-#  background: /Textures/_Sunrise/Lobby/Arts/new-year-nuke.webp
+- type: lobbyBackground
+  id: NewYearNuke
+  background: /Textures/_Sunrise/Lobby/Arts/new-year-nuke.webp
 
 - type: lobbyBackground
   id: ArnoldIntelligence
