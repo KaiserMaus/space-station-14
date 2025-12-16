@@ -95,6 +95,10 @@
   background: /Textures/_Sunrise/Lobby/Arts/tesla-loose.webp
 
 - type: lobbyBackground
+  id: TeslaLoose2
+  background: /Textures/_Sunrise/Lobby/Arts/teslaloose.webp
+
+- type: lobbyBackground
   id: NukieDudes
   background: /Textures/_Sunrise/Lobby/Arts/nukie-dudes.webp
 
