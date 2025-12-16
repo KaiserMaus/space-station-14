@@ -181,3 +181,7 @@
 - type: lobbyBackground
   id: Reunion
   background: /Textures/_Sunrise/Lobby/Arts/reunion.webp
+
+- type: lobbyBackground
+  id: Prostchitalsanogde
+  background: /Textures/_Sunrise/LobbyScreens/prostchitalsanogde.webp
