@@ -199,3 +199,4 @@ ignore_files:
   - role-types.ftl
   - rmobjective.ftl
   - persistence-save-command.ftl
+  - narsie.ftl
