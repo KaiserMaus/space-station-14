@@ -855,6 +855,8 @@ GrenadeFlash: GrenadeFlashTimer
 GrenadeFrag: GrenadeFragTimer
 WeaponEnergyGunMini: WeaponMiniEnergyGun
 GunSafeCombineSmallArms: SpawnerSafeSmallArms
+AphrodisiacChemistryBottle: null
+PatchViagra: null
 # SL HITSCAN START
 BoxMagazineRifle: BoxMagazineRifleSP
 MagazineBoxLightRifle: MagazineBoxLightRifleSP
