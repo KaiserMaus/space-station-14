@@ -24,8 +24,7 @@ public sealed partial class ChatSanitizationSystem : EntitySystem
     /// Расширенный паттерн для обнаружения ссылок.
     /// </summary>
     private static readonly Regex UrlRegex =
-        new("[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&\\/\\/=]*)", RegexOptions.Compiled);
-
+        new("(?:(?:https?|ftp):\\/\\/)?(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\\.)+[a-zA-Z]{2,24}(?:\\/[^\\s]*)?", RegexOptions.Compiled);
     /// <summary>
     /// ASCII-art фильтр: отбрасывает нестандартные символы, но сохраняет все локали и управляемые символы.
     /// </summary>
