@@ -1,0 +1,149 @@
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomServiceCorpse
+  suffix: Dead, Service
+  components:
+  - type: Loadout
+    prototypes:
+      - HoPCorpseGear
+      - ClownCorpseGear
+      - MimeCorpseGear
+      - JanitorCorpseGear
+      - ServiceWorkerCorpseGear
+      - MusicianCorpseGear
+      - BotanistCorpseGear
+      - ChefCorpseGear
+      - ChaplainCorpseGear
+      - AssistantCorpseGear
+      - TiderCorpseGear
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomEngineerCorpse
+  suffix: Dead, Engineer
+  components:
+  - type: Loadout
+    prototypes:
+    - TechnicalAssistantCorpseGear
+    - AtmosphericTechnicianCorpseGear
+    - StationEngineerCorpseGear
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomCargoCorpse
+  suffix: Dead, Cargo
+  components:
+  - type: Loadout
+    prototypes:
+    - CargoTechCorpseGear
+    - MailTechCorpseGear
+    - MinerCorpseGear
+    - SalvageSpecialistCorpseGear
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomMedicCorpse
+  suffix: Dead, Medic
+  components:
+  - type: Loadout
+    prototypes:
+    - MedicalInternCorpseGear
+    - PsychologistCorpseGear
+    - ChemistCorpseGear
+    - DoctorCorpseGear
+    - VirologistCorpseGear
+    - GeneticsCorpseGear
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomScienceCorpse
+  suffix: Dead, Science
+  components:
+  - type: Loadout
+    prototypes:
+    - ResearchAssistantCorpseGear
+    - ScientistCorpseGear
+    - RoboticistCorpseGear
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomSecurityCorpse
+  suffix: Dead, Security
+  components:
+  - type: Loadout
+    prototypes:
+    - SecurityCadetCorpseGear
+    - SecurityOfficerCorpseGear
+    - DetectiveCorpseGear
+    - BrigMedicCorpseGear
+    - WardenCorpseGear
+    - PrisonerCorpseGear
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomCommandCorpse
+  suffix: Dead, Command
+  components:
+  - type: Loadout
+    prototypes:
+    - HoPCorpseGear
+    - CentcomCorpseGear
+    - CaptainCorpseGear
+    - HoSCorpseGear
+    - ResearchDirectorCorpseGear
+    - CMOCorpseGear
+    - ChiefEngineerCorpseGear
+    - QuartermasterCorpseGear
+    - IAACorpseGear
+    - MagistrateCorpseGear
+    - NTRCorpseGear
+    - BSOCorpseGear
+
+# region start (ANTAGS)
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomSyndicateCorpse
+  suffix: Dead, Syndicate
+  components:
+  - type: Loadout
+    prototypes:
+    - SyndicateCorpseGear
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomNukieCorpse
+  suffix: Dead, Nukie
+  components:
+  - type: Loadout
+    prototypes:
+    - NukieCorpseGear
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomSovietCorpse
+  suffix: Dead, Soviet
+  components:
+  - type: Loadout
+    prototypes:
+    - SovietCorpseGear
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomMercenaryCorpse
+  suffix: Dead, Mercenary
+  components:
+  - type: Loadout
+    prototypes:
+    - MercenaryCorpseGear
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomPirateCorpse
+  suffix: Dead, Pirate
+  components:
+  - type: Loadout
+    prototypes:
+    - PirateCorpseGear
+
+# region End (ANTAGS)

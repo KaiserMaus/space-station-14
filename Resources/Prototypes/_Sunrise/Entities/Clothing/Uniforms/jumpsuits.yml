@@ -387,3 +387,14 @@
     - NudeTop # INTERACTIONS
     - WhitelistChameleon
   # SUNRISE EDIT
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUSSPMarine
+  name: USSP space-marine jumpsuit
+  description: A striped undershirt and simple trousers of the USSP space marines. Worn under a combat spacesuit, because even armor should know who is inside it.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Uniforms/Jumpsuit/alcoholichka.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Uniforms/Jumpsuit/alcoholichka.rsi
