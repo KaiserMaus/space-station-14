@@ -32,7 +32,7 @@
       - state: green
   - type: ConditionalSpawner
     prototypes:
-      - MobRandomSovietCorpse
+      - MobRandomSovietUSSPCorpse
 
 - type: entity
   name: Random Mercenary Corpse Spawner

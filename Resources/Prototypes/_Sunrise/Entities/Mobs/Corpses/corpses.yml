@@ -119,14 +119,30 @@
     prototypes:
     - NukieCorpseGear
 
+# USSP
 - type: entity
   parent: SalvageHumanCorpse
-  id: MobRandomSovietCorpse
+  id: MobRandomSovietUSSPCorpse
   suffix: Dead, Soviet
   components:
   - type: Loadout
     prototypes:
-    - SovietCorpseGear
+    - SovietCorpseGearMarine
+    - SovietCorpseGearMarineB
+    - SovietCorpseGearMarineC
+    - SovietCorpseGearMarineD
+    - SovietCorpseGearMarineF
+    - SovietCorpseGearOfficer
+    - SovietCorpseGearOfficerB
+    - SovietCorpseGearEVAOfficer
+    - SovietCorpseGearEVALight
+    - SovietCorpseGearEVALightB
+    - SovietCorpseGearEVA
+    - SovietCorpseGearA
+    - SovietCorpseGearB
+    - SovietCorpseGearC
+    - SovietCorpseGearD
+    - SovietCorpseGearF
 
 - type: entity
   parent: SalvageHumanCorpse
