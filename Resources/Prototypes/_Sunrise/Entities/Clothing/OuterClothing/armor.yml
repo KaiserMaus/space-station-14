@@ -51,9 +51,9 @@
     sprite: Clothing/OuterClothing/Armor/heavy.rsi
     equipSound: /Audio/Items/belt_equip.ogg
     unequipSound: /Audio/Items/belt_equip.ogg
-    # equipDelay: 10
-    # unequipDelay: 12
-    # stripDelay: 16
+    equipDelay: 10
+    unequipDelay: 12
+    stripDelay: 16
   - type: Item
     size: Ginormous
   - type: StaminaResistance
