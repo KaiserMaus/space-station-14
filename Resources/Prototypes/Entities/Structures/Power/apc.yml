@@ -252,6 +252,7 @@
   - type: AccessReader
     access: [["Xenoborg"]]
 
+# sunrise-start
 - type: entity
   parent: APCHighCapacity
   id: APCHighCapacitySyndicate
@@ -260,3 +261,4 @@
   components:
   - type: AccessReader
     access: [["NuclearOperative"]]
+# sunrise-end
