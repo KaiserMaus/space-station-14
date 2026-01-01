@@ -30,9 +30,6 @@ ent-BoxFolderClipboardThreePapers = { ent-BoxFolderClipboard }
     .desc = { ent-BoxFolderClipboard.desc }
     .suffix = 3 бумаги
 
-ent-ClothingBackpackMessengerBloodCult = сумка-мессенджер культиста
-    .desc = Водонепроницаемая сумка-мессенджер для верных последователей Нар'Си.
-
 ent-ClothingBackpackMessengerPirateDecoyKitFilled = набор отвлекающих манёвров
     .desc = Содержит визуальные отвлекашки. Запах и звук — скоро.
 

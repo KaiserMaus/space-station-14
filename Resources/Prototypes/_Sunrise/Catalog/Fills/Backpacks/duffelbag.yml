@@ -524,3 +524,19 @@
         - id: MagazineLightRifleSP
           prob: 0.4
           orGroup: MagRifle
+
+- type: entity
+  id: ClothingBackpackMessengerMercenaryBundleARG
+  parent: ClothingBackpackMessengerMercenary
+  name: ARG bundle
+  description: "Contains the normal assault rifle."
+  components:
+    - type: StorageFill
+      contents:
+        - id: WeaponRifleARG
+        - id: MagazineLightRifleFMJ
+        - id: MagazineLightRifleSP
+        - id: MagazineLightRifleSP
+        - id: MagazineLightRifleHP
+        - id: CigPackSyndicate
+        - id: CheapLighter

@@ -136,9 +136,9 @@
   productEntity: ClothingHandsKnuckleDustersSyndicate
   discountCategory: veryRarePirateDiscounts
   discountDownTo:
-    Doubloon: 3
+    Doubloon: 2
   cost:
-    Doubloon: 8
+    Doubloon: 3
   categories:
   - UplinkPirateWeaponry
 
@@ -410,6 +410,17 @@
   - UplinkPirateWeaponry
 
 - type: listing
+  id: UplinkPirateARG
+  name: uplink-weapon-arg-name
+  description: uplink-weapon-arg-desc
+  productEntity: ClothingBackpackMessengerMercenaryBundleARG
+  icon: { sprite: _Starlight/Objects/Weapons/Guns/Rifles/arg.rsi, state: icon }
+  cost:
+    Doubloon: 27
+  categories:
+  - UplinkPirateWeaponry
+
+- type: listing
   id: UplinkPirateSKM28
   productEntity: WeaponRifleSKM28
   cost:
@@ -673,10 +684,10 @@
   icon: { sprite: /Textures/Objects/Weapons/Melee/e_sword.rsi, state: icon }
   discountCategory: veryRarePirateDiscounts
   discountDownTo:
-    Doubloon: 33
+    Doubloon: 30
   productEntity: EnergySwordBiocode
   cost:
-    Doubloon: 38
+    Doubloon: 30
   categories:
   - UplinkPirateWeaponry
   restockTime: 2700
@@ -1965,9 +1976,9 @@
   icon: { sprite: Mobs/Silicon/chassis.rsi, state: derelict }
   discountCategory: veryRarePirateDiscounts
   discountDownTo:
-    Doubloon: 30
+    Doubloon: 15
   cost:
-    Doubloon: 35
+    Doubloon: 20
   categories:
   - UplinkPirateAllies
   conditions:
@@ -1984,9 +1995,9 @@
   icon: { sprite: Mobs/Silicon/chassis.rsi, state: medical_derelict }
   discountCategory: veryRarePirateDiscounts
   discountDownTo:
-    Doubloon: 35
+    Doubloon: 20
   cost:
-    Doubloon: 40
+    Doubloon: 25
   categories:
   - UplinkPirateAllies
   conditions:
@@ -2003,9 +2014,9 @@
   icon: { sprite: Mobs/Silicon/chassis.rsi, state: miner_derelict }
   discountCategory: veryRarePirateDiscounts
   discountDownTo:
-    Doubloon: 38
+    Doubloon: 20
   cost:
-    Doubloon: 45
+    Doubloon: 25
   categories:
   - UplinkPirateAllies
   conditions:
@@ -2052,9 +2063,9 @@
   icon: { sprite: Mobs/Silicon/chassis.rsi, state: synd_sec_derelict }
   discountCategory: veryRarePirateDiscounts
   discountDownTo:
-    Doubloon: 48
+    Doubloon: 25
   cost:
-    Doubloon: 58
+    Doubloon: 30
   categories:
   - UplinkPirateAllies
   restockTime: 2700
