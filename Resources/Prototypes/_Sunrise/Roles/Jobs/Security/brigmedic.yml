@@ -21,6 +21,8 @@
   - Brig
   - External
   - Cryogenics
+  - GenpopEnter
+  - GenpopLeave
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
@@ -44,7 +46,3 @@
 - type: chameleonOutfit
   id: BrigmedicChameleonOutfit
   job: Brigmedic
-  hasMindShield: true
-  equipment:
-    mask: ClothingMaskGasSecurity
-    gloves: ClothingHandsGlovesLatex

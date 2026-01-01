@@ -15,8 +15,11 @@
   access:
   - Security
   - Brig
+  - Service
   - External
   - Cryogenics
+  - GenpopEnter
+  - GenpopLeave
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
@@ -39,8 +42,3 @@
 - type: chameleonOutfit
   id: SecurityPilotChameleonOutfit
   job: SecurityPilot
-  hasMindShield: true
-  equipment:
-    gloves: ClothingHandsGlovesColorGray
-    mask: ClothingMaskGasPilot
-    eyes: ClothingEyesGlassesSunglasses

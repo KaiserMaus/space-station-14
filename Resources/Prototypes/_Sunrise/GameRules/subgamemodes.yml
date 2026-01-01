@@ -24,4 +24,4 @@
       mindRoles:
       - MindRoleVampire
   - type: DynamicRuleCost
-    cost: 125
+    cost: 150

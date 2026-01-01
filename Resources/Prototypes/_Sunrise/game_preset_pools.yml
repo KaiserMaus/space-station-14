@@ -15,7 +15,6 @@
   presets:
     Greenshift: [0, 200]
     Dynamic: [20, 200]
-    Secret: [40, 200]
 
 - type: gamePresetPool
   id: MiddleLowPopPresetPool

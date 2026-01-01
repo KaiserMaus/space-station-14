@@ -23,5 +23,3 @@
       lateJoinAdditional: true
       mindRoles:
       - MindRoleCultist
-  - type: DynamicRuleCost
-    cost: 150
