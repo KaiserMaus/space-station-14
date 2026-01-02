@@ -22,14 +22,6 @@ ent-FoodBreadCottonNutriBatard = хлопковый нутри-батард
 ent-CrazyLube = сумасшедшая смазка
     .desc = Бутылка суперскользкой сумасшедшей смазки от Honk! Co.
 
-ent-BoxFolderClipboardEmpty = { ent-BoxFolderClipboard }
-    .desc = { ent-BoxFolderClipboard.desc }
-    .suffix = Пустой
-
-ent-BoxFolderClipboardThreePapers = { ent-BoxFolderClipboard }
-    .desc = { ent-BoxFolderClipboard.desc }
-    .suffix = 3 бумаги
-
 ent-ClothingBackpackMessengerPirateDecoyKitFilled = набор отвлекающих манёвров
     .desc = Содержит визуальные отвлекашки. Запах и звук — скоро.
 
