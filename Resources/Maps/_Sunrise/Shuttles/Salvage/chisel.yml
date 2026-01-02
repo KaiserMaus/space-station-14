@@ -4,8 +4,8 @@ meta:
   engineVersion: 270.0.0
   forkId: ""
   forkVersion: ""
-  time: 01/02/2026 03:15:52
-  entityCount: 446
+  time: 01/02/2026 03:53:15
+  entityCount: 452
 maps: []
 grids:
 - 1
@@ -395,11 +395,9 @@ entities:
       data:
         tiles:
           0,0:
-            0: 41151
-            1: 2048
+            0: 43199
           0,-1:
-            0: 12851
-            2: 2048
+            0: 47675
           0,1:
             0: 51263
           -1,0:
@@ -407,35 +405,40 @@ entities:
           -1,1:
             0: 1167
           1,0:
-            0: 13105
+            0: 13107
           1,1:
-            0: 17683
+            0: 25363
           1,-1:
-            2: 8448
+            0: 5395
           0,-2:
-            2: 3
-            0: 13060
+            1: 3
+            0: 64392
           -1,-2:
-            2: 8
-            0: 54067
-            1: 10240
+            1: 8
+            0: 65331
           -1,-1:
-            0: 30491
+            0: 30521
+          0,-3:
+            1: 16384
+          1,-2:
+            0: 13073
+            1: 4
+          1,-3:
+            0: 8192
           -2,0:
             0: 2248
-            2: 16384
+            1: 16384
           -2,-1:
-            0: 51208
+            0: 51328
           -2,1:
-            2: 4
+            1: 4
             0: 128
           -2,-2:
-            2: 4
-            0: 34816
+            1: 1092
           -2,-3:
-            2: 32768
+            1: 32768
           -1,-3:
-            2: 12288
+            1: 12288
             0: 16384
         uniqueMixes:
         - volume: 2500
@@ -443,11 +446,6 @@ entities:
           moles:
             Oxygen: 21.824879
             Nitrogen: 82.10312
-        - volume: 2500
-          temperature: 293.14975
-          moles:
-            Oxygen: 20.078888
-            Nitrogen: 75.53487
         - volume: 2500
           immutable: True
           moles: {}
@@ -619,6 +617,14 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
+  - uid: 451
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -1.5,-6.5
+      parent: 1
+    - type: Fixtures
+      fixtures: {}
 - proto: AtmosDeviceFanDirectionalDev
   entities:
   - uid: 25
@@ -744,12 +750,12 @@ entities:
   - uid: 30
     components:
     - type: Transform
-      pos: 1.5,-2.5
+      pos: 1.5,-6.5
       parent: 1
   - uid: 62
     components:
     - type: Transform
-      pos: 4.5,-3.5
+      pos: 4.5,0.5
       parent: 1
   - uid: 70
     components:
@@ -769,7 +775,7 @@ entities:
   - uid: 99
     components:
     - type: Transform
-      pos: 2.5,-4.5
+      pos: 5.5,0.5
       parent: 1
   - uid: 102
     components:
@@ -784,7 +790,7 @@ entities:
   - uid: 135
     components:
     - type: Transform
-      pos: 1.5,-1.5
+      pos: 1.5,0.5
       parent: 1
   - uid: 140
     components:
@@ -795,11 +801,6 @@ entities:
     components:
     - type: Transform
       pos: -1.5,-4.5
-      parent: 1
-  - uid: 190
-    components:
-    - type: Transform
-      pos: 0.5,-5.5
       parent: 1
   - uid: 192
     components:
@@ -844,7 +845,7 @@ entities:
   - uid: 204
     components:
     - type: Transform
-      pos: 2.5,-0.5
+      pos: 3.5,4.5
       parent: 1
   - uid: 205
     components:
@@ -879,7 +880,7 @@ entities:
   - uid: 211
     components:
     - type: Transform
-      pos: 4.5,3.5
+      pos: 2.5,4.5
       parent: 1
   - uid: 214
     components:
@@ -919,7 +920,32 @@ entities:
   - uid: 429
     components:
     - type: Transform
-      pos: -4.5,-5.5
+      pos: 1.5,4.5
+      parent: 1
+  - uid: 447
+    components:
+    - type: Transform
+      pos: 0.5,4.5
+      parent: 1
+  - uid: 448
+    components:
+    - type: Transform
+      pos: -0.5,4.5
+      parent: 1
+  - uid: 449
+    components:
+    - type: Transform
+      pos: -1.5,4.5
+      parent: 1
+  - uid: 450
+    components:
+    - type: Transform
+      pos: 3.5,3.5
+      parent: 1
+  - uid: 452
+    components:
+    - type: Transform
+      pos: -1.5,-6.5
       parent: 1
 - proto: CableApcStack1
   entities:
@@ -1066,6 +1092,11 @@ entities:
     components:
     - type: Transform
       pos: 2.5,-0.5
+      parent: 1
+  - uid: 190
+    components:
+    - type: Transform
+      pos: -1.5,-6.5
       parent: 1
   - uid: 290
     components:
@@ -2561,7 +2592,6 @@ entities:
     - type: Physics
       bodyType: Static
     - type: InsertingMaterialStorage
-      endTime: 0
 - proto: PowerCellHighPrinted
   entities:
   - uid: 265
