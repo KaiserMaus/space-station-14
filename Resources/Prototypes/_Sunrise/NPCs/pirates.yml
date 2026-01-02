@@ -62,8 +62,13 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      80: Critical
+      85: Critical
       100: Dead
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Critical
+    damageCap: 90
   - type: Stamina
     baseCritThreshold: 100
   - type: Butcherable

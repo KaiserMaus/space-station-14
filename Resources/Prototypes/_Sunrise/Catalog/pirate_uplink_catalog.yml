@@ -626,7 +626,7 @@
   name: uplink-fire-axe-flaming-name
   description: uplink-fire-axe-flaming-desc
   icon: { sprite: Objects/Weapons/Melee/fireaxeflaming.rsi, state: icon }
-  productEntity: FireAxeFlamingBiocode
+  productEntity: FireAxeFlaming
   cost:
     Doubloon: 27
   categories:
