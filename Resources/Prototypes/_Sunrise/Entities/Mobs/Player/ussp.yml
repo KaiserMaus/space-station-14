@@ -292,6 +292,7 @@
       factions:
       - Syndicate
       - Pirate
+    - type: PirateIcon
     - type: GhostRole
       name: ghost-role-information-pirate-name
       description: ghost-role-information-pirate-description
@@ -348,6 +349,7 @@
       factions:
       - Syndicate
       - Pirate
+    - type: PirateIcon
     - type: GhostRole
       name: ghost-role-information-pirate-name
       description: ghost-role-information-pirate-description
@@ -375,6 +377,7 @@
     factions:
     - Syndicate
     - Pirate
+  - type: PirateIcon
 
 - type: entity
   parent: [MobHuman, PirateScoonerReinforcementBase]
