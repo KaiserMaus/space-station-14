@@ -34,18 +34,24 @@
     Ointment: 2
     Bloodpack: 3
     ChemistryBottleEpinephrine: 3
+    Ampula: 3 # Sunrise-add
     Syringe: 3
     PillCanisterTricordrazine: 2
-    PatchPack: 1 # Sunrise-Edit
-    PatchBrute: 2 # Sunrise-Edit
-    PatchBruteSmall: 3 # Sunrise-Edit
-    PatchBurn: 2 # Sunrise-Edit
-    PatchBurnSmall: 3 # Sunrise-Edit
+    # Sunrise-start
+    PillCanisterIron: 1
+    PillCanisterCopper: 1
+    PatchPack: 1
+    PatchBrute: 2
+    PatchBruteSmall: 3
+    PatchBurn: 2
+    PatchBurnSmall: 3
+    # Sunrise-end
   contrabandInventory:
     PillCanisterRandom: 1
+    Tourniquet: 3
     PowerCellSmall: 2
-    PatchBurn: 1 # Sunrise-Edit
-    PatchBrute: 1 # Sunrise-Edit
+    PatchPackHeat: 1 # Sunrise-Edit
+    PatchPackBrute: 1 # Sunrise-Edit
   emaggedInventory: # Sunrise Edit
     StimpackMini: 1 # Sunrise Edit
     PatchOmni: 3 # Sunrise Edit
