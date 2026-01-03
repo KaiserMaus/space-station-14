@@ -1,20 +1,6 @@
 # Syndicate base
 - type: dungeonConfig
   id: SyndicateBase
-  colors:
-    Decals: "#6E2323"
-  entities:
-    Cabling: CableApcExtension
-    CornerWalls: WallPlastitanium
-    Walls: WallPlastitanium
-  spawnGroups:
-    CornerClutter: BaseClutter
-    Entrance: SyndicateBaseEntrancePossiblyRigged
-    EntranceFlank: SyndicateBaseWindow
-    Junction: SyndicateBaseAirlock
-    Window: SyndicateBaseWindow
-  tiles:
-    FallbackTile: FloorDark
   layers:
   - !type:PrefabDunGen
     roomWhitelist:
@@ -76,12 +62,31 @@
   - !type:CornerClutterDunGen
     contents: BaseClutter
 
+  - !type:CorridorDecalSkirtingDunGen
+    cardinalDecals:
+      South: TrimlineS
+      East: TrimlineE
+      North: TrimlineN
+      West: TrimlineW
+    cornerDecals:
+      SouthEast: TrimlineCornerSE
+      SouthWest: TrimlineCornerSW
+      NorthEast: TrimlineCornerNE
+      NorthWest: TrimlineCornerNW
+    pocketDecals:
+      SouthWest: TrimlineCornerSmallSW
+      SouthEast: TrimlineCornerSmallSE
+      NorthWest: TrimlineCornerSmallNW
+      NorthEast: TrimlineCornerSmallNE
+    color: "#6E2323"
+
 - type: entityTable
   id: SyndicateBaseAirlock
   table: !type:GroupSelector
     children:
     - id: CableApcExtension
     - id: AirlockSyndicateNukeopLocked
+      weight: 5
     - id: AirlockSyndicateLocked
     - id: ScrapAirlock1
 
@@ -108,7 +113,7 @@
   table: !type:GroupSelector
     children:
     - id: VendingMachineWallMedicalCivilian
-      weight: 0.05
+      weight: 0.3
     - id: IntercomCommon
       weight: 0.2
     - id: IntercomConstructed
@@ -134,7 +139,9 @@
     - id: ExtinguisherCabinetFilledOpen
       weight: 0.5
     - id: PosterBroken
+      weight: 3
     - id: RandomPosterContraband
+      weight: 4
     - id: PosterLegitHotDonkExplosion
       weight: 0.1
     - id: PosterLegit12Gauge
@@ -170,8 +177,7 @@
     - id: PoweredWarmSmallLight
       weight: 0.8
     - id: AlwaysPoweredStrobeDimLight
-    - id: AlwaysPoweredStrobeLight
-      weight: 0.2
+      weight: 5
     - id: AlwaysPoweredlightRed
       weight: 0.2
     - id: AlwaysPoweredlightBlack
