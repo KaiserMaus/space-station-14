@@ -6,8 +6,8 @@
       Decals: "#6E2323"
     entities:
       Cabling: CableApcExtension
-      CornerWalls: WallReinforced
-      Walls: WallReinforced
+      CornerWalls: WallPlastitanium
+      Walls: WallPlastitanium
     spawnGroups:
       CornerClutter: BaseClutter
       Entrance: SyndicateBaseEntrancePossiblyRigged
@@ -22,10 +22,13 @@
       tags:
       - SalvageSyndicateBase
     presets:
+    # Duplicates are intentional to weight SyndicateBaseLarge to ~40%.
     - Bucket
     - Wow
     - SpaceShip
     - Tall
+    - SyndicateBaseLarge
+    - SyndicateBaseLarge
     - SyndicateBaseLarge
 
   - !type:CorridorDunGen
@@ -49,9 +52,13 @@
     tile: FloorDark
     contents: SyndicateBaseWindow
 
+  - !type:WallMountDunGen
+    contents: SyndicateBaseWallMounts
+    tile: FloorDark
+
   - !type:BoundaryWallDunGen
-    wall: WallReinforced
-    cornerWall: WallReinforced
+    wall: WallPlastitanium
+    cornerWall: WallPlastitanium
     tile: FloorDark
 
   - !type:JunctionDunGen
@@ -85,13 +92,90 @@
     children:
     - id: CableApcExtension
     - id: Grille
-    - id: ReinforcedPlasmaWindow
+    - id: MiningWindow
 
 - type: entityTable
   id: SyndicateBaseEntrancePossiblyRigged
   table: !type:GroupSelector
     children:
     - id: CableApcExtension
-    - id: AirlockSyndicateGlassLocked
+    - id: AirlockSyndicateNukeopLocked
+    - id: AirlockSyndicateLocked
     - id: LandMineModular
       prob: 0.05
+
+- type: entityTable
+  id: SyndicateBaseWallMounts
+  table: !type:GroupSelector
+    children:
+    - id: VendingMachineWallMedicalCivilian
+      weight: 0.05
+    - id: IntercomCommon
+      weight: 0.2
+    - id: IntercomConstructed
+      weight: 0.25
+    - id: StationMapBroken
+      weight: 0.15
+    - id: ComputerPirateExchangerWallmount
+      weight: 0.02
+    - id: WallMountATM
+      weight: 0.2
+    - id: DefibrillatorCabinetFilled
+      weight: 0.5
+    - id: DefibrillatorCabinetFilledOpen
+      weight: 0.5
+    - id: DefibrillatorCabinetOpen
+      weight: 0.5
+    - id: ExtinguisherCabinet
+      weight: 0.5
+    - id: ExtinguisherCabinetFilled
+      weight: 0.5
+    - id: ExtinguisherCabinetOpen
+      weight: 0.5
+    - id: ExtinguisherCabinetFilledOpen
+      weight: 0.5
+    - id: PosterBroken
+    - id: RandomPosterContraband
+    - id: PosterLegitHotDonkExplosion
+      weight: 0.1
+    - id: PosterLegit12Gauge
+      weight: 0.1
+    - id: PosterContrabandC20r
+      weight: 0.1
+    - id: PosterContrabandSam300
+      weight: 0.1
+    - id: PosterContrabandWaffleCorp
+      weight: 0.1
+    - id: PosterContrabandSyndicateRecruitment
+      weight: 0.1
+    - id: PosterContrabandEnlistGorlex
+      weight: 0.1
+    - id: PosterContrabandCommunistState
+      weight: 0.1
+    - id: PosterLegitOppenhopper
+      weight: 0.1
+    - id: PosterContrabandBountyHunters
+      weight: 0.1
+    - id: PosterContrabandSyndicatePistol
+      weight: 0.1
+    - id: PosterContrabandRevolver
+      weight: 0.1
+    - id: PosterContrabandFreeSyndicateEncryptionKey
+      weight: 0.1
+    - id: PosterContrabandSyndiMechs
+      weight: 0.1
+    - id: PosterContrabandEnergySwords
+      weight: 0.1
+    - id: PosterContrabandDonk
+      weight: 0.1
+    - id: PoweredWarmSmallLight
+      weight: 0.8
+    - id: AlwaysPoweredStrobeDimLight
+    - id: AlwaysPoweredStrobeLight
+      weight: 0.2
+    - id: AlwaysPoweredlightRed
+      weight: 0.2
+    - id: AlwaysPoweredlightBlack
+      weight: 0.3
+    - id: PoweredlightEmpty
+      weight: 0.8
