@@ -563,21 +563,18 @@
         - id: MagazineLightRifleImprovised
         - id: MagazineLightRifleImprovised
         - id: MagazineLightRifleImprovised
-        - id: MagazineBoxImprovisedRifle
-          prob: 0.5
-          orGroup: MagRifle
-        - id: MagazineLightRifleFMJ
-          prob: 0.25
-          orGroup: MagRifle
-        - id: MagazineLightRifleAP
-          prob: 0.01
-          orGroup: MagRifle
-        - id: MagazineLightRifleHP
-          prob: 0.4
-          orGroup: MagRifle
-        - id: MagazineLightRifleSP
-          prob: 0.4
-          orGroup: MagRifle
+        - !type:GroupSelector
+          children:
+          - id: MagazineBoxImprovisedRifle
+            weight: 0.5
+          - id: MagazineLightRifleFMJ
+            weight: 0.25
+          - id: MagazineLightRifleAP
+            weight: 0.01
+          - id: MagazineLightRifleHP
+            weight: 0.4
+          - id: MagazineLightRifleSP
+            weight: 0.4
 
 - type: entity
   id: ClothingBackpackMessengerMercenaryBundleARG

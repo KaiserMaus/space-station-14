@@ -1,21 +1,20 @@
 # Syndicate base
 - type: dungeonConfig
   id: SyndicateBase
-  data:
-    colors:
-      Decals: "#6E2323"
-    entities:
-      Cabling: CableApcExtension
-      CornerWalls: WallPlastitanium
-      Walls: WallPlastitanium
-    spawnGroups:
-      CornerClutter: BaseClutter
-      Entrance: SyndicateBaseEntrancePossiblyRigged
-      EntranceFlank: SyndicateBaseWindow
-      Junction: SyndicateBaseAirlock
-      Window: SyndicateBaseWindow
-    tiles:
-      FallbackTile: FloorDark
+  colors:
+    Decals: "#6E2323"
+  entities:
+    Cabling: CableApcExtension
+    CornerWalls: WallPlastitanium
+    Walls: WallPlastitanium
+  spawnGroups:
+    CornerClutter: BaseClutter
+    Entrance: SyndicateBaseEntrancePossiblyRigged
+    EntranceFlank: SyndicateBaseWindow
+    Junction: SyndicateBaseAirlock
+    Window: SyndicateBaseWindow
+  tiles:
+    FallbackTile: FloorDark
   layers:
   - !type:PrefabDunGen
     roomWhitelist:
