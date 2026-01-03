@@ -2152,7 +2152,7 @@
   id: UplinkPiratePrivateerArmored
   productEntity: ClothingOuterHardsuitPrivateerArmored
   cost:
-    Doubloon: 47
+    Doubloon: 45
   categories:
   - UplinkPirateWearables
   restockTime: 3600
@@ -2164,7 +2164,7 @@
   icon: { sprite: /Textures/Clothing/OuterClothing/Hardsuits/syndicate.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateHardsuitBundle
   cost:
-    Telecrystal: 87
+    Doubloon: 65
   categories:
   - UplinkPirateWearables
   restockTime: 3600
@@ -2181,7 +2181,7 @@
   icon: { sprite: /Textures/_Starlight/Objects/Clothing/OuterClothing/Hardsuits/infiltrationsyndie.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateFilledInfiltration
   cost:
-    Doubloon: 87
+    Doubloon: 70
   categories:
   - UplinkPirateWearables
   restockTime: 3600
@@ -2206,7 +2206,7 @@
   id: UplinkPiratePiratePDAMusic
   productEntity: PiratePDAMusic
   cost:
-    Doubloon: 6
+    Doubloon: 3
   categories:
   - UplinkPiratePointless
 
