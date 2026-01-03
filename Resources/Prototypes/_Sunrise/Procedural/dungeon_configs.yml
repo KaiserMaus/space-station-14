@@ -1,0 +1,97 @@
+# Syndicate base
+- type: dungeonConfig
+  id: SyndicateBase
+  data:
+    colors:
+      Decals: "#6E2323"
+    entities:
+      Cabling: CableApcExtension
+      CornerWalls: WallReinforced
+      Walls: WallReinforced
+    spawnGroups:
+      CornerClutter: BaseClutter
+      Entrance: SyndicateBaseEntrancePossiblyRigged
+      EntranceFlank: SyndicateBaseWindow
+      Junction: SyndicateBaseAirlock
+      Window: SyndicateBaseWindow
+    tiles:
+      FallbackTile: FloorDark
+  layers:
+  - !type:PrefabDunGen
+    roomWhitelist:
+      tags:
+      - SalvageSyndicateBase
+    presets:
+    - Bucket
+    - Wow
+    - SpaceShip
+    - Tall
+    - SyndicateBaseLarge
+
+  - !type:CorridorDunGen
+    width: 3
+    tile: FloorDark
+
+  - !type:DungeonEntranceDunGen
+    count: 2
+    tile: FloorDark
+    contents: SyndicateBaseEntrancePossiblyRigged
+
+  - !type:RoomEntranceDunGen
+    tile: FloorDark
+    contents: SyndicateBaseAirlock
+
+  - !type:EntranceFlankDunGen
+    tile: FloorDark
+    contents: SyndicateBaseWindow
+
+  - !type:ExternalWindowDunGen
+    tile: FloorDark
+    contents: SyndicateBaseWindow
+
+  - !type:BoundaryWallDunGen
+    wall: WallReinforced
+    cornerWall: WallReinforced
+    tile: FloorDark
+
+  - !type:JunctionDunGen
+    width: 1
+    tile: FloorDark
+    contents: SyndicateBaseAirlock
+
+  - !type:JunctionDunGen
+    width: 3
+    tile: FloorDark
+    contents: SyndicateBaseAirlock
+
+  - !type:AutoCablingDunGen
+    entity: CableApcExtension
+
+  - !type:CornerClutterDunGen
+    contents: BaseClutter
+
+- type: entityTable
+  id: SyndicateBaseAirlock
+  table: !type:GroupSelector
+    children:
+    - id: CableApcExtension
+    - id: AirlockSyndicateNukeopLocked
+    - id: AirlockSyndicateLocked
+    - id: ScrapAirlock1
+
+- type: entityTable
+  id: SyndicateBaseWindow
+  table: !type:GroupSelector
+    children:
+    - id: CableApcExtension
+    - id: Grille
+    - id: ReinforcedPlasmaWindow
+
+- type: entityTable
+  id: SyndicateBaseEntrancePossiblyRigged
+  table: !type:GroupSelector
+    children:
+    - id: CableApcExtension
+    - id: AirlockSyndicateGlassLocked
+    - id: LandMineModular
+      prob: 0.05
