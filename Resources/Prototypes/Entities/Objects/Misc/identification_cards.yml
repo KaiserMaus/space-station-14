@@ -286,6 +286,8 @@
   name: senior engineer ID card
   components:
   # Sunrise-Start
+  - type: PresetIdCard
+    job: SeniorEngineer
   - type: Sprite
     sprite: *id-rsi
     layers:
@@ -400,6 +402,8 @@
   name: senior physician ID card
   components:
   # Sunrise-Start
+  - type: PresetIdCard
+    job: SeniorPhysician
   - type: Sprite
     sprite: *id-rsi
     layers:
