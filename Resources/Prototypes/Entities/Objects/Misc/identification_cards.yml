@@ -457,6 +457,8 @@
   name: senior researcher ID card
   components:
   # Sunrise-Start
+  - type: PresetIdCard
+    job: SeniorResearcher
   - type: Sprite
     sprite: *id-rsi
     layers:
