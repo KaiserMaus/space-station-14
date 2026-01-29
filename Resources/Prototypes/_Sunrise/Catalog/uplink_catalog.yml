@@ -1972,9 +1972,9 @@
   productEntity: SyndyClusterGrenade
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 5
+    Telecrystal: 4
   cost:
-    Telecrystal: 10
+    Telecrystal: 7
   categories:
   - UplinkExplosives
 
