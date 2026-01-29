@@ -889,7 +889,7 @@ WeaponEnergyGunMini: WeaponMiniEnergyGun
 GunSafeCombineSmallArms: SpawnerSafeSmallArms
 AphrodisiacChemistryBottle: null
 PatchViagra: null
-
+ClothingHandsGlovesBoxingRigged: GlovesBoxingRiggedRandomSpawner
 MagazinePPSH41: MagazinePistolSubMachineGunPPSHExtended
 MagazinePPSH41Extended: null
 WeaponSTG44: null
