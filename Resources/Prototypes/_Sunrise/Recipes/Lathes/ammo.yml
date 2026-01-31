@@ -436,6 +436,13 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
+  id: MagazinePistolSubMachineGunCaselessExtended
+  result: MagazinePistolSubMachineGunCaselessExtended
+  materials:
+    Steel: 500
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
   id: MagazinePistolSubMachineGunAP
   result: MagazinePistolSubMachineGunAP
   materials:
