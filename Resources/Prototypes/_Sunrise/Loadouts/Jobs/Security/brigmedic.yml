@@ -34,6 +34,18 @@
 
 # Injectors
 - type: loadout
+  id: AutoInjectorEmergency1
+  storage:
+    back:
+    - EmergencyMedipen
+
+- type: loadout
+  id: AutoInjectorEmergency2
+  storage:
+    back:
+    - EmergencyMedipen
+
+- type: loadout
   id: AutoInjectorBrute1
   storage:
     back:
@@ -79,6 +91,36 @@
     - PunctAutoInjector
 
 - type: loadout
+  id: AutoInjectorBruiz1
+  storage:
+    back:
+    - BruizAutoInjector
+
+- type: loadout
+  id: AutoInjectorBruiz2
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterBrigmedic5h
+  storage:
+    back:
+    - BruizAutoInjector
+
+- type: loadout
+  id: AutoInjectorLacer1
+  storage:
+    back:
+    - LacerAutoInjector
+
+- type: loadout
+  id: AutoInjectorLacer2
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterBrigmedic5h
+  storage:
+    back:
+    - LacerAutoInjector
+
+- type: loadout
   id: AutoInjectorPyrazine1
   storage:
     back:
@@ -110,3 +152,27 @@
   storage:
     back:
     - RadAutoInjector
+
+- type: loadout
+  id: AutoInjectorCoal
+  storage:
+    back:
+    - CoalAutoInjector
+
+- type: loadout
+  id: AutoInjectorPoly
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterBrigmedic5h
+  storage:
+    back:
+    - PolyAutoInjector
+
+- type: loadout
+  id: AutoInjectorStellibinin
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterBrigmedic5h
+  storage:
+    back:
+    - StellibininAutoInjector
