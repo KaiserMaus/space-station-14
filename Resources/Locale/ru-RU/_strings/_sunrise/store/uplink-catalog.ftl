@@ -257,4 +257,4 @@ uplink-syndicate-teleporter-desc = Экспериментальное устро
 ## Disruption
 
 uplink-cleaner-kit-name = Набор уборщика
-uplink-cleaner-kit-desc = Уберите любые улики — убедитесь, что их нельзя будет связать с вами.
+uplink-cleaner-kit-desc = Уберите любые улики. Содержит пару космо-очистителей, две гранаты и кусочек мыла. К сожалению без вилки..

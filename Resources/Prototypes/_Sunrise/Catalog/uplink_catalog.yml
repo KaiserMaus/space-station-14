@@ -1590,7 +1590,7 @@
   description: uplink-cleaner-kit-desc
   productEntity: ToolboxArtisticFilledCleaner
   cost:
-    Telecrystal: 3
+    Telecrystal: 1
   categories:
   - UplinkDisruption
   conditions:
