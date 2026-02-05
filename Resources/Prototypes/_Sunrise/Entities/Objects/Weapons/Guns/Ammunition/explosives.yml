@@ -173,7 +173,6 @@
 - type: entity
   id: CannonBallAntiMateriel
   name:  plasteel cannonball
-  suffix: Anti-materiel
   parent: BaseCannonBall
   components:
   - type: CartridgeAmmo
@@ -357,6 +356,9 @@
   - type: SpentAmmoVisuals
     state: spent
     suffix: false
+  - type: Tag
+    tags:
+    - ImprovisedGrenade
 
 - type: entity
   id: ImprovisedGrenadePipebomb
@@ -377,6 +379,9 @@
   - type: SpentAmmoVisuals
     state: spent
     suffix: false
+  - type: Tag
+    tags:
+    - ImprovisedGrenade
 
 - type: entity
   id: ImprovisedGrenadeGlass
@@ -397,3 +402,6 @@
   - type: SpentAmmoVisuals
     state: spent
     suffix: false
+  - type: Tag
+    tags:
+    - ImprovisedGrenade
