@@ -63,3 +63,81 @@
   - type: TriggerOnActivateImplant
   - type: ScramOnTrigger
     targetUser: true
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: ProtoAdrenalImplant
+  name: proto-adrenal implant
+  description: Injects a small dose of ephedrine and epinephrine when activated.
+  components:
+  - type: SubdermalImplant
+    implantAction: ActionActivateProtoAdrenalImplant
+  - type: TriggerOnActivateImplant
+  - type: AddSolutionOnTrigger
+    solution: bloodstream
+    targetUser: true
+    addedSolution:
+      reagents:
+      - ReagentId: Ephedrine
+        Quantity: 5
+      - ReagentId: Epinephrine
+        Quantity: 10
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: AdrenalImplant
+  name: adrenal implant
+  description: Injects a strong dose of ephedrine and epinephrine when activated.
+  components:
+  - type: SubdermalImplant
+    implantAction: ActionActivateAdrenalImplant
+  - type: TriggerOnActivateImplant
+  - type: AddSolutionOnTrigger
+    solution: bloodstream
+    targetUser: true
+    addedSolution:
+      reagents:
+      - ReagentId: Ephedrine
+        Quantity: 15
+      - ReagentId: Epinephrine
+        Quantity: 15
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: StimpackImplant
+  name: stimpack implant
+  description: Injects a large dose of stimulants when activated.
+  components:
+  - type: SubdermalImplant
+    implantAction: ActionActivateStimpackImplant
+  - type: TriggerOnActivateImplant
+  - type: AddSolutionOnTrigger
+    solution: bloodstream
+    targetUser: true
+    addedSolution:
+      reagents:
+      - ReagentId: Stimulants
+        Quantity: 20
+      - ReagentId: Epinephrine
+        Quantity: 10
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: NutrimentImplant
+  name: nutriment implant
+  description: Injects complex of nutriment when activated.
+  components:
+  - type: SubdermalImplant
+    implantAction: ActionActivateNutrimentImplant
+  - type: TriggerOnActivateImplant
+  - type: AddSolutionOnTrigger
+    solution: bloodstream
+    targetUser: true
+    addedSolution:
+      reagents:
+      - ReagentId: Vitamin
+        Quantity: 5
+      - ReagentId: Saline
+        Quantity: 5
+      - ReagentId: Protein
+        Quantity: 5
