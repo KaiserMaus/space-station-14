@@ -339,7 +339,6 @@
     - RoboticsDynamicSunrise # Sunrise-Add
     - MedicalCyberlimbDynamic # Sunrise-Add
     - MedicalCyberOrgansDynamic # Sunrise-Add
-    - MedicalImplantDynamic # Sunrise-Add
   - type: MaterialStorage
     whitelist: *StandardMaterialWhitelist
   - type: OreSiloClient

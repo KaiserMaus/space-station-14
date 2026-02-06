@@ -25,3 +25,5 @@ ent-StimpackImplanter = { ent-BaseImplantOnlyImplanterSyndi }
 ent-NutrimentImplanter = { ent-BaseImplantOnlyImplanterSyndi }
     .suffix = nutriment
     .desc = { ent-BaseImplantOnlyImplanterSyndi.desc }
+ent-ReviverImplanter = reviver implanter
+    .desc = { ent-BaseImplantOnlyImplanterSyndi.desc }

@@ -54,5 +54,3 @@ ent-RadioImplanterCentcomm = centcomm radio implanter
     .desc = { ent-BaseImplantOnlyImplanter.desc }
 ent-DeathRattleImplanterCentcomm = centcomm death rattle implanter
     .desc = { ent-BaseImplantOnlyImplanter.desc }
-ent-ReviverImplanter = reviver implanter
-    .desc = { ent-BaseImplantOnlyImplanterSyndi.desc }
