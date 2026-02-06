@@ -2902,8 +2902,8 @@
     - id: PirateCashSpawner01
     - id: LootSpawnerMedicalMinor
       prob: 0.7
-    - id: Catwalk
-      prob: 0.5
+    - id: ReviverImplant
+      prob: 0.3
     - id: JugDexPlusSaline
       prob: 0.15
     - id: PirateMedSpawner01
