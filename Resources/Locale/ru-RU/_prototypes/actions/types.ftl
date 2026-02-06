@@ -60,13 +60,13 @@ ent-ActionActivateHonkImplant = Хонк!
     .desc = Активирует ваш хонк-имплант, который будет издавать фирменный звук клоуна.
 ent-ActionActivateBorgLaughImplant = [color=red]Жуткий Смех[/color]
     .desc = Активирует ваш имплант зловещего смеха, издающий фирменный звук синдикатовского киборга.
-ent-ActionActivateProtoAdrenalImplant = Активировать прото-адренал
+ent-ActionActivateProtoAdrenalImplant = Активировать [color=blue]прото-адренал[/color]
     .desc = Вводит малую дозу эфедрина и эпинефрина.
-ent-ActionActivateAdrenalImplant = Активировать адренал
+ent-ActionActivateAdrenalImplant = Активировать [color=blue]адренал[/color]
     .desc = Вводит сильную дозу эфедрина и эпинефрина.
-ent-ActionActivateStimpackImplant = Активировать стимпак
+ent-ActionActivateStimpackImplant = Активировать [color=red]стимпак[/color]
     .desc = Вводит большую дозу стимуляторов.
-ent-ActionActivateNutrimentImplant = Активировать питание
+ent-ActionActivateNutrimentImplant = Активировать [color=orange]насыщатель[/color]
     .desc = Вводит комплекс питательных веществ.
 ent-ActionFireStarter = Поджечь
     .desc = Поджигает противников в радиусе вокруг вас.
@@ -84,3 +84,5 @@ ent-ActionToggleRootable = Укорениться
     .desc = Начать или перестать быть прикреплённым к полу.
 ent-ActionChameleonController = Измените свою одежду
     .desc = Быстро измените свою одежду
+ent-ActionActivateReviverImplant = Активировать [color=cyan]реаниматор[/color]
+    .desc = Вводит эпинефрин из импланта реаниматора.

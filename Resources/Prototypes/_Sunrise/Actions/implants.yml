@@ -127,3 +127,25 @@
     icon:
       sprite: Objects/Consumable/Food/burger.rsi
       state: bigbite
+
+- type: entity
+  parent: BaseImplantAction
+  id: ActionActivateReviverImplant
+  name: Activate reviver
+  description: Injects epinephrine from the reviver implant.
+  components:
+  - type: Action
+    checkCanInteract: false
+    checkConsciousness: false
+    useDelay: 4
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: _Sunrise/Entities/Objects/Implants/implants.rsi
+      state: reviver_implant
+  - type: InstantAction
+    event: !type:ActivateImplantEvent
+  - type: LimitedCharges
+    maxCharges: 3
+  - type: AutoRecharge
+    rechargeDuration: 30

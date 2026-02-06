@@ -523,6 +523,11 @@
     - MedicalCyberlimbDynamic # Sunrise-Add
     - MedicalCyberOrgansDynamic # Sunrise-Add
     - MedicalImplantDynamic # Sunrise-Add
+  # Sunrise-Start
+  - type: EmagLatheRecipes
+    emagDynamicPacks:
+    - MedicalImplantEmag
+  # Sunrise-End
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget

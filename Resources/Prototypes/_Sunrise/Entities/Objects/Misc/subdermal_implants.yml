@@ -132,9 +132,37 @@
 
 - type: entity
   parent: BaseSubdermalImplant
+  id: ReviverImplant
+  name: reviver implant
+  description: "Injects epinephrine when activated. Enters critical: injects automatically"
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Entities/Objects/Implants/implants.rsi
+    state: reviver_implant
+  - type: SubdermalImplant
+    implantAction: ActionActivateReviverImplant
+  - type: TriggerOnActivateImplant
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Critical
+    targetMobstateEntity: true
+  - type: AddSolutionOnTrigger
+    solution: bloodstream
+    targetUser: true
+    addedSolution:
+      reagents:
+      - ReagentId: Epinephrine
+        Quantity: 3
+      - ReagentId: DexalinPlus
+        Quantity: 1
+      - ReagentId: Vitamin
+        Quantity: 1
+
+- type: entity
+  parent: BaseSubdermalImplant
   id: NutrimentImplant
   name: nutriment implant
-  description: Injects complex of nutriment when activated.
+  description: "Injects a complex of nutriment when activated. Enters critical: injects automatically"
   components:
   - type: Sprite
     sprite: _Sunrise/Entities/Objects/Implants/implants.rsi
@@ -142,14 +170,18 @@
   - type: SubdermalImplant
     implantAction: ActionActivateNutrimentImplant
   - type: TriggerOnActivateImplant
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Critical
+    targetMobstateEntity: true
   - type: AddSolutionOnTrigger
     solution: bloodstream
     targetUser: true
     addedSolution:
       reagents:
       - ReagentId: Vitamin
-        Quantity: 5
+        Quantity: 4
       - ReagentId: Saline
-        Quantity: 5
+        Quantity: 3
       - ReagentId: Protein
-        Quantity: 5
+        Quantity: 4

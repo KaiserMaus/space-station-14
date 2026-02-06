@@ -12,4 +12,6 @@ ent-AdrenalImplant = adrenal implant
 ent-StimpackImplant = stimpack implant
     .desc = Injects a large dose of stimulants when activated.
 ent-NutrimentImplant = nutriment implant
-    .desc = Injects complex nutriment when activated.
+    .desc = Injects a complex of nutriment when activated. Enters critical: injects automatically.
+ent-ReviverImplant = reviver implant
+    .desc = Injects epinephrine when activated. Enters critical: injects automatically.

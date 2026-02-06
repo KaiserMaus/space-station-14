@@ -77,3 +77,12 @@
   components:
   - type: Implanter
     implant: NutrimentImplant
+
+- type: entity
+  id: ReviverImplanter
+  name: reviver implanter
+  suffix: Reviver
+  parent: BaseImplantOnlyImplanterSyndi
+  components:
+  - type: Implanter
+    implant: ReviverImplant
