@@ -90,6 +90,10 @@
         {
             "name": "energysmg",
             "directions": 1
+        },
+        {
+            "name": "lasersmg",
+            "directions": 1
         }
     ]
 }

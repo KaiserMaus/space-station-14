@@ -137,6 +137,19 @@
 
 - type: entity
   parent: GunSafeBaseSecureSunrise
+  id: GunSafeLaserGunSMG
+  name: safe
+  suffix: laser smg
+  components:
+  - type: EntityStorageVisuals
+    stateDoorClosed: lasersmg
+  - type: StorageFill
+    contents:
+    - id: WeaponLaserLNT620
+      amount: 3
+
+- type: entity
+  parent: GunSafeBaseSecureSunrise
   id: GunSafeEnergyGunSMG
   name: safe
   suffix: Tactical Energy guns
@@ -487,7 +500,7 @@
   suffix: LAW-12
   components:
   - type: EntityStorageVisuals
-    stateDoorClosed: kammerer
+    stateDoorClosed: enforcer
   - type: StorageFill
     contents:
     - id: WeaponShotgunSPAS12
@@ -508,7 +521,7 @@
   suffix: Shotgun Combat
   components:
   - type: EntityStorageVisuals
-    stateDoorClosed: kammerer
+    stateDoorClosed: enforcer
   - type: StorageFill
     contents:
     - id: WeaponShotgunCombat
@@ -555,8 +568,10 @@
     - type: Sprite
       layers:
         - state: red
-        - sprite: Structures/Storage/closet.rsi
-          state: shotguncase
+        - sprite: _Sunrise/Structures/Storage/Gunsafes/small_lethal.rsi
+          state: base
+        - sprite: _Sunrise/Structures/Storage/Gunsafes/small_lethal.rsi
+          state: pistol
     - type: EntityTableSpawner
       table: !type:NestedSelector
         tableId: SmallArmsSafes
@@ -595,8 +610,10 @@
     - type: Sprite
       layers:
         - state: red
-        - sprite: Structures/Storage/closet.rsi
-          state: shotguncase
+        - sprite: _Sunrise/Structures/Storage/Gunsafes/lethal.rsi
+          state: base
+        - sprite: _Sunrise/Structures/Storage/Gunsafes/lethal.rsi
+          state: kammerer
     - type: EntityTableSpawner
       table: !type:NestedSelector
         tableId: ShotgunSafes
@@ -632,8 +649,10 @@
     - type: Sprite
       layers:
         - state: red
-        - sprite: Structures/Storage/closet.rsi
-          state: shotguncase
+        - sprite: _Sunrise/Structures/Storage/Gunsafes/lethal.rsi
+          state: base
+        - sprite: _Sunrise/Structures/Storage/Gunsafes/lethal.rsi
+          state: lecter
     - type: EntityTableSpawner
       table: !type:NestedSelector
         tableId: RifleSafes
@@ -667,8 +686,10 @@
     - type: Sprite
       layers:
         - state: red
-        - sprite: Structures/Storage/closet.rsi
-          state: shotguncase
+        - sprite: _Sunrise/Structures/Storage/Gunsafes/lethal.rsi
+          state: base
+        - sprite: _Sunrise/Structures/Storage/Gunsafes/lethal.rsi
+          state: wt550
     - type: EntityTableSpawner
       table: !type:NestedSelector
         tableId: SMGSafes
@@ -692,3 +713,40 @@
       - id: GunSafeSubMachineGunMP7
       - id: GunSafeSubMachineGunSP91RC
       - id: GunSafeSubMachineGunVector
+
+# Laser/energy Spawner
+- type: entity
+  name: Armory Safe Spawner
+  id: SpawnerSafeEnergyGuns
+  parent: MarkerBase
+  suffix: Spawner Safe Laser/Energy
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: _Sunrise/Structures/Storage/Gunsafes/lethal.rsi
+          state: base
+        - sprite: _Sunrise/Structures/Storage/Gunsafes/lethal.rsi
+          state: energy
+    - type: EntityTableSpawner
+      table: !type:NestedSelector
+        tableId: EnergyGunsSafes
+
+- type: entityTable
+  id: EnergyGunsSafes
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 75
+      children:
+      - id: GunSafeEnergyGun
+      - id: GunSafeLaserCarbine
+    - !type:GroupSelector
+      weight: 20
+      children:
+      - id: GunSafeEnergyGunSMG
+      - id: GunSafeLaserGunSMG
+    - !type:GroupSelector
+      weight: 5
+      children:
+      - id: GunSafeEnergyGunMini
