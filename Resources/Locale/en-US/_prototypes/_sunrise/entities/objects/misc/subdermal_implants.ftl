@@ -14,4 +14,4 @@ ent-StimpackImplant = stimpack implant
 ent-NutrimentImplant = nutriment implant
     .desc = Injects a complex of nutriment when activated. Enters critical: injects automatically.
 ent-ReviverImplant = reviver implant
-    .desc = Injects epinephrine when activated. Enters critical: injects automatically.
+    .desc = Stimulates an adrenaline surge with a focused discharge to the heart and a cocktail of reagents.

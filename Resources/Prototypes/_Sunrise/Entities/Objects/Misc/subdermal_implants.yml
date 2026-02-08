@@ -134,7 +134,7 @@
   parent: BaseSubdermalImplant
   id: ReviverImplant
   name: reviver implant
-  description: "Injects epinephrine when activated. Enters critical: injects automatically"
+  description: "Stimulates an adrenaline surge with a focused discharge to the heart and a cocktail of reagents."
   components:
   - type: Sprite
     sprite: _Sunrise/Entities/Objects/Implants/implants.rsi
@@ -153,9 +153,13 @@
       reagents:
       - ReagentId: Epinephrine
         Quantity: 3
+      - ReagentId: Inaprovaline
+        Quantity: 2
       - ReagentId: DexalinPlus
+        Quantity: 2
+      - ReagentId: Saline
         Quantity: 1
-      - ReagentId: Vitamin
+      - ReagentId: Omnizine
         Quantity: 1
 
 - type: entity

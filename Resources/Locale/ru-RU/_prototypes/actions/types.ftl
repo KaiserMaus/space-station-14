@@ -85,4 +85,4 @@ ent-ActionToggleRootable = Укорениться
 ent-ActionChameleonController = Измените свою одежду
     .desc = Быстро измените свою одежду
 ent-ActionActivateReviverImplant = Активировать [color=cyan]реаниматор[/color]
-    .desc = Вводит эпинефрин из импланта реаниматора.
+    .desc = Имплант стимулирует выброс адреналина точечным разрядом в сердце и коктейлем реагентов.
