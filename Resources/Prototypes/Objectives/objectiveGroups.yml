@@ -28,6 +28,9 @@
     MultiphaseEnergygunStealObjective: 1
     CMOAdvancedDefibrillatorStealObjective: 1
     HandheldFaxStealObjective: 1
+    CorporateSecretsStealObjective: 1
+    CriminalReportsStealObjective: 1
+    SecureKnowledgeStealObjective: 1
     # Sunrise-End
 
 - type: weightedRandom
