@@ -15,4 +15,3 @@
         - id: ClothingMaskGasPilot
         - id: ShuttleSecurityFlatpack
         - id: ClothingShoesBootsMagSec
-          prob: 0.75

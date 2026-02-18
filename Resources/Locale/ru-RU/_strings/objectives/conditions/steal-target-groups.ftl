@@ -63,3 +63,9 @@ steal-target-groups-animal-morty = Морти
 steal-target-groups-animal-renault = Алиса
 steal-target-groups-animal-shiva = Шива
 steal-target-groups-animal-tropico = Тропико
+
+# Sunrise-start: Docs
+steal-target-groups-corporate-documents = секретные корпоративные документы
+steal-target-groups-criminal-documents = секретные криминальные отчеты
+steal-target-groups-secure-documents = секретные документы службы безопасности
+# Sunrise-end

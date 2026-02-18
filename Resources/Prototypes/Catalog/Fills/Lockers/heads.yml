@@ -351,6 +351,10 @@
     - id: WeaponTaser
     - id: WantedListCartridge
     - id: DrinkHosFlask
+    # Sunrise-start: Classified documents
+    - !type:NestedSelector
+      tableId: SecureDocumentTable
+    # Sunrise-end
     - id: FlippoLighterSunriseHos  # Sunrise-Flippo
 
 # Hardsuit table, used for suit storage as well
@@ -361,7 +365,6 @@
     - id: ClothingMaskGasSwat
     - id: ClothingOuterHardsuitSecurityRed
     - id: ClothingShoesBootsMagSec  # Sunrise-edit
-      prob: 0.3
     - id: JetpackSecurityFilled
     - id: OxygenTankFilled
 

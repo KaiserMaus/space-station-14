@@ -25,3 +25,24 @@
   sprite:
     sprite: _Sunrise/Objects/Devices/handled_fax.rsi
     state: icon
+
+- type: stealTargetGroup
+  id: CorporateSecretsSteal
+  name: steal-target-groups-corporate-documents
+  sprite:
+    sprite: _Sunrise/Objects/Specific/Documents/document.rsi
+    state: genaric_doc
+
+- type: stealTargetGroup
+  id: CriminalReportsSteal
+  name: steal-target-groups-criminal-documents
+  sprite:
+    sprite: _Sunrise/Objects/Specific/Documents/document.rsi
+    state: genaric_doc
+
+- type: stealTargetGroup
+  id: SecureKnowledgeSteal
+  name: steal-target-groups-secure-documents
+  sprite:
+    sprite: _Sunrise/Objects/Specific/Documents/document.rsi
+    state: genaric_doc

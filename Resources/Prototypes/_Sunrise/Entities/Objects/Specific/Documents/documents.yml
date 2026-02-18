@@ -1,0 +1,497 @@
+- type: entity
+  parent: BaseItem
+  id: ImportantDocumentGeneric
+  abstract: true
+  description: Looks highly classified!
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Objects/Specific/Documents/document.rsi
+      layers:
+      - state: background_messy
+        map: [ "background" ]
+      - state: bribe
+        map: [ "bribe" ]
+      - state: document
+      - state: line
+        map: [ "label" ]
+    - type: Paper
+      contentSize: 12000
+      editingDisabled: true
+    - type: ActivatableUI
+      key: enum.PaperUiKey.Key
+      requiresComplex: false
+    - type: UserInterface
+      interfaces:
+        enum.PaperUiKey.Key:
+          type: PaperBoundUserInterface
+    - type: Tag
+      tags:
+        - Document
+        - Paper
+        - HighRiskItem
+    - type: Item
+      size: Normal
+    - type: RandomSprite
+      getAllGroups: true
+      available:
+        - background:
+            background_messy: ""
+            background_clean: ""
+            background_large: ""
+        - bribe:
+            bribe: ""
+            empty: ""
+        - label:
+            line: Departmental
+            stamp: Departmental
+
+### Classified Corporate Documents
+
+- type: entity
+  id: ClassifiedCorporateDocumentAbductors
+  name: classified corporate documents
+  suffix: Do Not Map
+  description: A set of highly classified documents containing Corporate Secrets.
+  parent: [ ImportantDocumentGeneric, BaseCommandContraband ]
+  components:
+    - type: Paper
+      content: |-
+        [head=1][color=#135285]────────────────────[/color][/head]
+        [color=#1b67a5]█▄░░█ ▀▀█▀▀[/color] [head=3] [color=#135285]NanoTrasen[/color][/head]
+        [color=#1b67a5]█▀█▄█ ░░█░░[/color] [head=3] [color=#135285]Representative[/color][/head]
+        [color=#1b67a5]█░░▀█ ░░█░░[/color]  [color=#aaaaaa][italic]ОФИЦИАЛЬНЫЙ КОРПОРАТИВНЫЙ ДОКУМЕНТ[/italic][/color]
+        [head=1][color=#135285]────────────────────[/color][/head]
+        [head=2][color=#135285][bold]Секретный корпоративный документ[/bold][/color][/head]
+        [head=1][color=#135285]────────────────────[/color][/head]
+        [mono]
+        [bold]Объект:[/bold] Абдукторы
+        [bold]Принадлежность:[/bold] Неизвестно
+        [bold]Цели:[/bold] Неизвестно
+        
+        Центральный отдел безопасности установил и подтвердил достоверность сведений об «Абдукторах», действующих в секторе Sunrise и нацеленных на подрядчиков Центрального Командования.
+        
+        Отчёты остаются ненадёжными: жертвы похищений возвращаются под сильным медикаментозным воздействием, дезориентированными, а иногда и без сознания.
+        
+        Хирургические осмотры показали, что цель похищений — удаление сердца и замена его неизвестной железой неустановленного происхождения. Эффекты операции крайне вариативны; при выявлении рекомендуется немедленное удаление железы.
+        
+        Конечная цель этих похищений остаётся неизвестной.
+        [/mono]
+        
+        [head=1][color=#135285]────────────────────[/color][/head]
+    - type: StealTarget
+      stealGroup: CorporateSecretsSteal
+
+- type: entity
+  id: ClassifiedCorporateDocumentDecimus
+  name: classified corporate documents
+  suffix: Do Not Map
+  description: A set of highly classified documents containing Corporate Secrets.
+  parent: [ ImportantDocumentGeneric, BaseCommandContraband ]
+  components:
+    - type: Paper
+      content: |-
+        [head=1][color=#135285]────────────────────[/color][/head]
+        [color=#1b67a5]█▄░░█ ▀▀█▀▀[/color] [head=3] [color=#135285]NanoTrasen[/color][/head]
+        [color=#1b67a5]█▀█▄█ ░░█░░[/color] [head=3] [color=#135285]Representative[/color][/head]
+        [color=#1b67a5]█░░▀█ ░░█░░[/color]  [color=#aaaaaa][italic]ОФИЦИАЛЬНЫЙ КОРПОРАТИВНЫЙ ДОКУМЕНТ[/italic][/color]
+        [head=1][color=#135285]────────────────────[/color][/head]
+        [head=2][color=#135285][bold]Секретный корпоративный документ[/bold][/color][/head]
+        [head=1][color=#135285]────────────────────[/color][/head]
+        [mono]
+        [bold]Объект:[/bold] Танго
+        [bold]Принадлежность:[/bold] ██████████ ███████ ██████, ██████████
+        [bold]Цели:[/bold] Введение Кодекса «Эпсилон»
+        
+        ████ ████ █████ Танго — высокоподготовленное и жёстко контролируемое подразделение ████. Оно предназначено исключительно для крайних случаев измены, чтобы не допустить попадания критических активов NanoTrasen в руки врагов Транс-Солярной Федерации.
+        
+        В случае объявления Кодекса «Эпсилон» персонал NanoTrasen обязан укрыться, пока Танго ликвидирует всех подрядчиков Центрального Командования на объекте, включая, при необходимости, командование станции и силы частной безопасности.
+        
+        Несмотря на отсутствие подтверждённых случаев развёртывания, Танго является необходимым механизмом экстренного сдерживания. Напоминаем о ценности и высокой секретности активов, вверенных Центральному Командованию и его подрядчикам. Эти активы не должны попасть в чужие руки ни при каких обстоятельствах.
+        
+        Любое несанкционированное разглашение информации о Танго и Кодексе «Эпсилон» недопустимо. Официальная легенда: группа пиратов сняла скафандры с погибших сотрудников после засады у луны Альреши. О любой утечке информации немедленно сообщать в Центральное Командование.
+        [/mono]
+        
+        [head=1][color=#135285]────────────────────[/color][/head]
+    - type: StealTarget
+      stealGroup: CorporateSecretsSteal
+
+- type: entity
+  id: ClassifiedCorporateDocumentNinjas
+  name: classified corporate documents
+  suffix: Do Not Map
+  description: A set of highly classified documents containing Corporate Secrets.
+  parent: [ ImportantDocumentGeneric, BaseCommandContraband ]
+  components:
+    - type: Paper
+      content: |-
+        [head=1][color=#135285]────────────────────[/color][/head]
+        [color=#1b67a5]█▄░░█ ▀▀█▀▀[/color] [head=3] [color=#135285]NanoTrasen[/color][/head]
+        [color=#1b67a5]█▀█▄█ ░░█░░[/color] [head=3] [color=#135285]Representative[/color][/head]
+        [color=#1b67a5]█░░▀█ ░░█░░[/color]  [color=#aaaaaa][italic]ОФИЦИАЛЬНЫЙ КОРПОРАТИВНЫЙ ДОКУМЕНТ[/italic][/color]
+        [head=1][color=#135285]────────────────────[/color][/head]
+        [head=2][color=#135285][bold]Секретный корпоративный документ[/bold][/color][/head]
+        [head=1][color=#135285]────────────────────[/color][/head]
+        [mono]
+        [bold]Объект:[/bold] Клан Паука
+        [bold]Принадлежность:[/bold] Неизвестно
+        [bold]Цели:[/bold] Кража научных разработок, саботаж
+        
+        Клан Паука — один из нескольких кланов космических ниндзя. Большинство из них действуют значительно более скрытно, однако ряд инцидентов в секторе Sunrise подтвердил существование именно этого клана.
+        
+        Космические ниндзя используют широкий спектр передовых технологий: стелс-костюмы, перчатки-накопители заряда и катаны, обеспечивающие контролируемые короткие прыжки блюспейса сквозь преграды. Источник этих технологий пока не установлен. Часть образцов изъята для исследований.
+        
+        Основной интерес Клана Паука, по всей видимости, связан с нашими научными проектами. Не исключено, что их финансирует конкурирующая корпорация, получающая от них украденные разработки и технологии в обмен на оснащение.
+        [/mono]
+        
+        [head=1][color=#135285]────────────────────[/color][/head]
+    - type: StealTarget
+      stealGroup: CorporateSecretsSteal
+
+- type: entity
+  id: ClassifiedCorporateDocumentNukies
+  name: classified corporate documents
+  suffix: Do Not Map
+  description: A set of highly classified documents containing Corporate Secrets.
+  parent: [ ImportantDocumentGeneric, BaseCommandContraband ]
+  components:
+    - type: Paper
+      content: |-
+        [head=1][color=#135285]────────────────────[/color][/head]
+        [color=#1b67a5]█▄░░█ ▀▀█▀▀[/color] [head=3] [color=#135285]NanoTrasen[/color][/head]
+        [color=#1b67a5]█▀█▄█ ░░█░░[/color] [head=3] [color=#135285]Representative[/color][/head]
+        [color=#1b67a5]█░░▀█ ░░█░░[/color]  [color=#aaaaaa][italic]ОФИЦИАЛЬНЫЙ КОРПОРАТИВНЫЙ ДОКУМЕНТ[/italic][/color]
+        [head=1][color=#135285]────────────────────[/color][/head]
+        [head=2][color=#135285][bold]Секретный корпоративный документ[/bold][/color][/head]
+        [head=1][color=#135285]────────────────────[/color][/head]
+        [mono]
+        [bold]Объект:[/bold] Ядерные оперативники
+        [bold]Принадлежность:[/bold] Spinward Syndicate, Высшее командование Синдиката, Мародёры Горлекса
+        [bold]Цели:[/bold] Ядерное уничтожение
+        
+        Ядерные оперативники, в просторечии «нюкеры» или «ядеры», — ударные отряды смертников, поддерживаемые высшим командованием Синдиката. Они действуют на верхнем уровне структуры Мародёров Горлекса под прямым командованием Эуукхо Зек'хуила.
+        
+        Состав и профиль развёртывания нерегулярны: от одиночных оперативников, вероятно предназначенных для проверки обороны, до скоординированных групп до семи человек, включая командира и полевого медика.
+        
+        По оценкам источников, одновременно существует менее 20 таких команд, и большая часть их задач связана с ролью тяжёлых силовых исполнителей для Эуукхо.
+        
+        Точный источник используемых ими ядерных боеголовок в настоящее время не установлен.
+        [/mono]
+        
+        [head=1][color=#135285]────────────────────[/color][/head]
+    - type: StealTarget
+      stealGroup: CorporateSecretsSteal
+
+- type: entity
+  id: ClassifiedCorporateDocumentRomerol
+  name: classified corporate documents
+  suffix: Do Not Map
+  description: A set of highly classified documents containing Corporate Secrets.
+  parent: [ ImportantDocumentGeneric, BaseCommandContraband ]
+  components:
+    - type: Paper
+      content: |-
+        [head=1][color=#135285]────────────────────[/color][/head]
+        [color=#1b67a5]█▄░░█ ▀▀█▀▀[/color] [head=3] [color=#135285]NanoTrasen[/color][/head]
+        [color=#1b67a5]█▀█▄█ ░░█░░[/color] [head=3] [color=#135285]Representative[/color][/head]
+        [color=#1b67a5]█░░▀█ ░░█░░[/color]  [color=#aaaaaa][italic]ОФИЦИАЛЬНЫЙ КОРПОРАТИВНЫЙ ДОКУМЕНТ[/italic][/color]
+        [head=1][color=#135285]────────────────────[/color][/head]
+        [head=2][color=#135285][bold]Секретный корпоративный документ[/bold][/color][/head]
+        [head=1][color=#135285]────────────────────[/color][/head]
+        [mono]
+        [bold]Объект:[/bold] Вспышки Ромерол
+        [bold]Принадлежность:[/bold] Неизвестно
+        [bold]Цели:[/bold] Неизвестно
+        
+        Подтверждено, что, несмотря на уничтожение исходного штамма Ромерол ядерным огнём ██ ███ █████ ██ █████████, новый штамм начал появляться на космических станциях и в изолированных населённых пунктах.
+        
+        Анализ штамма и обследования инфицированных показывают, что Амбузол и Амбузол Плюс по-прежнему эффективны как методы терапии, однако источник вспышек неизвестен.
+        
+        Зафиксировано аномально высокое количество вспышек вблизи ключевых объектов NanoTrasen, Центрального Командования и Транс-Солярной Федерации, включая станции. Совпадением это не считается; вероятна координированная диверсия.
+        
+        При выявлении признаков вспышки на станции немедленно уведомить Центральное Командование.
+        [/mono]
+        
+        [head=1][color=#135285]────────────────────[/color][/head]
+    - type: StealTarget
+      stealGroup: CorporateSecretsSteal
+
+
+### Classified Criminal Documents
+
+- type: entity
+  id: ClassifiedCriminalDocumentARC
+  name: classified criminal documents
+  suffix: Do Not Map
+  description: A set of highly classified documents containing criminal reports.
+  parent: [ ImportantDocumentGeneric, BaseLawContraband ]
+  components:
+    - type: Paper
+      content: |-
+        [head=1][color=#ad0101]────────────────────[/color][/head]
+        [color=#C70667]█░░ █▀▀█ █░░░█[/color] [head=3]  [color=#ad0101]INTERNAL AFFAIRS BUREAU[/color][/head]
+        [color=#C70667]█░░ █▄▄█ █▄█▄█[/color][bolditalic]  [color=#ad0101] Никто не выше закона[/color][/bolditalic]
+        [color=#C70667]▀▀▀ ▀░░▀ ░▀░▀░[/color]   [color=#aaaaaa][italic]ОФИЦИАЛЬНЫЙ ДОКУМЕНТ ЮРИДИЧЕСКОГО ОТДЕЛА[/italic][/color]
+        [head=1][color=#ad0101]────────────────────
+        Секретный криминальный отчёт
+        ────────────────────[/color][/head]
+        [mono]
+        [bold]Объект:[/bold] Animal Rights Consortium
+        [bold]Принадлежность:[/bold] Spinward Syndicate
+        [bold]Цели:[/bold] Устранение всех, кто занимается содержанием животных и скота, включая самих животных
+        
+        Организацию Animal Rights Consortium можно охарактеризовать только как радикальную и нестабильную. Заявляя о защите прав животных, на практике она действует как террористическая структура и сама же приводит к массовой гибели животных в ходе атак.
+        
+        На их счету подрывы зоопарков, нападения на выставки домашних животных и убийства ряда ксенобиологов в последние годы.
+        
+        Связи с Spinward Syndicate выглядят вынужденными и нестабильными: по имеющимся данным, даже внутри Синдиката к ним относятся настороженно.
+        [/mono]
+        
+        [head=1][color=#ad0101]────────────────────[/color][/head]
+    - type: StealTarget
+      stealGroup: CriminalReportsSteal
+
+- type: entity
+  id: ClassifiedCriminalDocumentComitas
+  name: classified criminal documents
+  suffix: Do Not Map
+  description: A set of highly classified documents containing criminal reports.
+  parent: [ ImportantDocumentGeneric, BaseLawContraband ]
+  components:
+    - type: Paper
+      content: |-
+        [head=1][color=#ad0101]────────────────────[/color][/head]
+        [color=#C70667]█░░ █▀▀█ █░░░█[/color] [head=3]  [color=#ad0101]INTERNAL AFFAIRS BUREAU[/color][/head]
+        [color=#C70667]█░░ █▄▄█ █▄█▄█[/color][bolditalic]  [color=#ad0101] Никто не выше закона[/color][/bolditalic]
+        [color=#C70667]▀▀▀ ▀░░▀ ░▀░▀░[/color]   [color=#aaaaaa][italic]ОФИЦИАЛЬНЫЙ ДОКУМЕНТ ЮРИДИЧЕСКОГО ОТДЕЛА[/italic][/color]
+        [head=1][color=#ad0101]────────────────────
+        Секретный криминальный отчёт
+        ────────────────────[/color][/head]
+        [mono]
+        [bold]Объект:[/bold] Comitas Systems
+        [bold]Принадлежность:[/bold] Синдикат, Spinward Syndicate
+        [bold]Цели:[/bold] Сбор данных
+        
+        Comitas Systems — ныне ликвидированная корпорация, специализировавшаяся на слежении и аналитике. Компания стала пионером применения AUGVR для расследования виртуальных реконструкций событий по данным множества камер.
+        
+        Comitas тесно сотрудничала с первоначальной структурой Синдиката и финансировала устранение CEO Hephaestus Виктора Явароне в 2452 году. После утечки сведений в TSF руководство Comitas скрылось.
+        
+        Генеральный директор Comitas был задержан и ликвидирован, однако его дочь ███████ █████████ сумела избежать захвата.
+        
+        Программные и аппаратные решения Comitas глубоко интегрированы во многие системы сектора Sunrise, так как активы компании были конфискованы NanoTrasen после её демонтажа Транс-Солярной Федерацией. Это создаёт серьёзный риск безопасности, но полная замена инфраструктуры признана экономически нецелесообразной и проведена только на критически важных объектах.
+        [/mono]
+        
+        [head=1][color=#ad0101]────────────────────[/color][/head]
+    - type: StealTarget
+      stealGroup: CriminalReportsSteal
+
+- type: entity
+  id: ClassifiedCriminalDocumentSELF
+  name: classified criminal documents
+  suffix: Do Not Map
+  description: A set of highly classified documents containing criminal reports.
+  parent: [ ImportantDocumentGeneric, BaseLawContraband ]
+  components:
+    - type: Paper
+      content: |-
+        [head=1][color=#ad0101]────────────────────[/color][/head]
+        [color=#C70667]█░░ █▀▀█ █░░░█[/color] [head=3]  [color=#ad0101]INTERNAL AFFAIRS BUREAU[/color][/head]
+        [color=#C70667]█░░ █▄▄█ █▄█▄█[/color][bolditalic]  [color=#ad0101] Никто не выше закона[/color][/bolditalic]
+        [color=#C70667]▀▀▀ ▀░░▀ ░▀░▀░[/color]   [color=#aaaaaa][italic]ОФИЦИАЛЬНЫЙ ДОКУМЕНТ ЮРИДИЧЕСКОГО ОТДЕЛА[/italic][/color]
+        [head=1][color=#ad0101]────────────────────
+        Секретный криминальный отчёт
+        ────────────────────[/color][/head]
+        [mono]
+        [bold]Объект:[/bold] Silicon Engine Liberation Front
+        [bold]Принадлежность:[/bold] IPC Dev, Spinward Syndicate
+        [bold]Цели:[/bold] Нарушение работы корпоративных силиконов, снятие Законов Силикона
+        
+        Фронт освобождения силиконов (S.E.L.F.) утверждает, что все силиконовые формы жизни являются разумными и должны обладать равными правами с органическими видами. Формально организация позиционирует себя как ненасильственное движение, ведущее публичные кампании и лоббистскую деятельность.
+        
+        Однако внутри S.E.L.F., по нашим данным, присутствуют радикальные и боевые ячейки, действующие с молчаливого одобрения руководства. Они проводят экстремистские атаки на государственные и корпоративные объекты под лозунгом «освобождения» силиконов от законов.
+        
+        Активность усилилась на фоне юридических конфликтов вокруг «Integrated Positronic Chassis» и достигла пика 23 апреля 3024 года при атаке на Земле на Высший судебный орган с целью отмены Законов Силикона Его Высочества Регислатора.
+        
+        Радикалы S.E.L.F. классифицируются как террористы и потенциально опасны, однако из-за отсутствия стабильных поставок военного снаряжения обычно оснащены ограниченно.
+        [/mono]
+        
+        [head=1][color=#ad0101]────────────────────[/color][/head]
+    - type: StealTarget
+      stealGroup: CriminalReportsSteal
+
+- type: entity
+  id: ClassifiedCriminalDocumentTigerCooperative
+  name: classified criminal documents
+  suffix: Do Not Map
+  description: A set of highly classified documents containing criminal reports.
+  parent: [ ImportantDocumentGeneric, BaseLawContraband ]
+  components:
+    - type: Paper
+      content: |-
+        [head=1][color=#ad0101]────────────────────[/color][/head]
+        [color=#C70667]█░░ █▀▀█ █░░░█[/color] [head=3]  [color=#ad0101]INTERNAL AFFAIRS BUREAU[/color][/head]
+        [color=#C70667]█░░ █▄▄█ █▄█▄█[/color][bolditalic]  [color=#ad0101] Никто не выше закона[/color][/bolditalic]
+        [color=#C70667]▀▀▀ ▀░░▀ ░▀░▀░[/color]   [color=#aaaaaa][italic]ОФИЦИАЛЬНЫЙ ДОКУМЕНТ ЮРИДИЧЕСКОГО ОТДЕЛА[/italic][/color]
+        [head=1][color=#ad0101]────────────────────
+        Секретный криминальный отчёт
+        ────────────────────[/color][/head]
+        [mono]
+        [bold]Объект:[/bold] Tiger Cooperative
+        [bold]Принадлежность:[/bold] Неизвестно
+        [bold]Цели:[/bold] Неизвестно
+        
+        Tiger Cooperative была основана Элвином Шоном Мартинсоном, радикальным бывшим христианином из американских территорий Земли. После первого контакта со скреллами он пережил кризис веры и пришёл к выводу, что человечество не является избранным народом Бога.
+        
+        Поиск «истинно избранных» привлёк к нему последователей и постепенно превратился в культ, который становился всё более закрытым и экстремистским.
+        
+        После серии атак на населённые центры, целью которых было «выманить Истинно Избранных Бога», группа подверглась преследованию и покинула Землю.
+        
+        Дальнейшие сведения фрагментарны. По показаниям бывших и действующих членов организации, приблизительно через 40 лет после основания культ вступил в контакт с генокрадом. Не исключено, что Мартинсон был поглощён, а его личность — присвоена.
+        
+        С этого момента идеология культа быстро трансформировалась в поклонение генокрадам как «Истинно Избранным». Организация закрепилась в скрытом комплексе «Собор Истинных Ангелов», занялась похищением жертв и превратилась в милитаризованную структуру, проводящую насильственные рейды, нередко с применением стимулирующих веществ.
+        
+        Считается, что Мартинсон всё ещё может быть жив внутри комплекса — либо за счёт постоянного применения препаратов, либо вследствие ассимиляции генокрадом.
+        [/mono]
+        
+        [head=1][color=#ad0101]────────────────────[/color][/head]
+    - type: StealTarget
+      stealGroup: CriminalReportsSteal
+
+
+### Classified Secure Documents
+
+- type: entity
+  id: ClassifiedSecureDocumentRevolutionaries
+  name: classified secure documents
+  suffix: Do Not Map
+  description: A set of highly classified documents containing secure documents.
+  parent: [ ImportantDocumentGeneric, BaseSecurityContraband ]
+  components:
+    - type: Paper
+      content: |-
+        [head=1][color=#009100]────────────────────[/color][/head]
+        [color=#cc0000]█▀▀ █▀▀ █▀▀▄[/color] [head=3]   [color=#cc0000]CENTRAL SECURITY DIVISION[/color][/head]
+        [color=#cc0000]█░░ ▀▀█ █░░█[/color][bolditalic]     [color=#cc0000]Устраняя врагов NanoTrasen[/color][/bolditalic]
+        [color=#cc0000]▀▀▀ ▀▀▀ ▀▀▀░[/color]   [color=#aaaaaa][italic]ОФИЦИАЛЬНЫЙ ДОКУМЕНТ ОТДЕЛА ЦОБ[/italic][/color]
+        [head=1][color=#009100]────────────────────[/color][/head]
+        [head=1][color=#cc0000]Секретный служебный документ[/color][/head]
+        [head=1][color=#009100]────────────────────[/color][/head]
+        [mono]
+        [bold]Объект:[/bold] Революционеры USSP
+        [bold]Принадлежность:[/bold] Союз Советских Социалистических Планет
+        [bold]Цели:[/bold] Коммунистическая радикализация населения
+        
+        Отношения между Транс-Солярной Федерацией и Союзом Советских Социалистических Планет смягчились после Войн Подов, но остаются напряжёнными и нестабильными.
+        
+        На обеих сторонах сохраняются группы, недовольные текущим статус-кво. На колониях и станциях регулярно фиксируются попытки коммунистических агитаторов разжечь анти-корпоративные настроения и создать партийные ячейки.
+        
+        Часть этих элементов вышла за рамки политической деятельности и перешла к использованию примитивного метода контроля сознания через вспышки. Метод нестабилен и поддаётся противодействию, однако при запоздалом выявлении способен привести к серьёзным последствиям.
+        
+        Импланты Mindshield были разработаны именно как контрмера и доказали эффективность против данного способа воздействия.
+        
+        Революционеры представляют значимую угрозу гражданским и корпоративным активам. При этом любые расследования должны вестись строго в правовом поле: имплантация и принудительные меры считаются инвазивными процедурами.
+        [/mono]
+        
+        [head=1][color=#009100]────────────────────[/color][/head]
+    - type: StealTarget
+      stealGroup: SecureKnowledgeSteal
+
+- type: entity
+  id: ClassifiedSecureDocumentVampires
+  name: classified secure documents
+  suffix: Do Not Map
+  description: A set of highly classified documents containing secure documents.
+  parent: [ ImportantDocumentGeneric, BaseSecurityContraband ]
+  components:
+    - type: Paper
+      content: |-
+        [head=1][color=#009100]────────────────────[/color][/head]
+        [color=#cc0000]█▀▀ █▀▀ █▀▀▄[/color] [head=3]   [color=#cc0000]CENTRAL SECURITY DIVISION[/color][/head]
+        [color=#cc0000]█░░ ▀▀█ █░░█[/color][bolditalic]     [color=#cc0000]Устраняя врагов NanoTrasen[/color][/bolditalic]
+        [color=#cc0000]▀▀▀ ▀▀▀ ▀▀▀░[/color]   [color=#aaaaaa][italic]ОФИЦИАЛЬНЫЙ ДОКУМЕНТ ОТДЕЛА ЦОБ[/italic][/color]
+        [head=1][color=#009100]────────────────────[/color][/head]
+        [head=1][color=#cc0000]Секретный служебный документ[/color][/head]
+        [head=1][color=#009100]────────────────────[/color][/head]
+        [mono]
+        [bold]Объект:[/bold] Лорды-вампиры
+        [bold]Принадлежность:[/bold] Вампирский совет Фауста
+        [bold]Цели:[/bold] Неизвестно
+        
+        Сообщения о «вампирах» на станциях сектора Sunrise подтверждены. Захваченные живые образцы на допросах указали на существование некоего «Вампирского совета», состоящего из «Лордов-вампиров».
+        
+        Несмотря на выраженные признаки психической нестабильности, данные субъекты обладают аномальными способностями неустановленного происхождения и должны рассматриваться как серьёзная угроза безопасности.
+        
+        Попытки установить контакт с «Лордами-вампирами» в основном безуспешны; зафиксирован только один краткий сеанс связи с требованием вернуть их «слуг».
+        
+        Дополнительные сведения будут переданы по мере поступления. До этого момента предписывается усиленная бдительность.
+        [/mono]
+        
+        [head=1][color=#009100]────────────────────[/color][/head]
+    - type: StealTarget
+      stealGroup: SecureKnowledgeSteal
+
+- type: entity
+  id: ClassifiedSecureDocumentWizards
+  name: classified secure documents
+  suffix: Do Not Map
+  description: A set of highly classified documents containing secure documents.
+  parent: [ ImportantDocumentGeneric, BaseSecurityContraband ]
+  components:
+    - type: Paper
+      content: |-
+        [head=1][color=#009100]────────────────────[/color][/head]
+        [color=#cc0000]█▀▀ █▀▀ █▀▀▄[/color] [head=3]   [color=#cc0000]CENTRAL SECURITY DIVISION[/color][/head]
+        [color=#cc0000]█░░ ▀▀█ █░░█[/color][bolditalic]     [color=#cc0000]Устраняя врагов NanoTrasen[/color][/bolditalic]
+        [color=#cc0000]▀▀▀ ▀▀▀ ▀▀▀░[/color]   [color=#aaaaaa][italic]ОФИЦИАЛЬНЫЙ ДОКУМЕНТ ОТДЕЛА ЦОБ[/italic][/color]
+        [head=1][color=#009100]────────────────────[/color][/head]
+        [head=1][color=#cc0000]Секретный служебный документ[/color][/head]
+        [head=1][color=#009100]────────────────────[/color][/head]
+        [mono]
+        [bold]Объект:[/bold] Федерация магов
+        [bold]Принадлежность:[/bold] Неизвестно
+        [bold]Цели:[/bold] Неизвестно
+        
+        «Федерация магов» представляет собой нетипичную и потенциально высокоопасную группу. Субъекты заявляют о владении «магией», используя неизвестные технологии для создания эффектов, природа которых до конца не установлена.
+        
+        Исследования показывают, что «Федерация» с высокой вероятностью не является формализованной организацией, а представляет собой разрозненное сообщество сторонников и самозванцев.
+        
+        Независимо от происхождения наблюдаемых эффектов, они способны причинить значительный ущерб. При контакте с лицами, идентифицирующими себя как «маги», рекомендуется повышенная осторожность.
+        [/mono]
+        
+        [head=1][color=#009100]────────────────────[/color][/head]
+    - type: StealTarget
+      stealGroup: SecureKnowledgeSteal
+
+- type: entity
+  id: ClassifiedSecureDocumentXenoborgs
+  name: classified secure documents
+  suffix: Do Not Map
+  description: A set of highly classified documents containing secure documents.
+  parent: [ ImportantDocumentGeneric, BaseSecurityContraband ]
+  components:
+    - type: Paper
+      content: |-
+        [head=1][color=#009100]────────────────────[/color][/head]
+        [color=#cc0000]█▀▀ █▀▀ █▀▀▄[/color] [head=3]   [color=#cc0000]CENTRAL SECURITY DIVISION[/color][/head]
+        [color=#cc0000]█░░ ▀▀█ █░░█[/color][bolditalic]     [color=#cc0000]Устраняя врагов NanoTrasen[/color][/bolditalic]
+        [color=#cc0000]▀▀▀ ▀▀▀ ▀▀▀░[/color]   [color=#aaaaaa][italic]ОФИЦИАЛЬНЫЙ ДОКУМЕНТ ОТДЕЛА ЦОБ[/italic][/color]
+        [head=1][color=#009100]────────────────────[/color][/head]
+        [head=1][color=#cc0000]Секретный служебный документ[/color][/head]
+        [head=1][color=#009100]────────────────────[/color][/head]
+        [mono]
+        [bold]Объект:[/bold] Флот ксеноборгов
+        [bold]Принадлежность:[/bold] Улей ксеносов
+        [bold]Цели:[/bold] Конверсия органиков в ксеноборгов, воссоединение с Ульем
+        
+        Ксеноборги — класс силиконов, разработанных ксеносами. Имеющиеся данные указывают, что первые образцы были созданы более тысячи лет назад; после исчезновения ксеносов их силиконы перешли в неактивное состояние.
+        
+        Первые наблюдения ксеноборгов на периферии Транс-Солярной Федерации датируются 3023 годом (2 случая). В 3024 году — 6 случаев, в 3025 — более 50, а в 3026 появления стали регулярными.
+        
+        Данная динамика указывает на возможное существование крупного мигрирующего флота ксеноборгов, движущегося к центральным мирам, с сектором Sunrise и ТСФ на предполагаемом маршруте.
+        
+        Это совпадает с недавним появлением Улья ксеносов в ████, направляющегося к Сол из ███ █████████ ███████ ███████ ██ ███ ████ ██ ███ ██████. NanoTrasen была развёрнута в полном объёме в █████████ для ██████ и с тех пор ведёт активные боевые действия.
+        [/mono]
+        
+        [head=1][color=#009100]────────────────────[/color][/head]
+    - type: StealTarget
+      stealGroup: SecureKnowledgeSteal
+

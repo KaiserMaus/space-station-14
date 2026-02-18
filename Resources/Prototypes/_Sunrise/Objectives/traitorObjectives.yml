@@ -47,3 +47,54 @@
   - type: StealCondition
     stealGroup: HandheldFax
     owner: job-name-ntrep
+
+- type: entity
+  abstract: true
+  parent: BaseTraitorStealObjective
+  id: BaseNTRStealObjective
+  components:
+  - type: NotJobRequirement
+    jobs: [ NanoTrasenRepresentative ]
+  - type: StealCondition
+    owner: job-name-ntrep
+
+- type: entity
+  abstract: true
+  parent: BaseTraitorStealObjective
+  id: BaseIAAStealObjective
+  components:
+  - type: NotJobRequirement
+    jobs: [ IAA ]
+  - type: StealCondition
+    owner: job-name-iaa
+
+- type: entity
+  abstract: true
+  parent: BaseTraitorStealObjective
+  id: BaseMagistratStealObjective
+  components:
+  - type: NotJobRequirement
+    jobs: [ Magistrat ]
+  - type: StealCondition
+    owner: job-name-magistrat
+
+- type: entity
+  parent: BaseNTRStealObjective
+  id: CorporateSecretsStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: CorporateSecretsSteal
+
+- type: entity
+  parent: BaseIAAStealObjective
+  id: CriminalReportsStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: CriminalReportsSteal
+
+- type: entity
+  parent: BaseMagistratStealObjective
+  id: SecureKnowledgeStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: SecureKnowledgeSteal

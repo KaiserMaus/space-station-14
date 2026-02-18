@@ -431,4 +431,31 @@
       entity_storage: !type:AllSelector
         children:
         - id: HandheldFax
+        - !type:NestedSelector
+          tableId: CorporateDocumentTable
+
+- type: entity
+  id: LockerIAA
+  name: internal affairs locker
+  parent: LockerBaseSecure
+  components:
+  - type: Appearance
+  - type: AccessReader
+    access: [["Lawyer"]]
+  - type: EntityStorageVisuals
+    stateBaseClosed: hop
+    stateDoorOpen: hop_open
+    stateDoorClosed: representative_door
+
+- type: entity
+  id: LockerIAAFilled
+  parent: LockerIAA
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - !type:NestedSelector
+          tableId: CriminalDocumentTable
 
