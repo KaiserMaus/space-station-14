@@ -10,10 +10,7 @@ steal-target-groups-captain-id-card = ID карта капитана
 steal-target-groups-jetpack-captain-filled = капитанский джетпак
 steal-target-groups-weapon-antique-laser = антикварный лазерный пистолет
 steal-target-groups-nuke-disk = диск ядерной аутентификации
-steal-target-groups-weapon-energy-shot-gun = энергетический дробовик
-steal-target-groups-multiphase = X-01 мультифазный энергетический карабин
-steal-target-groups-plutonium = плутониевое ядро
-steal-target-groups-advanced-defibrillator = продвинутый дефибриллятор
+steal-target-groups-weapon-energy-magnum = энерго-магнум
 # Thief Collection
 steal-target-groups-figurines = фигурка
 steal-target-groups-heads-cloaks = плащи глав
@@ -63,9 +60,3 @@ steal-target-groups-animal-morty = Морти
 steal-target-groups-animal-renault = Алиса
 steal-target-groups-animal-shiva = Шива
 steal-target-groups-animal-tropico = Тропико
-
-# Sunrise-start: Docs
-steal-target-groups-corporate-documents = секретные корпоративные документы
-steal-target-groups-criminal-documents = секретные криминальные отчеты
-steal-target-groups-secure-documents = секретные документы службы безопасности
-# Sunrise-end

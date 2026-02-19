@@ -70,9 +70,3 @@ steal-target-groups-animal-morty = Morty
 steal-target-groups-animal-renault = Renault
 steal-target-groups-animal-shiva = Shiva
 steal-target-groups-animal-tropico = Tropico
-
-# Sunrise-start: Docs
-steal-target-groups-corporate-documents = classified corporate secrets documents
-steal-target-groups-criminal-documents = classified criminal reports documents
-steal-target-groups-secure-documents = classified secure documents
-# Sunrise-end
