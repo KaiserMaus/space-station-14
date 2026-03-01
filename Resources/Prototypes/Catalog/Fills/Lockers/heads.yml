@@ -229,6 +229,7 @@
     - id: DoorRemoteMedical
     - id: HandheldCrewMonitor
     - id: Hypospray
+    - id: PaperCMOLicense # Sunrise-Edit
     #Sunrise-start
     - id: ClothingEyesUniversalMedicalHud
     - id: AdvancedDefibrillator
@@ -289,6 +290,7 @@
     - id: ClothingHeadsetAltScience
     - id: DoorRemoteResearch
     - id: HandTeleporter
+    - id: PaperRDDiploma # Sunrise-Edit
     - id: RubberStampRd
     - id: FlippoLighterSunriseRd  # Sunrise-Flippo
 

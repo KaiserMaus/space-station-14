@@ -65,6 +65,10 @@
     - PetWearable
     - WhitelistChameleon
   - type: AddWantedStatus # Sunrise-edit
+  # Sunrise-Start
+  - type: StealTarget
+    stealGroup: MiscSunglasses
+  # Sunrise-End
 
 - type: entity
   parent: [ClothingEyesBase, BaseCommandContraband]

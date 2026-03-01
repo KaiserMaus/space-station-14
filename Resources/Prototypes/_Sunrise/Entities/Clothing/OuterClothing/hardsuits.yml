@@ -577,7 +577,7 @@
       passiveVisibilityRate: -1
       movementVisibilityRate: 0.3
   - type: PowerCellDraw
-    drawRate: 2 # 900 seconds on the default cell
+    drawRate: 3 # 600 seconds on the default cell
   - type: ToggleCellDraw
   - type: PowerCellSlot
     cellSlotId: cell_slot

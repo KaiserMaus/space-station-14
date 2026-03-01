@@ -72,7 +72,7 @@
   id: EncryptionKeyHybridStealObjective
   components:
   - type: NotJobRequirement
-    jobs: [ Captain, NanoTrasenRepresentative, BlueShield, Quartermaster, CargoTechnician, MiningSpecialist, SalvageSpecialist, MedicalDoctor, Paramedic, ChiefMedicalOfficer, MedicalIntern, Chemist, Psychologist, SecurityOfficer, HeadOfSecurity, Detective, Warden, Brigmedic, SecurityCadet, BlueShieldOfficer, BlueShieldEnsign ]
+    jobs: [ Captain, NanoTrasenRepresentative, Quartermaster, CargoTechnician, MiningSpecialist, SalvageSpecialist, MedicalDoctor, Paramedic, ChiefMedicalOfficer, MedicalIntern, Chemist, Psychologist, SecurityOfficer, HeadOfSecurity, Detective, Warden, Brigmedic, SecurityCadet, BlueShieldOfficer, BlueShieldEnsign ]
   - type: StealCondition
     stealGroup: EncryptionKeyHybrid
 
@@ -89,6 +89,20 @@
   components:
   - type: StealCondition
     stealGroup: RubberStampVetoSteal
+
+- type: entity
+  parent: BaseCMOStealObjective
+  id: CMOLicenseStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: CMOLicense
+
+- type: entity
+  parent: BaseRDStealObjective
+  id: RDDiplomaStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: RDDiploma
 
 - type: entity
   parent: BaseTraitorNanoTrasenStealObjective

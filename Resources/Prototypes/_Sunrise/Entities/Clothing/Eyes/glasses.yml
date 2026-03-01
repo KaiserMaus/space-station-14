@@ -36,6 +36,8 @@
   - type: ShowMindShieldIcons
   - type: EyeProtection
     protectionTime: 5
+  - type: StealTarget
+    stealGroup: RareSunglasses
 
 - type: entity
   parent: ClothingEyesBase
@@ -72,6 +74,8 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+  - type: StealTarget
+    stealGroup: RareSunglasses
 
 - type: entity
   parent: [BaseNightVisionDevice, ClothingEyesGlassesSunglasses, ShowSecurityIcons, PowerCellSlotSmallItem]

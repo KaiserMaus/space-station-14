@@ -1242,7 +1242,7 @@
     Telecrystal: 9
   categories:
   - UplinkWearables
-  restockTime: 1800
+  restockTime: 3600
   conditions:
   - !type:StoreWhitelistCondition
     blacklist:

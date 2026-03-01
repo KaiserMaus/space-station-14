@@ -25,3 +25,24 @@
   sprite:
     sprite: _Sunrise/Objects/Devices/handled_fax.rsi
     state: icon
+
+- type: stealTargetGroup
+  id: RDDiploma
+  name: steal-target-groups-rd-diploma
+  sprite:
+    sprite: Objects/Misc/bureaucracy.rsi
+    state: paper
+
+- type: stealTargetGroup
+  id: CMOLicense
+  name: steal-target-groups-cmo-license
+  sprite:
+    sprite: Objects/Misc/bureaucracy.rsi
+    state: paper
+
+- type: stealTargetGroup
+  id: ClothingHeadsetAltCommand
+  name: steal-target-groups-clothing-headset-alt-command
+  sprite:
+    sprite: _Sunrise/Clothing/Ears/Headsets/command.rsi
+    state: icon_alt

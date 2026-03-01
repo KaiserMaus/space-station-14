@@ -224,6 +224,10 @@
           tags:
           - Wrench
   - type: Appearance
+  # Sunrise-Start
+  - type: StealTarget
+    stealGroup: MedicalBelt
+  # Sunrise-End
 
 - type: entity
   parent: ClothingBeltMedical

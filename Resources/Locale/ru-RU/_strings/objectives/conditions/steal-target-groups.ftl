@@ -1,6 +1,8 @@
 # Traitor single items
 steal-target-groups-hypospray = гипоспрей
 steal-target-groups-handheld-crew-monitor = портативный монитор экипажа
+steal-target-groups-rd-diploma = диплом научного руководителя
+steal-target-groups-cmo-license = лицензия главного врача
 steal-target-groups-clothing-outer-hardsuit-rd = экспериментальный исследовательский скафандр
 steal-target-groups-hand-teleporter = ручной телепортер
 steal-target-groups-clothing-shoes-boots-mag-adv = продвинутые магнитные сапоги
@@ -33,6 +35,7 @@ steal-target-groups-clothing-head-hat-warden = фуражка смотрител
 steal-target-groups-clothing-outer-hardsuit-void-paramed = пустотный скафандр парамедика
 steal-target-groups-medical-tech-fab-circuitboard = медицинский ТехФаб (машинная плата)
 steal-target-groups-clothing-headset-alt-medical = полноразмерная гарнитура ГВ
+steal-target-groups-clothing-headset-alt-command = полноразмерная командная гарнитура
 steal-target-groups-research-and-development-server-machine-circuitboard = сервер РнД (машинная плата)
 steal-target-groups-fire-axe = пожарный топор
 steal-target-groups-ame-part-flatpack = упаковка ДАМ

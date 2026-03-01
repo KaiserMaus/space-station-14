@@ -13,7 +13,9 @@
     CaptainIDStealObjective: 1
     CMOHyposprayStealObjective: 1
     CMOCrewMonitorStealObjective: 1
+    CMOLicenseStealObjective: 0.5 # Sunrise-Edit
     RDHardsuitStealObjective: 1
+    RDDiplomaStealObjective: 0.5 # Sunrise-Edit
     NukeDiskStealObjective: 1
     MagbootsStealObjective: 1
     CorgiMeatStealObjective: 1
@@ -84,12 +86,14 @@
     ChiefEngineerToolbeltStealObjective: 0.5             #command
     CaptainSwordStealObjective: 0.5
     ClothingHeadsetAltMedicalStealObjective: 1
+    ClothingHeadsetAltCommandStealObjective: 0.8 # Sunrise-Edit
     ForensicScannerStealObjective: 1                    #sec
     FlippoEngravedLighterStealObjective: 0.5
     ClothingHeadHatWardenStealObjective: 1
     WantedListCartridgeStealObjective: 1
     ClothingOuterHardsuitVoidParamedStealObjective: 1   #med
     MedicalTechFabCircuitboardStealObjective: 1
+    ResearchAndDevelopmentServerMachineCircuitboardStealObjective: 0.8 # Sunrise-Edit
     FireAxeStealObjective: 1                            #eng
     AmePartFlatpackStealObjective: 1
     ExpeditionsCircuitboardStealObjective: 1            #sup
@@ -102,12 +106,12 @@
 - type: weightedRandom
   id: ThiefObjectiveGroupStructure
   weights:
-    #NuclearBombStealObjective: 0.5 # Sunrise-Edit: Я хз че курили оффы делая такую цель. С учетом блядь того что воры появляются в режиме яо.
+    NuclearBombStealObjective: 0.5
     FaxMachineCaptainStealObjective: 1
     ChemDispenserStealObjective: 1
     XenoArtifactStealObjective: 1
     FreezerHeaterStealObjective: 1
-    #TegStealObjective: 1 Sunrise-Edit: Буквально цель на саботаж питания.
+    TegStealObjective: 1
     BoozeDispenserStealObjective: 1
     AltarNanotrasenStealObjective: 1
     PlantRDStealObjective: 1

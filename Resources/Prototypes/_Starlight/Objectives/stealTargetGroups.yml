@@ -3,14 +3,14 @@
   name: steal-target-groups-figurines
   sprite:
     sprite: Objects/Fun/figurines.rsi
-    state: icon
+    state: hop
 
 - type: stealTargetGroup
   id: HOPIDCard
   name: steal-target-groups-hop-id-card
   sprite:
     sprite: _Sunrise/Objects/Misc/id_cards.rsi
-    state: icon-hop
+    state: default
 
 - type: stealTargetGroup
   id: PinpointerNuclear
@@ -52,6 +52,13 @@
   name: steal-target-groups-bso-weapon
   sprite:
     sprite: _Sunrise/Objects/Weapons/Guns/Battery/energygun_security.rsi
+    state: base
+
+- type: stealTargetGroup
+  id: WeaponEnergyShotgun
+  name: steal-target-groups-weapon-energy-shot-gun
+  sprite:
+    sprite: Objects/Weapons/Guns/Battery/energy_shotgun.rsi
     state: base
 
 # - type: stealTargetGroup
@@ -184,5 +191,47 @@
   id: BrigmedicStrangeBedsheet
   name: steal-target-groups-strange-brigmed-bedsheet
   sprite:
-    sprite: Clothing/Neck/Bedsheets/brigmedic.rsi
+    sprite: Objects/Misc/bedsheets.rsi
+    state: sheetbrigmedic
+
+- type: stealTargetGroup
+  id: Galoshes
+  name: steal-target-groups-galoshes
+  sprite:
+    sprite: Clothing/Shoes/Specific/galoshes.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: RCDRPD
+  name: steal-target-groups-rcd-rpd
+  sprite:
+    sprite: Objects/Tools/rcd.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: MiscSunglasses
+  name: steal-target-groups-misc-sunglasses
+  sprite:
+    sprite: Clothing/Eyes/Glasses/secglasses.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: RareSunglasses
+  name: steal-target-groups-rare-sunglasses
+  sprite:
+    sprite: _Sunrise/Clothing/Eyes/Glasses/blueshield_sunglasses.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: AssistantHeadsets
+  name: steal-target-groups-assistant-headsets
+  sprite:
+    sprite: _Sunrise/Clothing/Ears/Headsets/base.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: MedicalBelt
+  name: steal-target-groups-medical-belt
+  sprite:
+    sprite: Clothing/Belt/medical.rsi
     state: icon

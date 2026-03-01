@@ -1,6 +1,8 @@
 # Traitor single items
 steal-target-groups-hypospray = hypospray
 steal-target-groups-handheld-crew-monitor = handheld crew monitor
+steal-target-groups-rd-diploma = research director diploma
+steal-target-groups-cmo-license = chief medical officer license
 steal-target-groups-clothing-outer-hardsuit-rd = experimental research hardsuit
 steal-target-groups-hand-teleporter = hand teleporter
 steal-target-groups-clothing-shoes-boots-mag-adv = advanced magboots
@@ -34,6 +36,7 @@ steal-target-groups-clothing-head-hat-warden = warden's cap
 steal-target-groups-clothing-outer-hardsuit-void-paramed = paramedic void suit
 steal-target-groups-medical-tech-fab-circuitboard = medical techfab machine board
 steal-target-groups-clothing-headset-alt-medical = chief medical officer's over-ear headset
+steal-target-groups-clothing-headset-alt-command = command over-ear headset
 steal-target-groups-research-and-development-server-machine-circuitboard = R&D server machine board
 steal-target-groups-fire-axe = fireaxe
 steal-target-groups-ame-part-flatpack =  AME flatpack

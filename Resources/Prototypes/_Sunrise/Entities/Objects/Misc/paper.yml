@@ -48,3 +48,35 @@
   - type: EmitSoundOnThrow
     sound:
       collection: WeakHit
+
+- type: entity
+  parent: Paper
+  id: PaperRDDiploma
+  name: research director diploma
+  description: A formal diploma certifying advanced research qualifications.
+  components:
+  - type: Paper
+    content: |
+      [head=2]Research Director Diploma[/head]
+
+      This certifies that the holder is recognized as a qualified Research Director.
+
+      [italic]Issued by NanoTrasen Academic Board[/italic]
+  - type: StealTarget
+    stealGroup: RDDiploma
+
+- type: entity
+  parent: Paper
+  id: PaperCMOLicense
+  name: chief medical officer license
+  description: A formal medical license for command-level medical practice.
+  components:
+  - type: Paper
+    content: |
+      [head=2]Chief Medical Officer License[/head]
+
+      This license authorizes command-level medical oversight and practice.
+
+      [italic]Issued by NanoTrasen Medical Directorate[/italic]
+  - type: StealTarget
+    stealGroup: CMOLicense

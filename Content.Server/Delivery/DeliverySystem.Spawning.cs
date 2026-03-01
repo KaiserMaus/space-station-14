@@ -1,4 +1,5 @@
 using Content.Shared.Delivery;
+using Content.Shared.Emag.Systems; // Sunrise-Edit
 using Content.Shared.Power.EntitySystems;
 using Content.Shared.EntityTable;
 using Content.Shared.StationRecords;
@@ -17,6 +18,7 @@ public sealed partial class DeliverySystem
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly EntityTableSystem _entityTable = default!;
     [Dependency] private readonly SharedPowerReceiverSystem _power = default!;
+    [Dependency] private readonly EmagSystem _emag = default!; // Sunrise-Edit
 
     private void InitializeSpawning()
     {
@@ -37,7 +39,13 @@ public sealed partial class DeliverySystem
 
         for (int i = 0; i < ent.Comp.ContainedDeliveryAmount; i++)
         {
-            var spawns = _entityTable.GetSpawns(ent.Comp.Table);
+            // Sunrise-Start
+            // Emagged mail teleporter uses alternate delivery table when configured.
+            var table = ent.Comp.Table;
+            if (_emag.CheckFlag(ent, EmagType.Interaction) && ent.Comp.EmagTable != null)
+                table = ent.Comp.EmagTable;
+            // Sunrise-End
+            var spawns = _entityTable.GetSpawns(table);
 
             foreach (var id in spawns)
             {

@@ -191,6 +191,10 @@
     prototype: ResearchAndDevelopmentServer
     stackRequirements:
       Plasma: 5
+  # Sunrise-Start
+  - type: StealTarget
+    stealGroup: ResearchAndDevelopmentServerMachineCircuitboard
+  # Sunrise-End
 
 - type: entity
   id: BiogeneratorMachineCircuitboard

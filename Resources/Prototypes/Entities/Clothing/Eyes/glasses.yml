@@ -164,6 +164,10 @@
     - PetWearable
     - HamsterWearable
     - WhitelistChameleon
+  # Sunrise-Start
+  - type: StealTarget
+    stealGroup: MiscSunglasses
+  # Sunrise-End
 
 - type: entity
   parent: [ClothingEyesBase, ShowSecurityIcons, BaseSecurityContraband]
@@ -193,6 +197,10 @@
   - type: IdentityBlocker
     coverage: EYES
   - type: AddWantedStatus # Sunrise-edit
+  # Sunrise-Start
+  - type: StealTarget
+    stealGroup: MiscSunglasses
+  # Sunrise-End
 
 - type: entity
   parent: [ClothingEyesBase, BaseCommandContraband]
@@ -215,6 +223,10 @@
   - type: IdentityBlocker
     coverage: EYES
   - type: ShowJobIcons
+  # Sunrise-Start
+  - type: StealTarget
+    stealGroup: RareSunglasses
+  # Sunrise-End
 
 - type: entity
   parent: ClothingEyesBase

@@ -592,7 +592,7 @@
     - Antagonists
   - type: PacifismAllowedGun
   # Sunrise - Start
-  - type: StealTarget 
+  - type: StealTarget
     stealGroup: OfficerHandgun
   # Sunrise - End
 
@@ -921,6 +921,10 @@
   - type: Battery
     maxCharge: 480
     startingCharge: 480
+  # Sunrise-start
+  - type: StealTarget
+    stealGroup: WeaponEnergyShotgun
+  # Sunrise-end
 
 - type: entity
   name: energy magnum

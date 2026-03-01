@@ -392,6 +392,10 @@
   - type: ActivatableUI
     inHandsOnly: true
     key: enum.RcdUiKey.Key
+  # Sunrise-Start
+  - type: StealTarget
+    stealGroup: RCDRPD
+  # Sunrise-End
 
 - type: entity
   id: RCDEmpty
@@ -456,6 +460,10 @@
       Plastic: 100
   - type: StaticPrice
     price: 60
+  # Sunrise-Start
+  - type: StealTarget
+    stealGroup: RCDRPD
+  # Sunrise-End
 
 - type: entity
   name: omnitool

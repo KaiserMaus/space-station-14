@@ -242,6 +242,30 @@
   - type: Objective
     difficulty: 1
 
+# Sunrise-Start
+- type: entity
+  parent: BaseThiefStealObjective
+  id: ClothingHeadsetAltCommandStealObjective
+  components:
+  - type: NotJobRequirement
+    jobs: [ Captain, NanoTrasenRepresentative ]
+  - type: StealCondition
+    stealGroup: ClothingHeadsetAltCommand
+  - type: Objective
+    difficulty: 1.2
+
+- type: entity
+  parent: BaseThiefStealObjective
+  id: ResearchAndDevelopmentServerMachineCircuitboardStealObjective
+  components:
+  - type: NotJobRequirement
+    jobs: [ Scientist, ResearchDirector ]
+  - type: StealCondition
+    stealGroup: ResearchAndDevelopmentServerMachineCircuitboard
+  - type: Objective
+    difficulty: 1.2
+# Sunrise-End
+
 - type: entity                                      #Engineering subgroup
   parent: BaseThiefStealObjective
   id: FireAxeStealObjective

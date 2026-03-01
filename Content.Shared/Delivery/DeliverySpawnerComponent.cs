@@ -16,6 +16,14 @@ public sealed partial class DeliverySpawnerComponent : Component
     [DataField(required: true)]
     public EntityTableSelector Table = default!;
 
+    // Sunrise-Start
+    /// <summary>
+    /// Optional entity table used when the spawner is emagged.
+    /// </summary>
+    [DataField]
+    public EntityTableSelector? EmagTable;
+    // Sunrise-End
+
     /// <summary>
     /// The max amount of deliveries this spawner can hold at a time.
     /// </summary>

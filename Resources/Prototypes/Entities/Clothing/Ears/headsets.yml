@@ -34,6 +34,10 @@
   components:
   - type: Sprite
     sprite: _Sunrise/Clothing/Ears/Headsets/base.rsi # Sunrise-Edit
+  # Sunrise-Start
+  - type: StealTarget
+    stealGroup: AssistantHeadsets
+  # Sunrise-End
 
 - type: entity
   parent: ClothingHeadset

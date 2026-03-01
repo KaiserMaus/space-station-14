@@ -54,6 +54,10 @@
     sprite: _Sunrise/Clothing/Ears/Headsets/command.rsi # Sunrise-Edit
   - type: Clothing
     sprite: _Sunrise/Clothing/Ears/Headsets/command.rsi # Sunrise-Edit
+  # Sunrise-Start
+  - type: StealTarget
+    stealGroup: ClothingHeadsetAltCommand
+  # Sunrise-End
 
 - type: entity
   parent: [ClothingHeadsetAlt, BaseCommandContraband]
