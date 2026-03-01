@@ -123,6 +123,9 @@ public sealed class PaperSystem : EntitySystem
             {
                 if (entity.Comp.EditingDisabled)
                 {
+                    var signEvent = new PaperSignedEvent(args.User, entity);
+                    RaiseLocalEvent(entity, ref signEvent);
+
                     var paperEditingDisabledMessage = Loc.GetString("paper-tamper-proof-modified-message");
                     _popupSystem.PopupClient(paperEditingDisabledMessage, entity, args.User);
 
@@ -146,6 +149,7 @@ public sealed class PaperSystem : EntitySystem
 
                 var writeEvent = new PaperWriteEvent(args.User, entity);
                 RaiseLocalEvent(args.Used, ref writeEvent);
+                RaiseLocalEvent(entity, ref writeEvent);
 
                 entity.Comp.Mode = PaperAction.Write;
                 _uiSystem.OpenUi(entity.Owner, PaperUiKey.Key, args.User);
@@ -327,6 +331,12 @@ public sealed class PaperSystem : EntitySystem
 /// </summary>
 [ByRefEvent]
 public record struct PaperWriteEvent(EntityUid User, EntityUid Paper);
+
+/// <summary>
+/// Event fired when using a writing tool on a tamper-proof paper.
+/// </summary>
+[ByRefEvent]
+public record struct PaperSignedEvent(EntityUid Signer, EntityUid Paper);
 
 /// <summary>
 /// Cancellable event for attempting to write on a piece of paper.

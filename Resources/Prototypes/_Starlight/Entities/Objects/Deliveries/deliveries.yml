@@ -1,0 +1,19 @@
+- type: entity
+  parent: PackageDelivery
+  id: PackageDeliveryEvil
+  name: package
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      delivery: !type:NestedSelector
+        tableId: PackageDeliveryRewardsEvil
+
+- type: entity
+  parent: LetterDelivery
+  id: LetterDeliveryEvil
+  name: letter
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      delivery: !type:NestedSelector
+        tableId: LetterDeliveryRewardsEvil
