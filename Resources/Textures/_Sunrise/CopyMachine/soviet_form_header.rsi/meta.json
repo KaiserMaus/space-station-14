@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "license": "",
+  "copyright": "Takes 1941s poster and edit by KaiserMaus(github).",
+  "size": {
+    "x": 300,
+    "y": 435
+  },
+  "states": [
+    {
+      "name": "soviet_form_header"
+    }
+  ]
+}

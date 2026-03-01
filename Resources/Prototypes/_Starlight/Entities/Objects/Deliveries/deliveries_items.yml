@@ -189,7 +189,7 @@
       content: delivery-spam-join-soviets
       editingDisabled: true
     - type: PaperVisuals
-      headerImagePath: "/Textures/_Sunrise/CopyMachine/paper_headers.rsi/soviet_form_header.png"
+      headerImagePath: "/Textures/_Sunrise/CopyMachine/soviet_form_header.rsi/soviet_form_header.png"
     - type: AntagOnSign
       chance: 1
       antags:
@@ -215,7 +215,7 @@
       content: delivery-spam-join-soviets
       editingDisabled: true
     - type: PaperVisuals
-      headerImagePath: "/Textures/_Sunrise/CopyMachine/paper_headers.rsi/soviet_form_header.png"
+      headerImagePath: "/Textures/_Sunrise/CopyMachine/soviet_form_header.rsi/soviet_form_header.png"
     - type: AntagOnSign
       chance: 0.5
       antags:
@@ -241,7 +241,7 @@
       content: delivery-spam-join-soviets
       editingDisabled: true
     - type: PaperVisuals
-      headerImagePath: "/Textures/_Sunrise/CopyMachine/paper_headers.rsi/soviet_form_header.png"
+      headerImagePath: "/Textures/_Sunrise/CopyMachine/soviet_form_header.rsi/soviet_form_header.png"
     - type: AntagOnSign
       chance: 0.25
       antags:
