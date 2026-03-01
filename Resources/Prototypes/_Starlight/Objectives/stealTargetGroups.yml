@@ -1,0 +1,188 @@
+- type: stealTargetGroup
+  id: Figurines
+  name: steal-target-groups-figurines
+  sprite:
+    sprite: Objects/Fun/figurines.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: HOPIDCard
+  name: steal-target-groups-hop-id-card
+  sprite:
+    sprite: _Sunrise/Objects/Misc/id_cards.rsi
+    state: icon-hop
+
+- type: stealTargetGroup
+  id: PinpointerNuclear
+  name: steal-target-groups-pinpointer-nuclear
+  sprite:
+    sprite: Objects/Devices/pinpointer.rsi
+    state: pinpointer
+
+- type: stealTargetGroup
+  id: AccessConfigurator
+  name: steal-target-groups-access-configurator
+  sprite:
+    sprite: Objects/Tools/access_configurator.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: EncryptionKeyHybrid
+  name: steal-target-groups-encryption-key-hybrid
+  sprite:
+    sprite: Objects/Devices/encryption_keys.rsi
+    state: crypt_gray
+
+- type: stealTargetGroup
+  id: NTRepBriefcaseSecure
+  name: steal-target-groups-ntr-briefcase
+  sprite:
+    sprite: _Sunrise/Objects/Weapons/Melee/cane-nt.rsi
+    state: cane-nt
+
+- type: stealTargetGroup
+  id: RubberStampVetoSteal
+  name: steal-target-groups-rubber-stamp-veto
+  sprite:
+    sprite: _Sunrise/Objects/Misc/stamps.rsi
+    state: stamp-veto
+
+- type: stealTargetGroup
+  id: BSOWeapon
+  name: steal-target-groups-bso-weapon
+  sprite:
+    sprite: _Sunrise/Objects/Weapons/Guns/Battery/energygun_security.rsi
+    state: base
+
+# - type: stealTargetGroup
+#   id: HOSWeapon
+#   name: steal-target-groups-hos-weapon
+#   sprite:
+#     sprite: Objects/Weapons/Guns/SMGs/wt550.rsi
+#     state: base
+
+- type: stealTargetGroup
+  id: CMOHardsuit
+  name: steal-target-groups-clothing-outer-hardsuit-cmo
+  sprite:
+    sprite: Clothing/OuterClothing/Hardsuits/medical.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: CEHardsuit
+  name: steal-target-groups-clothing-outer-hardsuit-ce
+  sprite:
+    sprite: Clothing/OuterClothing/Hardsuits/engineering-white.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: HOSHardsuit
+  name: steal-target-groups-clothing-outer-hardsuit-hos
+  sprite:
+    sprite: Clothing/OuterClothing/Hardsuits/security-red.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: WardenHardsuit
+  name: steal-target-groups-clothing-outer-hardsuit-warden
+  sprite:
+    sprite: Clothing/OuterClothing/Hardsuits/security-warden.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: BrigmedicHardsuit
+  name: steal-target-groups-clothing-outer-hardsuit-brigmedic
+  sprite:
+    sprite: Clothing/OuterClothing/Hardsuits/brigmedic.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: QMHardsuit
+  name: steal-target-groups-clothing-outer-hardsuit-qm
+  sprite:
+    sprite: Clothing/OuterClothing/Hardsuits/maxim.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: SalvLeadHardsuit
+  name: steal-target-groups-clothing-outer-hardsuit-salvlead
+  sprite:
+    sprite: Clothing/OuterClothing/Hardsuits/salvage.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: CaptainHardsuit
+  name: steal-target-groups-clothing-outer-hardsuit-captain
+  sprite:
+    sprite: Clothing/OuterClothing/Hardsuits/capspace.rsi
+    state: icon
+
+# - type: stealTargetGroup
+#   id: NTRepHardsuit
+#   name: steal-target-groups-clothing-outer-hardsuit-ntr
+#   sprite:
+#     sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/ntrguard_spacesuit.rsi
+#     state: icon
+
+- type: stealTargetGroup
+  id: BSOHardsuit
+  name: steal-target-groups-clothing-outer-hardsuit-bso
+  sprite:
+    sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/blueshield.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: BSOMagboots
+  name: steal-target-groups-clothing-shoes-boots-mag-bso
+  sprite:
+    sprite: _Sunrise/Clothing/Shoes/magboots-sec.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: LogProbeCartridge
+  name: steal-target-groups-log-probe-cartridge
+  sprite:
+    sprite: Objects/Devices/cartridge.rsi
+    state: cart-log
+
+- type: stealTargetGroup
+  id: MedTekCartridge
+  name: steal-target-groups-med-tek-cartridge
+  sprite:
+    sprite: Objects/Devices/cartridge.rsi
+    state: cart-med
+
+- type: stealTargetGroup
+  id: AstroNavCartridge
+  name: steal-target-groups-astro-nav-cartridge
+  sprite:
+    sprite: Objects/Devices/cartridge.rsi
+    state: cart-nav
+
+- type: stealTargetGroup
+  id: SecurityTechFabCircuitboard
+  name: steal-target-groups-security-tech-fab-circuitboard
+  sprite:
+    sprite: Objects/Misc/module.rsi
+    state: security
+
+- type: stealTargetGroup
+  id: CommsComputerCircuitboard
+  name: steal-target-groups-communications-computer-circuitboard
+  sprite:
+    sprite: Objects/Misc/module.rsi
+    state: cpu_command
+
+- type: stealTargetGroup
+  id: IDCardComputerCircuitboard
+  name: steal-target-groups-id-card-computer-circuitboard
+  sprite:
+    sprite: Objects/Misc/module.rsi
+    state: cpu_command
+
+- type: stealTargetGroup
+  id: BrigmedicStrangeBedsheet
+  name: steal-target-groups-strange-brigmed-bedsheet
+  sprite:
+    sprite: Clothing/Neck/Bedsheets/brigmedic.rsi
+    state: icon

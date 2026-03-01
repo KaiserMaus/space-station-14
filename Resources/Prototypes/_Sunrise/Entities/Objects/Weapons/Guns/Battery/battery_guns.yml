@@ -323,6 +323,8 @@
   - type: Tag
     tags:
     - Sidearm
+  - type: StealTarget
+    stealGroup: BSOWeapon
   - type: StaticPrice
     price: 750
 

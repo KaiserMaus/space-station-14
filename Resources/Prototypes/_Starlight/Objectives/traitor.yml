@@ -1,0 +1,217 @@
+- type: entity
+  abstract: true
+  parent: BaseTraitorStealObjective
+  id: BaseTraitorSecurityStealObjective
+  components:
+  - type: NotJobRequirement
+    jobs: [ SecurityOfficer, HeadOfSecurity, Detective, Warden, Brigmedic, SecurityCadet, BlueShieldOfficer, BlueShieldEnsign ]
+
+- type: entity
+  abstract: true
+  parent: BaseTraitorStealObjective
+  id: BaseTraitorMedicalStealObjective
+  components:
+  - type: NotJobRequirement
+    jobs: [ MedicalDoctor, Paramedic, ChiefMedicalOfficer, MedicalIntern, Chemist, Psychologist ]
+
+- type: entity
+  abstract: true
+  parent: BaseTraitorStealObjective
+  id: BaseTraitorCargoStealObjective
+  components:
+  - type: NotJobRequirement
+    jobs: [ Quartermaster, CargoTechnician, MiningSpecialist, SalvageSpecialist ]
+
+- type: entity
+  abstract: true
+  parent: BaseTraitorStealObjective
+  id: BaseTraitorEngineeringStealObjective
+  components:
+  - type: NotJobRequirement
+    jobs: [ ChiefEngineer, StationEngineer, AtmosphericTechnician, TechnicalAssistant ]
+
+- type: entity
+  abstract: true
+  parent: BaseTraitorStealObjective
+  id: BaseTraitorCommandStealObjective
+  components:
+  - type: NotJobRequirement
+    jobs: [ Captain, HeadOfPersonnel, HeadOfSecurity, ResearchDirector, ChiefEngineer, ChiefMedicalOfficer, Quartermaster, NanoTrasenRepresentative, BlueShieldOfficer, BlueShieldEnsign ]
+
+- type: entity
+  abstract: true
+  parent: BaseTraitorStealObjective
+  id: BaseTraitorNanoTrasenStealObjective
+  components:
+  - type: NotJobRequirement
+    jobs: [ NanoTrasenRepresentative, BlueShieldOfficer, BlueShieldEnsign, IAA ]
+
+- type: entity
+  parent: BaseTraitorCommandStealObjective
+  id: HOPIDStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: HOPIDCard
+
+- type: entity
+  parent: BaseTraitorCommandStealObjective
+  id: PinpointerNuclearStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: PinpointerNuclear
+
+- type: entity
+  parent: BaseTraitorCommandStealObjective
+  id: AccessConfiguratorStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: AccessConfigurator
+
+- type: entity
+  parent: BaseTraitorStealObjective
+  id: EncryptionKeyHybridStealObjective
+  components:
+  - type: NotJobRequirement
+    jobs: [ Captain, NanoTrasenRepresentative, BlueShield, Quartermaster, CargoTechnician, MiningSpecialist, SalvageSpecialist, MedicalDoctor, Paramedic, ChiefMedicalOfficer, MedicalIntern, Chemist, Psychologist, SecurityOfficer, HeadOfSecurity, Detective, Warden, Brigmedic, SecurityCadet, BlueShieldOfficer, BlueShieldEnsign ]
+  - type: StealCondition
+    stealGroup: EncryptionKeyHybrid
+
+- type: entity
+  parent: BaseTraitorNanoTrasenStealObjective
+  id: NTRepBriefcaseSecureStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: NTRepBriefcaseSecure
+
+- type: entity
+  parent: BaseTraitorNanoTrasenStealObjective
+  id: RubberStampVetoStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: RubberStampVetoSteal
+
+- type: entity
+  parent: BaseTraitorNanoTrasenStealObjective
+  id: BSOWeaponStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: BSOWeapon
+  - type: Objective
+    difficulty: 2.5
+
+# - type: entity
+#   parent: BaseTraitorSecurityStealObjective
+#   id: HOSWeaponStealObjective
+#   components:
+#   - type: StealCondition
+#     stealGroup: HOSWeapon
+#   - type: Objective
+#     difficulty: 1.7
+
+- type: entity
+  parent: BaseTraitorSecurityStealObjective
+  id: EnergyShotgunStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: WeaponEnergyShotgun
+  - type: Objective
+    difficulty: 1
+
+- type: entity
+  parent: BaseTraitorMedicalStealObjective
+  id: CMOHardsuitStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: CMOHardsuit
+  - type: Objective
+    difficulty: 2.5
+
+- type: entity
+  parent: BaseTraitorEngineeringStealObjective
+  id: CEHardsuitStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: CEHardsuit
+  - type: Objective
+    difficulty: 2.5
+
+- type: entity
+  parent: BaseTraitorSecurityStealObjective
+  id: HOSHardsuitStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: HOSHardsuit
+  - type: Objective
+    difficulty: 3
+
+- type: entity
+  parent: BaseTraitorSecurityStealObjective
+  id: WardenHardsuitStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: WardenHardsuit
+  - type: Objective
+    difficulty: 3
+
+- type: entity
+  parent: BaseTraitorSecurityStealObjective
+  id: BrigmedicHardsuitStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: BrigmedicHardsuit
+  - type: Objective
+    difficulty: 3
+
+- type: entity
+  parent: BaseTraitorCargoStealObjective
+  id: QMHardsuitStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: QMHardsuit
+  - type: Objective
+    difficulty: 2.5
+
+- type: entity
+  parent: BaseTraitorCargoStealObjective
+  id: SalvLeadHardsuitStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: SalvLeadHardsuit
+  - type: Objective
+    difficulty: 2.5
+
+- type: entity
+  parent: BaseTraitorCommandStealObjective
+  id: CaptainHardsuitStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: CaptainHardsuit
+  - type: Objective
+    difficulty: 3
+
+# - type: entity
+#   parent: BaseTraitorNanoTrasenStealObjective
+#   id: NTRepHardsuitStealObjective
+#   components:
+#   - type: StealCondition
+#     stealGroup: NTRepHardsuit
+#   - type: Objective
+#     difficulty: 3
+
+- type: entity
+  parent: BaseTraitorNanoTrasenStealObjective
+  id: BSOHardsuitStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: BSOHardsuit
+  - type: Objective
+    difficulty: 3
+
+# - type: entity
+#   parent: BaseTraitorNanoTrasenStealObjective
+#   id: BSOMagbootsStealObjective
+#   components:
+#   - type: StealCondition
+#     stealGroup: BSOMagboots
+#   - type: Objective
+#     difficulty: 2.5

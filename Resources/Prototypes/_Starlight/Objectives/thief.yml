@@ -1,0 +1,105 @@
+- type: entity
+  abstract: true
+  parent: BaseThiefStealObjective
+  id: BaseThiefSecurityStealObjective
+  components:
+  - type: NotJobRequirement
+    jobs: [ SecurityOfficer, HeadOfSecurity, Detective, Warden, Brigmedic, SecurityCadet, BlueShieldOfficer, BlueShieldEnsign ]
+
+- type: entity
+  abstract: true
+  parent: BaseThiefStealObjective
+  id: BaseThiefMedicalStealObjective
+  components:
+  - type: NotJobRequirement
+    jobs: [ MedicalDoctor, Paramedic, ChiefMedicalOfficer, MedicalIntern, Chemist, Psychologist ]
+
+- type: entity
+  abstract: true
+  parent: BaseThiefStealObjective
+  id: BaseThiefCargoStealObjective
+  components:
+  - type: NotJobRequirement
+    jobs: [ Quartermaster, CargoTechnician, MiningSpecialist, SalvageSpecialist ]
+
+- type: entity
+  abstract: true
+  parent: BaseThiefStealObjective
+  id: BaseThiefCommandStealObjective
+  components:
+  - type: NotJobRequirement
+    jobs: [ Captain, HeadOfPersonnel, HeadOfSecurity, ResearchDirector, ChiefEngineer, ChiefMedicalOfficer, Quartermaster, NanoTrasenRepresentative, BlueShieldOfficer, BlueShieldEnsign ]
+
+- type: entity
+  parent: BaseThiefStealCollectionObjective
+  id: FigurineStealCollectionObjective
+  components:
+  - type: StealCondition
+    stealGroup: Figurines
+    minCollectionSize: 10
+    maxCollectionSize: 18
+  - type: Objective
+    difficulty: 0.7
+
+- type: entity
+  parent: [BaseThiefStealObjective, BaseThiefSecurityStealObjective]
+  id: LogProbeCartridgeStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: LogProbeCartridge
+  - type: Objective
+    difficulty: 1
+
+- type: entity
+  parent: [BaseThiefStealObjective, BaseThiefMedicalStealObjective]
+  id: MedTekCartridgeStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: MedTekCartridge
+  - type: Objective
+    difficulty: 1
+
+- type: entity
+  parent: [BaseThiefStealObjective, BaseThiefCargoStealObjective]
+  id: AstroNavCartridgeStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: AstroNavCartridge
+  - type: Objective
+    difficulty: 1
+
+- type: entity
+  parent: [BaseThiefStealObjective, BaseThiefSecurityStealObjective]
+  id: SecurityTechFabCircuitboardStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: SecurityTechFabCircuitboard
+  - type: Objective
+    difficulty: 1.4
+
+- type: entity
+  parent: [BaseThiefStealObjective, BaseThiefCommandStealObjective]
+  id: CommsComputerCircuitboardStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: CommsComputerCircuitboard
+  - type: Objective
+    difficulty: 1.5
+
+- type: entity
+  parent: [BaseThiefStealObjective, BaseThiefCommandStealObjective]
+  id: IDCardComputerCircuitboardStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: IDCardComputerCircuitboard
+  - type: Objective
+    difficulty: 1.2
+
+- type: entity
+  parent: [BaseThiefStealObjective, BaseThiefSecurityStealObjective]
+  id: BrigmedicStrangeBedsheetStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: BrigmedicStrangeBedsheet
+  - type: Objective
+    difficulty: 1.4

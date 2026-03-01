@@ -78,7 +78,7 @@
         - DoorRemoteStealCollectionObjective
         - TechnologyDiskStealCollectionObjective
         - MailStealCollectionObjective
-        # - FigurineStealCollectionObjective # Missing in Sunrise
+        - FigurineStealCollectionObjective
         - IDCardsStealCollectionObjective
         - LAMPStealCollectionObjective
         - CrewMonitorStealCollectionObjective # CMO, Paramed, BSO, Brigmed, 2-3
@@ -94,12 +94,12 @@
         - FlippoEngravedLighterStealObjective
         - ClothingHeadHatWardenStealObjective
         - WantedListCartridgeStealObjective
-        # - LogProbeCartridgeStealObjective # Missing in Sunrise
-        # - MedTekCartridgeStealObjective # Missing in Sunrise
-        # - AstroNavCartridgeStealObjective # Missing in Sunrise
+        - LogProbeCartridgeStealObjective
+        - MedTekCartridgeStealObjective
+        - AstroNavCartridgeStealObjective
         - ClothingOuterHardsuitVoidParamedStealObjective
         - MedicalTechFabCircuitboardStealObjective
-        # - SecurityTechFabCircuitboardStealObjective # Missing in Sunrise
+        - SecurityTechFabCircuitboardStealObjective
         # - PTechCircuitboardStealObjective # Missing in Sunrise
         - ClothingHeadsetAltMedicalStealObjective
         - ClothingHeadsetAltCommandStealObjective # Captain, NT Rep...
@@ -109,9 +109,9 @@
         # - SalvageShuttleConsoleCircuitboardStealObjective # Missing in Sunrise
         # - MiningShuttleConsoleCircuitboardStealObjective # Missing in Sunrise
         - CargoShuttleCircuitboardStealObjective
-        # - CommsComputerCircuitboardStealObjective # Missing in Sunrise
-        # - IDCardComputerCircuitboardStealObjective # Missing in Sunrise
-        # - BrigmedicStrangeBedsheetStealObjective # Missing in Sunrise
+        - CommsComputerCircuitboardStealObjective
+        - IDCardComputerCircuitboardStealObjective
+        - BrigmedicStrangeBedsheetStealObjective
         # - ClothingNeckMantleDecoratedSalvagerStealObjective # Missing in Sunrise
         #- ClothingEyesHudBeerStealObjective Removed in favor of the misc sunglasses collection objective.
         - BibleStealObjective
@@ -141,17 +141,18 @@
         - EscapeMasterThiefObjective # Starlight, replaced with master thief.
         # traitor steal objectives
         - CaptainIDStealObjective
-        # - HOPIDStealObjective # Missing in Sunrise
+        - HOPIDStealObjective
         - CMOHyposprayStealObjective
 #        - CMOCrewMonitorStealObjective Disabled in favor of the collection objective.
         - NukeDiskStealObjective
         - MagbootsStealObjective
         # - RDDiplomaStealObjective # Missing in Sunrise
         # - CMOLicenseStealObjective # Missing in Sunrise
-        # - PinpointerNuclearStealObjective # Missing in Sunrise
-        # - AccessConfiguratorStealObjective # Missing in Sunrise
-        # - EncryptionKeyHybridStealObjective # Missing in Sunrise
-        # - NTRepBriefcaseSecureStealObjective # Missing in Sunrise
+        - PinpointerNuclearStealObjective
+        - AccessConfiguratorStealObjective
+        - EncryptionKeyHybridStealObjective
+        - NTRepBriefcaseSecureStealObjective
+        - RubberStampVetoStealObjective
         # no ian meat because you are a pacifist and need them alive
         - ClipboardStealObjective #QM's digiboard
         - KnuckleDustersStealObjective #QM's knuckledusters
@@ -159,22 +160,22 @@
         - CaptainJetpackStealObjective
         - HandTeleporterStealObjective
         - EnergyMagnumStealObjective
-        # - EnergyShotgunStealObjective # Missing in Sunrise
-        # - HOSWeaponStealObjective # Missing in Sunrise
-        # - BSOWeaponStealObjective # Missing in Sunrise
+        - EnergyShotgunStealObjective
+        #- HOSWeaponStealObjective
+        - BSOWeaponStealObjective
         # Limited Hardsuit objectives
         - RDHardsuitStealObjective
-        # - CMOHardsuitStealObjective # Missing in Sunrise
-        # - CEHardsuitStealObjective  # Missing in Sunrise
-        # - HOSHardsuitStealObjective  # Missing in Sunrise
-        # - WardenHardsuitStealObjective # Missing in Sunrise
-        # - BrigmedicHardsuitStealObjective # Missing in Sunrise
-        # - QMHardsuitStealObjective # Missing in Sunrise
-        # - SalvLeadHardsuitStealObjective # Missing in Sunrise
-        # - CaptainHardsuitStealObjective # Missing in Sunrise
-        # - NTRepHardsuitStealObjective # Missing in Sunrise
-        # - BSOHardsuitStealObjective # Missing in Sunrise
-        # - BSOMagbootsStealObjective # Missing in Sunrise
+        - CMOHardsuitStealObjective
+        - CEHardsuitStealObjective
+        - HOSHardsuitStealObjective
+        - WardenHardsuitStealObjective
+        - BrigmedicHardsuitStealObjective
+        - QMHardsuitStealObjective
+        - SalvLeadHardsuitStealObjective
+        - CaptainHardsuitStealObjective
+        #- NTRepHardsuitStealObjective
+        - BSOHardsuitStealObjective
+        #- BSOMagbootsStealObjective
 
 
 #USSP

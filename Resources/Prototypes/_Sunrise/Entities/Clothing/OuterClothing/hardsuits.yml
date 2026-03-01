@@ -40,6 +40,8 @@
     damageCoefficient: 0.6
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitBlueshield
+  - type: StealTarget
+    stealGroup: BSOHardsuit
 
 - type: entity
   parent: ClothingOuterHardsuitBlueShield

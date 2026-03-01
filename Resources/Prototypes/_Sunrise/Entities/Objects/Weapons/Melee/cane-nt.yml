@@ -51,6 +51,8 @@
   - type: Item
     heldPrefix: off
     size: Normal
+  - type: StealTarget
+    stealGroup: NTRepBriefcaseSecure
   - type: DisarmMalus
     malus: 0.300
   - type: Appearance
