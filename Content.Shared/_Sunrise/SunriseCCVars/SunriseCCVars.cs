@@ -527,6 +527,9 @@ public sealed partial class SunriseCCVars : CVars
     public static readonly CVarDef<string> DocumentCorporationName =
         CVarDef.Create("doc.corp_name", "NanoTrasen", CVar.SERVER | CVar.ARCHIVE);
 
+    public static readonly CVarDef<string> DocumentCorporationShortName =
+        CVarDef.Create("doc.corp_short_name", "NT", CVar.SERVER | CVar.ARCHIVE);
+
     /// <summary>
     /// Смешение автозаполнения времени в часах
     /// </summary>

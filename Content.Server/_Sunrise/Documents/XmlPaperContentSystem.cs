@@ -1,4 +1,5 @@
 using System.Text.RegularExpressions;
+using Content.Shared._Sunrise.Documents;
 using Content.Shared.Paper;
 using Robust.Shared.ContentPack;
 

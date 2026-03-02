@@ -1,6 +1,6 @@
 ﻿<Document>
 [head=2][color=#135285][bold]Секретный корпоративный документ[/bold][/color][/head]
-[italic]Регистрационный номер:[/italic] NT-CSR-ROM-05
+[italic]Регистрационный номер:[/italic] {corpShort}-CSR-ROM-05
 [italic]Дата и время составления:[/italic] {timeString}
 [italic]Станция:[/italic] {stationName}
 

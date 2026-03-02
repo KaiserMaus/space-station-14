@@ -1,10 +1,10 @@
-using Robust.Shared.GameStates;
+using Robust.Shared.GameObjects;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Server._Sunrise.Documents;
+namespace Content.Shared._Sunrise.Documents;
 
-[RegisterComponent]
+[RegisterComponent, ComponentProtoName("XmlPaperContent")]
 public sealed partial class XmlPaperContentComponent : Component
 {
     [DataField("path", required: true)]

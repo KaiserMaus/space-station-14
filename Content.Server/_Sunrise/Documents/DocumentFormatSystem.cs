@@ -32,10 +32,12 @@ public sealed class DocumentFormatSystem : EntitySystem
         var stationName = st is null ? string.Empty : Name(st.Value);
 
         var corp = _cfg.GetCVar(SunriseCCVars.DocumentCorporationName);
+        var corpShort = _cfg.GetCVar(SunriseCCVars.DocumentCorporationShortName);
 
         return content
             .Replace("{timeString}", timeString)
             .Replace("{stationName}", stationName)
-            .Replace("{corpString}", corp);
+            .Replace("{corpString}", corp)
+            .Replace("{corpShort}", corpShort);
     }
 }
