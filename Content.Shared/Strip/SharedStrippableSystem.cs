@@ -14,7 +14,6 @@ using Content.Shared.Interaction.Components;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.VirtualItem;
-using Content.Shared.Movement.Pulling.Systems; // Sunrise-Add
 using Content.Shared.Popups;
 using Content.Shared.Strip.Components;
 using Content.Shared.Verbs;
@@ -22,7 +21,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared.Strip;
 
-public abstract class SharedStrippableSystem : EntitySystem
+public abstract partial class SharedStrippableSystem : EntitySystem
 {
     [Dependency] private readonly SharedInteractionSystem _interactionSystem = default!;
 
@@ -34,59 +33,8 @@ public abstract class SharedStrippableSystem : EntitySystem
     [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
     [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
-    [Dependency] private readonly PullingSystem _pullingSystem = default!; // Sunrise-Add
 
     [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
-    private readonly Dictionary<EntityUid, Queue<DoAfterId>> _activeStripDoAfters = new(); // Sunrise-Add
-
-    // Sunrise added start - limit simultaneous stripping by available hands
-    private void LimitSimultaneousStripDoAfters(Entity<HandsComponent?> user, DoAfterArgs doAfterArgs)
-    {
-        var userId = user.Owner;
-
-        if (!TryComp<HandsComponent>(userId, out var handsComp))
-            return;
-
-        var handsHolding = 0;
-        foreach (var hand in handsComp.Hands.Keys)
-        {
-            if (_handsSystem.GetHeldItem(user, hand) != null)
-                handsHolding++;
-        }
-
-        var isPulling = _pullingSystem.IsPulling(userId);
-        var freeHands = handsComp.Count - handsHolding;
-
-        if (freeHands == 0 && isPulling)
-            freeHands = 0;
-
-        freeHands = Math.Max(0, freeHands);
-
-        if (freeHands == 0)
-        {
-            if (doAfterArgs.Event is not StrippableDoAfterEvent strippableEvent || !strippableEvent.InsertOrRemove)
-            {
-                _popupSystem.PopupCursor(Loc.GetString("No hands available!"));
-                return;
-            }
-        }
-
-        if (!_activeStripDoAfters.TryGetValue(userId, out var queue))
-        {
-            queue = new Queue<DoAfterId>();
-            _activeStripDoAfters[userId] = queue;
-        }
-
-        while (queue.Count >= freeHands && queue.Count > 0)
-        {
-            var oldest = queue.Dequeue();
-            _doAfterSystem.Cancel(oldest);
-        }
-
-        if (_doAfterSystem.TryStartDoAfter(doAfterArgs, out var doAfterId) && doAfterId != null)
-            queue.Enqueue(doAfterId.Value);
-    }
-    // Sunrise added end
 
     public override void Initialize()
     {
@@ -107,8 +55,8 @@ public abstract class SharedStrippableSystem : EntitySystem
         SubscribeLocalEvent<StrippableComponent, DragDropDraggedEvent>(OnDragDrop);
         SubscribeLocalEvent<StrippableComponent, ActivateInWorldEvent>(OnActivateInWorld);
 
-        // Sunrise added start - make stripping faster when target is cuffed
-        SubscribeLocalEvent<StrippableComponent, BeforeGettingStrippedEvent>(OnBeforeGettingStripped);
+        // Sunrise added start
+        InitializeSunrise();
         // Sunrise added end
     }
 
@@ -635,35 +583,7 @@ public abstract class SharedStrippableSystem : EntitySystem
         DebugTools.Assert(args.Used != null);
         DebugTools.Assert(ev.Event.SlotOrHandName != null);
 
-        // Sunrise added start - revalidate hand capacity while doafter is running
-        if (TryComp<HandsComponent>(entity.Owner, out var handsComp))
-        {
-            var handsHolding = 0;
-            foreach (var hand in handsComp.Hands.Keys)
-            {
-                if (_handsSystem.GetHeldItem((entity.Owner, entity.Comp), hand) != null)
-                    handsHolding++;
-            }
-
-            var freeHands = Math.Max(0, handsComp.Count - handsHolding);
-            if (freeHands == 0)
-            {
-                if (!ev.Event.InsertOrRemove)
-                    ev.Cancel();
-            }
-            else if (_activeStripDoAfters.TryGetValue(entity.Owner, out var queue))
-            {
-                var excess = queue.Count - freeHands;
-                if (excess > 0)
-                {
-                    var queueList = queue.ToList();
-                    var newestExcess = queueList.GetRange(queueList.Count - excess, excess);
-                    if (newestExcess.Contains(ev.DoAfter.Id))
-                        ev.Cancel();
-                }
-            }
-        }
-        // Sunrise added end
+        RevalidateSimultaneousStripDoAfter(entity, ref ev);
 
         if (ev.Event.InventoryOrHand)
         {
@@ -682,21 +602,8 @@ public abstract class SharedStrippableSystem : EntitySystem
             }
         }
 
-        // Sunrise added start - cleanup tracking when doafter is cancelled
-        if (ev.Cancelled && _activeStripDoAfters.TryGetValue(entity.Owner, out var cleanupQueue))
-        {
-            var toRemove = ev.DoAfter.Id;
-            var newQueue = new Queue<DoAfterId>(cleanupQueue.Count);
-            while (cleanupQueue.Count > 0)
-            {
-                var id = cleanupQueue.Dequeue();
-                if (id != toRemove)
-                    newQueue.Enqueue(id);
-            }
-
-            _activeStripDoAfters[entity.Owner] = newQueue;
-        }
-        // Sunrise added end
+        if (ev.Cancelled)
+            CleanupTrackedStripDoAfter(entity.Owner, ev.DoAfter.Id);
     }
 
     private void OnStrippableDoAfterFinished(Entity<HandsComponent> entity, ref StrippableDoAfterEvent ev)
@@ -709,21 +616,7 @@ public abstract class SharedStrippableSystem : EntitySystem
         DebugTools.Assert(ev.Used != null);
         DebugTools.Assert(ev.SlotOrHandName != null);
 
-        // Sunrise added start - cleanup tracking when doafter finishes
-        if (_activeStripDoAfters.TryGetValue(entity.Owner, out var queue))
-        {
-            var toRemove = ev.DoAfter.Id;
-            var newQueue = new Queue<DoAfterId>(queue.Count);
-            while (queue.Count > 0)
-            {
-                var id = queue.Dequeue();
-                if (id != toRemove)
-                    newQueue.Enqueue(id);
-            }
-
-            _activeStripDoAfters[entity.Owner] = newQueue;
-        }
-        // Sunrise added end
+        CleanupTrackedStripDoAfter(entity.Owner, ev.DoAfter.Id);
 
         if (ev.InventoryOrHand)
         {
@@ -750,18 +643,6 @@ public abstract class SharedStrippableSystem : EntitySystem
             args.Handled = true;
     }
 
-    // Sunrise added start - make stripping faster when target is cuffed
-    private void OnBeforeGettingStripped(EntityUid uid, StrippableComponent component, ref BeforeGettingStrippedEvent ev)
-    {
-        if (!TryComp<CuffableComponent>(uid, out var cuffable))
-            return;
-
-        var entity = new Entity<CuffableComponent>(uid, cuffable);
-        if (_cuffableSystem.IsCuffed(entity))
-            ev.Multiplier *= 0.5f;
-    }
-    // Sunrise added end
-
     /// <summary>
     /// Modify the strip time via events. Raised directed at the item being stripped, the player stripping someone and the player being stripped.
     /// </summary>
@@ -783,12 +664,10 @@ public abstract class SharedStrippableSystem : EntitySystem
         if (args.Handled || args.Target != args.User)
             return;
 
-        // Sunrise-Start
-        if (!TryComp<StrippingComponent>(args.Target, out var strippingComp) || !strippingComp.UseDragDrop)
-        {
+        // Sunrise edit start
+        if (!CanUseStrippingDragDrop(args.Target))
             return;
-        }
-        // Sunrise-End
+        // Sunrise edit end
 
         if (TryOpenStrippingUi(args.User, (uid, component)))
             args.Handled = true;
@@ -836,4 +715,9 @@ public abstract class SharedStrippableSystem : EntitySystem
 
         return !HasComp<BypassInteractionChecksComponent>(viewer);
     }
+
+    // Sunrise added start
+    partial void InitializeSunrise();
+    private partial bool CanUseStrippingDragDrop(EntityUid target);
+    // Sunrise added end
 }
