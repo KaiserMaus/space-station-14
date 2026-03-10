@@ -44,7 +44,7 @@ public abstract partial class SharedStrippableSystem
         return Math.Max(0, freeHands);
     }
 
-    private void LimitSimultaneousStripDoAfters(Entity<HandsComponent?> user, DoAfterArgs doAfterArgs)
+    private partial void LimitSimultaneousStripDoAfters(Entity<HandsComponent?> user, DoAfterArgs doAfterArgs)
     {
         var userId = user.Owner;
         var freeHands = GetAvailableStripHands(user);
@@ -74,7 +74,7 @@ public abstract partial class SharedStrippableSystem
             queue.Enqueue(doAfterId.Value);
     }
 
-    private void RevalidateSimultaneousStripDoAfter(
+    private partial void RevalidateSimultaneousStripDoAfter(
         Entity<HandsComponent> entity,
         ref DoAfterAttemptEvent<StrippableDoAfterEvent> ev)
     {
@@ -101,7 +101,7 @@ public abstract partial class SharedStrippableSystem
             ev.Cancel();
     }
 
-    private void CleanupTrackedStripDoAfter(EntityUid user, DoAfterId doAfterId)
+    private partial void CleanupTrackedStripDoAfter(EntityUid user, DoAfterId doAfterId)
     {
         if (!_activeStripDoAfters.TryGetValue(user, out var queue))
             return;

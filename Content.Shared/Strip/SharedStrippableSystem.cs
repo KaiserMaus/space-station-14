@@ -719,5 +719,10 @@ public abstract partial class SharedStrippableSystem : EntitySystem
     // Sunrise added start
     partial void InitializeSunrise();
     private partial bool CanUseStrippingDragDrop(EntityUid target);
+    private partial void LimitSimultaneousStripDoAfters(Entity<HandsComponent?> user, DoAfterArgs doAfterArgs);
+    private partial void RevalidateSimultaneousStripDoAfter(
+        Entity<HandsComponent> entity,
+        ref DoAfterAttemptEvent<StrippableDoAfterEvent> ev);
+    private partial void CleanupTrackedStripDoAfter(EntityUid user, DoAfterId doAfterId);
     // Sunrise added end
 }
