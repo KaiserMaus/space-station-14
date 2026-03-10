@@ -46,9 +46,13 @@ public sealed class ObjectiveOnSignSystem : EntitySystem
 
         if (!TryComp<ActorComponent>(signer, out var actor))
             return;
+
+        if (component.SignedEntityUids.Contains(signer))
+            return;
+
         if (!_mind.TryGetMind(actor.PlayerSession.UserId, out var mindId, out var mind))
         {
-            Log.Error($"Antag {ToPrettyString(signer):player} signed a paper with ObjectiveOnSign but had no mind attached!");
+            Log.Error($"Player {ToPrettyString(signer):player} signed a paper with ObjectiveOnSign but had no mind attached!");
             return;
         }
 
@@ -66,7 +70,9 @@ public sealed class ObjectiveOnSignSystem : EntitySystem
 
         if (!component.Append)
         {
-            while (_mind.TryRemoveObjective(mindId.Value, mind, 0)) {}// basically just keep trying to remove the 0th objective until there is none
+            while (_mind.TryRemoveObjective(mindId.Value, mind, 0))
+            {
+            } // basically just keep trying to remove the 0th objective until there is none
         }
 
         foreach (var rule in component.Objectives)
@@ -92,9 +98,13 @@ public sealed class ObjectiveOnSignSystem : EntitySystem
 
         if (!TryComp<ActorComponent>(signer, out var actor))
             return;
+
+        if (component.SignedEntityUids.Contains(signer))
+            return;
+
         if (!_mind.TryGetMind(actor.PlayerSession.UserId, out var mindId, out var mind))
         {
-            Log.Error($"Antag {ToPrettyString(signer):player} signed a paper with ObjectiveOnSign but had no mind attached!");
+            Log.Error($"Player {ToPrettyString(signer):player} signed a paper with ObjectiveOnSign but had no mind attached!");
             return;
         }
 
@@ -112,7 +122,9 @@ public sealed class ObjectiveOnSignSystem : EntitySystem
 
         if (!component.Append)
         {
-            while (_mind.TryRemoveObjective(mindId.Value, mind, 0)) {}// basically just keep trying to remove the 0th objective until there is none
+            while (_mind.TryRemoveObjective(mindId.Value, mind, 0))
+            {
+            } // basically just keep trying to remove the 0th objective until there is none
         }
 
         foreach (var rule in component.Objectives)

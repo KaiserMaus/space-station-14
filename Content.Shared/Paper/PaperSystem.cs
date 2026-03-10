@@ -31,7 +31,7 @@ public sealed class PaperSystem : EntitySystem
 
     private static readonly ProtoId<TagPrototype> WriteIgnoreStampsTag = "WriteIgnoreStamps";
     private static readonly ProtoId<TagPrototype> WriteTag = "Write";
-    private static readonly Vector2 DefaultImageScale = new (1f, 1f);
+    private static readonly Vector2 DefaultImageScale = new(1f, 1f);
 
     private EntityQuery<PaperComponent> _paperQuery;
 
@@ -333,13 +333,6 @@ public sealed class PaperSystem : EntitySystem
 /// </summary>
 [ByRefEvent]
 public record struct PaperWriteEvent(EntityUid User, EntityUid Paper);
-// Sunrise-Start
-/// <summary>
-/// Event fired when using a writing tool on a tamper-proof paper.
-/// </summary>
-[ByRefEvent]
-public record struct PaperSignedEvent(EntityUid Signer, EntityUid Paper);
-// Sunrise-End
 
 /// <summary>
 /// Cancellable event for attempting to write on a piece of paper.

@@ -19,6 +19,7 @@ using System.Linq;
 using System.Text;
 using Content.Server.Codewords;
 using Content.Shared._Starlight.Antags.Traitor; // Sunrise-Add
+using Content.Shared.Mind.Components; // Sunrise-Add
 
 namespace Content.Server.GameTicking.Rules;
 
@@ -45,6 +46,10 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
 
         SubscribeLocalEvent<TraitorRuleComponent, AfterAntagEntitySelectedEvent>(AfterEntitySelected);
         SubscribeLocalEvent<TraitorRuleComponent, ObjectivesTextPrependEvent>(OnObjectivesTextPrepend);
+        // Sunrise-Start - keep entity marker in sync when the traitor mind changes body
+        SubscribeLocalEvent<MindComponent, MindGotAddedEvent>(OnMindGotAdded);
+        SubscribeLocalEvent<MindComponent, MindGotRemovedEvent>(OnMindGotRemoved);
+        // Sunrise-End
     }
 
     private void AfterEntitySelected(Entity<TraitorRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
@@ -147,6 +152,24 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
         return true;
     }
 
+    // Sunrise-Start - keep entity marker in sync when the traitor mind changes body
+    private void OnMindGotAdded(EntityUid uid, MindComponent component, ref MindGotAddedEvent args)
+    {
+        if (!_roleSystem.MindHasRole<TraitorRoleComponent>(uid))
+            return;
+
+        EnsureComp<TraitorComponent>(args.Container.Owner);
+    }
+
+    private void OnMindGotRemoved(EntityUid uid, MindComponent component, ref MindGotRemovedEvent args)
+    {
+        if (!_roleSystem.MindHasRole<TraitorRoleComponent>(uid))
+            return;
+
+        RemComp<TraitorComponent>(args.Container.Owner);
+    }
+    // Sunrise-End
+
     private (Note[]?, string) RequestUplink(EntityUid traitor, FixedPoint2 startingBalance, string briefing)
     {
         var pda = _uplink.FindUplinkTarget(traitor);
@@ -191,7 +214,7 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
     // TODO: AntagCodewordsComponent
     private void OnObjectivesTextPrepend(EntityUid uid, TraitorRuleComponent comp, ref ObjectivesTextPrependEvent args)
     {
-        if(comp.GiveCodewords)
+        if (comp.GiveCodewords)
             args.Text += "\n" + Loc.GetString("traitor-round-end-codewords", ("codewords", string.Join(", ", _codewordSystem.GetCodewords(comp.CodewordFactionPrototypeId))));
     }
 

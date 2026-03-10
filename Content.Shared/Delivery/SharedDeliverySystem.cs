@@ -1,7 +1,7 @@
 using System.Linq;
 using Content.Shared.Shuttles.Components;
-using Content.Shared.Examine;
 using Content.Shared.Emag.Systems; // Sunrise-Edit
+using Content.Shared.Examine;
 using Content.Shared.FingerprintReader;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.IdentityManagement;
@@ -22,7 +22,7 @@ namespace Content.Shared.Delivery;
 /// Shared side of the DeliverySystem.
 /// This covers for letters/packages, as well as spawning a reward for the player upon opening.
 /// </summary>
-public abstract class SharedDeliverySystem : EntitySystem
+public abstract partial class SharedDeliverySystem : EntitySystem // Sunrise-Edit
 {
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
@@ -32,7 +32,6 @@ public abstract class SharedDeliverySystem : EntitySystem
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly SharedHandsSystem _hands = default!;
     [Dependency] private readonly NameModifierSystem _nameModifier = default!;
-    [Dependency] private readonly EmagSystem _emag = default!; // Sunrise-Edit
 
     private static readonly ProtoId<TagPrototype> TrashTag = "Trash";
     private static readonly ProtoId<TagPrototype> RecyclableTag = "Recyclable";
@@ -148,7 +147,7 @@ public abstract class SharedDeliverySystem : EntitySystem
             {
                 _audio.PlayPredicted(ent.Comp.OpenSound, ent.Owner, user);
 
-                if(ent.Comp.ContainedDeliveryAmount == 0)
+                if (ent.Comp.ContainedDeliveryAmount == 0)
                 {
                     _popup.PopupPredicted(Loc.GetString("delivery-teleporter-empty", ("entity", ent)), null, ent, user);
                     return;
@@ -161,18 +160,6 @@ public abstract class SharedDeliverySystem : EntitySystem
             Text = Loc.GetString("delivery-teleporter-empty-verb"),
         });
     }
-    // Sunrise-Start
-    private void OnSpawnerEmagged(Entity<DeliverySpawnerComponent> ent, ref GotEmaggedEvent args)
-    {
-        if (!_emag.CompareFlag(args.Type, EmagType.Interaction))
-            return;
-
-        if (_emag.CheckFlag(ent, EmagType.Interaction))
-            return;
-
-        args.Handled = true;
-    }
-    // Sunrise-End
 
     private bool TryUnlockDelivery(Entity<DeliveryComponent> ent, EntityUid user, bool rewardMoney = true, bool force = false)
     {
