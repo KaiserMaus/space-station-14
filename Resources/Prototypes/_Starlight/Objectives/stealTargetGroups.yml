@@ -37,8 +37,8 @@
   id: NTRepBriefcaseSecure
   name: steal-target-groups-ntr-briefcase
   sprite:
-    sprite: _Sunrise/Objects/Weapons/Melee/cane-nt.rsi
-    state: cane-nt
+    sprite: Objects/Storage/Briefcases/briefcase_brown.rsi
+    state: icon
 
 - type: stealTargetGroup
   id: RubberStampVetoSteal
@@ -142,7 +142,7 @@
   id: BSOMagboots
   name: steal-target-groups-clothing-shoes-boots-mag-bso
   sprite:
-    sprite: _Sunrise/Clothing/Shoes/magboots-sec.rsi
+    sprite: Clothing/Shoes/Boots/magboots-advanced.rsi
     state: icon
 
 - type: stealTargetGroup
