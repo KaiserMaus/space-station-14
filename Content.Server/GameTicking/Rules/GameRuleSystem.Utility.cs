@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Server.Station.Components;
+using Content.Shared._Sunrise.Pirates.Components;
 using Content.Shared.GameTicking.Components;
 using Content.Shared.Random.Helpers;
 using Content.Shared.Station.Components;
@@ -42,6 +43,9 @@ public abstract partial class GameRuleSystem<T> where T: IComponent
 
         while (query.MoveNext(out var uid, out _))
         {
+            if (HasComp<PirateStationComponent>(uid))
+                continue;
+
             if (!filter(uid))
                 continue;
 

@@ -12,6 +12,8 @@ name-format-nukie-generic = { $part0 } { $part1 }
 name-format-nukie-agent = Агент { $part0 }
 name-format-nukie-commander = Командир { $part0 }
 name-format-nukie-operator = Оператор { $part0 }
+name-format-pirate-captain = Капитан { $part0 }
+name-format-pirate-crew = { $part0 } по прозвищу { $part1 }
 # "<title> <name>"
 name-format-ert = { $part0 } { $part1 }
 # "<appearance> <type>"

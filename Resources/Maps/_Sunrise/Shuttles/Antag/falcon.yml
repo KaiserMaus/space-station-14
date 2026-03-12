@@ -2106,9 +2106,6 @@ entities:
           - 625
           - 626
           - 627
-    - type: UserInterface
-      actors: {}
-    - type: ActiveUserInterface
 - proto: ComputerIdUSSP
   entities:
   - uid: 636

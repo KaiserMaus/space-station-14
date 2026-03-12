@@ -58,7 +58,7 @@
           - !type:HasBudgetCondition
           - !type:MaxRuleOccurenceCondition
         # Sunrise-Start
-        - id: PirateSmall
+        - id: Pirates
           prob: 0.2
           conditions:
           - !type:HasBudgetCondition
@@ -128,7 +128,7 @@
           - !type:RoundDurationCondition
             min: 2100 # 35 minutes
         # Sunrise-Start
-        - id: PirateMedium
+        - id: Pirates
           weight: 5
           conditions:
           - !type:HasBudgetCondition

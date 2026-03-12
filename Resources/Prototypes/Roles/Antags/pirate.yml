@@ -1,3 +1,19 @@
+- type: antag
+  id: PirateCaptain
+  name: roles-antag-pirate-captain-name
+  antagonist: true
+  setPreference: true
+  playTimeTracker: AntagPirateCaptain
+  objective: roles-antag-pirate-captain-objective
+
+- type: antag
+  id: PirateCrew
+  name: roles-antag-pirate-crew-name
+  antagonist: true
+  setPreference: true
+  playTimeTracker: AntagPirateCrew
+  objective: roles-antag-pirate-crew-objective
+
 - type: startingGear
   id: PirateGear
   equipment:

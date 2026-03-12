@@ -61,3 +61,25 @@
     antagPrototype: AbductorVictim
     roleType: SoloAntagonist
   - type: AbductorVictimRole
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRolePirate
+  name: Pirate Role
+  components:
+  - type: MindRole
+    antagPrototype: PirateCrew
+    exclusiveAntag: true
+    roleType: TeamAntagonist
+  - type: PirateRole
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRolePirateCaptain
+  name: Pirate Captain Role
+  components:
+  - type: MindRole
+    antagPrototype: PirateCaptain
+    exclusiveAntag: true
+    roleType: TeamAntagonist
+  - type: PirateRole

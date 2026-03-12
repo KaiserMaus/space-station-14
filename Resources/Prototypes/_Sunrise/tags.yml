@@ -55,6 +55,9 @@
   id: PirateUplink
 
 - type: Tag
+  id: Pirate
+
+- type: Tag
   id: SunriseUplink
 
 - type: Tag

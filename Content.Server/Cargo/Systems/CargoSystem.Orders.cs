@@ -248,7 +248,7 @@ namespace Content.Server.Cargo.Systems
                     _radio.SendRadioMessage(uid, message, CargoOrderConsoleComponent.BaseAnnouncementChannel, uid, escapeMarkup: false);*/
 
                 if (_messenger.GetServerEntity(_station.GetOwningStation(uid)) is var (server, _) &&
-                    _messenger.GetGroupIdByRadioChannel(CargoOrderConsoleComponent.BaseAnnouncementChannel) is { } groupId)
+                    _messenger.GetGroupIdByRadioChannel(component.BaseAnnouncementChannel) is { } groupId)
                 {
                     _messenger.SendSystemMessageToGroup(server, groupId, message);
                 }
@@ -425,6 +425,9 @@ namespace Content.Server.Cargo.Systems
             if (!TryComp<StationCargoOrderDatabaseComponent>(station, out var orderDatabase))
                 return;
 
+            if (!orderDatabase.Orders.ContainsKey(console.Account))
+                return;
+
             if (_uiSystem.HasUi(consoleUid, CargoConsoleUiKey.Orders))
             {
                 _uiSystem.SetUiState(consoleUid,
@@ -491,6 +494,9 @@ namespace Content.Server.Cargo.Systems
             var amount = 0;
 
             if (!TryComp<StationBankAccountComponent>(station, out var bank))
+                return amount;
+
+            if (!bank.Accounts.ContainsKey(account) || !station.Comp.Orders.ContainsKey(account))
                 return amount;
 
             foreach (var order in station.Comp.Orders[account])

@@ -1,0 +1,154 @@
+- type: cargoBounty
+  id: PirateBountyNuke
+  reward: 50000
+  description: bounty-description-nuke
+  idPrefix: GX
+  group: Pirates
+  entries:
+    - name: bounty-item-nuke
+      amount: 1
+      whitelist:
+        components:
+          - Nuke
+
+- type: cargoBounty
+  id: PirateBountyAnomVessel
+  reward: 6000
+  description: bounty-description-anom-vessel
+  idPrefix: CS
+  group: Pirates
+  entries:
+    - name: bounty-item-anom-vessel
+      amount: 1
+      whitelist:
+        components:
+          - AnomalyVessel
+
+- type: cargoBounty
+  id: PirateBountyArtifact
+  reward: 6000
+  description: bounty-description-artifact
+  idPrefix: SP
+  group: Pirates
+  entries:
+    - name: bounty-item-artifact
+      amount: 1
+      whitelist:
+        components:
+          - XenoArtifact
+
+- type: cargoBounty
+  id: PirateBountyChefTech
+  reward: 5000
+  description: bounty-description-cheftech
+  idPrefix: WC
+  group: Pirates
+  entries:
+    - name: bounty-item-cheftech
+      amount: 1
+      whitelist:
+        tags:
+          - Chefware
+
+- type: cargoBounty
+  id: PirateBountyCrewMonitor
+  reward: 6000
+  description: bounty-description-crew-monitor
+  idPrefix: CS
+  group: Pirates
+  entries:
+    - name: bounty-item-crew-monitor
+      amount: 1
+      whitelist:
+        components:
+          - CrewMonitoringConsole
+
+- type: cargoBounty
+  id: PirateBountyVendingMachine
+  reward: 4000
+  description: bounty-description-vendmachine
+  idPrefix: DC
+  group: Pirates
+  entries:
+    - name: bounty-item-vendmachine
+      amount: 1
+      whitelist:
+        components:
+          - VendingMachine
+      blacklist:
+        tags:
+          - Pirate
+
+- type: cargoBounty
+  id: PirateBountyTelecom
+  reward: 6000
+  description: bounty-description-telecom
+  idPrefix: SP
+  group: Pirates
+  entries:
+    - name: bounty-item-telecom
+      amount: 1
+      whitelist:
+        components:
+          - TelecomServer
+
+- type: cargoBounty
+  id: PirateBountyShuttleParts
+  reward: 3000
+  description: bounty-description-shuttle-parts
+  idPrefix: SP
+  group: Pirates
+  entries:
+    - name: bounty-item-shuttle-parts
+      amount: 1
+      whitelist:
+        components:
+          - Thruster
+      blacklist:
+        tags:
+          - Pirate
+
+- type: cargoBounty
+  id: PirateBountyFaxmachine
+  reward: 6000
+  description: bounty-description-fax
+  idPrefix: SP
+  group: Pirates
+  entries:
+    - name: bounty-item-fax
+      amount: 3
+      whitelist:
+        components:
+          - FaxMachine
+      blacklist:
+        tags:
+          - Pirate
+
+- type: cargoBounty
+  id: PirateBountyRecharger
+  reward: 6000
+  description: bounty-description-recharger
+  idPrefix: SP
+  group: Pirates
+  entries:
+    - name: bounty-item-recharger
+      amount: 4
+      whitelist:
+        tags:
+          - Recharger
+      blacklist:
+        tags:
+          - Pirate
+
+- type: cargoBounty
+  id: PirateBountyStatisBed
+  reward: 7000
+  description: bounty-description-stasis
+  idPrefix: ID
+  group: Pirates
+  entries:
+    - name: bounty-item-stasis
+      amount: 1
+      whitelist:
+        components:
+          - StasisBed

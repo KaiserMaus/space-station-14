@@ -1,0 +1,114 @@
+# Combined Sunrise + Moff pirate cargo catalog: medical
+
+- type: cargoProduct
+
+  id: PirateSunriseMedkitCombatFilled
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-combat-medkit-name
+  description: uplink-combat-medkit-desc
+  product: MedkitCombatFilled
+  cost: 750
+  category: cargoproduct-category-name-medical
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseCombatMedipen
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-combat-medipen-name
+  description: uplink-combat-medipen-desc
+  product: CombatMedipen
+  cost: 1250
+  category: cargoproduct-category-name-medical
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseStimpack
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-stimpack-name
+  description: uplink-stimpack-desc
+  product: Stimpack
+  cost: 1250
+  category: cargoproduct-category-name-medical
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseStimkitFilled
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-stimkit-name
+  description: uplink-stimkit-desc
+  product: StimkitFilled
+  cost: 2750
+  category: cargoproduct-category-name-medical
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseCigPackSyndicate
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-cigarettes-name
+  description: uplink-cigarettes-desc
+  product: CigPackSyndicate
+  cost: 250
+  category: cargoproduct-category-name-medical
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingBackpackDuffelSyndicateMedicalBundleFilled
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-meds-bundle-name
+  description: uplink-meds-bundle-desc
+  product: ClothingBackpackDuffelSyndicateMedicalBundleFilled
+  cost: 15500
+  category: cargoproduct-category-name-medical
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseCoalAutoInjector
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-coal-auto-injector-name
+  description: uplink-coal-auto-injector-desc
+  product: CoalAutoInjector
+  cost: 250
+  category: cargoproduct-category-name-medical
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseCoalpenKitFilled
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-coalpen-kit-name
+  description: uplink-coalpen-kit-desc
+  product: CoalpenKitFilled
+  cost: 500
+  category: cargoproduct-category-name-medical
+  group: pirateMarket
+
+
+- type: cargoProduct
+  id: PirateAdvancedMedkit
+  icon: { sprite: Objects/Specific/Medical/firstaidkits.rsi, state: advkit }
+  product: CratePirateAdvancedMedkit
+  cost: 2000
+  category: cargoproduct-category-name-medical
+  group: pirateMarket
+
+
+- type: cargoProduct
+  id: PirateCombatMedkit
+  icon: { sprite: Objects/Specific/Medical/firstaidkits.rsi, state: blackkit }
+  product: CratePirateCombatMedkit
+  cost: 2000
+  category: cargoproduct-category-name-medical
+  group: pirateMarket

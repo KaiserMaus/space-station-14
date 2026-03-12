@@ -1,0 +1,27 @@
+﻿- type: entity
+  parent: PersonalAI
+  id: RobotParrot
+  name: robot parrot
+  description: A pirate's best friend.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Fun/robotparrot.rsi
+    layers:
+    - state: icon
+    - sprite: Objects/Fun/pai.rsi
+      state: pai-off-overlay
+      shader: unshaded
+      map: [ "screen" ]
+  - type: Clothing
+    sprite: _Sunrise/Objects/Fun/robotparrot.rsi
+    slots:
+    - neck
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableGhostRoleVisuals.Status:
+        screen:
+          Off: { state: pai-off-overlay }
+          Searching: { state: pai-searching-overlay }
+          On: { state: pai-on-overlay }
+

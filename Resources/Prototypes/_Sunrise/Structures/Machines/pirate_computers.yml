@@ -1,0 +1,159 @@
+﻿- type: entity
+  id: ComputerCargoOrdersPirate
+  parent: ComputerCargoOrders
+  name: pirate request computer
+  description: Used by pirates to order supplies and shuttle vouchers.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Structures/Machines/pirate_computers.rsi
+      layers:
+        - map: [ "computerLayerBody" ]
+          state: computer
+        - map: [ "computerLayerKeyboard" ]
+          state: generic_keyboard
+        - map: [ "computerLayerScreen" ]
+          state: request
+        - map: [ "computerLayerKeys" ]
+          state: generic_keys
+        - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+          state: generic_panel_open
+    - type: CargoOrderConsole
+      allowedGroups:
+        - pirateMarket
+        - pirateShipyard
+      account: Pirates
+      baseAnnouncementChannel: Common
+      announcementChannel: Common
+    - type: Computer
+      board: PirateRequestComputerCircuitboard
+    - type: PointLight
+      radius: 1.5
+      energy: 1.6
+      color: "#c9c042"
+
+- type: entity
+  id: ComputerPalletConsolePirate
+  parent: ComputerPalletConsole
+  name: pirate sale computer
+  description: Used to sell goods loaded onto cargo pallets.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Structures/Machines/pirate_computers.rsi
+      layers:
+        - map: [ "computerLayerBody" ]
+          state: computer
+        - map: [ "computerLayerKeyboard" ]
+          state: generic_keyboard
+        - map: [ "computerLayerScreen" ]
+          state: transfer
+        - map: [ "computerLayerKeys" ]
+          state: generic_keys
+        - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+          state: generic_panel_open
+    - type: Computer
+      board: PirateSaleComputerCircuitboard
+    - type: PointLight
+      radius: 1.5
+      energy: 1.6
+      color: "#b89f25"
+
+- type: entity
+  id: ComputerPirateBounty
+  parent: ComputerCargoBounty
+  name: pirate bounty computer
+  description: Used to manage pirate bounties.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Structures/Machines/pirate_computers.rsi
+      layers:
+        - map: [ "computerLayerBody" ]
+          state: computer
+        - map: [ "computerLayerKeyboard" ]
+          state: generic_keyboard
+        - map: [ "computerLayerScreen" ]
+          state: bounty
+        - map: [ "computerLayerKeys" ]
+          sprite: Structures/Machines/computers.rsi
+          state: tech_key
+        - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+          state: generic_panel_open
+    - type: Computer
+      board: PirateBountyComputerCircuitboard
+    - type: PointLight
+      radius: 1.5
+      energy: 1.6
+      color: "#b89f25"
+
+- type: entity
+  id: ComputerPirateShipyard
+  parent: ComputerShipyard
+  name: pirate shipyard console
+  description: Use a shuttle voucher here to deploy a purchased shuttle or sell the current one.
+  components:
+    - type: PirateShipyardConsole
+    - type: Computer
+      board: PirateShipyardComputerCircuitboard
+    - type: PointLight
+      color: "#a15608"
+
+- type: entity
+  parent: BaseComputerShuttle
+  id: ComputerPirateShuttle
+  name: pirate ship console
+  description: Used to pilot a pirate ship.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Structures/Machines/pirate_computers.rsi
+      layers:
+        - map: [ "computerLayerBody" ]
+          state: computer
+        - map: [ "computerLayerKeyboard" ]
+          state: generic_keyboard
+        - map: [ "computerLayerScreen" ]
+          state: shuttle
+        - map: [ "computerLayerKeys" ]
+          sprite: Structures/Machines/computers.rsi
+          state: syndie_key
+        - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+          state: generic_panel_open
+    - type: Tag
+      tags:
+        - Pirate
+    - type: RadarConsole
+      maxRange: 384
+    - type: WorldLoader
+      radius: 1536
+    - type: PointLight
+      radius: 1.5
+      energy: 1.6
+      color: "#c94242"
+    - type: Computer
+      board: PirateShuttleCircuitboard
+
+- type: entity
+  parent: SyndicateComputerComms
+  id: PirateComputerComms
+  name: pirate communications computer
+  description: A computer capable of remotely hacking into the station's communications systems.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Structures/Machines/pirate_computers.rsi
+      layers:
+        - map: [ "computerLayerBody" ]
+          state: computer
+        - map: [ "computerLayerKeyboard" ]
+          state: generic_keyboard
+        - map: [ "computerLayerScreen" ]
+          state: comm
+        - map: [ "computerLayerKeys" ]
+          sprite: Structures/Machines/computers.rsi
+          state: syndie_key
+        - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+          state: generic_panel_open
+    - type: Computer
+      board: PirateCommsCircuitboard
+    - type: PointLight
+      radius: 1.5
+      energy: 1.6
+      color: "#f71713"
+

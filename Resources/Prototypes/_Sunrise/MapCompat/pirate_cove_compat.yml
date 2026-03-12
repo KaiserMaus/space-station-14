@@ -1,0 +1,361 @@
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsPirate
+  suffix: Pirate, Locked
+  components:
+  - type: AccessReader
+    access: [["SyndicateAgent"]]
+
+- type: entity
+  parent: AirlockSyndicate
+  id: AirlockPirateLocked
+  suffix: Pirate, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsPirate ]
+
+- type: entity
+  parent: AirlockSyndicateGlass
+  id: AirlockPirateGlassLocked
+  suffix: Pirate, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsPirate ]
+
+- type: entity
+  parent: AirlockExternal
+  id: AirlockExternalPirateLocked
+  suffix: External, Pirate, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsPirate ]
+  - type: Wires
+    layoutId: AirlockSecurity
+
+- type: entity
+  parent: AirlockExternalGlass
+  id: AirlockExternalGlassPirateLocked
+  suffix: External, Glass, Pirate, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsPirate ]
+  - type: Wires
+    layoutId: AirlockSecurity
+
+- type: entity
+  parent: AirlockGlassShuttleSyndicate
+  id: AirlockExternalGlassShuttlePirateLocked
+  suffix: Pirate, Locked, Glass
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsPirate ]
+
+- type: entity
+  parent: AirlockShuttleSyndicate
+  id: AirlockExternalShuttlePirateLocked
+  suffix: External, Docking, Pirate, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsPirate ]
+
+- type: entity
+  parent: [ ClothingHandsBase, BaseHighlyIllegalContraband ]
+  id: ClothingHandsPirateHook
+  name: pirate hook
+  description: Sharp and pointy. Shiver me timbers!
+  suffix: Pirate
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Melee/pirate_hook.rsi
+    scale: 0.75, 0.75
+  - type: Clothing
+    sprite: _NF/Objects/Weapons/Melee/pirate_hook.rsi
+  - type: MeleeWeapon
+    autoAttack: true
+    animation: WeaponArcThrust
+    mustBeEquippedToUse: true
+    damage:
+      types:
+        Slash: 12
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: AddAccentClothing
+    accent: PirateAccent
+
+- type: entity
+  parent: ClothingHandsPirateHook
+  id: ClothingHandsShoddyPirateHook
+  name: shoddy pirate hook
+  description: Sharp and pointy, just a bit less than the real thing.
+  suffix: Pirate
+  components:
+  - type: MeleeWeapon
+    autoAttack: true
+    animation: WeaponArcThrust
+    mustBeEquippedToUse: true
+    damage:
+      types:
+        Slash: 10
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+
+- type: entity
+  parent: CratePirate
+  id: CratePirateChestSecure
+  name: secure pirate chest
+  description: A secure pirate chest.
+  suffix: Pirate
+  components:
+  - type: Lock
+  - type: LockVisuals
+  - type: AccessReader
+    access: [["SyndicateAgent"]]
+  - type: Icon
+    sprite: Structures/Storage/Crates/piratechest.rsi
+    state: crate_icon
+
+- type: entity
+  parent: CratePrivateSecure
+  id: CratePiratePrivateSecure
+  name: secure pirate crate
+  description: Nice and metal for the modern pirate feel.
+  components:
+  - type: AccessReader
+    access: [["SyndicateAgent"]]
+
+- type: entity
+  parent: CratePirateChestSecure
+  id: CratePirateDavyJones
+  name: Davy Jones' locker
+  description: A specialized chest for storing trickier loot.
+  suffix: Pirate
+  components:
+  - type: EntityStorage
+    capacity: 10
+
+- type: entity
+  parent: [ LockerSyndicate, BaseHighlyIllegalContraband ]
+  id: LockerPirate
+  name: pirate locker
+  description: Nice and metal for the modern pirate feel.
+
+- type: entity
+  parent: LockerPirate
+  id: LockerPirateMeds
+  suffix: Meds, Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: Brutepack
+        amount: 2
+      - id: Gauze
+        amount: 2
+      - id: Ointment
+        amount: 2
+      - id: Bloodpack
+      - id: ClothingEyesEyepatchHudMedical
+      - id: HandheldHealthAnalyzer
+
+- type: entity
+  parent: CratePirate
+  id: CratePirateSeeds
+  name: pirate seed crate
+  description: Contains a varied assortment of seeds for fighting off scurvy.
+  components:
+  - type: StorageFill
+    contents:
+      - id: AloeSeeds
+      - id: BananaSeeds
+      - id: CannabisSeeds
+      - id: GalaxythistleSeeds
+      - id: LemonSeeds
+      - id: LimeSeeds
+      - id: LingzhiSeeds
+      - id: OrangeSeeds
+      - id: PineappleSeeds
+      - id: PoppySeeds
+
+- type: entity
+  parent: MarkerBase
+  id: CrateEmptyPirateSpawner
+  name: Empty Pirate Crate Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Storage/Crates/piratechest.rsi
+      state: crate_icon
+  - type: RandomSpawner
+    prototypes:
+    - CratePirate
+    - CratePirateChestSecure
+    - CratePirateDavyJones
+    - CratePiratePrivateSecure
+    chance: 0.7
+    offset: 0.0
+
+- type: entity
+  parent: CargoPalletSell
+  id: PiratePalletSell
+  name: pirate selling pallet
+  description: Designates valid items to sell. Made of plastitanium to discourage pesky vandals.
+
+- type: entity
+  parent: CargoPalletBuy
+  id: PiratePalletBuy
+  name: pirate buying pallet
+  description: Designates where orders will appear when purchased. Made of plastitanium to discourage pesky vandals.
+
+- type: entity
+  parent: FaxMachineSyndie
+  id: FaxMachinePirate
+  name: pirate long range fax machine
+  suffix: Pirate
+  components:
+  - type: Tag
+    tags: [ Pirate ]
+
+- type: entity
+  parent: VendingMachineCigs
+  id: VendingMachineCigsPirate
+  name: Stolen ShadyCigs Deluxe
+  suffix: Pirate
+  components:
+  - type: Tag
+    tags: [ Pirate ]
+
+- type: entity
+  parent: VendingMachineTankDispenserEVA
+  id: VendingMachineTankDispenserEVAPirate
+  suffix: Pirate, EVA [O2, N2]
+  name: stolen gas tank dispenser
+  components:
+  - type: Tag
+    tags: [ Pirate ]
+
+- type: entity
+  parent: VendingMachineYouTool
+  id: VendingMachineYouToolPirate
+  name: Hacked YouTool
+  suffix: Pirate
+  components:
+  - type: Tag
+    tags: [ Pirate ]
+
+- type: entity
+  parent: VendingMachineBooze
+  id: VendingMachineBoozeSyndicatePirate
+  name: Hacked Bruise-O-Mat
+  suffix: Pirate
+  components:
+  - type: AccessReader
+    access: [["SyndicateAgent"]]
+  - type: Tag
+    tags: [ Pirate ]
+
+- type: entity
+  parent: DefaultStationBeaconGhost
+  id: DefaultStationBeaconPirateCove
+  suffix: Pirate Cove
+  components:
+  - type: NavMapBeacon
+    text: Pirate Cove
+
+- type: entity
+  parent: PlushieSharkBlue
+  id: PlushieSharkPirate
+  name: pirate shark soft toy
+  description: Yoho yarg :)
+
+- type: entity
+  parent: ClothingHeadHatPirate
+  id: ClothingHeadHatPirateBrown
+  name: brown pirate hat
+  suffix: Pirate
+
+- type: entity
+  parent: FultonBeacon
+  id: FultonBeaconPirate
+  suffix: Pirate
+
+- type: entity
+  parent: Gyroscope
+  id: GyroscopePirate
+  suffix: Pirate
+
+- type: entity
+  parent: LockerPirate
+  id: LockerPirateAmmo
+  suffix: Ammo, Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: MagazineBoxMagnumSP
+        amount: 2
+      - id: MagazineBoxLightRifleSP
+        amount: 2
+      - id: BoxLethalshot
+        amount: 2
+      - id: SpeedLoaderMagnumSP
+        amount: 2
+
+- type: entity
+  parent: LockerPirate
+  id: LockerPirateTools
+  suffix: Tools, Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: Crowbar
+      - id: Wrench
+      - id: Screwdriver
+      - id: Wirecutter
+      - id: Welder
+      - id: Multitool
+      - id: AppraisalTool
+
+- type: entity
+  parent: LockerPirate
+  id: LockerPirateWeapons
+  suffix: Weapons, Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: Cutlass
+        amount: 2
+      - id: WeaponPistolFlintlock
+      - id: WeaponRevolverPirate
+      - id: SpeedLoaderMagnumSP
+        amount: 2
+
+- type: entity
+  parent: CratePirateChestCannonBall
+  id: PirateChestSecureCannonball
+  name: secure cannonball pirate chest
+  suffix: Pirate
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobKoboldJokejoke
+  name: kobold spawner
+  suffix: Pirate
+  components:
+  - type: Sprite
+    layers:
+    - state: pink
+    - sprite: Mobs/Animals/kobold.rsi
+      state: kobold
+  - type: ConditionalSpawner
+    prototypes:
+    - MobKobold
+
+- type: entity
+  parent: ThrusterSyndicate
+  id: ThrusterPirate
+  suffix: Pirate

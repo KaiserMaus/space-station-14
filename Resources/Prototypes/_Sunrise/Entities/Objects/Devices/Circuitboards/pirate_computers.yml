@@ -1,0 +1,89 @@
+- type: entity
+  parent:
+    - BaseComputerCircuitboard
+    - BaseHighlyIllegalContraband
+  id: PirateRequestComputerCircuitboard
+  name: Pirate Request Computer (console board)
+  description: A board used to create a pirate request computer.
+  components:
+    - type: Sprite
+      state: cpu_syndicate
+    - type: ComputerBoard
+      prototype: ComputerCargoOrdersPirate
+    - type: StaticPrice
+      price: 750
+
+- type: entity
+  parent:
+    - BaseComputerCircuitboard
+    - BaseHighlyIllegalContraband
+  id: PirateSaleComputerCircuitboard
+  name: Pirate Sale Computer (console board)
+  description: A board used to create a pirate sale computer.
+  components:
+    - type: Sprite
+      state: cpu_syndicate
+    - type: ComputerBoard
+      prototype: ComputerPalletConsolePirate
+    - type: StaticPrice
+      price: 750
+
+- type: entity
+  parent:
+    - BaseComputerCircuitboard
+    - BaseHighlyIllegalContraband
+  id: PirateBountyComputerCircuitboard
+  name: Pirate Bounty Computer (console board)
+  description: A board used to create a pirate bounty computer.
+  components:
+    - type: Sprite
+      state: cpu_syndicate
+    - type: ComputerBoard
+      prototype: ComputerPirateBounty
+    - type: StaticPrice
+      price: 750
+
+- type: entity
+  parent:
+    - BaseComputerCircuitboard
+    - BaseHighlyIllegalContraband
+  id: PirateShipyardComputerCircuitboard
+  name: Pirate Shipyard Computer (console board)
+  description: A board used to create a pirate shipyard computer.
+  components:
+    - type: Sprite
+      state: cpu_syndicate
+    - type: ComputerBoard
+      prototype: ComputerPirateShipyard
+    - type: StaticPrice
+      price: 750
+
+- type: entity
+  parent:
+    - BaseComputerCircuitboard
+    - BaseHighlyIllegalContraband
+  id: PirateShuttleCircuitboard
+  name: Pirate Shuttle Computer (console board)
+  description: A board used to create a pirate shuttle computer.
+  components:
+    - type: Sprite
+      state: cpu_syndicate
+    - type: ComputerBoard
+      prototype: ComputerPirateShuttle
+    - type: StaticPrice
+      price: 750
+
+- type: entity
+  parent:
+    - BaseComputerCircuitboard
+    - BaseHighlyIllegalContraband
+  id: PirateCommsCircuitboard
+  name: Pirate Communications Computer (console board)
+  description: A board used to create a pirate communications computer.
+  components:
+    - type: Sprite
+      state: cpu_syndicate
+    - type: ComputerBoard
+      prototype: PirateComputerComms
+    - type: StaticPrice
+      price: 750

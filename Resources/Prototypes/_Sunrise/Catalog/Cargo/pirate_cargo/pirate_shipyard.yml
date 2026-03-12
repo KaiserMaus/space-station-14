@@ -1,0 +1,39 @@
+- type: cargoProduct
+  id: PirateShipVoucherFalcon
+  icon:
+    sprite: Objects/Misc/module.rsi
+    state: id_mod
+  product: PirateShuttleVoucherFalcon
+  cost: 15000
+  category: pirateproduct-category-name-shuttles
+  group: pirateShipyard
+
+- type: cargoProduct
+  id: PirateShipVoucherRustBrass
+  icon:
+    sprite: Objects/Misc/module.rsi
+    state: id_mod
+  product: PirateShuttleVoucherRustBrass
+  cost: 30000
+  category: pirateproduct-category-name-shuttles
+  group: pirateShipyard
+
+- type: cargoProduct
+  id: PirateShipVoucherScurvyDog
+  icon:
+    sprite: Objects/Misc/module.rsi
+    state: id_mod
+  product: PirateShuttleVoucherScurvyDog
+  cost: 22500
+  category: pirateproduct-category-name-shuttles
+  group: pirateShipyard
+
+- type: cargoProduct
+  id: PirateShipVoucherSparrow
+  icon:
+    sprite: Objects/Misc/module.rsi
+    state: id_mod
+  product: PirateShuttleVoucherSparrow
+  cost: 20000
+  category: pirateproduct-category-name-shuttles
+  group: pirateShipyard

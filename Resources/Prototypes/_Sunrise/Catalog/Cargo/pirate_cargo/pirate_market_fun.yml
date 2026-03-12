@@ -1,0 +1,143 @@
+﻿# Combined Sunrise + Moff pirate cargo catalog: fun and cosmetics
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingUniformJumpsuitOperative
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-operative-suit-name
+  description: uplink-operative-suit-desc
+  product: ClothingUniformJumpsuitOperative
+  cost: 250
+  category: cargoproduct-category-name-fun
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunrisePiratePDAMusic
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: PiratePDAMusic
+  cost: 750
+  category: cargoproduct-category-name-fun
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseMechPaintDollHouseWarboss
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: MechPaintDollHouseWarboss
+  cost: 1250
+  category: cargoproduct-category-name-fun
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingUniformJumpskirtOperative
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-operative-skirt-name
+  description: uplink-operative-skirt-desc
+  product: ClothingUniformJumpskirtOperative
+  cost: 250
+  category: cargoproduct-category-name-fun
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingUniformJumpsuitPirate
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingUniformJumpsuitPirate
+  cost: 250
+  category: cargoproduct-category-name-fun
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingHeadHatPirate
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingHeadHatPirate
+  cost: 250
+  category: cargoproduct-category-name-fun
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingNeckCloakPirateCap
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingNeckCloakPirateCap
+  cost: 750
+  category: cargoproduct-category-name-fun
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingUniformJumpsuitLoungewear
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingUniformJumpsuitLoungewear
+  cost: 250
+  category: cargoproduct-category-name-fun
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingUniformJumpsuitAdidasBlack
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingUniformJumpsuitAdidasBlack
+  cost: 250
+  category: cargoproduct-category-name-fun
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingUniformJumpsuitAdidasWhite
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingUniformJumpsuitAdidasWhite
+  cost: 250
+  category: cargoproduct-category-name-fun
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingEyesEyepatchHudBeer
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingEyesEyepatchHudBeer
+  cost: 250
+  category: cargoproduct-category-name-fun
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingEyesEyepatch
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingEyesEyepatch
+  cost: 250
+  category: cargoproduct-category-name-fun
+  group: pirateMarket
+
+
+- type: cargoProduct
+  id: PirateRobotParrot
+  icon: { sprite: _Sunrise/Objects/Fun/robotparrot.rsi, state: icon }
+  product: CratePirateRobotParrot
+  cost: 1000
+  category: cargoproduct-category-name-fun
+  group: pirateMarket
+
+
+- type: cargoProduct
+  id: PirateEyepatch
+  icon: { sprite: Clothing/Eyes/Misc/eyepatch.rsi, state: icon }
+  product: CratePirateEyepatch
+  cost: 500
+  category: cargoproduct-category-name-fun
+  group: pirateMarket
+

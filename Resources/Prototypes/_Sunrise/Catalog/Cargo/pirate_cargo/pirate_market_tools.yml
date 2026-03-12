@@ -1,0 +1,461 @@
+﻿# Combined Sunrise + Moff pirate cargo catalog: tools and utility
+
+- type: cargoProduct
+
+  id: PirateSunriseHandcuffs
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-handcuffs-name
+  description: uplink-handcuffs-desc
+  product: Handcuffs
+  cost: 250
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseAccessBreakerPirate
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-access-breaker-name
+  description: uplink-access-breaker-desc
+  product: AccessBreakerPirate
+  cost: 2000
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseEmag
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-emag-name
+  description: uplink-emag-desc
+  product: Emag
+  cost: 2500
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseRadioJammer
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-radio-jammer-name
+  description: uplink-radio-jammer-desc
+  product: RadioJammer
+  cost: 1500
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseBorgModuleSyndicateWeapon
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-syndicate-weapon-module-name
+  description: uplink-syndicate-weapon-module-desc
+  product: BorgModuleSyndicateWeapon
+  cost: 1750
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseToolboxSyndicateFilled
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-toolbox-name
+  description: uplink-toolbox-desc
+  product: ToolboxSyndicateFilled
+  cost: 1000
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseToolboxMechanicalFilledAllTools
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-toolbox-name
+  product: ToolboxMechanicalFilledAllTools
+  cost: 250
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseSyndicateJawsOfLife
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-syndicate-jaws-of-life-name
+  description: uplink-syndicate-jaws-of-life-desc
+  product: SyndicateJawsOfLife
+  cost: 750
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunrisePirateTechFabCircuitboard
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-pirate-fab-name
+  description: uplink-pirate-fab-desc
+  product: PirateTechFabCircuitboard
+  cost: 8250
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunrisePowerSink
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-power-sink-name
+  description: uplink-power-sink-desc
+  product: PowerSink
+  cost: 3000
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseCameraBug
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-cameraBug-name
+  description: uplink-cameraBug-desc
+  product: CameraBug
+  cost: 2000
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingBackpackDuffelSyndicateFilledMedical
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-duffel-surgery-name
+  description: uplink-duffel-surgery-desc
+  product: ClothingBackpackDuffelSyndicateFilledMedical
+  cost: 750
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseSyndieIntellicard
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-syndie-intellicard-name
+  description: uplink-syndie-intellicard-desc
+  product: SyndieIntellicard
+  cost: 2250
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseRadioImplanter
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-radio-implanter-name
+  description: uplink-radio-implanter-desc
+  product: RadioImplanter
+  cost: 6250
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseRadioImplanterFreelance
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: RadioImplanterFreelance
+  cost: 500
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseMicroBombImplanter
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-micro-bomb-implanter-name
+  description: uplink-micro-bomb-implanter-desc
+  product: MicroBombImplanter
+  cost: 2500
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseBoxFreelanceRattleImplants
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-deathrattle-implant-name
+  description: uplink-piratedeathrattle-implant-desc
+  product: BoxFreelanceRattleImplants
+  cost: 1000
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseSmokeScreenImplanter
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-smoke-screen-implanter-name
+  description: uplink-smoke-screen-implanter-desc
+  product: SmokeScreenImplanter
+  cost: 1250
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseCreepyLaughImplanter
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-creepy-laugh-implanter-name
+  description: uplink-creepy-laugh-implanter-desc
+  product: CreepyLaughImplanter
+  cost: 250
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseChameleonProjector
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-chameleon-projector-name
+  description: uplink-chameleon-projector-desc
+  product: ChameleonProjector
+  cost: 3750
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseLanternFlash
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-ultrabright-lantern-name
+  description: uplink-ultrabright-lantern-desc
+  product: LanternFlash
+  cost: 250
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingBackpackMessengerPirateDecoyKitFilled
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-decoy-kit-name
+  description: uplink-decoy-kit-desc
+  product: ClothingBackpackMessengerPirateDecoyKitFilled
+  cost: 750
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseSyndicateBombFake
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-exploding-syndicate-bomb-fake-name
+  description: uplink-exploding-syndicate-bomb-fake-desc
+  product: SyndicateBombFake
+  cost: 1000
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseCyberEyeNightVisionBox
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-nightvision-eyes
+  description: uplink-nightvision-eyes-desc
+  product: CyberEyeNightVisionBox
+  cost: 2000
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseCyberArmMechwrightBox
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-mechwright-arm
+  description: uplink-mechwright-arm-desc
+  product: CyberArmMechwrightBox
+  cost: 2000
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseCyberArmRipperBox
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-ripper-arm
+  description: uplink-ripper-arm-desc
+  product: CyberArmRipperBox
+  cost: 2000
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseCyberArmAtmosBox
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-atmos-arm
+  description: uplink-atmos-arm-desc
+  product: CyberArmAtmosBox
+  cost: 3000
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseCyberArmHackBox
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-hack-arm
+  description: uplink-hack-arm-desc
+  product: CyberArmHackBox
+  cost: 3000
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseCyberArmThrowerBox
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-throver-arm
+  description: uplink-throver-arm-desc
+  product: CyberArmThrowerBox
+  cost: 5000
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseCyberArmMantisBox
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-mantis-blade-arms-desc
+  product: CyberArmMantisBox
+  cost: 4500
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseCyberEyeThermalBox
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-thermalvision-eyes
+  description: uplink-thermalvision-eyes-desc
+  product: CyberEyeThermalBox
+  cost: 4500
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseCratePirateSurplusBundle
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateSurplusBundle
+  cost: 6250
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+
+- type: cargoProduct
+  id: PirateKidnap
+  icon: { sprite: Objects/Weapons/Melee/stunprod.rsi, state: stunprod_off }
+  product: CratePirateKidnap
+  cost: 2000
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+  id: PirateAppraisalTool
+  icon: { sprite: Objects/Tools/appraisal-tool.rsi, state: icon }
+  product: CratePirateAppraisalTool
+  cost: 500
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+  id: PirateGasMask
+  icon: { sprite: _Sunrise/Clothing/Mask/pirateweldingmask.rsi, state: icon }
+  product: CratePirateGasMask
+  cost: 1000
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+  id: PirateMassScanner
+  icon: { sprite: _Sunrise/Objects/Tools/holo_pirate_map.rsi, state: icon }
+  product: CratePirateMassScanner
+  cost: 1000
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+  id: PirateGunpowderCharge
+  icon: { sprite: _Sunrise/Objects/Weapons/Bombs/dynamite.rsi, state: icon }
+  product: CratePirateGunpowderCharge
+  cost: 3500
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+  id: PirateJetpack
+  icon: { sprite: _Sunrise/Objects/Tanks/Jetpacks/pirate_jetpack.rsi, state: icon }
+  product: CratePirateJetpack
+  cost: 2500
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+  id: PirateSkeletonKey
+  icon: { sprite: Objects/Tools/access_breaker.rsi, state: icon-pirate }
+  product: CratePirateSkeletonKey
+  cost: 5000
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+  id: PirateGrapplingGun
+  icon: { sprite: Objects/Weapons/Guns/Launchers/grappling_gun.rsi, state: base }
+  product: CratePirateGrapplingGun
+  cost: 2000
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+
+- type: cargoProduct
+  id: PirateFulton
+  icon: { sprite: Objects/Tools/fulton.rsi, state: extraction_pack }
+  product: CratePirateFulton
+  cost: 500
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+

@@ -52,12 +52,12 @@
 - type: ninjaHackingThreat
   id: Pirate
   announcement: terror-pirate
-  rule: PirateMedium
+  rule: Pirates
 
 - type: ninjaHackingThreat
   id: PirateSmall
   announcement: terror-pirate-small
-  rule: PirateSmall
+  rule: Pirates
 
 - type: ninjaHackingThreat
   id: Abductors

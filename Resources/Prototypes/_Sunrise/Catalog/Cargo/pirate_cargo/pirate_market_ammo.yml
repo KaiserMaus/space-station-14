@@ -1,0 +1,650 @@
+- type: cargoProduct
+  id: PirateSunriseCratePirateChestCannonBall
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateChestCannonBall
+  cost: 2500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseCratePirateChestCannonBallFuze
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateChestCannonBallFuze
+  cost: 2000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseCratePirateChestGlassshot
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateChestGlassshot
+  cost: 2500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseCratePirateChestCannonEMP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateChestCannonEMP
+  cost: 2000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseCratePirateChestCannonBallMiniMix
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateChestCannonBallMiniMix
+  cost: 1250
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineCannonBallMini
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineCannonBallMini
+  cost: 12000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseCratePirateChestGrapeshot
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateChestGrapeshot
+  cost: 2500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazinePistolSubMachineGunAP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-pistol-magazine-c20r-desc
+  product: CratePirateBulkMagazinePistolSubMachineGunAP
+  cost: 21000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazinePistolSubMachineGunIncendiary
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-pistol-magazine-c20r-desc
+  product: CratePirateBulkMagazinePistolSubMachineGunIncendiary
+  cost: 15000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseCratePirateSubMachineGunAmmo
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: mixed SMG ammo crate
+  description: Contains two SMG magazines of each standard type: SP, HP, and FMJ.
+  product: CratePirateSubMachineGunAmmo
+  cost: 3000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazinePistolSubMachineGunRubber
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-pistol-magazine-c20r-desc
+  product: CratePirateBulkMagazinePistolSubMachineGunRubber
+  cost: 4500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseSpeedLoaderMagnumAP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-speedloader-magnum-name
+  description: uplink-speedloader-magnu-desc
+  product: CratePirateBulkSpeedLoaderMagnumAP
+  cost: 18000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseCratePirateMagnumAmmo
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: mixed magnum ammo crate
+  description: Contains two speedloaders of each standard magnum type: SP, HP, and FMJ.
+  product: CratePirateMagnumAmmo
+  cost: 2250
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineBoxAntiMateriel
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-sniper-ammo-desc
+  product: CratePirateBulkMagazineBoxAntiMateriel
+  cost: 12000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineBoxAntiMaterielAP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-sniper-ammo-pen-desc
+  product: CratePirateBulkMagazineBoxAntiMaterielAP
+  cost: 15000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineBoxAntiMaterielFrag
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-sniper-ammo-frag-desc
+  product: CratePirateBulkMagazineBoxAntiMaterielFrag
+  cost: 15000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineBoxAntiMaterielBlast
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-sniper-ammo-blast-desc
+  product: CratePirateBulkMagazineBoxAntiMaterielBlast
+  cost: 18000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineBoxImprovisedRifle
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineBoxImprovisedRifle
+  cost: 1500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineBoxImprovisedMagnum
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineBoxImprovisedMagnum
+  cost: 1500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineBoxImprovisedShotgun
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineBoxImprovisedShotgun
+  cost: 1500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineBoxImprovisedPistol
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineBoxImprovisedPistol
+  cost: 1500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazinePistolSubMachineGunImprovisedFilled
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazinePistolSubMachineGunImprovisedFilled
+  cost: 1500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazinePistol40AP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-pistol-magazine-desc
+  product: CratePirateBulkMagazinePistol40AP
+  cost: 15000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazinePistol40FMJ
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-pistol-magazine-desc
+  product: CratePirateBulkMagazinePistol40FMJ
+  cost: 4500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazinePistol40SP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-pistol-magazine-desc
+  product: CratePirateBulkMagazinePistol40SP
+  cost: 4500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazinePistol40HP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-pistol-magazine-desc
+  product: CratePirateBulkMagazinePistol40HP
+  cost: 4500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazinePistolHighCapacityAP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-pistol-magazine-desc
+  product: CratePirateBulkMagazinePistolHighCapacityAP
+  cost: 15000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazinePistolHighCapacityFMJ
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-pistol-magazine-desc
+  product: CratePirateBulkMagazinePistolHighCapacityFMJ
+  cost: 3000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazinePistolHighCapacitySP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-pistol-magazine-desc
+  product: CratePirateBulkMagazinePistolHighCapacitySP
+  cost: 3000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazinePistolHighCapacityHP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-pistol-magazine-desc
+  product: CratePirateBulkMagazinePistolHighCapacityHP
+  cost: 3000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazinePistolHighCapacityRubber
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-pistol-magazine-desc
+  product: CratePirateBulkMagazinePistolHighCapacityRubber
+  cost: 3000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineRifleBoxSP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineRifleBoxSP
+  cost: 15000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineRifleBoxFMJ
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineRifleBoxFMJ
+  cost: 18000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineRifleBoxIncendiary
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineRifleBoxIncendiary
+  cost: 24000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineBoxRifleSP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineBoxRifleSP
+  cost: 1500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineBoxRifleFMJ
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineBoxRifleFMJ
+  cost: 1500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineBoxRifleHP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineBoxRifleHP
+  cost: 1500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineBoxRifleAP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineBoxRifleAP
+  cost: 9000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineBoxRifleIncendiary
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineBoxRifleIncendiary
+  cost: 6000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineLightRifleBeltBox
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineLightRifleBeltBox
+  cost: 7500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineLightRifleBeltBoxFMJ
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineLightRifleBeltBoxFMJ
+  cost: 7500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineLightRifleBeltBoxHP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineLightRifleBeltBoxHP
+  cost: 7500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineLightRifleBeltBoxAP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineLightRifleBeltBoxAP
+  cost: 12000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineLightRifleBeltBoxIncendiary
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineLightRifleBeltBoxIncendiary
+  cost: 10500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineLightRifleBeltBoxPractice
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineLightRifleBeltBoxPractice
+  cost: 4500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineLightRifleBeltBoxUranium
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineLightRifleBeltBoxUranium
+  cost: 13500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineDragunovSP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-magazine-dragunov-desc
+  product: CratePirateBulkMagazineDragunovSP
+  cost: 9000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseCrateAmmunitionSmallLightRifle
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CrateAmmunitionSmallLightRifle
+  cost: 1250
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineBoxRifleMachineAP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineBoxRifleMachineAP
+  cost: 18000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineBoxRifleMachineIncendiary
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineBoxRifleMachineIncendiary
+  cost: 12000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseCratePirateMachineGunAmmo
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: mixed machine rifle ammo crate
+  description: Contains two machine rifle ammo boxes of each standard type: SP, HP, and FMJ.
+  product: CratePirateMachineGunAmmo
+  cost: 750
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseMagazineRifleHeavyAP
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: CratePirateBulkMagazineRifleHeavyAP
+  cost: 21000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateSunriseCratePirateHeavyRifleAmmo
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: mixed heavy rifle ammo crate
+  description: Contains two heavy rifle magazines of each standard type: SP, HP, and FMJ.
+  product: CratePirateHeavyRifleAmmo
+  cost: 2250
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateRifleAmmo
+  icon: { sprite: Objects/Weapons/Guns/Ammunition/Boxes/light_rifle.rsi, state: base }
+  product: CratePirateRifleAmmo
+  cost: 3000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateMagnumAmmo
+  icon: { sprite: Objects/Weapons/Guns/Ammunition/Boxes/magnum.rsi, state: base }
+  product: CratePirateMagnumAmmo
+  cost: 2250
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateShotgunAmmo
+  icon: { sprite: Objects/Weapons/Guns/Ammunition/Boxes/shotgun.rsi, state: base }
+  product: CratePirateShotgunAmmo
+  cost: 1500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket
+
+
+
+
+- type: cargoProduct
+  id: PirateAPMagnumAmmo
+  icon: { sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
+  product: CratePirateMagnumAPAmmo
+  cost: 3500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarket

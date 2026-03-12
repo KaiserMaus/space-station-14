@@ -1,0 +1,64 @@
+# Combined Sunrise + Moff pirate cargo catalog: reinforcements
+
+- type: cargoProduct
+
+  id: PirateSunrisePlayerBorgDerelictGhostRole
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: PlayerBorgDerelictGhostRole
+  cost: 3750
+  category: pirateproduct-category-name-reinforcements
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunrisePlayerMedicalBorgDerelictGhostRole
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: PlayerMedicalBorgDerelictGhostRole
+  cost: 5000
+  category: pirateproduct-category-name-reinforcements
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunrisePlayerMiningBorgDerelictGhostRole
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: PlayerMiningBorgDerelictGhostRole
+  cost: 5000
+  category: pirateproduct-category-name-reinforcements
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseReinforcementPirateScoonerEVA
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-base-scooner-name
+  description: uplink-base-scooner-desc
+  product: ReinforcementPirateScoonerEVA
+  cost: 5000
+  category: pirateproduct-category-name-reinforcements
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseReinforcementPirateScooner
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-scrapper-scooner-name
+  description: uplink-scrapper-scooner-desc
+  product: ReinforcementPirateScooner
+  cost: 8750
+  category: pirateproduct-category-name-reinforcements
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunrisePlayerBorgSyndicateDerelictGhostRole
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: PlayerBorgSyndicateDerelictGhostRole
+  cost: 6250
+  category: pirateproduct-category-name-reinforcements
+  group: pirateMarket

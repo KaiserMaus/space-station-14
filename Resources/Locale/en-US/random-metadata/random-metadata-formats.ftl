@@ -15,6 +15,8 @@ name-format-nukie-generic = {$part0} {$part1}
 name-format-nukie-agent = Corpsman {$part0}
 name-format-nukie-commander = Commander {$part0}
 name-format-nukie-operator = Operator {$part0}
+name-format-pirate-captain = Captain {$part0}
+name-format-pirate-crew = {$part0} the {$part1}
 # "<title> <name>"
 name-format-ert = {$part0} {$part1}
 

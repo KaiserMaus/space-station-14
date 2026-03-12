@@ -1,0 +1,377 @@
+﻿# Combined Sunrise + Moff pirate cargo catalog: gear and armor
+
+- type: cargoProduct
+
+  id: PirateSunriseJetpackBlackFilled
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-black-jetpack-name
+  description: uplink-black-jetpack-desc
+  product: JetpackBlackFilled
+  cost: 250
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseJetpackMiniFilled
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  description: uplink-black-jetpack-desc
+  product: JetpackMiniFilled
+  cost: 250
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingMaskGasVoiceChameleon
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-voice-mask-name
+  description: uplink-voice-mask-desc
+  product: ClothingMaskGasVoiceChameleon
+  cost: 250
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingBeltBandolier
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingBeltBandolier
+  cost: 500
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingBeltSalvageWebbing
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingBeltSalvageWebbing
+  cost: 1000
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingBeltMilitaryWebbing
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-chest-rig-name
+  description: uplink-chest-rig-desc
+  product: ClothingBeltMilitaryWebbing
+  cost: 2000
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingShoesBootsMagPirate
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingShoesBootsMagPirate
+  cost: 1500
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingShoesBootsMagCombat
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingShoesBootsMagCombat
+  cost: 1500
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingShoesBootsMagSyndie
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-clothing-shoes-boots-mag-syndie-name
+  description: uplink-clothing-shoes-boots-mag-syndie-desc
+  product: ClothingShoesBootsMagSyndie
+  cost: 2000
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingBackpackDuffelSyndicateEVABundle
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-eva-syndie-name
+  description: uplink-eva-syndie-desc
+  product: ClothingBackpackDuffelSyndicateEVABundle
+  cost: 500
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingEyesGlassesThermalSec
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-syndie-thermal-name
+  description: uplink-syndie-thermal-desc
+  product: ClothingEyesGlassesThermalSec
+  cost: 2500
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunrisePouchAmmo
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: PouchAmmo
+  cost: 500
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunrisePouchExplosive
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: PouchExplosive
+  cost: 500
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingEyesEyepatchHudDiag
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingEyesEyepatchHudDiag
+  cost: 1000
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingEyesEyepatchHudMedical
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingEyesEyepatchHudMedical
+  cost: 1000
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingEyesEyepatchHudSecurity
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingEyesEyepatchHudSecurity
+  cost: 1000
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseThievingGloves
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-clothing-thieving-gloves-name
+  description: uplink-clothing-thieving-gloves-desc
+  product: ThievingGloves
+  cost: 4500
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingOuterHardsuitChameleon
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-clothing-outer-hardsuit-chameleon-name
+  description: uplink-clothing-hardsuit-chameleon-desc
+  product: ClothingOuterHardsuitChameleon
+  cost: 9500
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunrisePowerCellSyndicate
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-objects-power-syndie-powercell-name
+  description: uplink-objects-power-syndie-powercell-desc
+  product: PowerCellSyndicate
+  cost: 4500
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseRandomBackpackContrabandMessengerSpawner
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-messenger-random-name
+  description: uplink-messenger-random-desc
+  product: RandomBackpackContrabandMessengerSpawner
+  cost: 1250
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingOuterHardsuitPirateEVA
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingOuterHardsuitPirateEVA
+  cost: 250
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseCratePiraterEVASuitBundle
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-eva-bundle-name
+  description: uplink-eva-bundle-desc
+  product: CratePiraterEVASuitBundle
+  cost: 2250
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseCratePiraterEVASuitArmoredBundle
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-eva-armored-bundle-name
+  description: uplink-eva-armored-bundle-desc
+  product: CratePiraterEVASuitArmoredBundle
+  cost: 4000
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingBackpackDuffelMilitaryBundlePirateEva
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-eva-pirate-bundle-name
+  description: uplink-eva-pirate-bundle-desc
+  product: ClothingBackpackDuffelMilitaryBundlePirateEva
+  cost: 5750
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingOuterHardsuitPirate
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingOuterHardsuitPirate
+  cost: 5750
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingOuterHardsuitPirateCapSun
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingOuterHardsuitPirateCapSun
+  cost: 6500
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingBackpackDuffelMilitaryBundleScaf
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-scaf-bundle-name
+  description: uplink-scaf-bundle-desc
+  product: ClothingBackpackDuffelMilitaryBundleScaf
+  cost: 9500
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingOuterHardsuitPrivateer
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingOuterHardsuitPrivateer
+  cost: 9000
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingOuterHardsuitPrivateerArmored
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  product: ClothingOuterHardsuitPrivateerArmored
+  cost: 11250
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+
+  id: PirateSunriseClothingBackpackDuffelSyndicateFilledInfiltration
+  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+  name: uplink-hardsuit-infiltration-name
+  description: uplink-hardsuit-infiltration-desc
+  product: ClothingBackpackDuffelSyndicateFilledInfiltration
+  cost: 15000
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+  id: PirateWebvest
+  icon: { sprite: Clothing/OuterClothing/Vests/webvest.rsi, state: icon }
+  product: CratePirateWebvest
+  cost: 6500
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+  id: PirateBuccaneerHardsuit
+  icon: { sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/buccaneer.rsi, state: icon }
+  product: CratePirateBuccaneerHardsuit
+  cost: 11000
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+  id: PirateBlackbeardHardsuit
+  icon: { sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/blackbeard.rsi, state: icon }
+  product: CratePirateBlackbeardHardsuit
+  cost: 13000
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+  id: PirateDavyJonesHardsuit
+  icon: { sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/davyjones.rsi, state: icon }
+  product: CratePirateDavyJonesHardsuit
+  cost: 14000
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+
+- type: cargoProduct
+  id: PirateSwashbucklerHardsuit
+  icon: { sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/swashbuckler.rsi, state: icon }
+  product: CratePirateSwashbucklerHardsuit
+  cost: 8500
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+

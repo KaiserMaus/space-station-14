@@ -1,0 +1,22 @@
+- type: entity
+  parent: WeaponCapacitorRecharger
+  id: WeaponCapacitorRechargerPirate
+  name: pirate recharger
+  description: A hacked recharger for pirate energy weapons and power cells.
+  suffix: Pirate
+  components:
+  - type: Tag
+    tags:
+    - Pirate
+  - type: Machine
+    board: WeaponCapacitorRechargerPirateCircuitboard
+
+- type: entity
+  parent: WeaponCapacitorRechargerCircuitboard
+  id: WeaponCapacitorRechargerPirateCircuitboard
+  name: pirate recharger machine board
+  description: A machine printed circuit board for a pirate recharger.
+  suffix: Machine Board, Pirate
+  components:
+  - type: MachineBoard
+    prototype: WeaponCapacitorRechargerPirate

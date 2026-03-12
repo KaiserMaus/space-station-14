@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Shared._Sunrise.Pirates.Components;
 using Content.Shared.Station.Components;
 using JetBrains.Annotations;
 using Robust.Shared.Map;
@@ -125,6 +126,9 @@ public abstract partial class SharedStationSystem : EntitySystem
         var query = EntityQueryEnumerator<StationDataComponent>();
         while (query.MoveNext(out var uid, out _))
         {
+            if (HasComp<PirateStationComponent>(uid))
+                continue;
+
             stations.Add(uid);
         }
 
@@ -137,6 +141,9 @@ public abstract partial class SharedStationSystem : EntitySystem
         var query = EntityQueryEnumerator<StationDataComponent>();
         while (query.MoveNext(out var uid, out _))
         {
+            if (HasComp<PirateStationComponent>(uid))
+                continue;
+
             stations.Add(uid);
         }
 
@@ -168,6 +175,9 @@ public abstract partial class SharedStationSystem : EntitySystem
         var query = EntityQueryEnumerator<StationDataComponent>();
         while (query.MoveNext(out var uid, out var data))
         {
+            if (HasComp<PirateStationComponent>(uid))
+                continue;
+
             foreach (var gridUid in data.Grids)
             {
                 if (Transform(gridUid).MapID == map)

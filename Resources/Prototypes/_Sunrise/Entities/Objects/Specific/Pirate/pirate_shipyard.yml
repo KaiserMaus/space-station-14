@@ -1,0 +1,55 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BasePirateShuttleVoucher
+  name: pirate shuttle voucher
+  description: Redeem this on a pirate shipyard console to deploy the purchased shuttle.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: id_mod
+    - type: Item
+      sprite: Objects/Misc/module.rsi
+      size: Small
+    - type: StaticPrice
+      price: 1
+
+- type: entity
+  parent: BasePirateShuttleVoucher
+  id: PirateShuttleVoucherFalcon
+  name: falcon shuttle voucher
+  components:
+    - type: PirateShuttleVoucher
+      gridPath: /Maps/_Sunrise/Shuttles/Antag/falcon.yml
+      price: 15000
+      offset: 32,0
+
+- type: entity
+  parent: BasePirateShuttleVoucher
+  id: PirateShuttleVoucherRustBrass
+  name: rust brass shuttle voucher
+  components:
+    - type: PirateShuttleVoucher
+      gridPath: /Maps/_Sunrise/Shuttles/Antag/rust_brass.yml
+      price: 30000
+      offset: 40,0
+
+- type: entity
+  parent: BasePirateShuttleVoucher
+  id: PirateShuttleVoucherScurvyDog
+  name: scurvy dog shuttle voucher
+  components:
+    - type: PirateShuttleVoucher
+      gridPath: /Maps/_Sunrise/Shuttles/Antag/scurvydog.yml
+      price: 22500
+      offset: 36,0
+
+- type: entity
+  parent: BasePirateShuttleVoucher
+  id: PirateShuttleVoucherSparrow
+  name: sparrow shuttle voucher
+  components:
+    - type: PirateShuttleVoucher
+      gridPath: /Maps/_Sunrise/Shuttles/Antag/sparrow.yml
+      price: 20000
+      offset: 34,0

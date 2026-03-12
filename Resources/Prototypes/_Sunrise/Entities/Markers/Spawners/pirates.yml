@@ -1,0 +1,27 @@
+- type: entity
+  categories: [ HideSpawnMenu, Spawner ]
+  parent: SpawnPointPirates
+  id: SpawnPointPirateCrew
+  components:
+    - type: GhostRole
+      name: roles-antag-pirate-crew-name
+      description: roles-antag-pirate-crew-objective
+      rules: ghost-role-information-rules-default-team-antagonist
+      mindRoles:
+        - MindRolePirate
+      raffle:
+        settings: default
+
+- type: entity
+  categories: [ HideSpawnMenu, Spawner ]
+  parent: SpawnPointPirates
+  id: SpawnPointPirateCaptain
+  components:
+    - type: GhostRole
+      name: roles-antag-pirate-captain-name
+      description: roles-antag-pirate-captain-objective
+      rules: ghost-role-information-rules-default-team-antagonist
+      mindRoles:
+        - MindRolePirateCaptain
+      raffle:
+        settings: default

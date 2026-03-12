@@ -1,0 +1,7 @@
+- type: cargoAccount
+  id: Pirates
+  name: cargo-account-pirates-name
+  code: cargo-account-pirates-code
+  color: "#a15608"
+  radioChannel: Common
+  acquisitionSlip: PaperAcquisitionSlipCargo

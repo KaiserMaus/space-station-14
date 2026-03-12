@@ -2665,18 +2665,3 @@
     blacklist:
       components:
       - SurplusBundle
-
-- type: listing
-  id: UplinkPirateSulprusSuper
-  productEntity: CratePirateSuperSurplusBundle
-  cost:
-    Doubloon: 50
-  categories:
-  - UplinkPirateBundle
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle

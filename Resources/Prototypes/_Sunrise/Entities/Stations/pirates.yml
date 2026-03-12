@@ -1,0 +1,35 @@
+- type: entity
+  abstract: true
+  id: BaseStationPirateCargo
+  components:
+    - type: StationBankAccount
+      increasePerSecond: 0
+      revenueDistribution:
+        Pirates: 1
+      accounts:
+        Pirates: 1000
+      lockboxCut: 1
+      primaryCut: 1
+      primaryAccount: Pirates
+    - type: StationCargoBountyDatabase
+      group: Pirates
+      checkedBounties: []
+      history: []
+      bounties: []
+    - type: StationCargoOrderDatabase
+      markets:
+        - pirateMarket
+        - pirateShipyard
+      orders:
+        Pirates: []
+
+- type: entity
+  id: PirateCoveStation
+  parent:
+    - BaseStation
+    - BaseStationPirateCargo
+  categories: [ HideSpawnMenu ]
+  name: Pirate Cove
+  components:
+    - type: Transform
+    - type: PirateStation

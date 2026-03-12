@@ -156,3 +156,9 @@
 
 - type: playTimeTracker
   id: JobComMaid
+
+- type: playTimeTracker
+  id: AntagPirateCaptain
+
+- type: playTimeTracker
+  id: AntagPirateCrew
