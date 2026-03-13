@@ -53,3 +53,23 @@
       gridPath: /Maps/_Sunrise/Shuttles/Antag/sparrow.yml
       price: 20000
       offset: 34,0
+
+- type: entity
+  id: PirateShuttleVoucherRandomSpawner
+  name: random pirate shuttle voucher spawner
+  suffix: Pirate
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Objects/Misc/module.rsi
+          state: id_mod
+    - type: RandomSpawner
+      prototypes:
+        - PirateShuttleVoucherFalcon
+        - PirateShuttleVoucherRustBrass
+        - PirateShuttleVoucherScurvyDog
+        - PirateShuttleVoucherSparrow
+      chance: 1
+      offset: 0

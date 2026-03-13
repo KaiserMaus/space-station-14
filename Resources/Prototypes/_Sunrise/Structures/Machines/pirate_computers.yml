@@ -90,6 +90,16 @@
   name: pirate shipyard console
   description: Use a shuttle voucher here to deploy a purchased shuttle or sell the current one.
   components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: rusted
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: bounty
+    - map: ["computerLayerKeys"]
+      state: security_key
     - type: PirateShipyardConsole
     - type: Computer
       board: PirateShipyardComputerCircuitboard

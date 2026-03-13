@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 270.0.0
+  engineVersion: 271.1.0
   forkId: ""
   forkVersion: ""
-  time: 01/13/2026 15:07:26
-  entityCount: 841
+  time: 03/13/2026 12:46:40
+  entityCount: 823
 maps: []
 grids:
 - 1
@@ -863,7 +863,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: AtmosDeviceFanDirectionalDev
+- proto: AtmosDeviceFanDirectional
   entities:
   - uid: 164
     components:
@@ -1063,12 +1063,12 @@ entities:
   - uid: 333
     components:
     - type: Transform
-      pos: -9.3758545,6.0011463
+      pos: -9.32586,6.3929324
       parent: 1
   - uid: 776
     components:
     - type: Transform
-      pos: -9.618042,5.5792713
+      pos: -9.599298,5.994495
       parent: 1
 - proto: BoxHandcuff
   entities:
@@ -1098,12 +1098,12 @@ entities:
   - uid: 760
     components:
     - type: Transform
-      pos: -9.633364,7.7221117
+      pos: -9.568048,7.4085574
       parent: 1
   - uid: 761
     components:
     - type: Transform
-      pos: -9.34864,7.340167
+      pos: -9.364923,6.97887
       parent: 1
 - proto: BoxVial
   entities:
@@ -2205,36 +2205,12 @@ entities:
     - type: Transform
       pos: -0.5113001,-9.665199
       parent: 1
-- proto: ComputerIdUSSP
-  entities:
-  - uid: 345
-    components:
-    - type: Transform
-      pos: -1.5,-6.5
-      parent: 1
 - proto: ComputerIFFSyndicate
   entities:
   - uid: 259
     components:
     - type: Transform
       pos: -1.5,-1.5
-      parent: 1
-- proto: ComputerPirateExchangerWallmount
-  entities:
-  - uid: 329
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -4.5,-5.5
-      parent: 1
-    - type: Fixtures
-      fixtures: {}
-- proto: ComputerPirateUplink
-  entities:
-  - uid: 391
-    components:
-    - type: Transform
-      pos: -2.5,-6.5
       parent: 1
 - proto: ComputerPowerMonitoring
   entities:
@@ -2298,29 +2274,12 @@ entities:
     - type: Transform
       pos: -0.5,-3.5
       parent: 1
-  - uid: 736
-    components:
-    - type: Transform
-      pos: -2.5,-4.5
-      parent: 1
-  - uid: 740
-    components:
-    - type: Transform
-      pos: -1.5,-4.5
-      parent: 1
 - proto: CratePirateMechYarrkeBundle
   entities:
   - uid: 214
     components:
     - type: Transform
       pos: -9.5,-9.5
-      parent: 1
-- proto: CratePirateSurplusBundle
-  entities:
-  - uid: 733
-    components:
-    - type: Transform
-      pos: -1.5,0.5
       parent: 1
 - proto: CryogenicSleepUnit
   entities:
@@ -2461,30 +2420,10 @@ entities:
       canCollide: False
 - proto: DonkpocketBoxSpawner
   entities:
-  - uid: 679
-    components:
-    - type: Transform
-      pos: -0.5,-7.5
-      parent: 1
-- proto: Doubloon1
-  entities:
-  - uid: 117
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -0.46432877,-7.5885854
-      parent: 1
   - uid: 131
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -0.60495377,-7.487023
-      parent: 1
-  - uid: 467
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -0.65964127,-7.643273
+      pos: -1.5,-6.5
       parent: 1
 - proto: Dresser
   entities:
@@ -2559,7 +2498,6 @@ entities:
       pos: -6.5,-0.5
       parent: 1
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 832
   - uid: 719
@@ -2569,7 +2507,6 @@ entities:
       pos: -5.5,-0.5
       parent: 1
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 832
 - proto: FirelockGlass
@@ -2586,8 +2523,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -8.5,2.5
       parent: 1
-    - type: DeviceNetwork
-      configurators: []
 - proto: FuelDispenser
   entities:
   - uid: 185
@@ -3976,13 +3911,6 @@ entities:
     - type: Transform
       pos: -3.3705788,-2.2922406
       parent: 1
-- proto: PirateCaptainScoonerSpawner
-  entities:
-  - uid: 814
-    components:
-    - type: Transform
-      pos: -2.5,-2.5
-      parent: 1
 - proto: PirateFlag
   entities:
   - uid: 825
@@ -4013,43 +3941,6 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: PirateScoonerSpawner
-  entities:
-  - uid: 741
-    components:
-    - type: Transform
-      pos: -0.5,-10.5
-      parent: 1
-  - uid: 742
-    components:
-    - type: Transform
-      pos: -9.5,-7.5
-      parent: 1
-  - uid: 813
-    components:
-    - type: Transform
-      pos: -1.5,-4.5
-      parent: 1
-  - uid: 815
-    components:
-    - type: Transform
-      pos: -11.5,-4.5
-      parent: 1
-  - uid: 816
-    components:
-    - type: Transform
-      pos: -11.5,-3.5
-      parent: 1
-  - uid: 817
-    components:
-    - type: Transform
-      pos: -1.5,-8.5
-      parent: 1
-  - uid: 836
-    components:
-    - type: Transform
-      pos: -10.5,-10.5
-      parent: 1
 - proto: PlastitaniumWindow
   entities:
   - uid: 168
@@ -4999,6 +4890,18 @@ entities:
     components:
     - type: Transform
       pos: -3.5,-2.5
+      parent: 1
+  - uid: 106
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -1.5,-6.5
+      parent: 1
+  - uid: 117
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -2.5,-6.5
       parent: 1
   - uid: 298
     components:
@@ -6202,23 +6105,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -6.5,6.5
-      parent: 1
-- proto: WeaponSyndieLaserGunBiocode
-  entities:
-  - uid: 106
-    components:
-    - type: Transform
-      pos: -6.5399175,6.715624
-      parent: 1
-  - uid: 745
-    components:
-    - type: Transform
-      pos: -6.51648,5.7859364
-      parent: 1
-  - uid: 756
-    components:
-    - type: Transform
-      pos: -6.54773,6.2703114
       parent: 1
 - proto: WeaponTurretSyndicate
   entities:

@@ -16,7 +16,7 @@ public sealed partial class PiratesRuleComponent : Component
     };
 
     [DataField]
-    public ResPath CoveGridPath = new("/Maps/_Sunrise/Nonstations/pirate-cove.yml");
+    public ResPath CoveGridPath = new("/Maps/_Sunrise/Nonstations/pirate_cove.yml");
 
     [DataField]
     public float MinimumDistance = 1500f;

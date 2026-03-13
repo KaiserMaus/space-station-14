@@ -72,10 +72,10 @@
   suffix: Pirate
   components:
   - type: Sprite
-    sprite: _NF/Objects/Weapons/Melee/pirate_hook.rsi
+    sprite: _Sunrise/Objects/Weapons/Melee/pirate_hook.rsi
     scale: 0.75, 0.75
   - type: Clothing
-    sprite: _NF/Objects/Weapons/Melee/pirate_hook.rsi
+    sprite: _Sunrise/Objects/Weapons/Melee/pirate_hook.rsi
   - type: MeleeWeapon
     autoAttack: true
     animation: WeaponArcThrust
@@ -137,6 +137,7 @@
   suffix: Pirate
   components:
   - type: EntityStorage
+    maxSize: 5
     capacity: 10
 
 - type: entity

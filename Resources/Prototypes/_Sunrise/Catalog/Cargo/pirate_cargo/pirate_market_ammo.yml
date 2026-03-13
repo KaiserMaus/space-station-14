@@ -103,7 +103,7 @@
   id: PirateSunriseCratePirateSubMachineGunAmmo
   icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
   name: mixed SMG ammo crate
-  description: Contains two SMG magazines of each standard type: SP, HP, and FMJ.
+  description: "Contains two SMG magazines of each standard type: SP, HP, and FMJ."
   product: CratePirateSubMachineGunAmmo
   cost: 3000
   category: pirateproduct-category-name-ammo
@@ -141,7 +141,7 @@
   id: PirateSunriseCratePirateMagnumAmmo
   icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
   name: mixed magnum ammo crate
-  description: Contains two speedloaders of each standard magnum type: SP, HP, and FMJ.
+  description: "Contains two speedloaders of each standard magnum type: SP, HP, and FMJ."
   product: CratePirateMagnumAmmo
   cost: 2250
   category: pirateproduct-category-name-ammo
@@ -575,7 +575,7 @@
   id: PirateSunriseCratePirateMachineGunAmmo
   icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
   name: mixed machine rifle ammo crate
-  description: Contains two machine rifle ammo boxes of each standard type: SP, HP, and FMJ.
+  description: "Contains two machine rifle ammo boxes of each standard type: SP, HP, and FMJ."
   product: CratePirateMachineGunAmmo
   cost: 750
   category: pirateproduct-category-name-ammo
@@ -599,7 +599,7 @@
   id: PirateSunriseCratePirateHeavyRifleAmmo
   icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
   name: mixed heavy rifle ammo crate
-  description: Contains two heavy rifle magazines of each standard type: SP, HP, and FMJ.
+  description: "Contains two heavy rifle magazines of each standard type: SP, HP, and FMJ."
   product: CratePirateHeavyRifleAmmo
   cost: 2250
   category: pirateproduct-category-name-ammo
