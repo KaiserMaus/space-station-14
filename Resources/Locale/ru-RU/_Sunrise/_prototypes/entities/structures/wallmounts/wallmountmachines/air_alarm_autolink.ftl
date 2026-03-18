@@ -1,0 +1,15 @@
+﻿ent-AirAlarmAA1 = { ent-AirAlarm }
+    .suffix = Автолинк, AA1
+    .desc = { ent-AirAlarm.desc }
+ent-AirAlarmAA2 = { ent-AirAlarm }
+    .suffix = Автолинк, AA2
+    .desc = { ent-AirAlarm.desc }
+ent-AirAlarmAA3 = { ent-AirAlarm }
+    .suffix = Автолинк, AA3
+    .desc = { ent-AirAlarm.desc }
+ent-AirAlarmAA4 = { ent-AirAlarm }
+    .suffix = Автолинк, AA4
+    .desc = { ent-AirAlarm.desc }
+ent-AirAlarmAA5 = { ent-AirAlarm }
+    .suffix = Автолинк, AA5
+    .desc = { ent-AirAlarm.desc }

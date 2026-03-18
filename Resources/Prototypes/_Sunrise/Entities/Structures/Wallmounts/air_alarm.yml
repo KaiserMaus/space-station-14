@@ -1,0 +1,44 @@
+- type: entity
+  id: AirAlarmAA1
+  parent: AirAlarm
+  suffix: Autolink, AA1
+  components:
+  - type: AutoLinkTransmitter
+    channel: AA1
+  - type: AutoLinkToDeviceList
+
+- type: entity
+  id: AirAlarmAA2
+  parent: AirAlarm
+  suffix: Autolink, AA2
+  components:
+  - type: AutoLinkTransmitter
+    channel: AA2
+  - type: AutoLinkToDeviceList
+
+- type: entity
+  id: AirAlarmAA3
+  parent: AirAlarm
+  suffix: Autolink, AA3
+  components:
+  - type: AutoLinkTransmitter
+    channel: AA3
+  - type: AutoLinkToDeviceList
+
+- type: entity
+  id: AirAlarmAA4
+  parent: AirAlarm
+  suffix: Autolink, AA4
+  components:
+  - type: AutoLinkTransmitter
+    channel: AA4
+  - type: AutoLinkToDeviceList
+
+- type: entity
+  id: AirAlarmAA5
+  parent: AirAlarm
+  suffix: Autolink, AA5
+  components:
+  - type: AutoLinkTransmitter
+    channel: AA5
+  - type: AutoLinkToDeviceList
