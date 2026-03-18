@@ -1,0 +1,55 @@
+# AutoLink signal buttons for radiation shutters.
+
+- type: entity
+  id: SignalButtonAntiRad1
+  parent: SignalButton
+  name: anti-rad shutters button 1
+  suffix: Autolink, 1
+  components:
+  - type: AutoLinkTransmitter
+    channel: AntiRad1
+
+- type: entity
+  id: SignalButtonAntiRad2
+  parent: SignalButton
+  name: anti-rad shutters button 2
+  suffix: Autolink, 2
+  components:
+  - type: AutoLinkTransmitter
+    channel: AntiRad2
+
+- type: entity
+  id: SignalButtonAntiRad3
+  parent: SignalButton
+  name: anti-rad shutters button 3
+  suffix: Autolink, 3
+  components:
+  - type: AutoLinkTransmitter
+    channel: AntiRad3
+
+- type: entity
+  id: SignalButtonAntiRad4
+  parent: SignalButton
+  name: anti-rad shutters button 4
+  suffix: Autolink, 4
+  components:
+  - type: AutoLinkTransmitter
+    channel: AntiRad4
+
+- type: entity
+  id: SignalButtonAntiRad5
+  parent: SignalButton
+  name: anti-rad shutters button 5
+  suffix: Autolink, 5
+  components:
+  - type: AutoLinkTransmitter
+    channel: AntiRad5
+
+- type: entity
+  id: SignalButtonAntiRad6
+  parent: SignalButton
+  name: anti-rad shutters button 6
+  suffix: Autolink, 6
+  components:
+  - type: AutoLinkTransmitter
+    channel: AntiRad6

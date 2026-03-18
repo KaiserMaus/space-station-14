@@ -1,0 +1,97 @@
+# AutoLink variants of radiation shutters.
+
+- type: entity
+  id: ShuttersRadiationAntiRad1
+  parent: ShuttersRadiation
+  suffix: Autolink, 1
+  components:
+  - type: AutoLinkReceiver
+    channel: AntiRad1
+
+- type: entity
+  id: ShuttersRadiationAntiRad1Open
+  parent: ShuttersRadiationOpen
+  suffix: Open, Autolink, 1
+  components:
+  - type: AutoLinkReceiver
+    channel: AntiRad1
+
+- type: entity
+  id: ShuttersRadiationAntiRad2
+  parent: ShuttersRadiation
+  suffix: Autolink, 2
+  components:
+  - type: AutoLinkReceiver
+    channel: AntiRad2
+
+- type: entity
+  id: ShuttersRadiationAntiRad2Open
+  parent: ShuttersRadiationOpen
+  suffix: Open, Autolink, 2
+  components:
+  - type: AutoLinkReceiver
+    channel: AntiRad2
+
+- type: entity
+  id: ShuttersRadiationAntiRad3
+  parent: ShuttersRadiation
+  suffix: Autolink, 3
+  components:
+  - type: AutoLinkReceiver
+    channel: AntiRad3
+
+- type: entity
+  id: ShuttersRadiationAntiRad3Open
+  parent: ShuttersRadiationOpen
+  suffix: Open, Autolink, 3
+  components:
+  - type: AutoLinkReceiver
+    channel: AntiRad3
+
+- type: entity
+  id: ShuttersRadiationAntiRad4
+  parent: ShuttersRadiation
+  suffix: Autolink, 4
+  components:
+  - type: AutoLinkReceiver
+    channel: AntiRad4
+
+- type: entity
+  id: ShuttersRadiationAntiRad4Open
+  parent: ShuttersRadiationOpen
+  suffix: Open, Autolink, 4
+  components:
+  - type: AutoLinkReceiver
+    channel: AntiRad4
+
+- type: entity
+  id: ShuttersRadiationAntiRad5
+  parent: ShuttersRadiation
+  suffix: Autolink, 5
+  components:
+  - type: AutoLinkReceiver
+    channel: AntiRad5
+
+- type: entity
+  id: ShuttersRadiationAntiRad5Open
+  parent: ShuttersRadiationOpen
+  suffix: Open, Autolink, 5
+  components:
+  - type: AutoLinkReceiver
+    channel: AntiRad5
+
+- type: entity
+  id: ShuttersRadiationAntiRad6
+  parent: ShuttersRadiation
+  suffix: Autolink, 6
+  components:
+  - type: AutoLinkReceiver
+    channel: AntiRad6
+
+- type: entity
+  id: ShuttersRadiationAntiRad6Open
+  parent: ShuttersRadiationOpen
+  suffix: Open, Autolink, 6
+  components:
+  - type: AutoLinkReceiver
+    channel: AntiRad6
