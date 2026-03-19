@@ -46,3 +46,11 @@
   sprite:
     sprite: _Sunrise/Objects/Specific/Documents/document.rsi
     state: genaric_doc
+
+- type: stealTargetGroup
+  id: JetpackChiefEngineerFilled
+  name: steal-target-groups-jetpack-ce
+  sprite:
+    sprite: _Sunrise/Objects/Tanks/Jetpacks/ce_void.rsi
+    state: icon
+

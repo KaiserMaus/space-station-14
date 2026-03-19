@@ -21,7 +21,7 @@ steal-target-groups-door-remotes = Пульт от шлюзов
 steal-target-groups-encryption-keys = ключ шифрования
 steal-target-groups-technology-disks = технологический диск
 steal-target-groups-id-cards = ID карта
-steal-target-groups-lamps = Лампа
+steal-target-groups-lamps = ЛАМПА
 # Thief single item
 steal-target-groups-forensic-scanner = криминалистический сканер
 steal-target-groups-flippo-engraved-lighter = гравированная зажигалка флиппо детектива
