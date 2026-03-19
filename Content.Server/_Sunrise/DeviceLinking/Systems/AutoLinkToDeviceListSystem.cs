@@ -42,16 +42,23 @@ public sealed class AutoLinkToDeviceListSystem : EntitySystem
 
         foreach (var uid in _processed)
         {
-            _pendingMapInitLinks.Remove(uid);
-
             if (Deleted(uid))
+            {
+                _pendingMapInitLinks.Remove(uid);
                 continue;
+            }
 
             if (!TryComp<AutoLinkToDeviceListComponent>(uid, out var autolink))
+            {
+                _pendingMapInitLinks.Remove(uid);
+                continue;
+            }
+
+            if (!TryPopulate((uid, autolink)))
                 continue;
 
-            if (TryPopulate((uid, autolink)))
-                RemCompDeferred<AutoLinkToDeviceListComponent>(uid);
+            _pendingMapInitLinks.Remove(uid);
+            RemCompDeferred<AutoLinkToDeviceListComponent>(uid);
         }
     }
 
