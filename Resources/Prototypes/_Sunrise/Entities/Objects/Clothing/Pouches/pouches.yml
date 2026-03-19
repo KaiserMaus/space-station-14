@@ -95,25 +95,29 @@
   id: PouchAmmoFilledPistol40
   suffix: Filled pistol .40
   components:
-  - type: StorageFill
-    contents:
-      - id: MagazinePistol40SP
-        amount: 2
-      - id: MagazinePistol40FMJ
-        amount: 1
-      - id: MagazinePistol40HP
-        amount: 1
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MagazinePistol40SP
+          amount: 2
+        - id: MagazinePistol40FMJ
+          amount: 1
+        - id: MagazinePistol40HP
+          amount: 1
 
 - type: entity
   parent: PouchAmmo
   id: PouchAmmoFilledLightRifle
-  suffix: Filled 7,62
+  suffix: Filled, light rifle
   components:
-  - type: StorageFill
-    contents:
-      - id: MagazineLightRifleSP
-        amount: 2
-      - id: MagazineLightRifleFMJ
-        amount: 1
-      - id: MagazineLightRifleHP
-        amount: 1
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MagazineLightRifleFMJ
+          amount: 2
+        - id: MagazineLightRifleSP
+          amount: 1
+        - id: MagazineLightRifleHP
+          amount: 1
