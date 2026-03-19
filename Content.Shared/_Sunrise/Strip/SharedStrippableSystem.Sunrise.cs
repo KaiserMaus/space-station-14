@@ -15,12 +15,12 @@ public abstract partial class SharedStrippableSystem
 
     private readonly Dictionary<EntityUid, Queue<DoAfterId>> _activeStripDoAfters = new();
 
-    partial void InitializeSunrise()
+    private void InitializeSunrise()
     {
         SubscribeLocalEvent<StrippableComponent, BeforeGettingStrippedEvent>(OnBeforeGettingStripped);
     }
 
-    private partial bool CanUseStrippingDragDrop(EntityUid target)
+    private bool CanUseStrippingDragDrop(EntityUid target)
     {
         return TryComp<StrippingComponent>(target, out var strippingComp) && strippingComp.UseDragDrop;
     }
@@ -44,7 +44,7 @@ public abstract partial class SharedStrippableSystem
         return Math.Max(0, freeHands);
     }
 
-    private partial void LimitSimultaneousStripDoAfters(Entity<HandsComponent?> user, DoAfterArgs doAfterArgs)
+    private void LimitSimultaneousStripDoAfters(Entity<HandsComponent?> user, DoAfterArgs doAfterArgs)
     {
         var userId = user.Owner;
         var freeHands = GetAvailableStripHands(user);
@@ -74,7 +74,7 @@ public abstract partial class SharedStrippableSystem
             queue.Enqueue(doAfterId.Value);
     }
 
-    private partial void RevalidateSimultaneousStripDoAfter(
+    private void RevalidateSimultaneousStripDoAfter(
         Entity<HandsComponent> entity,
         ref DoAfterAttemptEvent<StrippableDoAfterEvent> ev)
     {
@@ -101,7 +101,7 @@ public abstract partial class SharedStrippableSystem
             ev.Cancel();
     }
 
-    private partial void CleanupTrackedStripDoAfter(EntityUid user, DoAfterId doAfterId)
+    private void CleanupTrackedStripDoAfter(EntityUid user, DoAfterId doAfterId)
     {
         if (!_activeStripDoAfters.TryGetValue(user, out var queue))
             return;
