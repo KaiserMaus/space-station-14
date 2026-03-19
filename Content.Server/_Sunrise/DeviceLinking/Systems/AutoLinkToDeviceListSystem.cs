@@ -1,8 +1,8 @@
 using Content.Server.DeviceLinking.Components;
 using Content.Server.DeviceNetwork.Systems;
-using Content.Server.GameTicking.Events;
 using Content.Server._Sunrise.DeviceLinking.Components;
 using Content.Shared.DeviceNetwork.Components;
+using Content.Shared.DeviceNetwork.Systems;
 using Robust.Shared.Timing;
 
 namespace Content.Server._Sunrise.DeviceLinking.Systems;
@@ -15,87 +15,70 @@ public sealed class AutoLinkToDeviceListSystem : EntitySystem
     [Dependency] private readonly DeviceListSystem _deviceList = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
 
-    private static readonly TimeSpan RefreshInterval = TimeSpan.FromSeconds(3);
-    private TimeSpan _nextRefresh = TimeSpan.Zero;
+    private static readonly TimeSpan DelayedMapInitLink = TimeSpan.FromSeconds(1);
+    private readonly Dictionary<EntityUid, TimeSpan> _pendingMapInitLinks = new();
+    private readonly List<EntityUid> _processed = new();
 
     public override void Initialize()
     {
         SubscribeLocalEvent<AutoLinkToDeviceListComponent, MapInitEvent>(OnMapInit);
-        SubscribeLocalEvent<AutoLinkToDeviceListComponent, ComponentStartup>(OnTransmitterStartup);
-        SubscribeLocalEvent<AutoLinkReceiverComponent, MapInitEvent>(OnReceiverMapInit);
-        SubscribeLocalEvent<AutoLinkReceiverComponent, ComponentStartup>(OnReceiverStartup);
-        SubscribeLocalEvent<RoundStartingEvent>(OnRoundStarting);
     }
 
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
 
-        if (_timing.CurTime < _nextRefresh)
+        if (_pendingMapInitLinks.Count == 0)
             return;
 
-        _nextRefresh = _timing.CurTime + RefreshInterval;
-
-        var query = EntityQueryEnumerator<AutoLinkToDeviceListComponent>();
-        while (query.MoveNext(out var uid, out var comp))
+        _processed.Clear();
+        foreach (var (uid, triggerAt) in _pendingMapInitLinks)
         {
-            TryPopulate((uid, comp));
+            if (_timing.CurTime < triggerAt)
+                continue;
+
+            _processed.Add(uid);
+        }
+
+        foreach (var uid in _processed)
+        {
+            _pendingMapInitLinks.Remove(uid);
+
+            if (Deleted(uid))
+                continue;
+
+            if (!TryComp<AutoLinkToDeviceListComponent>(uid, out var autolink))
+                continue;
+
+            if (TryPopulate((uid, autolink)))
+                RemCompDeferred<AutoLinkToDeviceListComponent>(uid);
         }
     }
 
     private void OnMapInit(Entity<AutoLinkToDeviceListComponent> ent, ref MapInitEvent args)
     {
-        TryPopulate(ent);
+        _pendingMapInitLinks[ent.Owner] = _timing.CurTime + DelayedMapInitLink;
     }
 
-    private void OnRoundStarting(RoundStartingEvent ev)
-    {
-        var query = EntityQueryEnumerator<AutoLinkToDeviceListComponent>();
-        while (query.MoveNext(out var uid, out var comp))
-        {
-            TryPopulate((uid, comp));
-        }
-    }
-
-    private void OnReceiverMapInit(Entity<AutoLinkReceiverComponent> ent, ref MapInitEvent args)
-    {
-        RefreshTransmitters(ent.Comp.AutoLinkChannel);
-    }
-
-    private void OnTransmitterStartup(Entity<AutoLinkToDeviceListComponent> ent, ref ComponentStartup args)
-    {
-        TryPopulate(ent);
-    }
-
-    private void OnReceiverStartup(Entity<AutoLinkReceiverComponent> ent, ref ComponentStartup args)
-    {
-        RefreshTransmitters(ent.Comp.AutoLinkChannel);
-    }
-
-    private void RefreshTransmitters(string channel)
-    {
-        var query = EntityQueryEnumerator<AutoLinkToDeviceListComponent, AutoLinkTransmitterComponent>();
-        while (query.MoveNext(out var uid, out var autolink, out var transmitter))
-        {
-            if (transmitter.AutoLinkChannel != channel)
-                continue;
-
-            TryPopulate((uid, autolink));
-        }
-    }
-
-    private void TryPopulate(Entity<AutoLinkToDeviceListComponent> ent)
+    private bool TryPopulate(Entity<AutoLinkToDeviceListComponent> ent)
     {
         if (!TryComp<AutoLinkTransmitterComponent>(ent, out var transmitter))
-            return;
+            return false;
 
         if (!TryComp<DeviceListComponent>(ent, out var deviceList))
-            return;
+            return false;
+
+        if (!TryComp<TransformComponent>(ent, out var transmitterXform))
+            return false;
+
+        var transmitterGrid = transmitterXform.GridUid;
+        if (transmitterGrid == null)
+            return false;
 
         var matched = new List<EntityUid>();
         var query = EntityQueryEnumerator<AutoLinkReceiverComponent, DeviceNetworkComponent, TransformComponent>();
 
-        while (query.MoveNext(out var receiverUid, out var receiver, out _, out _))
+        while (query.MoveNext(out var receiverUid, out var receiver, out _, out var receiverXform))
         {
             if (receiverUid == ent.Owner)
                 continue;
@@ -103,12 +86,16 @@ public sealed class AutoLinkToDeviceListSystem : EntitySystem
             if (receiver.AutoLinkChannel != transmitter.AutoLinkChannel)
                 continue;
 
+            if (receiverXform.GridUid != transmitterGrid)
+                continue;
+
             matched.Add(receiverUid);
         }
 
         if (matched.Count == 0)
-            return;
+            return false;
 
-        _deviceList.UpdateDeviceList(ent.Owner, matched, ent.Comp.Merge, deviceList);
+        var result = _deviceList.UpdateDeviceList(ent.Owner, matched, ent.Comp.Merge, deviceList);
+        return result == DeviceListUpdateResult.UpdateOk;
     }
 }

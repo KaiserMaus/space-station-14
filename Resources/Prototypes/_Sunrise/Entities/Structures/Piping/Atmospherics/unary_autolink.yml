@@ -79,3 +79,43 @@
   components:
   - type: AutoLinkReceiver
     channel: AA5
+
+- type: entity
+  id: AirSensorAA1
+  parent: AirSensor
+  suffix: Autolink, 1
+  components:
+  - type: AutoLinkReceiver
+    channel: AA1
+
+- type: entity
+  id: AirSensorAA2
+  parent: AirSensor
+  suffix: Autolink, 2
+  components:
+  - type: AutoLinkReceiver
+    channel: AA2
+
+- type: entity
+  id: AirSensorAA3
+  parent: AirSensor
+  suffix: Autolink, 3
+  components:
+  - type: AutoLinkReceiver
+    channel: AA3
+
+- type: entity
+  id: AirSensorAA4
+  parent: AirSensor
+  suffix: Autolink, 4
+  components:
+  - type: AutoLinkReceiver
+    channel: AA4
+
+- type: entity
+  id: AirSensorAA5
+  parent: AirSensor
+  suffix: Autolink, 5
+  components:
+  - type: AutoLinkReceiver
+    channel: AA5

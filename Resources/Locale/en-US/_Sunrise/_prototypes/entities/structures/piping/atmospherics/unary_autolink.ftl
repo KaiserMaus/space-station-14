@@ -1,0 +1,15 @@
+ent-AirSensorAA1 = { ent-AirSensor }
+    .suffix = Autolink, 1
+    .desc = { ent-AirSensor.desc }
+ent-AirSensorAA2 = { ent-AirSensor }
+    .suffix = Autolink, 2
+    .desc = { ent-AirSensor.desc }
+ent-AirSensorAA3 = { ent-AirSensor }
+    .suffix = Autolink, 3
+    .desc = { ent-AirSensor.desc }
+ent-AirSensorAA4 = { ent-AirSensor }
+    .suffix = Autolink, 4
+    .desc = { ent-AirSensor.desc }
+ent-AirSensorAA5 = { ent-AirSensor }
+    .suffix = Autolink, 5
+    .desc = { ent-AirSensor.desc }
