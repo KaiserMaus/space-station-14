@@ -2,6 +2,7 @@ using Content.Server.Chat.Systems;
 using Content.Server.Nuke;
 using Content.Server.Popups;
 using Content.Server.StationEvents.Components;
+using Content.Shared.Containers.ItemSlots;
 using Content.Shared.GameTicking.Components;
 using Content.Shared.Nuke;
 using Content.Shared.Popups;
@@ -17,6 +18,7 @@ public sealed class NukeCalibrationRule : StationEventSystem<NukeCalibrationRule
     [Dependency] private readonly NukeSystem _nukeSystem = default!;
     [Dependency] private readonly ChatSystem _chatSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
+    [Dependency] private readonly ItemSlotsSystem _itemSlots = default!;
     [Dependency] private readonly PopupSystem _popups = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
 
@@ -53,11 +55,11 @@ public sealed class NukeCalibrationRule : StationEventSystem<NukeCalibrationRule
             }
             else
             {
-                var disk = nukeComponent.DiskSlot.ContainerSlot?.ContainedEntity;
-                if (disk != null)
-                    _transform.SetCoordinates(disk.Value, nukeTransform.Coordinates);
-
-                _popups.PopupEntity(Loc.GetString("station-event-nuke-calibration-arm-and-disk-ejected-popup"), nuke, PopupType.LargeCaution);
+                // Force eject because armed nuke keeps the slot locked.
+                if (_itemSlots.TryEject(nuke, nukeComponent.DiskSlot, user: null, out _, true))
+                    _popups.PopupEntity(Loc.GetString("station-event-nuke-calibration-arm-and-disk-ejected-popup"), nuke, PopupType.LargeCaution);
+                else
+                    _popups.PopupEntity(Loc.GetString("station-event-nuke-calibration-arm-popup"), nuke, PopupType.LargeCaution);
             }
 
             break;
@@ -74,10 +76,10 @@ public sealed class NukeCalibrationRule : StationEventSystem<NukeCalibrationRule
         // Lucky path: nuke gets auto-disarmed.
         if (RobustRandom.NextFloat() <= component.AutoDisarmChance)
         {
-            _nukeSystem.SetRemainingTime(component.AffectedNuke, nukeComp.Timer);
             if (nukeComp.Status != NukeStatus.ARMED)
                 return;
 
+            _nukeSystem.SetRemainingTime(component.AffectedNuke, nukeComp.Timer); // Sunrise-Edit
             _nukeSystem.DisarmBomb(component.AffectedNuke, nukeComp);
             _chatSystem.DispatchGlobalAnnouncement(
                 Loc.GetString("station-event-nuke-calibration-disarm-success-announcement"),
