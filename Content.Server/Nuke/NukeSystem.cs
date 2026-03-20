@@ -25,7 +25,7 @@ using Robust.Shared.Timing;
 
 namespace Content.Server.Nuke;
 
-public sealed class NukeSystem : EntitySystem
+public sealed partial class NukeSystem : EntitySystem
 {
     [Dependency] private readonly AlertLevelSystem _alertLevel = default!;
     [Dependency] private readonly ChatSystem _chatSystem = default!;
@@ -273,7 +273,7 @@ public sealed class NukeSystem : EntitySystem
 
     private void OnArmButtonPressed(EntityUid uid, NukeComponent component, NukeArmedMessage args)
     {
-        if (!component.DiskSlot.HasItem)
+        if (!component.DiskSlot.HasItem && !component.DiskBypassEnabled) // Sunrise-Edit
             return;
 
         if (component.Status == NukeStatus.AWAIT_ARM && Transform(uid).Anchored)
@@ -294,9 +294,10 @@ public sealed class NukeSystem : EntitySystem
         if (args.Handled || args.Cancelled)
             return;
 
+        var bypass = component.DiskBypassEnabled; // Sunrise-Edit
         DisarmBomb(uid, component);
 
-        var ev = new NukeDisarmSuccessEvent();
+        var ev = new NukeDisarmSuccessEvent(!bypass); // Sunrise-Edit
         RaiseLocalEvent(ev);
 
         args.Handled = true;
@@ -362,11 +363,11 @@ public sealed class NukeSystem : EntitySystem
         switch (component.Status)
         {
             case NukeStatus.AWAIT_DISK:
-                if (component.DiskSlot.HasItem)
+                if (component.DiskSlot.HasItem || component.DiskBypassEnabled) // Sunrise-Edit
                     component.Status = NukeStatus.AWAIT_CODE;
                 break;
             case NukeStatus.AWAIT_CODE:
-                if (!component.DiskSlot.HasItem)
+                if (!component.DiskSlot.HasItem && !component.DiskBypassEnabled) // Sunrise-Edit
                 {
                     component.Status = NukeStatus.AWAIT_DISK;
                     component.EnteredCode = "";
@@ -411,9 +412,12 @@ public sealed class NukeSystem : EntitySystem
 
         var anchored = Transform(uid).Anchored;
 
+        // Sunrise-Start
         var allowArm = component.DiskSlot.HasItem &&
                        (component.Status == NukeStatus.AWAIT_ARM ||
-                        component.Status == NukeStatus.ARMED);
+                        component.Status == NukeStatus.ARMED) ||
+                       component.DiskBypassEnabled;
+        // Sunrise-End
 
         var state = new NukeUiState
         {
@@ -575,6 +579,16 @@ public sealed class NukeSystem : EntitySystem
         component.Status = NukeStatus.COOLDOWN;
         component.CooldownTime = component.Cooldown;
 
+        // Sunrise-Start
+        if (component.ShouldResetAfterDiskBypass)
+        {
+            component.DiskBypassEnabled = false;
+            component.RemainingTime = component.Timer;
+        }
+
+        component.ShouldResetAfterDiskBypass = false;
+        // Sunrise-End
+
         UpdateUserInterface(uid, component);
         UpdateAppearance(uid, component);
     }
@@ -696,6 +710,16 @@ public sealed class NukeExplodedEvent : EntityEventArgs
 /// </summary>
 public sealed class NukeDisarmSuccessEvent : EntityEventArgs
 {
+    // Sunrise-Start
+    /// <summary>
+    ///     Whether nukeops round-end checks should run after disarm.
+    /// </summary>
+    public bool CheckRoundShouldEnd;
 
+    public NukeDisarmSuccessEvent(bool checkRoundShouldEnd = true)
+    {
+        CheckRoundShouldEnd = checkRoundShouldEnd;
+    }
+    // Sunrise-End
 }
 

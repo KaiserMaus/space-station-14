@@ -275,7 +275,11 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
 
     private void OnNukeDisarm(NukeDisarmSuccessEvent ev)
     {
-        CheckRoundShouldEnd();
+        // Sunrise-Start
+        // Do not end the round if the nuke was armed/disarmed as part of calibration event.
+        if (ev.CheckRoundShouldEnd)
+            CheckRoundShouldEnd();
+        // Sunrise-End
     }
 
     private void OnComponentRemove(EntityUid uid, NukeOperativeComponent component, ComponentRemove args)
