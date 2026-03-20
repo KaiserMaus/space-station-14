@@ -7,9 +7,9 @@ namespace Content.Shared._Sunrise.Documents;
 [RegisterComponent, ComponentProtoName("XmlPaperContent")]
 public sealed partial class XmlPaperContentComponent : Component
 {
-    [DataField("path", required: true)]
-    public ResPath Path = default!;
+    [DataField(required: true)]
+    public ResPath Path = ResPath.Empty;
 
-    [DataField("header")]
+    [DataField]
     public SpriteSpecifier? Header;
 }
