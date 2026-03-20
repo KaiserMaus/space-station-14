@@ -21,3 +21,11 @@
   components:
   - type: Contraband
     allowedDepartments: [ Law ]
+
+- type: entity
+  id: BaseSovietContraband
+  parent: BaseMajorContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: Soviet
