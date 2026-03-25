@@ -15,3 +15,6 @@ ent-MailSovietSpamLetter50 = { ent-MailSovietSpamLetter100 }
 
 ent-MailSovietSpamLetter25 = { ent-MailSovietSpamLetter100 }
     .desc = { ent-MailSovietSpamLetter100.desc }
+
+ent-MailSovietSpamLetter10 = { ent-MailSovietSpamLetter100 }
+    .desc = { ent-MailSovietSpamLetter100.desc }

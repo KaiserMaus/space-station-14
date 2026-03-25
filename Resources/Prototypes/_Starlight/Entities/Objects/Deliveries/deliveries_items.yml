@@ -1,6 +1,6 @@
 - type: entity
   id: MailSyndicateSpamLetter
-  name: Reasons to choose The Syndicate!
+  name: reasons to choose The Syndicate!
   description: An advertisement for the Syndicate. Wont fit in a fax somehow.
   parent: [ Paper, BaseSyndicateContraband ]
   components:
@@ -21,7 +21,7 @@
 
 - type: entity
   id: RRMailSyndicateSpamLetter
-  name: Reasons to choose The Syndicate!
+  name: reasons to choose The Syndicate!
   description: An advertisement for the Syndicate. Wont fit in a fax somehow.
   parent: [ Paper, BaseSyndicateContraband ]
   suffix: 100% # Used in RailRoad
@@ -42,7 +42,7 @@
 
 - type: entity
   id: MailSpamDontYouWantMore
-  name: Don't You Want More?
+  name: don't You Want More?
   description: An inciting paper that smells faintly of welding fuel and desire. Wont fit in a fax somehow.
   parent: [ Paper, BaseMajorContraband ]
   components:
@@ -180,7 +180,7 @@
 #USSP
 - type: entity
   id: MailSovietSpamLetter100
-  name: Workers' rights!
+  name: workers' rights!
   suffix: 100%
   description: A propaganda pamphlet that smells of burnt matches. It's so thick it won't fit in the fax.
   parent: [ Paper ] # ,BaseSovietContraband]
@@ -206,7 +206,7 @@
 
 - type: entity
   id: MailSovietSpamLetter50
-  name: Workers' rights!
+  name: workers' rights!
   suffix: 50%
   description: A propaganda pamphlet that smells of burnt matches. It's so thick it won't fit in the fax.
   parent: [ Paper ] # ,BaseSovietContraband]
@@ -232,7 +232,7 @@
 
 - type: entity
   id: MailSovietSpamLetter25
-  name: Workers' rights!
+  name: workers' rights!
   suffix: 25%
   description: A propaganda pamphlet that smells of burnt matches. It's so thick it won't fit in the fax.
   parent: [ Paper ] # ,BaseSovietContraband]
@@ -255,3 +255,26 @@
           - Traitor
           - Revolutionary
 
+- type: entity
+  id: MailSovietSpamLetter10
+  name: workers' rights!
+  suffix: 10%
+  description: A propaganda pamphlet that smells of burnt matches. It's so thick it won't fit in the fax.
+  parent: [ Paper ] # ,BaseSovietContraband]
+  components:
+    - type: Paper
+      content: delivery-spam-join-soviets
+      editingDisabled: true
+    - type: PaperVisuals
+      headerImagePath: "/Textures/_Sunrise/CopyMachine/soviet_form_header.rsi/soviet_form_header.png"
+    - type: AntagOnSign
+      chance: 0.1
+      antags:
+        - antag: Revolutionary
+          targetComponent: RevolutionaryRule
+      blacklist:
+        components:
+          - NukeOperative
+          - MindShield
+          - Traitor
+          - Revolutionary

@@ -4,7 +4,6 @@ namespace Content.Shared.Delivery;
 
 public abstract partial class SharedDeliverySystem
 {
-    // Sunrise-Start
     [Dependency] private readonly EmagSystem _emag = default!;
 
     private void OnSpawnerEmagged(Entity<DeliverySpawnerComponent> ent, ref GotEmaggedEvent args)
@@ -17,5 +16,4 @@ public abstract partial class SharedDeliverySystem
 
         args.Handled = true;
     }
-    // Sunrise-End
 }
