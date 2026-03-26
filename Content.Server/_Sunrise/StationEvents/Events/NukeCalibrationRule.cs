@@ -10,6 +10,7 @@ using Content.Shared.Station.Components;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Player;
+using Robust.Shared.Timing;
 
 namespace Content.Server.StationEvents.Events;
 
@@ -21,10 +22,12 @@ public sealed class NukeCalibrationRule : StationEventSystem<NukeCalibrationRule
     [Dependency] private readonly ItemSlotsSystem _itemSlots = default!;
     [Dependency] private readonly PopupSystem _popups = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
 
     protected override void Started(EntityUid uid, NukeCalibrationRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
     {
         base.Started(uid, component, gameRule, args);
+        component.FirstAnnouncementTime = _timing.CurTime + TimeSpan.FromSeconds(component.TimeUntilFirstAnnouncement);
 
         if (!TryGetRandomStation(out var affectedStation))
             return;
@@ -93,6 +96,7 @@ public sealed class NukeCalibrationRule : StationEventSystem<NukeCalibrationRule
             return;
 
         // Failed auto-disarm: allow manual disarm without the disk.
+        _nukeSystem.SetRemainingTime(component.AffectedNuke, nukeComp.Timer, nukeComp);
         _nukeSystem.SetDiskBypassEnabled(component.AffectedNuke, true, true, nukeComp);
         _chatSystem.DispatchGlobalAnnouncement(
             Loc.GetString("station-event-nuke-calibration-disarm-fail-announcement"),
@@ -105,11 +109,14 @@ public sealed class NukeCalibrationRule : StationEventSystem<NukeCalibrationRule
     {
         base.ActiveTick(uid, component, gameRule, frameTime);
 
+        // Guard: no selected nuke target, so calibration announcements should not be sent.
+        if (!TryComp<NukeComponent>(component.AffectedNuke, out _))
+            return;
+
         if (component.FirstAnnouncementMade)
             return;
 
-        component.TimeUntilFirstAnnouncement -= frameTime;
-        if (component.TimeUntilFirstAnnouncement > 0f)
+        if (_timing.CurTime < component.FirstAnnouncementTime)
             return;
 
         component.FirstAnnouncementMade = true;

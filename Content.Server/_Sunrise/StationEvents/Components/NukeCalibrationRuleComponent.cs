@@ -1,5 +1,6 @@
 using Content.Server.StationEvents.Events;
 using Robust.Shared.Audio;
+using Robust.Shared.ViewVariables;
 
 namespace Content.Server.StationEvents.Components;
 
@@ -38,4 +39,7 @@ public sealed partial class NukeCalibrationRuleComponent : Component
 
     [DataField]
     public bool FirstAnnouncementMade = false;
+
+    [ViewVariables]
+    public TimeSpan FirstAnnouncementTime;
 }
