@@ -21,7 +21,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared.Strip;
 
-public abstract partial class SharedStrippableSystem : EntitySystem
+public abstract partial class SharedStrippableSystem : EntitySystem // Sunrise-Edit
 {
     [Dependency] private readonly SharedInteractionSystem _interactionSystem = default!;
 
@@ -436,7 +436,7 @@ public abstract partial class SharedStrippableSystem : EntitySystem
             DuplicateCondition = DuplicateConditions.SameTool
         };
 
-        LimitSimultaneousStripDoAfters(user, doAfterArgs);
+        LimitSimultaneousStripDoAfters(user, doAfterArgs); // Sunrise-Edit
     }
 
     /// <summary>
@@ -547,7 +547,7 @@ public abstract partial class SharedStrippableSystem : EntitySystem
             DuplicateCondition = DuplicateConditions.SameTool
         };
 
-        LimitSimultaneousStripDoAfters(user, doAfterArgs);
+        LimitSimultaneousStripDoAfters(user, doAfterArgs); // Sunrise-Edit
     }
 
     /// <summary>
@@ -715,5 +715,4 @@ public abstract partial class SharedStrippableSystem : EntitySystem
 
         return !HasComp<BypassInteractionChecksComponent>(viewer);
     }
-
 }

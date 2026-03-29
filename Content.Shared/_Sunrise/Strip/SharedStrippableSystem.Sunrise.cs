@@ -122,8 +122,7 @@ public abstract partial class SharedStrippableSystem
         if (!TryComp<CuffableComponent>(uid, out var cuffable))
             return;
 
-        var entity = new Entity<CuffableComponent>(uid, cuffable);
-        if (_cuffableSystem.IsCuffed(entity))
+        if (_cuffableSystem.IsCuffed((uid, cuffable)))
             ev.Multiplier *= 0.5f;
     }
 }
