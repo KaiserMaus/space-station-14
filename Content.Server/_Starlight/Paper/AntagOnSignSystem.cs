@@ -3,7 +3,6 @@ using Content.Server.GameTicking;
 using Content.Server.GameTicking.Rules.Components;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Database;
-using Content.Shared.Fax.Components;
 using Content.Shared.Paper;
 using Content.Shared.Whitelist;
 using Content.Shared._Starlight.Paper;
@@ -32,15 +31,6 @@ public sealed class AntagOnSignSystem : EntitySystem
 
         SubscribeLocalEvent<AntagOnSignComponent, PaperSignedEvent>(OnPaperSigned);
         SubscribeLocalEvent<AntagOnSignComponent, PaperWriteEvent>(OnPaperSigned, before: [typeof(ObjectiveOnSignSystem)]);
-        SubscribeLocalEvent<AntagOnSignComponent, MapInitEvent>(OnMapInit);
-    }
-
-    private void OnMapInit(EntityUid uid, AntagOnSignComponent comp, ref MapInitEvent args)
-    {
-        if (comp.KeepFaxable)
-            return;
-
-        RemComp<FaxableObjectComponent>(uid);
     }
 
     private void OnPaperSigned(EntityUid uid, AntagOnSignComponent component, PaperWriteEvent args)

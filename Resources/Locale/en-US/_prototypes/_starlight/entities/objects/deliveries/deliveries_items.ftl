@@ -18,3 +18,6 @@ ent-MailSovietSpamLetter25 = { ent-MailSovietSpamLetter100 }
 
 ent-MailSovietSpamLetter10 = { ent-MailSovietSpamLetter100 }
     .desc = { ent-MailSovietSpamLetter100.desc }
+
+ent-MailSovietSpamLetter30Faxable = { ent-MailSovietSpamLetter100 }
+    .desc = A thin propaganda pamphlet that smells of burnt matches.

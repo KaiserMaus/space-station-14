@@ -22,9 +22,6 @@ public sealed partial class AntagOnSignComponent : Component
     public List<AntagCompPair> Antags = [];
 
     [DataField]
-    public bool KeepFaxable = false;
-
-    [DataField]
     public EntityWhitelist? Blacklist;
 }
 

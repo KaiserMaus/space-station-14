@@ -4,7 +4,6 @@ using Content.Shared.Database;
 using Content.Shared.Paper;
 using Content.Shared._Starlight.Paper;
 using Content.Shared.Whitelist;
-using Content.Shared.Fax.Components;
 using Robust.Shared.Random;
 using Content.Shared.Mind;
 using Robust.Shared.Player;
@@ -23,14 +22,6 @@ public sealed class ObjectiveOnSignSystem : EntitySystem
         base.Initialize();
         SubscribeLocalEvent<ObjectiveOnSignComponent, PaperSignedEvent>(OnPaperSigned);
         SubscribeLocalEvent<ObjectiveOnSignComponent, PaperWriteEvent>(OnPaperSigned);
-        SubscribeLocalEvent<ObjectiveOnSignComponent, MapInitEvent>(OnMapInit);
-    }
-
-    private void OnMapInit(EntityUid uid, ObjectiveOnSignComponent comp, MapInitEvent init)
-    {
-        if (comp.KeepFaxable)
-            return;
-        RemComp<FaxableObjectComponent>(uid); //cause this breaks shit like infinite antags
     }
 
 

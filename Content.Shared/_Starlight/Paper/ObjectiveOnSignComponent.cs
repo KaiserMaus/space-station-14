@@ -26,7 +26,4 @@ public sealed partial class ObjectiveOnSignComponent : Component
 
     [DataField]
     public EntityWhitelist? Blacklist = null;
-
-    [DataField]
-    public bool KeepFaxable = false;
 }

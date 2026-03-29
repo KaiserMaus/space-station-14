@@ -1,8 +1,40 @@
 - type: entity
+  name: paper
+  parent: BasePaper
+  id: PaperNoFax
+  description: 'A piece of white paper.'
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/bureaucracy.rsi
+    layers:
+    - state: paper
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: Paper
+  - type: PaperLabelType
+  - type: ActivatableUI
+    key: enum.PaperUiKey.Key
+    requiresComplex: false
+  - type: UserInterface
+    interfaces:
+      enum.PaperUiKey.Key:
+        type: PaperBoundUserInterface
+  - type: PaperVisuals
+  # Sunrise edit end
+  - type: PhysicalComposition
+    materialComposition:
+      Paper: 100
+  # Sunrise edit end
+
+- type: entity
   id: MailSyndicateSpamLetter
   name: reasons to choose The Syndicate!
   description: An advertisement for the Syndicate. Wont fit in a fax somehow.
-  parent: [ Paper, BaseSyndicateContraband ]
+  parent: [ PaperNoFax, BaseSyndicateContraband ]
   components:
     - type: Paper
       content: delivery-spam-reasons-to-join-syndicate
@@ -23,7 +55,7 @@
   id: RRMailSyndicateSpamLetter
   name: reasons to choose The Syndicate!
   description: An advertisement for the Syndicate. Wont fit in a fax somehow.
-  parent: [ Paper, BaseSyndicateContraband ]
+  parent: [ PaperNoFax, BaseSyndicateContraband ]
   suffix: 100% # Used in RailRoad
   components:
     - type: Paper
@@ -44,7 +76,7 @@
   id: MailSpamDontYouWantMore
   name: don't You Want More?
   description: An inciting paper that smells faintly of welding fuel and desire. Wont fit in a fax somehow.
-  parent: [ Paper, BaseMajorContraband ]
+  parent: [ PaperNoFax, BaseMajorContraband ]
   components:
     - type: Paper
       content: deliver-spam-dont-you-want-more
@@ -183,7 +215,7 @@
   name: workers' rights!
   suffix: 100%
   description: A propaganda pamphlet that smells of burnt matches. It's so thick it won't fit in the fax.
-  parent: [ Paper ] # ,BaseSovietContraband]
+  parent: [ PaperNoFax, BaseSovietContraband]
   components:
     - type: Paper
       content: delivery-spam-join-soviets
@@ -209,7 +241,7 @@
   name: workers' rights!
   suffix: 50%
   description: A propaganda pamphlet that smells of burnt matches. It's so thick it won't fit in the fax.
-  parent: [ Paper ] # ,BaseSovietContraband]
+  parent: [ PaperNoFax, BaseSovietContraband ]
   components:
     - type: Paper
       content: delivery-spam-join-soviets
@@ -235,7 +267,7 @@
   name: workers' rights!
   suffix: 25%
   description: A propaganda pamphlet that smells of burnt matches. It's so thick it won't fit in the fax.
-  parent: [ Paper ] # ,BaseSovietContraband]
+  parent: [ PaperNoFax, BaseSovietContraband]
   components:
     - type: Paper
       content: delivery-spam-join-soviets
@@ -260,7 +292,7 @@
   name: workers' rights!
   suffix: 10%
   description: A propaganda pamphlet that smells of burnt matches. It's so thick it won't fit in the fax.
-  parent: [ Paper ] # ,BaseSovietContraband]
+  parent: [ PaperNoFax, BaseSovietContraband]
   components:
     - type: Paper
       content: delivery-spam-join-soviets
@@ -272,6 +304,31 @@
       antags:
         - antag: Revolutionary
           targetComponent: RevolutionaryRule
+      blacklist:
+        components:
+          - NukeOperative
+          - MindShield
+          - Traitor
+          - Revolutionary
+
+- type: entity
+  id: MailSovietSpamLetter30Faxable
+  name: workers' rights!
+  suffix: 30%, Faxable, Admeme
+  description: A thin propaganda pamphlet that smells of burnt matches.
+  parent: [ Paper, BaseMajorContraband ]
+  components:
+    - type: Paper
+      content: delivery-spam-join-soviets
+      editingDisabled: true
+    - type: PaperVisuals
+      headerImagePath: "/Textures/_Sunrise/CopyMachine/soviet_form_header.rsi/soviet_form_header.png"
+    - type: AntagOnSign
+      chance: 0.3
+      antags:
+        - antag: Revolutionary
+          targetComponent: RevolutionaryRule
+
       blacklist:
         components:
           - NukeOperative
