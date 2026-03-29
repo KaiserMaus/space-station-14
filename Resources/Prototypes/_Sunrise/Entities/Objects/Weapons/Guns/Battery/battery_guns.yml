@@ -939,7 +939,7 @@
       magState: kill
       visualState: kill
     - proto: DestroyBeam
-      fireCost: 4000
+      fireCost: 2500
       magState: destroy
       visualState: destroy
   - type: Battery
@@ -993,7 +993,7 @@
       magState: kill
       visualState: kill
     - proto: DestroyBeam
-      fireCost: 4000
+      fireCost: 2500
       magState: destroy
       visualState: destroy
   - type: Battery
@@ -1049,7 +1049,7 @@
       magState: kill
       visualState: kill
     - proto: DestroyBeam
-      fireCost: 4000
+      fireCost: 2500
       magState: destroy
       visualState: destroy
   - type: Battery
@@ -1112,7 +1112,7 @@
       magState: kill
       visualState: kill
     - proto: DestroyBeam
-      fireCost: 4000
+      fireCost: 2500
       magState: destroy
       visualState: destroy
   - type: Battery
