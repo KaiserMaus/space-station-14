@@ -2,7 +2,7 @@ using System.Linq;
 using Content.Shared.Cuffs.Components;
 using Content.Shared.DoAfter;
 using Content.Shared.Hands.Components;
-using Content.Shared.Movement.Pulling.Systems;
+using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Strip.Components;
 
 #pragma warning disable IDE0130 // Namespace does not match folder structure
@@ -11,8 +11,6 @@ namespace Content.Shared.Strip;
 
 public abstract partial class SharedStrippableSystem
 {
-    [Dependency] private readonly PullingSystem _pullingSystem = default!;
-
     private readonly Dictionary<EntityUid, Queue<DoAfterId>> _activeStripDoAfters = new();
 
     private void InitializeSunrise()
@@ -27,18 +25,11 @@ public abstract partial class SharedStrippableSystem
 
     private int GetAvailableStripHands(Entity<HandsComponent?> user)
     {
-        if (!TryComp<HandsComponent>(user.Owner, out var handsComp))
-            return 0;
+        var freeHands = _handsSystem.CountFreeHands(user);
 
-        var handsHolding = 0;
-        foreach (var hand in handsComp.Hands.Keys)
-        {
-            if (_handsSystem.GetHeldItem(user, hand) != null)
-                handsHolding++;
-        }
-
-        var freeHands = handsComp.Count - handsHolding;
-        if (_pullingSystem.IsPulling(user.Owner))
+        if (TryComp<PullerComponent>(user.Owner, out var puller) &&
+            puller.NeedsHands &&
+            puller.Pulling != null)
             freeHands--;
 
         return Math.Max(0, freeHands);
@@ -51,11 +42,8 @@ public abstract partial class SharedStrippableSystem
 
         if (freeHands == 0)
         {
-            if (doAfterArgs.Event is not StrippableDoAfterEvent strippableEvent || !strippableEvent.InsertOrRemove)
-            {
-                _popupSystem.PopupCursor(Loc.GetString("strippable-component-no-hands-available"));
-                return;
-            }
+            _popupSystem.PopupCursor(Loc.GetString("strippable-component-no-hands-available"));
+            return;
         }
 
         if (!_activeStripDoAfters.TryGetValue(userId, out var queue))
@@ -82,9 +70,7 @@ public abstract partial class SharedStrippableSystem
 
         if (freeHands == 0)
         {
-            if (!ev.Event.InsertOrRemove)
-                ev.Cancel();
-
+            ev.Cancel();
             return;
         }
 
