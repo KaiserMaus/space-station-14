@@ -785,9 +785,9 @@
   description: A suit made by the cutting edge R&D department at cybersun to be hyper resilient.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Hardsuits/cybersun.rsi
+    sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/cybersun.rsi # Sunrise-Edit
   - type: Clothing
-    sprite: Clothing/OuterClothing/Hardsuits/cybersun.rsi
+    sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/cybersun.rsi # Sunrise-Edit
     # Sunrise-Start
     equipSound: /Audio/Mecha/mechmove03.ogg
     unequipSound: /Audio/Mecha/mechmove03.ogg
