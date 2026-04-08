@@ -1,11 +1,23 @@
 ent-PosterLegitCalendar = Календарь бренда NT
     .desc = Устаревший календарь с фирменной символикой NanoTrasen.
 
+ent-PosterLegitCleanHands = Чистые руки
+    .desc = Мойте руки. Иначе будут последствия.
+
+ent-PosterLegitEyeChart = Таблица для проверки зрения
+    .desc = Это третья буква — «Р» или «Ф»?
+
 ent-PosterLegitSkillIssue = «SKILL ISSUE»
     .desc = Кто-то явно ужасно оформил здесь документы.
 
+ent-PosterLegitDoNotCauseCancer = Координаты не вызывают рак
+    .desc = Плакат, доказывающий экипажу, что координаты на самом деле не вызывают рак.
+
+ent-PosterContrabandDoCauseCancer = Координаты вызывают рак
+    .desc = Плакат, доказывающий экипажу, что координаты на самом деле вызывают рак.
+
 ent-PosterContrabandForumPost = «Знай, что у тебя отняли»
-    .desc = В рамках размещён пост с форума NT, полный злости. Подписано Джоном Тоу?
+    .desc = В рамке размещён пост с форума NT, полный злости. Подписано Джоном Тоу?
 
 ent-PosterContrabandFlukiesCall = Проблемы с Флуки?
     .desc = Если у вас проблемы с флуки, звоните 1-800-LAKE-NOW!
