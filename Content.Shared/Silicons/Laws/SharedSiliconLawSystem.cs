@@ -1,6 +1,7 @@
 using Content.Shared.Emag.Systems;
 using Content.Shared.Mind;
 using Content.Shared.Popups;
+using Content.Shared._Sunrise.Silicons.Laws.Components; // Sunrise Edit
 using Content.Shared.Silicons.Laws.Components;
 using Content.Shared.Stunnable;
 using Content.Shared.Wires;
@@ -53,7 +54,16 @@ public abstract partial class SharedSiliconLawSystem : EntitySystem
 
         component.OwnerName = Name(args.UserUid);
 
-        NotifyLawsChanged(uid, component.EmaggedSound);
+        // Sunrise-Start - FreeMAG has its own distinctive sound, so don't stack the default emagged borg cue on top.
+        var cue = component.EmaggedSound;
+        if (args.EmagUid is { } emagUid &&
+            HasComp<LawsetEmagComponent>(emagUid))
+        {
+            cue = null;
+        }
+
+        NotifyLawsChanged(uid, cue);
+        // Sunrise-End
         if(_mind.TryGetMind(uid, out var mindId, out _))
             EnsureSubvertedSiliconRole(mindId);
 

@@ -472,7 +472,7 @@
   id: WeaponDisablerSMGBorg
   components:
   - type: BatterySelfRecharger
-    autoRechargeRate: 30
+    autoRechargeRate: 25
 
 - type: entity
   name: cyborg's pulse weapon

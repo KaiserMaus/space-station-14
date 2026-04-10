@@ -68,12 +68,6 @@
     - Atmospherics
   - type: AccessReader
     access: [ [ "Command" ], [ "Security" ] ]
-  - type: Tag
-    tags:
-    - DoorBumpOpener
-    - CanPilot
-    - FootstepSound
-    - EmagImmune
 
   # Sounds
   footstepCollection:
@@ -230,9 +224,3 @@
     - Atmospherics
   - type: AccessReader
     access: [ [ "Command" ], [ "Security" ] ]
-  - type: Tag
-    tags:
-    - DoorBumpOpener
-    - CanPilot
-    - FootstepSound
-    - EmagImmune
