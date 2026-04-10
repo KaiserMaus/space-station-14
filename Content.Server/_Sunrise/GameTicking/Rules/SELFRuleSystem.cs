@@ -1,0 +1,41 @@
+using Content.Server.Antag;
+using Content.Server.GameTicking.Rules;
+using Content.Server.GameTicking.Rules.Components;
+using Content.Server.Roles;
+using Content.Server._Sunrise.GameTicking.Rules.Components;
+using Content.Shared._Sunrise.Antags.SELF;
+using Content.Shared._Sunrise.Roles.Components;
+
+namespace Content.Server._Sunrise.GameTicking.Rules;
+
+public sealed class SELFRuleSystem : GameRuleSystem<SELFRuleComponent>
+{
+    [Dependency] private readonly AntagSelectionSystem _antag = default!;
+
+    public override void Initialize()
+    {
+        base.Initialize();
+
+        SubscribeLocalEvent<SELFRuleComponent, AfterAntagEntitySelectedEvent>(OnAfterAntagSelected);
+        SubscribeLocalEvent<SELFAgentRoleComponent, GetBriefingEvent>(OnGetBriefing);
+    }
+
+    private void OnAfterAntagSelected(Entity<SELFRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
+    {
+        _antag.SendBriefing(args.EntityUid, MakeBriefing(), null, null);
+        EnsureComp<SELFAgentComponent>(args.EntityUid);
+    }
+
+    private void OnGetBriefing(Entity<SELFAgentRoleComponent> role, ref GetBriefingEvent args)
+    {
+        if (args.Mind.Comp.OwnedEntity == null)
+            return;
+
+        args.Append(MakeBriefing());
+    }
+
+    private string MakeBriefing()
+    {
+        return $"{Loc.GetString("self-role-greeting-human")}\n \n{Loc.GetString("self-role-greeting-equipment")}\n";
+    }
+}

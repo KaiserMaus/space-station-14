@@ -48,7 +48,7 @@ public abstract partial class SharedSiliconLawSystem : EntitySystem
             return;
         }
 
-        var ev = new SiliconEmaggedEvent(args.UserUid);
+        var ev = new SiliconEmaggedEvent(args.UserUid, args.EmagUid); // Sunrise Edit
         RaiseLocalEvent(uid, ref ev);
 
         component.OwnerName = Name(args.UserUid);
@@ -79,4 +79,4 @@ public abstract partial class SharedSiliconLawSystem : EntitySystem
 }
 
 [ByRefEvent]
-public record struct SiliconEmaggedEvent(EntityUid user);
+public record struct SiliconEmaggedEvent(EntityUid UserUid, EntityUid? EmagUid = null); // Sunrise Edit

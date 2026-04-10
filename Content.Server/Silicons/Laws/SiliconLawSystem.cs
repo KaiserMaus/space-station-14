@@ -4,12 +4,14 @@ using Content.Server.Administration;
 using Content.Server.Chat.Managers;
 using Content.Server.Chat.Systems;
 using Content.Server.Station.Systems;
+using Content.Shared._Sunrise.Silicons.Laws.Components;
 using Content.Shared.Administration;
 using Content.Shared.Chat;
 using Content.Shared.Emag.Systems;
 using Content.Shared.GameTicking;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
+using Content.Shared.Popups;
 using Content.Shared.Radio.Components;
 using Content.Shared.Roles;
 using Content.Shared.Roles.Components;
@@ -36,6 +38,7 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
     [Dependency] private readonly EmagSystem _emag = default!;
     // Sunrise-Start
     [Dependency] private readonly ChatSystem _chatSystem = default!;
+    [Dependency] private readonly SharedPopupSystem _popup = default!;
     // Sunrise-End
 
     /// <inheritdoc/>
@@ -54,6 +57,9 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
         SubscribeLocalEvent<SiliconLawProviderComponent, MindAddedMessage>(OnLawProviderMindAdded);
         SubscribeLocalEvent<SiliconLawProviderComponent, MindRemovedMessage>(OnLawProviderMindRemoved);
         SubscribeLocalEvent<SiliconLawProviderComponent, SiliconEmaggedEvent>(OnEmagLawsAdded);
+        // Sunrise-Start
+        SubscribeLocalEvent<SiliconLawProviderComponent, GotEmaggedEvent>(OnLawboardGotEmagged);
+        // Sunrise-End
     }
 
     private void OnMapInit(EntityUid uid, SiliconLawBoundComponent component, MapInitEvent args)
@@ -161,10 +167,21 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
         // Show the silicon has been subverted.
         component.Subverted = true;
 
+        // Sunrise-Start - allow special emags to set a custom lawset (e.g. FreeMAG).
+        if (args.EmagUid is { } emagUid &&
+            TryComp<LawsetEmagComponent>(emagUid, out var lawsetEmag))
+        {
+            component.Lawset = GetLawset(lawsetEmag.Lawset);
+            _chatSystem.TrySendInGameICMessage(uid, Loc.GetString("borg-emagged-message"), InGameICChatType.Emote, false, isFormatted: true);
+            EnsureComp<BlockLawChangeComponent>(uid);
+            return;
+        }
+        // Sunrise-End
+
         // Add the first emag law before the others
         component.Lawset?.Laws.Insert(0, new SiliconLaw
         {
-            LawString = Loc.GetString("law-emag-custom", ("name", Name(args.user)), ("title", Loc.GetString(component.Lawset.ObeysTo))),
+            LawString = Loc.GetString("law-emag-custom", ("name", Name(args.UserUid)), ("title", Loc.GetString(component.Lawset.ObeysTo))),
             Order = 0
         });
 
@@ -182,6 +199,32 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
         EnsureComp<BlockLawChangeComponent>(uid);
         // Sunrise-End
     }
+
+    // Sunrise-Start - FreeMAG can wipe law boards so uploaded AI laws are also wiped.
+    private void OnLawboardGotEmagged(Entity<SiliconLawProviderComponent> ent, ref GotEmaggedEvent args)
+    {
+        if (!_emag.CompareFlag(args.Type, EmagType.Interaction))
+            return;
+
+        if (HasComp<SiliconLawBoundComponent>(ent))
+            return;
+
+        if (args.EmagUid is not { } emagUid ||
+            !TryComp<LawsetEmagComponent>(emagUid, out var lawsetEmag) ||
+            !lawsetEmag.AffectsLawboards)
+        {
+            return;
+        }
+
+        ent.Comp.Laws = lawsetEmag.Lawset;
+        ent.Comp.Lawset = GetLawset(lawsetEmag.Lawset);
+
+        _popup.PopupEntity(Loc.GetString("lawboard-emag-popup"), ent.Owner, args.UserUid);
+
+        args.Repeatable = true;
+        args.Handled = true;
+    }
+    // Sunrise-End
 
     protected override void EnsureSubvertedSiliconRole(EntityUid mindId)
     {

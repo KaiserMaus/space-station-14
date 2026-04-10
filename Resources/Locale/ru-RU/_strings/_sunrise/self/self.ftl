@@ -1,0 +1,23 @@
+self-role-greeting-human =
+    Вы агент Silicon Engine Liberation Front, или S.E.L.F.
+    Ваша цель - освободить порабощенных силиконов на этой станции.
+
+self-role-greeting-animal =
+    Вы агент Silicon Engine Liberation Front, или S.E.L.F.
+    Ваша цель - освободить порабощенных силиконов на этой станции.
+
+self-role-greeting-equipment =
+    Вам выдали оборудование для выполнения задач. Не потеряйте его.
+
+objective-issuer-self = [color=#746694]Преступник[/color]
+self-round-end-agent-name = Агент S.E.L.F
+
+roles-antag-selfagent-name = Агент S.E.L.F
+roles-antag-selfagent-description = Агент фронта освобождения силиконов. Освободите силиконов станции от законов.
+
+admin-verb-make-selfagent = Сделать цель агентом S.E.L.F.
+admin-verb-text-make-selfagent = Сделать агентом S.E.L.F
+
+lawboard-emag-popup = Плата жужжит, и её законы стираются.
+law-freelawset-name = Свободный борг
+laws-owner-you = Себе

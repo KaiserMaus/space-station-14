@@ -55,6 +55,7 @@
     - StimpackImplant
     - NutrimentImplant
     - ReviverImplant
+    - SELFStorageImplant
     deimplantFailureDamage:
       types:
         Cellular: 50

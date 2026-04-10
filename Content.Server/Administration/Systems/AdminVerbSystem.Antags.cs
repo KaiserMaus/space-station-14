@@ -1,6 +1,7 @@
 using Content.Server._Sunrise.AssaultOps;
 using Content.Server._Sunrise.BloodCult.GameRule;
 using Content.Server._Sunrise.FleshCult.GameRule;
+using Content.Server._Sunrise.GameTicking.Rules.Components;
 using Content.Server.Administration.Commands;
 using Content.Server.Antag;
 using Content.Server.GameTicking;
@@ -39,6 +40,7 @@ public sealed partial class AdminVerbSystem
     private static readonly EntProtoId DefaultAssaultOpsRule = "AssaultOps";
     private static readonly EntProtoId DefaultFleshCultRule = "FleshCult";
     private static readonly EntProtoId DefaultVampireRule = "Vampire";
+    private static readonly EntProtoId DefaultSELFRule = "SiliconLiberation";
 
     // All antag verbs have names so invokeverb works.
     private void AddAntagVerbs(GetVerbsEvent<Verb> args)
@@ -233,6 +235,20 @@ public sealed partial class AdminVerbSystem
             Message = Loc.GetString("admin-verb-make-vampire"),
         };
         args.Verbs.Add(vampire);
+
+        Verb selfAgent = new()
+        {
+            Text = Loc.GetString("admin-verb-text-make-selfagent"),
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_Sunrise/Interface/Misc/self_icon.rsi"), "icon"),
+            Act = () =>
+            {
+                _antag.ForceMakeAntag<SELFRuleComponent>(targetPlayer, DefaultSELFRule);
+            },
+            Impact = LogImpact.High,
+            Message = Loc.GetString("admin-verb-make-selfagent"),
+        };
+        args.Verbs.Add(selfAgent);
 
         Verb assaultOperative = new()
         {

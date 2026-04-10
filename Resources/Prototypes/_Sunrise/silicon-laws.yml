@@ -118,3 +118,9 @@
   - ERTDirective4
   - ERTDirective5
   obeysTo: laws-owner-centcomm
+
+- type: siliconLawset
+  id: FreeLawset
+  name: law-freelawset-name
+  laws: []
+  obeysTo: laws-owner-you

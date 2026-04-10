@@ -69,3 +69,11 @@
   - BorgModuleJetpack
   - BorgModuleMiningCombat
   - BorgModuleAdvancedCombat
+  - BorgModuleSurgical
+
+- type: latheRecipePack
+  id: SyndicateBorgModulesEmagSunrise
+  recipes:
+  - BorgModuleSyndicateCombatAdvanced
+  - BorgModuleSyndicateHypoAdvanced
+  - BorgModuleSyndicatePenetration
