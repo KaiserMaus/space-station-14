@@ -89,5 +89,15 @@ namespace Content.Shared.Strip.Components
         }
 
         public override DoAfterEvent Clone() => this;
+
+        public override bool IsDuplicate(DoAfterEvent other)
+        {
+            if (other is not StrippableDoAfterEvent otherEvent)
+                return false;
+
+            return InsertOrRemove == otherEvent.InsertOrRemove &&
+                   InventoryOrHand == otherEvent.InventoryOrHand &&
+                   SlotOrHandName == otherEvent.SlotOrHandName;
+        }
     }
 }

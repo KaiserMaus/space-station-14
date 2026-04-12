@@ -226,7 +226,7 @@ public abstract partial class SharedStrippableSystem : EntitySystem // Sunrise-E
             BreakOnDamage = true,
             BreakOnMove = true,
             NeedHand = true,
-            DuplicateCondition = DuplicateConditions.SameTool
+            DuplicateCondition = DuplicateConditions.SameTarget | DuplicateConditions.SameEvent
         };
 
         LimitSimultaneousStripDoAfters(user, doAfterArgs); // Sunrise-Edit
@@ -330,7 +330,7 @@ public abstract partial class SharedStrippableSystem : EntitySystem // Sunrise-E
             BreakOnMove = true,
             NeedHand = true,
             BreakOnHandChange = false, // Allow simultaneously removing multiple items.
-            DuplicateCondition = DuplicateConditions.SameTool
+            DuplicateCondition = DuplicateConditions.SameTarget | DuplicateConditions.SameEvent
         };
 
         LimitSimultaneousStripDoAfters((user, null), doAfterArgs);
@@ -433,7 +433,7 @@ public abstract partial class SharedStrippableSystem : EntitySystem // Sunrise-E
             BreakOnDamage = true,
             BreakOnMove = true,
             NeedHand = true,
-            DuplicateCondition = DuplicateConditions.SameTool
+            DuplicateCondition = DuplicateConditions.SameTarget | DuplicateConditions.SameEvent
         };
 
         LimitSimultaneousStripDoAfters(user, doAfterArgs); // Sunrise-Edit
@@ -544,7 +544,7 @@ public abstract partial class SharedStrippableSystem : EntitySystem // Sunrise-E
             BreakOnMove = true,
             NeedHand = true,
             BreakOnHandChange = false, // Allow simultaneously removing multiple items.
-            DuplicateCondition = DuplicateConditions.SameTool
+            DuplicateCondition = DuplicateConditions.SameTarget | DuplicateConditions.SameEvent
         };
 
         LimitSimultaneousStripDoAfters(user, doAfterArgs); // Sunrise-Edit
@@ -602,8 +602,6 @@ public abstract partial class SharedStrippableSystem : EntitySystem // Sunrise-E
             }
         }
 
-        if (ev.Cancelled)
-            CleanupTrackedStripDoAfter(entity.Owner, ev.DoAfter.Id);
     }
 
     private void OnStrippableDoAfterFinished(Entity<HandsComponent> entity, ref StrippableDoAfterEvent ev)
@@ -615,8 +613,6 @@ public abstract partial class SharedStrippableSystem : EntitySystem // Sunrise-E
         DebugTools.Assert(ev.Target != null);
         DebugTools.Assert(ev.Used != null);
         DebugTools.Assert(ev.SlotOrHandName != null);
-
-        CleanupTrackedStripDoAfter(entity.Owner, ev.DoAfter.Id);
 
         if (ev.InventoryOrHand)
         {
