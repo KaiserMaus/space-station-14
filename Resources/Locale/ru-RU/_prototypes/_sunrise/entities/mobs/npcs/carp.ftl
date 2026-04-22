@@ -14,5 +14,7 @@ ent-MobCarpServantDragon = карп-слуга драконий
 
 ent-MobCarpHoloDragon = драконий голокарп
     .desc = { ent-MobCarpHolo.desc }
+ent-MobCarpRainbowDragon = радужный карп
+    .desc = { ent-MobCarpRainbow.desc }
 ent-MobSharkDragon = драконий шаркминноу
     .desc = { ent-MobShark.desc }
