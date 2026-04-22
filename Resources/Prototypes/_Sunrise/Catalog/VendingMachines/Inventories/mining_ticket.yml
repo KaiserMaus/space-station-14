@@ -80,6 +80,22 @@
   - MiningEquipment
 
 - type: listing
+  id: VendorMiningClothingEyesGlassesWelding
+  productEntity: ClothingEyesGlassesWelding
+  cost:
+    SalvageTicket: 200
+  categories:
+  - MiningEquipment
+
+- type: listing
+  id: VendorMiningClothingEyesGlassesMeson
+  productEntity: ClothingEyesGlassesMeson
+  cost:
+    SalvageTicket: 500
+  categories:
+  - MiningEquipment
+
+- type: listing
   id: VendorMiningMiningDrill
   productEntity: MiningDrill
   cost:

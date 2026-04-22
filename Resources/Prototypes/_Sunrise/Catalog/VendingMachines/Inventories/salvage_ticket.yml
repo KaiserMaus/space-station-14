@@ -76,6 +76,22 @@
   - SalvageEquipment
 
 - type: listing
+  id: VendorSalvageClothingEyesGlassesWelding
+  productEntity: ClothingEyesGlassesWelding
+  cost:
+    SalvageTicket: 200
+  categories:
+  - SalvageEquipment
+
+- type: listing
+  id: VendorSalvageClothingEyesGlassesMeson
+  productEntity: ClothingEyesGlassesMeson
+  cost:
+    SalvageTicket: 500
+  categories:
+  - SalvageEquipment
+
+- type: listing
   id: VendorSalvageMiningDrill
   productEntity: MiningDrill
   cost:
@@ -189,7 +205,7 @@
   id: VendorSalvageWeaponLaserLNT620
   productEntity: WeaponLaserLNT620
   cost:
-    SalvageTicket: 600
+    SalvageTicket: 900
   categories:
   - SalvageWeapons
 
@@ -222,7 +238,7 @@
   id: VendorSalvageWeaponShotgunGA12
   productEntity: WeaponShotgunGA12
   cost:
-    SalvageTicket: 200
+    SalvageTicket: 300
   categories:
   - SalvageWeapons
 
@@ -238,7 +254,7 @@
   id: VendorSalvageWeaponShotgunCycler
   productEntity: WeaponShotgunCycler
   cost:
-    SalvageTicket: 1200
+    SalvageTicket: 2250
   categories:
   - SalvageWeapons
 
