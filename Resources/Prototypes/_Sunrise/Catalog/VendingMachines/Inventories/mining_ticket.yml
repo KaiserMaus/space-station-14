@@ -42,7 +42,8 @@
 
 - type: listing
   id: VendorMiningMechMiningPod
-  productEntity: MechMiningPod
+  productEntity: MechMiningPodFlatpack
+  icon: { sprite: _Sunrise/Objects/Specific/Mech/mining_pod.rsi, state: mining_pod }
   cost:
     SalvageTicket: 800
   categories:
