@@ -29,6 +29,7 @@
     - NanoTrasen
   - type: Mech
     entryDelay: 1
+  - type: MechVulnerableToEMP
   - type: MechAir
   - type: GravityAffected
   - type: AirFilter
