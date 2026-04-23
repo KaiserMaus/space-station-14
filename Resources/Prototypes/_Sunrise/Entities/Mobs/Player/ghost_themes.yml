@@ -446,4 +446,4 @@
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/draedon.rsi
     state: draedon_animated
-  scale: 0.25, 0.25
+  scale: 0.35, 0.35
