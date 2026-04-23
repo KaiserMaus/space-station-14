@@ -214,7 +214,7 @@
   id: VendorSalvageWeaponLaserLNT620
   productEntity: WeaponLaserLNT620
   cost:
-    SalvageTicket: 1500
+    SalvageTicket: 1200
   categories:
   - SalvageWeapons
 

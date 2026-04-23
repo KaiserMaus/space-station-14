@@ -36,7 +36,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        80: Dead
+        60: Dead
     - type: MeleeWeapon
       damage:
         types:
@@ -84,10 +84,10 @@
   - type: MeleeWeapon
     damage:
       types:
-        Blunt: 10
-        Slash: 10
+        Blunt: 9
+        Slash: 9
         Bloodloss: 5
-        Structural: 20
+        Structural: 25
   - type: Tag
     tags:
     - Carp
