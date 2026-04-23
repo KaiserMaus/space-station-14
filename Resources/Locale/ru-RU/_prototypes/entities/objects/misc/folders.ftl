@@ -97,6 +97,3 @@ ent-BoxFolderCentComClipboardEmpty = { ent-BoxFolderCentComClipboard }
 ent-BoxFolderCentComClipboardThreePapers = { ent-BoxFolderCentComClipboard }
     .desc = { ent-BoxFolderCentComClipboard.desc }
 
-ent-SunriseBoxFolderNuclearCodesStation = { ent-BoxFolderNuclearCodes }
-    .suffix = Только станция
-    .desc = { ent-BoxFolderNuclearCodes.desc }

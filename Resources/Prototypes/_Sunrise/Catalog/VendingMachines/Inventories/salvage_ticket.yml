@@ -58,6 +58,9 @@
     SalvageTicket: 150
   categories:
   - SalvageEquipment
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
 
 - type: listing
   id: VendorSalvageClothingOuterHardsuitSalvage
@@ -66,6 +69,9 @@
     SalvageTicket: 250
   categories:
   - SalvageEquipment
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
 
 - type: listing
   id: VendorSalvageClothingOuterHardsuitSpatio
@@ -74,6 +80,9 @@
     SalvageTicket: 100
   categories:
   - SalvageEquipment
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
 
 - type: listing
   id: VendorSalvageClothingEyesGlassesWelding
@@ -87,7 +96,7 @@
   id: VendorSalvageClothingEyesGlassesMeson
   productEntity: ClothingEyesGlassesMeson
   cost:
-    SalvageTicket: 500
+    SalvageTicket: 600
   categories:
   - SalvageEquipment
 
@@ -95,7 +104,7 @@
   id: VendorSalvageMiningDrill
   productEntity: MiningDrill
   cost:
-    SalvageTicket: 200
+    SalvageTicket: 300
   categories:
   - SalvageEquipment
   conditions:
@@ -106,7 +115,7 @@
   id: VendorSalvageMiningDrillDiamond
   productEntity: MiningDrillDiamond
   cost:
-    SalvageTicket: 400
+    SalvageTicket: 600
   categories:
   - SalvageEquipment
   conditions:
@@ -125,7 +134,7 @@
   id: VendorSalvagePKAUpgradeDamage
   productEntity: PKAUpgradeDamage
   cost:
-    SalvageTicket: 300
+    SalvageTicket: 175
   categories:
   - SalvageEquipment
   conditions:
@@ -136,7 +145,7 @@
   id: VendorSalvagePKAUpgradeRange
   productEntity: PKAUpgradeRange
   cost:
-    SalvageTicket: 300
+    SalvageTicket: 175
   categories:
   - SalvageEquipment
   conditions:
@@ -147,7 +156,7 @@
   id: VendorSalvagePKAUpgradeFireRate
   productEntity: PKAUpgradeFireRate
   cost:
-    SalvageTicket: 300
+    SalvageTicket: 175
   categories:
   - SalvageEquipment
   conditions:
@@ -205,7 +214,7 @@
   id: VendorSalvageWeaponLaserLNT620
   productEntity: WeaponLaserLNT620
   cost:
-    SalvageTicket: 900
+    SalvageTicket: 1500
   categories:
   - SalvageWeapons
 
@@ -213,7 +222,7 @@
   id: VendorSalvageWeaponLaserSvalinn
   productEntity: WeaponLaserSvalinn
   cost:
-    SalvageTicket: 300
+    SalvageTicket: 200
   categories:
   - SalvageWeapons
 
@@ -221,7 +230,7 @@
   id: VendorSalvageWeaponGunLaserCarbineSemi
   productEntity: WeaponGunLaserCarbineSemi
   cost:
-    SalvageTicket: 500
+    SalvageTicket: 350
   categories:
   - SalvageWeapons
 
@@ -230,7 +239,7 @@
   icon: { sprite: _Sunrise/Structures/Storage/Crates/woodcrate_ussp_mosin.rsi, state: icon }
   productEntity: CrateShelfMosin
   cost:
-    SalvageTicket: 200
+    SalvageTicket: 150
   categories:
   - SalvageWeapons
 
@@ -238,7 +247,7 @@
   id: VendorSalvageWeaponShotgunGA12
   productEntity: WeaponShotgunGA12
   cost:
-    SalvageTicket: 300
+    SalvageTicket: 250
   categories:
   - SalvageWeapons
 
@@ -246,7 +255,7 @@
   id: VendorSalvageWeaponPistolMK58
   productEntity: WeaponPistolMk58
   cost:
-    SalvageTicket: 250
+    SalvageTicket: 225
   categories:
   - SalvageWeapons
 
@@ -254,7 +263,7 @@
   id: VendorSalvageWeaponShotgunCycler
   productEntity: WeaponShotgunCycler
   cost:
-    SalvageTicket: 2250
+    SalvageTicket: 2500
   categories:
   - SalvageWeapons
 
@@ -263,7 +272,7 @@
   id: VendorSalvageSpeedLoaderShotgunEmpty
   productEntity: SpeedLoaderShotgunEmpty
   cost:
-    SalvageTicket: 100
+    SalvageTicket: 50
   categories:
   - SalvageConsumeables
 
@@ -287,7 +296,7 @@
   id: VendorSalvageMagazineMK58
   productEntity: MagazinePistolSP
   cost:
-    SalvageTicket: 75
+    SalvageTicket: 50
   categories:
   - SalvageConsumeables
 
@@ -316,7 +325,7 @@
   id: VendorSalvageMagazineBatteryLr30
   productEntity: MagazineBatteryLr30
   cost:
-    SalvageTicket: 100
+    SalvageTicket: 50
   categories:
   - SalvageConsumeables
 
@@ -340,7 +349,7 @@
   id: VendorSalvageMedkitCombatFilled
   productEntity: MedkitCombatFilled
   cost:
-    SalvageTicket: 400
+    SalvageTicket: 500
   categories:
   - SalvageConsumeables
 

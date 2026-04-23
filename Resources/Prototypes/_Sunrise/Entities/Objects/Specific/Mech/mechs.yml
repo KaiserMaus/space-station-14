@@ -78,8 +78,8 @@
   - type: InputMover
   - type: InteractionOutline
   - type: MovementSpeedModifier
-    baseWalkSpeed: 2
-    baseSprintSpeed: 5
+    baseWalkSpeed: 1
+    baseSprintSpeed: 4
     baseWeightlessModifier: 2
   - type: MovementAlwaysTouching
   - type: Pullable
