@@ -3230,6 +3230,7 @@
     Telecrystal: 9
   categories:
   - UplinkPointless
+  restockTime: 1800
   conditions:
   - !type:StoreWhitelistCondition
     blacklist:

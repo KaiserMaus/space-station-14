@@ -3,17 +3,8 @@
   parent: MobCarpHolo
   suffix: DragonBrood
   components:
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape:
-            !type:PhysShapeCircle
-            radius: 0.15
-          density: 10
-          mask:
-            - FlyingMobMask
-          layer:
-            - FlyingMobLayer
+    - type: Sprite
+      sprite: _Sunrise/Mobs/Aliens/Carps/holo.rsi
     - type: GhostRole
       allowMovement: true
       allowSpeech: true
@@ -40,8 +31,8 @@
     - type: MeleeWeapon
       damage:
         types:
-          Blunt: 9
-          Slash: 9
+          Blunt: 6
+          Slash: 6
           Structural: 15
     - type: Tag
       tags:
@@ -55,45 +46,51 @@
   parent: MobShark
   suffix: DragonBrood
   components:
-  - type: HTN
-    rootTask:
-      task: DragonCarpCompound
-  - type: GhostRole
-    allowMovement: true
-    allowSpeech: true
-    makeSentient: true
-    name: ghost-role-information-sentient-carpshark-name
-    description: ghost-role-information-sentient-carp-description
-    rules: ghost-role-information-space-dragon-summoned-carp-rules
-    mindRoles:
-    - MindRoleGhostRoleTeamAntagonistFlock
-  - type: GhostTakeoverAvailable
-  - type: Sprite
-    scale: 0.9, 0.9
-    sprite: _Sunrise/Mobs/Aliens/Carps/sharkminnow.rsi
-    layers:
-    - map: [ "enum.DamageStateVisualLayers.Base" ]
-      state: alive
-    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
-      state: mouth
-      shader: unshaded
-  - type: MobThresholds
-    thresholds:
-      0: Alive
-      150: Dead
-  - type: MeleeWeapon
-    damage:
-      types:
-        Blunt: 9
-        Slash: 9
-        Bloodloss: 5
-        Structural: 25
-  - type: Tag
-    tags:
-    - Carp
-    - DoorBumpOpener
-    - NoPaint
-    - CarpRiftHealTarget
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: ghost-role-information-sentient-carpshark-name
+      description: ghost-role-information-sentient-carp-description
+      rules: ghost-role-information-space-dragon-summoned-carp-rules
+      mindRoles:
+      - MindRoleGhostRoleTeamAntagonistFlock
+    - type: GhostTakeoverAvailable
+    - type: HTN
+      rootTask:
+        task: DragonCarpCompound
+    - type: Flammable
+      damage:
+       types: {}
+    - type: Temperature
+    - type: TemperatureDamage
+      heatDamageThreshold: 1200
+    - type: Sprite
+      scale: 0.9, 0.9
+      sprite: _Sunrise/Mobs/Aliens/Carps/sharkminnow.rsi
+      layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: alive
+      - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+        state: mouth
+        shader: unshaded
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        125: Dead
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 9
+          Slash: 9
+          Bloodloss: 5
+          Structural: 25
+    - type: Tag
+      tags:
+      - Carp
+      - DoorBumpOpener
+      - NoPaint
+      - CarpRiftHealTarget
 
 - type: entity
   id: MobCarpRainbowDragon
@@ -112,7 +109,13 @@
     - type: GhostTakeoverAvailable
     - type: HTN
       rootTask:
-        task: SimpleRangedHostileCompound
+        task: DragonCarpCompound
+    - type: Flammable
+      damage:
+       types: {}
+    - type: Temperature
+    - type: TemperatureDamage
+      heatDamageThreshold: 1200
     - type: BatteryAmmoProvider
       proto: RedLightLaser
       fireCost: 50
@@ -128,21 +131,15 @@
       availableModes:
       - SemiAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-    - type: Flammable
-      damage:
-       types: {}
-    - type: Temperature
-    - type: TemperatureDamage
-      heatDamageThreshold: 1200
     - type: MobThresholds
       thresholds:
         0: Alive
-        80: Dead
+        70: Dead
     - type: MeleeWeapon
       damage:
         types:
-          Blunt: 9
-          Slash: 9
+          Blunt: 7
+          Slash: 7
           Structural: 15
     - type: Tag
       tags:
