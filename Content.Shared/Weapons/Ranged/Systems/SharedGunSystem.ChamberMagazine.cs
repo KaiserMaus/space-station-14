@@ -41,6 +41,15 @@ public abstract partial class SharedGunSystem
 
     private void OnChamberStartup(EntityUid uid, ChamberMagazineAmmoProviderComponent component, ComponentStartup args)
     {
+        // Sunrise-Start
+        if (_netManager.IsServer &&
+            component.SelectedPrefix == null &&
+            component.AvailablePrefixes.Count > 1)
+        {
+            component.SelectedPrefix = component.AvailablePrefixes[Random.Next(component.AvailablePrefixes.Count)];
+            Dirty(uid, component);
+        }
+        // Sunrise-End
         // Appearance data doesn't get serialized and want to make sure this is correct on spawn (regardless of MapInit) so.
         if (component.BoltClosed != null)
         {

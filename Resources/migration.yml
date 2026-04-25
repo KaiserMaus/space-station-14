@@ -1010,4 +1010,8 @@ ComputerCriminalRecords: SunriseComputerCriminalRecords
 BrigTimer: PrisonCellTimer
 #2026-04-19
 AtmosDeviceFanDirectionalInvisible: AtmosDeviceFanDirectional
+#2026-04-25
+WeaponPistolG22: WeaponPistolEnforcer
+WeaponPistolG22Auto: WeaponPistolEnforcer
+MagazineGlock22: MagazinePistol
 # region Sunrise-End
