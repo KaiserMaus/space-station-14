@@ -242,7 +242,7 @@
     #
     - EnergyDomeDirectionalTurtle
     - WeaponTemperatureGun
-    - ModularReceiverAuto
+    #- ModularReceiverAuto
     - LecterUpgrade
     - DrozdUpgrade
   #####################BOX#######################
