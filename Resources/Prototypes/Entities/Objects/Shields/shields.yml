@@ -642,8 +642,7 @@
           Heat: 1
           Piercing: 1
     - type: Appearance
-    - type: Damageable
-    - type: Injurable
+    - type: Damageable # Sunrise-Edit: keep shield damage container on Damageable
       damageContainer: Shield
     - type: ExaminableDamage
       messages: EnergyShieldMessages
