@@ -46,3 +46,5 @@ ent-BorgModuleSurgical = surgery cyborg module
     .desc = { ent-BaseBorgModuleMedical.desc }
 ent-BorgModuleOrganPlaceholder = organ placeholder
     .desc = { ent-BaseItem.desc }
+ent-XenoborgModuleTemperature = temperature xenoborg module
+    .desc = Module with a self-recharging temperature gun.

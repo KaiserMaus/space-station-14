@@ -56,6 +56,10 @@
     - NutrimentImplant
     - ReviverImplant
     - SELFStorageImplant
+    - SmokeScreenImplant
+    - ScramImplantProto
+    - DeathRattleImplantBlueShield
+    - CreepyLaughImplant
     deimplantFailureDamage:
       types:
         Cellular: 50
