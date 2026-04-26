@@ -3,10 +3,10 @@
   name: guide-entry-disease
   text: "/ServerInfo/Guidebook/_Sunrise/Antagonist/Disease.xml"
 
-# - type: guideEntry
-#   id: Changelings
-#   name: guide-entry-changelings
-#   text: "/ServerInfo/Guidebook/_Sunrise/Antagonist/Changelings.xml"
+- type: guideEntry
+  id: Changelings
+  name: guide-entry-changelings
+  text: "/ServerInfo/Guidebook/_Sunrise/Antagonist/Changelings.xml"
 
 - type: guideEntry
   id: FleshCult
