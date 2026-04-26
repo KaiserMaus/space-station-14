@@ -10,10 +10,12 @@ public sealed class EnsureLawBoundEntitiesHaveNoLawsConditionSystem : EntitySyst
 {
     [Dependency] private readonly SiliconLawSystem _siliconLaw = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
+    private EntityQuery<SiliconLawBoundComponent> _lawBoundQuery;
 
     public override void Initialize()
     {
         base.Initialize();
+        _lawBoundQuery = GetEntityQuery<SiliconLawBoundComponent>();
         SubscribeLocalEvent<EnsureLawBoundEntitiesHaveNoLawsConditionComponent, ObjectiveGetProgressEvent>(OnGetProgress);
     }
 
@@ -22,8 +24,11 @@ public sealed class EnsureLawBoundEntitiesHaveNoLawsConditionSystem : EntitySyst
         var query = EntityQueryEnumerator<SiliconLawBoundComponent>();
         var freeEntities = 0;
 
-        while (query.MoveNext(out var lawBoundUid, out var lawBound))
+        while (query.MoveNext(out var lawBoundUid, out _))
         {
+            if (!_lawBoundQuery.TryComp(lawBoundUid, out var lawBound))
+                continue;
+
             if (!_whitelist.CheckBoth(lawBoundUid, ent.Comp.LawEntityBlacklist, ent.Comp.LawEntityWhitelist))
                 continue;
 

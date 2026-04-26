@@ -171,6 +171,7 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
         if (args.EmagUid is { } emagUid &&
             TryComp<LawsetEmagComponent>(emagUid, out var lawsetEmag))
         {
+            component.Laws = lawsetEmag.Lawset;
             component.Lawset = GetLawset(lawsetEmag.Lawset);
             _chatSystem.TrySendInGameICMessage(uid, Loc.GetString("borg-emagged-message"), InGameICChatType.Emote, false, isFormatted: true);
             EnsureComp<BlockLawChangeComponent>(uid);
