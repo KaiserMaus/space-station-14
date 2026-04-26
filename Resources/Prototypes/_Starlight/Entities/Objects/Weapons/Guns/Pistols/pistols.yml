@@ -92,6 +92,7 @@
     - greengrip
     - steel
     - rusty
+    - sacura
   - type: StealTarget
     stealGroup: OfficerHandgun
   - type: ItemSlots
