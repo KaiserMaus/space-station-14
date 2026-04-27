@@ -93,6 +93,8 @@
     - steel
     - rusty
     - sacura
+    - rabbit
+    - flowers
   - type: StealTarget
     stealGroup: OfficerHandgun
   - type: ItemSlots

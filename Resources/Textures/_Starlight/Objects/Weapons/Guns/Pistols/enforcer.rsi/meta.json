@@ -120,6 +120,18 @@
         },
         {
             "name": "bolt-open_sacura"
+        },
+        {
+            "name": "base_flowers"
+        },
+        {
+            "name": "bolt-open_flowers"
+        },
+        {
+            "name": "base_rabbit"
+        },
+        {
+            "name": "bolt-open_rabbit"
         }
     ]
 }
