@@ -5,7 +5,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: BulletholeGenerator
-    RsiPath: /Textures/_Sunrise/Effects/bulletholes.rsi
+    rsiPath: /Textures/_Sunrise/Effects/bulletholes.rsi
   - type: HitscanBasicVisuals
     muzzleFlash:
       sprite: _Starlight/Objects/Weapons/Guns/Projectiles/projectiles.rsi
