@@ -55,6 +55,8 @@
   - type: Reflective
   - type: FlyBySound
   - type: Clickable
+  # Sunrise-Edit - marks bullets that should apply bullet-hole visuals on hit
+  - type: BulletholeGenerator
   - type: Sprite
     noRot: false
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi

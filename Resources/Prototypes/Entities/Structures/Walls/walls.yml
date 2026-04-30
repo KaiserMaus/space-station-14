@@ -35,6 +35,10 @@
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallic
+  # Sunrise-Edit - required for bullet-hole appearance data syncing
+  - type: Appearance
+  # Sunrise-Edit - allows walls to display accumulated bullet-hole overlays
+  - type: Bullethole
   - type: Physics
     bodyType: Static
   - type: Fixtures
