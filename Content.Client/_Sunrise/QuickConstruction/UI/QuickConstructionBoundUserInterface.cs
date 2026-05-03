@@ -9,6 +9,7 @@ using Robust.Client.Placement;
 using Robust.Client.UserInterface;
 using Robust.Shared.Collections;
 using Robust.Shared.Enums;
+using Robust.Shared.Log;
 using Robust.Shared.Prototypes;
 
 namespace Content.Client._Sunrise.QuickConstruction.UI;
@@ -18,17 +19,22 @@ public sealed class QuickConstructionBoundUserInterface : BoundUserInterface
 {
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IPlacementManager _placement = default!;
+    [Dependency] private readonly ILogManager _logManager = default!;
 
     private SimpleRadialMenu? _menu;
+    private ConstructionSystem? _constructionSystem;
+    private readonly ISawmill _sawmill;
 
     public QuickConstructionBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
     {
         IoCManager.InjectDependencies(this);
+        _sawmill = _logManager.GetSawmill("quick-construction.bui");
     }
 
     protected override void Open()
     {
         base.Open();
+        _constructionSystem = EntMan.System<ConstructionSystem>();
 
         if (!EntMan.TryGetComponent<QuickConstructableComponent>(Owner, out var quickConstructable) ||
             !_prototypeManager.TryIndex(quickConstructable.Category, out var rootCategory))
@@ -50,17 +56,32 @@ public sealed class QuickConstructionBoundUserInterface : BoundUserInterface
         List<ProtoId<QuickConstructionCategoryPrototype>> categoryEntries,
         HashSet<ProtoId<QuickConstructionCategoryPrototype>> categoryStack)
     {
-        var constructionSystem = EntMan.System<ConstructionSystem>();
+        var constructionSystem = _constructionSystem;
+        if (constructionSystem == null)
+            return [];
 
         ValueList<RadialMenuActionOptionBase> constructionButtons = [];
         ValueList<(QuickConstructionCategoryPrototype Prototype, IReadOnlyCollection<RadialMenuOptionBase> Buttons)> categoryButtons = [];
 
         foreach (var constructionEntry in constructionEntries)
         {
-            if (!_prototypeManager.TryIndex(constructionEntry, out var constructionPrototype) ||
-                !constructionSystem.TryGetRecipePrototype(constructionEntry, out var recipePrototypeId) ||
-                !_prototypeManager.TryIndex(recipePrototypeId, out var recipePrototype))
+            if (!_prototypeManager.TryIndex(constructionEntry, out var constructionPrototype))
+            {
+                _sawmill.Warning($"Skipping unknown construction prototype '{constructionEntry}' in quick construction menu for entity {Owner}.");
                 continue;
+            }
+
+            if (!constructionSystem.TryGetRecipePrototype(constructionEntry, out var recipePrototypeId))
+            {
+                _sawmill.Warning($"Skipping construction prototype '{constructionEntry}' because no construction recipe mapping was found for entity {Owner}.");
+                continue;
+            }
+
+            if (!_prototypeManager.TryIndex(recipePrototypeId, out var recipePrototype))
+            {
+                _sawmill.Warning($"Skipping construction prototype '{constructionEntry}' because recipe prototype '{recipePrototypeId}' could not be resolved for entity {Owner}.");
+                continue;
+            }
 
             var topLevelActionOption = new RadialMenuActionOption<ConstructionPrototype>(HandlePlacement, constructionPrototype)
             {
@@ -94,7 +115,7 @@ public sealed class QuickConstructionBoundUserInterface : BoundUserInterface
             models.Add(new RadialMenuNestedLayerOption(buttonList)
             {
                 IconSpecifier = RadialMenuIconSpecifier.With(categoryPrototype.Icon),
-                ToolTip = string.IsNullOrWhiteSpace(categoryPrototype.Name)
+                ToolTip = categoryPrototype.Name == string.Empty
                     ? categoryPrototype.ID
                     : Loc.GetString(categoryPrototype.Name),
             });
@@ -106,7 +127,9 @@ public sealed class QuickConstructionBoundUserInterface : BoundUserInterface
 
     private void HandlePlacement(ConstructionPrototype prototype)
     {
-        var constructionSystem = EntMan.System<ConstructionSystem>();
+        var constructionSystem = _constructionSystem;
+        if (constructionSystem == null)
+            return;
 
         if (prototype.Type == ConstructionType.Item)
         {

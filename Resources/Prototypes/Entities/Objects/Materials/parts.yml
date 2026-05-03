@@ -93,8 +93,10 @@
   - type: GuideHelp
     guides:
     - ExpandingRepairingStation
-  - type: QuickConstructable # Sunrise-Edit
+  # Sunrise-start
+  - type: QuickConstructable
     category: MetalRod
+  # Sunrise-end
 
 - type: entity
   parent: PartRodMetal

@@ -1,4 +1,5 @@
 using Content.Shared.Construction.Prototypes;
+using Robust.Shared.Localization;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
@@ -12,7 +13,7 @@ public sealed partial class QuickConstructionCategoryPrototype : IPrototype
     public string ID { get; private set; } = default!;
 
     [DataField]
-    public string Name = string.Empty;
+    public LocId Name = string.Empty;
 
     [DataField]
     public SpriteSpecifier? Icon;
