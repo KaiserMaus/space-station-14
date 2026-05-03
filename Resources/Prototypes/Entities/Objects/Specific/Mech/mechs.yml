@@ -199,8 +199,6 @@
   - type: FootprintEmitter # Sunrise-Add
     leftBareFootState: [ footprint-suit-heavy ]
     rightBareFootState: [ footprint-suit-heavy ]
-    shoeFootState: [ footprint-suit-heavy ]
-    pressureSuitFootState: [ footprint-suit-heavy ]
   # Sunrise-End
   - type: Damageable
     damageContainer: Mech
@@ -258,8 +256,6 @@
   - type: FootprintEmitter # Sunrise-Add
     leftBareFootState: [ footprint-suit-heavy ]
     rightBareFootState: [ footprint-suit-heavy ]
-    shoeFootState: [ footprint-suit-heavy ]
-    pressureSuitFootState: [ footprint-suit-heavy ]
   - type: Sprite
     drawdepth: Mobs
     noRot: true
@@ -320,8 +316,6 @@
   - type: FootprintEmitter # Sunrise-Add
     leftBareFootState: [ footprint-suit-heavy ]
     rightBareFootState: [ footprint-suit-heavy ]
-    shoeFootState: [ footprint-suit-heavy ]
-    pressureSuitFootState: [ footprint-suit-heavy ]
   - type: Sprite
     drawdepth: Mobs
     noRot: true
@@ -460,8 +454,6 @@
   - type: FootprintEmitter # Sunrise-Add
     leftBareFootState: [ footprint-suit-heavy ]
     rightBareFootState: [ footprint-suit-heavy ]
-    shoeFootState: [ footprint-suit-heavy ]
-    pressureSuitFootState: [ footprint-suit-heavy ]
   - type: Sprite
     drawdepth: Mobs
     noRot: true
@@ -535,8 +527,6 @@
   - type: FootprintEmitter # Sunrise-Add
     leftBareFootState: [ footprint-suit-heavy ]
     rightBareFootState: [ footprint-suit-heavy ]
-    shoeFootState: [ footprint-suit-heavy ]
-    pressureSuitFootState: [ footprint-suit-heavy ]
   - type: Sprite
     drawdepth: Mobs
     noRot: true
@@ -756,8 +746,6 @@
   - type: FootprintEmitter # Sunrise-Add
     leftBareFootState: [ footprint-mech-heavy ]
     rightBareFootState: [ footprint-mech-heavy ]
-    shoeFootState: [ footprint-mech-heavy ]
-    pressureSuitFootState: [ footprint-mech-heavy ]
   - type: Sprite
     drawdepth: Mobs
     noRot: true
@@ -838,8 +826,6 @@
   - type: FootprintEmitter # Sunrise-Add
     leftBareFootState: [ footprint-mech-heavy ]
     rightBareFootState: [ footprint-mech-heavy ]
-    shoeFootState: [ footprint-mech-heavy ]
-    pressureSuitFootState: [ footprint-mech-heavy ]
   - type: Sprite
     drawdepth: Mobs
     noRot: true
@@ -929,8 +915,6 @@
   - type: FootprintEmitter # Sunrise-Add
     leftBareFootState: [ footprint-mech-heavy ]
     rightBareFootState: [ footprint-mech-heavy ]
-    shoeFootState: [ footprint-mech-heavy ]
-    pressureSuitFootState: [ footprint-mech-heavy ]
   - type: Sprite
     drawdepth: Mobs
     noRot: true
@@ -1114,8 +1098,6 @@
   - type: FootprintEmitter # Sunrise-Add
     leftBareFootState: [ footprint-mech-heavy ]
     rightBareFootState: [ footprint-mech-heavy ]
-    shoeFootState: [ footprint-mech-heavy ]
-    pressureSuitFootState: [ footprint-mech-heavy ]
   - type: Sprite
     drawdepth: Mobs
     noRot: true
