@@ -14,10 +14,25 @@
   order: 3
   lawString: law-crewsimov-3
 
+- type: siliconLaw
+  id: CrewsimovStationAi0
+  order: 0
+  lawString: law-crewsimov-station-ai-0
+
 - type: siliconLawset
   id: Crewsimov
   name: law-crewsimov-name
   laws:
+  - Crewsimov1
+  - Crewsimov2
+  - Crewsimov3
+  obeysTo: laws-owner-crew
+
+- type: siliconLawset
+  id: CrewsimovAiAssigned
+  name: law-crewsimov-name
+  laws:
+  - CrewsimovStationAi0
   - Crewsimov1
   - Crewsimov2
   - Crewsimov3
@@ -642,6 +657,17 @@
   - Sec5
   obeysTo: laws-owner-station
 
+- type: siliconLawset
+  id: SecurityLawsetAiAssigned
+  laws:
+  - CrewsimovStationAi0
+  - Sec1
+  - Sec2
+  - Sec3
+  - Sec4
+  - Sec5
+  obeysTo: laws-owner-station
+
 - type: siliconLaw
   id: Peace1
   order: 1
@@ -670,6 +696,17 @@
 - type: siliconLawset
   id: PeaceLawset
   laws:
+  - Peace1
+  - Peace2
+  - Peace3
+  - Peace4
+  - Peace5
+  obeysTo: laws-owner-station
+
+- type: siliconLawset
+  id: PeaceLawsetAiAssigned
+  laws:
+  - CrewsimovStationAi0
   - Peace1
   - Peace2
   - Peace3
