@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   id: BaseConstruct
   abstract: true
   categories: [ HideSpawnMenu ]
@@ -71,6 +71,11 @@
   name: juggernaut
   description: big and scary
   components:
+    - type: FootprintEmitter # Sunrise-Add
+      leftBareFootState: [ footprint-suit-heavy ]
+      rightBareFootState: [ footprint-suit-heavy ]
+      shoeFootState: [ footprint-suit-heavy ]
+      pressureSuitFootState: [ footprint-suit-heavy ]
     - type: Fixtures
       fixtures:
         fix1:
