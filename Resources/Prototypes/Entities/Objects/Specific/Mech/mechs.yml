@@ -29,6 +29,11 @@
     speechSounds: Borg
   - type: TTS
     voice: Glados
+  # Sunrise start
+  - type: MeleeThrowOnHit
+    speed: 10
+    distance: 1
+  # Sunrise end
 
 - type: entity
   id: SpecialMech
@@ -276,8 +281,8 @@
       types:
         Blunt: 14 #intentionally shit so people realize that going into combat with the ripley is usually a bad idea.
   - type: MovementSpeedModifier
-    baseWalkSpeed: 2.25
-    baseSprintSpeed: 3.75
+    baseWalkSpeed: 2 # Sunrise-edit: starlight parity
+    baseSprintSpeed: 3.6 # Sunrise-edit: starlight parity
   - type: Reflect
     reflectProb: 0.05
     spread: 180
@@ -323,7 +328,7 @@
     baseState: ripleymkii
     openState: ripleymkii-open
     brokenState: ripleymkii-broken
-    mechToPilotDamageMultiplier: 0.40
+    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
     airtight: true
     pilotWhitelist:
       components:
@@ -336,8 +341,8 @@
         Blunt: 20
     bluntStaminaDamageFactor: 1
   - type: MovementSpeedModifier
-    baseWalkSpeed: 1
-    baseSprintSpeed: 2.25
+    baseWalkSpeed: 2
+    baseSprintSpeed: 3
   # Sunrise-Start
   - type: Loadout
     prototypes: [ MechArmorMediumNTLoadout ]
@@ -386,7 +391,7 @@
     baseState: clarke
     openState: clarke-open
     brokenState: clarke-broken
-    mechToPilotDamageMultiplier: 0.5
+    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
     airtight: true
     pilotWhitelist:
       components:
@@ -455,7 +460,7 @@
     baseState: honker
     openState: honker-open
     brokenState: honker-broken
-    mechToPilotDamageMultiplier: 0.5
+    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
     airtight: true # Space Honks is real.
     pilotWhitelist:
       components:
@@ -466,6 +471,19 @@
     soundOnReflect: /Audio/_Starlight/Armor/Ricochet/ricochet1_1.ogg
     reflects:
     - NonEnergy
+  # sunrise start
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    damage:
+      types:
+        Structural: 2
+    soundHit:
+      path: /Audio/Items/bikehorn.ogg
+  - type: MeleeThrowOnHit
+    speed: 1
+    distance: 2
+  # sunrise end
 
 - type: entity
   parent: MechHonker
@@ -511,7 +529,7 @@
     baseState: hamtr
     openState: hamtr-open
     brokenState: hamtr-broken
-    mechToPilotDamageMultiplier: 0.2
+    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
     maxEquipmentAmount: 2
     airtight: true
     pilotWhitelist:
@@ -660,14 +678,14 @@
     baseState: base
     openState: base-open
     brokenState: base-broken
-    mechToPilotDamageMultiplier: 0.3
+    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
     airtight: true
     pilotWhitelist:
       components:
         - HumanoidAppearance
   - type: MeleeThrowOnHit
-    distance: 1
-    speed: 8
+    distance: 2.5
+    speed: 15
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -678,7 +696,7 @@
     bluntStaminaDamageFactor: 1.5
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
-    baseSprintSpeed: 3.5
+    baseSprintSpeed: 4
   - type: Reflect
     reflectProb: 0.05
     spread: 180
@@ -693,7 +711,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      275: Critical
+      325: Critical
 
 - type: entity
   id: MechGygaxBattery
@@ -730,14 +748,14 @@
     baseState: base
     openState: base-open
     brokenState: base-broken
-    mechToPilotDamageMultiplier: 0.25
+    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
     airtight: true
     pilotWhitelist:
       components:
         - HumanoidAppearance
   - type: MeleeThrowOnHit
-    distance: 1
-    speed: 8
+    distance: 4
+    speed: 18
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -769,7 +787,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      300: Critical
+      465: Critical
 
 - type: entity
   id: MechDurandBattery
@@ -806,29 +824,26 @@
     baseState: marauder
     openState: marauder-open
     brokenState: marauder-broken
-    mechToPilotDamageMultiplier: 0.1
+    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
     airtight: true
     maxEquipmentAmount: 4
     pilotWhitelist:
       components:
         - HumanoidAppearance
-    pilotBlacklist:
-      species:
-      - Felinid
   - type: MeleeThrowOnHit
-    distance: 1
-    speed: 8
+    distance: 5
+    speed: 20
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
     damage:
       types:
-        Blunt: 50
-        Structural: 350
+        Blunt: 40
+        Structural: 200
     bluntStaminaDamageFactor: 1.5
   - type: MovementSpeedModifier
-    baseWalkSpeed: 1
-    baseSprintSpeed: 1.5
+    baseWalkSpeed: 1.5
+    baseSprintSpeed: 2
   # Sunrise-Start
   - type: Loadout
     prototypes: [ MechArmorHeavyNTLoadout ]
@@ -845,7 +860,7 @@
     currentThresholdState : Alive
     thresholds:
       0: Alive
-      500: Critical
+      575: Critical
     showOverlays: false
     allowRevives: true
   - type: AccessReader
@@ -896,18 +911,15 @@
     baseState: seraph
     openState: seraph-open
     brokenState: seraph-broken
-    mechToPilotDamageMultiplier: 0.05
+    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
     airtight: true
     maxEquipmentAmount: 5
     pilotWhitelist:
       components:
         - HumanoidAppearance
-    pilotBlacklist:
-      species:
-      - Felinid
   - type: MeleeThrowOnHit
-    distance: 1
-    speed: 8
+    distance: 5
+    speed: 20
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -935,7 +947,7 @@
     currentThresholdState : Alive
     thresholds:
       0: Alive
-      550: Critical
+      700: Critical
     showOverlays: false
     allowRevives: true
   - type: AccessReader
@@ -991,18 +1003,15 @@
     baseState: darkgygax
     openState: darkgygax-open
     brokenState: darkgygax-broken
-    mechToPilotDamageMultiplier: 0.15
+    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
     airtight: true
     maxEquipmentAmount: 4
     pilotWhitelist:
       components:
         - HumanoidAppearance
-    pilotBlacklist:
-      species:
-      - Felinid
   - type: MeleeThrowOnHit
-    distance: 1
-    speed: 8
+    distance: 3
+    speed: 15
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -1013,7 +1022,7 @@
     bluntStaminaDamageFactor: 1.5
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.5
-    baseSprintSpeed: 3.7
+    baseSprintSpeed: 4.25
   # Sunrise-Start
   - type: Loadout
     prototypes: [ MechArmorMediumSyndiLoadout ]
@@ -1021,7 +1030,7 @@
   - type: CanMoveInAir
   - type: MovementAlwaysTouching
   - type: Reflect
-    reflectProb: 0.10
+    reflectProb: 0.1
     spread: 180
     soundOnReflect: /Audio/_Starlight/Armor/Ricochet/ricochet1_1.ogg
     reflects:
@@ -1035,7 +1044,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      300: Critical
+      375: Critical
   - type: AccessReader
     access: [["NuclearOperative"]]
   # Sunrise-End
@@ -1085,29 +1094,26 @@
     baseState: mauler
     openState: mauler-open
     brokenState: mauler-broken
-    mechToPilotDamageMultiplier: 0.1
+    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
     airtight: true
     maxEquipmentAmount: 5
     pilotWhitelist:
       components:
         - HumanoidAppearance
-    pilotBlacklist:
-      species:
-      - Felinid
   - type: MeleeThrowOnHit
-    distance: 1
-    speed: 8
+    distance: 5
+    speed: 20
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
     damage:
       types:
-        Blunt: 80
+        Blunt: 75
         Structural: 400
     bluntStaminaDamageFactor: 1.5
   - type: MovementSpeedModifier
-    baseWalkSpeed: 1
-    baseSprintSpeed: 1.5
+    baseWalkSpeed: 1.5
+    baseSprintSpeed: 2
   # Sunrise-Start
   - type: Loadout
     prototypes: [ MechArmorHeavySyndiLoadout ]
@@ -1115,7 +1121,7 @@
   - type: CanMoveInAir
   - type: MovementAlwaysTouching
   - type: Reflect
-    reflectProb: 0.15
+    reflectProb: 0.1
     spread: 180
     soundOnReflect: /Audio/_Starlight/Armor/Ricochet/ricochet1_1.ogg
     reflects:
