@@ -50,6 +50,7 @@
     - RadioImplant
     - ChameleonControllerImplant
     - VoiceMaskImplant
+    # Sunrise-Start
     - ProtoAdrenalImplant
     - AdrenalImplant
     - StimpackImplant
@@ -59,6 +60,8 @@
     - ScramImplantProto
     - DeathRattleImplantBlueShield
     - CreepyLaughImplant
+    - MindControlImplant
+    # Sunrise-End
     deimplantFailureDamage:
       types:
         Cellular: 50

@@ -8,8 +8,7 @@ namespace Content.Shared._Sunrise.Implants.Components;
 [RegisterComponent]
 public sealed partial class MindControlImplantComponent : Component
 {
-    [DataField]
-    public EntityUid Master;
+    public EntityUid Master = EntityUid.Invalid;
 
     [DataField]
     public LocId BriefingText = "mind-control-user-briefing";

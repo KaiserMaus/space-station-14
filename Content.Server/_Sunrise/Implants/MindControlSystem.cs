@@ -80,10 +80,12 @@ public sealed class MindControlSystem : EntitySystem
 
     private void OnRemoved(Entity<MindControlImplantComponent> ent, ref ImplantRemovedEvent args)
     {
-        if (TerminatingOrDeleted(args.Implanted) || !TryComp<ActorComponent>(args.Implanted, out var actor))
+        if (TerminatingOrDeleted(args.Implanted))
             return;
 
-        _antag.SendBriefing(actor.PlayerSession, Loc.GetString(ent.Comp.DebriefingText), null, null);
+        if (TryComp<ActorComponent>(args.Implanted, out var actor))
+            _antag.SendBriefing(actor.PlayerSession, Loc.GetString(ent.Comp.DebriefingText), null, null);
+
         RemoveObjective(args.Implanted);
         RemCompDeferred<MindControlComponent>(args.Implanted);
         _status.TryAddStatusEffectDuration(args.Implanted, SleepingSystem.StatusEffectForcedSleeping, TimeSpan.FromSeconds(2));

@@ -35,3 +35,5 @@ ent-RadioImplanterDeathSquad = death squad radio implanter
     .desc = { ent-BaseImplantOnlyImplanter.desc }
 ent-DeathRattleImplanterDeathSquad = death squad death rattle implanter
     .desc = { ent-BaseImplantOnlyImplanter.desc }
+ent-MindControlImplanter = mind control implanter
+    .desc = { ent-BaseImplantOnlyImplanterSyndi.desc }
