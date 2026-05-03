@@ -13,7 +13,7 @@ public sealed class SharedMechEquipmentSelectSystem : EntitySystem
     public override void Initialize()
     {
         SubscribeLocalEvent<MechComponent, MechToggleEquipmentEvent>(OnSelectEquipmentAction);
-        SubscribeLocalEvent<MechComponent, MechActiveEquipmentSelectMessage>(OnRadialSelected);
+        Subs.BuiEvents<MechComponent>(MechEquipmentSelectUiKey.Key, subs => subs.Event<MechActiveEquipmentSelectMessage>(OnRadialSelected));
     }
 
     private void OnSelectEquipmentAction(EntityUid uid, MechComponent comp, MechToggleEquipmentEvent args)
