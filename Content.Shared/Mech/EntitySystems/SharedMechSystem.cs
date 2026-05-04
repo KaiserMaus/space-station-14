@@ -102,7 +102,7 @@ public abstract partial class SharedMechSystem : EntitySystem
 
         args.Handled = true;
     }
-
+    // Sunrise-Start
     private void OnToggleSirenEvent(EntityUid uid, MechComponent component, MechToggleSirenEvent args)
     {
         if (args.Handled)
@@ -112,6 +112,7 @@ public abstract partial class SharedMechSystem : EntitySystem
 
         args.Handled = true;
     }
+    // Sunrise-End
 
     private void RelayInteractionEvent(EntityUid uid, MechComponent component, UserActivateInWorldEvent args)
     {
@@ -186,8 +187,10 @@ public abstract partial class SharedMechSystem : EntitySystem
         _actions.AddAction(pilot, ref component.MechCycleActionEntity, component.MechCycleAction, mech);
         _actions.AddAction(pilot, ref component.MechUiActionEntity, component.MechUiAction, mech);
         _actions.AddAction(pilot, ref component.MechLightsActionEntity, component.MechLightsAction, mech);
+        // Sunrise-Start
         if (component.SirenEnabled)
             _actions.AddAction(pilot, ref component.MechSirenActionEntity, component.MechSirenAction, mech);
+        // Sunrise-End
         _actions.AddAction(pilot, ref component.MechEjectActionEntity, component.MechEjectAction, mech);
     }
 
@@ -213,7 +216,7 @@ public abstract partial class SharedMechSystem : EntitySystem
             Dirty(uid, component);
         }
     }
-
+    // Sunrise-Start
     public void ToggleSiren(EntityUid uid, MechComponent component)
     {
         if (!component.SirenEnabled)
@@ -231,7 +234,7 @@ public abstract partial class SharedMechSystem : EntitySystem
     protected virtual void OnSirenToggled(EntityUid uid, MechComponent component)
     {
     }
-
+    // Sunrise-End
     /// <summary>
     /// Destroys the mech, removing the user and ejecting anything contained.
     /// </summary>
@@ -241,7 +244,7 @@ public abstract partial class SharedMechSystem : EntitySystem
     {
         if (!Resolve(uid, ref component))
             return;
-
+        // Sunrise-Start
         if (component.Siren)
         {
             component.Siren = false;
@@ -249,7 +252,7 @@ public abstract partial class SharedMechSystem : EntitySystem
             _actions.SetToggled(component.MechSirenActionEntity, false);
             OnSirenToggled(uid, component);
         }
-
+        // Sunrise-End
         TryEject(uid, component);
         var equipment = new List<EntityUid>(component.EquipmentContainer.ContainedEntities);
         foreach (var ent in equipment)
@@ -545,7 +548,7 @@ public abstract partial class SharedMechSystem : EntitySystem
 
         _appearance.SetData(uid, MechVisuals.Open, IsEmpty(component), appearance);
         _appearance.SetData(uid, MechVisuals.Broken, component.Broken, appearance);
-        _appearance.SetData(uid, MechVisuals.Siren, component.Siren, appearance);
+        _appearance.SetData(uid, MechVisuals.Siren, component.Siren, appearance); // Sunrise-Edit
     }
 
     private void OnDragDrop(EntityUid uid, MechComponent component, ref DragDropTargetEvent args)
