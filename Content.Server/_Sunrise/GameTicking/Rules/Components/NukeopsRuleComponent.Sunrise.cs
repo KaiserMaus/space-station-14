@@ -4,7 +4,6 @@ namespace Content.Server.GameTicking.Rules.Components;
 
 public sealed partial class NukeopsRuleComponent
 {
-    // Sunrise-Start: martial-law alert switch after war declaration.
     /// <summary>
     /// Changes the alert level on all stations with the nuke disk
     /// if null, the alert level will not change.
@@ -25,5 +24,4 @@ public sealed partial class NukeopsRuleComponent
 
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoPausedField]
     public TimeSpan AlertlevelTime;
-    // Sunrise-End
 }
