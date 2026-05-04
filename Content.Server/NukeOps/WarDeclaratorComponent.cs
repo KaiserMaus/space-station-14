@@ -17,7 +17,7 @@ public sealed partial class WarDeclaratorComponent : Component
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
-    public string Message;
+    public string Message = string.Empty; // Sunrise-Edit
 
     /// <summary>
     /// Permission to customize message text

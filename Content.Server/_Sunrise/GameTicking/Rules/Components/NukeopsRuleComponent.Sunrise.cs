@@ -1,0 +1,29 @@
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
+
+namespace Content.Server.GameTicking.Rules.Components;
+
+public sealed partial class NukeopsRuleComponent
+{
+    // Sunrise-Start: martial-law alert switch after war declaration.
+    /// <summary>
+    /// Changes the alert level on all stations with the nuke disk
+    /// if null, the alert level will not change.
+    /// </summary>
+    public string? SetAlertlevel = "martial-law";
+
+    /// <summary>
+    /// How many seconds after the declaration of war, the alert level will change.
+    /// </summary>
+    [DataField]
+    public int AlertlevelDelay = 10;
+
+    /// <summary>
+    /// If true, the game will automatically set the alert level after the specified time.
+    /// </summary>
+    [DataField]
+    public bool CanChangeAlertLevel = false;
+
+    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoPausedField]
+    public TimeSpan AlertlevelTime;
+    // Sunrise-End
+}

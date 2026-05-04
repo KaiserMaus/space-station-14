@@ -64,6 +64,7 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
+      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 # Command
@@ -125,6 +126,7 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
+      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 # Welding supplies
@@ -145,6 +147,7 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
+      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 # Atmos tech
@@ -165,6 +168,7 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
+      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 # Engineer
@@ -185,6 +189,7 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
+      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 # Evac Repair
@@ -238,6 +243,7 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
+      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 # Botanist
@@ -258,6 +264,7 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
+      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 # Medicine
@@ -279,6 +286,7 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
+      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 # Medical doctor
@@ -299,6 +307,7 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
+      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 # Paramedic
@@ -319,6 +328,7 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
+      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 
@@ -340,6 +350,7 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
+      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 # CMO
@@ -387,6 +398,7 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
+      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 # HoS
@@ -435,6 +447,7 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
+      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 # Security Officer
@@ -665,6 +678,7 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
+      martial-law: GammaAlertAccesses
     # Sunrise-end
   - type: EntityStorageVisuals
     stateBaseClosed: clown
@@ -685,6 +699,7 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
+      martial-law: GammaAlertAccesses
     # Sunrise-end
   - type: EntityStorageVisuals
     stateBaseClosed: mime

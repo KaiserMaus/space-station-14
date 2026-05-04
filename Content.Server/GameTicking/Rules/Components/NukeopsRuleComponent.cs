@@ -9,7 +9,7 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Server.GameTicking.Rules.Components;
 
-[RegisterComponent, Access(typeof(NukeopsRuleSystem))]
+[RegisterComponent, AutoGenerateComponentPause, Access(typeof(NukeopsRuleSystem))] // Sunrise-Edit
 public sealed partial class NukeopsRuleComponent : Component
 {
     /// <summary>
@@ -64,7 +64,6 @@ public sealed partial class NukeopsRuleComponent : Component
     ///     This amount of TC will be given to each nukie
     /// </summary>
     [DataField]
-    public FixedPoint2 WarTcAmountPerNukie = 45; // Sunrise-edit
 
     // Sunrise-Start
     [DataField]
@@ -83,7 +82,6 @@ public sealed partial class NukeopsRuleComponent : Component
     ///     Time crew can't call emergency shuttle after war declaration.
     /// </summary>
     [DataField]
-    public TimeSpan WarEvacShuttleDisabled = TimeSpan.FromMinutes(30); // Sunrise-edit
 
     /// <summary>
     ///     Minimal operatives count for war declaration
