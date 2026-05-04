@@ -95,6 +95,11 @@
           32:
             sprite: Mobs/Species/Reptilian/displacement.rsi
             state: mask
+      socks:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Reptilian/displacement.rsi
+            state: socks
     displacements:
       head:
         sizeMaps:
@@ -197,6 +202,11 @@
           32:
             sprite: Mobs/Species/Reptilian/displacement.rsi
             state: mask
+      socks:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Reptilian/displacement.rsi
+            state: socks
     displacements:
       head:
         sizeMaps:
