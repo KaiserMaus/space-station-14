@@ -77,6 +77,12 @@ public sealed partial class MechComponent : Component
     public bool Lights = false;
 
     /// <summary>
+    /// Whether the mech has toggled siren.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+    public bool Siren = false;
+
+    /// <summary>
     /// The slot the pilot is stored in.
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
@@ -168,6 +174,10 @@ public sealed partial class MechComponent : Component
     [DataField]
     public string MessageDisableLight = "mech-message-disable-light";
     [DataField]
+    public string MessageEnableSiren = "mech-message-enable-siren";
+    [DataField]
+    public string MessageDisableSiren = "mech-message-disable-siren";
+    [DataField]
     public string MessageAlert50 = "mech-message-alert_50";
     [DataField]
     public string MessageAlert25 = "mech-message-alert-25";
@@ -190,6 +200,8 @@ public sealed partial class MechComponent : Component
     public EntProtoId MechEjectAction = "ActionMechEject";
     [DataField]
     public EntProtoId MechLightsAction = "ActionMechLights";
+    [DataField]
+    public EntProtoId MechSirenAction = "ActionMechSiren";
     #endregion
 
     #region Visualizer States
@@ -199,12 +211,24 @@ public sealed partial class MechComponent : Component
     public string? OpenState;
     [DataField, AutoNetworkedField]
     public string? BrokenState;
+    [DataField, AutoNetworkedField]
+    public string? SirenState;
     #endregion
+
+    [DataField]
+    public bool SirenEnabled = false;
+
+    [DataField]
+    public SoundSpecifier SirenSound = new SoundPathSpecifier("/Audio/Effects/Vehicle/policesiren.ogg");
 
     [DataField] public EntityUid? MechCycleActionEntity;
     [DataField] public EntityUid? MechUiActionEntity;
     [DataField] public EntityUid? MechEjectActionEntity;
     [DataField] public EntityUid? MechLightsActionEntity;
+    [DataField] public EntityUid? MechSirenActionEntity;
+
+    [ViewVariables]
+    public EntityUid? SirenStream;
 }
 
 public enum MechHealthState

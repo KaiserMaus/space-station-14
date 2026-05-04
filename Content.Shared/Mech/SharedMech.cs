@@ -7,7 +7,8 @@ namespace Content.Shared.Mech;
 public enum MechVisuals : byte
 {
     Open, //whether or not it's open and has a rider
-    Broken //if it broke and no longer works.
+    Broken, //if it broke and no longer works.
+    Siren // Sunrise-Added
 }
 
 [Serializable, NetSerializable]
@@ -21,7 +22,8 @@ public enum MechVisualLayers : byte
 {
     Base,
     Open, // Sunrise-added
-    Broken // Sunrise-added
+    Broken, // Sunrise-added
+    Siren // Sunrise-added
 }
 
 /// <summary>
@@ -67,5 +69,9 @@ public sealed partial class MechEjectPilotEvent : InstantActionEvent
 }
 
 public sealed partial class MechToggleLightsEvent : InstantActionEvent
+{
+}
+
+public sealed partial class MechToggleSirenEvent : InstantActionEvent
 {
 }

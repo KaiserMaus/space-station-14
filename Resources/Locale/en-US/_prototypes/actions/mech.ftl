@@ -8,3 +8,5 @@ ent-ActionMechEject = Eject
     .desc = Ejects the pilot from the mech
 ent-ActionMechLights = Lights
     .desc = Turns mech lights.
+ent-ActionMechSiren = Siren
+    .desc = Toggles mech siren.

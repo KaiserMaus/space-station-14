@@ -59,3 +59,16 @@
     iconOn: { sprite: Interface/Actions/actions_mecha.rsi, state: mech_lights_on }
   - type: InstantAction
     event: !type:MechToggleLightsEvent
+
+- type: entity
+  id: ActionMechSiren
+  name: Siren
+  description: Toggles mech siren.
+  components:
+  - type: Action
+    useDelay: 1
+    itemIconStyle: NoItem
+    icon: { sprite: Clothing/OuterClothing/Hardsuits/paramed.rsi, state: icon-siren }
+    iconOn: { sprite: Clothing/OuterClothing/Hardsuits/paramed.rsi, state: icon-siren }
+  - type: InstantAction
+    event: !type:MechToggleSirenEvent

@@ -8,3 +8,5 @@ ent-ActionMechEject = Покинуть
     .desc = Высаживает пилота из меха.
 ent-ActionMechLights = Свет
     .desc = Переключает освещение меха.
+ent-ActionMechSiren = Сирена
+    .desc = Переключает сирену меха.

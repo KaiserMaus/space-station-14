@@ -40,6 +40,7 @@ research-technology-basic-shuttle-armament = Shuttle Basic Armament
 research-technology-advanced-shuttle-weapon = Advanced Shuttle Weapons
 research-technology-hitech-shuttle-weapon = Hi-Tech Shuttle Weapons
 research-technology-thermal-weaponry = Thermal Weaponry
+research-technology-paddy-conversion = Paddy Conversion Kit
 research-technology-dual-wielding-technology = Dual Wielding Technology
 
 research-technology-basic-robotics = Basic Robotics

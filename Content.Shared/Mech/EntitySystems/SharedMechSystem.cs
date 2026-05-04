@@ -61,6 +61,7 @@ public abstract partial class SharedMechSystem : EntitySystem
         SubscribeLocalEvent<MechComponent, MechToggleEquipmentEvent>(OnToggleEquipmentAction);
         SubscribeLocalEvent<MechComponent, MechEjectPilotEvent>(OnEjectPilotEvent);
         SubscribeLocalEvent<MechComponent, MechToggleLightsEvent>(OnToggleLightsEvent);
+        SubscribeLocalEvent<MechComponent, MechToggleSirenEvent>(OnToggleSirenEvent);
         SubscribeLocalEvent<MechComponent, UserActivateInWorldEvent>(RelayInteractionEvent);
         SubscribeLocalEvent<MechComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<MechComponent, MobStateChangedEvent>(OnMobState);
@@ -98,6 +99,16 @@ public abstract partial class SharedMechSystem : EntitySystem
             return;
 
         ToggleLights(uid, component);
+
+        args.Handled = true;
+    }
+
+    private void OnToggleSirenEvent(EntityUid uid, MechComponent component, MechToggleSirenEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        ToggleSiren(uid, component);
 
         args.Handled = true;
     }
@@ -175,6 +186,8 @@ public abstract partial class SharedMechSystem : EntitySystem
         _actions.AddAction(pilot, ref component.MechCycleActionEntity, component.MechCycleAction, mech);
         _actions.AddAction(pilot, ref component.MechUiActionEntity, component.MechUiAction, mech);
         _actions.AddAction(pilot, ref component.MechLightsActionEntity, component.MechLightsAction, mech);
+        if (component.SirenEnabled)
+            _actions.AddAction(pilot, ref component.MechSirenActionEntity, component.MechSirenAction, mech);
         _actions.AddAction(pilot, ref component.MechEjectActionEntity, component.MechEjectAction, mech);
     }
 
@@ -201,6 +214,24 @@ public abstract partial class SharedMechSystem : EntitySystem
         }
     }
 
+    public void ToggleSiren(EntityUid uid, MechComponent component)
+    {
+        if (!component.SirenEnabled)
+            return;
+
+        component.Siren = !component.Siren;
+        _actions.SetToggled(component.MechSirenActionEntity, component.Siren);
+        _appearance.SetData(uid, MechVisuals.Siren, component.Siren);
+        var ev = new MechSayEvent(uid, component.Siren ? component.MessageEnableSiren : component.MessageDisableSiren);
+        RaiseLocalEvent(uid, ref ev, true);
+        OnSirenToggled(uid, component);
+        Dirty(uid, component);
+    }
+
+    protected virtual void OnSirenToggled(EntityUid uid, MechComponent component)
+    {
+    }
+
     /// <summary>
     /// Destroys the mech, removing the user and ejecting anything contained.
     /// </summary>
@@ -210,6 +241,14 @@ public abstract partial class SharedMechSystem : EntitySystem
     {
         if (!Resolve(uid, ref component))
             return;
+
+        if (component.Siren)
+        {
+            component.Siren = false;
+            _appearance.SetData(uid, MechVisuals.Siren, false);
+            _actions.SetToggled(component.MechSirenActionEntity, false);
+            OnSirenToggled(uid, component);
+        }
 
         TryEject(uid, component);
         var equipment = new List<EntityUid>(component.EquipmentContainer.ContainedEntities);
@@ -506,6 +545,7 @@ public abstract partial class SharedMechSystem : EntitySystem
 
         _appearance.SetData(uid, MechVisuals.Open, IsEmpty(component), appearance);
         _appearance.SetData(uid, MechVisuals.Broken, component.Broken, appearance);
+        _appearance.SetData(uid, MechVisuals.Siren, component.Siren, appearance);
     }
 
     private void OnDragDrop(EntityUid uid, MechComponent component, ref DragDropTargetEvent args)

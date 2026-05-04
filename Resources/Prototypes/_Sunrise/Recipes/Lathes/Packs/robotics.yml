@@ -10,6 +10,7 @@
   recipes:
   - RipleyMKIIHarness
   - RipleyUpgradeKit
+  - SunrisePaddyUpgradeKit
   - ClarkeHarness
   - ClarkeHead
   - ClarkeLArm

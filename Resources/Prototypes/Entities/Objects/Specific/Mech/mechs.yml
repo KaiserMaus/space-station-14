@@ -133,7 +133,7 @@
   - type: InteractionOutline
   - type: MovementSpeedModifier
     baseWalkSpeed: 1
-    baseSprintSpeed: 3.9 # sunrise-edit
+    baseSprintSpeed: 2
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -141,8 +141,8 @@
   - type: Pullable
   - type: Physics
     bodyType: KinematicController
-    angularDamping: 10 # sunrise-edit
-    linearDamping: 10 # sunrise-edit
+    # angularDamping: 10 # sunrise-edit
+    # linearDamping: 10 # sunrise-edit
   - type: GravityAffected
   - type: Clickable
   - type: WiresPanel

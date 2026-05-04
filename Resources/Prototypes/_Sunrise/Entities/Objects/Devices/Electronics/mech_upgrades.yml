@@ -1,0 +1,21 @@
+- type: entity
+  id: SunrisePaddyUpgradeKit
+  parent: BaseExosuitParts
+  name: paddy conversion kit
+  description: This kit allows you to convert a Ripley MK-II into a Paddy exosuit.
+  components:
+  - type: Item
+    storedRotation: 0
+  - type: Sprite
+    state: ripleyupgrade
+  - type: Tag
+    tags:
+    - RipleyMKIIUpgradeKit
+  - type: GuideHelp
+    guides:
+    - Robotics
+  - type: MechUpgradeKit
+    targetPrototypes:
+    - MechRipley2
+    - MechRipley2Battery
+    resultPrototype: MechPaddy

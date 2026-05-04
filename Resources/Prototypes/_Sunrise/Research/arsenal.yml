@@ -73,6 +73,22 @@
   - Security
 
 - type: technology
+  id: PaddyConversion
+  name: research-technology-paddy-conversion
+  icon:
+    sprite: _Starlight/Objects/Specific/Mechs/Mechs/paddy.rsi
+    state: base
+  discipline: Arsenal
+  tier: 2
+  cost: 8000
+  recipeUnlocks:
+  - SunrisePaddyUpgradeKit
+  technologyPrerequisites:
+  - Ripley2
+  radioChannels:
+  - Security
+
+- type: technology
   id: ExplosiveMechAmmunition
   name: research-technology-explosive-mech-ammunition
   icon:

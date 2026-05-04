@@ -28,6 +28,10 @@ using Content.Shared.Hands.EntitySystems;
 using Content.Shared.NPC.Components;
 using Content.Shared.NPC.Systems;
 using Content.Shared.Tag;
+// Sunrise-start
+using Robust.Shared.Audio;
+using Robust.Shared.Audio.Systems;
+// Sunrise-end
 using Robust.Server.Containers;
 using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
@@ -60,6 +64,9 @@ public sealed partial class MechSystem : SharedMechSystem
     [Dependency] private readonly MobThresholdSystem _mobThresholdSystem = default!;
     [Dependency] private readonly AccessReaderSystem _accessReader = default!;
     [Dependency] private readonly ChatSystem _chatSystem = default!;
+    // Sunrise-start
+    [Dependency] private readonly SharedAudioSystem _audio = default!;
+    // Sunrise-end
 
 
     private static readonly ProtoId<ToolQualityPrototype> PryingQuality = "Prying";
@@ -109,6 +116,27 @@ public sealed partial class MechSystem : SharedMechSystem
         if (component.Broken || component.Integrity <= 0 || component.Energy <= 0)
             args.Cancel();
     }
+
+    // Sunrise-start
+    protected override void OnSirenToggled(EntityUid uid, MechComponent component)
+    {
+        if (!component.SirenEnabled)
+            return;
+
+        if (!component.Siren)
+        {
+            component.SirenStream = _audio.Stop(component.SirenStream);
+            return;
+        }
+
+        if (component.SirenStream != null)
+            return;
+
+        var stream = _audio.PlayPvs(component.SirenSound, uid, AudioParams.Default.WithLoop(true));
+        if (stream?.Entity is { } entity)
+            component.SirenStream = entity;
+    }
+    // Sunrise-end
 
     private void OnInteractUsing(EntityUid uid, MechComponent component, InteractUsingEvent args)
     {
@@ -417,6 +445,10 @@ public sealed partial class MechSystem : SharedMechSystem
     public override void BreakMech(EntityUid uid, MechComponent? component = null)
     {
         base.BreakMech(uid, component);
+        // Sunrise-start
+        if (Resolve(uid, ref component, false) && component.SirenStream != null)
+            component.SirenStream = _audio.Stop(component.SirenStream);
+        // Sunrise-end
 
         _ui.CloseUi(uid, MechUiKey.Key);
         _actionBlocker.UpdateCanMove(uid);

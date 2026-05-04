@@ -52,6 +52,7 @@ research-technology-combat-equipment = Боевое снаряжение
 research-technology-advanced-combat-equipment = Продвинутое боевое снаряжение
 research-technology-combat-powercells = Боевые Супербатареи
 research-technology-thermal-weaponry = Тепловое оружие
+research-technology-paddy-conversion = Комплект переоборудования Падди
 research-technology-basic-shuttle-armament = Базовое корабельное вооружение
 research-technology-advanced-shuttle-weapon = Продвинутое корабельное оружие
 research-technology-hitech-shuttle-weapon = Высокотехнологичное корабельное оружие

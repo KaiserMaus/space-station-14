@@ -219,6 +219,15 @@
   materials:
     Steel: 500
 
+- type: latheRecipe
+  id: SunrisePaddyUpgradeKit
+  result: SunrisePaddyUpgradeKit
+  categories:
+  - RipleyMKII
+  completetime: 30
+  materials:
+    Plasteel: 2000
+
 #Phazon
 
 # - type: latheRecipe

@@ -50,6 +50,14 @@ public sealed class MechSystem : SharedMechSystem
         }
 
         _sprite.LayerSetRsiState((uid, sprite), MechVisualLayers.Base, state);
+        if (_sprite.LayerMapTryGet((uid, sprite), MechVisualLayers.Siren, out _, false))
+        {
+            if (component.SirenState != null)
+                _sprite.LayerSetRsiState((uid, sprite), MechVisualLayers.Siren, component.SirenState);
+
+            if (_appearance.TryGetData<bool>(uid, MechVisuals.Siren, out var siren))
+                _sprite.LayerSetVisible((uid, sprite), MechVisualLayers.Siren, siren);
+        }
         _sprite.SetDrawDepth((uid, sprite), (int)drawDepth);
     }
 
@@ -63,5 +71,8 @@ public sealed class MechSystem : SharedMechSystem
 
         if (_appearance.TryGetData<string>(uid, MechVisualLayers.Broken, out var broken))
             component.BrokenState = broken;
+
+        if (_appearance.TryGetData<string>(uid, MechVisualLayers.Siren, out var siren))
+            component.SirenState = siren;
     }
 }

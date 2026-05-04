@@ -46,6 +46,7 @@ public sealed partial class SunriseMechSystem : EntitySystem
         SubscribeLocalEvent<MechVulnerableToEMPComponent, EmpPulseEvent>(OnEmpPulse);
         SubscribeLocalEvent<MechPaintComponent, PaintDoAfterEvent>(OnPaint);
         SubscribeLocalEvent<MechPilotComponent, BeforeCryoTeleportEvent>(OnCryoTeleportAttemptEvent);
+        InitializePaddyUpgrade();
     }
 
     // Sunrise-start

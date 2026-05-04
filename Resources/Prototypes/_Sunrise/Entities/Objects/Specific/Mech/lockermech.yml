@@ -20,26 +20,26 @@
     baseState: lockermech
     openState: lockermech-open
     brokenState: lockermech-broken
-    mechToPilotDamageMultiplier: 0.50
+    mechToPilotDamageMultiplier: 0.05
     airtight: true
     maxEquipmentAmount: 2
     pilotWhitelist:
       components:
         - HumanoidAppearance
-    pilotBlacklist:
-      species:
-      - Felinid
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
     damage:
       types:
         Blunt: 5
+  - type: MeleeThrowOnHit
+    speed: 1
+    distance: 2
   - type: MovementSpeedModifier
     baseWalkSpeed: 1
-    baseSprintSpeed: 3.1
+    baseSprintSpeed: 3
   - type: Reflect
-    reflectProb: 0.15
+    reflectProb: 0.05
     spread: 180
     soundOnReflect: /Audio/Weapons/block_metal1.ogg
     reflects:
@@ -53,7 +53,7 @@
     currentThresholdState : Alive
     thresholds:
       0: Alive
-      300: Critical
+      250: Critical
     showOverlays: false
     allowRevives: true
   - type: Construction
