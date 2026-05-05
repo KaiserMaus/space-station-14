@@ -72,6 +72,8 @@ public sealed partial class MechToggleLightsEvent : InstantActionEvent
 {
 }
 
-public sealed partial class MechToggleSirenEvent : InstantActionEvent
-{
-}
+// Sunrise added start
+ public sealed partial class MechToggleSirenEvent : InstantActionEvent
+ {
+ }
+// Sunrise added end

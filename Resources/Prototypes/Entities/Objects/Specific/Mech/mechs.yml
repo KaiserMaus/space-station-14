@@ -141,8 +141,6 @@
   - type: Pullable
   - type: Physics
     bodyType: KinematicController
-    # angularDamping: 10 # sunrise-edit
-    # linearDamping: 10 # sunrise-edit
   - type: GravityAffected
   - type: Clickable
   - type: WiresPanel
