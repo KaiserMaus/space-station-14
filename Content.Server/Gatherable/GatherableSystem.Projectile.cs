@@ -22,9 +22,9 @@ public sealed partial class GatherableSystem
         }
 
         // Sunrise added start
-        var canGather = true;
-        CanGatherWithProjectile(gathering, ref canGather);
-        if (!canGather)
+        var getChance = true;
+        GatherProjectileChance(gathering, ref getChance);
+        if (!getChance)
             return;
         // Sunrise added end
 
@@ -36,6 +36,6 @@ public sealed partial class GatherableSystem
     }
 
     // Sunrise added start
-    partial void CanGatherWithProjectile(Entity<GatheringProjectileComponent> gathering, ref bool canGather);
+    partial void GatherProjectileChance(Entity<GatheringProjectileComponent> gathering, ref bool getChance);
     // Sunrise added end
 }

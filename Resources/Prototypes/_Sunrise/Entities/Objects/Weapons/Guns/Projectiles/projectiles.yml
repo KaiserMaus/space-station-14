@@ -1439,7 +1439,7 @@
         Blunt: 10
         Structural: 10
   - type: GatheringProjectile
-    chance : 0.2
+    chance: 0.2
   - type: StaminaDamageOnCollide
     damage: 3
 
