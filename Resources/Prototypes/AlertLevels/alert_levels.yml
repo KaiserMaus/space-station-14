@@ -65,13 +65,11 @@
       # Sunrise edit start
       extendedAccessOptions:
         announcement: access-system-accesses-delay-gamma
-      # Sunrise edit end
-      # Sunrise add start
     martial-law:
       announcement: alert-level-martial-law-announcement
       selectable: false
       sound:
-        path: /Audio/Misc/war_alert.ogg
+        path: /Audio/_Sunrise/Misc/war_alert.ogg
         params:
           volume: 5
       disableSelection: true

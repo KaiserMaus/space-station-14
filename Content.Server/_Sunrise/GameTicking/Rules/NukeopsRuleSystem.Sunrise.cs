@@ -18,7 +18,7 @@ public sealed partial class NukeopsRuleSystem
             if (!comp.CanChangeAlertLevel)
                 continue;
 
-            if (_gameTiming.CurTime < comp.AlertlevelTime)
+            if (_gameTiming.CurTime < comp.AlertLevelChangeTime)
                 continue;
 
             if (comp.SetAlertlevel == null || comp.TargetStation == null)
@@ -31,19 +31,13 @@ public sealed partial class NukeopsRuleSystem
 
     private void ApplySunriseWarDeclarationAdjustments(NukeopsRuleComponent nukeops)
     {
-        nukeops.AlertlevelTime = Timing.CurTime + TimeSpan.FromSeconds(nukeops.AlertlevelDelay);
+        nukeops.AlertLevelChangeTime = _gameTiming.CurTime + nukeops.AlertLevelDelay;
         nukeops.CanChangeAlertLevel = true;
     }
 
     private bool TryGetSunriseWarCondition(NukeopsRuleComponent nukieRule, WarConditionStatus? oldStatus, out WarConditionStatus status)
     {
-        if (oldStatus == WarConditionStatus.YesWar)
-        {
-            status = WarConditionStatus.WarReady;
-            return true;
-        }
-
-        status = WarConditionStatus.YesWar;
-        return true;
+        status = default;
+        return false;
     }
 }

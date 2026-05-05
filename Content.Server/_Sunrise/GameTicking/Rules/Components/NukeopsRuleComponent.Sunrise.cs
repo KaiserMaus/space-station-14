@@ -8,14 +8,14 @@ public sealed partial class NukeopsRuleComponent
     /// Changes the alert level on all stations with the nuke disk
     /// if null, the alert level will not change.
     /// </summary>
+    [DataField]
     public string? SetAlertlevel = "martial-law";
 
     /// <summary>
     /// How many seconds after the declaration of war, the alert level will change.
     /// </summary>
     [DataField]
-    public int AlertlevelDelay = 10;
-
+    public TimeSpan AlertLevelDelay = TimeSpan.FromSeconds(10);
     /// <summary>
     /// If true, the game will automatically set the alert level after the specified time.
     /// </summary>
@@ -23,5 +23,5 @@ public sealed partial class NukeopsRuleComponent
     public bool CanChangeAlertLevel = false;
 
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoPausedField]
-    public TimeSpan AlertlevelTime;
+    public TimeSpan AlertLevelChangeTime;
 }

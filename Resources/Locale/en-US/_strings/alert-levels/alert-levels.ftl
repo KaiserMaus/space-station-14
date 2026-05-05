@@ -36,5 +36,5 @@ alert-level-epsilon-announcement = Central Command has ordered the Epsilon secur
 alert-level-epsilon-instructions = Consider all contracts terminated.
 
 alert-level-martial-law = Martial law
-alert-level-martial-law-announcement = Martial law has been declared at the station. All crew members are to arm themselves immediately and obey without question all orders from the captain and the chief of security.
-alert-level-martial-law-instructions = All crew members are to arm themselves immediately and obey without question all orders from the captain and the Head of security.
+alert-level-martial-law-announcement = Martial law has been declared at the station. All crew members are to arm themselves immediately and obey without question all orders from the Captain and the Head of Security.
+alert-level-martial-law-instructions = All crew members are to arm themselves immediately and obey without question all orders from the Captain and the Head of Security.
