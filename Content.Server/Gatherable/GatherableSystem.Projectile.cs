@@ -21,10 +21,21 @@ public sealed partial class GatherableSystem
             return;
         }
 
+        // Sunrise added start
+        var canGather = true;
+        CanGatherWithProjectile(gathering, ref canGather);
+        if (!canGather)
+            return;
+        // Sunrise added end
+
         Gather(args.OtherEntity, gathering, gatherable);
         gathering.Comp.Amount--;
 
         if (gathering.Comp.Amount <= 0)
             QueueDel(gathering);
     }
+
+    // Sunrise added start
+    partial void CanGatherWithProjectile(Entity<GatheringProjectileComponent> gathering, ref bool canGather);
+    // Sunrise added end
 }
