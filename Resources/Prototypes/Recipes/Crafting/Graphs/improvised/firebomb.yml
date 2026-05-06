@@ -85,6 +85,16 @@
   - node: sunrisebundle1
     entity: SunriseFireBombSatchel1
     edges:
+    - to: firebomb
+      completed:
+      - !type:SpawnPrototype
+        prototype: MaterialCardboard1
+      - !type:SpawnPrototype
+        prototype: CableApcStack1
+        amount: 10
+      steps:
+      - tool: Cutting
+        doAfter: 0.75
     - to: sunrisebundle2
       steps:
       - tag: FireBomb
@@ -96,6 +106,13 @@
   - node: sunrisebundle2
     entity: SunriseFireBombSatchel2
     edges:
+    - to: sunrisebundle1
+      completed:
+      - !type:SpawnPrototype
+        prototype: FireBomb
+      steps:
+      - tool: Cutting
+        doAfter: 0.75
     - to: sunrisebundle3
       steps:
       - tag: FireBomb
@@ -103,7 +120,15 @@
         icon:
           sprite: Objects/Weapons/Bombs/ied.rsi
           state: base
-        doAfter: 1
+        doAfter: 0.75
   - node: sunrisebundle3
     entity: SunriseFireBombBundle
+    edges:
+    - to: sunrisebundle2
+      completed:
+      - !type:SpawnPrototype
+        prototype: FireBomb
+      steps:
+      - tool: Cutting
+        doAfter: 2
     # Sunrise-End

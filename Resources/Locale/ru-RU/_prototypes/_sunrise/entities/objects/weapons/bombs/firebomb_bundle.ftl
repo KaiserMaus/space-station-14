@@ -7,4 +7,4 @@ ent-SunriseFireBombSatchel2 = { ent-SunriseFireBombSatchel1 }
     .desc = Плотный самодельный пакет, собранный из нескольких зажигательных бомб. Тут не хватает одной.
 
 ent-SunriseFireBombBundle = { ent-SunriseFireBombSatchel1 }
-    .desc = Плотный самодельный пакет, собранный из трех зажигательных бомб.
+    .desc = Плотный самодельный пакет, собранный из трёх зажигательных бомб.
