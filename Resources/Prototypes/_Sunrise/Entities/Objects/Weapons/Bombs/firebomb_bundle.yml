@@ -58,20 +58,21 @@
   - type: TimerTrigger
     keysIn:
     - stuck
-    delay: 4
+    delay: 2
+    examinable: false
     initialBeepDelay: 0
     beepSound:
       path: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
       params:
         volume: 3
   - type: RandomTimerTrigger
-    min: 3
-    max: 15
+    min: 2
+    max: 20
   - type: Explosive
     explosionType: FireBomb
-    totalIntensity: 125
-    intensitySlope: 25
-    maxIntensity: 15
+    totalIntensity: 100
+    intensitySlope: 5
+    maxIntensity: 21
     canCreateVacuum: false
   - type: ExplodeOnTrigger
     keysIn:
