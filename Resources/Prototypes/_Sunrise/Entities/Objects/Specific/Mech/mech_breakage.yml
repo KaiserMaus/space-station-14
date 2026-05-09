@@ -410,3 +410,37 @@
         node: start
       - !type:DoActsBehavior
         acts: ["Destruction"]
+
+
+- type: entity
+  id: MechBreakageDreadnoughtFamily
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2500
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ScrapSteel:
+            min: 6
+            max: 12
+          ScrapGlass:
+            min: 3
+            max: 6
+          ScrapAirlock1:
+            min: 1
+            max: 2
+          ScrapGeneratorUraniumLeaking:
+            min: 1
+            max: 1
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
