@@ -57,6 +57,18 @@
   parent: BaseSunriseWallhorn
   name: loudspeaker
   suffix: Black
+  components:
+  - type: Construction
+    graph: SunriseWallhorn
+    node: wallhornBlack
+    containers:
+    - board
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+  - type: ContainerFill
+    containers:
+      board: [ SunriseWallhornElectronics ]
 
 - type: entity
   id: SunriseWallhornWhite
@@ -64,9 +76,32 @@
   name: loudspeaker
   suffix: White
   components:
+  - type: Construction
+    graph: SunriseWallhorn
+    node: wallhornWhite
+    containers:
+    - board
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+  - type: ContainerFill
+    containers:
+      board: [ SunriseWallhornElectronics ]
   - type: Sprite
     layers:
     - state: speaker_white
     - state: unshaded
       shader: unshaded
       map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+
+- type: entity
+  id: SunriseWallhornAssembly
+  name: loudspeaker assembly
+  description: A wall-mounted loudspeaker frame without electronics.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Wallmounts/wallhorn.rsi
+    state: speaker_black
+  - type: Construction
+    graph: SunriseWallhorn
+    node: assembly

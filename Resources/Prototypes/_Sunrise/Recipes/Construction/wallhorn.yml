@@ -1,0 +1,32 @@
+- type: construction
+  id: SunriseWallhornBlack
+  graph: SunriseWallhorn
+  startNode: start
+  targetNode: wallhornBlack
+  category: construction-category-structures
+  placementMode: SnapgridCenter
+  objectType: Structure
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+  - !type:WallmountCondition {}
+  alternativePrototypes:
+  - SunriseWallhornBlack
+  - SunriseWallhornWhite
+
+- type: construction
+  hide: true
+  id: SunriseWallhornWhite
+  graph: SunriseWallhorn
+  startNode: start
+  targetNode: wallhornWhite
+  category: construction-category-structures
+  placementMode: SnapgridCenter
+  objectType: Structure
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+  - !type:WallmountCondition {}
+  alternativePrototypes:
+  - SunriseWallhornBlack
+  - SunriseWallhornWhite
