@@ -1,0 +1,40 @@
+- type: entity
+  id: BaseSunriseWallhorn
+  parent: BaseWallmountMachine
+  abstract: true
+  name: loudspeaker
+  description: A wall-mounted loudspeaker for station-wide announcements.
+  components:
+  - type: AnnouncementSpeaker
+    range: 30
+    enabled: true
+    requiresPower: true
+  - type: Sprite
+    sprite: _Sunrise/Structures/Wallmounts/wallhorn.rsi
+    state: speaker_black
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  id: SunriseWallhornBlack
+  parent: BaseSunriseWallhorn
+  name: loudspeaker
+  suffix: Black
+
+- type: entity
+  id: SunriseWallhornWhite
+  parent: BaseSunriseWallhorn
+  name: loudspeaker
+  suffix: White
+  components:
+  - type: Sprite
+    state: speaker_white
