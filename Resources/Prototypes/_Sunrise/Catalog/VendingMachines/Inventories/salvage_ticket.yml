@@ -85,10 +85,18 @@
   - SalvageEquipment
 
 - type: listing
+  id: VendorSalvageClothingBeltSalvageWebbing
+  productEntity: ClothingBeltSalvageWebbing
+  cost:
+    SalvageTicket: 100
+  categories:
+  - SalvageEquipment
+
+- type: listing
   id: VendorSalvageClothingBeltSalvageMercWebbing
   productEntity: ClothingBeltSalvageMercWebbing
   cost:
-    SalvageTicket: 150
+    SalvageTicket: 200
   categories:
   - SalvageEquipment
 
@@ -96,7 +104,7 @@
   id: VendorSalvageClothingOuterVestWebSalvageMerc
   productEntity: ClothingOuterVestWebSalvageMerc
   cost:
-    SalvageTicket: 200
+    SalvageTicket: 150
   categories:
   - SalvageEquipment
 
