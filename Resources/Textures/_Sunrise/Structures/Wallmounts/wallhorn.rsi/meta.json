@@ -14,6 +14,14 @@
         {
             "name": "speaker_white",
             "directions": 4
+        },
+        {
+            "name": "unshaded",
+            "directions": 4
+        },
+        {
+            "name": "onbattery",
+            "directions": 4
         }
     ]
 }

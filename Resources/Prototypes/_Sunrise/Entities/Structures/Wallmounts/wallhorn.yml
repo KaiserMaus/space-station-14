@@ -6,12 +6,40 @@
   description: A wall-mounted loudspeaker for station-wide announcements.
   components:
   - type: AnnouncementSpeaker
-    range: 30
+    range: 20
     enabled: true
     requiresPower: true
+  - type: ApcPowerReceiver
+    powerLoad: 50
+  - type: Battery
+    netsync: false
+    maxCharge: 15000
+    startingCharge: 15000
+  - type: ExaminableBattery
+  - type: ApcPowerReceiverBattery
+    idleLoad: 50
+    batteryRechargeRate: 100
+    batteryRechargeEfficiency: 0
+  - type: PowerState
+    idlePowerDraw: 50
   - type: Sprite
     sprite: _Sunrise/Structures/Wallmounts/wallhorn.rsi
-    state: speaker_black
+    layers:
+    - state: speaker_black
+    - state: unshaded
+      shader: unshaded
+      map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+      enum.PowerDeviceVisuals.BatteryPowered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { state: onbattery }
+          False: { state: unshaded }
+  - type: Appearance
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallic
@@ -37,4 +65,8 @@
   suffix: White
   components:
   - type: Sprite
-    state: speaker_white
+    layers:
+    - state: speaker_white
+    - state: unshaded
+      shader: unshaded
+      map: [ "enum.PowerDeviceVisualLayers.Powered" ]
