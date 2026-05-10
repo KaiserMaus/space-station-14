@@ -143,6 +143,9 @@ public sealed partial class CargoSystem
 
         foreach (var ent in toSell)
         {
+            // Sunrise added start - visual teleport effect for sold pallet contents
+            SpawnCargoPalletTeleportEffect(Transform(ent).Coordinates);
+            // Sunrise added end
             Del(ent);
         }
 

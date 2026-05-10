@@ -637,6 +637,9 @@ namespace Content.Server.Cargo.Systems
         {
             // Create the item itself
             var item = Spawn(order.ProductId, spawn);
+            // Sunrise added start - visual teleport effect for cargo pallet delivery
+            SpawnCargoPalletTeleportEffect(spawn);
+            // Sunrise added end
 
             // Ensure the item doesn't start anchored
             _transformSystem.Unanchor(item, Transform(item));

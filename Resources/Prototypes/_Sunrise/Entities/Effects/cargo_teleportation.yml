@@ -1,0 +1,7 @@
+- type: entity
+  id: SunriseCargoPalletTeleportEffect
+  parent: EffectSparks
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedDespawn
+    lifetime: 0.4
