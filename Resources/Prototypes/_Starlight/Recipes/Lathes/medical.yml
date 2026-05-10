@@ -49,8 +49,8 @@
   materials:
     Plastic: 450
     Steel: 550
-    Silver: 300
-    Glass: 450
+    Silver: 100
+    Glass: 100
 #
 - type: latheRecipe
   id: ImplantCaseRobust
@@ -59,10 +59,10 @@
   - Cyberlimbs
   completetime: 15
   materials:
-    Plastic: 500
+    Plastic: 450
     Steel: 550
-    Silver: 300
-    Glass: 150
+    Silver: 100
+    Glass: 100
 #
 - type: latheRecipe
   id: ImplantCaseJani
@@ -71,10 +71,10 @@
   - Cyberlimbs
   completetime: 15
   materials:
-    Plastic: 500
+    Plastic: 450
     Steel: 550
-    Silver: 300
-    Glass: 150
+    Silver: 100
+    Glass: 100
 #
 - type: latheRecipe
   id: ImplantCaseMechwright
@@ -85,8 +85,8 @@
   materials:
     Plastic: 450
     Steel: 550
-    Silver: 300
-    Glass: 450
+    Silver: 100
+    Glass: 100
 #
 - type: latheRecipe
   id: ImplantCaseAtmos
@@ -97,8 +97,8 @@
   materials:
     Plastic: 450
     Steel: 550
-    Silver: 300
-    Glass: 450
+    Silver: 100
+    Glass: 100
 #
 - type: latheRecipe
   id: ImplantCaseHack
@@ -107,11 +107,12 @@
   - Cyberlimbs
   completetime: 15
   materials:
+  materials:
+    Plastic: 450
     Steel: 550
-    Plastic: 500
-    Glass: 250
+    Silver: 100
+    Glass: 100
     Plasma: 300
-    Silver: 300
 #
 - type: latheRecipe
   id: ImplantCaseGorilla
