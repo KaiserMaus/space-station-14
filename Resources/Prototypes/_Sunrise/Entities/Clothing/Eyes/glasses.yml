@@ -139,7 +139,7 @@
     - type: ThermalVision
   - type: PowerCellDraw
     drawRate: 15
-    useCharge: 20
+    useCharge: 15
   - type: ItemToggle
     predictable: false # issues between ToggleCellDraw and ItemToggleActiveSound
     onUse: false
@@ -178,9 +178,14 @@
   description: Thermals in the shape of glasses. for better exterminating enemies of NanoTrasen.
   components:
   - type: Sprite
-    sprite: Clothing/Eyes/Glasses/thermal.rsi
+    sprite: _Sunrise/Clothing/Eyes/Glasses/military_thermal.rsi
   - type: Clothing
-    sprite: Clothing/Eyes/Glasses/thermal.rsi
+    sprite: _Sunrise/Clothing/Eyes/Glasses/military_thermal.rsi
+    clothingVisuals:
+      eyes:
+      - state: equipped-EYES
+      - state: equipped-EYES-unshaded
+        shader: unshaded
   - type: ShowMindShieldIcons
 
 - type: entity
