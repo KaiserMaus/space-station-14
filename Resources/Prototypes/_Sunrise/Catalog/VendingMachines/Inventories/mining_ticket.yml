@@ -138,7 +138,7 @@
   id: VendorMiningJetpackSalvage
   productEntity: JetpackSalvage
   cost:
-    SalvageTicket: 50
+    SalvageTicket: 75
   categories:
   - MiningEquipment
   conditions:
@@ -149,7 +149,7 @@
   id: VendorMiningJetpackMini
   productEntity: JetpackMini
   cost:
-    SalvageTicket: 125
+    SalvageTicket: 130
   categories:
   - MiningEquipment
   conditions:
