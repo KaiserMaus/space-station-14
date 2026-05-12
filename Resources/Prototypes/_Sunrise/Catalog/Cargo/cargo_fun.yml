@@ -7,3 +7,13 @@
   cost: 2000
   category: Fun
   group: market
+
+- type: cargoProduct
+  id: FunMindmakerHelmetCrate
+  icon:
+    sprite: _Sunrise/Clothing/Head/Helmets/mindmaker.rsi
+    state: icon
+  product: CrateSecurityMindmakerHelmets
+  cost: 4000
+  category: Fun
+  group: market

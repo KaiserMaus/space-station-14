@@ -61,3 +61,16 @@
         - id: SheetPlasteel
         - id: MaterialWoodPlank
         - id: ModularReceiver
+
+- type: entity
+  id: CrateSecurityMindmakerHelmets
+  parent: CratePlastic
+  name: mindmaker helmet crate
+  description: Contains four mindmaker helmets.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: SunriseClothingHeadHelmetGhostRole
+          amount: 4

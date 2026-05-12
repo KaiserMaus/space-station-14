@@ -5,3 +5,6 @@ ent-CrateFunSprayPaints = ящик с краской
 ent-CrateGreytide = ящик грейтайда
     .desc = Ящик с вещичками для самых юных грейтайдов.
     .suffix = Дебаг
+
+ent-CrateSecurityMindmakerHelmets = ящик со шлемами майндмейкер
+    .desc = Ящик, содержащий четыре шлема майндмейкер.

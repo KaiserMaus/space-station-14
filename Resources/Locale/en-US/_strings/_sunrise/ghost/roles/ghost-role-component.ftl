@@ -50,3 +50,5 @@ job-rules-tsf-aligned = You are {role-type-tsf-aligned-name}.
 ghost-role-information-sentient-carpholo-name = Sentient Holocarp
 ghost-role-information-sentient-carprainbow-name = Sentient Rainbow Carp
 ghost-role-information-sentient-carpshark-name = Sentient Carpshark
+sunrise-ghost-role-justice-helmet-name = Evolutionator Host
+sunrise-ghost-role-justice-helmet-description = You woke up in a body wearing an evolutionator helmet. Figure out what to do next.

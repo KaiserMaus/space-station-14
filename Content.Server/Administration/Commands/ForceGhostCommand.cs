@@ -2,6 +2,7 @@ using Content.Server.GameTicking;
 using Content.Server.Ghost;
 using Content.Shared.Administration;
 using Content.Shared.GameTicking;
+using Content.Shared.Humanoid; // Sunrise edit
 using Content.Shared.Mind;
 using Robust.Server.Player;
 using Robust.Shared.Console;
@@ -41,6 +42,14 @@ public sealed class ForceGhostCommand : LocalizedEntityCommands
 
         if (!_mind.TryGetMind(player, out var mindId, out var mind))
             (mindId, mind) = _mind.CreateMind(player.UserId);
+
+        // Sunrise edit start - deny forceghost for humanoid owned entities
+        if (mind.OwnedEntity is { } owned && EntityManager.HasComponent<HumanoidAppearanceComponent>(owned))
+        {
+            shell.WriteLine(Loc.GetString("cmd-forceghost-denied"));
+            return;
+        }
+        // Sunrise edit end
 
         if (!_ghost.OnGhostAttempt(mindId, false, true, true, mind))
             shell.WriteLine(Loc.GetString("cmd-forceghost-denied"));

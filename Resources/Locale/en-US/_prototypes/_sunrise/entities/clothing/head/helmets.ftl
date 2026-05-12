@@ -24,3 +24,5 @@ ent-ClothingHeadHelmetDogi = kabuto
     .desc = Traditional Japanese helmet.
 ent-ClothingHeadHelmetArmoredSalvageMerc = scrapper helmet
     .desc = A durable, lightweight helmet favored by salvagers.
+ent-SunriseClothingHeadHelmetGhostRole = mindmaker helmet
+    .desc = A modified helmet that accelerates evolution a thousand times, creating the beginnings of intelligence in those who did not have it before... unfortunately, it will not help the Security Cadet, but it works great on monkeys. Ooooh, Aak!!

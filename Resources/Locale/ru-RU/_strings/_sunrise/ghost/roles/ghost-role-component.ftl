@@ -50,3 +50,5 @@ job-rules-tsf-aligned = Вы на стороне {role-type-tsf-aligned-name}.
 ghost-role-information-sentient-carpholo-name = Разумный голокарп
 ghost-role-information-sentient-carprainbow-name = Разумный радужный карп
 ghost-role-information-sentient-carpshark-name = Разумная карпоакула
+sunrise-ghost-role-justice-helmet-name = Носитель шлема эволюции
+sunrise-ghost-role-justice-helmet-description = Похоже шлем насильно ввел вам результат эволюции человечества. Разберитесь, что делать дальше.
