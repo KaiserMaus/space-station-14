@@ -1,5 +1,6 @@
 - type: quickConstructionCategory
   id: Steel
+  name: quickconstruction-category-steel
   constructionEntries:
   - MachineFrame
   - Computer

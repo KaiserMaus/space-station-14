@@ -1,5 +1,6 @@
 - type: quickConstructionCategory
   id: MetalRod
+  name: quickconstruction-category-metal-rod
   constructionEntries:
   - Grille
   - Table
