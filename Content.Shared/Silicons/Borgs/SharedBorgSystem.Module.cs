@@ -3,6 +3,9 @@ using Content.Shared.Hands.Components;
 using Content.Shared.Interaction.Components;
 using Content.Shared.Localizations;
 using Content.Shared.Silicons.Borgs.Components;
+// Sunrise-Start
+using Content.Shared._Sunrise.Silicons.Borgs.Events;
+// Sunrise-End
 using Robust.Shared.Containers;
 
 namespace Content.Shared.Silicons.Borgs;
@@ -142,11 +145,19 @@ public abstract partial class SharedBorgSystem
     private void OnItemModuleSelected(Entity<ItemBorgModuleComponent> module, ref BorgModuleSelectedEvent args)
     {
         ProvideItems(args.Chassis, module.AsNullable());
+        // Sunrise-Start: hook for sunrise-specific module item behavior without duplicate directed subscriptions.
+        var ev = new BorgModuleItemsToggledEvent(args.Chassis, true);
+        RaiseLocalEvent(module.Owner, ref ev);
+        // Sunrise-End
     }
 
     private void OnItemModuleUnselected(Entity<ItemBorgModuleComponent> module, ref BorgModuleUnselectedEvent args)
     {
         RemoveProvidedItems(args.Chassis, module.AsNullable());
+        // Sunrise-Start: hook for sunrise-specific module item behavior without duplicate directed subscriptions.
+        var ev = new BorgModuleItemsToggledEvent(args.Chassis, false);
+        RaiseLocalEvent(module.Owner, ref ev);
+        // Sunrise-End
     }
 
     private void ProvideItems(Entity<BorgChassisComponent?> chassis, Entity<ItemBorgModuleComponent?> module)

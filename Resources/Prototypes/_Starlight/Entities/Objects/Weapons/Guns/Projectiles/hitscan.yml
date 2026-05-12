@@ -1481,6 +1481,7 @@
   id: EmpPulse
   name: EMP impulse
   parent: EnergyTrace
+  categories: [ HideSpawnMenu ]
   components:
   - type: HitscanEmpEffect
     emp:

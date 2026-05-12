@@ -15,6 +15,9 @@
   description: A self-defense weapon that exhausts organic targets, weakening them until they collapse.
   categories: [ HideSpawnMenu ]
   components:
+  - type: BatteryAmmoProvider
+    proto: BulletDisabler
+    fireCost: 6.25
   - type: BatterySelfRecharger
     autoRechargeRate: 10
 
@@ -64,7 +67,7 @@
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: BatteryAmmoProvider
     proto: RedMediumLaser
-    fireCost: 100
+    fireCost: 12
   - type: BatterySelfRecharger
     autoRechargeRate: 20
   - type: MagazineVisuals
@@ -453,14 +456,14 @@
   parent: WeaponDisablerSMG
   id: WeaponDisablerSMGBorg
   components:
-  - type: BatterySelfRecharger
-    autoRechargeRate: 25
   - type: Gun
     selectedMode: FullAuto
-    fireRate: 3.5
+    fireRate: 3
   - type: BatteryAmmoProvider
     proto: BulletDisablerSmg
-    fireCost: 50
+    fireCost: 5
+  - type: BatterySelfRecharger
+    autoRechargeRate: 25
 
 - type: entity
   name: cyborg's pulse weapon
@@ -487,12 +490,12 @@
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: BatteryAmmoProvider #ProjectileBatteryAmmoProvider
     proto: Pulse
-    fireCost: 200
+    fireCost: 25
+  - type: BatterySelfRecharger
+    autoRechargeRate: 30
   - type: Battery
     maxCharge: 5000
     startingCharge: 5000
-  - type: BatterySelfRecharger
-    autoRechargeRate: 30
 
 - type: entity
   name: cyborg's UVL-21
@@ -523,13 +526,13 @@
     availableModes:
     - FullAuto
   - type: BatteryAmmoProvider
-    proto: RedMediumLaser # Sunrise-TODO: ????? ????? ???????? ??? ?????? ?????
-    fireCost: 50
+    proto: RedMediumLaser
+    fireCost: 5
+  - type: BatterySelfRecharger
+    autoRechargeRate: 30
   - type: Battery
     maxCharge: 10000
     startingCharge: 10000
-  - type: BatterySelfRecharger
-    autoRechargeRate: 30
   - type: AmmoCounter
 
 - type: entity
@@ -563,13 +566,13 @@
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: BatteryAmmoProvider
     proto: BulletRifleTraceSP
-    fireCost: 50
-  - type: Battery
-    maxCharge: 10000
-    startingCharge: 10000
+    fireCost: 5
   - type: BatterySelfRecharger
     autoRechargeRate: 250
     autoRechargePauseTime: 10
+  - type: Battery
+    maxCharge: 10000
+    startingCharge: 10000
 
 - type: entity
   name: cyborg's Heavy Rifle Gun
@@ -590,13 +593,13 @@
       path: /Audio/_Sunrise/Weapons/Guns/Snipers/Bauer127/bauer127_shot.ogg
   - type: BatteryAmmoProvider
     proto: CartridgeAntiMateriel
-    fireCost: 500
-  - type: Battery
-    maxCharge: 4000
-    startingCharge: 4000
+    fireCost: 50
   - type: BatterySelfRecharger
     autoRechargeRate: 250
     autoRechargePauseTime: 20
+  - type: Battery
+    maxCharge: 4000
+    startingCharge: 4000
   - type: AmmoCounter
 
 - type: entity
@@ -627,13 +630,13 @@
       path: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
   - type: BatteryAmmoProvider
     proto: GrenadeFragTimer
-    fireCost: 250
-  - type: Battery
-    maxCharge: 1500
-    startingCharge: 1500
+    fireCost: 30
   - type: BatterySelfRecharger
     autoRechargeRate: 125
     autoRechargePauseTime: 20
+  - type: Battery
+    maxCharge: 1500
+    startingCharge: 1500
   - type: AmmoCounter
 
 - type: entity
@@ -667,12 +670,12 @@
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: BatteryAmmoProvider
     proto: BulletPistolTraceSP
-    fireCost: 50
+    fireCost: 5
+  - type: BatterySelfRecharger
+    autoRechargeRate: 25
   - type: Battery
     maxCharge: 5000
     startingCharge: 5000
-  - type: BatterySelfRecharger
-    autoRechargeRate: 25
   - type: AmmoCounter
 
 - type: entity
@@ -802,6 +805,9 @@
   description: Borg Heavy Laser Gun is a high-output directed-energy system built for sustained combat operations. Its capacitors deliver concentrated thermal pulses capable of breaching reinforced materials, while the internal cooling assembly allows continuous firing without performance decay. The weapon integrates directly with borg power systems, removing the need for traditional ammunition and ensuring uninterrupted operational efficiency.
   categories: [ HideSpawnMenu ]
   components:
+  - type: BatteryAmmoProvider
+    proto: RedHeavyLaser
+    fireCost: 20
   - type: BatterySelfRecharger
     autoRechargeRate: 30
   # "remove" wield bonus and penalty so borgs can use it
@@ -809,7 +815,7 @@
     minAngle: 0
     maxAngle: 0
   - type: Gun
-    fireRate: 2
+    fireRate: 1.75
     minAngle: 1
     maxAngle: 2
 

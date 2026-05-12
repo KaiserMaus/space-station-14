@@ -131,7 +131,7 @@
     hands:
     - item: StunbatonBorg
     - item: FlashBorg
-    - item: WeaponDisablerSMGBorg
+    - item: WeaponDisablerBorg
 
 - type: entity
   id: BorgModuleAdvancedCombat
@@ -145,8 +145,8 @@
   - type: ItemBorgModule
     hands:
     - item: Truncheon
-    - item: WeaponRifleLecterB
     - item: WeaponHeavyLaserBorg
+    - item: WeaponDisablerSMGBorg
     - item: HoloprojectorSecurityBorg
 
 - type: entity

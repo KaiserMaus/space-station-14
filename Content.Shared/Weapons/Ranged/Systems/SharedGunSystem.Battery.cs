@@ -62,8 +62,22 @@ public abstract partial class SharedGunSystem
 
     private void OnBatteryTakeAmmo(Entity<BatteryAmmoProviderComponent> ent, ref TakeAmmoEvent args)
     {
-        var shots = Math.Min(args.Shots, ent.Comp.Shots);
+        // Sunrise-Start: allow forks to redirect battery weapon power consumption from local cell.
+        if (args.Shots <= 0)
+            return;
 
+        var chargeAttempt = new BatteryAmmoProviderChargeAttemptEvent(args.User, args.Shots, ent.Comp.FireCost * args.Shots);
+        RaiseLocalEvent(ent, ref chargeAttempt);
+        if (chargeAttempt.Cancelled)
+        {
+            args.Reason = chargeAttempt.Reason;
+            return;
+        }
+
+        var shots = chargeAttempt.UseLocalCharge
+            ? Math.Min(args.Shots, ent.Comp.Shots)
+            : args.Shots;
+        // Sunrise-End
         if (shots == 0)
             return;
 
@@ -71,8 +85,10 @@ public abstract partial class SharedGunSystem
         {
             args.Ammo.Add(GetShootable(ent, args.Coordinates));
         }
-
-        TakeCharge(ent, shots);
+        // Sunrise-Start
+        if (chargeAttempt.UseLocalCharge)
+            TakeCharge(ent, shots);
+        // Sunrise-End
     }
 
     private void OnBatteryAmmoCount(Entity<BatteryAmmoProviderComponent> ent, ref GetAmmoCountEvent args)
@@ -207,3 +223,16 @@ public abstract partial class SharedGunSystem
         }
     }
 }
+
+// Sunrise-Start: extension point for fork-specific battery power routing.
+[ByRefEvent]
+public record struct BatteryAmmoProviderChargeAttemptEvent(EntityUid? User, int Shots, float TotalChargeCost)
+{
+    public readonly EntityUid? User = User;
+    public readonly int Shots = Shots;
+    public readonly float TotalChargeCost = TotalChargeCost;
+    public bool UseLocalCharge = true;
+    public bool Cancelled = false;
+    public string? Reason = null;
+}
+// Sunrise-End
