@@ -34,7 +34,7 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Server.GameTicking.Rules;
 
-public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
+public sealed partial class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent> // Sunrise-Edit
 {
     [Dependency] private readonly AntagSelectionSystem _antag = default!;
     [Dependency] private readonly EmergencyShuttleSystem _emergency = default!;
@@ -47,6 +47,7 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
 
     private static readonly ProtoId<CurrencyPrototype> TelecrystalCurrencyPrototype = "Telecrystal";
     private static readonly ProtoId<TagPrototype> NukeOpsUplinkTagPrototype = "NukeOpsUplink";
+    private const int FighterUplinkTc = 30; // Sunrise-Edit
 
     // Sunrise-Start
     [ValidatePrototypeId<AntagPrototype>]
@@ -403,23 +404,22 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
 
     private void DistributeExtraTc(Entity<NukeopsRuleComponent> nukieRule)
     {
-        var enumerator = EntityQueryEnumerator<StoreComponent>();
-        while (enumerator.MoveNext(out var uid, out var component))
-        {
-            if (!_tag.HasTag(uid, NukeOpsUplinkTagPrototype))
-                continue;
+        if (nukieRule.Comp.UplinkEnt is not { } commanderUplink ||
+            !TryComp<StoreComponent>(commanderUplink, out var store))
+            return;
 
-            if (GetOutpost(nukieRule.Owner) is not { } outpost)
-                continue;
+        if (nukieRule.Comp.RoundstartOperatives == 0)
+            return;
 
-            if (Transform(uid).MapID != Transform(outpost).MapID) // Will receive bonus TC only on their start outpost
-                continue;
+        var fightersCount = Math.Max(nukieRule.Comp.RoundstartOperatives - 1, 0);
+        if (fightersCount == 0)
+            return;
 
-            _store.TryAddCurrency(new() { { TelecrystalCurrencyPrototype, nukieRule.Comp.WarTcAmountPerNukie * nukieRule.Comp.RoundstartOperatives } }, uid, component); // Sunrise-Edit
+        var bonusTc = GetCommanderWarBonusTc(fightersCount); // Sunrise-Edit
+        _store.TryAddCurrency(new() { { TelecrystalCurrencyPrototype, bonusTc } }, commanderUplink, store); // Sunrise-Edit
 
-            var msg = Loc.GetString("store-currency-war-boost-given", ("target", uid));
-            _popupSystem.PopupEntity(msg, uid);
-        }
+        var msg = Loc.GetString("store-currency-war-boost-given", ("target", commanderUplink));
+        _popupSystem.PopupEntity(msg, commanderUplink);
     }
 
     private void SetWinType(Entity<NukeopsRuleComponent> ent, WinType type, bool endRound = true)
@@ -524,13 +524,14 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
 
         if (args.Def.PrefRoles.Contains(CommanderAntagProto))
         {
-            var uplink = SetupUplink(args.EntityUid, ent.Comp);
+            var uplink = SetupUplink(args.EntityUid, 0, true);
             ent.Comp.UplinkEnt = uplink;
 
             if (uplink == null)
                 return;
 
-            var totalTc = ent.Comp.WarTcAmountPerNukie * ent.Comp.RoundstartOperatives;
+            var fightersAlreadySelected = Math.Max(ent.Comp.RoundstartOperatives - 1, 0);
+            var totalTc = GetCommanderStartupTc(fightersAlreadySelected); // Sunrise-Edit
             var store = EnsureComp<StoreComponent>(uplink.Value);
             _store.TryAddCurrency(
                 new Dictionary<string, FixedPoint2> { { TelecrystalCurrencyPrototype, totalTc } },
@@ -540,7 +541,9 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
 
         else if (ent.Comp.UplinkEnt != null)
         {
-            var giveTcCount = ent.Comp.WarTcAmountPerNukie;
+            _ = SetupUplink(args.EntityUid, FighterUplinkTc, true);
+
+            var giveTcCount = GetCommanderTcPerFighter(); // Sunrise-Edit
             var store = EnsureComp<StoreComponent>(ent.Comp.UplinkEnt.Value);
             _store.TryAddCurrency(
                 new Dictionary<string, FixedPoint2> { { TelecrystalCurrencyPrototype, giveTcCount } },
@@ -551,13 +554,13 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
     }
 
     // Sunrise-Start
-    private EntityUid? SetupUplink(EntityUid user, NukeopsRuleComponent rule)
+    private EntityUid? SetupUplink(EntityUid user, FixedPoint2 balance, bool giveDiscounts)
     {
         var uplink = _uplinkSystem.FindUplinkByTag(user, NukeOpsUplinkTagPrototype);
         if (uplink == null)
             return null;
 
-        _uplinkSystem.SetUplink(user, uplink.Value, 0, true);
+        _uplinkSystem.SetUplink(user, uplink.Value, balance, giveDiscounts);
         return uplink;
     }
     // Sunrise-End
