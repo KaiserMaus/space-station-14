@@ -300,10 +300,10 @@
     # range
     - proto: MobPirateT1Pistol
       cost: 2
-      prob: 0.25
+      prob: 0.08
     - proto: MobPirateT1Mosin
       cost: 3
-      prob: 0.15
+      prob: 0.08
     - proto: MobPirateT1Medic
       cost: 2
       prob: 0.05
@@ -388,30 +388,6 @@
       cost: 6
       prob: 0.08
     # range
-    - proto: MobPirateT1BombardierFire
-      cost: 8
-      prob: 0.03
-    - proto: MobPirateT1BombardierGlass
-      cost: 8
-      prob: 0.03
-    - proto: MobPirateT1BombardierPipe
-      cost: 8
-      prob: 0.03
-    - proto: MobPirateT1Pistol
-      cost: 2
-      prob: 0.08
-    - proto: MobPirateT1SMG
-      cost: 5
-      prob: 0.08
-    - proto: MobPirateT1ScrapSMG
-      cost: 5
-      prob: 0.05
-    - proto: MobPirateT1ScrapRifle
-      cost: 5
-      prob: 0.05
-    - proto: MobPirateT1Rifle
-      cost: 5
-      prob: 0.05
     - proto: MobPirateT3Shield1984
       cost: 7
       prob: 0.08

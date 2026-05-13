@@ -867,7 +867,7 @@
   - MobRogueSiliconPassiveRegen
   id: MobRogueSiliconCatcher
   name: catcher unit
-  description: Equipped with bolas, this unit is designed to slow, capture, and detain targets.
+  description: Equipped with viscerators, this unit is designed to slow, capture, and detain targets.
   categories: [ HideSpawnMenu ]
   components:
   - type: Loadout
@@ -902,7 +902,7 @@
     defaultRotation: 90
     horizontalRotation: 90
   - type: BasicEntityAmmoProvider
-    proto: Bola
+    proto: MobRogueSiliconViscerator
     capacity: 1
     count: 1
   - type: Gun
@@ -916,14 +916,6 @@
     availableModes:
     - FullAuto
     soundGunshot: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
-  - type: BatteryAmmoProvider
-    proto: SpawnMobViscerator
-    fireCost: 100
-  - type: Battery
-    maxCharge: 100
-    startingCharge: 100
-  - type: BatterySelfRecharger
-    autoRechargeRate: 5
 
 #region Tier 3
 - type: entity
