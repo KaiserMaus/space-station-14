@@ -61,6 +61,10 @@
   - type: GhostPanelAntagonistMarker
     name: ghost-panel-antagonist-silicon-name
     description: ghost-panel-antagonist-silicon-description
+    priority: 45
+  - type: Tag
+    tags:
+    - RogueSiliconHealTarget
   - type: Bloodstream
   - type: Strippable
   - type: Pullable
@@ -78,7 +82,7 @@
     thresholds:
       0: Alive
       64: Critical
-      110: Dead
+      330: Dead
     stateAlertDict:
       Alive: BorgHealth
       Critical: BorgCrit
@@ -137,6 +141,11 @@
       params:
         variation: 0.125
   - type: SoundWhileAlive
+  - type: ToggleableNightVision
+    effect: EffectNightVisionSyndie
+  - type: TTS
+    voice: Sentrybot
+  - type: NpcVeteranFollower
 
 - type: entity
   parent:
@@ -185,7 +194,7 @@
     thresholds:
       0: Alive
       48: Critical
-      100: Dead
+      300: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
       30: 0.7
@@ -218,8 +227,8 @@
     damageCap: 500
     damage:
       groups:
-        Brute: -0.5
-        Burn: -0.5
+        Brute: -0.6
+        Burn: -0.6
         Airloss: -1
 
 - type: entity
@@ -254,7 +263,7 @@
     thresholds:
       0: Alive
       24: Critical
-      72: Dead
+      216: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
       14: 0.7
@@ -635,11 +644,15 @@
   parent:
   - MobMovementSpeedModifierSpecial
   - MobRogueSiliconDroneBase
+  - MobRogueSiliconPassiveRegen
   id: MobRogueSiliconViscerator
   name: viscerator unit
   description: Small, quick, and nimble, these drones are designed to chase its targets through narrow areas and incapacitate those it catches. Often accompanies catcher units.
   categories: [ HideSpawnMenu ]
   components:
+  - type: Tag
+    tags:
+    - RogueSiliconHealTarget
   - type: Sprite
     drawdepth: Mobs
     sprite: _Sunrise/Mobs/RogueSilicons/viscerator.rsi
@@ -654,7 +667,7 @@
     thresholds:
       0: Alive
       12: Critical
-      20: Dead
+      60: Dead
   - type: Fixtures
     fixtures:
       fix1:
@@ -932,6 +945,14 @@
     - MobRogueSiliconLootT3
   - type: NameIdentifier
     group: Silicon
+  - type: Tag
+    tags:
+    - FootstepSound
+    - DoorBumpOpener
+    - MindTransferTarget
+    - Unimplantable
+    - RogueSiliconHealTarget
+    - NpcVeteranLeader
   - type: SlowOnDamage
     speedModifierThresholds:
       120: 0.85
@@ -975,6 +996,10 @@
   - type: Loadout
     prototypes:
     - MobRogueSiliconLootT3
+  - type: Tag
+    tags:
+    - RogueSiliconHealTarget
+    - NpcVeteranLeader
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -998,7 +1023,7 @@
     thresholds:
       0: Alive
       88: Critical
-      130: Dead
+      390: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
       54: 0.7
@@ -1042,6 +1067,10 @@
   - type: Loadout
     prototypes:
     - MobRogueSiliconLootT3
+  - type: Tag
+    tags:
+    - RogueSiliconHealTarget
+    - NpcBoss
   - type: CanMoveInAir
   - type: Fixtures
     fixtures:
@@ -1072,7 +1101,7 @@
     thresholds:
       0: Alive
       160: Critical
-      320: Dead
+      500: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
       96: 0.7
@@ -1149,6 +1178,10 @@
   - type: Loadout
     prototypes:
     - MobRogueSiliconLootT3
+  - type: Tag
+    tags:
+    - RogueSiliconHealTarget
+    - NpcBoss
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -1176,7 +1209,7 @@
     thresholds:
       0: Alive
       240: Critical
-      360: Dead
+      500: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
       144: 0.7

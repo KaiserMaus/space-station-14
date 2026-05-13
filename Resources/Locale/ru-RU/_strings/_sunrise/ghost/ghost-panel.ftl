@@ -41,6 +41,6 @@ ghost-panel-antagonist-pirate-description = Враждебный пират ил
 ghost-panel-antagonist-soviet-name = Солдат СССП
 ghost-panel-antagonist-soviet-description = Солдат вооруженых сил СССП.
 ghost-panel-antagonist-silicon-name = Мятежный Силикон
-ghost-panel-antagonist-silicon-description = Враждебный автономный юнит под контролем мятежнего ИИ.
+ghost-panel-antagonist-silicon-description = Враждебный автономный юнит под контролем мятежного ИИ.
 ghost-panel-antagonist-infiltrator-name = Инфильтратор Синдиката
 ghost-panel-antagonist-infiltrator-description = Оперативник Синдиката, готов устроить перестрелку.

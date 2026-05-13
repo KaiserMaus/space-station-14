@@ -33,6 +33,16 @@
     range: 5
     sound:
       path: /Audio/Ambience/Objects/hdd_buzz.ogg
+  - type: AoEHeal
+    range: 60
+    threshold: 0.9
+    damage:
+      groups:
+        Brute: -5
+        Burn: -3
+    whitelist:
+      tags:
+      - RogueSiliconHealTarget
   - type: PowerConsumer
     showInMonitor: false
   - type: Electrified

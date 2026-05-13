@@ -638,58 +638,64 @@
   desc: salvage-faction-silicons
   entries:
     - proto: MobRogueSiliconScrap
-      cost: 2
+      cost: 1
     - proto: MobRogueSiliconScrapThreads
-      cost: 2
+      cost: 1
       prob: 0.2
     - proto: MobRogueSiliconScrapThrusters
-      cost: 3
+      cost: 2
       prob: 0.2
     - proto: MobRogueSiliconScrapThrustersRanged
-      cost: 3
+      cost: 2
       prob: 0.15
     - proto: SpawnMobRogueDronesT1
-      cost: 3
+      cost: 2
       prob: 0.2
     - proto: MobRogueSiliconDroneLethals
-      cost: 3
+      cost: 2
       prob: 0.15
     - proto: MobRogueSiliconDroneNonLethals
-      cost: 3
+      cost: 2
       prob: 0.15
     - proto: MobRogueSiliconDroneScience
-      cost: 4
+      cost: 3
       prob: 0.1
     - proto: MobRogueSiliconViscerator
-      cost: 3
+      cost: 1
       prob: 0.2
+    - proto: SpawnMobRogueSiliconVisceratorSquad
+      cost: 4
+      prob: 0.15
     - proto: MobRogueSiliconServo
-      cost: 3
+      cost: 2
       prob: 0.2
     - proto: MobRogueSiliconHerder
-      cost: 3
+      cost: 2
     - proto: MobRogueSiliconHunter
-      cost: 4
-    - proto: MobRogueSiliconCatcher
       cost: 3
+    - proto: MobRogueSiliconCatcher
+      cost: 2
       prob: 0.3
     - proto: MobRogueSiliconTerminatorT3
-      cost: 6
+      cost: 4
       prob: 0.1
     - proto: MobRogueSiliconTesla
-      cost: 4
-    - proto: MobRogueSiliconScrapFlayer
       cost: 2
+    - proto: MobRogueSiliconScrapFlayer
+      cost: 1
       prob: 0.1
     - proto: MobRogueSiliconBoss
-      cost: 4
+      cost: 3
       prob: 0.05
     - proto: MobRogueSiliconGuardian
-      cost: 8
+      cost: 5
       prob: 0.05
     - proto: MobRogueSiliconGuardianLCG
-      cost: 8
+      cost: 5
       prob: 0.04
+    - proto: RogueAiNode
+      cost: 8
+      prob: 0.1
   difficulties:
     - Moderate
     - Challenging
