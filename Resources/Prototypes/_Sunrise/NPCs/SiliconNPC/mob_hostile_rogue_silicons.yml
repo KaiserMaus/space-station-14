@@ -58,6 +58,9 @@
     - SiliconsExpedition
   - type: NameIdentifier
     group: Silicon
+  - type: GhostPanelAntagonistMarker
+    name: ghost-panel-antagonist-silicon-name
+    description: ghost-panel-antagonist-silicon-description
   - type: Bloodstream
   - type: Strippable
   - type: Pullable
