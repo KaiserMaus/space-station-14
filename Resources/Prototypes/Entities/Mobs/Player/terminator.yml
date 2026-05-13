@@ -197,6 +197,7 @@
     force: true
   - type: Tag
     tags:
+    - FootstepSound
     - DoorBumpOpener
     # let mind transfer on gib work
     - MindTransferTarget
