@@ -5,6 +5,7 @@
   description: "Contains a portion of a rogue AI database."
   components:
   - type: Sprite
+    noRot: true
     sprite: _Sunrise/Structures/Specific/RogueSilicons/ai_node.rsi
     layers:
     - state: base
