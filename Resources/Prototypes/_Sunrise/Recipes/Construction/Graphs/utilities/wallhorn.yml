@@ -13,24 +13,6 @@
   - node: assembly
     entity: SunriseWallhornAssembly
     edges:
-    - to: wired
-      steps:
-      - material: Cable
-        amount: 2
-        doAfter: 1
-    - to: start
-      completed:
-      - !type:GivePrototype
-        prototype: SheetSteel1
-        amount: 2
-      - !type:DeleteEntity {}
-      steps:
-      - tool: Welding
-        doAfter: 2
-
-  - node: wired
-    entity: SunriseWallhornAssembly
-    edges:
     - to: electronics
       steps:
       - tag: SunriseWallhornElectronics
@@ -40,14 +22,15 @@
           sprite: "Objects/Misc/module.rsi"
           state: "id_mod"
         doAfter: 1
-    - to: assembly
+    - to: start
       completed:
       - !type:GivePrototype
-        prototype: CableApcStack1
+        prototype: SheetSteel1
         amount: 2
+      - !type:DeleteEntity {}
       steps:
-      - tool: Cutting
-        doAfter: 1
+      - tool: Screwing
+        doAfter: 2
 
   - node: electronics
     edges:
@@ -63,7 +46,7 @@
   - node: wallhornBlack
     entity: SunriseWallhornBlack
     edges:
-    - to: wired
+    - to: assembly
       conditions:
       - !type:ContainerNotEmpty
         container: board
@@ -78,7 +61,7 @@
   - node: wallhornWhite
     entity: SunriseWallhornWhite
     edges:
-    - to: wired
+    - to: assembly
       conditions:
       - !type:ContainerNotEmpty
         container: board
