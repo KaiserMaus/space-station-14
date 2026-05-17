@@ -634,7 +634,7 @@
   parent: ClothingOuterStorageFoldableBase
   id: ClothingOuterCoatKimonoBlackGreen
   name: kimono
-  suffix: Black Green, Большое
+  suffix: Black Green, large
   description: A traditional kimono with a black and green pattern.
   components:
   - type: Sprite
@@ -649,14 +649,14 @@
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatKimonoBlackGreen]
   id: ClothingOuterCoatKimonoBlackGreenOpen
-  suffix: Open, Большое
+  suffix: Open, large
   categories: [ HideSpawnMenu ]
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
   id: ClothingOuterCoatKimonoBlue
   name: kimono
-  suffix: Blue, Большое
+  suffix: Blue, large
   description: A traditional kimono with a blue pattern.
   components:
   - type: Sprite
@@ -671,14 +671,14 @@
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatKimonoBlue]
   id: ClothingOuterCoatKimonoBlueOpen
-  suffix: Open, Большое
+  suffix: Open, large
   categories: [ HideSpawnMenu ]
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
   id: ClothingOuterCoatKimonoFlowerBlack
   name: kimono
-  suffix: Flower Black, Большое
+  suffix: Flower Black, large
   description: A traditional kimono with a black floral pattern.
   components:
   - type: Sprite
@@ -693,14 +693,14 @@
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatKimonoFlowerBlack]
   id: ClothingOuterCoatKimonoFlowerBlackOpen
-  suffix: Open, Большое
+  suffix: Open, large
   categories: [ HideSpawnMenu ]
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
   id: ClothingOuterCoatKimonoFlowerBlue
   name: kimono
-  suffix: Flower Blue, Большое
+  suffix: Flower Blue, large
   description: A traditional kimono with a blue floral pattern.
   components:
   - type: Sprite
@@ -715,14 +715,14 @@
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatKimonoFlowerBlue]
   id: ClothingOuterCoatKimonoFlowerBlueOpen
-  suffix: Open, Большое
+  suffix: Open, large
   categories: [ HideSpawnMenu ]
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
   id: ClothingOuterCoatKimonoFlowerRed
   name: kimono
-  suffix: Flower Red, Большое
+  suffix: Flower Red, large
   description: A traditional kimono with a red floral pattern.
   components:
   - type: Sprite
@@ -737,14 +737,14 @@
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatKimonoFlowerRed]
   id: ClothingOuterCoatKimonoFlowerRedOpen
-  suffix: Open, Большое
+  suffix: Open, large
   categories: [ HideSpawnMenu ]
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
   id: ClothingOuterCoatKimonoFlowerWhite
   name: kimono
-  suffix: Flower White, Большое
+  suffix: Flower White, large
   description: A traditional kimono with a white floral pattern.
   components:
   - type: Sprite
@@ -759,14 +759,14 @@
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatKimonoFlowerWhite]
   id: ClothingOuterCoatKimonoFlowerWhiteOpen
-  suffix: Open, Большое
+  suffix: Open, large
   categories: [ HideSpawnMenu ]
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
   id: ClothingOuterCoatKimonoRed
   name: kimono
-  suffix: Red, Большое
+  suffix: Red, large
   description: A traditional kimono with a red pattern.
   components:
   - type: Sprite
@@ -781,14 +781,14 @@
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatKimonoRed]
   id: ClothingOuterCoatKimonoRedOpen
-  suffix: Open, Большое
+  suffix: Open, large
   categories: [ HideSpawnMenu ]
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
   id: ClothingOuterCoatKimonoRedBlack
   name: kimono
-  suffix: Red Black, Большое
+  suffix: Red Black, large
   description: A traditional kimono with a red and black pattern.
   components:
   - type: Sprite
@@ -803,14 +803,14 @@
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatKimonoRedBlack]
   id: ClothingOuterCoatKimonoRedBlackOpen
-  suffix: Open, Большое
+  suffix: Open, large
   categories: [ HideSpawnMenu ]
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
   id: ClothingOuterCoatKimonoStripes
   name: kimono
-  suffix: Stripes, Большое
+  suffix: Stripes, large
   description: A traditional kimono with a striped pattern.
   components:
   - type: Sprite
@@ -825,14 +825,14 @@
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatKimonoStripes]
   id: ClothingOuterCoatKimonoStripesOpen
-  suffix: Open, Большое
+  suffix: Open, large
   categories: [ HideSpawnMenu ]
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
   id: ClothingOuterCoatKimonoWhite
   name: kimono
-  suffix: White, Большое
+  suffix: White, large
   description: A traditional kimono with a white pattern.
   components:
   - type: Sprite
@@ -847,7 +847,7 @@
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatKimonoWhite]
   id: ClothingOuterCoatKimonoWhiteOpen
-  suffix: Open, Большое
+  suffix: Open, large
   categories: [ HideSpawnMenu ]
 # region end Kimono
 
