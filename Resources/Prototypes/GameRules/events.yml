@@ -49,8 +49,6 @@
     - id: LoneOpsSpawn
     - id: WizardSpawn
     - id: AbductorsSpawn # Sunrise-Edit
-    - id: DiseaseRule # Sunrise-Edit
-    - id: SmallDisease # Sunrise-Edit
     - !type:NestedSelector
       tableId: DerelictBorgEventTable
 
@@ -259,7 +257,7 @@
       pickPlayer: false
       startingGear: SpaceNinjaGear
       roleLoadout:
-      - RoleSurvivalEVA
+      - RoleSurvivalSpaceNinja
       briefing:
         text: ninja-role-greeting
         color: Green
