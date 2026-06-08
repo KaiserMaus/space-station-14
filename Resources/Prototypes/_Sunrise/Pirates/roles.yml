@@ -1,0 +1,47 @@
+- type: antag
+  id: PirateCrew
+  name: roles-antag-pirate-crew-name
+  antagonist: true
+  setPreference: true
+  objective: roles-antag-pirate-crew-objective
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 18000
+
+- type: antag
+  id: PirateCaptain
+  name: roles-antag-pirate-captain-name
+  antagonist: true
+  setPreference: true
+  objective: roles-antag-pirate-captain-objective
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 18000
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRolePirate
+  name: Pirate Role
+  components:
+  - type: MindRole
+    roleType: TeamAntagonist
+    subtype: role-subtype-pirate
+    exclusiveAntag: true
+    antagPrototype: PirateCrew
+  - type: PirateRole
+
+- type: entity
+  parent: MindRolePirate
+  id: MindRolePirateCaptain
+  name: Pirate Captain Role
+  components:
+  - type: MindRole
+    antagPrototype: PirateCaptain
+
+- type: entity
+  parent: MindRolePirate
+  id: MindRolePirateCorsair
+  name: Pirate Corsair Role
+  components:
+  - type: MindRole
+    roleType: SoloAntagonist

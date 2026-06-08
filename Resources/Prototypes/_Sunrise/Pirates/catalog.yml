@@ -1,0 +1,85 @@
+- type: cargoAccount
+  id: Pirates
+  name: cargo-account-pirate-name
+  code: cargo-account-pirate-code
+  color: "#a15608"
+  radioChannel: Pirate
+  acquisitionSlip: PaperAcquisitionSlipCargo
+
+- type: cargoBountyGroup
+  id: Pirates
+
+- type: cargoMarket
+  id: pirateMarket
+
+- type: cargoProduct
+  id: PirateMarketCutlass
+  icon:
+    sprite: Objects/Weapons/Melee/cutlass.rsi
+    state: icon
+  product: Cutlass
+  cost: 1000
+  category: pirateproduct-category-name-weapons
+  group: pirateMarket
+
+- type: cargoProduct
+  id: PirateMarketFlintlock
+  icon:
+    sprite: Objects/Weapons/Guns/Snipers/flintlock.rsi
+    state: base
+  product: WeaponPistolFlintlock
+  cost: 1000
+  category: pirateproduct-category-name-weapons
+  group: pirateMarket
+
+- type: cargoProduct
+  id: PirateMarketCannon
+  icon:
+    sprite: Objects/Weapons/Guns/Launchers/pirate_cannon.rsi
+    state: icon
+  product: WeaponLauncherPirateCannon
+  cost: 3000
+  category: pirateproduct-category-name-weapons
+  group: pirateMarket
+
+- type: cargoProduct
+  id: PirateMarketShipCannon
+  icon:
+    sprite: Objects/Weapons/Guns/Shuttles/pirate_cannon.rsi
+    state: base
+  product: ShuttleGunPirateCannon
+  cost: 3000
+  category: pirateproduct-category-name-weapons
+  group: pirateMarket
+
+- type: cargoProduct
+  id: PirateMarketPirateEVA
+  icon:
+    sprite: Clothing/OuterClothing/Hardsuits/pirateeva.rsi
+    state: icon
+  product: SuitStorageEVAPirate
+  cost: 1500
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+- type: cargoProduct
+  id: PirateMarketAppraisalTool
+  icon:
+    sprite: Objects/Tools/appraisal-tool.rsi
+    state: icon
+  product: AppraisalTool
+  cost: 500
+  category: pirateproduct-category-name-tools
+  group: pirateMarket
+
+- type: entity
+  id: PiratePalletSell
+  name: pirate selling pallet
+  description: Designates valid items to sell.
+  parent: CargoPalletSell
+
+- type: entity
+  id: PiratePalletBuy
+  name: pirate buying pallet
+  description: Designates where orders will appear when purchased.
+  parent: CargoPalletBuy
