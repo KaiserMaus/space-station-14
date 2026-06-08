@@ -14,6 +14,8 @@
   parent: BasePiratesRule
   id: Pirates
   components:
+  - type: LoadGridRule
+    gridPath: /Maps/_Sunrise/Nonstations/pirate-cove.yml
   - type: LoadMapRule
     gridPath: /Maps/_Sunrise/Shuttles/Antag/falcon.yml
   - type: GameRule

@@ -1,0 +1,73 @@
+- type: entity
+  parent: DefaultStationBeaconGhost
+  id: DefaultStationBeaconPirateCove
+  suffix: Pirate Cove
+  components:
+  - type: PirateNavMapBeacon
+  - type: NavMapBeacon
+    text: Pirate Cove
+
+- type: entity
+  parent: FaxMachineSyndie
+  id: FaxMachinePirate
+  name: pirate long range fax machine
+  suffix: Pirate
+  components:
+  - type: Tag
+    tags:
+    - Pirate
+
+- type: entity
+  parent: WeaponCapacitorRecharger
+  id: WeaponCapacitorRechargerPirate
+  suffix: Pirate
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Power/pirate_recharger.rsi
+  - type: Machine
+    board: WeaponCapacitorRechargerPirateCircuitboard
+  - type: Tag
+    tags:
+    - Pirate
+
+- type: entity
+  parent: [ ClothingHandsBase ]
+  id: ClothingHandsShoddyPirateHook
+  name: shoddy pirate hook
+  description: Sharp and pointy, just a bit less than the real thing.
+  suffix: Pirate
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Weapons/Melee/pirate_hook.rsi
+    scale: 0.75, 0.75
+  - type: Clothing
+    sprite: _Sunrise/Objects/Weapons/Melee/pirate_hook.rsi
+  - type: MeleeWeapon
+    autoAttack: true
+    animation: WeaponArcThrust
+    mustBeEquippedToUse: true
+    damage:
+      types:
+        Slash: 10
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: AddAccentClothing
+    accent: PirateAccent
+
+- type: entity
+  parent: PlushieSharkBlue
+  id: PlushieSharkPirate
+  name: pirate shark soft toy
+  description: A soft shark toy dressed for looting and tall tales.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Fun/Plushies/shark.rsi
+    state: pirate
+  - type: Item
+    heldPrefix: pirate
+  - type: Tag
+    tags:
+    - PlushieSharkPirate
+    - Payload
+    - ClothMade
+

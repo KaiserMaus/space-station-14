@@ -1,0 +1,59 @@
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsPirate
+  suffix: Pirate, Locked
+  components:
+  - type: AccessReader
+    access: [["Pirate"]]
+
+- type: entity
+  parent: [ BaseComputerCircuitboard, BaseHighlyIllegalContraband ]
+  id: PirateRequestComputerCircuitboard
+  name: pirate request computer board
+  description: A computer printed circuit board for a pirate request computer.
+  suffix: Pirate
+  components:
+  - type: Sprite
+    state: cpu_syndicate
+  - type: ComputerBoard
+    prototype: ComputerCargoOrdersPirate
+  - type: StaticPrice
+    price: 750
+
+- type: entity
+  parent: [ BaseComputerCircuitboard, BaseHighlyIllegalContraband ]
+  id: PirateSaleComputerCircuitboard
+  name: pirate sale computer board
+  description: A computer printed circuit board for a pirate sale computer.
+  suffix: Pirate
+  components:
+  - type: Sprite
+    state: cpu_syndicate
+  - type: ComputerBoard
+    prototype: ComputerPalletConsolePirate
+  - type: StaticPrice
+    price: 750
+
+- type: entity
+  parent: [ BaseComputerCircuitboard, BaseHighlyIllegalContraband ]
+  id: PirateBountyComputerCircuitboard
+  name: pirate bounty computer board
+  description: A computer printed circuit board for a pirate bounty computer.
+  suffix: Pirate
+  components:
+  - type: Sprite
+    state: cpu_syndicate
+  - type: ComputerBoard
+    prototype: ComputerPirateBounty
+  - type: StaticPrice
+    price: 750
+
+- type: entity
+  parent: WeaponCapacitorRechargerCircuitboard
+  id: WeaponCapacitorRechargerPirateCircuitboard
+  description: A machine printed circuit board for a recharger. Seems to have a skull and crossbones engraved on it.
+  suffix: Machine Board, Pirate
+  components:
+  - type: MachineBoard
+    prototype: WeaponCapacitorRechargerPirate
+

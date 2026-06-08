@@ -1,0 +1,10 @@
+- type: accessLevel
+  id: Pirate
+  name: Pirate
+
+- type: Tag
+  id: Pirate
+
+- type: Tag
+  id: PlushieSharkPirate
+
