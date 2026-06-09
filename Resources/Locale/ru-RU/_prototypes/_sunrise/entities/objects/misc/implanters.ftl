@@ -42,3 +42,5 @@ ent-DeathRattleImplanterDeathSquad = { ent-BaseImplanter }
     .desc = { ent-BaseImplantOnlyImplanter.desc }
 ent-MindControlImplanter = имплантер контроля разума
     .desc = { ent-BaseImplantOnlyImplanterSyndi.desc }
+ent-SELFStorageImplanter = имплантер-хранилище S.E.L.F
+    .desc = { ent-BaseImplantOnlyImplanterSyndi.desc }
