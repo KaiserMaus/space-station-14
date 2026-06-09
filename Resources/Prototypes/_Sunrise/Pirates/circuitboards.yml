@@ -49,6 +49,20 @@
     price: 750
 
 - type: entity
+  parent: [ BaseComputerCircuitboard, BaseHighlyIllegalContraband ]
+  id: PirateShipyardComputerCircuitboard
+  name: pirate shipyard computer board
+  description: A computer printed circuit board for a pirate shipyard console.
+  suffix: Pirate
+  components:
+  - type: Sprite
+    state: cpu_syndicate
+  - type: ComputerBoard
+    prototype: ComputerPirateShipyard
+  - type: StaticPrice
+    price: 750
+
+- type: entity
   parent: WeaponCapacitorRechargerCircuitboard
   id: WeaponCapacitorRechargerPirateCircuitboard
   description: A machine printed circuit board for a recharger. Seems to have a skull and crossbones engraved on it.

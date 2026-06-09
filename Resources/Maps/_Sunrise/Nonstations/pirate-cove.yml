@@ -6220,6 +6220,13 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 17.5,-9.5
       parent: 1
+- proto: ComputerPirateShipyard
+  entities:
+  - uid: 2237
+    components:
+    - type: Transform
+      pos: 20.5,-7.5
+      parent: 1
 - proto: ComputerPowerMonitoring
   entities:
   - uid: 393
@@ -10675,6 +10682,13 @@ entities:
     - type: Transform
       pos: -5.4845266,1.63328
       parent: 1
+- proto: SpawnPointPirateCaptain
+  entities:
+  - uid: 2238
+    components:
+    - type: Transform
+      pos: 22.5,-10.5
+      parent: 1
 - proto: PirateFlag
   entities:
   - uid: 1304
@@ -10794,6 +10808,60 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 14.5,-10.5
+      parent: 1
+- proto: SpawnPointPirateCrew
+  entities:
+  - uid: 2239
+    components:
+    - type: Transform
+      pos: 15.5,4.5
+      parent: 1
+  - uid: 2240
+    components:
+    - type: Transform
+      pos: 13.5,4.5
+      parent: 1
+  - uid: 2241
+    components:
+    - type: Transform
+      pos: 11.5,4.5
+      parent: 1
+  - uid: 2242
+    components:
+    - type: Transform
+      pos: 12.5,1.5
+      parent: 1
+  - uid: 2243
+    components:
+    - type: Transform
+      pos: 14.5,1.5
+      parent: 1
+  - uid: 2244
+    components:
+    - type: Transform
+      pos: 21.5,0.5
+      parent: 1
+  - uid: 2245
+    components:
+    - type: Transform
+      pos: 24.5,4.5
+      parent: 1
+  - uid: 2246
+    components:
+    - type: Transform
+      pos: 22.5,6.5
+      parent: 1
+  - uid: 2247
+    components:
+    - type: Transform
+      pos: -5.5,8.5
+      parent: 1
+- proto: PirateShuttleVoucherRandomSpawner
+  entities:
+  - uid: 2248
+    components:
+    - type: Transform
+      pos: 21.5,-7.5
       parent: 1
 - proto: PlasmaReinforcedWindowDirectional
   entities:

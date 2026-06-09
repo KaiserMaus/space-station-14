@@ -18,7 +18,7 @@
     - map: ["enum.WiresVisualLayers.MaintenancePanel"]
       state: generic_panel_open
   - type: CargoOrderConsole
-    allowedGroups: [ "pirateMarket" ]
+    allowedGroups: [ "pirateMarket", "pirateShipyard" ]
     account: Pirates
     announcementChannel: Pirate
     removeLimitAccess: [ "Pirate" ]
@@ -29,6 +29,36 @@
     board: PirateRequestComputerCircuitboard
   - type: PointLight
     color: "#c9c042"
+  - type: AccessReader
+    access: [["Pirate"]]
+
+- type: entity
+  id: ComputerPirateShipyard
+  parent: ComputerShipyard
+  name: pirate shipyard console
+  description: Use a shuttle voucher here to deploy a purchased shuttle or sell the current one.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Machines/pirate_computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shuttle
+    - map: ["computerLayerKeys"]
+      sprite: Structures/Machines/computers.rsi
+      state: syndie_key
+    - map: ["enum.WiresVisualLayers.MaintenancePanel"]
+      state: generic_panel_open
+  - type: PirateShipyardConsole
+  - type: Computer
+    board: PirateShipyardComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#a15608"
   - type: AccessReader
     access: [["Pirate"]]
 

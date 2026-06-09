@@ -4,6 +4,7 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-pirate-crew-objective
+  playTimeTracker: AntagPirateCrew
   requirements:
   - !type:OverallPlaytimeRequirement
     time: 18000
@@ -14,6 +15,7 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-pirate-captain-objective
+  playTimeTracker: AntagPirateCaptain
   requirements:
   - !type:OverallPlaytimeRequirement
     time: 18000

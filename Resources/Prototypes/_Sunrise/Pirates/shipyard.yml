@@ -1,0 +1,118 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BasePirateShuttleVoucher
+  name: pirate shuttle voucher
+  description: Redeem this on a pirate shipyard console to deploy the purchased shuttle.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: id_mod
+  - type: Item
+    sprite: Objects/Misc/module.rsi
+    size: Small
+  - type: StaticPrice
+    price: 1
+
+- type: entity
+  parent: BasePirateShuttleVoucher
+  id: PirateShuttleVoucherFalcon
+  name: falcon shuttle voucher
+  components:
+  - type: PirateShuttleVoucher
+    gridPath: /Maps/_Sunrise/Shuttles/Antag/falcon.yml
+    price: 15000
+    offset: 32,0
+
+- type: entity
+  parent: BasePirateShuttleVoucher
+  id: PirateShuttleVoucherRustBrass
+  name: rust brass shuttle voucher
+  components:
+  - type: PirateShuttleVoucher
+    gridPath: /Maps/_Sunrise/Shuttles/Antag/rust_brass.yml
+    price: 30000
+    offset: 40,0
+
+- type: entity
+  parent: BasePirateShuttleVoucher
+  id: PirateShuttleVoucherScurvyDog
+  name: scurvy dog shuttle voucher
+  components:
+  - type: PirateShuttleVoucher
+    gridPath: /Maps/_Sunrise/Shuttles/Antag/scurvydog.yml
+    price: 22500
+    offset: 36,0
+
+- type: entity
+  parent: BasePirateShuttleVoucher
+  id: PirateShuttleVoucherSparrow
+  name: sparrow shuttle voucher
+  components:
+  - type: PirateShuttleVoucher
+    gridPath: /Maps/_Sunrise/Shuttles/Antag/sparrow.yml
+    price: 20000
+    offset: 34,0
+
+- type: entity
+  id: PirateShuttleVoucherRandomSpawner
+  name: random pirate shuttle voucher spawner
+  suffix: Pirate
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Misc/module.rsi
+      state: id_mod
+  - type: RandomSpawner
+    prototypes:
+    - PirateShuttleVoucherFalcon
+    - PirateShuttleVoucherRustBrass
+    - PirateShuttleVoucherScurvyDog
+    - PirateShuttleVoucherSparrow
+    chance: 1
+    offset: 0
+
+- type: cargoMarket
+  id: pirateShipyard
+
+- type: cargoProduct
+  id: PirateShipVoucherFalcon
+  icon:
+    sprite: Objects/Misc/module.rsi
+    state: id_mod
+  product: PirateShuttleVoucherFalcon
+  cost: 15000
+  category: pirateproduct-category-name-shuttles
+  group: pirateShipyard
+
+- type: cargoProduct
+  id: PirateShipVoucherRustBrass
+  icon:
+    sprite: Objects/Misc/module.rsi
+    state: id_mod
+  product: PirateShuttleVoucherRustBrass
+  cost: 30000
+  category: pirateproduct-category-name-shuttles
+  group: pirateShipyard
+
+- type: cargoProduct
+  id: PirateShipVoucherScurvyDog
+  icon:
+    sprite: Objects/Misc/module.rsi
+    state: id_mod
+  product: PirateShuttleVoucherScurvyDog
+  cost: 22500
+  category: pirateproduct-category-name-shuttles
+  group: pirateShipyard
+
+- type: cargoProduct
+  id: PirateShipVoucherSparrow
+  icon:
+    sprite: Objects/Misc/module.rsi
+    state: id_mod
+  product: PirateShuttleVoucherSparrow
+  cost: 20000
+  category: pirateproduct-category-name-shuttles
+  group: pirateShipyard

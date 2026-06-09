@@ -524,6 +524,14 @@
   weightModifier: 1.5
 
 - type: storytellerMetadata
+  id: Pirates
+  threatType: MajorAntag
+  threatCost: 150
+  minStationStrength: 10
+  maxStress: 80
+  weightModifier: 1.0
+
+- type: storytellerMetadata
   id: BloodCult
   threatType: MajorAntag
   threatCost: 220

@@ -6,6 +6,7 @@
   - type: PiratesRule
   - type: RuleGrids
   - type: AntagSelection
+    agentName: pirate-list-start
   - type: AntagLoadProfileRule
   - type: DynamicRuleCost
     cost: 150
@@ -16,19 +17,23 @@
   components:
   - type: LoadGridRule
     gridPath: /Maps/_Sunrise/Nonstations/pirate-cove.yml
-  - type: LoadMapRule
-    gridPath: /Maps/_Sunrise/Shuttles/Antag/falcon.yml
   - type: GameRule
-    minPlayers: 40
+    minPlayers: 20
+  - type: StationEvent
+    earliestStart: 10
+    minimumPlayers: 20
+    duration: null
+    reoccurrenceDelay: 60
+    startAnnouncement: null
+    maxOccurrences: 1
   - type: AntagSelection
-    selectionTime: PrePlayerSpawn
     definitions:
     - prefRoles: [ PirateCaptain ]
       fallbackRoles: [ PirateCrew ]
       spawnerPrototype: SpawnPointPirateCaptain
       startingGear: PirateCaptainGear
       roleLoadout:
-      - RoleSurvivalNukie
+      - RoleSurvivalEVA
       briefing:
         text: pirate-role-greeting
         color: "#a15608"
@@ -37,6 +42,7 @@
           params:
             volume: -12
       components:
+      - type: PirateAccent
       - type: PirateIcon
       - type: RandomMetadata
         nameSegments:
@@ -50,11 +56,12 @@
     - prefRoles: [ PirateCrew ]
       fallbackRoles: [ PirateCaptain ]
       spawnerPrototype: SpawnPointPirateCrew
-      min: 4
-      max: 4
+      min: 2
+      max: 9
+      playerRatio: 13
       startingGear: PirateGear
       roleLoadout:
-      - RoleSurvivalNukie
+      - RoleSurvivalEVA
       briefing:
         text: pirate-role-greeting
         color: "#a15608"
@@ -63,6 +70,7 @@
           params:
             volume: -12
       components:
+      - type: PirateAccent
       - type: PirateIcon
       - type: RandomMetadata
         nameSegments:

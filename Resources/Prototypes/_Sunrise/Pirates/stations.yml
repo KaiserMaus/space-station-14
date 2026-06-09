@@ -19,6 +19,7 @@
   - type: StationCargoOrderDatabase
     markets:
     - pirateMarket
+    - pirateShipyard
     orders:
       Pirates: []
 
