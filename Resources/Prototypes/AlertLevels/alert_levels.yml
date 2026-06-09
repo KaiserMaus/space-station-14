@@ -65,21 +65,7 @@
       # Sunrise edit start
       extendedAccessOptions:
         announcement: access-system-accesses-delay-gamma
-    martial-law:
-      announcement: alert-level-martial-law-announcement
-      selectable: false
-      sound:
-        path: /Audio/_Sunrise/Misc/war_alert.ogg
-        params:
-          volume: 5
-      disableSelection: true
-      color: Maroon
-      emergencyLightColor: Maroon
-      forceEnableEmergencyLights: true
-      shuttleTime: 1800  # Let's give the nuclear operatives time
-      extendedAccessOptions:
-        announcement: access-system-accesses-delay-martial-law
-      # Sunrise add end
+      # Sunrise edit end
     delta:
       announcement: alert-level-delta-announcement
       selectable: false

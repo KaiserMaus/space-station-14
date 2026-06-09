@@ -9,7 +9,7 @@ public sealed partial class NukeopsRuleComponent
     /// if null, the alert level will not change.
     /// </summary>
     [DataField]
-    public string? SetAlertlevel = "martial-law";
+    public string? SetAlertlevel = "gamma";
 
     /// <summary>
     /// How many seconds after the declaration of war, the alert level will change.

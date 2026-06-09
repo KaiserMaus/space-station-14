@@ -48,7 +48,6 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 - type: entity

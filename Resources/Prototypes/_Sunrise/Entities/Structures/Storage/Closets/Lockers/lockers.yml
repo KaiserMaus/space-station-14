@@ -212,7 +212,6 @@
     access: [["CentralCommand"]]
     alertAccesses:
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
   - type: Tag
     tags:
     - EmagImmune
@@ -323,7 +322,6 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
 
 - type: entity
   id: ClosetPatologoanatomFilled
@@ -367,7 +365,6 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
 
 - type: entity
   id: LockerMiningSpecialistFilled

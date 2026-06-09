@@ -220,7 +220,6 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 - type: entity
@@ -239,7 +238,6 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 - type: entity
@@ -258,7 +256,6 @@
         red: RedAlertAccesses
         blue: BlueAlertAccessesHOS
         gamma: GammaAlertAccesses
-        martial-law: GammaAlertAccesses
       # Sunrise-end
 
 - type: entity
@@ -287,7 +284,6 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 - type: entity
@@ -306,7 +302,6 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 - type: entity
@@ -335,7 +330,6 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 - type: entity
@@ -381,7 +375,6 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 - type: entity
@@ -948,7 +941,6 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
     # Sunrise-end
   - type: Paintable
     group: null

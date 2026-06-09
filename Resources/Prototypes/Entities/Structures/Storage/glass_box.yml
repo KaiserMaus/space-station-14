@@ -127,7 +127,6 @@
       blue: CaptainAlertAccesses
       red: CaptainAlertAccesses
       gamma: CaptainAlertAccesses
-      martial-law: CaptainAlertAccesses
   # Sunrise-end
   - type: Construction
     graph: GlassBox

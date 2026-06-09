@@ -34,7 +34,3 @@ alert-level-delta-instructions = Crewmembers are advised to listen to heads of s
 alert-level-epsilon = Epsilon
 alert-level-epsilon-announcement = Central Command has ordered the Epsilon security level on the station. Consider all contracts terminated.
 alert-level-epsilon-instructions = Consider all contracts terminated.
-
-alert-level-martial-law = Martial law
-alert-level-martial-law-announcement = Martial law has been declared at the station. All crew members are to arm themselves immediately and obey without question all orders from the Captain and the Head of Security.
-alert-level-martial-law-instructions = All crew members are to arm themselves immediately and obey without question all orders from the Captain and the Head of Security.

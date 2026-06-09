@@ -34,7 +34,6 @@
     alertAccesses:
       red: RedAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -54,7 +53,6 @@
       blue: BlueAlertAccessesHOS
       yellow: YellowAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -73,7 +71,6 @@
       blue: BlueAlertAccessesHOS
       yellow: YellowAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -92,7 +89,6 @@
       blue: BlueAlertAccessesHOS
       yellow: YellowAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -110,7 +106,6 @@
       blue: BlueAlertAccessesHOS
       yellow: YellowAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -129,7 +124,6 @@
       blue: BlueAlertAccessesHOS
       yellow: YellowAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -148,7 +142,6 @@
       blue: BlueAlertAccessesHOS
       yellow: YellowAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -167,7 +160,6 @@
       blue: BlueAlertAccessesHOS
       yellow: YellowAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -186,7 +178,6 @@
       blue: BlueAlertAccessesHOS
       yellow: YellowAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -204,7 +195,6 @@
       blue: BlueAlertAccessesHOS
       yellow: YellowAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -223,7 +213,6 @@
       blue: BlueAlertAccessesHOS
       yellow: YellowAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -262,7 +251,6 @@
       red: RedAlertAccesses
       yellow: YellowAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -280,7 +268,6 @@
       red: RedAlertAccesses
       yellow: YellowAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -310,7 +297,6 @@
       blue: BlueAlertAccessesHOS
       red: RedAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -327,7 +313,6 @@
       blue: BlueAlertAccessesHOS
       red: RedAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -346,7 +331,6 @@
       red: RedAlertAccesses
       yellow: YellowAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -376,7 +360,6 @@
       red: RedAlertAccesses
       yellow: YellowAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -394,7 +377,6 @@
       red: RedAlertAccesses
       yellow: YellowAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -435,7 +417,6 @@
     alertAccesses:
       red: RedAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 - type: entity
@@ -504,7 +485,6 @@
       red: RedAlertAccesses
       yellow: YellowAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -521,7 +501,6 @@
       red: RedAlertAccesses
       yellow: YellowAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -563,7 +542,6 @@
       blue: BlueAlertAccessesHOS
       red: RedAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 
@@ -579,7 +557,6 @@
       blue: BlueAlertAccesses
       red: RedAlertAccesses
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
       delta: AllAccess
     # Sunrise-end
 

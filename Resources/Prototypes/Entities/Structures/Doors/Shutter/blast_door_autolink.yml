@@ -63,7 +63,6 @@
         red: RedAlertAccesses
         blue: BlueAlertAccessesHOS
         gamma: GammaAlertAccesses
-        martial-law: GammaAlertAccesses
       # Sunrise-end
     - type: AutoLinkReceiver
       channel: Bridge
@@ -80,7 +79,6 @@
         red: RedAlertAccesses
         blue: BlueAlertAccessesHOS
         gamma: GammaAlertAccesses
-        martial-law: GammaAlertAccesses
       # Sunrise-end
     - type: AutoLinkReceiver
       channel: Bridge
@@ -97,7 +95,6 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
     # Sunrise-end
   - type: AutoLinkReceiver
     channel: Engineering
@@ -114,7 +111,6 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
     # Sunrise-end
   - type: AutoLinkReceiver
     channel: Engineering
@@ -131,7 +127,6 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
     # Sunrise-end
   - type: AutoLinkReceiver
     channel: Research
@@ -148,7 +143,6 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
     # Sunrise-end
   - type: AutoLinkReceiver
     channel: Research

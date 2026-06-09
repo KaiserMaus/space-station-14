@@ -5,4 +5,3 @@ access-system-accesses-delay-blue = Blue alert level set! Automatic access overw
 access-system-accesses-delay-red = Red alert level set! Automatic access overwrite protocol initiated. Security personnel will receive expanded access in { $time } seconds.
 access-system-accesses-delay-yellow = Yellow alert level set! Automatic access overwrite protocol initiated. Atmospheric technicians and the Chief Engineer will receive additional access in { $time } seconds.
 access-system-accesses-delay-gamma = Gamma alert level set! Automatic access overwrite protocol initiated. Security personnel will receive expanded access in { $time } seconds.
-access-system-accesses-delay-martial-law = Martial law declared! Automatic access overwrite protocol initiated. All mobilized personnel will receive expanded access in { $time } seconds.

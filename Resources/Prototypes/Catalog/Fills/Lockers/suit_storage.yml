@@ -156,7 +156,6 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 #Atmospherics hardsuit
@@ -176,7 +175,6 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 #Security hardsuit
@@ -295,7 +293,6 @@
       red: RedAlertAccesses
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
-      martial-law: GammaAlertAccesses
     # Sunrise-end
 
 #Blood-red hardsuit
