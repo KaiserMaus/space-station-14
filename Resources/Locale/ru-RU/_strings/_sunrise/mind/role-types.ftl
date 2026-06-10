@@ -2,7 +2,7 @@
 # Ideally, subtype names should be short
 
 role-subtype-liberated = Освобожденный
-role-subtype-Prisoner  = Заключенный
+role-subtype-prisoner = Заключенный
 
 role-type-corporate-aligned-name = Корпоративная сторона
 role-type-corporate-aligned-color = #134975
