@@ -20,7 +20,11 @@ public sealed class GibOnTriggerSystem : XOnTriggerSystem<GibOnTriggerComponent>
             }
         }
 
-        _gibbing.Gib(target, user: args.User);
+        // Sunrise edit start - поддержка растворителя снаряжения без удаления тела
+        if (ent.Comp.GibBody)
+            _gibbing.Gib(target, dropGiblets: ent.Comp.GibOrgans, user: args.User);
+        // Sunrise edit end
+
         args.Handled = true;
     }
 }
