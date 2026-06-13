@@ -2575,7 +2575,7 @@ entities:
   - uid: 149
     components:
     - type: MetaData
-      name: блок зарядки 75мм автопушка "Дракон"
+      name: зарядка EXP-3600g "Жабык"
     - type: Transform
       pos: -0.5,-2.5
       parent: 1
@@ -5475,14 +5475,14 @@ entities:
     - type: AccessReader
       accessListsOriginal:
       - - SyndicateAgent
-- proto: VendingMachineMedicalBase
+- proto: VendingMachineMedicalSyndicate
   entities:
   - uid: 343
     components:
     - type: Transform
       pos: -0.5,-8.5
       parent: 1
-- proto: VendingMachineWallMedicalCivilian
+- proto: VendingMachineWallMedicalCivilianSyndicate
   entities:
   - uid: 417
     components:

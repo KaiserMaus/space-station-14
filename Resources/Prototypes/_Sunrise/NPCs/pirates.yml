@@ -3475,7 +3475,7 @@
   - type: MovementSpeedModifier
     baseSprintSpeed: 2
   - type: BatteryAmmoProvider
-    proto: CartridgeHeavyRifleRFMJ
+    proto: CartridgeHeavyRifleRSP
     fireCost: 1
   - type: BatterySelfRecharger
     autoRechargePauseTime: 9
