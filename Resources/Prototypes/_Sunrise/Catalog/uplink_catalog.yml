@@ -1276,28 +1276,6 @@
 
 # region Hardsuits
 - type: listing
-  id: UplinkHardsuitSyndieCommander
-  name: uplink-hardsuit-syndie-commander-name
-  description: uplink-hardsuit-syndie-commander-desc
-  icon: { sprite: Clothing/OuterClothing/Hardsuits/syndiecommander.rsi, state: icon }
-  productEntity: ClothingOuterHardsuitSyndieCommanderBiocode
-  cost:
-    Telecrystal: 5
-  categories:
-  - UplinkWearables
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
-
-- type: listing
   id: UplinkHardsuitInfiltrationNukie
   name: uplink-hardsuit-infiltration-name
   description: uplink-hardsuit-infiltration-desc
@@ -1339,28 +1317,6 @@
       - NukeOpsUplink
       - LoneOpsUplink
       - AssaultOpsUplink
-
-- type: listing
-  id: UplinkHardsuitSyndieMedic
-  name: uplink-hardsuit-syndie-medic-name
-  description: uplink-hardsuit-syndie-medic-desc
-  icon: { sprite: Clothing/OuterClothing/Hardsuits/syndiemedic.rsi, state: icon }
-  productEntity: ClothingOuterHardsuitSyndieMedicBiocode
-  cost:
-    Telecrystal: 3
-  categories:
-  - UplinkWearables
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
 
 # region Objective-specific
 - type: listing
