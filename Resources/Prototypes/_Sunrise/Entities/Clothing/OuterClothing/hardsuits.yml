@@ -512,8 +512,8 @@
     - type: Clothing
       sprite: Clothing/OuterClothing/Suits/eva_syndicate.rsi
     - type: ClothingSpeedModifier
-      walkModifier: 0.9
-      sprintModifier: 0.85
+      walkModifier: 1
+      sprintModifier: 0.95
     - type: Biocode
       factions:
       - Syndicate
