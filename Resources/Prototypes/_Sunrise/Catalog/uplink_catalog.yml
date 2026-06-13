@@ -2023,7 +2023,7 @@
   description: uplink-mech-equipment-kord-desc
   productEntity: WeaponMechCombatKord
   cost:
-    Telecrystal: 28
+    Telecrystal: 20
   categories:
   - UplinkMechs
   conditions:
@@ -2074,6 +2074,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
     blacklist:
       components:
       - SurplusBundle
