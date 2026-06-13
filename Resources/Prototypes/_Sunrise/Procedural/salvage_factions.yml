@@ -576,7 +576,7 @@
       prob: 0.12
     - proto: SovietSquadLightMechanized
       cost: 100
-      prob: 0.1
+      prob: 0.05
     - proto: SovietSquadHeavyMechanized
       cost: 150
       prob: 0.05
