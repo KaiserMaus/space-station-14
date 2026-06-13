@@ -1601,8 +1601,6 @@
         id: RogueAiNode
   - type: SpawnOnTrigger
     proto: ClothingBackpackRogueSiliconT4
-  - type: GibOnTrigger
-    targetUser: true
   - type: Destructible
     thresholds:
     - trigger:

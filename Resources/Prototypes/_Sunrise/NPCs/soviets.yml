@@ -1346,8 +1346,6 @@
     - type: RadarBlip
   - type: SpawnOnTrigger
     proto: MobSovietT2Rifle
-  - type: GibOnTrigger
-    targetUser: false
   - type: Destructible
     thresholds:
     - trigger:
@@ -1527,8 +1525,6 @@
     - type: RadarBlip
   - type: SpawnOnTrigger
     proto: MobSovietT2Rifle
-  - type: GibOnTrigger
-    targetUser: false
   - type: Destructible
     thresholds:
     - trigger:
