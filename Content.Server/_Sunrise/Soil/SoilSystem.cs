@@ -4,18 +4,17 @@ using Content.Server.Popups;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Popups;
 using Robust.Server.GameObjects;
-using Robust.Shared.Map;
+using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
 
 namespace Content.Server._Sunrise.Soil;
 
 public sealed class SoilSystem : EntitySystem
 {
+    [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly SharedMapSystem _map = default!;
-    [Dependency] private readonly IMapManager _mapManager = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
     [Dependency] private readonly StaminaSystem _stamina = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
 
     private EntityQuery<PlantHolderComponent> _plantHolderQuery;
 
@@ -30,60 +29,32 @@ public sealed class SoilSystem : EntitySystem
 
     private void OnUseInHand(Entity<SoilComponent> ent, ref UseInHandEvent args)
     {
-        if (args.Handled)
-            return;
-
-        args.Handled = true;
-        TryPlantSoil(ent, args.User);
-    }
-
-    public bool TryPlantSoil(Entity<SoilComponent> ent, EntityUid user)
-    {
-        if (!CanPlantSoil(ent, user, out var coords))
-            return false;
-
-        DoPlantSoil(ent, user, coords);
-        return true;
-    }
-
-    public bool CanPlantSoil(Entity<SoilComponent> ent, EntityUid user, out EntityCoordinates coords)
-    {
-        var userCoords = _transform.GetMapCoordinates(user);
-        if (!_mapManager.TryFindGridAt(userCoords, out var gridUid, out var grid))
+        var xform = Transform(ent);
+        if (xform.GridUid is not { } gridUid || !TryComp<MapGridComponent>(gridUid, out var grid))
         {
-            coords = EntityCoordinates.Invalid;
-            _popup.PopupEntity(Loc.GetString(ent.Comp.PopupStringFailed), ent, user, PopupType.SmallCaution);
-            return false;
+            _popup.PopupEntity(Loc.GetString(ent.Comp.PopupStringFailed), ent, args.User, PopupType.SmallCaution);
+            return;
         }
 
-        var tile = _map.TileIndicesFor(gridUid, grid, userCoords);
-        coords = _map.ToCenterCoordinates(gridUid, tile, grid);
+        var tile = _map.TileIndicesFor(gridUid, grid, xform.Coordinates);
+        var coords = _map.ToCenterCoordinates(gridUid, tile, grid);
 
-        var anchored = _map.GetAnchoredEntitiesEnumerator(gridUid, grid, tile);
-        while (anchored.MoveNext(out var entity))
+        foreach (var entity in _lookup.GetEntitiesIntersecting(coords, LookupFlags.Dynamic | LookupFlags.Static))
         {
             if (!_plantHolderQuery.HasComp(entity))
                 continue;
 
-            _popup.PopupEntity(Loc.GetString(ent.Comp.PopupStringFailed), ent, user, PopupType.SmallCaution);
-            return false;
+            _popup.PopupEntity(Loc.GetString(ent.Comp.PopupStringFailed), ent, args.User, PopupType.SmallCaution);
+            return;
         }
 
-        return true;
-    }
-
-    private void DoPlantSoil(Entity<SoilComponent> ent, EntityUid user, EntityCoordinates coords)
-    {
         Spawn(ent.Comp.SpawnPrototype, coords);
 
         var targetMeta = MetaData(ent);
-        var userMeta = MetaData(user);
+        var userMeta = MetaData(args.User);
 
-        _popup.PopupEntity(
-            Loc.GetString(ent.Comp.PopupStringSuccess, ("user", userMeta.EntityName), ("name", targetMeta.EntityName)),
-            user,
-            PopupType.LargeGreen);
-        _stamina.TryTakeStamina(user, ent.Comp.StaminaDamage);
+        _popup.PopupEntity(Loc.GetString(ent.Comp.PopupStringSuccess, ("user", userMeta.EntityName), ("name", targetMeta.EntityName)), args.User, PopupType.LargeGreen);
+        _stamina.TryTakeStamina(args.User, ent.Comp.StaminaDamage);
 
         QueueDel(ent);
     }
