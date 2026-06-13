@@ -736,7 +736,6 @@
   id: MobRogueSiliconT1Viscerator
   name: viscerator unit
   description: Small, quick, and nimble, these drones are designed to chase its targets through narrow areas and incapacitate those it catches. Often accompanies catcher units.
-
   components:
   - type: Tag
     tags:
@@ -815,7 +814,7 @@
         maxVol: 90
   - type: MeleeChemicalInjector
     solution: melee
-    transferAmount: 2
+    transferAmount: 1
   - type: Loadout
     prototypes:
     - MobRogueSiliconLootT0
