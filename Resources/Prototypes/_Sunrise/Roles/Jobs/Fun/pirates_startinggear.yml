@@ -1,0 +1,271 @@
+# region reinf Pirate
+- type: startingGear
+  id: PirateScoonerEVAGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPirate
+    eyes: ClothingEyesEyepatch
+    back: ClothingBackpackMessengerPirate
+    head: ClothingHeadHelmetPirate
+    ears: ClothingHeadsetFreelanceNoKey
+    outerClothing: ClothingOuterEVASuitPirate
+    shoes: ClothingShoesBootsMagPirate
+    id: PiratePDA
+    belt: JetpackMiniFilled
+    pocket1: WeaponRevolverPirate
+    pocket2: CombatKnife
+  storage:
+    back:
+    - AppraisalTool
+    - DeathRattleImplanterFreelance
+    - RadioImplanterFreelance
+    - SpeedLoaderMagnumSP
+    - MagazineBoxMagnumSP
+    - CigPackSyndicate
+    - CheapLighter
+    - PinpointerPirate
+    - Doubloon15
+    - Doubloon5
+    - CrowbarOrange
+
+- type: startingGear
+  id: PirateScoonerOldEVAGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPirate
+    back: ClothingBackpackMessengerPirate
+    ears: ClothingHeadsetFreelanceNoKey
+    head: ClothingHeadBandBlack
+    outerClothing: ClothingOuterHardsuitPirateEVA
+    shoes: ClothingShoesBootsMagPirate
+    id: PiratePDA
+    belt: JetpackMiniFilled
+    pocket1: WeaponPistolFlintlock
+    pocket2: MagazineBoxMagnumSP
+  storage:
+    back:
+    - AppraisalTool
+    - DeathRattleImplanterFreelance
+    - RadioImplanterFreelance
+    - CigPackSyndicate
+    - CheapLighter
+    - PinpointerPirate
+    - Doubloon5
+    - Doubloon5
+    - CrowbarImprovised
+    - CartridgeMagnumAP
+    - CartridgeMagnumAP
+    - CartridgeMagnumAP
+
+- type: startingGear
+  id: PirateGearMonkeyFake
+  equipment:
+    head: ClothingHeadBandBlack
+    jumpsuit: ClothingUniformJumpsuitPirate
+    mask: CigaretteSyndicate
+    ears: ClothingHeadsetFreelanceNoKey
+    id:  PiratePDAMusicPassengerId
+
+# region Low-pop
+- type: startingGear
+  id: SunrisePirateScoonerAltA
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPirate
+    shoes: ClothingShoesBootsLaceup
+    head: ClothingHeadBandRed
+    id: PiratePDA
+    back: ClothingBackpackSatchelLeather
+    belt: ClothingBeltUtility
+    ears: ClothingHeadsetFreelance
+    pocket1: WeaponPistolFlintlock
+    pocket2: PinpointerPirate
+  inhand:
+    - Cutlass
+  storage:
+    back:
+    - Doubloon5
+    - Doubloon5
+
+- type: startingGear
+  id: SunrisePirateScoonerAltB
+  parent: SunrisePirateScoonerAltA
+  equipment:
+    head: ClothingHeadHatPirateTricord
+    outerClothing: ClothingOuterCoatGentle
+
+- type: startingGear
+  id: SunrisePirateScoonerAltC
+  parent: SunrisePirateScoonerAltA
+  equipment:
+    head: ClothingHeadBandBlack
+  inhand:
+    - WeaponShotgunBlunderbuss
+
+- type: startingGear
+  id: SunrisePirateScoonerAltD
+  parent: SunrisePirateScoonerAltA
+  equipment:
+    id: PiratePDAMusic
+    head: ClothingHeadHatPirateTricord
+    pocket1: WeaponRevolverPirate
+
+- type: startingGear
+  id: SunrisePirateCaptainScooner
+  parent: SunrisePirateScoonerAltA
+  equipment:
+    head: ClothingHeadHatPirate
+    ears: ClothingHeadsetAltFreelancer
+    neck: ClothingNeckCloakPirateCap
+    outerClothing: ClothingOuterVestWeb
+    pocket1: WeaponRevolverPirate
+
+# region Mid-pop ~80
+- type: startingGear
+  id: SunrisePirateDeepSpaceAltA
+  parent: SunrisePirateScoonerAltA
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPirate
+    shoes: ClothingShoesBootsMagPirate
+    head: ClothingHeadBandRed
+    outerClothing: ClothingOuterHardsuitPirateEVA
+    back: ClothingBackpackSatchelLeather
+    belt: ClothingBeltSalvageWebbing
+    ears: ClothingHeadsetFreelance
+    neck: PinpointerPirate
+    pocket1: WeaponPistolFlintlock
+    pocket2: WeaponGrapplingGun
+  inhand:
+    - Cutlass
+  storage:
+    back:
+    - Doubloon15
+    - AppraisalTool
+    - DeathRattleImplanterFreelance
+    - CigPackSyndicate
+    - CheapLighter
+
+- type: startingGear
+  id: SunrisePirateDeepSpaceAltB
+  parent: SunrisePirateScrapperAltA
+  equipment:
+    head: ClothingHeadHelmetPirateOld
+    outerClothing: ClothingOuterEVASuitPirateOld
+  inhand:
+    - WeaponLaserGun
+
+- type: startingGear
+  id: SunrisePirateDeepSpaceAltC
+  parent: SunrisePirateScrapperAltA
+  equipment:
+    head: ClothingHeadBandBlack
+    pocket1: CannonBallGrapeshotMini
+    pocket2: WeaponGrapplingGun
+  inhand:
+    - WeaponShotgunBlunderbuss
+
+- type: startingGear
+  id: SunrisePirateDeepSpaceAltD
+  parent: SunrisePirateScrapperAltA
+  equipment:
+    id: PiratePDAMusic
+    head: ClothingHeadHatPirateTricord
+    outerClothing: SunriseClothingOuterHardsuitRogue
+    pocket1: EnergyCutlass
+    pocket2: EnergyShield
+    belt: EnergyDomeGeneratorPersonalSyndie
+
+- type: startingGear
+  id: SunrisePirateCaptainDeepSpace
+  parent: SunrisePirateScrapperAltA
+  equipment:
+    head: ClothingHeadHatPirate
+    ears: ClothingHeadsetAltFreelancer
+    neck: ClothingNeckCloakPirateCap
+    outerClothing: ClothingOuterHardsuitPirate
+    pocket1: WeaponRevolverPirate
+    pocket2: WeaponRevolverPirate
+
+- type: startingGear
+  id: SunrisePirateCaptainDeepSpaceAltB
+  parent: SunrisePirateScrapperAltA
+  equipment:
+    head: ClothingHeadHatCapQM
+    ears: ClothingHeadsetAltFreelancer
+    neck: PinpointerPirate
+    outerClothing: ClothingOuterHardsuitPirateCapSun
+    pocket1: WeaponPistolGoldenMk58
+    pocket2: MagazinePistol
+
+# region High-pop 80+
+# Scrappers
+- type: startingGear
+  id: SunrisePirateScrapperAltA
+  parent: SunrisePirateDeepSpaceAltA
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSalvageMercBrown
+    shoes: ClothingShoesBootsMagCombat
+    head: ClothingHeadHelmetPirate
+    outerClothing: ClothingOuterEVASuitPirate
+    back: ClothingBackpackMessengerPirate
+    ears: ClothingHeadsetAltFreelancer
+    neck: PinpointerPirate
+    pocket1: WeaponSubMachineGunMakeshift
+    pocket2: WeaponGrapplingGun
+  inhand:
+    - WeaponSubMachineGunMakeshift
+  storage:
+    back:
+    - Doubloon15
+
+- type: startingGear
+  id: SunrisePirateScrapperAltB
+  parent: SunrisePirateScrapperAltA
+  equipment:
+    head: ClothingHeadHelmetPirateAlt2
+    outerClothing: ClothingOuterEVASuitPirate
+    pocket1: PouchAmmoFilledLightRifle
+  inhand:
+    - WeaponRifleSKM24Scrap
+
+- type: startingGear
+  id: SunrisePirateScrapperAltC
+  parent: SunrisePirateScrapperAltA
+  equipment:
+    head: ClothingHeadHelmetPirateAlt
+    outerClothing: ClothingOuterEVASuitPirateArmoredAlt
+    pocket1: PouchAmmoFilledSMG
+  inhand:
+    - WeaponSubMachineGunImprovised
+
+- type: startingGear
+  id: SunrisePirateScrapperAltD
+  parent: SunrisePirateScrapperAltA
+  equipment:
+    id: PiratePDAMusic
+    head: ClothingHeadHelmetPirateAlt2
+    outerClothing: ClothingOuterEVASuitPirateArmored
+    pocket1: PouchExplosive
+    belt: ClothingBeltLightSovietMarineWebbing
+  inhand:
+    - WeaponGrenadeLauncherImprovised
+
+- type: startingGear
+  id: SunrisePirateCaptainScrapper
+  parent: SunrisePirateScrapperAltA
+  equipment:
+    head: ClothingHeadBandBrown
+    neck: PinpointerPirate
+    outerClothing: ClothingOuterHardsuitPrivateer
+    pocket1: PouchExplosiveFilled
+    pocket2: PouchAmmoFilledSMG
+  inhand:
+    - WeaponSubMachineGunForged
+
+- type: startingGear
+  id: SunrisePirateCaptainScrapperAltB
+  parent: SunrisePirateCaptainScrapper
+  equipment:
+    head: ClothingHeadBandBrown
+    neck: PinpointerPirate
+    outerClothing: ClothingOuterHardsuitPrivateerArmored
+    belt: ClothingBeltLightSovietMarineWebbing
+    pocket1: WeaponPistolM1984
+    pocket2: PouchAmmoFilledPistol40

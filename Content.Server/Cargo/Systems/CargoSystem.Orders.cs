@@ -166,11 +166,9 @@ namespace Content.Server.Cargo.Systems
             }
 
             // Find our order again. It might have been dispatched or approved already
-            var order = orderDatabase.Orders[component.Account].Find(order => args.OrderId == order.OrderId && !order.Approved);
-            if (order == null || !_protoMan.Resolve(order.Account, out var account))
-            {
+            if (!TryFindUnapprovedOrder(orderDatabase, component.Account, args.OrderId, out var orders, out var order) ||
+                !_protoMan.Resolve(order.Account, out var account))
                 return;
-            }
 
             // Invalid order
             if (!_protoMan.HasIndex<EntityPrototype>(order.ProductId))
@@ -262,7 +260,7 @@ namespace Content.Server.Cargo.Systems
                 LogImpact.Low,
                 $"{ToPrettyString(player):user} approved order [orderId:{order.OrderId}, quantity:{order.OrderQuantity}, product:{order.ProductId}, requester:{order.Requester}, reason:{order.Reason}] on account {order.Account} with balance at {accountBalance}");
 
-            orderDatabase.Orders[component.Account].Remove(order);
+            orders.Remove(order);
             UpdateBankAccount((station.Value, bank), -cost, order.Account);
             UpdateOrders(station.Value);
         }
@@ -448,12 +446,13 @@ namespace Content.Server.Cargo.Systems
             if (!TryComp<StationBankAccountComponent>(station, out var bank))
                 return [];
 
-            var ourOrders = station.Comp.Orders[console.Comp.Account];
+            var ourOrders = GetOrderListOrEmpty(station.Comp, console.Comp.Account);
 
             if (console.Comp.Account == bank.PrimaryAccount)
                 return ourOrders;
 
-            var otherOrders = station.Comp.Orders[bank.PrimaryAccount].Where(order => order.Account == console.Comp.Account);
+            var primaryOrders = GetOrderListOrEmpty(station.Comp, bank.PrimaryAccount);
+            var otherOrders = primaryOrders.Where(order => order.Account == console.Comp.Account);
 
             return ourOrders.Concat(otherOrders).ToList();
         }
@@ -493,7 +492,7 @@ namespace Content.Server.Cargo.Systems
             if (!TryComp<StationBankAccountComponent>(station, out var bank))
                 return amount;
 
-            foreach (var order in station.Comp.Orders[account])
+            foreach (var order in GetOrderListOrEmpty(station.Comp, account))
             {
                 if (!order.Approved)
                     continue;
@@ -503,7 +502,7 @@ namespace Content.Server.Cargo.Systems
             if (account == bank.PrimaryAccount)
                 return amount;
 
-            foreach (var order in station.Comp.Orders[bank.PrimaryAccount])
+            foreach (var order in GetOrderListOrEmpty(station.Comp, bank.PrimaryAccount))
             {
                 if (order.Account != account)
                     continue;
@@ -568,7 +567,8 @@ namespace Content.Server.Cargo.Systems
 
         private bool TryAddOrder(EntityUid dbUid, ProtoId<CargoAccountPrototype> account, CargoOrderData data, StationCargoOrderDatabaseComponent component)
         {
-            component.Orders[account].Add(data);
+            var orders = EnsureOrderList(component, account);
+            orders.Add(data);
             UpdateOrders(dbUid);
             return true;
         }
@@ -582,11 +582,9 @@ namespace Content.Server.Cargo.Systems
 
         public void RemoveOrder(EntityUid dbUid, ProtoId<CargoAccountPrototype> account, int index, StationCargoOrderDatabaseComponent orderDB)
         {
-            var sequenceIdx = orderDB.Orders[account].FindIndex(order => order.OrderId == index);
-            if (sequenceIdx != -1)
-            {
-                orderDB.Orders[account].RemoveAt(sequenceIdx);
-            }
+            if (!TryRemoveOrder(orderDB, account, index))
+                return;
+
             UpdateOrders(dbUid);
         }
 
@@ -600,22 +598,7 @@ namespace Content.Server.Cargo.Systems
 
         private static bool PopFrontOrder(StationCargoOrderDatabaseComponent orderDB, ProtoId<CargoAccountPrototype> account, [NotNullWhen(true)] out CargoOrderData? orderOut)
         {
-            var orderIdx = orderDB.Orders[account].FindIndex(order => order.Approved);
-            if (orderIdx == -1)
-            {
-                orderOut = null;
-                return false;
-            }
-
-            orderOut = orderDB.Orders[account][orderIdx];
-            orderOut.NumDispatched++;
-
-            if (orderOut.NumDispatched >= orderOut.OrderQuantity)
-            {
-                // Order is complete. Remove from the queue.
-                orderDB.Orders[account].RemoveAt(orderIdx);
-            }
-            return true;
+            return TryPopFrontOrder(orderDB, account, out orderOut);
         }
 
         /// <summary>

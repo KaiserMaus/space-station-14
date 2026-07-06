@@ -15,8 +15,8 @@ pirate-list-start = The pirates were:
 pirate-list-name-user = - {$name} ({$user})
 pirate-briefing = You are a pirate in dire need of cash. Loot the station and sell its belongings to make as much money as you can.
 
-name-format-pirate-captain = Captain {CAPITALIZE($part0)}beard
-name-format-pirate-crew = {$part0} {CAPITALIZE($part1)}beard
+name-format-pirate-captain = Captain {$part0}
+name-format-pirate-crew = {$part0}
 
 cargo-account-pirate-name = Space Pirate Hoard
 cargo-account-pirate-code = SPH

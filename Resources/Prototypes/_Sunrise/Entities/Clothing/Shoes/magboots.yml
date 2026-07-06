@@ -17,7 +17,7 @@
     modifier: 0.5
 
 - type: entity
-  parent: ClothingShoesBootsMagCombat
+  parent: [ BaseMinorContraband, ClothingShoesBootsMagCombat ]
   id: ClothingShoesBootsMagPirate
   name: pirate magboots
   description: Repainted combat magnets to match the colors of pirates.

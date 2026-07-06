@@ -26,6 +26,8 @@
     sprite: _Sunrise/Structures/Power/pirate_recharger.rsi
   - type: Machine
     board: WeaponCapacitorRechargerPirateCircuitboard
+  - type: Charger
+    chargeRate: 50
   - type: Tag
     tags:
     - Pirate

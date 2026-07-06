@@ -21,6 +21,8 @@ ent-ComputerCargoOrdersPirate = pirate request computer
     .desc = Used by pirates to purchase new booty.
 ent-ComputerPalletConsolePirate = pirate sale computer
     .desc = Used to sell goods loaded onto cargo pallets.
+ent-ComputerPirateShipyard = pirate shipyard console
+    .desc = Used to purchase and deploy pirate shuttles.
 ent-ComputerPirateBounty = pirate bounty computer
     .desc = Used to manage currently active bounties.
 
@@ -54,6 +56,33 @@ ent-ClothingHandsShoddyPirateHook = shoddy pirate hook
     .suffix = Pirate
 ent-PlushieSharkPirate = pirate shark soft toy
     .desc = A soft shark toy dressed for looting and tall tales.
+
+ent-SunriseWeaponRifleRomulan = Romulan
+    .desc = Yarrr, a retrofitted Vulcan befitting of a pirate! Uses .20 rifle ammo.
+
+ent-SunriseClothingHeadHelmetHardsuitRogue = rogue combat suit helmet
+    .desc = Little space won't keep a tricorn out of style.
+ent-SunriseClothingOuterHardsuitRogue = rogue hardsuit
+    .desc = For when you really need to put the dashing into dashing rogue.
+
+ent-PiratePalletSell = pirate selling pallet
+    .desc = Designates valid items to sell.
+ent-PiratePalletBuy = pirate buying pallet
+    .desc = Designates where orders will appear when purchased.
+
+ent-BasePirateShuttleVoucher = pirate shuttle voucher
+    .desc = Redeem this on a pirate shipyard console to deploy the purchased shuttle.
+ent-PirateShuttleVoucherFalcon = falcon shuttle voucher
+    .desc = { ent-BasePirateShuttleVoucher.desc }
+ent-PirateShuttleVoucherRustBrass = rust brass shuttle voucher
+    .desc = { ent-BasePirateShuttleVoucher.desc }
+ent-PirateShuttleVoucherScurvyDog = scurvy dog shuttle voucher
+    .desc = { ent-BasePirateShuttleVoucher.desc }
+ent-PirateShuttleVoucherSparrow = sparrow shuttle voucher
+    .desc = { ent-BasePirateShuttleVoucher.desc }
+ent-PirateShuttleVoucherRandomSpawner = random pirate shuttle voucher spawner
+    .desc = A marker that spawns a random pirate shuttle voucher.
+    .suffix = Pirate
 
 ent-CratePirateChestSecure = secure pirate chest
     .desc = A secure space pirate chest that keeps station lubbers away from your booty.

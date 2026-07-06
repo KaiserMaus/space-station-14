@@ -819,7 +819,7 @@
       raffle:
         settings: default
     - type: Loadout
-      prototypes: [ PirateScoonerAltA, PirateScoonerAltB, PirateScoonerAltC, PirateScoonerAltD ]
+      prototypes: [ SunrisePirateScoonerAltA, SunrisePirateScoonerAltB, SunrisePirateScoonerAltC, SunrisePirateScoonerAltD ] # Sunrise-Edit
       roleLoadout: [ RoleSurvivalEVA ]
 
 - type: randomHumanoidSettings
@@ -839,7 +839,7 @@
       raffle:
         settings: default
     - type: Loadout
-      prototypes: [ PirateCaptainScooner ]
+      prototypes: [ SunrisePirateCaptainScooner ]
       roleLoadout: [ RoleSurvivalEVA ]
 
 ### Other

@@ -42,7 +42,7 @@
     sprite: _Sunrise/Structures/Machines/pirate_computers.rsi
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      state: rusted
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -72,7 +72,7 @@
     sprite: _Sunrise/Structures/Machines/pirate_computers.rsi
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      state: rusted
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -100,7 +100,7 @@
     sprite: _Sunrise/Structures/Machines/pirate_computers.rsi
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      state: rusted
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]

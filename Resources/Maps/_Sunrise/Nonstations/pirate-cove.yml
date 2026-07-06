@@ -10682,7 +10682,7 @@ entities:
     - type: Transform
       pos: -5.4845266,1.63328
       parent: 1
-- proto: SpawnPointPirateCaptain
+- proto: SpawnPointPirates
   entities:
   - uid: 2238
     components:
@@ -10809,7 +10809,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 14.5,-10.5
       parent: 1
-- proto: SpawnPointPirateCrew
+- proto: SpawnPointPirates
   entities:
   - uid: 2239
     components:

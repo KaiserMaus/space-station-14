@@ -31,9 +31,9 @@
     - prefRoles: [ PirateCaptain ]
       fallbackRoles: [ PirateCrew ]
       spawnerPrototype: SpawnPointPirateCaptain
-      startingGear: PirateCaptainGear
-      roleLoadout:
-      - RoleSurvivalEVA
+      pickPlayer: false
+      min: 1
+      max: 1
       briefing:
         text: pirate-role-greeting
         color: "#a15608"
@@ -46,7 +46,7 @@
       - type: PirateIcon
       - type: RandomMetadata
         nameSegments:
-        - Adjectives
+        - NamesDeathCommando
         nameFormat: name-format-pirate-captain
       - type: NpcFactionMember
         factions:
@@ -56,12 +56,10 @@
     - prefRoles: [ PirateCrew ]
       fallbackRoles: [ PirateCaptain ]
       spawnerPrototype: SpawnPointPirateCrew
-      min: 2
-      max: 9
-      playerRatio: 13
-      startingGear: PirateGear
-      roleLoadout:
-      - RoleSurvivalEVA
+      pickPlayer: false
+      min: 0
+      max: 8
+      playerRatio: 10
       briefing:
         text: pirate-role-greeting
         color: "#a15608"
@@ -74,8 +72,33 @@
       - type: PirateIcon
       - type: RandomMetadata
         nameSegments:
-        - NamesFirst
-        - Adjectives
+        - NamesDeathCommando
+        nameFormat: name-format-pirate-crew
+      - type: NpcFactionMember
+        factions:
+        - Pirate
+      mindRoles:
+      - MindRolePirate
+    - prefRoles: [ PirateCrew ]
+      fallbackRoles: [ PirateCaptain ]
+      spawnerPrototype: SpawnPointPirateCrew
+      pickPlayer: false
+      min: 0
+      max: 1
+      playerRatio: 80
+      briefing:
+        text: pirate-role-greeting
+        color: "#a15608"
+        sound:
+          path: "/Audio/Ambience/Antag/pirate_start.ogg"
+          params:
+            volume: -12
+      components:
+      - type: PirateAccent
+      - type: PirateIcon
+      - type: RandomMetadata
+        nameSegments:
+        - NamesDeathCommando
         nameFormat: name-format-pirate-crew
       - type: NpcFactionMember
         factions:

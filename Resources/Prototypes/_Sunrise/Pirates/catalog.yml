@@ -33,6 +33,16 @@
   group: pirateMarket
 
 - type: cargoProduct
+  id: PirateMarketRomulan
+  icon:
+    sprite: _Sunrise/Objects/Weapons/Guns/Rifles/romulan.rsi
+    state: icon
+  product: SunriseWeaponRifleRomulan
+  cost: 5000
+  category: pirateproduct-category-name-weapons
+  group: pirateMarket
+
+- type: cargoProduct
   id: PirateMarketCannon
   icon:
     sprite: Objects/Weapons/Guns/Launchers/pirate_cannon.rsi
@@ -59,6 +69,16 @@
     state: icon
   product: SuitStorageEVAPirate
   cost: 1500
+  category: pirateproduct-category-name-armor
+  group: pirateMarket
+
+- type: cargoProduct
+  id: PirateMarketRogueHardsuit
+  icon:
+    sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/rogue.rsi
+    state: icon
+  product: SunriseClothingOuterHardsuitRogue
+  cost: 4000
   category: pirateproduct-category-name-armor
   group: pirateMarket
 
