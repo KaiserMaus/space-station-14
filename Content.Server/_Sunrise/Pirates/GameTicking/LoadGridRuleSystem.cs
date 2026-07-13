@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Server.Antag;
 using Content.Server.GameTicking.Rules;
 using Content.Server.Station.Systems;
 using Content.Shared.GameTicking.Components;
@@ -18,52 +19,62 @@ public sealed class LoadGridRuleSystem : GameRuleSystem<LoadGridRuleComponent>
 
     private List<Entity<MapGridComponent>> _mapGrids = new();
 
-    protected override void Started(EntityUid uid,
-        LoadGridRuleComponent component,
-        GameRuleComponent gameRule,
-        GameRuleStartedEvent args)
+    public override void Initialize()
     {
-        base.Started(uid, component, gameRule, args);
+        base.Initialize();
 
+        SubscribeLocalEvent<LoadGridRuleComponent, GameRuleStartedEvent>(OnGameRuleStarted, before: [typeof(AntagSelectionSystem)]);
+    }
+
+    private void OnGameRuleStarted(Entity<LoadGridRuleComponent> ent, ref GameRuleStartedEvent args)
+    {
+        if (!TryComp<GameRuleComponent>(ent, out var gameRule))
+            return;
+
+        LoadGrid(ent, gameRule, args.RuleId);
+    }
+
+    private void LoadGrid(Entity<LoadGridRuleComponent> ent, GameRuleComponent gameRule, string ruleId)
+    {
         if (!TryGetRandomStation(out var station) ||
             !TryComp<StationDataComponent>(station, out _))
         {
-            Log.Warning("Unable to find a valid station for game rule {RuleId}", args.RuleId);
-            ForceEndSelf(uid, gameRule);
+            Log.Warning("Unable to find a valid station for game rule {RuleId}", ruleId);
+            ForceEndSelf(ent, gameRule);
             return;
         }
 
         if (_station.GetLargestGrid(station.Value) is not { } largestGrid)
         {
-            Log.Warning("Unable to find a station grid for game rule {RuleId}", args.RuleId);
-            ForceEndSelf(uid, gameRule);
+            Log.Warning("Unable to find a station grid for game rule {RuleId}", ruleId);
+            ForceEndSelf(ent, gameRule);
             return;
         }
 
         var mapId = Transform(largestGrid).MapID;
         if (mapId == MapId.Nullspace)
         {
-            Log.Warning("Attempted to load grid into nullspace for game rule {RuleId}", args.RuleId);
-            ForceEndSelf(uid, gameRule);
+            Log.Warning("Attempted to load grid into nullspace for game rule {RuleId}", ruleId);
+            ForceEndSelf(ent, gameRule);
             return;
         }
 
-        if (!TryFindFreeOffset(mapId, largestGrid, component, out var offset))
+        if (!TryFindFreeOffset(mapId, largestGrid, ent.Comp, out var offset))
         {
-            Log.Warning("Unable to find unobstructed location for game rule {RuleId}", args.RuleId);
-            ForceEndSelf(uid, gameRule);
+            Log.Warning("Unable to find unobstructed location for game rule {RuleId}", ruleId);
+            ForceEndSelf(ent, gameRule);
             return;
         }
 
-        if (!_mapLoader.TryLoadGrid(mapId, component.GridPath, out var spawnedGrid, null, offset))
+        if (!_mapLoader.TryLoadGrid(mapId, ent.Comp.GridPath, out var spawnedGrid, null, offset))
         {
-            Log.Warning("Unable to load grid {GridPath} for game rule {RuleId}", component.GridPath, args.RuleId);
-            ForceEndSelf(uid, gameRule);
+            Log.Warning("Unable to load grid {GridPath} for game rule {RuleId}", ent.Comp.GridPath, ruleId);
+            ForceEndSelf(ent, gameRule);
             return;
         }
 
         var ev = new RuleLoadedGridsEvent(mapId, [spawnedGrid.Value.Owner]);
-        RaiseLocalEvent(uid, ref ev);
+        RaiseLocalEvent(ent, ref ev);
     }
 
     private bool TryFindFreeOffset(

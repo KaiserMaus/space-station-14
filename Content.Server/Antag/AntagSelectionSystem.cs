@@ -541,6 +541,19 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
         // This could probably be an event in the future if we want to be more refined about it.
         if (isSpawner)
         {
+            // Sunrise-Edit start - не регистрируем ghost role спавнер без валидной точки спавна
+            if (!IsAntagSpawnerPlaced(player))
+            {
+                Log.Warning($"Antag spawner {ToPrettyString(player)} in gamerule {ToPrettyString(ent)} was not placed on a valid map or grid and will be deleted.");
+                _adminLogger.Add(LogType.AntagSelection, $"Antag spawner {player} in gamerule {ToPrettyString(ent)} failed due to not having a valid spawn location.");
+                if (TryComp<GhostRoleComponent>(player, out var ghostRole))
+                    _ghostRole.UnregisterGhostRole((player, ghostRole));
+
+                QueueDel(player);
+                return;
+            }
+            // Sunrise-Edit end
+
             if (!TryComp<GhostRoleAntagSpawnerComponent>(player, out var spawnerComp))
             {
                 Log.Error($"Antag spawner {player} does not have a GhostRoleAntagSpawnerComponent.");
@@ -597,6 +610,16 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
         var afterEv = new AfterAntagEntitySelectedEvent(session, player, ent, def);
         RaiseLocalEvent(ent, ref afterEv, true);
     }
+
+    // Sunrise-Edit start - проверка валидности ghost role спавнера антагов
+    private bool IsAntagSpawnerPlaced(EntityUid spawner)
+    {
+        if (!TryComp<TransformComponent>(spawner, out var xform))
+            return false;
+
+        return xform.ParentUid.IsValid() && xform.MapID != MapId.Nullspace;
+    }
+    // Sunrise-Edit end
 
     /// <summary>
     /// Gets an ordered player pool based on player preferences and the antagonist definition.

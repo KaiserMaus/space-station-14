@@ -57,7 +57,7 @@
       fallbackRoles: [ PirateCaptain ]
       spawnerPrototype: SpawnPointPirateCrew
       pickPlayer: false
-      min: 0
+      min: 2
       max: 8
       playerRatio: 10
       briefing:

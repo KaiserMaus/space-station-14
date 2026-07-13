@@ -19,7 +19,7 @@ tilemap:
   58: FloorHullReinforced
   107: FloorTechMaint
   4: FloorTechMaint3
-  1: FloorVersaillesWood
+  1: FloorWoodTile
   121: FloorWood
   123: FloorWoodTile
   124: Lattice

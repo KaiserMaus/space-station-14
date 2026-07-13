@@ -5,14 +5,14 @@
   description: Used by pirates to purchase new booty.
   components:
   - type: Sprite
-    sprite: _Sunrise/Structures/Machines/pirate_computers.rsi
+    sprite: _Sunrise/Structures/Machines/computers.rsi
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      state: rusted
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
-      state: request
+      state: requestpirate
     - map: ["computerLayerKeys"]
       state: generic_keys
     - map: ["enum.WiresVisualLayers.MaintenancePanel"]
@@ -39,14 +39,14 @@
   description: Use a shuttle voucher here to deploy a purchased shuttle or sell the current one.
   components:
   - type: Sprite
-    sprite: _Sunrise/Structures/Machines/pirate_computers.rsi
+    sprite: _Sunrise/Structures/Machines/computers.rsi
     layers:
     - map: ["computerLayerBody"]
       state: rusted
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
-      state: shuttle
+      state: shuttlepirate
     - map: ["computerLayerKeys"]
       sprite: Structures/Machines/computers.rsi
       state: syndie_key
@@ -69,14 +69,14 @@
   description: Used to sell goods loaded onto cargo pallets.
   components:
   - type: Sprite
-    sprite: _Sunrise/Structures/Machines/pirate_computers.rsi
+    sprite: _Sunrise/Structures/Machines/computers.rsi
     layers:
     - map: ["computerLayerBody"]
       state: rusted
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
-      state: transfer
+      state: transferpirate
     - map: ["computerLayerKeys"]
       state: generic_keys
     - map: ["enum.WiresVisualLayers.MaintenancePanel"]
@@ -97,14 +97,14 @@
   description: Used to manage currently active bounties.
   components:
   - type: Sprite
-    sprite: _Sunrise/Structures/Machines/pirate_computers.rsi
+    sprite: _Sunrise/Structures/Machines/computers.rsi
     layers:
     - map: ["computerLayerBody"]
       state: rusted
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
-      state: bounty
+      state: bountypirate
     - map: ["computerLayerKeys"]
       sprite: Structures/Machines/computers.rsi
       state: tech_key

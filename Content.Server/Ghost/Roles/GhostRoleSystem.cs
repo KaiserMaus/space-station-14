@@ -1,6 +1,7 @@
 using System.Linq;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
+using Content.Server.Antag.Components;
 using Content.Server.EUI;
 using Content.Server.GameTicking.Events;
 using Content.Server.GameTicking;
@@ -26,6 +27,7 @@ using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Console;
 using Robust.Shared.Enums;
+using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -507,6 +509,11 @@ public sealed class GhostRoleSystem : EntitySystem
         if (!_ghostRoles.TryGetValue(identifier, out var roleEnt))
             return;
 
+        // Sunrise-Edit start - чистим antag ghost role спавнеры без валидной точки спавна
+        if (!ValidateAntagGhostRoleSpawner(roleEnt))
+            return;
+        // Sunrise-Edit end
+
         TryPrototypes(roleEnt, out var antags, out var jobs);
 
         // Check role bans
@@ -615,6 +622,11 @@ public sealed class GhostRoleSystem : EntitySystem
         if (!_ghostRoles.TryGetValue(identifier, out var role))
             return false;
 
+        // Sunrise-Edit start - чистим antag ghost role спавнеры без валидной точки спавна
+        if (!ValidateAntagGhostRoleSpawner(role))
+            return false;
+        // Sunrise-Edit end
+
         // Sunrise-Start
         if (_gameTicker.PlayerGameStatuses.TryGetValue(player.UserId, out var status) && status == PlayerGameStatus.NotReadyToPlay)
             _gameTicker.PlayerJoinGame(player);
@@ -641,8 +653,50 @@ public sealed class GhostRoleSystem : EntitySystem
         if (player.AttachedEntity == null)
             return;
 
+        // Sunrise-Edit start - защита от ghost role без валидной позиции
+        if (!ValidateAntagGhostRoleSpawner(role))
+            return;
+
+        if (!ValidateGhostRoleFollowTarget(role))
+            return;
+        // Sunrise-Edit end
+
         _followerSystem.StartFollowingEntity(player.AttachedEntity.Value, role);
     }
+
+    // Sunrise-Edit start - проверка валидности цели слежения ghost role
+    private bool ValidateGhostRoleFollowTarget(Entity<GhostRoleComponent> role)
+    {
+        if (TryComp<TransformComponent>(role, out var xform) &&
+            xform.ParentUid.IsValid() &&
+            xform.MapID != MapId.Nullspace)
+        {
+            return true;
+        }
+
+        Log.Warning($"Ghost role {ToPrettyString(role)} has no valid map or grid position and cannot be followed.");
+        return false;
+    }
+    // Sunrise-Edit end
+
+    // Sunrise-Edit start - проверка валидности antag ghost role спавнера
+    private bool ValidateAntagGhostRoleSpawner(Entity<GhostRoleComponent> role)
+    {
+        if (!HasComp<GhostRoleAntagSpawnerComponent>(role))
+            return true;
+
+        if (TryComp<TransformComponent>(role, out var xform) &&
+            xform.ParentUid.IsValid() &&
+            xform.MapID != MapId.Nullspace)
+        {
+            return true;
+        }
+
+        Log.Warning($"Antag ghost role spawner {ToPrettyString(role)} has no valid map or grid position and will be unregistered.");
+        UnregisterGhostRole(role);
+        return false;
+    }
+    // Sunrise-Edit end
 
     public void GhostRoleInternalCreateMindAndTransfer(ICommonSession player, EntityUid roleUid, EntityUid mob, GhostRoleComponent? role = null)
     {
