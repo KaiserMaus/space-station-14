@@ -54,21 +54,18 @@
           False: { visible: true }
 
 - type: entity
-  id: ComputerShipyard
+  id: BaseComputerShipyard
+  abstract: true
   parent: BaseComputerSunrise
   name: shipyard console
   description: Used to purchase and sell shuttles
   components:
-  #- type: ShipyardConsole
-  #- type: AccessReader
-  #  access:
-  #  - [ Captain ]
-  #- type: ActivatableUI
-  #  key: enum.ShipyardConsoleUiKey.Shipyard
-  #- type: UserInterface
-  #  interfaces:
-  #  - key: enum.ShipyardConsoleUiKey.Shipyard
-  #    type: ShipyardConsoleBoundUserInterface
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.Key:
+        type: ShipyardConsoleBoundUserInterface
   - type: Computer
     board: ShipyardComputerCircuitboard
   - type: PointLight
@@ -92,6 +89,21 @@
       state: tech_key
 
 - type: entity
+  parent: BaseComputerShipyard
+  id: ComputerShipyard
+  name: shipyard console
+  description: Used to purchase and sell station shuttles.
+  components:
+  - type: ShipyardConsole
+    account: Cargo
+    vesselGroup: station
+    announcementChannel: Supply
+  - type: AccessReader
+    access: [[ Captain ]]
+  - type: Computer
+    board: ShipyardComputerCircuitboard
+
+- type: entity
   id: ComputerSaleConsole
   parent: ComputerPalletConsole
   name: sale console
@@ -108,6 +120,48 @@
   #    type: CargoPalletConsoleBoundUserInterface
   - type: Computer
     board: ComputerSaleConsoleCircuitboard
+
+- type: entity
+  parent: BaseComputerShipyard
+  id: ComputerShipyardSalvage
+  name: salvage shipyard console
+  description: Used to purchase and sell salvage shuttles.
+  components:
+  - type: ShipyardConsole
+    account: Cargo
+    vesselGroup: salvage
+    announcementChannel: Supply
+  - type: AccessReader
+    access: [[ Salvage ], [ Quartermaster ]]
+  - type: Computer
+    board: ShipyardSalvageComputerCircuitboard
+
+- type: entity
+  parent: BaseComputerShipyard
+  id: ComputerShipyardSecurity
+  name: security shipyard console
+  description: Used to purchase and sell security shuttles.
+  components:
+  - type: ShipyardConsole
+    account: Security
+    vesselGroup: security
+    announcementChannel: Security
+  - type: AccessReader
+    access: [[ Security ]]
+  - type: Computer
+    board: ShipyardSecurityComputerCircuitboard
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: request-sec
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
 
 - type: entity
   id: ComputeStationBankConsole

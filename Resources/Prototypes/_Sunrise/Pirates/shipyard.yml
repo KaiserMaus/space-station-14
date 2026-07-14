@@ -1,202 +1,72 @@
-- type: entity
-  abstract: true
-  parent: BaseItem
-  id: BasePirateShuttleVoucher
-  name: pirate shuttle voucher
-  description: Redeem this on a pirate shipyard console to deploy the purchased shuttle.
-  components:
-  - type: Sprite
-    sprite: Objects/Misc/module.rsi
-    state: id_mod
-  - type: Item
-    sprite: Objects/Misc/module.rsi
-    size: Small
-  - type: StaticPrice
-    price: 1
+# Пиратские, утилизаторские и СБ-суда используют общую механику Shipyard.
+- type: shipyardVessel
+  id: PirateShipFalcon
+  name: shipyard-vessel-pirate-falcon-name
+  description: shipyard-vessel-pirate-falcon-description
+  price: 15000
+  group: pirate
+  gridPath: /Maps/_Sunrise/Shuttles/Antag/Pirate_Purchase/falcon.yml
+  spawnOffset: 32,0
 
-- type: entity
-  parent: BasePirateShuttleVoucher
-  id: PirateShuttleVoucherFalcon
-  name: falcon shuttle voucher
-  components:
-  - type: PirateShuttleVoucher
-    gridPath: /Maps/_Sunrise/Shuttles/Antag/Pirate_Purchase/falcon.yml
-    price: 15000
-    offset: 32,0
+- type: shipyardVessel
+  id: PirateShipBocakillo
+  name: shipyard-vessel-pirate-bocakillo-name
+  description: shipyard-vessel-pirate-bocakillo-description
+  price: 8000
+  group: pirate
+  gridPath: /Maps/_Sunrise/Shuttles/Antag/Pirate_Purchase/bocakillo.yml
+  spawnOffset: 30,0
 
-- type: entity
-  parent: BasePirateShuttleVoucher
-  id: PirateShuttleVoucherBocakillo
-  name: bocakillo shuttle voucher
-  components:
-  - type: PirateShuttleVoucher
-    gridPath: /Maps/_Sunrise/Shuttles/Antag/Pirate_Purchase/bocakillo.yml
-    price: 8000
-    offset: 30,0
+- type: shipyardVessel
+  id: PirateShipBrass
+  name: shipyard-vessel-pirate-brass-name
+  description: shipyard-vessel-pirate-brass-description
+  price: 30000
+  group: pirate
+  gridPath: /Maps/_Sunrise/Shuttles/Antag/Pirate_Purchase/brass.yml
+  spawnOffset: 40,0
 
-- type: entity
-  parent: BasePirateShuttleVoucher
-  id: PirateShuttleVoucherBrass
-  name: brass shuttle voucher
-  components:
-  - type: PirateShuttleVoucher
-    gridPath: /Maps/_Sunrise/Shuttles/Antag/Pirate_Purchase/brass.yml
-    price: 30000
-    offset: 40,0
+- type: shipyardVessel
+  id: PirateShipSchooner
+  name: shipyard-vessel-pirate-schooner-name
+  description: shipyard-vessel-pirate-schooner-description
+  price: 12000
+  group: pirate
+  gridPath: /Maps/_Sunrise/Shuttles/Antag/Pirate_Purchase/schooner.yml
+  spawnOffset: 32,0
 
-- type: entity
-  parent: BasePirateShuttleVoucher
-  id: PirateShuttleVoucherSchooner
-  name: schooner shuttle voucher
-  components:
-  - type: PirateShuttleVoucher
-    gridPath: /Maps/_Sunrise/Shuttles/Antag/Pirate_Purchase/schooner.yml
-    price: 12000
-    offset: 32,0
+- type: shipyardVessel
+  id: PirateShipScurvyDog
+  name: shipyard-vessel-pirate-scurvy-dog-name
+  description: shipyard-vessel-pirate-scurvy-dog-description
+  price: 22500
+  group: pirate
+  gridPath: /Maps/_Sunrise/Shuttles/Antag/Pirate_Purchase/scurvydog.yml
+  spawnOffset: 36,0
 
-- type: entity
-  parent: BasePirateShuttleVoucher
-  id: PirateShuttleVoucherScurvyDog
-  name: scurvy dog shuttle voucher
-  components:
-  - type: PirateShuttleVoucher
-    gridPath: /Maps/_Sunrise/Shuttles/Antag/Pirate_Purchase/scurvydog.yml
-    price: 22500
-    offset: 36,0
+- type: shipyardVessel
+  id: PirateShipSparrow
+  name: shipyard-vessel-pirate-sparrow-name
+  description: shipyard-vessel-pirate-sparrow-description
+  price: 20000
+  group: pirate
+  gridPath: /Maps/_Sunrise/Shuttles/Antag/Pirate_Purchase/sparrow.yml
+  spawnOffset: 34,0
 
-- type: entity
-  parent: BasePirateShuttleVoucher
-  id: PirateShuttleVoucherSparrow
-  name: sparrow shuttle voucher
-  components:
-  - type: PirateShuttleVoucher
-    gridPath: /Maps/_Sunrise/Shuttles/Antag/Pirate_Purchase/sparrow.yml
-    price: 20000
-    offset: 34,0
+- type: shipyardVessel
+  id: PirateShipTurncoat
+  name: shipyard-vessel-pirate-turncoat-name
+  description: shipyard-vessel-pirate-turncoat-description
+  price: 27500
+  group: pirate
+  gridPath: /Maps/_Sunrise/Shuttles/Antag/Pirate_Purchase/turncoat.yml
+  spawnOffset: 40,0
 
-- type: entity
-  parent: BasePirateShuttleVoucher
-  id: PirateShuttleVoucherTurncoat
-  name: turncoat shuttle voucher
-  components:
-  - type: PirateShuttleVoucher
-    gridPath: /Maps/_Sunrise/Shuttles/Antag/Pirate_Purchase/turncoat.yml
-    price: 27500
-    offset: 40,0
-
-- type: entity
-  parent: BasePirateShuttleVoucher
-  id: PirateShuttleVoucherVoltage
-  name: voltage shuttle voucher
-  components:
-  - type: PirateShuttleVoucher
-    gridPath: /Maps/_Sunrise/Shuttles/Antag/Pirate_Purchase/voltage.yml
-    price: 25000
-    offset: 38,0
-
-- type: entity
-  id: PirateShuttleVoucherRandomSpawner
-  name: random pirate shuttle voucher spawner
-  suffix: Pirate
-  parent: MarkerBase
-  components:
-  - type: Sprite
-    layers:
-    - state: red
-    - sprite: Objects/Misc/module.rsi
-      state: id_mod
-  - type: RandomSpawner
-    prototypes:
-    - PirateShuttleVoucherBocakillo
-    - PirateShuttleVoucherBrass
-    - PirateShuttleVoucherFalcon
-    - PirateShuttleVoucherSchooner
-    - PirateShuttleVoucherScurvyDog
-    - PirateShuttleVoucherSparrow
-    - PirateShuttleVoucherTurncoat
-    - PirateShuttleVoucherVoltage
-    chance: 1
-    offset: 0
-
-- type: cargoMarket
-  id: pirateShipyard
-
-- type: cargoProduct
-  id: PirateShipVoucherFalcon
-  icon:
-    sprite: Objects/Misc/module.rsi
-    state: id_mod
-  product: PirateShuttleVoucherFalcon
-  cost: 15000
-  category: pirateproduct-category-name-shuttles
-  group: pirateShipyard
-
-- type: cargoProduct
-  id: PirateShipVoucherBocakillo
-  icon:
-    sprite: Objects/Misc/module.rsi
-    state: id_mod
-  product: PirateShuttleVoucherBocakillo
-  cost: 8000
-  category: pirateproduct-category-name-shuttles
-  group: pirateShipyard
-
-- type: cargoProduct
-  id: PirateShipVoucherBrass
-  icon:
-    sprite: Objects/Misc/module.rsi
-    state: id_mod
-  product: PirateShuttleVoucherBrass
-  cost: 30000
-  category: pirateproduct-category-name-shuttles
-  group: pirateShipyard
-
-- type: cargoProduct
-  id: PirateShipVoucherSchooner
-  icon:
-    sprite: Objects/Misc/module.rsi
-    state: id_mod
-  product: PirateShuttleVoucherSchooner
-  cost: 12000
-  category: pirateproduct-category-name-shuttles
-  group: pirateShipyard
-
-- type: cargoProduct
-  id: PirateShipVoucherScurvyDog
-  icon:
-    sprite: Objects/Misc/module.rsi
-    state: id_mod
-  product: PirateShuttleVoucherScurvyDog
-  cost: 22500
-  category: pirateproduct-category-name-shuttles
-  group: pirateShipyard
-
-- type: cargoProduct
-  id: PirateShipVoucherSparrow
-  icon:
-    sprite: Objects/Misc/module.rsi
-    state: id_mod
-  product: PirateShuttleVoucherSparrow
-  cost: 20000
-  category: pirateproduct-category-name-shuttles
-  group: pirateShipyard
-
-- type: cargoProduct
-  id: PirateShipVoucherTurncoat
-  icon:
-    sprite: Objects/Misc/module.rsi
-    state: id_mod
-  product: PirateShuttleVoucherTurncoat
-  cost: 27500
-  category: pirateproduct-category-name-shuttles
-  group: pirateShipyard
-
-- type: cargoProduct
-  id: PirateShipVoucherVoltage
-  icon:
-    sprite: Objects/Misc/module.rsi
-    state: id_mod
-  product: PirateShuttleVoucherVoltage
-  cost: 25000
-  category: pirateproduct-category-name-shuttles
-  group: pirateShipyard
+- type: shipyardVessel
+  id: PirateShipVoltage
+  name: shipyard-vessel-pirate-voltage-name
+  description: shipyard-vessel-pirate-voltage-description
+  price: 25000
+  group: pirate
+  gridPath: /Maps/_Sunrise/Shuttles/Antag/Pirate_Purchase/voltage.yml
+  spawnOffset: 38,0

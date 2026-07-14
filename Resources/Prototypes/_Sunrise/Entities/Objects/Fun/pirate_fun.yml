@@ -54,9 +54,13 @@
   - type: IntrinsicRadioTransmitter
     channels:
     - Freelance
+    - Common
+    - Binary
   - type: ActiveRadio
     channels:
     - Freelance
+    - Common
+    - Binary
   - type: DoAfter
   - type: Actions
   - type: ActionGrant
@@ -74,16 +78,25 @@
     followEntity: true
   - type: TypingIndicator
     proto: robot
-  - type: Speech
-    speechVerb: Robotic
-    speechSounds: Pai
   - type: MobState
     allowedStates:
     - Alive
   - type: StationAiVision
     range: 1
   - type: TTS
-    voice: Portal2FactCore
+    voice: Kingpin
+  - type: ParrotAccent
+  - type: Speech
+    speechSounds: Parrot
+    speechVerb: Parrot
+  - type: Vocal
+    sounds:
+      Unsexed: Parrot
+  - type: ActiveListener
+  - type: Vocalizer
+  - type: RadioVocalizer
+  - type: ParrotListener
+  - type: ParrotMemory
   - type: InnateItem
     instantActions:
     - PortableSurveillanceCameraMonitorUnpowered
@@ -100,9 +113,6 @@
       components:
       - SecretStash
       - WrappedParcel
-  - type: Vocal
-    sounds:
-      Unsexed: UnisexSilicon
   - type: Tag
     tags:
     - SiliconEmotes

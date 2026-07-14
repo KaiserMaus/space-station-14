@@ -36,6 +36,9 @@ entities:
   entities:
   - uid: 1
     components:
+    - type: IFF
+      color: '#0F0F0F4B'
+      flags: HideLabel
     - type: MetaData
       name: Turncoat
     - type: Transform
@@ -896,7 +899,7 @@ entities:
     - type: Transform
       pos: 0.5,25.5
       parent: 1
-- proto: AirlockExternalShuttlePirateLocked
+- proto: SunriseAirlockExternalShuttlePirateLocked
   entities:
   - uid: 17
     components:

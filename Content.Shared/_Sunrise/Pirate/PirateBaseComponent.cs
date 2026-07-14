@@ -27,16 +27,4 @@ public sealed partial class PirateStationComponent : Component
     /// </summary>
     [AutoNetworkedField]
     public NetEntity? AssociatedRule;
-
-    /// <summary>
-    /// Shuttle currently deployed through the pirate shipyard console.
-    /// </summary>
-    [AutoNetworkedField]
-    public EntityUid? CurrentShuttle;
-
-    /// <summary>
-    /// Recorded value of the currently deployed shuttle.
-    /// </summary>
-    [AutoNetworkedField]
-    public int CurrentShuttleValue;
 }

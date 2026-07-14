@@ -106,6 +106,9 @@
     unequipSound: /Audio/Mecha/mechmove03.ogg
     equipDelay: 2
     unequipDelay: 8
+  - type: Item
+    size: Huge
+    shape: null
   - type: ExplosionResistance
     damageCoefficient: 0.5
   - type: FireProtection

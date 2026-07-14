@@ -49,11 +49,22 @@
         pitch: 1.03
   - type: BatteryAmmoProvider
     proto: CartridgeMinigun
-    fireCost: 1
+    fireCost: 2
   - type: Appearance
   - type: AmmoCounter
+  - type: Item
+    sprite: _Sunrise/Objects/Weapons/Guns/LMGs/light_chaingun/tiny.rsi
+    heldPrefix: wielded
   - type: StaticPrice
-    price: 20000
+    price: 6000
+
+- type: entity
+  id: WeaponMechCombatChaingunImprovised
+  parent: WeaponMechCombatChaingun
+  components:
+  - type: BatteryAmmoProvider
+    proto: CartridgeRifleImprovised
+    fireCost: 4
 
 - type: entity
   id: WeaponMechCombatMaxim

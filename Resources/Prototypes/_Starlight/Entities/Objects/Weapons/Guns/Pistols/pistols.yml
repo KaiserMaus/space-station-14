@@ -137,7 +137,7 @@
 
 - type: entity
   name: makeshift pistol
-  parent: [BaseWeaponPistol, BaseMinorContraband]
+  parent: [BaseWeaponPistol, BaseMinorContraband, WeaponMakeshift] # Sunrise-Edit
   id: WeaponPistolMakeshiftCrafted
   description: Little more than a space eoka. Very unreliable.
   components:
@@ -191,7 +191,7 @@
 
 - type: entity
   name: improvised pistol
-  parent: [BaseWeaponSniper, BaseMinorContraband]
+  parent: [BaseWeaponSniper, BaseMinorContraband, WeaponImprovised] # Sunrise-Edit
   id: WeaponPistolImprovised
   description: A cobbled together pistol with an internal magazine. More reliable, but still liable to blow up in your face.
   components:
@@ -256,7 +256,7 @@
 
 - type: entity
   name: forged pistol
-  parent: [BaseWeaponPistol, BaseMinorContraband]
+  parent: [BaseWeaponPistol, BaseMinorContraband, WeaponImprovised] # Sunrise-Edit
   id: WeaponPistolForged
   description: A reliable magazine-fed pistol made by the best tider blacksmiths.
   components:

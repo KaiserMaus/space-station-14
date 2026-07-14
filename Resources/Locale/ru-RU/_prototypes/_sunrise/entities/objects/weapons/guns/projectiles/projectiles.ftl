@@ -1,5 +1,9 @@
 ent-BulletAcid2 = кислотный плевок
     .desc = { ent-BaseBullet.desc }
+ent-PirateMarkerBeacon = пиратская метка
+    .desc = Дымный сигнал, возле которого могут собираться пиратские налётчики.
+ent-PirateMarkerShot = сигнальная пуля
+    .desc = Слабый выстрел, оставляющий метку сбора для пиратских налётчиков.
 ent-BulletEMP = импульс ЭМИ
     .desc = { ent-BaseBulletTrigger.desc }
 ent-RadiationBullet = поток радиоактивных частиц

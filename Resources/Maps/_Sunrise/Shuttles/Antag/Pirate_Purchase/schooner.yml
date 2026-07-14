@@ -29,6 +29,9 @@ entities:
   entities:
   - uid: 1
     components:
+    - type: IFF
+      color: '#0F0F0F4B'
+      flags: HideLabel
     - type: MetaData
       name: Schooner
     - type: Transform

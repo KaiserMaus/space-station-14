@@ -43,6 +43,9 @@
   id: AirlockExternalGlassShuttlePirateLocked
   suffix: Pirate, Locked, Glass
   components:
+  - type: Docking
+    radarColor: '#0F0F0F4B'
+    highlightedRadarColor: '#0F0F0F4B'
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsPirate ]
@@ -52,6 +55,9 @@
   id: AirlockExternalShuttlePirateLocked
   suffix: External, Docking, Pirate, Locked
   components:
+  - type: Docking
+    radarColor: '#0F0F0F4B'
+    highlightedRadarColor: '#0F0F0F4B'
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsPirate ]

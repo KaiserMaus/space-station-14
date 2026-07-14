@@ -16,7 +16,7 @@
   id: Pirates
   components:
   - type: LoadGridRule
-    gridPath: /Maps/_Sunrise/Nonstations/pirate-cove.yml
+    gridPath: /Maps/_Sunrise/Nonstations/pirate_cove.yml
   - type: GameRule
     minPlayers: 20
   - type: StationEvent
@@ -53,6 +53,68 @@
         - Pirate
       mindRoles:
       - MindRolePirateCaptain
+    - prefRoles: [ PirateCrew ]
+      fallbackRoles: [ PirateCaptain ]
+      spawnerPrototype: SpawnPointPirateCrew
+      pickPlayer: false
+      min: 2
+      max: 8
+      playerRatio: 10
+      briefing:
+        text: pirate-role-greeting
+        color: "#a15608"
+        sound:
+          path: "/Audio/Ambience/Antag/pirate_start.ogg"
+          params:
+            volume: -12
+      components:
+      - type: PirateAccent
+      - type: PirateIcon
+      - type: RandomMetadata
+        nameSegments:
+        - NamesDeathCommando
+        nameFormat: name-format-pirate-crew
+      - type: NpcFactionMember
+        factions:
+        - Pirate
+      mindRoles:
+      - MindRolePirate
+    - prefRoles: [ PirateCrew ]
+      fallbackRoles: [ PirateCaptain ]
+      spawnerPrototype: SpawnPointPirateCrew
+      pickPlayer: false
+      min: 0
+      max: 1
+      playerRatio: 80
+      briefing:
+        text: pirate-role-greeting
+        color: "#a15608"
+        sound:
+          path: "/Audio/Ambience/Antag/pirate_start.ogg"
+          params:
+            volume: -12
+      components:
+      - type: PirateAccent
+      - type: PirateIcon
+      - type: RandomMetadata
+        nameSegments:
+        - NamesDeathCommando
+        nameFormat: name-format-pirate-crew
+      - type: NpcFactionMember
+        factions:
+        - Pirate
+      mindRoles:
+      - MindRolePirate
+
+- type: entity
+  parent: BasePiratesRule
+  id: PirateReinforce
+  components:
+  - type: ExistingPirateBaseRule
+  - type: GameRule
+    minPlayers: 40
+  - type: AntagSelection
+    definitions:
     - prefRoles: [ PirateCrew ]
       fallbackRoles: [ PirateCaptain ]
       spawnerPrototype: SpawnPointPirateCrew

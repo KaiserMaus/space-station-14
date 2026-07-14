@@ -809,3 +809,16 @@
 # region Medicine
 - type: Tag
   id: AutoMender  # Используется для whitelist у ClothingBeltMedical =3
+
+# region Pirate Bounty
+- type: Tag
+  id: PirateBountyArtifactAnalyzer
+
+- type: Tag
+  id: PirateBountyGoldIngot
+
+- type: Tag
+  id: PirateBountyMedicalFabBoard
+
+- type: Tag
+  id: PirateBountyRDHardsuit

@@ -44,6 +44,11 @@
     - gold
     - gold_2
     - gold_3
+  - type: Tag
+    tags:
+    - Ingot
+    - ConstructionMaterial
+    - PirateBountyGoldIngot # Sunrise-Edit
   - type: Sprite
     state: gold_3
     layers:

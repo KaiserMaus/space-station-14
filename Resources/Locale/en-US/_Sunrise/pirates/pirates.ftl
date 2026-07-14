@@ -28,14 +28,6 @@ pirateproduct-category-name-ammo = Ammo
 pirateproduct-category-name-tools = Tools
 pirateproduct-category-name-shuttles = Shuttles
 
-pirate-shipyard-console-not-on-pirate-station = The console is not linked to a pirate station.
-pirate-shipyard-console-sell-first = Sell the current pirate shuttle before deploying another one.
-pirate-shipyard-console-load-failed = The shuttle deployment failed.
-pirate-shipyard-console-purchase-success = The pirate shuttle has been deployed.
-pirate-shipyard-console-sell-verb = Sell current shuttle
-pirate-shipyard-console-shuttle-occupied = The shuttle must be empty before it can be sold.
-pirate-shipyard-console-sell-success = The pirate shuttle has been sold back to the shipyard.
-
 bounty-item-nuke = nuclear fission explosive
 bounty-description-nuke = Gorlex wants a nuclear weapon for an operation. We do not know what they are doing with it, but they are paying.
 bounty-item-anom-vessel = anomaly vessel
@@ -52,3 +44,37 @@ bounty-item-fax = fax machine
 bounty-description-fax = Some pirates need help spitting fax and have sent out a bounty.
 bounty-item-stasis = stasis bed
 bounty-description-stasis = Interdyne requested a stasis bed for medical research.
+
+bounty-description-pirate-generic = Go now, ye goon! Plunder me this!
+pirate-bounty-item-pda = PDA
+pirate-bounty-item-extinguisher = fire extinguisher
+pirate-bounty-item-captain-gloves = captain gloves
+pirate-bounty-item-gyro = gyroscope
+pirate-bounty-item-defib = defibrillator
+pirate-bounty-item-alcohol = booze dispenser
+pirate-bounty-item-thruster = thruster
+pirate-bounty-item-grav-gen = gravity generator
+pirate-bounty-item-nfsd-campaign = trooper hat
+pirate-bounty-item-hardsuits = any hardsuits
+pirate-bounty-item-rtg = RTG
+pirate-bounty-item-merc-gas = mercenary gas mask
+pirate-bounty-item-rd-hardsuit = experimental research hardsuit
+pirate-bounty-item-mk58 = MK58
+pirate-bounty-item-machine-board = machine board
+pirate-bounty-item-artifact-analyzer = artifact analyzer board
+pirate-bounty-item-hotplate = hotplate
+pirate-bounty-item-medical-fab-board = medical techfab board
+pirate-bounty-item-hypo = hypospray
+pirate-bounty-item-ore-box = ore box
+pirate-bounty-item-autolathe = autolathe
+pirate-bounty-item-diamond = diamond
+pirate-bounty-item-gold = gold ingot
+pirate-bounty-item-plasma-canister = plasma canister
+pirate-bounty-item-hydro-tray = hydroponics tray
+pirate-bounty-item-enforcer = Enforcer shotgun
+
+pirate-job-rank-title-0 = [color=gray]Scavenger[/color]
+pirate-job-rank-title-1 = [color=white]Pirate[/color]
+pirate-job-rank-title-2 = [color=yellow]Freelancer[/color]
+pirate-job-rank-title-MAX = [color=gold]Baron[/color]
+pirate-job-board-radio-announce = Pirate rank increased to [bold]{$rank}[/bold]! New black market stock is available.

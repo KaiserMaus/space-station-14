@@ -1,5 +1,7 @@
 using System.Numerics;
+using Content.Server._Sunrise.Helpers;
 using Content.Server.Antag;
+using Content.Server.GameTicking;
 using Content.Server.GameTicking.Rules;
 using Content.Server.Station.Systems;
 using Content.Shared.GameTicking.Components;
@@ -7,15 +9,19 @@ using Content.Shared.Station.Components;
 using Robust.Shared.EntitySerialization.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
+using Robust.Shared.Random;
 
 namespace Content.Server._Sunrise.Pirates.GameTicking;
 
-public sealed class LoadGridRuleSystem : GameRuleSystem<LoadGridRuleComponent>
+public sealed class LoadGridRuleSystem : EntitySystem
 {
+    [Dependency] private readonly GameTicker _gameTicker = default!;
+    [Dependency] private readonly SunriseHelpersSystem _helpers = default!;
     [Dependency] private readonly MapLoaderSystem _mapLoader = default!;
     [Dependency] private readonly StationSystem _station = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly IMapManager _map = default!;
+    [Dependency] private readonly IRobustRandom _random = default!;
 
     private List<Entity<MapGridComponent>> _mapGrids = new();
 
@@ -23,7 +29,9 @@ public sealed class LoadGridRuleSystem : GameRuleSystem<LoadGridRuleComponent>
     {
         base.Initialize();
 
-        SubscribeLocalEvent<LoadGridRuleComponent, GameRuleStartedEvent>(OnGameRuleStarted, before: [typeof(AntagSelectionSystem)]);
+        SubscribeLocalEvent<LoadGridRuleComponent, GameRuleStartedEvent>(
+            OnGameRuleStarted,
+            before: [typeof(AntagSelectionSystem)]);
     }
 
     private void OnGameRuleStarted(Entity<LoadGridRuleComponent> ent, ref GameRuleStartedEvent args)
@@ -36,7 +44,7 @@ public sealed class LoadGridRuleSystem : GameRuleSystem<LoadGridRuleComponent>
 
     private void LoadGrid(Entity<LoadGridRuleComponent> ent, GameRuleComponent gameRule, string ruleId)
     {
-        if (!TryGetRandomStation(out var station) ||
+        if (!_helpers.TryGetRandomStation(out var station) ||
             !TryComp<StationDataComponent>(station, out _))
         {
             Log.Warning("Unable to find a valid station for game rule {RuleId}", ruleId);
@@ -87,7 +95,7 @@ public sealed class LoadGridRuleSystem : GameRuleSystem<LoadGridRuleComponent>
 
         for (var i = 0; i < component.MaxAttempts; i++)
         {
-            var currentOffset = stationLocation + RobustRandom.NextVector2(
+            var currentOffset = stationLocation + _random.NextVector2(
                 component.MinimumDistance,
                 component.MaximumDistance);
 
@@ -108,5 +116,10 @@ public sealed class LoadGridRuleSystem : GameRuleSystem<LoadGridRuleComponent>
         _mapGrids.Clear();
         _map.FindGridsIntersecting(mapId, bounds, ref _mapGrids);
         return _mapGrids.Count > 0;
+    }
+
+    private void ForceEndSelf(EntityUid uid, GameRuleComponent gameRule)
+    {
+        _gameTicker.EndGameRule(uid, gameRule);
     }
 }

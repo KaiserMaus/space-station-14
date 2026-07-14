@@ -522,6 +522,8 @@
     - CorgiWearable
     - Hardsuit
     - FullBodyOuter # Sunrise-Add
+    - WhitelistChameleonSuit # Sunrise-Edit
+    - PirateBountyRDHardsuit # Sunrise-Edit
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitRd
   - type: StaticPrice

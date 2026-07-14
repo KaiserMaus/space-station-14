@@ -277,7 +277,7 @@
     baseState: ripley
     openState: ripley-open
     brokenState: ripley-broken
-    mechToPilotDamageMultiplier: 0.75
+    mechToPilotDamageMultiplier: 0.1
     pilotWhitelist:
       components:
         - HumanoidAppearance
@@ -337,7 +337,7 @@
     baseState: ripleymkii
     openState: ripleymkii-open
     brokenState: ripleymkii-broken
-    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
+    mechToPilotDamageMultiplier: 0.06 # Sunrise edit
     airtight: true
     pilotWhitelist:
       components:
@@ -400,7 +400,7 @@
     baseState: clarke
     openState: clarke-open
     brokenState: clarke-broken
-    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
+    mechToPilotDamageMultiplier: 0.1 # Sunrise edit
     airtight: true
     pilotWhitelist:
       components:
@@ -477,7 +477,7 @@
     baseState: honker
     openState: honker-open
     brokenState: honker-broken
-    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
+    mechToPilotDamageMultiplier: 0.1 # Sunrise edit
     airtight: true # Space Honks is real.
     pilotWhitelist:
       components:
@@ -548,7 +548,7 @@
     baseState: hamtr
     openState: hamtr-open
     brokenState: hamtr-broken
-    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
+    mechToPilotDamageMultiplier: 0.1 # Sunrise edit
     maxEquipmentAmount: 2
     airtight: true
     pilotWhitelist:
@@ -696,7 +696,7 @@
     baseState: base
     openState: base-open
     brokenState: base-broken
-    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
+    mechToPilotDamageMultiplier: 0.1 # Sunrise edit
     airtight: true
     pilotWhitelist:
       components:
@@ -768,7 +768,7 @@
     baseState: base
     openState: base-open
     brokenState: base-broken
-    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
+    mechToPilotDamageMultiplier: 0.06 # Sunrise edit
     airtight: true
     pilotWhitelist:
       components:
@@ -846,7 +846,7 @@
     baseState: marauder
     openState: marauder-open
     brokenState: marauder-broken
-    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
+    mechToPilotDamageMultiplier: 0.03 # Sunrise edit
     airtight: true
     maxEquipmentAmount: 4
     pilotWhitelist:
@@ -935,7 +935,7 @@
     baseState: seraph
     openState: seraph-open
     brokenState: seraph-broken
-    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
+    mechToPilotDamageMultiplier: 0.03 # Sunrise edit
     airtight: true
     maxEquipmentAmount: 5
     pilotWhitelist:
@@ -1026,7 +1026,7 @@
     baseState: darkgygax
     openState: darkgygax-open
     brokenState: darkgygax-broken
-    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
+    mechToPilotDamageMultiplier: 0.06 # Sunrise edit
     airtight: true
     maxEquipmentAmount: 4
     pilotWhitelist:
@@ -1119,7 +1119,7 @@
     baseState: mauler
     openState: mauler-open
     brokenState: mauler-broken
-    mechToPilotDamageMultiplier: 0.0 # Sunrise edit
+    mechToPilotDamageMultiplier: 0.03 # Sunrise edit
     airtight: true
     maxEquipmentAmount: 5
     pilotWhitelist:

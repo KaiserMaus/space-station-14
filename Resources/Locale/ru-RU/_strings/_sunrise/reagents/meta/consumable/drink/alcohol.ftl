@@ -105,6 +105,8 @@ reagent-desc-boyarsky = Что делать, если ты устал от жи�
 
 reagent-name-vodkizine = водкизин
 reagent-desc-vodkizine = Лечебное средство на основе водки, рецепт которого строго засекречен.
+reagent-name-redrum = янзер
+reagent-desc-redrum = Лечебное средство на основе рома, приготовленное по пиратскому секретному рецепту.
 
 
 

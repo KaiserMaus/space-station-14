@@ -1,0 +1,21 @@
+- type: entity
+  parent: WeaponPistolFlintlock
+  id: WeaponPistolFlintlockPirateMarker
+  name: marker flintlock pistol
+  description: A self-loading flintlock pistol that marks targets for pirate raiders.
+  components:
+  - type: Gun
+    minAngle: 0
+    maxAngle: 10
+  - type: UseDelay
+    delay: 5
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 5
+    rechargeSound:
+      path: /Audio/Weapons/Guns/MagIn/energycrossbow_reload.ogg
+  - type: BasicEntityAmmoProvider
+    proto: PirateMarkerShot
+    capacity: 1
+    count: 1
+  - type: StaticPrice
+    price: 2500

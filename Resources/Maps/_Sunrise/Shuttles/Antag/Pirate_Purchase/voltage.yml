@@ -29,6 +29,9 @@ entities:
   entities:
   - uid: 1
     components:
+    - type: IFF
+      color: '#0F0F0F4B'
+      flags: HideLabel
     - type: MetaData
       name: grid
     - type: Transform
@@ -597,7 +600,7 @@ entities:
           - Close
     - type: Fixtures
       fixtures: {}
-- proto: AirlockExternalGlass
+- proto: AirlockExternalGlassShuttlePirateLocked
   entities:
   - uid: 3
     components:
@@ -625,7 +628,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 12.5,-7.5
       parent: 1
-- proto: AirlockGlassShuttleSyndicate
+- proto: AirlockExternalGlassShuttlePirateLocked
   entities:
   - uid: 7
     components:

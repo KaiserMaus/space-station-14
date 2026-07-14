@@ -92,7 +92,7 @@
 
 - type: entity
   name: makeshift SMG
-  parent: [BaseWeaponSubMachineGun, BaseMinorContraband]
+  parent: [BaseWeaponSubMachineGun, BaseMinorContraband, WeaponMakeshift] # Sunrise-Edit
   id: WeaponSubMachineGunMakeshift
   description: Held together with cloth and dreams, it rattles ominously with every shot.
   components:
@@ -166,7 +166,7 @@
 
 - type: entity
   name: improvised SMG
-  parent: WeaponSubMachineGunMakeshift
+  parent: [WeaponSubMachineGunMakeshift, WeaponImprovised] # Sunrise-Edit
   id: WeaponSubMachineGunImprovised
   description: It's tightly held together by cloth, steel and determination.
   components:

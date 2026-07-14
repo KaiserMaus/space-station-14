@@ -140,3 +140,25 @@
           groups:
             Burn: -4
             Brute: -4
+
+- type: reagent
+  id: RedRum
+  parent: Vodkizine
+  name: reagent-name-redrum
+  desc: reagent-desc-redrum
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: rum
+  color: "#f09f42"
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/rumglass.rsi
+    state: icon_empty
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          groups:
+            Burn: -6
+            Brute: -6
+          types:
+            Mangleness: -1

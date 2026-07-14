@@ -192,7 +192,7 @@
     baseState: sec_pod
     openState: sec_pod_open
     brokenState: sec_pod_broken
-    mechToPilotDamageMultiplier: 0.0
+    mechToPilotDamageMultiplier: 0.1
     maxEquipmentAmount: 2
     airtight: true
     pilotWhitelist:
@@ -267,7 +267,7 @@
     baseState: mining_pod
     openState: mining_pod_open
     brokenState: mining_pod_broken
-    mechToPilotDamageMultiplier: 0.0
+    mechToPilotDamageMultiplier: 0.1
     maxEquipmentAmount: 4
     airtight: true
     pilotWhitelist:
@@ -384,7 +384,7 @@
     baseState: death
     openState: death-open
     brokenState: death-broken
-    mechToPilotDamageMultiplier: 0.0
+    mechToPilotDamageMultiplier: 0.03
     airtight: true
     pilotWhitelist:
       components:
@@ -469,7 +469,7 @@
     baseState: paddy
     openState: paddy-open
     brokenState: paddy-broken
-    mechToPilotDamageMultiplier: 0.0
+    mechToPilotDamageMultiplier: 0.1
     airtight: true
     maxEquipmentAmount: 4
     #siren: true # Todo: port siren system from starlight
@@ -546,7 +546,7 @@
     baseState: bigbrother
     openState: bigbrother-open
     brokenState: bigbrother-broken
-    mechToPilotDamageMultiplier: 0.05
+    mechToPilotDamageMultiplier: 0.06
     airtight: true
     pilotWhitelist:
       components:
@@ -634,7 +634,7 @@
     baseState: ntgygax
     openState: ntgygax-open
     brokenState: ntgygax-broken
-    mechToPilotDamageMultiplier: 0.0
+    mechToPilotDamageMultiplier: 0.06
     airtight: true
     maxEquipmentAmount: 4
     pilotWhitelist:
@@ -721,7 +721,7 @@
     baseState: phazon
     openState: phazon-open
     brokenState: phazon-broken
-    mechToPilotDamageMultiplier: 0.0
+    mechToPilotDamageMultiplier: 0.1
     maxEquipmentAmount: 5
     airtight: true
     pilotWhitelist:
@@ -794,7 +794,7 @@
     baseState: darkdurand
     openState: darkdurand-open
     brokenState: darkdurand-broken
-    mechToPilotDamageMultiplier: 0.0
+    mechToPilotDamageMultiplier: 0.06
     airtight: true
     maxEquipmentAmount: 5
     pilotWhitelist:
@@ -878,7 +878,7 @@
     baseState: dollhouse
     openState: dollhouse-open
     brokenState: dollhouse-broken
-    mechToPilotDamageMultiplier: 0.0
+    mechToPilotDamageMultiplier: 0.03
     airtight: true
     maxEquipmentAmount: 2
     pilotWhitelist:
@@ -938,4 +938,4 @@
   components:
   - type: Mech
     startingEquipment:
-      - WeaponMechCombatMaxim
+      - WeaponMechCombatUltraRifle

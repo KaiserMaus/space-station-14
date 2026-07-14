@@ -101,15 +101,6 @@
       - Pullable
 
 - type: entity
-  parent: [ CratePrivateSecure, BaseHighlyIllegalContraband ]
-  id: CratePiratePrivateSecure
-  name: secure pirate crate
-  description: A sturdy metal crate for modern pirate needs.
-  components:
-  - type: AccessReader
-    access: [["Pirate"]]
-
-- type: entity
   parent: [ LockerSyndicate, BaseHighlyIllegalContraband ]
   id: LockerPirate
   name: pirate locker

@@ -15,13 +15,13 @@ public sealed partial class LoadGridRuleComponent : Component
     /// Minimum distance from the station's largest grid.
     /// </summary>
     [DataField]
-    public float MinimumDistance = 100f;
+    public float MinimumDistance = 1000f;
 
     /// <summary>
     /// Maximum distance from the station's largest grid.
     /// </summary>
     [DataField]
-    public float MaximumDistance = 1000f;
+    public float MaximumDistance = 4000f;
 
     /// <summary>
     /// Radius checked for grid collisions before the grid is loaded.

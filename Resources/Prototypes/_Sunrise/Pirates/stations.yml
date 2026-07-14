@@ -11,17 +11,29 @@
     lockboxCut: 1
     primaryCut: 1
     primaryAccount: Pirates
-  - type: StationCargoBountyDatabase
-    group: Pirates
-    checkedBounties: []
-    history: []
-    bounties: []
   - type: StationCargoOrderDatabase
     markets:
     - pirateMarket
-    - pirateShipyard
     orders:
       Pirates: []
+  - type: SalvageJobsData
+    rankUpAnnouncement: pirate-job-board-radio-announce
+    rankUpChannel: Pirate
+    rankThresholds:
+      0:
+        title: pirate-job-rank-title-0
+        bountyGroup: PirateBountyScrapper
+      3:
+        title: pirate-job-rank-title-1
+        bountyGroup: PirateBountyPirate
+        unlockedMarket: pirateMarketPirate
+      6:
+        title: pirate-job-rank-title-2
+        bountyGroup: PirateBountyFreelancer
+        unlockedMarket: pirateMarketFreelance
+    maxRank:
+      title: pirate-job-rank-title-MAX
+      unlockedMarket: pirateMarketBaron
 
 - type: entity
   id: PirateShuttleStation

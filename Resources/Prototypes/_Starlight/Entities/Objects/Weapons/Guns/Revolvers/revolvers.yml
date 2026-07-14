@@ -1,6 +1,6 @@
 - type: entity
   name: Makeshift Revolver
-  parent: [BaseWeaponRevolver, BaseMinorContraband]
+  parent: [BaseWeaponRevolver, BaseMinorContraband, WeaponMakeshift] # Sunrise-Edit
   id: WeaponRevolverMakeshift
   description: Little more than a hand-cannon with a high chance of blowing up in your face.
   components:
@@ -41,7 +41,7 @@
 
 - type: entity
   name: Improvised Revolver
-  parent: WeaponRevolverMakeshift
+  parent: [WeaponRevolverMakeshift, WeaponImprovised] # Sunrise-Edit
   id: WeaponRevolverImprovised
   description: A revolver that has two barrels and no cylinder. Can you really call this a revolver?
   components:

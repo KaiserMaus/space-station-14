@@ -30,4 +30,5 @@ ent-SunriseAirlockExternalGlassShuttlePirateAccessLocked = { ent-AirlockExternal
     .suffix = Внешний, Стыковочный, Стеклянный, Пиратский доступ, Закрыт
 
 ent-SunriseAirlockPirateRandomSpawner = спавнер пиратского шлюза
+    .suffix = Только сторона Север-Юг
     .desc = Случайно создает пиратский шлюз.

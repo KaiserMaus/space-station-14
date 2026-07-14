@@ -245,7 +245,7 @@
 
 - type: entity
   name: forged double-barrel shotgun
-  parent: [BaseWeaponShotgunAny, BaseGunWieldable, BaseMinorContraband]
+  parent: [BaseWeaponShotgunAny, BaseGunWieldable, BaseMinorContraband, WeaponImprovised] # Sunrise-Edit
   id: WeaponShotgunForged
   description: Decently made double-barrel shotgun, reinforced with mixed steel and plasteel plates to keep it together. Not as accurate as a real gun.
   components:
@@ -293,7 +293,7 @@
 
 - type: entity
   name: makeshift shotgun
-  parent: [WeaponFlareGunSecurity, BaseMinorContraband, BaseGunShotgunSound] # Sunrise edit - shotgun handling sounds
+  parent: [WeaponFlareGunSecurity, BaseMinorContraband, BaseGunShotgunSound, WeaponMakeshift] # Sunrise edit
   id: WeaponShotgunMakeshift
   description: A small hand-cannon that fires .50 shotgun shells. Has no cloth to hold it together, so it has a high chance of falling apart with every shot.
   components:

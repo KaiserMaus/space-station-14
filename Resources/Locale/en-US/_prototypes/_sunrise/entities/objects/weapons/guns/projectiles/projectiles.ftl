@@ -1,5 +1,9 @@
 ent-BulletAcid2 = acid spit
     .desc = { ent-BaseBullet.desc }
+ent-PirateMarkerBeacon = pirate marker
+    .desc = A smoky signal that pirate raiders can rally around.
+ent-PirateMarkerShot = marker shot
+    .desc = A low-impact shot that leaves a rally marker for pirate raiders.
 ent-BulletEMP = EMP impulse
     .desc = { ent-BaseBulletTrigger.desc }
 ent-RadiationBullet = radiation particle

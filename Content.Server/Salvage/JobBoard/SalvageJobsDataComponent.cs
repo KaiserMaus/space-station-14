@@ -1,4 +1,6 @@
 using Content.Shared.Cargo.Prototypes;
+using Content.Shared.Radio;
+using Robust.Shared.Localization;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.Salvage.JobBoard;
@@ -33,6 +35,18 @@ public sealed partial class SalvageJobsDataComponent : Component
     /// </summary>
     [DataField]
     public ProtoId<CargoAccountPrototype> RewardAccount = "Cargo";
+
+    /// <summary>
+    /// Ключ локализации сообщения о повышении ранга.
+    /// </summary>
+    [DataField]
+    public LocId RankUpAnnouncement = "job-board-radio-announce";
+
+    /// <summary>
+    /// Радиоканал для сообщения о повышении ранга.
+    /// </summary>
+    [DataField]
+    public ProtoId<RadioChannelPrototype> RankUpChannel = "Supply";
 }
 
 /// <summary>

@@ -1,0 +1,18 @@
+# Общие варианты шаттлов для станционных верфей.
+- type: shipyardVessel
+  id: SalvageShipMining
+  name: shipyard-vessel-salvage-mining-name
+  description: shipyard-vessel-salvage-mining-description
+  price: 10000
+  group: salvage
+  gridPath: /Maps/_Sunrise/Shuttles/Salvage/mining.yml
+  spawnOffset: 32,0
+
+- type: shipyardVessel
+  id: SecurityShipPatrol
+  name: shipyard-vessel-security-patrol-name
+  description: shipyard-vessel-security-patrol-description
+  price: 12000
+  group: security
+  gridPath: /Maps/_Sunrise/Shuttles/Security/security.yml
+  spawnOffset: 32,0

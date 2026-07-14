@@ -660,7 +660,7 @@ entities:
       - 534
     - type: Fixtures
       fixtures: {}
-- proto: AirlockExternalGlassShuttleSyndicateLocked
+- proto: AirlockExternalGlassShuttlePirateLocked
   entities:
   - uid: 3
     components:

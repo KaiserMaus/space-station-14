@@ -33,3 +33,21 @@
   components:
   - type: Flatpack
     entity: MechMiningPod
+
+- type: entity
+  parent: [ BaseFlatpack, BaseSyndicateContraband ]
+  id: ComputerPirateUplinkFlatpack
+  name: black market console flatpack
+  description: A flatpack used for constructing a black market console.
+  components:
+  - type: Flatpack
+    entity: ComputerPirateUplink
+
+- type: entity
+  parent: [ BaseFlatpack, BaseSyndicateContraband ]
+  id: ComputerPirateExchangerFlatpack
+  name: black market exchanger flatpack
+  description: A flatpack used for constructing a black market exchanger.
+  components:
+  - type: Flatpack
+    entity: ComputerPirateExchanger

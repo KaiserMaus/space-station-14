@@ -259,6 +259,22 @@
     price: 750
 
 - type: entity
+  parent: ShipyardComputerCircuitboard
+  id: ShipyardSalvageComputerCircuitboard
+  name: salvage shipyard computer board
+  components:
+  - type: ComputerBoard
+    prototype: ComputerShipyardSalvage
+
+- type: entity
+  parent: ShipyardComputerCircuitboard
+  id: ShipyardSecurityComputerCircuitboard
+  name: security shipyard computer board
+  components:
+  - type: ComputerBoard
+    prototype: ComputerShipyardSecurity
+
+- type: entity
   parent: BaseComputerCircuitboard
   id: CommandConsoleCircuitboard
   components:

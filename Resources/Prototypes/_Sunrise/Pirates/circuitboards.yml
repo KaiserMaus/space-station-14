@@ -1,12 +1,4 @@
 - type: entity
-  parent: DoorElectronics
-  id: DoorElectronicsPirate
-  suffix: Pirate, Locked
-  components:
-  - type: AccessReader
-    access: [["Pirate"]]
-
-- type: entity
   parent: [ BaseComputerCircuitboard, BaseHighlyIllegalContraband ]
   id: PirateRequestComputerCircuitboard
   name: pirate request computer board

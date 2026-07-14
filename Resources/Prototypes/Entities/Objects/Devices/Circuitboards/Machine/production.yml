@@ -125,6 +125,10 @@
           defaultPrototype: Beaker
     - type: StealTarget
       stealGroup: MedicalTechFabCircuitboard
+    - type: Tag
+      tags:
+      - Board
+      - PirateBountyMedicalFabBoard # Sunrise-Edit
 
 - type: entity
   id: CircuitImprinterMachineCircuitboard
@@ -269,6 +273,10 @@
       stackRequirements:
         Manipulator: 1
         Glass: 5
+    - type: Tag
+      tags:
+      - Board
+      - PirateBountyArtifactAnalyzer # Sunrise-Edit
 
 - type: entity
   id: ArtifactCrusherMachineCircuitboard

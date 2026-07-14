@@ -30,11 +30,6 @@ public sealed class SalvageJobBoardSystem : EntitySystem
     [Dependency] private readonly StationSystem _station = default!;
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
 
-    /// <summary>
-    /// Radio channel that unlock messages are broadcast on.
-    /// </summary>
-    private static readonly ProtoId<RadioChannelPrototype> UnlockChannel = "Supply";
-
     /// <inheritdoc/>
     public override void Initialize()
     {
@@ -184,8 +179,12 @@ public sealed class SalvageJobBoardSystem : EntitySystem
             var computerQuery = EntityQueryEnumerator<SalvageJobBoardConsoleComponent>();
             while (computerQuery.MoveNext(out var uid, out _))
             {
-                var message = Loc.GetString("job-board-radio-announce", ("rank", FormattedMessage.RemoveMarkupPermissive(Loc.GetString(newRank.Title))));
-                _radio.SendRadioMessage(uid, message, UnlockChannel, uid, false);
+                if (_station.GetOwningStation(uid) != ent.Owner)
+                    continue;
+
+                var message = Loc.GetString(ent.Comp.RankUpAnnouncement,
+                    ("rank", FormattedMessage.RemoveMarkupPermissive(Loc.GetString(newRank.Title))));
+                _radio.SendRadioMessage(uid, message, ent.Comp.RankUpChannel, uid, false);
                 break;
             }
 
@@ -199,6 +198,9 @@ public sealed class SalvageJobBoardSystem : EntitySystem
         var enumerator = EntityQueryEnumerator<SalvageJobBoardConsoleComponent>();
         while (enumerator.MoveNext(out var consoleUid, out var console))
         {
+            if (_station.GetOwningStation(consoleUid) != ent.Owner)
+                continue;
+
             UpdateUi((consoleUid, console), ent);
         }
 

@@ -5,7 +5,7 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Server._Sunrise.Pirates.GameTicking;
 
-[RegisterComponent, Access(typeof(PiratesRuleSystem))]
+[RegisterComponent, Access(typeof(PiratesRuleSystem), typeof(ExistingPirateBaseRuleSystem))]
 public sealed partial class PiratesRuleComponent : Component
 {
     /// <summary>

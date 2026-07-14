@@ -245,11 +245,6 @@
   priority: 12
 
 - type: storeCategory
-  id: UplinkPirateMechs
-  name: store-category-mechs
-  priority: 13
-
-- type: storeCategory
   id: UplinkPirateBundle
   name: store-category-lootbox
   priority: 14

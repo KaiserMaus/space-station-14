@@ -48,6 +48,9 @@ entities:
   entities:
   - uid: 1
     components:
+    - type: IFF
+      color: '#0F0F0F4B'
+      flags: HideLabel
     - type: MetaData
       name: PRT "Ржавый"
     - type: Transform
@@ -652,7 +655,7 @@ entities:
     - type: GridPathfinding
     - type: ImplicitRoof
     - type: ExplosionAirtightGrid
-- proto: AirlockExternalGlassNukeopLocked
+- proto: AirlockExternalGlassShuttlePirateLocked
   entities:
   - uid: 344
     components:
@@ -660,7 +663,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -8.5,2.5
       parent: 1
-- proto: AirlockExternalNukeopLocked
+- proto: SunriseAirlockExternalShuttlePirateLocked
   entities:
   - uid: 83
     components:
@@ -673,7 +676,7 @@ entities:
     - type: Transform
       pos: -9.5,-2.5
       parent: 1
-- proto: AirlockExternalShuttleNukeopLocked
+- proto: SunriseAirlockExternalShuttlePirateLocked
   entities:
   - uid: 585
     components:

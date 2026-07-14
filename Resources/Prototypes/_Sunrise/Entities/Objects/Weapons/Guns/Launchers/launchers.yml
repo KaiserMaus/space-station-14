@@ -220,7 +220,7 @@
 
 - type: entity
   name: Bombaga
-  parent: [WeaponGrenadeLauncherSecurity, BaseGunWieldable, BaseMajorContraband]
+  parent: [WeaponGrenadeLauncherSecurity, BaseGunWieldable, BaseMajorContraband, WeaponImprovised] # Sunrise-Edit
   id: WeaponGrenadeLauncherImprovised
   description: the new era of greytide.
   components:

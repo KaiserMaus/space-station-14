@@ -1,7 +1,3 @@
-- type: accessLevel
-  id: Pirate
-  name: Pirate
-
 - type: Tag
   id: Pirate
 

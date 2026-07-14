@@ -18,7 +18,7 @@
     - map: ["enum.WiresVisualLayers.MaintenancePanel"]
       state: generic_panel_open
   - type: CargoOrderConsole
-    allowedGroups: [ "pirateMarket", "pirateShipyard" ]
+    allowedGroups: [ "pirateMarket", "pirateMarketPirate", "pirateMarketFreelance", "pirateMarketBaron" ]
     account: Pirates
     announcementChannel: Pirate
     removeLimitAccess: [ "Pirate" ]
@@ -34,9 +34,9 @@
 
 - type: entity
   id: ComputerPirateShipyard
-  parent: ComputerShipyard
+  parent: BaseComputerShipyard
   name: pirate shipyard console
-  description: Use a shuttle voucher here to deploy a purchased shuttle or sell the current one.
+  description: Used to purchase and sell the shuttle linked to this console.
   components:
   - type: Sprite
     sprite: _Sunrise/Structures/Machines/computers.rsi
@@ -52,7 +52,10 @@
       state: syndie_key
     - map: ["enum.WiresVisualLayers.MaintenancePanel"]
       state: generic_panel_open
-  - type: PirateShipyardConsole
+  - type: ShipyardConsole
+    account: Pirates
+    vesselGroup: pirate
+    announcementChannel: Pirate
   - type: Computer
     board: PirateShipyardComputerCircuitboard
   - type: PointLight
@@ -92,9 +95,9 @@
 
 - type: entity
   id: ComputerPirateBounty
-  parent: ComputerCargoBounty
+  parent: ComputerSalvageJobBoard
   name: pirate bounty computer
-  description: Used to manage currently active bounties.
+  description: Used to manage pirate contracts and unlock black market stock.
   components:
   - type: Sprite
     sprite: _Sunrise/Structures/Machines/computers.rsi

@@ -147,6 +147,8 @@
     factions:
     - Pirate
   - type: NpcVeteranFollower
+    searchRadius: 60
+    recheckCooldown: 2
   - type: CollectiveMind
     minds:
     - Pirate
@@ -237,6 +239,9 @@
   - type: RotationVisuals
     defaultRotation: 90
     horizontalRotation: 90
+  - type: HTN
+    rootTask:
+      task: PirateSimpleHumanoidHostileCompound
   - type: Butcherable
     butcheringType: Spike
     spawned:
