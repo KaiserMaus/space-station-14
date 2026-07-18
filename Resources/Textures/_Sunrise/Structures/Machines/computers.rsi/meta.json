@@ -1746,6 +1746,70 @@
             "directions": 4
         },
         {
+            "name": "brasscomputer",
+            "directions": 4
+        },
+        {
+            "name": "brasscomputer_l",
+            "directions": 4
+        },
+        {
+            "name": "brasscomputer_r",
+            "directions": 4
+        },
+        {
+            "name": "brasscomputer_l_r",
+            "directions": 4
+        },
+        {
+            "name": "brassrustcomputer",
+            "directions": 4
+        },
+        {
+            "name": "brassrustcomputer_l",
+            "directions": 4
+        },
+        {
+            "name": "brassrustcomputer_r",
+            "directions": 4
+        },
+        {
+            "name": "brassrustcomputer_l_r",
+            "directions": 4
+        },
+        {
+            "name": "goldcomputer",
+            "directions": 4
+        },
+        {
+            "name": "goldcomputer_l",
+            "directions": 4
+        },
+        {
+            "name": "goldcomputer_r",
+            "directions": 4
+        },
+        {
+            "name": "goldcomputer_l_r",
+            "directions": 4
+        },
+        {
+            "name": "goldrustcomputer",
+            "directions": 4
+        },
+        {
+            "name": "goldrustcomputer_l",
+            "directions": 4
+        },
+        {
+            "name": "goldrustcomputer_r",
+            "directions": 4
+        },
+        {
+            "name": "goldrustcomputer_l_r",
+            "directions": 4
+        },
+        {
             "name": "computer_l",
             "directions": 4
         },

@@ -21,13 +21,15 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
 
     public void UpdateState(ShipyardConsoleInterfaceState state)
     {
-        AccountLabel.Text = state.AccountName;
-        BalanceLabel.Text = state.Balance.ToString();
+        AccountLabel.Text = Loc.GetString("shipyard-console-account-name-format",
+            ("color", state.AccountColor),
+            ("name", state.AccountName));
+        BalanceLabel.Text = Loc.GetString("shipyard-console-credits-amount", ("amount", state.Balance));
         CurrentShuttleLabel.Text = state.CurrentShuttleName ?? Loc.GetString("shipyard-console-no-shuttle");
         SellValueLabel.Text = state.CurrentShuttleName == null
             ? string.Empty
             : Loc.GetString("shipyard-console-sell-value", ("value", state.CurrentShuttleSellValue));
-        SellButton.Disabled = state.CurrentShuttleName == null;
+        SellButton.Disabled = state.CurrentShuttleName == null || state.TransactionPending;
 
         Vessels.Children.Clear();
         foreach (var vessel in state.Vessels)
@@ -59,6 +61,7 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
             {
                 Text = Loc.GetString("shipyard-console-purchase-button"),
                 MinWidth = 110,
+                Disabled = state.TransactionPending,
                 ToolTip = vessel.Description,
             };
             purchase.OnPressed += _ => OnPurchase?.Invoke(vessel.Id);

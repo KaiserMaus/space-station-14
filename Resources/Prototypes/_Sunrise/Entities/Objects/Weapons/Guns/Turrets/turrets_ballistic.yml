@@ -58,7 +58,7 @@
 - type: entity
   parent: BaseWeaponBallisticTurret
   id: WeaponTurretPirateDisposable
-  name: disposable ballistic turret
+  name: weapon-turret-pirate-disposable-name
   suffix: Pirate, Disposable
   components:
   - type: NpcFactionMember
@@ -96,7 +96,7 @@
     capacity: 142
   - type: Construction
     deconstructionTarget: null
-    graph: WeaponTurretSyndicateDisposable
+    graph: WeaponTurretPirateDisposable
     node: disposableTurret
   - type: Repairable
     qualityNeeded: "Anchoring"
@@ -109,6 +109,23 @@
     intensitySlope: 1.5
     totalIntensity: 30
     canCreateVacuum: false
+
+- type: constructionGraph
+  id: WeaponTurretPirateDisposable
+  start: disposableTurret
+  graph:
+  - node: disposableTurret
+    entity: WeaponTurretPirateDisposable
+    edges:
+    - to: disposableTurret
+      completed:
+      - !type:SpawnPrototype
+        prototype: ToolboxElectricalTurretPirate
+        amount: 1
+      - !type:DeleteEntity {}
+      steps:
+      - tool: Screwing
+        doAfter: 10
 
 - type: entity
   abstract: true

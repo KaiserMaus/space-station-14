@@ -63,6 +63,7 @@
     whitelist:
       components:
       - VendingMachine
+      - PlayerCountDependentStock
     blacklist:
       tags:
       - Pirate
@@ -140,7 +141,7 @@
 
 - type: cargoBounty
   id: PirateBountyExtinguisher
-  reward: 7500
+  reward: 2000
   description: bounty-description-pirate-generic
   idPrefix: PB
   group: PirateBountyScrapper
@@ -232,19 +233,6 @@
       - GravityGenerator
 
 - type: cargoBounty
-  id: PirateBountyNfsdCampaign
-  reward: 12500
-  description: bounty-description-pirate-generic
-  idPrefix: PB
-  group: PirateBountyPirate
-  entries:
-  - name: pirate-bounty-item-nfsd-campaign
-    amount: 2
-    whitelist:
-      tags:
-      - ClothMade
-
-- type: cargoBounty
   id: PirateBountyHardsuits
   reward: 12500
   description: bounty-description-pirate-generic
@@ -271,13 +259,13 @@
       - PowerSupplier
 
 - type: cargoBounty
-  id: PirateBountyMercGas
-  reward: 12500
+  id: PirateBountySalvGas
+  reward: 9000
   description: bounty-description-pirate-generic
   idPrefix: PB
   group: PirateBountyPirate
   entries:
-  - name: pirate-bounty-item-merc-gas
+  - name: pirate-bounty-item-salv-gas
     amount: 3
     whitelist:
       components:
@@ -299,32 +287,20 @@
       - PirateBountyRDHardsuit
 
 - type: cargoBounty
-  id: PirateBountyMK58
+  id: PirateBountyOfficerHandgun
   reward: 15000
   description: bounty-description-pirate-generic
   idPrefix: PB
   group: PirateBountyPirate
   entries:
-  - name: pirate-bounty-item-mk58
+  - name: pirate-bounty-item-officerhandgun
     amount: 2
     whitelist:
       components:
       - Gun
       - MagazineAmmoProvider
+      - StealTarget
       requireAll: true
-
-- type: cargoBounty
-  id: PirateBountyMachineBoard
-  reward: 7500
-  description: bounty-description-pirate-generic
-  idPrefix: PB
-  group: PirateBountyScrapper
-  entries:
-  - name: pirate-bounty-item-machine-board
-    amount: 1
-    whitelist:
-      components:
-      - MachineBoard
 
 - type: cargoBounty
   id: PirateBountyHotplate
@@ -364,19 +340,6 @@
     whitelist:
       tags:
       - PirateBountyArtifactAnalyzer
-
-- type: cargoBounty
-  id: PirateBountyHypo
-  reward: 7500
-  description: bounty-description-pirate-generic
-  idPrefix: PB
-  group: PirateBountyScrapper
-  entries:
-  - name: pirate-bounty-item-hypo
-    amount: 1
-    whitelist:
-      tags:
-      - Hypospray
 
 - type: cargoBounty
   id: PirateBountyOreBox

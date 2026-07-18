@@ -770,12 +770,12 @@
 - type: cargoProduct
   id: PirateMarketPowerSink
   icon:
-    sprite: Structures/Storage/Crates/piratechest.rsi
-    state: crate_icon
-  product: PowerSink
-  cost: 3000
+    sprite: Objects/Power/powersink.rsi
+    state: powersink
+  product: PiratePowerSink
+  cost: 2500
   category: pirateproduct-category-name-tools
-  group: pirateMarket
+  group: pirateMarketPirate
 
 - type: cargoProduct
   id: PirateMarketCameraBug

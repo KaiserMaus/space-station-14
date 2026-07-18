@@ -25,6 +25,9 @@ public sealed partial class ShipyardConsoleComponent : Component
     [DataField]
     public string VesselGroup = "station";
 
+    [DataField]
+    public string? PriorityTag;
+
     /// <summary>
     /// Explicit vessel prototypes added to this console in addition to its group.
     /// </summary>
