@@ -90,7 +90,7 @@ namespace Content.Server.PowerSink
                 }
 
                 // Check for explosion
-                if (!_battery.IsFull((entity, battery)))
+                if (!component.ExplodeOnFullCharge || !_battery.IsFull((entity, battery))) // Sunrise-Edit
                     continue;
 
                 if (component.ExplosionTime == null)

@@ -41,5 +41,9 @@ namespace Content.Server.PowerSink
                     .WithVolume(15f) // audible even behind walls
                     .WithRolloffFactor(10)
             };
+        // Sunrise-Start
+        [DataField]
+        public bool ExplodeOnFullCharge = true;
+        // Sunrise-End
     }
 }

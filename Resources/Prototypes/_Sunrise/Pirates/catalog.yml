@@ -73,8 +73,8 @@
 - type: cargoProduct
   id: PirateMarketDisposableLauncherTraining
   icon:
-    sprite: Structures/Storage/Crates/piratechest.rsi
-    state: crate_icon
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/disposal_rocket_launcher.rsi
+    state: unwielded
   product: CratePirateDisposableLauncherTraining
   cost: 1000
   category: pirateproduct-category-name-weapons
@@ -83,8 +83,8 @@
 - type: cargoProduct
   id: PirateMarketDisposableLauncherEmp
   icon:
-    sprite: Structures/Storage/Crates/piratechest.rsi
-    state: crate_icon
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/disposal_rocket_launcher.rsi
+    state: unwielded
   product: CratePirateDisposableLauncherEmp
   cost: 2500
   category: pirateproduct-category-name-weapons
@@ -93,8 +93,8 @@
 - type: cargoProduct
   id: PirateMarketDisposableLauncherSmoke
   icon:
-    sprite: Structures/Storage/Crates/piratechest.rsi
-    state: crate_icon
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/disposal_rocket_launcher.rsi
+    state: unwielded
   product: CratePirateDisposableLauncherSmoke
   cost: 1500
   category: pirateproduct-category-name-weapons
@@ -103,8 +103,8 @@
 - type: cargoProduct
   id: PirateMarketDisposableLauncher
   icon:
-    sprite: Structures/Storage/Crates/piratechest.rsi
-    state: crate_icon
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/disposal_rocket_launcher.rsi
+    state: unwielded
   product: CratePirateDisposableLauncher
   cost: 5000
   category: pirateproduct-category-name-weapons
@@ -113,8 +113,8 @@
 - type: cargoProduct
   id: PirateMarketDisposableLauncherIncendiary
   icon:
-    sprite: Structures/Storage/Crates/piratechest.rsi
-    state: crate_icon
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/disposal_rocket_launcher.rsi
+    state: unwielded
   product: CratePirateDisposableLauncherIncendiary
   cost: 7500
   category: pirateproduct-category-name-weapons
@@ -129,6 +129,46 @@
   cost: 750
   category: pirateproduct-category-name-weapons
   group: pirateMarket
+
+- type: cargoProduct
+  id: PirateMarketShuttleGunLightRifleImprovisedFlatpack
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: syndie_lethal
+  product: ShuttleGunLightRifleImprovisedFlatpack
+  cost: 2000
+  category: pirateproduct-category-name-weapons
+  group: pirateMarket
+
+- type: cargoProduct
+  id: PirateMarketShuttleGunLightRifleSPFlatpack
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: syndie_lethal
+  product: ShuttleGunLightRifleSPFlatpack
+  cost: 3000
+  category: pirateproduct-category-name-weapons
+  group: pirateMarketPirate
+
+- type: cargoProduct
+  id: PirateMarketShuttleGunLightRifleFMJFlatpack
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: syndie_lethal
+  product: ShuttleGunLightRifleFMJFlatpack
+  cost: 5000
+  category: pirateproduct-category-name-weapons
+  group: pirateMarketFreelance
+
+- type: cargoProduct
+  id: PirateMarketShuttleGunLightRifleAPFlatpack
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: syndie_lethal
+  product: ShuttleGunLightRifleAPFlatpack
+  cost: 10500
+  category: pirateproduct-category-name-weapons
+  group: pirateMarketBaron
 
 - type: cargoProduct
   id: PirateMarketComputerGunneryCircuitboard
@@ -177,6 +217,16 @@
     state: base
   product: ShuttleGunPirateCannon
   cost: 3000
+  category: pirateproduct-category-name-weapons
+  group: pirateMarketPirate
+
+- type: cargoProduct
+  id: PirateMarketShuttleGunPirateBombard
+  icon:
+    sprite: Objects/Weapons/Guns/Shuttles/pirate_cannon.rsi
+    state: base
+  product: ShuttleGunPirateBombard
+  cost: 5000
   category: pirateproduct-category-name-weapons
   group: pirateMarketPirate
 
@@ -312,6 +362,6 @@
 
 - type: entity
   id: PiratePalletSell
-  name: pirate selling pallet
-  description: Designates valid items to sell.
+  name: pirate-selling-pallet-name
+  description: pirate-selling-pallet-description
   parent: CargoPalletSell

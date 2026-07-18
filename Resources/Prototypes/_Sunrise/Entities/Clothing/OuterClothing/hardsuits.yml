@@ -465,7 +465,7 @@
 
 
 - type: entity
-  parent: [ BaseSunrisePirateHardsuitAmpula, ClothingOuterHardsuitBase, BaseMajorContraband]
+  parent: [ HardsuitSlotAmpulaPirate, ClothingOuterHardsuitBase, BaseMajorContraband]
   id: SunriseClothingOuterHardsuitRogue
   name: rogue hardsuit
   description: For when you really need to put the dashing into dashing rogue.

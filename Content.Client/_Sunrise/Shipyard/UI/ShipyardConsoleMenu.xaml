@@ -5,7 +5,7 @@
     <BoxContainer Orientation="Vertical" Margin="12 6 12 10">
         <BoxContainer Orientation="Horizontal">
             <Label Text="{Loc 'shipyard-console-account-label'}" StyleClasses="LabelKeyText" />
-            <Label Name="AccountLabel" Text="{Loc 'shipyard-console-no-account'}" />
+            <RichTextLabel Name="AccountLabel" Text="{Loc 'shipyard-console-no-account'}" />
             <Label Text="  " />
             <Label Text="{Loc 'shipyard-console-balance-label'}" StyleClasses="LabelKeyText" />
             <Label Name="BalanceLabel" Text="0" />

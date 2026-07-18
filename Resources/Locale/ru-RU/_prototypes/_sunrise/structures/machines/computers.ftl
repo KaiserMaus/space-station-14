@@ -1,8 +1,6 @@
 ent-BaseComputerSunrise = компьютер
     .desc = { ent-BaseComputer.desc }
-ent-ComputerShipyard = консоль верфи
-    .desc = Используется для покупки и продажи шаттлов
-ent-ComputerShipyardSalvage = консоль верфи утилизаторов
+ent-ComputerShipyard = консоль верфи утилизаторов
     .desc = Используется для покупки и продажи шаттлов утилизаторов.
 ent-ComputerShipyardSecurity = консоль верфи СБ
     .desc = Используется для покупки и продажи шаттлов службы безопасности.

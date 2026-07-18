@@ -94,6 +94,13 @@
       path: /Audio/Weapons/Guns/Hits/bullet_hit.ogg
   - type: TimedDespawn
     lifetime: 10
+  # Sunrise-Start
+  - type: RadarBlip
+    color: "#FF6A6A"
+    scale: 0.2
+    shape: Triangle
+    requireInSpace: true
+  # Sunrise-End
 
 - type: entity
   id: BaseBulletTrigger # Trigger-on-collide bullets

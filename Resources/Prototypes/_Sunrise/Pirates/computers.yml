@@ -1,16 +1,29 @@
 - type: entity
+  id: BaseRustGoldComputer
+  abstract: true
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.EdgeConnectionVisuals.ConnectionMask:
+        computerLayerBody:
+          None: { state: goldrustcomputer, sprite: _Sunrise/Structures/Machines/computers.rsi }
+          West: { state: goldrustcomputer_r, sprite: _Sunrise/Structures/Machines/computers.rsi }
+          East: { state: goldrustcomputer_l, sprite: _Sunrise/Structures/Machines/computers.rsi }
+          East, West: { state: goldrustcomputer_l_r, sprite: _Sunrise/Structures/Machines/computers.rsi }
+
+- type: entity
   id: ComputerCargoOrdersPirate
-  parent: ComputerCargoOrders
-  name: pirate request computer
-  description: Used by pirates to purchase new booty.
+  parent: [BaseRustGoldComputer, ComputerCargoOrders]
+  name: pirate-computer-request-name
+  description: pirate-computer-request-description
   components:
   - type: Sprite
     sprite: _Sunrise/Structures/Machines/computers.rsi
     layers:
     - map: ["computerLayerBody"]
-      state: rusted
+      state: goldrustcomputer
     - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
+      state: null
     - map: ["computerLayerScreen"]
       state: requestpirate
     - map: ["computerLayerKeys"]
@@ -34,17 +47,17 @@
 
 - type: entity
   id: ComputerPirateShipyard
-  parent: BaseComputerShipyard
-  name: pirate shipyard console
-  description: Used to purchase and sell the shuttle linked to this console.
+  parent: [BaseRustGoldComputer, BaseComputerShipyard]
+  name: pirate-computer-shipyard-name
+  description: pirate-computer-shipyard-description
   components:
   - type: Sprite
     sprite: _Sunrise/Structures/Machines/computers.rsi
     layers:
     - map: ["computerLayerBody"]
-      state: rusted
+      state: goldrustcomputer
     - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
+      state: null
     - map: ["computerLayerScreen"]
       state: shuttlepirate
     - map: ["computerLayerKeys"]
@@ -67,17 +80,17 @@
 
 - type: entity
   id: ComputerPalletConsolePirate
-  parent: ComputerPalletConsole
-  name: pirate sale computer
-  description: Used to sell goods loaded onto cargo pallets.
+  parent: [BaseRustGoldComputer, ComputerPalletConsole]
+  name: pirate-computer-sale-name
+  description: pirate-computer-sale-description
   components:
   - type: Sprite
     sprite: _Sunrise/Structures/Machines/computers.rsi
     layers:
     - map: ["computerLayerBody"]
-      state: rusted
+      state: goldrustcomputer
     - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
+      state: null
     - map: ["computerLayerScreen"]
       state: transferpirate
     - map: ["computerLayerKeys"]
@@ -95,17 +108,17 @@
 
 - type: entity
   id: ComputerPirateBounty
-  parent: ComputerSalvageJobBoard
-  name: pirate bounty computer
-  description: Used to manage pirate contracts and unlock black market stock.
+  parent: [BaseRustGoldComputer, ComputerSalvageJobBoard]
+  name: pirate-computer-bounty-name
+  description: pirate-computer-bounty-description
   components:
   - type: Sprite
     sprite: _Sunrise/Structures/Machines/computers.rsi
     layers:
     - map: ["computerLayerBody"]
-      state: rusted
+      state: goldrustcomputer
     - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
+      state: null
     - map: ["computerLayerScreen"]
       state: bountypirate
     - map: ["computerLayerKeys"]

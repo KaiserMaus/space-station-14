@@ -1,8 +1,8 @@
 - type: entity
   parent: [ BaseComputerCircuitboard, BaseHighlyIllegalContraband ]
   id: PirateRequestComputerCircuitboard
-  name: pirate request computer board
-  description: A computer printed circuit board for a pirate request computer.
+  name: pirate-request-computer-board-name
+  description: pirate-request-computer-board-description
   suffix: Pirate
   components:
   - type: Sprite
@@ -15,8 +15,8 @@
 - type: entity
   parent: [ BaseComputerCircuitboard, BaseHighlyIllegalContraband ]
   id: PirateSaleComputerCircuitboard
-  name: pirate sale computer board
-  description: A computer printed circuit board for a pirate sale computer.
+  name: pirate-sale-computer-board-name
+  description: pirate-sale-computer-board-description
   suffix: Pirate
   components:
   - type: Sprite
@@ -29,8 +29,8 @@
 - type: entity
   parent: [ BaseComputerCircuitboard, BaseHighlyIllegalContraband ]
   id: PirateBountyComputerCircuitboard
-  name: pirate bounty computer board
-  description: A computer printed circuit board for a pirate bounty computer.
+  name: pirate-bounty-computer-board-name
+  description: pirate-bounty-computer-board-description
   suffix: Pirate
   components:
   - type: Sprite
@@ -43,8 +43,8 @@
 - type: entity
   parent: [ BaseComputerCircuitboard, BaseHighlyIllegalContraband ]
   id: PirateShipyardComputerCircuitboard
-  name: pirate shipyard computer board
-  description: A computer printed circuit board for a pirate shipyard console.
+  name: pirate-shipyard-computer-board-name
+  description: pirate-shipyard-computer-board-description
   suffix: Pirate
   components:
   - type: Sprite
@@ -57,7 +57,7 @@
 - type: entity
   parent: WeaponCapacitorRechargerCircuitboard
   id: WeaponCapacitorRechargerPirateCircuitboard
-  description: A machine printed circuit board for a recharger. Seems to have a skull and crossbones engraved on it.
+  description: pirate-recharger-board-description
   suffix: Machine Board, Pirate
   components:
   - type: MachineBoard

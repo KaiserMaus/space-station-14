@@ -264,7 +264,7 @@
   name: salvage shipyard computer board
   components:
   - type: ComputerBoard
-    prototype: ComputerShipyardSalvage
+    prototype: ComputerShipyard
 
 - type: entity
   parent: ShipyardComputerCircuitboard
