@@ -1247,15 +1247,20 @@
     sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/murmillo.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/murmillo.rsi
+    equipDelay: 3
+    unequipDelay: 9
+    stripDelay: 18
   - type: ClothingSpeedModifier
-    walkModifier: 0.5
-    sprintModifier: 0.5
+    walkModifier: 0.45
+    sprintModifier: 0.45
   - type: EmitSoundOnWearerMove
     sound:
       path: /Audio/_Sunrise/Cyborg/robot_legs1.ogg
       params:
         volume: -8
         variation: 0.025
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.5
   - type: Pierceable
     level: Rock
   - type: Armor
@@ -1263,8 +1268,8 @@
       coefficients:
         Blunt: 0.4
         Slash: 0.3
-        Piercing: 0.2
-        Heat: 0.2
+        Piercing: 0.15
+        Heat: 0.3
         Radiation: 0.2
         Caustic: 0.2
   - type: StaminaResistance
