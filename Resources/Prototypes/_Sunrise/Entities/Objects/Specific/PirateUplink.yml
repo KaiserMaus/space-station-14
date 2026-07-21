@@ -137,7 +137,7 @@
       Doubloon: 9999
 
 - type: entity
-  parent: [BaseComputerSunriseUniqueFrame, StorePresetPirateUplink]
+  parent: [BaseRustGoldComputer, StorePresetPirateUplink, ComputerCargoOrdersPirate]
   id: ComputerPirateUplink
   name: black market console
   description: An old, rusted console barely held together by loose wiring and luck. The screen flickers, but the black market network still responds to requests.
@@ -147,7 +147,7 @@
     - map: ["computerLayerBody"]
       state: rusted
     - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
+      state: null
     - map: ["computerLayerScreen"]
       state: pirate
     - map: ["computerLayerKeys"]
@@ -189,8 +189,8 @@
 
 # Exchanger
 - type: entity
-  parent: [BaseComputerSunriseUniqueFrame, StorePresetPirateExchanger]
-  id: ComputerPirateExchanger # Обменник для Пиратской бухты и прочих логовищ
+  parent: [BaseRustGoldComputer, StorePresetPirateExchanger, ComputerCargoOrdersPirate]
+  id: ComputerPirateExchanger
   name: black market exchanger
   description: An old, rusted console barely held together by loose wiring and luck. The screen flickers, but the black market network still responds to requests.
   components:
@@ -199,7 +199,7 @@
     - map: ["computerLayerBody"]
       state: rusted
     - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
+      state: null
     - map: ["computerLayerScreen"]
       state: contraband_sell
     - map: ["computerLayerKeys"]
@@ -208,8 +208,6 @@
     radius: 1.5
     energy: 1.6
     color: "#c96842"
-  - type: AccessReader
-    access: [[ "NuclearOperative" ]]
   - type: UserInterface
     interfaces:
       enum.StoreUiKey.Key:

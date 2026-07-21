@@ -833,7 +833,7 @@ entities:
       - 467
       - 475
       - 351
-- proto: AirlockPirateLocked
+- proto: SunriseAirlockPirateRustyMarked
   entities:
   - uid: 5
     components:

@@ -181,3 +181,12 @@
   group: pirate
   gridPath: /Maps/_Sunrise/Shuttles/Antag/Pirate_Purchase/voltage.yml
   spawnOffset: 38,0
+
+- type: shipyardVessel
+  id: SunrisePirateShipKlinRassveta
+  name: shipyard-vessel-pirate-klin-rassveta-name
+  description: shipyard-vessel-pirate-klin-rassveta-description
+  price: 100000
+  group: pirate
+  gridPath: /Maps/_Sunrise/Shuttles/Antag/Pirate_Purchase/KlinRassveta.yml
+  spawnOffset: 52,0

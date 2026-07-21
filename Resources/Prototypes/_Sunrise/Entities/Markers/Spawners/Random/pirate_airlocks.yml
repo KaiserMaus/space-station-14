@@ -3,6 +3,7 @@
   parent: MarkerBase
   name: Pirate Airlock Spawner
   description: Randomly spawns a pirate airlock.
+  suffix: Pirate, Locked
   components:
   - type: Sprite
     layers:

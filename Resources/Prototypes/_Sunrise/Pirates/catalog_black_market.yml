@@ -66,6 +66,116 @@
   group: pirateMarketPirate
 
 - type: cargoProduct
+  id: SunrisePirateMarketDravon75mmAmmo
+  icon:
+    sprite: Structures/Storage/Crates/piratechest.rsi
+    state: crate_icon
+  product: SunriseCratePirateDravon75mmAmmo
+  cost: 2500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarketPirate
+
+- type: cargoProduct
+  id: SunrisePirateMarketMagazine50mmRocket
+  icon:
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/50mm_cartridge_rct.rsi
+    state: base
+  product: SunriseCratePirateMagazine50mmRocket
+  cost: 5000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarketPirate
+
+- type: cargoProduct
+  id: SunrisePirateMarketAK57090mmAmmo
+  icon:
+    sprite: Structures/Storage/Crates/piratechest.rsi
+    state: crate_icon
+  product: SunriseCratePirateAK57090mmAmmo
+  cost: 3500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarketPirate
+
+- type: cargoProduct
+  id: SunrisePirateMarketRocket120mm
+  icon:
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Explosives/explosives_x48.rsi
+    state: rocket120mm
+  product: SunriseCratePirateRocket120mm
+  cost: 4000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarketPirate
+
+- type: cargoProduct
+  id: SunrisePirateMarketRocket120mmLongFlight
+  icon:
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Explosives/explosives_x48.rsi
+    state: rocket120mm
+  product: SunriseCratePirateRocket120mmLongFlight
+  cost: 5000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarketFreelance
+
+- type: cargoProduct
+  id: SunrisePirateMarketMagazine120mmBlast
+  icon:
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/120mm_cartridge.rsi
+    state: base
+  product: SunriseCratePirateMagazine120mmBlast
+  cost: 8000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarketFreelance
+
+- type: cargoProduct
+  id: SunrisePirateMarketLeviathan240mmHE
+  icon:
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    state: blast240mm
+  product: SunriseCratePirateLeviathan240mmHE
+  cost: 4500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarketBaron
+
+- type: cargoProduct
+  id: SunrisePirateMarketLeviathan240mmCluster
+  icon:
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    state: cluster240mm
+  product: SunriseCratePirateLeviathan240mmCluster
+  cost: 12500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarketBaron
+
+- type: cargoProduct
+  id: SunrisePirateMarketLeviathan240mmNuke
+  icon:
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    state: nuke240mm
+  product: SunriseCratePirateLeviathan240mmNuke
+  cost: 15000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarketBaron
+
+- type: cargoProduct
+  id: SunrisePirateMarketCharon280mmSlug
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/ArtilleryAmmo/charon_ammo.rsi
+    state: railgun_slug
+  product: SunriseCratePirateCharon280mmSlug
+  cost: 7500
+  category: pirateproduct-category-name-ammo
+  group: pirateMarketFreelance
+
+- type: cargoProduct
+  id: SunrisePirateMarketCharon280mmSubnuclear
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/ArtilleryAmmo/charon_ammo.rsi
+    state: subnuclear
+  product: SunriseCratePirateCharon280mmSubnuclear
+  cost: 15000
+  category: pirateproduct-category-name-ammo
+  group: pirateMarketBaron
+
+- type: cargoProduct
   id: PirateMarketChestGrapeshot
   icon:
     { sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi, state: grapeshot }
@@ -80,7 +190,7 @@
     sprite: Structures/Storage/Crates/piratechest.rsi
     state: crate_icon
   product: CratePirateMagazineChainGun
-  cost: 18250
+  cost: 12000
   category: pirateproduct-category-name-weapons
   group: pirateMarketPirate
 

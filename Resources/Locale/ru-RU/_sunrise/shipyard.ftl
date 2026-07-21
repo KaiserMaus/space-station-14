@@ -48,6 +48,8 @@ shipyard-vessel-pirate-turncoat-name = Turncoat
 shipyard-vessel-pirate-turncoat-description = Тяжело вооружённый пиратский шаттл.
 shipyard-vessel-pirate-voltage-name = Voltage
 shipyard-vessel-pirate-voltage-description = Продвинутый пиратский шаттл с мощным оснащением.
+shipyard-vessel-pirate-klin-rassveta-name = Клинок Рассвета
+shipyard-vessel-pirate-klin-rassveta-description = Огромный пиратский боевой корабль с несколькими тяжёлыми артиллерийскими системами.
 # SLV
 shipyard-vessel-salvage-mining-name = шаттл "Рудокоп"
 shipyard-vessel-salvage-mining-description = Компактный шаттл для утилизации и добычи руды.

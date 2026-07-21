@@ -155,7 +155,7 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 900      # massive blast, ~8-9 tile radius
+    totalIntensity: 1500      # massive blast, ~8-9 tile radius
     intensitySlope: 5
     maxIntensity: 50
     canCreateVacuum: true

@@ -777,6 +777,7 @@
   description: The largest artillery piece cleared for shuttle deployment. This monstrous 240mm siege cannon fires a single manually-loaded shell that can penetrate layered armor and obliterate fortified positions. Extremely difficult to anchor. Each shot requires the crew to physically insert a 240mm shell into the open breech. The Leviathan does not forgive mistakes.
   components:
   - type: Sprite
+    scale: 0.95,0.95
     sprite: _Starlight/Objects/Weapons/Guns/Shuttleguns/Leviathan.rsi
     granularLayersRendering: true
     layers:
