@@ -36,10 +36,12 @@
 - type: entity
   id: PirateMarkerShot
   parent: BaseBullet
+  abstract: true
   name: marker shot
   description: A low-impact shot that leaves a rally marker for pirate raiders.
   categories: [ HideSpawnMenu ]
   components:
+  - type: InteractionOutline
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:
@@ -74,6 +76,27 @@
     tags:
     - NpcBoss
     - HideContextMenu
+
+- type: entity
+  id: SunrisePirateMarkerShot10
+  parent: PirateMarkerShot
+  name: 10-second marker shot
+  components:
+  - type: TimedDespawn
+    lifetime: 10
+
+- type: entity
+  id: SunrisePirateMarkerShot30
+  parent: PirateMarkerShot
+  name: 30-second marker shot
+  components:
+  - type: TimedDespawn
+    lifetime: 30
+
+- type: entity
+  id: SunrisePirateMarkerShot60
+  parent: PirateMarkerShot
+  name: 60-second marker shot
 
 - type: entity
   id: BaseBulletGrenade

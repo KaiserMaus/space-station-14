@@ -173,3 +173,10 @@ shuttle-gun-light-rifle-fmj-flatpack-name = Light ballistic turret flatpack (FMJ
 shuttle-gun-light-rifle-fmj-flatpack-description = A flatpack used to construct a light ballistic turret with full metal jacket ammunition.
 shuttle-gun-light-rifle-ap-flatpack-name = Light ballistic turret flatpack (AP)
 shuttle-gun-light-rifle-ap-flatpack-description = A flatpack used to construct a light ballistic turret with armor-piercing ammunition.
+
+ent-CrateEmptyPirateSpawner = empty pirate crate spawner
+ent-MindRolePirateCorsair = pirate corsair role
+ent-MobVulpkaninPirateScoonerOldReinforcement = pirate
+ent-RandomHumanoidOldScoonerReinforcement = scooner
+ent-RandomHumanoidScoonerReinforcement = scooner
+ent-VendingMachineBoozeSyndicatePirate = hacked Bruise-O-Mat

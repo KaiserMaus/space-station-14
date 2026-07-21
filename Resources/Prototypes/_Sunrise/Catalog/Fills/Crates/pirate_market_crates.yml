@@ -725,7 +725,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: CartridgeLeviathan240mmHE
+      - id: CartridgeLeviathan240mmHEDamaged75
         amount: 2
 - type: entity
   parent: CratePiratePrivateSecure
@@ -735,7 +735,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: CartridgeLeviathan240mmCluster
+      - id: CartridgeLeviathan240mmClusterDamaged75
         amount: 2
 
 - type: entity
@@ -746,7 +746,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: CartridgeLeviathan240mmNuke
+      - id: CartridgeLeviathan240mmNukeDamaged75
         amount: 2
 
 - type: entity

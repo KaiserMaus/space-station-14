@@ -173,3 +173,10 @@ shuttle-gun-light-rifle-fmj-flatpack-name = Плоская упаковка лё
 shuttle-gun-light-rifle-fmj-flatpack-description = Плоская упаковка для сборки лёгкой баллистической турели с патронами полной металлической оболочки.
 shuttle-gun-light-rifle-ap-flatpack-name = Плоская упаковка лёгкой баллистической турели (AP)
 shuttle-gun-light-rifle-ap-flatpack-description = Плоская упаковка для сборки лёгкой баллистической турели с бронебойными патронами.
+
+ent-CrateEmptyPirateSpawner = пустой спавнер пиратского ящика
+ent-MindRolePirateCorsair = роль пиратского корсара
+ent-MobVulpkaninPirateScoonerOldReinforcement = пират
+ent-RandomHumanoidOldScoonerReinforcement = скунер
+ent-RandomHumanoidScoonerReinforcement = скунер
+ent-VendingMachineBoozeSyndicatePirate = взломанный «Bruise-O-Mat»

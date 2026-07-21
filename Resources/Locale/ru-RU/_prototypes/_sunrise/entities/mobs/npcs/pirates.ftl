@@ -197,7 +197,7 @@ ent-PirateSquadT1Monkey = Отряд пиратов
     .suffix = T1, Обезьяны
     .desc = Спавнит ветерана-шахтёра и от четырёх до пяти обезьян разных типов.
 
-ent-PirateSquadT1Random = Отряд пиратов
+ent-PirateSquadT1Random = случайный отряд пиратов T1
     .suffix = T1, Случайный
     .desc = Спавнит случайный отряд пиратов T1.
 ent-PirateSquadT2LMG = Отряд пиратов
@@ -221,7 +221,7 @@ ent-PirateSquadT2Control = Отряд пиратов
 ent-PirateSquadT2AntiCrowd = Отряд пиратов
     .suffix = T2, Анти-Толпа
     .desc = Спавнит отряд пиратов T2 против толпы.
-ent-PirateSquadT2Random = Отряд пиратов
+ent-PirateSquadT2Random = случайный отряд пиратов T2
     .suffix = T2, Случайный
     .desc = Спавнит случайный отряд пиратов T2.
 ent-PirateSquadT3LMG = Отряд пиратов
@@ -248,7 +248,7 @@ ent-PirateSquadT3Suppressor = Отряд пиратов
 ent-PirateSquadT3Universal = Отряд пиратов
     .suffix = T3, Универсальный
     .desc = Спавнит универсальный отряд пиратов T3.
-ent-PirateSquadT3Random = Отряд пиратов
+ent-PirateSquadT3Random = случайный отряд пиратов T3
     .suffix = T3, Случайный
     .desc = Спавнит случайный отряд пиратов T3.
 
