@@ -34,3 +34,6 @@ ent-WeaponMechCombatDuster = mounted EXP-220 Duster
 ent-WeaponMechCombatKord = kORD mounted machine gun
     .desc = A rapid-fire machine gun chambered in 12.7 x 108 mm.
     .suffix = Mech Weapon, Ranged, Combat, Kord
+ent-WeaponMechCombatShotgunAuto = mounted AS-12 "Minotaur"
+    .desc = A mounted automatic shotgun for combat mechs.
+    .suffix = Mech Weapon, Gun, Combat, Shotgun
