@@ -1,9 +1,7 @@
 using System.Linq;
-using Content.Server._Sunrise.Antag.UI;
 using Content.Server.Antag;
 using Content.Server.Antag.Components;
 using Content.Server.Cargo.Components;
-using Content.Server.EUI;
 using Content.Server.GameTicking;
 using Content.Server.GameTicking.Rules;
 using Content.Server.RandomMetadata;
@@ -11,13 +9,11 @@ using Content.Server.Roles;
 using Content.Server.Station.Systems;
 using Content.Shared._Sunrise.Pirate;
 using Content.Shared.Cargo.Components;
-using Content.Shared.CCVar;
 using Content.Shared.Clothing;
 using Content.Shared.Dataset;
 using Content.Shared.GameTicking.Components;
 using Content.Shared.Preferences.Loadouts;
 using Content.Shared.Roles;
-using Robust.Shared.Configuration;
 using Robust.Server.Player;
 using Robust.Shared.Prototypes;
 
@@ -26,8 +22,6 @@ namespace Content.Server._Sunrise.Pirates.GameTicking;
 public sealed class PiratesRuleSystem : GameRuleSystem<PiratesRuleComponent>
 {
     [Dependency] private readonly AntagSelectionSystem _antag = default!;
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly EuiManager _eui = default!;
     [Dependency] private readonly LoadoutSystem _loadout = default!;
     [Dependency] private readonly MetaDataSystem _meta = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
@@ -37,8 +31,6 @@ public sealed class PiratesRuleSystem : GameRuleSystem<PiratesRuleComponent>
     private const int DeepSpaceOnlineThreshold = 50;
     private const int ScrapperOnlineThreshold = 80;
     private const string PirateCaptainMindRole = "MindRolePirateCaptain";
-    private const string PirateCaptainCustomNameFormat = "antag-name-format-pirate-captain";
-    private const string PirateCrewCustomNameFormat = "antag-name-format-pirate-crew";
     private const string PirateCaptainNameFormat = "name-format-pirate-captain";
     private const string PirateCrewNameFormat = "name-format-pirate-crew";
 
@@ -133,20 +125,6 @@ public sealed class PiratesRuleSystem : GameRuleSystem<PiratesRuleComponent>
             var (mind, _) = assignedMinds[lastIndex];
             assignedMinds[lastIndex] = (mind, name);
         }
-
-        if (args.Session == null)
-            return;
-
-        var roleTitle = isCaptain
-            ? "antag-name-eui-title-pirate-captain"
-            : "antag-name-eui-title-pirate";
-
-        var nameFormat = isCaptain
-            ? PirateCaptainCustomNameFormat
-            : PirateCrewCustomNameFormat;
-
-        var eui = new AntagNameEui(ent.Owner, args.EntityUid, nameFormat, name, roleTitle, _cfg.GetCVar(CCVars.MaxNameLength));
-        _eui.OpenEui(eui, args.Session);
     }
 
     private void OnRuleLoadedGrids(Entity<PiratesRuleComponent> ent, ref RuleLoadedGridsEvent args)

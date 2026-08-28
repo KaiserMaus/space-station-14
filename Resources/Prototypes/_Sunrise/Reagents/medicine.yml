@@ -230,7 +230,7 @@
         damage:
           Burn: -2
           Brute: -3
-          Toxin: -4
+          Toxin: -1
       - !type:HealthChange
         damage:
           types:
@@ -385,9 +385,9 @@
           min: 15
         damage:
           types:
-            Asphyxiation: -25
-            Poison: -25
-            Mangleness: -25
+            Asphyxiation: -15
+            Poison: -15
+            Mangleness: -15
       - !type:EvenHealthChange
         conditions:
         - !type:MobStateCondition
