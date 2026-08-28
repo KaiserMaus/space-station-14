@@ -1354,7 +1354,7 @@
     impactEffect: BulletImpactEffectOrangeDisabler
     damage:
       types:
-        Heat: 20
+        Heat: 13
 
 - type: entity
   name: destroying bolt

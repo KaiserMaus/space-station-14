@@ -1527,6 +1527,9 @@ entities:
     - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: ImplicitRoof
+    - type: IFF
+      color: '#0F0F0F4B'
+      flags: HideLabel
     - type: ExplosionAirtightGrid
     - type: TileHistory
       chunkHistory: {}

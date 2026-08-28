@@ -115,3 +115,7 @@ ent-SpawnerSafeSMG = Спавнер сейфа пистолет-пулемёто
 ent-SpawnerSafeEnergyGuns = Спавнер сейфа лазер/энерго
     .suffix = Оружейная, Лазер/Энерго
     .desc = { ent-MarkerBase.desc }
+
+ent-GunSafeRifleSKM24 = сейф
+    .suffix = СКМ-24
+    .desc = { ent-GunSafeBaseSecure.desc }

@@ -224,3 +224,17 @@ ent-SunriseCratePirateCharon280mmSlug = ящик 280-мм болванок
     .desc = Содержит одну кинетическую болванку M381 CHARYBDIS калибра 280 мм.
 ent-SunriseCratePirateCharon280mmSubnuclear = ящик субъядерных болванок
     .desc = Содержит одну субъядерную болванку M381 CHARYBDIS калибра 280 мм.
+
+ent-CratePirateIK30 = ящик с IK-30
+    .desc = Содержит два лазерных карабина IK-30 и дополнительные боеприпасы.
+
+ent-CratePirateMagazineBatteryLr60 = ящик с магазинами LR-60
+    .desc = Содержит шесть больших лазерных магазинов.
+
+ent-CratePirateEVASuitBundle = набор эва-костюмов пиратов
+    .suffix = Заполнен, Санрайз
+    .desc = { ent-CratePiratePrivateSecure.desc }
+
+ent-CratePiratePrivateerBundle = набор фрилансера
+    .suffix = Заполнен, Санрайз
+    .desc = { ent-CratePiratePrivateSecure.desc }

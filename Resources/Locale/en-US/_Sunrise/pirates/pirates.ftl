@@ -180,3 +180,7 @@ ent-MobVulpkaninPirateScoonerOldReinforcement = pirate
 ent-RandomHumanoidOldScoonerReinforcement = scooner
 ent-RandomHumanoidScoonerReinforcement = scooner
 ent-VendingMachineBoozeSyndicatePirate = hacked Bruise-O-Mat
+
+uplink-pirate-radio-implanter-name = pirate radio implanter
+
+uplink-pirate-radio-implanter-desc = Implants access to the Pirate radio channel, allowing covert communication without a headset.

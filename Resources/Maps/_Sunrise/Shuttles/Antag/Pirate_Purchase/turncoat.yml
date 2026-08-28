@@ -1,9 +1,9 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 261.2.0
-  forkId: ""
-  forkVersion: ""
+  engineVersion: 271.1.0
+  forkId: sunrise_station
+  forkVersion: 987e102514c822b21908d4d05f9d9349d8143a7d
   time: 09/15/2025 00:02:14
   entityCount: 748
 maps: []
@@ -747,8 +747,6 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
-    - type: BecomesStation
-      id: Turncoat
     - type: ImplicitRoof
 - proto: AccordionInstrument
   entities:

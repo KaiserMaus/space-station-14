@@ -180,3 +180,7 @@ ent-MobVulpkaninPirateScoonerOldReinforcement = пират
 ent-RandomHumanoidOldScoonerReinforcement = скунер
 ent-RandomHumanoidScoonerReinforcement = скунер
 ent-VendingMachineBoozeSyndicatePirate = взломанный «Bruise-O-Mat»
+
+uplink-pirate-radio-implanter-name = пиратский радиоимплантер
+
+uplink-pirate-radio-implanter-desc = Вживляет доступ к пиратскому радиоканалу, позволяя скрытно общаться без гарнитуры.

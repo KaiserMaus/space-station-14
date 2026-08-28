@@ -146,3 +146,7 @@ ent-SpawnerSafeSMG = Armory Safe Spawner
 ent-SpawnerSafeEnergyGuns = Armory Safe Spawner
     .suffix = Armory, Laser/Energy
     .desc = { ent-MarkerBase.desc }
+
+ent-GunSafeRifleSKM24 = safe
+    .suffix = SKM-24
+    .desc = { ent-GunSafeBaseSecure.desc }

@@ -222,3 +222,20 @@ ent-SunriseCratePirateCharon280mmSlug = 280mm slug crate
     .desc = Contains one M381 CHARYBDIS 280mm kinetic slug.
 ent-SunriseCratePirateCharon280mmSubnuclear = subnuclear slug crate
     .desc = Contains one M381 CHARYBDIS 280mm subnuclear slug.
+
+ent-CratePirateIK30 = IK-30 crate
+    .desc = Contains two IK-30 laser carbines and additional ammunition.
+
+ent-CratePirateMagazineBatteryLr60 = LR-60 magazine crate
+    .desc = Contains six large laser magazines.
+
+ent-CratePirateEVASuitBundle = pirate EVA suit bundle
+    .suffix = Filled, Sunrise
+    .desc = { ent-CratePiratePrivateSecure.desc }
+
+ent-CratePiratePrivateerBundle = pirate privateer bundle
+    .suffix = Filled, Sunrise
+    .desc = { ent-CratePiratePrivateSecure.desc }
+
+ent-CratePirateMagazineChainGunImprovised = improvised chaingun crate
+    .desc = Contains six chaingun ammo drums loaded with improvised ammunition.

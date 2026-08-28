@@ -1,9 +1,9 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 267.3.0
-  forkId: ""
-  forkVersion: ""
+  engineVersion: 271.1.0
+  forkId: sunrise_station
+  forkVersion: 987e102514c822b21908d4d05f9d9349d8143a7d
   time: 06/27/2026 04:05:16
   entityCount: 631
 maps: []
@@ -36,7 +36,6 @@ entities:
       name: grid
     - type: Transform
       pos: -0.6171875,-0.5703125
-      parent: invalid
     - type: MapGrid
       chunks:
         0,0:
