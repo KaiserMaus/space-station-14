@@ -25,21 +25,9 @@ ent-SunriseAirlockExternalGlassPirateLocked = { ent-AirlockExternalGlassSyndicat
 ent-SunriseAirlockPirateRandomSpawner = pirate airlock spawner
     .desc = Randomly spawns a pirate airlock.
 
-ent-SunriseAirlockExternalPirateLocked = { ent-SunriseAirlockPirate }
-    .desc = { ent-SunriseAirlockPirate.desc }
-    .suffix = External, Pirate, Locked
-
-ent-SunriseAirlockExternalGlassShuttlePirateLocked = { ent-SunriseAirlockPirate }
-    .desc = { ent-SunriseAirlockPirate.desc }
-    .suffix = External, Docking, Glass, Pirate, Locked
-
 ent-SunriseAirlockExternalGlassPirateAccessLocked = { ent-AirlockExternalGlassSyndicateLocked }
     .desc = { ent-AirlockExternalGlassSyndicateLocked.desc }
     .suffix = External, Glass, Pirate Access, Locked
-
-ent-SunriseAirlockExternalShuttlePirateLocked = { ent-AirlockExternalShuttleSyndicateLocked }
-    .desc = { ent-AirlockExternalShuttleSyndicateLocked.desc }
-    .suffix = External, Docking, Pirate, Locked
 
 ent-SunriseAirlockExternalGlassShuttlePirateAccessLocked = { ent-AirlockExternalGlassShuttleSyndicateLocked }
     .desc = { ent-AirlockExternalGlassShuttleSyndicateLocked.desc }

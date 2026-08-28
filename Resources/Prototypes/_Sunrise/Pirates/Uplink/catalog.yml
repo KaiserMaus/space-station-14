@@ -438,14 +438,6 @@
   - UplinkPirateRangedWeaponry
 
 - type: listing
-  id: UplinkPirateMP38
-  productEntity: WeaponSubMachineGunMP38
-  cost:
-    Doubloon: 15
-  categories:
-  - UplinkPirateRangedWeaponry
-
-- type: listing
   id: UplinkPirate4034Sawn
   productEntity: WeaponShotgunTrenchgun4034Sawn
   cost:
@@ -2340,28 +2332,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 2
-
-- type: listing
-  id: UplinkPirateSuitBundle
-  productEntity: CratePirateEVASuitBundle
-  name: uplink-eva-bundle-name
-  description: uplink-eva-bundle-desc
-  icon: { sprite: /Textures/_Sunrise/Clothing/OuterClothing/Suits/pirateeva.rsi, state: icon }
-  cost:
-    Doubloon: 10
-  categories:
-  - UplinkPirateArmor
-
-- type: listing
-  id: UplinkPirateBundlePirateEva
-  productEntity: ClothingBackpackDuffelMilitaryBundlePirateEva
-  name: uplink-eva-pirate-bundle-name
-  description: uplink-eva-pirate-bundle-desc
-  icon: { sprite: /Textures/_Sunrise/Clothing/OuterClothing/Suits/pirateeva_armored.rsi, state: icon }
-  cost:
-    Doubloon: 5
-  categories:
-  - UplinkPirateArmor
 
 - type: listing
   id: UplinkPirateMessengerRandom

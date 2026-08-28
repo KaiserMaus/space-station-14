@@ -1,7 +1,5 @@
 ent-WeaponSniperDragunov = Dragunov
     .desc = { ent-BaseWeaponRifle.desc }
-ent-WeaponPistolFlintlockPirateMarker = marker flintlock pistol
-    .desc = A self-loading flintlock pistol that marks targets for pirate raiders.
 ent-WeaponRifleBR64 = BR-64
     .desc = { ent-BaseWeaponRifle.desc }
 ent-WeaponRifleBauer127 = SR-127 Bauer bolt action rifle

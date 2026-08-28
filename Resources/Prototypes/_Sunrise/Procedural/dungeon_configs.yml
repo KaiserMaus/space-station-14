@@ -83,7 +83,7 @@
   table: !type:GroupSelector
     children:
     - id: CableApcExtension
-    - id: AirlockSyndicatePirateLocked
+    - id: SunriseAirlockPirate
       weight: 5
     - id: SunriseAirlockPirateRandomSpawner
     - id: ScrapAirlock1
@@ -101,7 +101,7 @@
   table: !type:GroupSelector
     children:
     - id: CableApcExtension
-    - id: AirlockSyndicatePirateLocked
+    - id: SunriseAirlockPirate
     - id: SunriseAirlockPirateRandomSpawner
     - id: LandMineModular
       prob: 0.09

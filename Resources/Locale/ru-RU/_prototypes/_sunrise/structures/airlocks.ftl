@@ -26,21 +26,9 @@ ent-SunriseAirlockPirateRandomSpawner = спавнер пиратского шл
     .suffix = Только сторона Север-Юг
     .desc = Случайно создает пиратский шлюз.
 
-ent-SunriseAirlockExternalPirateLocked = { ent-SunriseAirlockPirate }
-    .desc = { ent-SunriseAirlockPirate.desc }
-    .suffix = Внешний, Пиратский, Закрыт
-
-ent-SunriseAirlockExternalGlassShuttlePirateLocked = { ent-SunriseAirlockPirate }
-    .desc = { ent-SunriseAirlockPirate.desc }
-    .suffix = Внешний, Стыковочный, Стеклянный, Пиратский, Закрыт
-
 ent-SunriseAirlockExternalGlassPirateAccessLocked = { ent-AirlockExternalGlassSyndicateLocked }
     .desc = { ent-AirlockExternalGlassSyndicateLocked.desc }
     .suffix = Внешний, Стеклянный, Пиратский доступ, Закрыт
-
-ent-SunriseAirlockExternalShuttlePirateLocked = { ent-AirlockExternalShuttleSyndicateLocked }
-    .desc = { ent-AirlockExternalShuttleSyndicateLocked.desc }
-    .suffix = Внешний, Стыковочный, Пиратский, Закрыт
 
 ent-SunriseAirlockExternalGlassShuttlePirateAccessLocked = { ent-AirlockExternalGlassShuttleSyndicateLocked }
     .desc = { ent-AirlockExternalGlassShuttleSyndicateLocked.desc }

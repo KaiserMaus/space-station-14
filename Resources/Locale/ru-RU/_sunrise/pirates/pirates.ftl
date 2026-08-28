@@ -20,8 +20,6 @@ name-format-pirate-crew = {$part0}
 
 cargo-account-pirate-name = Сокровищница космических пиратов
 cargo-account-pirate-code = SPH
-chat-radio-pirate = Пиратский
-
 pirateproduct-category-name-weapons = Оружие
 pirateproduct-category-name-armor = Броня
 pirateproduct-category-name-ammo = Боеприпасы
@@ -78,54 +76,10 @@ pirate-job-rank-title-2 = [color=yellow]Фрилансер[/color]
 pirate-job-rank-title-MAX = [color=gold]Барон[/color]
 pirate-job-board-radio-announce = Пиратский ранг повышен до [bold]{ $rank }[/bold]! На чёрном рынке появились новые товары.
 
-ent-ComputerCargoOrdersPirate = { pirate-computer-request-name }
-    .desc = { pirate-computer-request-description }
-ent-ComputerPirateShipyard = { pirate-computer-shipyard-name }
-    .desc = { pirate-computer-shipyard-description }
-ent-ComputerPalletConsolePirate = { pirate-computer-sale-name }
-    .desc = { pirate-computer-sale-description }
-ent-ComputerPirateBounty = { pirate-computer-bounty-name }
-    .desc = { pirate-computer-bounty-description }
-ent-FaxMachinePirate = { pirate-fax-name }
-ent-PlushieSharkPirate = { pirate-shark-plushie-name }
-    .desc = { pirate-shark-plushie-description }
-ent-PiratePowerSink = { pirate-power-sink-name }
-    .desc = { pirate-power-sink-description }
 ent-PiratePalletSell = { pirate-selling-pallet-name }
     .desc = { pirate-selling-pallet-description }
-ent-PirateRequestComputerCircuitboard = { pirate-request-computer-board-name }
-    .desc = { pirate-request-computer-board-description }
-ent-PirateSaleComputerCircuitboard = { pirate-sale-computer-board-name }
-    .desc = { pirate-sale-computer-board-description }
-ent-PirateBountyComputerCircuitboard = { pirate-bounty-computer-board-name }
-    .desc = { pirate-bounty-computer-board-description }
 ent-PirateShipyardComputerCircuitboard = { pirate-shipyard-computer-board-name }
     .desc = { pirate-shipyard-computer-board-description }
-ent-WeaponCapacitorRechargerPirateCircuitboard = { ent-WeaponCapacitorRechargerCircuitboard }
-    .desc = { pirate-recharger-board-description }
-ent-ShuttleGunPirateBombard = { shuttle-gun-pirate-bombard-name }
-    .desc = { shuttle-gun-pirate-bombard-description }
-ent-ShuttleGunLightRifleBase = { shuttle-gun-light-rifle-base-name }
-    .desc = { shuttle-gun-light-rifle-base-description }
-ent-ShuttleGunLightRifleImprovised = { shuttle-gun-light-rifle-improvised-name }
-    .desc = { shuttle-gun-light-rifle-improvised-description }
-ent-ShuttleGunLightRifleSP = { shuttle-gun-light-rifle-sp-name }
-    .desc = { shuttle-gun-light-rifle-sp-description }
-ent-ShuttleGunLightRifleFMJ = { shuttle-gun-light-rifle-fmj-name }
-    .desc = { shuttle-gun-light-rifle-fmj-description }
-ent-ShuttleGunLightRifleAP = { shuttle-gun-light-rifle-ap-name }
-    .desc = { shuttle-gun-light-rifle-ap-description }
-ent-ShuttleGunPirateCoveTurret = { shuttle-gun-light-rifle-cove-name }
-    .desc = { shuttle-gun-light-rifle-cove-description }
-ent-ShuttleGunLightRifleImprovisedFlatpack = { shuttle-gun-light-rifle-improvised-flatpack-name }
-    .desc = { shuttle-gun-light-rifle-improvised-flatpack-description }
-ent-ShuttleGunLightRifleSPFlatpack = { shuttle-gun-light-rifle-sp-flatpack-name }
-    .desc = { shuttle-gun-light-rifle-sp-flatpack-description }
-ent-ShuttleGunLightRifleFMJFlatpack = { shuttle-gun-light-rifle-fmj-flatpack-name }
-    .desc = { shuttle-gun-light-rifle-fmj-flatpack-description }
-ent-ShuttleGunLightRifleAPFlatpack = { shuttle-gun-light-rifle-ap-flatpack-name }
-    .desc = { shuttle-gun-light-rifle-ap-flatpack-description }
-
 pirate-computer-request-name = Пиратская карго-консоль
 pirate-computer-request-description = Используется пиратами для покупки новой добычи.
 pirate-computer-shipyard-name = Консоль пиратской верфи
@@ -174,13 +128,10 @@ shuttle-gun-light-rifle-fmj-flatpack-description = Плоская упаковк
 shuttle-gun-light-rifle-ap-flatpack-name = Плоская упаковка лёгкой баллистической турели (AP)
 shuttle-gun-light-rifle-ap-flatpack-description = Плоская упаковка для сборки лёгкой баллистической турели с бронебойными патронами.
 
-ent-CrateEmptyPirateSpawner = пустой спавнер пиратского ящика
 ent-MindRolePirateCorsair = роль пиратского корсара
 ent-MobVulpkaninPirateScoonerOldReinforcement = пират
 ent-RandomHumanoidOldScoonerReinforcement = скунер
 ent-RandomHumanoidScoonerReinforcement = скунер
-ent-VendingMachineBoozeSyndicatePirate = взломанный «Bruise-O-Mat»
-
 uplink-pirate-radio-implanter-name = пиратский радиоимплантер
 
 uplink-pirate-radio-implanter-desc = Вживляет доступ к пиратскому радиоканалу, позволяя скрытно общаться без гарнитуры.

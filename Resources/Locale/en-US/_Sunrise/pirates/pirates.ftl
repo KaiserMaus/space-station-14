@@ -20,8 +20,6 @@ name-format-pirate-crew = {$part0}
 
 cargo-account-pirate-name = Space Pirate Hoard
 cargo-account-pirate-code = SPH
-chat-radio-pirate = Pirate
-
 pirateproduct-category-name-weapons = Weapons
 pirateproduct-category-name-armor = Armor
 pirateproduct-category-name-ammo = Ammo
@@ -78,54 +76,10 @@ pirate-job-rank-title-2 = [color=yellow]Freelancer[/color]
 pirate-job-rank-title-MAX = [color=gold]Baron[/color]
 pirate-job-board-radio-announce = Pirate rank increased to [bold]{$rank}[/bold]! New black market stock is available.
 
-ent-ComputerCargoOrdersPirate = { pirate-computer-request-name }
-    .desc = { pirate-computer-request-description }
-ent-ComputerPirateShipyard = { pirate-computer-shipyard-name }
-    .desc = { pirate-computer-shipyard-description }
-ent-ComputerPalletConsolePirate = { pirate-computer-sale-name }
-    .desc = { pirate-computer-sale-description }
-ent-ComputerPirateBounty = { pirate-computer-bounty-name }
-    .desc = { pirate-computer-bounty-description }
-ent-FaxMachinePirate = { pirate-fax-name }
-ent-PlushieSharkPirate = { pirate-shark-plushie-name }
-    .desc = { pirate-shark-plushie-description }
-ent-PiratePowerSink = { pirate-power-sink-name }
-    .desc = { pirate-power-sink-description }
 ent-PiratePalletSell = { pirate-selling-pallet-name }
     .desc = { pirate-selling-pallet-description }
-ent-PirateRequestComputerCircuitboard = { pirate-request-computer-board-name }
-    .desc = { pirate-request-computer-board-description }
-ent-PirateSaleComputerCircuitboard = { pirate-sale-computer-board-name }
-    .desc = { pirate-sale-computer-board-description }
-ent-PirateBountyComputerCircuitboard = { pirate-bounty-computer-board-name }
-    .desc = { pirate-bounty-computer-board-description }
 ent-PirateShipyardComputerCircuitboard = { pirate-shipyard-computer-board-name }
     .desc = { pirate-shipyard-computer-board-description }
-ent-WeaponCapacitorRechargerPirateCircuitboard = { ent-WeaponCapacitorRechargerCircuitboard }
-    .desc = { pirate-recharger-board-description }
-ent-ShuttleGunPirateBombard = { shuttle-gun-pirate-bombard-name }
-    .desc = { shuttle-gun-pirate-bombard-description }
-ent-ShuttleGunLightRifleBase = { shuttle-gun-light-rifle-base-name }
-    .desc = { shuttle-gun-light-rifle-base-description }
-ent-ShuttleGunLightRifleImprovised = { shuttle-gun-light-rifle-improvised-name }
-    .desc = { shuttle-gun-light-rifle-improvised-description }
-ent-ShuttleGunLightRifleSP = { shuttle-gun-light-rifle-sp-name }
-    .desc = { shuttle-gun-light-rifle-sp-description }
-ent-ShuttleGunLightRifleFMJ = { shuttle-gun-light-rifle-fmj-name }
-    .desc = { shuttle-gun-light-rifle-fmj-description }
-ent-ShuttleGunLightRifleAP = { shuttle-gun-light-rifle-ap-name }
-    .desc = { shuttle-gun-light-rifle-ap-description }
-ent-ShuttleGunPirateCoveTurret = { shuttle-gun-light-rifle-cove-name }
-    .desc = { shuttle-gun-light-rifle-cove-description }
-ent-ShuttleGunLightRifleImprovisedFlatpack = { shuttle-gun-light-rifle-improvised-flatpack-name }
-    .desc = { shuttle-gun-light-rifle-improvised-flatpack-description }
-ent-ShuttleGunLightRifleSPFlatpack = { shuttle-gun-light-rifle-sp-flatpack-name }
-    .desc = { shuttle-gun-light-rifle-sp-flatpack-description }
-ent-ShuttleGunLightRifleFMJFlatpack = { shuttle-gun-light-rifle-fmj-flatpack-name }
-    .desc = { shuttle-gun-light-rifle-fmj-flatpack-description }
-ent-ShuttleGunLightRifleAPFlatpack = { shuttle-gun-light-rifle-ap-flatpack-name }
-    .desc = { shuttle-gun-light-rifle-ap-flatpack-description }
-
 pirate-computer-request-name = Pirate cargo computer
 pirate-computer-request-description = Used by pirates to purchase new booty.
 pirate-computer-shipyard-name = Pirate shipyard console
@@ -174,13 +128,10 @@ shuttle-gun-light-rifle-fmj-flatpack-description = A flatpack used to construct 
 shuttle-gun-light-rifle-ap-flatpack-name = Light ballistic turret flatpack (AP)
 shuttle-gun-light-rifle-ap-flatpack-description = A flatpack used to construct a light ballistic turret with armor-piercing ammunition.
 
-ent-CrateEmptyPirateSpawner = empty pirate crate spawner
 ent-MindRolePirateCorsair = pirate corsair role
 ent-MobVulpkaninPirateScoonerOldReinforcement = pirate
 ent-RandomHumanoidOldScoonerReinforcement = scooner
 ent-RandomHumanoidScoonerReinforcement = scooner
-ent-VendingMachineBoozeSyndicatePirate = hacked Bruise-O-Mat
-
 uplink-pirate-radio-implanter-name = pirate radio implanter
 
 uplink-pirate-radio-implanter-desc = Implants access to the Pirate radio channel, allowing covert communication without a headset.
