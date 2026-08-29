@@ -1182,6 +1182,6 @@
   parent: MechMaulerSyndieBattery
   suffix: Battery, Filled
   components:
-  - type: Mech
-    startingEquipment:
-      - WeaponMechCombatMissileRack6
+  # - type: Mech
+  #   startingEquipment:
+  #     - WeaponMechCombatMissileRack6
