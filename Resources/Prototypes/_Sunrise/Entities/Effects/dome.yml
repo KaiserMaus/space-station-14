@@ -276,3 +276,6 @@
     radius: 5
     power: 10
     color: "#64b9de"
+  - type: Tag
+    tags:
+    - HideContextMenu

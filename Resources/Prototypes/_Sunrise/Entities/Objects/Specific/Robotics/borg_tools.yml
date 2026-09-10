@@ -73,6 +73,7 @@
     damageEnergyDraw: 1
     domePrototype: SunriseEnergyDomeSecurityBorg
   - type: PowerCellDraw
+    enabled: false
     drawRate: 5
     useCharge: 0
   - type: UseDelay
