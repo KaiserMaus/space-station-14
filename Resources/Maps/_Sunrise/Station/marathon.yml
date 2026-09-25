@@ -231740,6 +231740,11 @@ entities:
     - type: Transform
       pos: -21.5,53.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal:
+      - - Bar
+      access:
+      - - HeadOfSecurity
 - proto: VendingMachineCargoDrobe
   entities:
   - uid: 30350
