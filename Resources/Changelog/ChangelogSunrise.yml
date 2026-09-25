@@ -4910,3 +4910,10 @@
   media:
   - url: https://github.com/user-attachments/assets/d0e7ea3e-f0f1-4038-8e66-793198e70e3b
     description: Станция Оазис с новыми шаттлами.
+- author: Foxtrot_Uniform
+  time: '2026-09-25T11:21:18.0000000+00:00'
+  changes:
+  - type: Tweak
+    message: ГСБ теперь имеет доступ к алкоматам, которые находятся у него в кабинете.
+  id: 2034
+  url: https://github.com/makura-games/sunrise-station/pull/4823
