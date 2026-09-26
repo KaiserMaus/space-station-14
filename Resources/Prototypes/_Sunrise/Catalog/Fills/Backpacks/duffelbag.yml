@@ -205,7 +205,7 @@
       storagebase: !type:AllSelector
         children:
         - id: WeaponShotgunCycler
-        - id: SpeedLoaderShellShotgun
+        - id: SpeedLoaderShotgunBuck
           amount: 2
         - id: SpeedLoaderShotgunSlug
           amount: 2
