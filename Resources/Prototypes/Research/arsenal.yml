@@ -83,6 +83,7 @@
   - WeaponMechCombatDisabler
   - MagazinePistolSubMachineGunTopMountedRubber
   - MagazinePistolSubMachineGunRubber
+  - SpeedLoaderShotgunBeanbag
   # Sunrise-End
   radioChannels: # Sunrise-Add
   - Security
@@ -135,6 +136,9 @@
   - VestSecUpgradePlate # Sunrise-Add
   - VestSecUpgradeStab # Sunrise-Add
   - VestSecUpgradeHeat # Sunrise-Add
+  - SpeedLoaderShotgunBuck # Sunrise-Add
+  - SpeedLoaderShotgunBirdshot # Sunrise-Add
+  - SpeedLoaderShotgunSlug # Sunrise-Add
   radioChannels: # Sunrise-Add
   - Security
 

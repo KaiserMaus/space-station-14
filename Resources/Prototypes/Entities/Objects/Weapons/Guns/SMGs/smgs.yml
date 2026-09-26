@@ -5,6 +5,7 @@
   description: A rooty tooty point and shooty.
   abstract: true
   components:
+  - type: SuppressStoppingPower # Sunrise-Add - ПП не применяют останавливающее действие.
   - type: RestrictByUserTag
     doestContain:
     - Abductor
@@ -149,6 +150,7 @@
   parent: BaseItem
   description: A burst-fire C-20r submachine gun for use by cyborgs. Creates .35 caliber ammo on the fly from an internal ammo fabricator, which slowly self-charges.
   components:
+  - type: SuppressStoppingPower # Sunrise-Add - ПП не применяют останавливающее действие.
   - type: Gun
     minAngle: 2
     maxAngle: 16

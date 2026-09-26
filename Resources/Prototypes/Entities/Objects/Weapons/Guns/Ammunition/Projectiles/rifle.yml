@@ -21,7 +21,7 @@
         Blunt: 2
 
 - type: entity
-  parent: BaseBulletIncendiary
+  parent: [ BulletStoppingPowerWeak, BaseBulletIncendiary ] # Sunrise-Edit
   id: BulletRifleIncendiary
   categories: [ HideSpawnMenu ]
   name: bullet (.20 rifle incendiary)

@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseBullet
+  parent: [ BulletStoppingPowerStrong, BaseBullet ] # Sunrise-Edit
   id: BulletMagnum
   categories: [ HideSpawnMenu ]
   name: bullet (.45 magnum)
@@ -21,7 +21,7 @@
         Blunt: 1
 
 - type: entity
-  parent: BaseBulletIncendiary
+  parent: [ BulletStoppingPowerStrong, BaseBulletIncendiary ] # Sunrise-Edit
   id: BulletMagnumIncendiary
   categories: [ HideSpawnMenu ]
   name: bullet (.45 magnum incendiary)

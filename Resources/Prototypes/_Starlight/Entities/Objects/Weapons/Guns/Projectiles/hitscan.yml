@@ -27,7 +27,7 @@
 
 - type: entity
   id: AntiMaterielBulletTrace
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerAntiMateriel, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -36,8 +36,6 @@
       types:
         Piercing: 75
         Structural: 113
-  - type: StaminaDamageOnCollide
-    damage: 35
   - type: ProjectilePierce
     chance: 0.95
     pierceLevel: Rock
@@ -62,7 +60,7 @@
 
 - type: entity
   id: BulletMagnumTraceSP
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerStrongStamina, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -70,8 +68,6 @@
     damage:
       types:
         Piercing: 35
-  - type: StaminaDamageOnCollide
-    damage: 15
   - type: ProjectilePierce
     chance: 0.40
     deviation: 0.05
@@ -94,7 +90,7 @@
 
 - type: entity
   id: BulletMagnumTraceImprovised
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerStrongStamina, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -108,8 +104,6 @@
     deviation: 0.05
   - type: ProjectileRicochet
     chance: 0.30
-  - type: StaminaDamageOnCollide
-    damage: 12
   - type: HitscanBasicVisuals
     muzzleFlash:
       sprite: _Starlight/Objects/Weapons/Guns/Projectiles/projectiles.rsi
@@ -127,7 +121,7 @@
 
 - type: entity
   id: BulletMagnumTraceHP
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerStrongStamina, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -137,8 +131,6 @@
         Piercing: 35
         Blunt: 5
         Slash: 5
-  - type: StaminaDamageOnCollide
-    damage: 22
   - type: ProjectilePierce
     chance: 0.03
     deviation: 0.05
@@ -147,7 +139,7 @@
 
 - type: entity
   id: BulletMagnumTraceFMJ
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerStrongHalf, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -155,8 +147,6 @@
     damage:
       types:
         Piercing: 25 #- 30%
-  - type: StaminaDamageOnCollide
-    damage: 6
   - type: ProjectilePierce
     chance: 0.69
     deviation: 0.05
@@ -180,7 +170,7 @@
 
 - type: entity
   id: BulletMagnumTracePractice
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerStrong, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -209,7 +199,7 @@
 
 - type: entity
   id: BulletMagnumTraceUranium
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerStrong, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -273,7 +263,7 @@
 
 - type: entity
   id: BulletPistolTraceSP
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerMedium, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -281,8 +271,6 @@
     damage:
       types:
         Piercing: 16
-  - type: StaminaDamageOnCollide
-    damage: 3
   - type: ProjectilePierce
     chance: 0.40
     deviation: 0.2
@@ -296,7 +284,7 @@
 
 - type: entity
   id: BulletPistolTraceImprovised
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerMedium, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -305,8 +293,6 @@
       types:
         Piercing: 7
         Blunt: 7
-  - type: StaminaDamageOnCollide
-    damage: 5
   - type: ProjectilePierce
     chance: 0.25
     deviation: 0.2
@@ -320,7 +306,7 @@
 
 - type: entity
   id: BulletPistolTraceHP
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerMedium, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -330,8 +316,6 @@
         Piercing: 17
         Blunt: 2
         Slash: 2
-  - type: StaminaDamageOnCollide
-    damage: 8
   - type: ProjectilePierce
     chance: 0.03
     deviation: 0.2
@@ -340,7 +324,7 @@
 
 - type: entity
   id: BulletPistolTraceFMJ
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerMediumHalf, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -362,7 +346,7 @@
 
 - type: entity
   id: BulletPistolTracePractice
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerMedium, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -382,7 +366,7 @@
 
 - type: entity
   id: BulletPistolTraceUranium
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerMedium, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -426,7 +410,7 @@
 
 - type: entity
   id: BulletPistolTrace40SP
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerIntermediateStamina, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -434,8 +418,6 @@
     damage:
       types:
         Piercing: 20
-  - type: StaminaDamageOnCollide
-    damage: 16
   - type: ProjectilePierce
     chance: 0.30
     deviation: 0.15
@@ -449,7 +431,7 @@
 
 - type: entity
   id: BulletPistolTrace40HP
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerIntermediateStamina, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -459,8 +441,6 @@
         Piercing: 20
         Blunt: 3
         Slash: 3
-  - type: StaminaDamageOnCollide
-    damage: 22
   - type: ProjectilePierce
     chance: 0.02
     deviation: 0.15
@@ -474,7 +454,7 @@
 
 - type: entity
   id: BulletPistolTrace40FMJ
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerIntermediateHalf, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -482,8 +462,6 @@
     damage:
       types:
         Piercing: 13 #- 35%
-  - type: StaminaDamageOnCollide
-    damage: 8
   - type: ProjectilePierce
     chance: 0.55
     deviation: 0.15
@@ -506,8 +484,6 @@
     damage:
       types:
         Piercing: 13 #- 35%
-  - type: StaminaDamageOnCollide
-    damage: 8
   - type: ProjectilePierce
     chance: 0.63
     deviation: 0.15
@@ -526,7 +502,7 @@
 
 - type: entity
   id: BulletHeavyRifleTrace
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerWeak, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -536,7 +512,7 @@
 
 - type: entity
   id: BulletMinigunTrace
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerWeak, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -544,8 +520,6 @@
     damage:
       types:
         Piercing: 5
-  - type: StaminaDamageOnCollide
-    damage: 3
   - type: ProjectilePierce
     chance: 0.6
     deviation: 0.05
@@ -557,7 +531,7 @@
 
 - type: entity
   id: BulletLightRifleTraceSP
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerMedium, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -565,8 +539,6 @@
     damage:
       types:
         Piercing: 19
-  - type: StaminaDamageOnCollide
-    damage: 6
   - type: ProjectilePierce
     chance: 0.40
     deviation: 0.05
@@ -581,7 +553,7 @@
 
 - type: entity
   id: BulletLightRifleTraceImprovised
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerMedium, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -590,8 +562,6 @@
       types:
         Piercing: 13
         Blunt: 6
-  - type: StaminaDamageOnCollide
-    damage: 8
   - type: ProjectilePierce
     chance: 0.20
     deviation: 0.05
@@ -606,7 +576,7 @@
 
 - type: entity
   id: BulletLightRifleTraceFMJ
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerMediumHalf, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -650,7 +620,7 @@
 
 - type: entity
   id: BulletLightRifleTracePractice
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerMedium, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -670,7 +640,7 @@
 
 - type: entity
   id: BulletLightRifleTraceUranium
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerMedium, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -694,7 +664,7 @@
 
 - type: entity
   id: BulletRifleTraceSP
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerWeak, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -702,8 +672,6 @@
     damage:
       types:
         Piercing: 17
-  - type: StaminaDamageOnCollide
-    damage: 4
   - type: ProjectilePierce
     chance: 0.40
     pierceLevel: Wood
@@ -717,7 +685,7 @@
 
 - type: entity
   id: BulletRifleTraceImprovised
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerWeak, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -726,8 +694,6 @@
       types:
         Piercing: 9
         Blunt: 3
-  - type: StaminaDamageOnCollide
-    damage: 3
   - type: ProjectilePierce
     chance: 0.6
     deviation: 0.08
@@ -742,7 +708,7 @@
 
 - type: entity
   id: BulletRifleTraceFMJ
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerWeakHalf, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -784,7 +750,7 @@
 
 - type: entity
   id: BulletRifleTracePractice
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerWeak, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -803,7 +769,7 @@
 
 - type: entity
   id: BulletRifleTraceUranium
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerWeak, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -825,15 +791,13 @@
 
 - type: entity
   id: PelletShotgunBeanbagTrace
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerStrongStamina, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
     damage:
       types:
         Blunt: 10
-  - type: StaminaDamageOnCollide
-    damage: 35
   - type: ProjectilePierce
     chance: 0
   - type: HitscanBasicVisuals
@@ -844,7 +808,7 @@
 
 - type: entity
   id: PelletShotgunSlugTrace
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerStrong, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -862,7 +826,7 @@
 
 - type: entity
   id: PelletShotgunTrace
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerWeak, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -871,8 +835,6 @@
       types:
         Piercing: 5
         Structural: 5
-  - type: StaminaDamageOnCollide # Sunrise-add
-    damage: 2
   - type: ProjectilePierce
     chance: 0.03
   - type: ProjectileRicochet # Sunrise-edit
@@ -895,15 +857,13 @@
 
 - type: entity
   id: PelletShotgunPracticeTrace
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerWeak, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
     damage:
       types:
         Blunt: 1
-  - type: StaminaDamageOnCollide # Sunrise-add
-    damage: 1
   - type: ProjectilePierce
     chance: 0
   - type: HitscanBasicVisuals
@@ -924,7 +884,7 @@
 
 - type: entity
   id: PelletShotgunImprovisedTrace
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerWeak, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -933,8 +893,6 @@
       types:
         Piercing: 2
         Slash: 2
-  - type: StaminaDamageOnCollide # Sunrise-add
-    damage: 2
   - type: ProjectilePierce
     chance: 0
   - type: ProjectileRicochet # Sunrise-edit
@@ -957,7 +915,7 @@
 
 - type: entity
   id: PelletShotgunUraniumTrace
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerWeak, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -965,8 +923,6 @@
       types:
         Radiation: 2
         Piercing: 3
-  - type: StaminaDamageOnCollide # Sunrise-add
-    damage: 2
   - type: ProjectilePierce
     chance: 0.05
     pierceLevel: HardenedMetal
@@ -990,7 +946,7 @@
 
 - type: entity
   id: PelletShotgunFlechetteTrace
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerWeak, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -999,8 +955,6 @@
       types:
         Piercing: 4
         Structural: 4
-  - type: StaminaDamageOnCollide
-    damage: 3
   - type: ProjectilePierce
     chance: 0.7
     pierceLevel: HardenedMetal
@@ -1024,7 +978,7 @@
 
 - type: entity
   id: PelletShotgunBirdshotTrace
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerWeak, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -1052,7 +1006,7 @@
 
 - type: entity
   id: PelletShotgunBreachTrace
-  parent: BulletTrace
+  parent: [ BulletStoppingPowerWeak, BulletTrace ]
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -1060,8 +1014,6 @@
       types:
         Piercing: 5
         Structural: 20
-  - type: StaminaDamageOnCollide # Sunrise-add
-    damage: 3
   - type: ProjectilePierce
     chance: 0.03
   - type: HitscanBasicVisuals

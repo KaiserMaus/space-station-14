@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseBullet
+  parent: [ BulletStoppingPowerWeak, BaseBullet ] # Sunrise-Edit
   id: BulletCaselessRifle
   categories: [ HideSpawnMenu ]
   name: bullet (.25 caseless)
@@ -10,7 +10,7 @@
         Piercing: 19
 
 - type: entity
-  parent: BaseBulletPractice
+  parent: [ BulletStoppingPowerWeak, BaseBulletPractice ] # Sunrise-Edit
   id: BulletCaselessRiflePractice
   categories: [ HideSpawnMenu ]
   name: bullet (.25 caseless practice)

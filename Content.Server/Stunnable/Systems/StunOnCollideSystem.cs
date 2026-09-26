@@ -1,7 +1,10 @@
+using Content.Server._Sunrise.Stunnable.Components;
 using Content.Server.Stunnable.Components;
 using Content.Shared.Movement.Systems;
-using JetBrains.Annotations;
+using Content.Shared.Projectiles;
 using Content.Shared.Throwing;
+using Content.Shared.Weapons.Hitscan.Events;
+using JetBrains.Annotations;
 using Robust.Shared.Physics.Events;
 
 namespace Content.Server.Stunnable.Systems;
@@ -18,10 +21,21 @@ internal sealed partial class StunOnCollideSystem : EntitySystem
 
         SubscribeLocalEvent<StunOnCollideComponent, StartCollideEvent>(HandleCollide);
         SubscribeLocalEvent<StunOnCollideComponent, ThrowDoHitEvent>(HandleThrow);
+        // Sunrise-Edit - поддержка останавливающего действия для hitscan-боеприпасов.
+        SubscribeLocalEvent<StunOnCollideComponent, HitscanRaycastFiredEvent>(HandleHitscan);
     }
 
     private void TryDoCollideStun(Entity<StunOnCollideComponent> ent, EntityUid target)
     {
+        // Sunrise edit start - ПП не должны применять останавливающее действие.
+        if (TryComp<ProjectileComponent>(ent, out var projectile) &&
+            projectile.Weapon is { } weapon &&
+            HasComp<SuppressStoppingPowerComponent>(weapon))
+        {
+            return;
+        }
+        // Sunrise edit end
+
         _stunSystem.TryKnockdown(target, ent.Comp.KnockdownAmount, ent.Comp.Refresh, ent.Comp.AutoStand, ent.Comp.Drop, true);
 
         if (ent.Comp.Refresh)
@@ -61,4 +75,17 @@ internal sealed partial class StunOnCollideSystem : EntitySystem
     {
         TryDoCollideStun(ent, args.Target);
     }
+
+    // Sunrise added start - применение останавливающего действия при hitscan-попадании.
+    private void HandleHitscan(Entity<StunOnCollideComponent> ent, ref HitscanRaycastFiredEvent args)
+    {
+        if (args.Data.HitEntity is not { } target ||
+            HasComp<SuppressStoppingPowerComponent>(args.Data.Gun))
+        {
+            return;
+        }
+
+        TryDoCollideStun(ent, target);
+    }
+    // Sunrise added end
 }
