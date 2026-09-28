@@ -1,7 +1,7 @@
 using Content.Server.Stunnable.Components;
 using Content.Shared.Movement.Systems;
-using Content.Shared.Throwing;
 using JetBrains.Annotations;
+using Content.Shared.Throwing;
 using Robust.Shared.Physics.Events;
 
 namespace Content.Server.Stunnable.Systems;
@@ -61,5 +61,4 @@ internal sealed partial class StunOnCollideSystem : EntitySystem
     {
         TryDoCollideStun(ent, args.Target);
     }
-
 }
