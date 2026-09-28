@@ -1,8 +1,11 @@
-ent-WeaponLightMachineGunMG60 = MG-60
+ent-WeaponLightMachineGunMG60 = mG-60
     .desc = { ent-BaseWeaponLightMachineGun.desc }
-ent-WeaponLightMachineGunRPD = RPD
+ent-WeaponLightMachineGunRPD = rPD
     .desc = { ent-BaseWeaponLightMachineGun.desc }
-ent-WeaponMachineGunMG42 = MG-342
+ent-WeaponMachineGunMG42 = mG-342
     .desc = { ent-BaseWeaponLightMachineGun.desc }
 ent-SunriseWeaponLightMachineGunL6M = L6M COW
-    .desc = The name stands for “L6 Mounted Cyborg-Operated Weapon”. An L6 SAW adapted for cyborg use while retaining its standard magazine-fed mechanism.
+    .desc = The name stands for L6 Mounted Cyborg-Operated Weapon. An L6 SAW adapted for cyborg use while retaining its standard magazine-fed mechanism.
+ent-WeaponLightMachineGunMG60Empty = { ent-WeaponLightMachineGunMG60 }
+    .suffix = Empty
+    .desc = { ent-WeaponLightMachineGunMG60.desc }
