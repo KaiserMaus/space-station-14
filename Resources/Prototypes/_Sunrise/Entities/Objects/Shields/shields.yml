@@ -203,6 +203,7 @@
           Piercing: 1
     - type: Appearance
     - type: Damageable
+    - type: Injurable
       damageContainer: Shield
     - type: StaticPrice
       price: 1500
@@ -323,6 +324,7 @@
           Piercing: 1
     - type: Appearance
     - type: Damageable
+    - type: Injurable
       damageContainer: Shield
     - type: ExaminableDamage
       messages: EnergyShieldMessages
