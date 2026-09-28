@@ -40,6 +40,7 @@
     enabled: false
   - type: Damageable
     damageModifierSet: Metallic
+  - type: Injurable
   - type: Destructible
     thresholds:
     - trigger:
