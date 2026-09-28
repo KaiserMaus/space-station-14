@@ -290,9 +290,6 @@
     - RifleHeavyMagazineIncendiary
     - RifleHeavyMagazineUranium
   # Shotgun
-    - SpeedLoaderShotgunBuck
-    - SpeedLoaderShotgunBirdshot
-    - SpeedLoaderShotgunSlug
     - SpeedLoaderShotgunBeanbag
     - SpeedLoaderShotgunIncendiary
     - SpeedLoaderShotgunUranium
