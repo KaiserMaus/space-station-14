@@ -60,7 +60,7 @@
       color: white
     - type: ItemTogglePointLight
     - type: Reflect
-      reflectProb: 0.75
+      reflectProb: 0.95
       reflects:
         - Energy
     - type: Blocking
@@ -122,8 +122,8 @@
   parent: [BaseItem, BaseCentcommContraband ]
   id: SunriseEnergyShieldERT
   name: prototype energy shield
-  suffix: self-recharged
-  description: high cost prototype of security energy shield, that gained to NanoTrasen Emergency Response Team. That experimenal shield can recharge itself but still can be destroyed after several rechage-disrecharge loop.
+  suffix: Self-Recharging, ERT
+  description: A high-cost prototype of a security energy shield issued to NanoTrasen emergency response teams. It recharges itself, but can still break after several active charging and discharging cycles.
   components:
     - type: ItemToggle
       soundActivate:
@@ -243,7 +243,7 @@
   parent: [BaseItem, BaseSecurityContraband ]
   id: SunriseEnergyShieldSec
   name: security energy shield
-  description: experimental adaptation of security holo projector hardlight tech technology for creating energy shield, that when folded, can even fit in your pocket.
+  description: An experimental adaptation of security hard-light holoprojector technology. When folded, it can fit in a pocket.
   components:
     - type: ItemToggle
       soundActivate:

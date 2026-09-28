@@ -4,7 +4,7 @@ ent-SunriseEnergyShield = experimental energy shield
 
 ent-SunriseEnergyShieldERT = prototype energy shield
     .desc = A high-cost prototype of a security energy shield issued to NanoTrasen emergency response teams. It recharges itself, but can still break after several active charging and discharging cycles.
-    .suffix = Self-Recharging
+    .suffix = Self-Recharging, ERT
 
 ent-SunriseEnergyShieldSec = security energy shield
     .desc = An experimental adaptation of security hard-light holoprojector technology. When folded, it can fit in a pocket.
