@@ -814,7 +814,7 @@
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: adv-chem-module }
 
-# Модули Синдиката, открываемые через EMAG
+# Syndi modules wich unloks with EMAG-iteration Lathe
 
 - type: entity
   id: SunriseBorgModuleL6M
