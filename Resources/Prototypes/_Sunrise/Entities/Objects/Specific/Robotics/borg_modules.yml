@@ -363,23 +363,6 @@
     icon: { sprite: _Sunrise/Interface/Actions/actions_borg.rsi, state: xenoborg-laser4-module }
 
 - type: entity
-  parent: [ BaseXenoborgModuleHeavy, BaseProviderBorgModule, BaseXenoborgContraband ]
-  id: XenoborgModuleTurboLaser
-  name: turbo-laser xenoborg module
-  description: Module with a heavy machinegun laser.
-  components:
-  - type: Sprite
-    layers:
-    - state: xenoborg_heavy
-    - state: icon-combat
-      sprite: _Sunrise/Objects/Specific/Robotics/borgmodule.rsi
-  - type: ItemBorgModule
-    hands:
-    - item: XenoborgLaserMinigun
-  - type: BorgModuleIcon
-    icon: { sprite: _Sunrise/Interface/Actions/actions_borg.rsi, state: xenoborg-laser3-module }
-
-- type: entity
   parent: XenoborgModuleHeavyLaser
   id: XenoborgModuleTemperature
   name: temperature xenoborg module
@@ -732,7 +715,7 @@
     - item: HypoBorgSaboteurSyndicate
     - item: CloakingDevice
     - item: RadioJammerSyndicateBorg
-    - item: ChameleonProjector
+    - item: ChameleonProjectorNoBattery
 
 - type: entity
   id: BorgModuleSyndicatePenetration
@@ -814,7 +797,7 @@
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: adv-chem-module }
 
-# Модули Синдиката, открываемые через EMAG
+# Syndi modules wich unloks with EMAG-iteration Lathe
 
 - type: entity
   id: SunriseBorgModuleL6M
@@ -959,7 +942,7 @@
     - state: icon-syndicate
   - type: ItemBorgModule
     hands:
-    - item: ChameleonProjector
+    - item: ChameleonProjectorNoBattery
     - item: PinpointerSyndicateNuclear
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-projector-module }
