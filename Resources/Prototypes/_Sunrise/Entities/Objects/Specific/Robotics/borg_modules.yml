@@ -363,23 +363,6 @@
     icon: { sprite: _Sunrise/Interface/Actions/actions_borg.rsi, state: xenoborg-laser4-module }
 
 - type: entity
-  parent: [ BaseXenoborgModuleHeavy, BaseProviderBorgModule, BaseXenoborgContraband ]
-  id: XenoborgModuleTurboLaser
-  name: turbo-laser xenoborg module
-  description: Module with a heavy machinegun laser.
-  components:
-  - type: Sprite
-    layers:
-    - state: xenoborg_heavy
-    - state: icon-combat
-      sprite: _Sunrise/Objects/Specific/Robotics/borgmodule.rsi
-  - type: ItemBorgModule
-    hands:
-    - item: XenoborgLaserMinigun
-  - type: BorgModuleIcon
-    icon: { sprite: _Sunrise/Interface/Actions/actions_borg.rsi, state: xenoborg-laser3-module }
-
-- type: entity
   parent: XenoborgModuleHeavyLaser
   id: XenoborgModuleTemperature
   name: temperature xenoborg module
