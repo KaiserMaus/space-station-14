@@ -8,6 +8,8 @@
   content:
   - WeaponMechCombatMG
   - WeaponMechCombatMissileRack6
+  - WeaponMechCombatTeslaCannon
+  - WeaponMechChainSword
   - ClothingOuterHardsuitSyndie
   - ClothingEyesHudSyndicateMech
   - SunrisePortableRechargerPowerCage
