@@ -194,11 +194,11 @@
   id: Durand
   name: research-technology-durand
   icon:
-    sprite: Objects/Specific/Mech/durand.rsi
+    sprite: _Sunrise/Objects/Specific/Mech/durand.rsi
     state: base
   discipline: Arsenal
-  tier: 3
-  cost: 16000
+  tier: 2
+  cost: 15000
   recipeUnlocks:
   - DurandHarness
   - DurandArmor
@@ -215,6 +215,7 @@
   - PowerCageHigh
   technologyPrerequisites:
   - Gygax
+  - EnergyBarriers
   radioChannels:
   - Security
 
@@ -225,12 +226,13 @@
     sprite: _Sunrise/Objects/Weapons/Guns/Battery/ion_rifle.rsi
     state: base
   discipline: Arsenal
-  tier: 3
-  cost: 15000
+  tier: 2
+  cost: 10000
   recipeUnlocks:
   - WeaponIonCarbine
+  - WeaponMechCombatIon
   technologyPrerequisites:
-  - PortableMicrofusionWeaponry
+  - Gygax
   - ThermalWeaponry
   radioChannels:
   - Security
@@ -247,7 +249,6 @@
 #  recipeUnlocks:
 #  - BaseMagazinePistolCaselessRifleExtended
 #  - MagazinePPSH41Extended
-#  - MagazineMP5Extended
 #  - MagazineMP7Extended
 #  - MagazineRifleExtended
 #  - MagazineDragunovExtended
@@ -289,7 +290,6 @@
   recipeUnlocks:
   - VestSecUpgradeBulletHeavy
   - VestSecUpgradeWeb
-  - LecterMk3Upgrade
   technologyPrerequisites:
   - CombatEquipment
   radioChannels:
