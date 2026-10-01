@@ -109992,6 +109992,17 @@ entities:
     - type: Transform
       pos: -18.507805,14.554109
       parent: 2
+- proto: ClothingOuterVestWebSec
+  entities:
+  - uid: 13746
+    components:
+    - type: Transform
+      parent: 13740
+    - type: Clothing
+      inSlot: outerClothing
+      inSlotFlag: OUTERCLOTHING
+    - type: Physics
+      canCollide: False
 - proto: ClothingOuterWinterChef
   entities:
   - uid: 14043
