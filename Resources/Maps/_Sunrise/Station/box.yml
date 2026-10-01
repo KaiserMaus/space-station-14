@@ -105374,6 +105374,8 @@ entities:
     - type: Transform
       pos: 21.5,-20.5
       parent: 2
+- proto: ChemDispenserEmpty
+  entities:
   - uid: 13463
     components:
     - type: Transform
@@ -105527,11 +105529,6 @@ entities:
     components:
     - type: Transform
       pos: 19.5,-18.5
-      parent: 2
-  - uid: 13485
-    components:
-    - type: Transform
-      pos: -22.5,31.5
       parent: 2
 - proto: ChessBoard
   entities:
@@ -109995,17 +109992,6 @@ entities:
     - type: Transform
       pos: -18.507805,14.554109
       parent: 2
-- proto: ClothingOuterVestWebSec
-  entities:
-  - uid: 13746
-    components:
-    - type: Transform
-      parent: 13740
-    - type: Clothing
-      inSlot: outerClothing
-      inSlotFlag: OUTERCLOTHING
-    - type: Physics
-      canCollide: False
 - proto: ClothingOuterWinterChef
   entities:
   - uid: 14043
@@ -261391,19 +261377,12 @@ entities:
     - type: Transform
       pos: 18.5,-24.5
       parent: 2
-- proto: VendingMachineMedicalBase
+- proto: VendingMachineMedicalSecurity
   entities:
   - uid: 42142
     components:
     - type: Transform
       pos: -19.5,35.5
-      parent: 2
-- proto: VendingMachineMedicalSecurity
-  entities:
-  - uid: 33752
-    components:
-    - type: Transform
-      pos: -26.5,32.5
       parent: 2
 - proto: VendingMachineMediDrobe
   entities:

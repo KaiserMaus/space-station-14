@@ -120534,13 +120534,15 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ChemDispenser
+- proto: ChemDispenserEmpty
   entities:
   - uid: 16174
     components:
     - type: Transform
       pos: 43.5,38.5
       parent: 2
+- proto: ChemDispenser
+  entities:
   - uid: 16175
     components:
     - type: Transform
@@ -120726,11 +120728,6 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-  - uid: 16192
-    components:
-    - type: Transform
-      pos: 42.5,38.5
-      parent: 2
 - proto: ChessBoard
   entities:
   - uid: 16193
@@ -210489,6 +210486,11 @@ entities:
     - type: Transform
       pos: -61.5,-27.5
       parent: 2
+  - uid: 16192
+    components:
+    - type: Transform
+      pos: 42.5,38.5
+      parent: 2
 - proto: MachineMaterialSilo
   entities:
   - uid: 28932
@@ -281959,17 +281961,26 @@ entities:
     - type: Transform
       pos: 17.5,31.5
       parent: 2
+- proto: VendingMachineMedicalSecurity
+  entities:
+  - uid: 38823
+    components:
+    - type: Transform
+      pos: 45.5,35.5
+      parent: 2
+- proto: VendingMachineMedicalBase
+  entities:
+  - uid: 38826
+    components:
+    - type: Transform
+      pos: 3.5,61.5
+      parent: 2
 - proto: VendingMachineMedical
   entities:
   - uid: 38822
     components:
     - type: Transform
       pos: 38.5,-41.5
-      parent: 2
-  - uid: 38823
-    components:
-    - type: Transform
-      pos: 45.5,35.5
       parent: 2
   - uid: 38824
     components:
@@ -281980,11 +281991,6 @@ entities:
     components:
     - type: Transform
       pos: 18.5,-46.5
-      parent: 2
-  - uid: 38826
-    components:
-    - type: Transform
-      pos: 3.5,61.5
       parent: 2
 - proto: VendingMachineMediDrobe
   entities:
