@@ -119,7 +119,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: AccessReader
     access: [["Medical"], ["Brigmedic"]]
-  - type: PlayerCountDependentStock # Sunrise-Edit: disable population scaling
+  - type: PlayerCountDependentStock # No Scale SEC stock
     coefficient: 0
 
 - type: entity
@@ -168,5 +168,5 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: AccessReader
     access: [["Medical"], ["Security"], ["Brigmedic"]]
-  - type: PlayerCountDependentStock # Sunrise-Edit: disable population scaling
+  - type: PlayerCountDependentStock # No Scale SEC stock
     coefficient: 0
