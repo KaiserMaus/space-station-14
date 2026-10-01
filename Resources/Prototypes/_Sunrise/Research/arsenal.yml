@@ -74,7 +74,6 @@
   recipeUnlocks:
   - WeaponLaserSvalinn
   - SunriseWeaponLaserCarbineBattery
-  - MagazineBatteryLr30
   technologyPrerequisites:
   - WeaponizedLaserManipulation
   radioChannels:
@@ -91,7 +90,6 @@
   cost: 12500
   recipeUnlocks:
   - WeaponLaserLNT620
-  - MagazineBatteryLr60
   technologyPrerequisites:
   - SunriseBatteryEnergyWeaponry
   radioChannels:
