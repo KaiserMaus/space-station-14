@@ -398,8 +398,9 @@
   - Clothing
   completetime: 20
   materials:
-    Durathread: 400
-    Plastic: 400
+    Durathread: 600
+    Plastic: 600
+    Plasteel: 500
 
 - type: latheRecipe
   id: VestSecUpgradeStab
