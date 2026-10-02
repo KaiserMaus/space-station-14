@@ -1,7 +1,6 @@
 using Content.Shared.Dragon;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.List; // Sunrise-Edit
 
 namespace Content.Server.Dragon;
 
@@ -38,11 +37,4 @@ public sealed partial class DragonRiftComponent : SharedDragonRiftComponent
 
     [ViewVariables(VVAccess.ReadWrite), DataField("spawn", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     public string SpawnPrototype = "MobCarpDragon";
-    // Sunrise edit start
-    /// <summary>
-    /// Prototypes that can be spawned by this rift.
-    /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField(customTypeSerializer: typeof(PrototypeIdListSerializer<EntityPrototype>))]
-    public List<string> SpawnPrototypes = new();
-    // Sunrise edit end
 }

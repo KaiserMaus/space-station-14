@@ -6,13 +6,6 @@
     mode: SnapgridCenter
   components:
   - type: DragonRift
-    # Sunrise-start
-    spawnPrototypes:
-    - MobCarpDragon
-    - MobCarpHoloDragon
-    - MobCarpRainbowDragon
-    - MobSharkDragon
-    # Sunrise-end
   - type: Transform
     anchored: true
   - type: Physics
