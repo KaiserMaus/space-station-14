@@ -518,7 +518,7 @@
   id: UplinkSyndicateBomb
   name: uplink-exploding-syndicate-bomb-name
   description: uplink-exploding-syndicate-bomb-desc
-  productEntity: SyndicateBomb
+  productEntity: BoxSyndicateBomb # Sunrise-Edit
   cost:
     Telecrystal: 11
   categories:
@@ -536,7 +536,7 @@
   id: UplinkSyndicateBombNukie
   name: uplink-exploding-syndicate-bomb-name
   description: uplink-exploding-syndicate-bomb-desc
-  productEntity: SyndicateBomb
+  productEntity: BoxSyndicateBomb # Sunrise-Edit
   cost:
     Telecrystal: 11
   categories:
@@ -1022,7 +1022,7 @@
   id: UplinkSyndicateBombFakeNukie
   name: uplink-exploding-syndicate-bomb-fake-name
   description: uplink-exploding-syndicate-bomb-fake-desc
-  productEntity: SyndicateBombFake
+  productEntity: BoxSyndicateBombFake # Sunrise-Edit
   discountCategory: usualDiscounts
   discountDownTo:
     Telecrystal: 1
@@ -1343,7 +1343,7 @@
   id: UplinkSingarityBeacon
   name: uplink-singularity-beacon-name
   description: uplink-singularity-beacon-desc
-  productEntity: SingularityBeacon
+  productEntity: BoxSingularityBeacon # Sunrise-Edit
   discountCategory: usualDiscounts
   discountDownTo:
     Telecrystal: 4

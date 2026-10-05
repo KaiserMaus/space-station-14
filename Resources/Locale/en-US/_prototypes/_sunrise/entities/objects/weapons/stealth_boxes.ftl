@@ -39,3 +39,12 @@ ent-BoxSyndicateBombFake = fake syndicate bomb box
 
 ent-BoxAgentIDCard = agent ID box
     .desc = A box containing an Agent ID. Packaging disintegrates when opened, leaving no evidence behind.
+
+ent-BoxSyndicateBomb = syndicate bomb box
+    .desc = A box containing a syndicate bomb. Packaging disintegrates when opened, leaving no evidence behind.
+
+ent-BoxSingularityBeacon = singularity beacon box
+    .desc = A box containing a singularity beacon. Packaging disintegrates when opened, leaving no evidence behind.
+
+ent-BoxSyndicateBombEMP = syndicate EMP bomb box
+    .desc = A box containing a syndicate EMP bomb. Packaging disintegrates when opened, leaving no evidence behind.

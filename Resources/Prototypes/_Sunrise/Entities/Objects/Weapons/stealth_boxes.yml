@@ -221,3 +221,52 @@
     - id: AgentIDCard
     sound:
       path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: [BaseItem, BaseSyndicateContraband]
+  id: BoxSyndicateBomb
+  name: syndicate bomb box
+  description: A box containing a syndicate bomb. Packaging disintegrates when opened, leaving no evidence behind.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Storage/boxicons.rsi
+    state: box_of_doom
+  - type: Item
+    size: Huge
+  - type: SpawnItemsOnUse
+    items:
+    - id: SyndicateBomb
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: [BaseItem, BaseSyndicateContraband]
+  id: BoxSingularityBeacon
+  name: singularity beacon box
+  description: A box containing a singularity beacon. Packaging disintegrates when opened, leaving no evidence behind.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Storage/boxicons.rsi
+    state: syngularity
+  - type: SpawnItemsOnUse
+    items:
+    - id: SingularityBeacon
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: [BaseItem, BaseSyndicateContraband]
+  id: BoxSyndicateBombEMP
+  name: syndicate EMP bomb box
+  description: A box containing a syndicate EMP bomb. Packaging disintegrates when opened, leaving no evidence behind.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Storage/boxicons.rsi
+    state: syndieempbombfake
+  - type: Item
+    size: Huge
+  - type: SpawnItemsOnUse
+    items:
+    - id: SyndicateBombEMP
+    sound:
+      path: /Audio/Effects/unwrap.ogg
