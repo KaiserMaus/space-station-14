@@ -64,11 +64,13 @@
   minOreYield: 1
   maxOreYield: 2
 
+# Sunrise-Start Add
 - type: ore
   id: OreBluecrystal
   oreEntity: BluecrystalOre1
   minOreYield: 1
   maxOreYield: 1
+# Sunrise-End Add
 
 - type: ore
   id: OreQuartzCrab
