@@ -22,3 +22,53 @@
     - sprite: _Sunrise/Structures/Walls/rock.rsi
       state: rock_bluespace
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+
+- type: entity
+  id: WallRockBluecrystal
+  parent: WallRock
+  description: An ore vein rich with bluespace crystals.
+  suffix: Bluespace Crystal
+  components:
+  - type: OreVein
+    oreChance: 1.0
+    currentOre: OreBluecrystal
+
+- type: entity
+  id: WallRockBasaltBluecrystal
+  parent: WallRockBasalt
+  description: An ore vein rich with bluespace crystals.
+  suffix: Bluespace Crystal
+  components:
+  - type: OreVein
+    oreChance: 1.0
+    currentOre: OreBluecrystal
+
+- type: entity
+  id: WallRockChromiteBluecrystal
+  parent: WallRockChromite
+  description: An ore vein rich with bluespace crystals.
+  suffix: Bluespace Crystal
+  components:
+  - type: OreVein
+    oreChance: 1.0
+    currentOre: OreBluecrystal
+
+- type: entity
+  id: WallRockSandBluecrystal
+  parent: WallRockSand
+  description: An ore vein rich with bluespace crystals.
+  suffix: Bluespace Crystal
+  components:
+  - type: OreVein
+    oreChance: 1.0
+    currentOre: OreBluecrystal
+
+- type: entity
+  id: WallRockSnowBluecrystal
+  parent: WallRockSnow
+  description: An ore vein rich with bluespace crystals.
+  suffix: Bluespace Crystal
+  components:
+  - type: OreVein
+    oreChance: 1.0
+    currentOre: OreBluecrystal
