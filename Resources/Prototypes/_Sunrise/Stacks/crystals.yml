@@ -9,7 +9,7 @@
   name: construction-graph-tag-blue-crystal
   icon: Objects/Specific/Syndicate/telecrystal.rsi
   spawn: Bluecrystal1
-  maxCount: 5
+  maxCount: 3
 
 - type: stack
   id: ArtificialBluecrystal

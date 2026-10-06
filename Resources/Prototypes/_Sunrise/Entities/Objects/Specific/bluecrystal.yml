@@ -32,7 +32,7 @@
   name: Bluespace crystal
   parent: BaseItem
   id: Bluecrystal
-  suffix: 5 BC
+  suffix: 3 BC
   description: It shimmers with bluespace energy. When split, it releases a spatial burst.
   components:
   - type: Sprite
@@ -45,7 +45,7 @@
     sprite: _Sunrise/Objects/Specific/bluecrystal.rsi
     size: Tiny
   - type: Stack
-    count: 5
+    count: 3
     stackType: Bluecrystal
     baseLayer: base
     layerStates:
@@ -56,7 +56,7 @@
   - type: StackLayerThreshold
     thresholds:
     - 2
-    - 4
+    - 3
   - type: Damageable
     damageModifierSet: Glass
   - type: Injurable
