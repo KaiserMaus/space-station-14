@@ -1312,4 +1312,7 @@ ClothingHandsPowerGlovesUplinkNTERTEpsilon: null
 WeaponDecloner: null
 ClothingOuterVestWebSec: null
 ClothingOuterArmorBlueShield: null
+# 2026-10-11
+SecBreachingHammer: SunriseDetonatorBundleSpawner
+SyndieBreachingHammer: SunriseDetonatorBundleSpawner
 # region Sunrise-End
