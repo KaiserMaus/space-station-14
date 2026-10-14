@@ -58,6 +58,13 @@ gun-revolver-insert = Заряжен
 gun-revolver-spin = Вращать барабан
 gun-revolver-spun = Барабан вращается
 gun-speedloader-empty = Спидлоадер пуст
+# Sunrise added start - состояние барабана револьвера
+gun-revolver-cylinder-open = Открыть барабан
+gun-revolver-cylinder-close = Закрыть барабан
+gun-revolver-cylinder-opened = Барабан открыт
+gun-revolver-cylinder-closed = Барабан закрыт
+# Sunrise added end
+
 # GunSpreadModifier
 examine-gun-spread-modifier-reduction = Разброс был уменьшен на [color=yellow]{ $percentage }%[/color].
 examine-gun-spread-modifier-increase = Разброс был увеличен на [color=yellow]{ $percentage }%[/color].

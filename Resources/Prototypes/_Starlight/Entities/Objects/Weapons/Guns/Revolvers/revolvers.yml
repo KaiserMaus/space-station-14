@@ -19,6 +19,12 @@
     capacity: 1
     chambers: [ null]
     ammoSlots: [ null]
+  - type: GenericVisualizer # Sunrise-Add
+    visuals:
+      enum.RevolverVisuals.CylinderOpen:
+        enum.GunVisualLayers.Base:
+          True: { state: bolt-open }
+          False: { state: icon }
   - type: Construction
     graph: MakeshiftRevolverGraph
     node: shotgun
@@ -111,5 +117,11 @@
     angleIncrease: 10
     angleDecay: 6
     selectedMode: SemiAuto
+  - type: GenericVisualizer # Sunrise-Add
+    visuals:
+      enum.RevolverVisuals.CylinderOpen:
+        enum.GunVisualLayers.Base:
+          True: { state: bolt-open }
+          False: { state: icon }
   - type: StealTarget
     stealGroup: OfficerHandgun

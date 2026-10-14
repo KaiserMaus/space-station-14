@@ -15,7 +15,7 @@
 
 - type: entity
   id: FlareGunSecurityUpgrade
-  name: upgrade kit (security flare gun)
+  name: upgrade kit (security grenade launcher)
   parent: BaseSecurityUpgrade
   components:
   - type: Tag

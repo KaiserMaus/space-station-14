@@ -4,17 +4,17 @@
   id: WeaponLauncherRL5
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Guns/HMGs/rpg/big.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/rpg/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: _Sunrise/Objects/Weapons/Guns/HMGs/rpg/tiny.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/rpg/tiny.rsi
   - type: Item
     size: Ginormous
-    sprite: _Sunrise/Objects/Weapons/Guns/HMGs/rpg/tiny.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/rpg/tiny.rsi
   - type: Gun
     fireRate: 0.5
     soundGunshot:
@@ -45,17 +45,25 @@
     pvsIncrease: 0.4
 
 - type: entity
-  name: GL-70
+  name: MGL-70
   parent: BaseWeaponLauncher
-  id: WeaponGrenadeLauncherGL70
+  id: BaseWeaponRevolverGrenadeLauncher
+  abstract: true
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Guns/HMGs/gl-64/big.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/gl70/big.rsi
     layers:
     - state: icon
       map: ["enum.GunVisualLayers.Base"]
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.RevolverVisuals.CylinderOpen:
+        enum.GunVisualLayers.Base:
+          True: { state: bolt-open }
+          False: { state: icon }
   - type: Clothing
-    sprite: _Sunrise/Objects/Weapons/Guns/HMGs/gl-64/tiny.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/gl70/tiny.rsi
     slots:
     - Back
     - suitStorage
@@ -63,9 +71,11 @@
     size: Huge
     shape:
     - 0,0,4,2
-    sprite: _Sunrise/Objects/Weapons/Guns/HMGs/gl-64/tiny.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/gl70/tiny.rsi
   - type: AmmoCounter
   - type: Gun
+    projectileSpeed: 25
+    bigTrigger: true
     fireRate: 1.5
     selectedMode: SemiAuto
     availableModes:
@@ -95,41 +105,26 @@
   - type: SpeedModifiedOnWield
     walkModifier: 0.5
     sprintModifier: 0.5
+
+- type: entity
+  name: MGL-70
+  parent: BaseWeaponRevolverGrenadeLauncher
+  id: WeaponGrenadeLauncherGL70
+  components:
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
     maxOffset: 4
     pvsIncrease: 0.4
+  - type: Tag
+    tags:
+    - SunriseGrenadeLauncherBandolierCompatible
 
 - type: entity
-  name: GL-70
-  parent: WeaponGrenadeLauncherGL70
-  id: WeaponGrenadeLauncherGL70Flash
-  suffix: GrenadeFlash
-  components:
-  - type: RevolverAmmoProvider
-    whitelist:
-      tags:
-      - Grenade
-      - HandGrenadeAmmo
-    proto: GrenadeFlashBang
-    capacity: 6
-    chambers: [ True, True, True, True, True, True ]
-    ammoSlots: [ null, null, null, null, null, null ]
-
-- type: entity
-  name: security grenade Launcher
-  parent: [WeaponFlareGunSecurity, BaseSecurityContraband]
+  name: security grenade launcher
+  parent: [WeaponLauncherM79, BaseSecurityContraband]
   id: WeaponGrenadeLauncherSecurity
-  description: A security flare gun modification that allows for the safe launch of any hand grenade over long distances. "Warning" Firing at close range or directly at obstacles is not recommended — risk of grenade bounce-back.
+  description: A single-shot security grenade launcher adapted to fire hand grenades over long distances.
   components:
-  - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/grenadegun_security.rsi
-    layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-  - type: Item
-    size: Normal
-    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/grenadegun_security.rsi
   - type: ItemSlots
     slots:
       gun_chamber:
@@ -138,26 +133,16 @@
         whitelist:
           tags:
             - HandGrenadeAmmo
-  - type: Appearance
-  - type: Gun
-    projectileSpeed: 20
-    fireRate: 8
-    selectedMode: SemiAuto
-    availableModes:
-      - SemiAuto
-    soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/flaregun.ogg
-    bigTrigger: true
-  - type: UseDelayOnShoot
-  - type: UseDelay
-    delay: 0.85 #No script abuse
+  - type: Construction
+    graph: GrenadeLauncherSecurity
+    node: auto
   - type: Tag
     tags:
-    - Sidearm
+    - SunriseGrenadeLauncherBandolierCompatible
 
 - type: entity
   name: m79 grenade launcher
-  parent: [WeaponGrenadeLauncherSecurity, BaseMajorContraband]
+  parent: [BaseWeaponLauncher, BaseMajorContraband]
   id: WeaponLauncherM79
   description: A single-shot, break-action grenade launcher. It is a powerful weapon that can fire a variety of grenades and hand granades.
   components:
@@ -166,6 +151,7 @@
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
+  - type: Appearance
   - type: Clothing
     sprite: _RMC14/Objects/Weapons/Guns/Launchers/m79/tiny.rsi
     slots:
@@ -183,11 +169,12 @@
       - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
-    projectileSpeed: 19
+    projectileSpeed: 25
     bigTrigger: true
   - type: UseDelayOnShoot
   - type: UseDelay
     delay: 0.85
+  - type: GunRequiresWield
   - type: ItemSlots
     slots:
       gun_chamber:
@@ -198,6 +185,16 @@
           tags:
           - Grenade
           - HandGrenadeAmmo
+  - type: ContainerContainer
+    containers:
+      gun_chamber: !type:ContainerSlot
+  - type: ChamberMagazineAmmoProvider
+    autoCycle: false
+    boltClosed: false
+    canRack: false
+    soundBoltClosed: /Audio/Weapons/Guns/Cock/revolver_cock.ogg
+    soundBoltOpened: /Audio/Weapons/Guns/Cock/revolver_cock.ogg
+    soundRack: /Audio/Weapons/Guns/Cock/revolver_cock.ogg
   - type: StaticPrice
     price: 4000
   - type: EmitSoundOnPickup
@@ -217,6 +214,39 @@
       Felinid:
         knockback: 5
         staminaMultiplier: 8
+  - type: Tag
+    tags:
+    - SunriseGrenadeLauncherBandolierCompatible
+
+- type: entity
+  name: security revolver launcher
+  parent: [BaseWeaponRevolverGrenadeLauncher, BaseSecurityContraband]
+  id: WeaponGrenadeLauncherSecurityRevolver
+  description: A five-shot security grenade launcher designed to fire both standard and hand grenades.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/grenadegun_security.rsi
+    layers:
+    - state: icon
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/grenadegun_security.rsi
+  - type: Item
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/grenadegun_security.rsi
+  - type: RevolverAmmoProvider
+    whitelist:
+      tags:
+      - Grenade
+      - HandGrenadeAmmo
+    capacity: 5
+    chambers: [ True, True, True, True, True ]
+    ammoSlots: [ null, null, null, null, null ]
+  - type: Construction
+    graph: GrenadeLauncherSecurity
+    node: revolver
+  - type: Tag
+    tags:
+    - SunriseGrenadeLauncherBandolierCompatible
 
 - type: entity
   name: Bombaga

@@ -364,6 +364,7 @@
     sprite: _Sunrise/Objects/Weapons/Guns/Revolvers/pirate_revolver.rsi
     layers:
     - state: icon
+      map: ["enum.GunVisualLayers.Base"]
     - state: jammer_high_charge
       map: ["enum.PowerDeviceVisualLayers.Powered"]
       shader: unshaded
@@ -406,6 +407,10 @@
         enum.PowerDeviceVisualLayers.Powered:
           True: { visible: true }
           False: { visible: false }
+      enum.RevolverVisuals.CylinderOpen:
+        enum.GunVisualLayers.Base:
+          True: { state: bolt-open }
+          False: { state: icon }
   - type: ToggleCellDraw
   - type: BatteryVisuals
   - type: ItemSlots

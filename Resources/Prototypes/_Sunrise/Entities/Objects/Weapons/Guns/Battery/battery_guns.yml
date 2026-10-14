@@ -242,6 +242,7 @@
   - type: Clothing
     sprite: _Sunrise/Objects/Weapons/Guns/Battery/pdw9_pistol.rsi
   - type: Gun
+    projectileSpeed: 25
     bigTrigger: true
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg

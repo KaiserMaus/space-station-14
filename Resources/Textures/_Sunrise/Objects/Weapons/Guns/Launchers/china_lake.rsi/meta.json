@@ -1,7 +1,7 @@
 {
     "version": 1,
-    "license": "CLA",
-    "copyright": "SUNRISE",
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Akasl",
     "size": {
         "x": 32,
         "y": 32
@@ -16,19 +16,19 @@
             "directions": 4
         },
         {
-            "name": "equipped-BACKPACK",
-            "directions": 4
-        },
-        {
-            "name": "equipped-SUITSTORAGE",
-            "directions": 4
-        },
-        {
             "name": "wielded-inhand-left",
             "directions": 4
         },
         {
             "name": "wielded-inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "equipped-BACKPACK",
+            "directions": 4
+        },
+        {
+            "name": "equipped-SUITSTORAGE",
             "directions": 4
         }
     ]

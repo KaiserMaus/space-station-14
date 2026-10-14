@@ -54,12 +54,16 @@
   description: PLOOP.
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Launchers/china_lake.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/china_lake_x48.rsi # Sunrise-Edit
     layers:
       - state: icon
         map: ["enum.GunVisualLayers.Base"]
+  # Sunrise start - краткое отображение открытого затвора при ручном цикле
+  - type: Appearance
+  - type: BallisticCycleVisuals
+  # Sunrise end
   - type: Clothing
-    sprite: Objects/Weapons/Guns/Launchers/china_lake.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/china_lake.rsi # Sunrise-Edit
     slots:
     - Back
     - suitStorage
@@ -67,6 +71,7 @@
     size: Huge
     shape:
     - 0,0,4,2
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/china_lake.rsi # Sunrise-Edit
   - type: AmmoCounter
   - type: Gun
     pump: true
@@ -74,11 +79,16 @@
     whitelist:
       tags:
         - Grenade
-    capacity: 3
+    capacity: 4 # Sunrise-Edit
     proto: GrenadeFrag
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
   - type: GunRequiresWield
+  # Sunrise added start - совместимость с креплением гранатомёта на патронташе
+  - type: Tag
+    tags:
+    - SunriseGrenadeLauncherBandolierCompatible
+  # Sunrise added end
   - type: StaticPrice
     price: 10000
 
@@ -102,6 +112,11 @@
     size: Huge
   - type: AmmoCounter
   - type: GunRequiresWield
+  # Sunrise added start - совместимость с креплением гранатомёта на патронташе
+  - type: Tag
+    tags:
+    - SunriseGrenadeLauncherBandolierCompatible
+  # Sunrise added end
   - type: ContainerContainer
     containers:
       revolver-ammo: !type:Container

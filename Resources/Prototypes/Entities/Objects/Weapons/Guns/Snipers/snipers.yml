@@ -72,10 +72,13 @@
     sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
     layers:
     - state: base
+      map: ["enum.GunVisualLayers.Base"] # Sunrise-Edit
     - state: base1
       map: [ "enum.SolutionContainerLayers.Fill" ]
       visible: false
   - type: Appearance
+  - type: BallisticCycleVisuals # Sunrise-Add
+    closedState: base
   - type: SolutionContainerVisuals
     maxFillLevels: 1
     fillBaseName: base

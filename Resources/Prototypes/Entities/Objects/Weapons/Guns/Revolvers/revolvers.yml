@@ -6,7 +6,12 @@
   abstract: true
   components:
   - type: Sprite
-    state: icon
+    # Sunrise start - базовый слой для визуала открытого барабана
+    layers:
+    - state: icon
+      map: ["enum.GunVisualLayers.Base"]
+    # Sunrise end
+  - type: Appearance # Sunrise-Add
   - type: Item
     size: Small
     shape:
@@ -117,6 +122,14 @@
     capacity: 6
     chambers: [ True, True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null, null ]
+  # Sunrise start - визуал открытого барабана
+  - type: GenericVisualizer
+    visuals:
+      enum.RevolverVisuals.CylinderOpen:
+        enum.GunVisualLayers.Base:
+          True: { state: bolt-open }
+          False: { state: icon }
+  # Sunrise end
   - type: StealTarget
     stealGroup: OfficerHandgun
 
@@ -136,6 +149,14 @@
     fireRate: 3
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/mateba.ogg
+  # Sunrise start - визуал открытого барабана
+  - type: GenericVisualizer
+    visuals:
+      enum.RevolverVisuals.CylinderOpen:
+        enum.GunVisualLayers.Base:
+          True: { state: bolt-open }
+          False: { state: icon }
+  # Sunrise end
 
 - type: entity
   parent: WeaponRevolverMateba
@@ -168,6 +189,14 @@
         volume: 2.25
   - type: StaticPrice
     price: 1500 # Botany can shit these out like candy, but let's see how it goes
+  # Sunrise start - визуал открытого барабана
+  - type: GenericVisualizer
+    visuals:
+      enum.RevolverVisuals.CylinderOpen:
+        enum.GunVisualLayers.Base:
+          True: { state: bolt-open }
+          False: { state: icon }
+  # Sunrise end
 
 - type: entity
   parent: WeaponRevolverPython
@@ -199,6 +228,14 @@
     capacity: 5
     chambers: [ True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null ]
+  # Sunrise start - визуал открытого барабана
+  - type: GenericVisualizer
+    visuals:
+      enum.RevolverVisuals.CylinderOpen:
+        enum.GunVisualLayers.Base:
+          True: { state: bolt-open }
+          False: { state: icon }
+  # Sunrise end
 
 - type: entity
   parent: WeaponRevolverPirate

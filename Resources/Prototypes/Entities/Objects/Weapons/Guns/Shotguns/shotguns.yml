@@ -157,6 +157,15 @@
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/db_shotgun.rsi
+  # Sunrise start - визуал переломленного затвора
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.RevolverVisuals.CylinderOpen:
+        enum.GunVisualLayers.Base:
+          True: { state: bolt-open }
+          False: { state: icon }
+  # Sunrise end
   - type: Item
     sprite: Objects/Weapons/Guns/Shotguns/db_shotgun_inhands_64x.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
@@ -246,6 +255,13 @@
     sprite: Objects/Weapons/Guns/Shotguns/pump_inhands_64x.rsi
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/pump.rsi
+    # Sunrise edit start - отображение состояния помпы
+    layers:
+    - state: icon
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Appearance
+  - type: BallisticCycleVisuals
+    # Sunrise edit end
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/pump.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
@@ -266,6 +282,15 @@
   components: # needs to be super inaccurate because you don't need to wield it
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/sawn.rsi
+  # Sunrise start - визуал переломленного затвора
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.RevolverVisuals.CylinderOpen:
+        enum.GunVisualLayers.Base:
+          True: { state: bolt-open }
+          False: { state: icon }
+  # Sunrise end
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/sawn.rsi
   - type: Item

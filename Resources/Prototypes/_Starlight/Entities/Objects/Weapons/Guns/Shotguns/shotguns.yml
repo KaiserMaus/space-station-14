@@ -13,6 +13,8 @@
     spread: 1.2
   - type: Sprite
     sprite: _Starlight/Objects/Weapons/Guns/Shotguns/riot.rsi
+  - type: Appearance
+  - type: BallisticCycleVisuals
   - type: Clothing
     sprite: _Starlight/Objects/Weapons/Guns/Shotguns/riot.rsi
   - type: GunRequiresWield
@@ -32,6 +34,8 @@
   components:
   - type: Sprite
     sprite: _Starlight/Objects/Weapons/Guns/Shotguns/riot_sawn.rsi
+  - type: Appearance
+  - type: BallisticCycleVisuals
   - type: Clothing
     sprite: _Starlight/Objects/Weapons/Guns/Shotguns/riot_sawn.rsi
   - type: Item

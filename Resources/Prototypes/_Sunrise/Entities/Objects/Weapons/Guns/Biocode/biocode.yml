@@ -59,26 +59,6 @@
     - Pirate
 
 - type: entity
-  parent: WeaponLauncherChinaLake
-  id: WeaponLauncherChinaLakeBiocode
-  suffix: BIOCODE
-  components:
-  - type: FactionWeaponBlocker
-    factions:
-    - Syndicate
-    - Pirate
-
-- type: entity
-  parent: WeaponLauncherM79
-  id: WeaponLauncherM79Biocode
-  suffix: BIOCODE
-  components:
-  - type: FactionWeaponBlocker
-    factions:
-    - Syndicate
-    - Pirate
-
-- type: entity
   parent: WeaponSniperHristov
   id: WeaponSniperHristovBiocode
   suffix: BIOCODE
@@ -171,16 +151,6 @@
 - type: entity
   parent: WeaponSyndieLaserGun
   id: WeaponSyndieLaserGunBiocode
-  suffix: BIOCODE
-  components:
-  - type: FactionWeaponBlocker
-    factions:
-    - Syndicate
-    - Pirate
-
-- type: entity
-  parent: WeaponGrenadeLauncherGL70
-  id: WeaponGrenadeLauncherGL70Biocode
   suffix: BIOCODE
   components:
   - type: FactionWeaponBlocker

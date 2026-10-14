@@ -66,6 +66,7 @@ public partial class SharedGunSystem
         args.State = new RevolverAmmoProviderComponentState
         {
             CurrentIndex = ent.Comp.CurrentIndex,
+            CylinderOpen = ent.Comp.CylinderOpen, // Sunrise-Edit
             AmmoSlots = GetNetEntityList(ent.Comp.AmmoSlots),
             Chambers = ent.Comp.Chambers,
         };
@@ -78,6 +79,7 @@ public partial class SharedGunSystem
 
         var oldIndex = ent.Comp.CurrentIndex;
         ent.Comp.CurrentIndex = state.CurrentIndex;
+        ent.Comp.CylinderOpen = state.CylinderOpen; // Sunrise-Edit
         ent.Comp.Chambers = new bool?[state.Chambers.Length];
 
         // Need to copy across the state rather than the ref.
@@ -96,8 +98,10 @@ public partial class SharedGunSystem
 
     public bool TryRevolverInsert(Entity<RevolverAmmoProviderComponent> ent, EntityUid insertEnt, EntityUid? user)
     {
-        if (_whitelistSystem.IsWhitelistFail(ent.Comp.Whitelist, insertEnt))
+        // Sunrise edit start - заряжать револьвер можно только с открытым барабаном
+        if (!CanRevolverInsert(ent, insertEnt, user))
             return false;
+        // Sunrise edit end
 
         // If it's a speedloader try to get ammo from it.
         if (HasComp<SpeedLoaderComponent>(insertEnt))
@@ -192,6 +196,56 @@ public partial class SharedGunSystem
         return false;
     }
 
+    // Sunrise added start - отдельное состояние и управление барабаном
+    public bool CanRevolverInsert(
+        Entity<RevolverAmmoProviderComponent> ent,
+        EntityUid insertEnt,
+        EntityUid? user,
+        bool quiet = false)
+    {
+        if (!ent.Comp.CylinderOpen)
+        {
+            if (!quiet)
+                Popup(Loc.GetString("gun-revolver-cylinder-closed"), ent, user);
+
+            return false;
+        }
+
+        return !_whitelistSystem.IsWhitelistFail(ent.Comp.Whitelist, insertEnt);
+    }
+
+    public bool CanToggleRevolverCylinder(Entity<RevolverAmmoProviderComponent> ent)
+    {
+        return !Deleted(ent);
+    }
+
+    public bool TryToggleRevolverCylinder(Entity<RevolverAmmoProviderComponent> ent, EntityUid? user = null)
+    {
+        if (!CanToggleRevolverCylinder(ent))
+            return false;
+
+        SetRevolverCylinderOpen(ent, !ent.Comp.CylinderOpen, user);
+        return true;
+    }
+
+    private void SetRevolverCylinderOpen(
+        Entity<RevolverAmmoProviderComponent> ent,
+        bool open,
+        EntityUid? user = null)
+    {
+        if (ent.Comp.CylinderOpen == open)
+            return;
+
+        ent.Comp.CylinderOpen = open;
+
+        if (open)
+            EmptyRevolver(ent, user);
+
+        UpdateRevolverAppearance(ent);
+        Dirty(ent);
+    }
+    // Sunrise added end
+
     private void SetChamber(Entity<RevolverAmmoProviderComponent> ent, Entity<CartridgeAmmoComponent?> ammo, int index)
     {
         if (!Resolve(ammo, ref ammo.Comp, false) || ammo.Comp.Spent)
@@ -210,9 +264,12 @@ public partial class SharedGunSystem
 
         args.Verbs.Add(new AlternativeVerb()
         {
-            Text = Loc.GetString("gun-revolver-empty"),
-            Disabled = !AnyRevolverCartridges(component),
-            Act = () => EmptyRevolver((uid, component), args.User),
+            // Sunrise edit start - альтернативное действие повторяет переключение барабана
+            Text = Loc.GetString(component.CylinderOpen
+                ? "gun-revolver-cylinder-close"
+                : "gun-revolver-cylinder-open"),
+            Act = () => TryToggleRevolverCylinder((uid, component), args.User),
+            // Sunrise edit end
             Priority = 1
         });
 
@@ -340,6 +397,7 @@ public partial class SharedGunSystem
         Appearance.SetData(ent, AmmoVisuals.HasAmmo, count != 0, appearance);
         Appearance.SetData(ent, AmmoVisuals.AmmoCount, count, appearance);
         Appearance.SetData(ent, AmmoVisuals.AmmoMax, ent.Comp.Capacity, appearance);
+        Appearance.SetData(ent, RevolverVisuals.CylinderOpen, ent.Comp.CylinderOpen, appearance); // Sunrise-Edit
     }
 
     protected virtual void SpinRevolver(Entity<RevolverAmmoProviderComponent> ent, EntityUid? user = null)
@@ -350,6 +408,14 @@ public partial class SharedGunSystem
 
     private void OnRevolverTakeAmmo(Entity<RevolverAmmoProviderComponent> ent, ref TakeAmmoEvent args)
     {
+        // Sunrise added start - из открытого барабана стрелять нельзя
+        if (ent.Comp.CylinderOpen)
+        {
+            args.Reason = Loc.GetString("gun-revolver-cylinder-opened");
+            return;
+        }
+        // Sunrise added end
+
         var currentIndex = ent.Comp.CurrentIndex;
         Cycle(ent.Comp, args.Shots);
 
@@ -462,6 +528,7 @@ public partial class SharedGunSystem
     protected sealed class RevolverAmmoProviderComponentState : ComponentState
     {
         public int CurrentIndex;
+        public bool CylinderOpen; // Sunrise-Edit
         public List<NetEntity?> AmmoSlots = default!;
         public bool?[] Chambers = default!;
     }

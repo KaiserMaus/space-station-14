@@ -83,6 +83,8 @@
         children:
         - id: WeaponIonRifle
         - id: WeaponTemperatureGun
+        - id: SunriseClothingBeltGrenadeLauncherBandolier
+        - id: WeaponGrenadeLauncherSecurity
 
 - type: entity
   parent: GunSafeSuperweaponSecureGamma

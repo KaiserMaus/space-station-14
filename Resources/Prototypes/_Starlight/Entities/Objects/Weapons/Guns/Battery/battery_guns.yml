@@ -97,9 +97,14 @@
       visualState: disable-unshaded
       heldPrefix: disabler
     - proto: RedMediumLaser
-      fireCost: 150
+      fireCost: 100
       magState: kill
       visualState: kill-unshaded
+      heldPrefix: lethal
+    - proto: BulletTaser
+      fireCost: 150
+      magState: stun
+      visualState: stun-unshaded
       heldPrefix: lethal
     - proto: DestroyBeam
       fireCost: 175
@@ -112,6 +117,7 @@
       visualState: ion-unshaded
       heldPrefix: special
   - type: Gun
+    projectileSpeed: 25
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
