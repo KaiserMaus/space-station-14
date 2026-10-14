@@ -919,6 +919,23 @@
       - LoneOpsUplink
 
 - type: listing
+  id: UplinkGrenadeBuckshot
+  name: uplink-grenade-buckshot-name
+  description: uplink-grenade-buckshot-desc
+  icon: { sprite: /Textures/_Sunrise/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi, state: buck }
+  productEntity: GrenadeBuckshot
+  cost:
+    Telecrystal: 1
+  categories:
+  - UplinkAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+      - LoneOpsUplink
+
+- type: listing
   id: UplinkMagazineGrenadeFrag
   name: uplink-grenade-launcher-frag-extended-ammo-name
   description: uplink-grenade-launcher-frag-extended-ammo-desc
@@ -3480,20 +3497,6 @@
     Telecrystal: 10
   cost:
     Telecrystal: 12
-  categories:
-  - UplinkWeaponry
-
-- type: listing
-  id: UplinkWeaponBreachingHammer
-  name: uplink-SyndieBreachingHammer-name
-  description: uplink-SyndieBreachingHammer-desc
-  productEntity: SyndieBreachingHammer
-  icon: { sprite: _Sunrise/Objects/Weapons/Melee/syndie_breaching_hammer.rsi, state: icon }
-  discountCategory: rareDiscounts
-  discountDownTo:
-    Telecrystal: 5
-  cost:
-    Telecrystal: 7
   categories:
   - UplinkWeaponry
 
