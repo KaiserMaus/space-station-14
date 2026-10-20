@@ -15,17 +15,16 @@ namespace Content.Server._Sunrise.Mech.Systems;
 /// <summary>
 /// Связывает установленную батарею с мехом и синхронизирует вычисляемый заряд.
 /// </summary>
-public sealed class InstalledMechBatterySystem : EntitySystem
+public sealed partial class InstalledMechBatterySystem : EntitySystem
 {
-    [Dependency] private readonly ActionBlockerSystem _actionBlocker = default!;
-    [Dependency] private readonly SharedBatterySystem _battery = default!;
-    [Dependency] private readonly MechSystem _mech = default!;
-    [Dependency] private readonly MovementSpeedModifierSystem _movementSpeedModifier = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private ActionBlockerSystem _actionBlocker = default!;
+    [Dependency] private SharedBatterySystem _battery = default!;
+    [Dependency] private MechSystem _mech = default!;
+    [Dependency] private MovementSpeedModifierSystem _movementSpeedModifier = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private EntityQuery<MechComponent> _mechQuery = default!;
 
     private static readonly TimeSpan UpdateInterval = TimeSpan.FromSeconds(0.5);
-
-    private EntityQuery<MechComponent> _mechQuery;
 
     public override void Initialize()
     {
@@ -34,7 +33,6 @@ public sealed class InstalledMechBatterySystem : EntitySystem
         SubscribeLocalEvent<MechComponent, EntRemovedFromContainerMessage>(OnBatteryRemoved);
         SubscribeLocalEvent<InstalledMechBatteryComponent, ChargeChangedEvent>(OnChargeChanged);
 
-        _mechQuery = GetEntityQuery<MechComponent>();
     }
 
     private void OnBatteryRemoved(Entity<MechComponent> ent, ref EntRemovedFromContainerMessage args)
