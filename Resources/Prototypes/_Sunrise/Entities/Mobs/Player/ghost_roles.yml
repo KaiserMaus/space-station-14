@@ -292,7 +292,7 @@
     ears: ClothingHeadsetAltERT
     belt: ClothingBeltChiefEngineerFilled
     pocket1: DoubleEmergencyOxygenTankFilled
-    pocket2: CableHVStack
+    pocket2: PouchMaterial
   inhand:
   - ClothingHandsPowerGlovesUplinkNTERTAmber
   - RCD
@@ -310,6 +310,7 @@
     - CableDetStack
     - MiningDrillDiamond
     - CyberGrenadeThrowerAtmos
+    - CableHVStack
 
 - type: startingGear
   id: ERTEngineerGearGamma
@@ -324,7 +325,7 @@
     ears: ClothingHeadsetAltERT
     belt: ClothingBeltChiefEngineerFilled
     pocket1: DoubleEmergencyOxygenTankFilled
-    pocket2: CableHVStack
+    pocket2: PouchMaterial
   inhand:
   - ClothingHandsPowerGlovesUplinkNTERTRed
   - RCDRecharging
@@ -341,6 +342,7 @@
     - CableDetStack
     - MiningDrillDiamond
     - CyberGrenadeThrowerAtmos
+    - CableHVStack
 # Medical
 
 - type: startingGear
