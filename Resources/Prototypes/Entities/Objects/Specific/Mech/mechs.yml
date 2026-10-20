@@ -211,6 +211,7 @@
     rightBareFootState: [ footprint-suit-heavy ]
   # Sunrise-End
   - type: Damageable
+  - type: Injurable
     damageContainer: Mech
   - type: FootstepModifier
     footstepSoundCollection:

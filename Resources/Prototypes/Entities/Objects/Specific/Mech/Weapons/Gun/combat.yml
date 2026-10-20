@@ -16,7 +16,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
   - type: MechAmmoProvider # Sunrise-Edit — прямой расход энергии реактора меха
-    proto: Pulse # Sunrise-Edit
+    proto: SunriseMechHitscanPulse # Sunrise-Edit - удаляем предсказанную hitscan-сущность
     fireCost: 80
   - type: Appearance
   - type: AmmoCounter
@@ -39,7 +39,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: MechAmmoProvider # Sunrise-Edit — прямой расход энергии реактора меха
-    proto: IgnitionRedLaser # Sunrise-Edit
+    proto: SunriseMechHitscanIgnitionRedLaser # Sunrise-Edit - удаляем предсказанную hitscan-сущность
     fireCost: 40 # Sunrise-Edit — баланс под самоохлаждаемые реакторы мехов
   - type: Appearance
   - type: AmmoCounter
@@ -85,7 +85,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
   - type: MechAmmoProvider # Sunrise-Edit — прямой расход энергии реактора меха
-    proto: RedHeavyLaser # Sunrise-Edit
+    proto: SunriseMechHitscanRedHeavyLaser # Sunrise-Edit - удаляем предсказанную hitscan-сущность
     fireCost: 28
   - type: Appearance
   - type: AmmoCounter
@@ -116,7 +116,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
   - type: MechAmmoProvider # Sunrise-Edit — прямой расход энергии реактора меха
-    proto: RedLaser
+    proto: SunriseMechHitscanRedLaser # Sunrise-Edit - удаляем предсказанную hitscan-сущность
     fireCost: 14
   - type: Appearance
   - type: AmmoCounter
@@ -200,7 +200,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
   - type: MechAmmoProvider # Sunrise-Edit — прямой расход энергии реактора меха
-    proto: TaserBolt
+    proto: BulletTaser # Sunrise-Edit - используем ванильный физический снаряд
     fireCost: 40
   - type: Appearance
   - type: AmmoCounter
@@ -312,7 +312,7 @@
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/empty.ogg
   - type: MechAmmoProvider # Sunrise-Edit — прямой расход энергии реактора меха
-    proto: EmpPulse
+    proto: BulletEMP # Sunrise-Edit - используем физический EMP-снаряд вместо hitscan
     fireCost: 400
   - type: Appearance
   - type: AmmoCounter
@@ -352,7 +352,7 @@
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/empty.ogg
   - type: MechAmmoProvider # Sunrise-Edit — прямой расход энергии реактора меха
-    proto: RedLaserBeam
+    proto: SunriseMechHitscanRedLaserBeam # Sunrise-Edit - удаляем предсказанную hitscan-сущность
     fireCost: 20
   - type: Appearance
   - type: AmmoCounter

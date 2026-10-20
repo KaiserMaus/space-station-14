@@ -16,9 +16,9 @@ namespace Content.Server.Mech.Systems;
 
 public sealed partial class MechSystem
 {
-    [Dependency] private readonly ChatSystem _chatSystem = default!;
-    [Dependency] private readonly InstalledMechBatterySystem _installedMechBattery = default!;
-    [Dependency] private readonly MobThresholdSystem _mobThresholdSystem = default!;
+    [Dependency] private ChatSystem _chatSystem = default!;
+    [Dependency] private InstalledMechBatterySystem _installedMechBattery = default!;
+    [Dependency] private MobThresholdSystem _mobThresholdSystem = default!;
 
     private static readonly ProtoId<DamageTypePrototype> ManglenessDamageType = "Mangleness";
 
