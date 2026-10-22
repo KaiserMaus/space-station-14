@@ -140,13 +140,18 @@
   description: A security flare gun modification that allows for the safe launch of any hand grenade over long distances. "Warning" Firing at close range or directly at obstacles is not recommended — risk of grenade bounce-back.
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/grenadegun_security.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/m79_security_x48.rsi
     layers:
       - state: icon
         map: ["enum.GunVisualLayers.Base"]
   - type: Item
     size: Normal
-    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/grenadegun_security.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/m79_security.rsi
+  - type: Clothing
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/m79_security.rsi
+    slots:
+    - Back
+    - suitStorage
   - type: ItemSlots
     slots:
       gun_chamber:
@@ -179,12 +184,12 @@
   description: A single-shot, break-action grenade launcher. It is a powerful weapon that can fire a variety of grenades and hand granades.
   components:
   - type: Sprite
-    sprite: _RMC14/Objects/Weapons/Guns/Launchers/m79/big.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/m79_x48.rsi
     layers:
-      - state: base
+      - state: icon
         map: ["enum.GunVisualLayers.Base"]
   - type: Clothing
-    sprite: _RMC14/Objects/Weapons/Guns/Launchers/m79/tiny.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/m79.rsi
     slots:
     - Back
     - suitStorage
@@ -192,7 +197,7 @@
     size: Huge
     shape:
     - 0,0,4,2
-    sprite: _RMC14/Objects/Weapons/Guns/Launchers/m79/tiny.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/m79.rsi
   - type: Gun
     fireRate: 1.35
     selectedMode: SemiAuto

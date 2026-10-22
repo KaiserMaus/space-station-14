@@ -2960,7 +2960,7 @@
   id: UplinkGrenadeLauncherM79
   name: uplink-grenade-launcher-m79-name
   description: uplink-grenade-launcher-m79-desc
-  icon: { sprite: _RMC14/Objects/Weapons/Guns/Launchers/m79/big.rsi, state: base }
+  icon: { sprite: _Sunrise/Objects/Weapons/Guns/Launchers/m79_x48.rsi, state: icon }
   productEntity: BriefcaseWeaponM79Filled
   discountCategory: veryRareDiscounts
   discountDownTo:

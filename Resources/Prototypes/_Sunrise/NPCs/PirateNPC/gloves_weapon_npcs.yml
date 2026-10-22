@@ -196,7 +196,7 @@
   - type: Clothing
     clothingVisuals:
       gloves:
-      - sprite: _RMC14/Objects/Weapons/Guns/Launchers/m79/tiny.rsi
+      - sprite: _Sunrise/Objects/Weapons/Guns/Launchers/m79.rsi
         state: wielded-inhand-left
 
 - type: entity
