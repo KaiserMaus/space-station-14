@@ -43,6 +43,9 @@
   - type: EyeCursorOffset
     maxOffset: 4
     pvsIncrease: 0.4
+  - type: Tag
+    tags:
+    - SunriseGrenadeLauncherBandolierCompatible
 
 - type: entity
   name: GL-70
@@ -153,7 +156,7 @@
     delay: 0.85 #No script abuse
   - type: Tag
     tags:
-    - Sidearm
+    - SunriseGrenadeLauncherBandolierCompatible
 
 - type: entity
   name: m79 grenade launcher
