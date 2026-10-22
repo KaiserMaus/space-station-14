@@ -45981,8 +45981,8 @@ entities:
         discountDownTo: {}
         disableRefund: False
         costModifiersBySourceId: {}
-      - id: ERTUplinkWeaponGrenadeLauncherGL70Flash
-        productEntity: WeaponGrenadeLauncherGL70Flash
+      - id: ERTUplinkWeaponGrenadeLauncherSecurityRevolver
+        productEntity: WeaponGrenadeLauncherSecurityRevolver
         name: null
         discountCategory: null
         description: null

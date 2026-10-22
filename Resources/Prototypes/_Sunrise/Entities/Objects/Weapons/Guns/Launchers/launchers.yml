@@ -4,17 +4,17 @@
   id: WeaponLauncherRL5
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Guns/HMGs/rpg/big.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/rpg/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: _Sunrise/Objects/Weapons/Guns/HMGs/rpg/tiny.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/rpg/tiny.rsi
   - type: Item
     size: Ginormous
-    sprite: _Sunrise/Objects/Weapons/Guns/HMGs/rpg/tiny.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/rpg/tiny.rsi
   - type: Gun
     fireRate: 0.5
     soundGunshot:
@@ -43,9 +43,6 @@
   - type: EyeCursorOffset
     maxOffset: 4
     pvsIncrease: 0.4
-  - type: Tag
-    tags:
-    - SunriseGrenadeLauncherBandolierCompatible
 
 - type: entity
   name: GL-70
@@ -53,12 +50,12 @@
   id: WeaponGrenadeLauncherGL70
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Guns/HMGs/gl-64/big.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/gl70/big.rsi
     layers:
     - state: icon
       map: ["enum.GunVisualLayers.Base"]
   - type: Clothing
-    sprite: _Sunrise/Objects/Weapons/Guns/HMGs/gl-64/tiny.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/gl70/tiny.rsi
     slots:
     - Back
     - suitStorage
@@ -66,7 +63,7 @@
     size: Huge
     shape:
     - 0,0,4,2
-    sprite: _Sunrise/Objects/Weapons/Guns/HMGs/gl-64/tiny.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/gl70/tiny.rsi
   - type: AmmoCounter
   - type: Gun
     fireRate: 1.5
@@ -102,22 +99,39 @@
   - type: EyeCursorOffset
     maxOffset: 4
     pvsIncrease: 0.4
+  - type: Tag
+    tags:
+    - SunriseGrenadeLauncherBandolierCompatible
 
 - type: entity
-  name: GL-70
-  parent: WeaponGrenadeLauncherGL70
-  id: WeaponGrenadeLauncherGL70Flash
-  suffix: GrenadeFlash
+  name: security revolver launcher
+  parent: [WeaponGrenadeLauncherGL70, BaseSecurityContraband]
+  id: WeaponGrenadeLauncherSecurityRevolver
+  description: A five-shot security grenade launcher designed to fire both standard and hand grenades.
   components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/grenadegun_security.rsi
+    layers:
+    - state: icon
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.RevolverVisuals.CylinderOpen:
+        enum.GunVisualLayers.Base:
+          True: { state: bolt-open }
+          False: { state: icon }
+  - type: Clothing
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/grenadegun_security.rsi
+  - type: Item
+    sprite: _Sunrise/Objects/Weapons/Guns/Launchers/grenadegun_security.rsi
   - type: RevolverAmmoProvider
-    whitelist:
-      tags:
-      - Grenade
-      - HandGrenadeAmmo
-    proto: GrenadeFlashBang
-    capacity: 6
-    chambers: [ True, True, True, True, True, True ]
-    ammoSlots: [ null, null, null, null, null, null ]
+    capacity: 5
+    chambers: [ True, True, True, True, True ]
+    ammoSlots: [ null, null, null, null, null ]
+  - type: Construction
+    graph: GrenadeLauncherSecurity
+    node: revolver
 
 - type: entity
   name: security grenade Launcher
@@ -128,7 +142,7 @@
   - type: Sprite
     sprite: _Sunrise/Objects/Weapons/Guns/Launchers/grenadegun_security.rsi
     layers:
-      - state: base
+      - state: icon
         map: ["enum.GunVisualLayers.Base"]
   - type: Item
     size: Normal

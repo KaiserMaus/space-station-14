@@ -28,7 +28,7 @@
           bounds: "-0.25,-0.25,0.25,0.25"
         density: 50
         mask:
-        - Impassable
+        - ItemMask
         restitution: 0.05
         friction: 0.5
       mob-trigger:

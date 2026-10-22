@@ -933,8 +933,8 @@
     stock: 5
 
 - type: listing
-  id: ERTUplinkWeaponGrenadeLauncherGL70Flash
-  productEntity: WeaponGrenadeLauncherGL70Flash
+  id: ERTUplinkWeaponGrenadeLauncherSecurityRevolver
+  productEntity: WeaponGrenadeLauncherSecurityRevolver
   icon: { sprite: _Sunrise/Interface/Misc/nt_icons.rsi, state: gl79 }
   cost:
     Bluecrystal: 20
