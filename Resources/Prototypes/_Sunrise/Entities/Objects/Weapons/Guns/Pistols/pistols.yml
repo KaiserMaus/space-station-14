@@ -151,12 +151,11 @@
     sprite: _Sunrise/Objects/Weapons/Guns/Pistols/mateba.rsi
   - type: Clothing
     sprite: _Sunrise/Objects/Weapons/Guns/Pistols/mateba.rsi
-  # В RSI этой версии Mateba пока отсутствует отдельный кадр открытого барабана.
   - type: GenericVisualizer
     visuals:
       enum.RevolverVisuals.CylinderOpen:
         enum.GunVisualLayers.Base:
-          True: { state: icon }
+          True: { state: bolt-open }
           False: { state: icon }
   - type: StealTarget
     stealGroup: HOSWeapon
@@ -237,7 +236,12 @@
     available:
     - enum.GunVisualLayers.Base:
         icon: ""
+      cylinderOpen:
+        bolt-open: ""
+    - enum.GunVisualLayers.Base:
         icon_black: ""
+      cylinderOpen:
+        bolt-open_black: ""
   - type: GenericVisualizer
     visuals:
       enum.RevolverVisuals.CylinderOpen:

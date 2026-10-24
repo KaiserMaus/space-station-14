@@ -101,6 +101,14 @@
   - type: Appearance
   - type: StaticPrice
     price: 1500
+  # Sunrise start - отображение открытого барабана
+  - type: GenericVisualizer
+    visuals:
+      enum.RevolverVisuals.CylinderOpen:
+        enum.GunVisualLayers.Base:
+          True: { state: bolt-open }
+          False: { state: base }
+  # Sunrise end
   # Sunrise - Start
   - type: StealTarget
     stealGroup: OfficerHandgun

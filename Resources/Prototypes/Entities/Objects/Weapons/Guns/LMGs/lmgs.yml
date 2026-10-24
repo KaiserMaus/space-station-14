@@ -113,6 +113,7 @@
   - type: ItemSlots
     slots:
       gun_magazine:
+        startingItem: MagazineRifleBoxSP
         swap: false
   # Sunrise edit end
   - type: Appearance
