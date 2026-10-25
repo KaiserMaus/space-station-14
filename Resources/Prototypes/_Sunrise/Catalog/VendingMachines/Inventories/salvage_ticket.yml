@@ -1,4 +1,4 @@
-﻿# equipment
+# equipment
 
 - type: listing
   id: VendorSalvageClothingMaskGasExplorer
@@ -269,14 +269,6 @@
   productEntity: CrateShelfMosin
   cost:
     SalvageTicket: 300
-  categories:
-  - SalvageWeapons
-
-- type: listing
-  id: VendorSalvageWeaponShotgunGA12
-  productEntity: WeaponShotgunGA12
-  cost:
-    SalvageTicket: 250
   categories:
   - SalvageWeapons
 

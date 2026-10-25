@@ -1627,9 +1627,9 @@
       prob: 0.25
     - id: SpeedLoaderMagnumAP
       prob: 0.05
-    - id: WeaponRevolverSnubRevolver
+    - id: WeaponRevolverPython
       prob: 0.9
-    - id: WeaponRevolverSnubRevolver
+    - id: WeaponRevolverPython
       prob: 0.3
     - id: PirateMedSpawner05
     - id: BrutepackAdvanced1
@@ -1987,9 +1987,9 @@
       prob: 0.25
     - id: SpeedLoaderMagnumAP
       prob: 0.05
-    - id: WeaponRevolverSnubRevolver
+    - id: WeaponRevolverPython
       prob: 0.9
-    - id: WeaponRevolverSnubRevolver
+    - id: WeaponRevolverPython
       prob: 0.3
     - id: PirateMedSpawner05
     - id: BrutepackAdvanced1

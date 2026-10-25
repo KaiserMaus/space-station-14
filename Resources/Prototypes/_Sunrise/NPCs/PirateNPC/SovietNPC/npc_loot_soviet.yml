@@ -941,9 +941,6 @@
     # Cash
     - id: PirateCashSpawner03
     # Weapons
-    - id: WeaponShotgunGA12
-      prob: 0.25
-      orGroup: Weapons
     - id: WeaponShotgunEnforcer
       prob: 0.25
       orGroup: Weapons

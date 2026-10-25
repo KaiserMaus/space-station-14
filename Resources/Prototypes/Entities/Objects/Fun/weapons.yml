@@ -81,9 +81,9 @@
   description: Looks almost like the real thing! Ages 8 and up.
   components:
   - type: Sprite
-    sprite: Objects/Fun/capgun.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Revolvers/capgun.rsi # Sunrise-Edit
     layers:
-    - state: base
+    - state: icon
       map: ["enum.GunVisualLayers.Base"]
   # Sunrise start - визуал открытого барабана
   - type: Appearance
@@ -92,14 +92,14 @@
       enum.RevolverVisuals.CylinderOpen:
         enum.GunVisualLayers.Base:
           True: { state: bolt-open }
-          False: { state: base }
+          False: { state: icon }
   # Sunrise end
   - type: Item
     shape:
     - 0,0,1,0
     - 0,1,0,1
-    storedOffset: -2,-7
-    sprite: Objects/Fun/capgun.rsi
+    #storedOffset: -2,-7 # Sunrise-Edit
+    sprite: _Sunrise/Objects/Weapons/Guns/Revolvers/capgun.rsi # Sunrise-Edit
   - type: Tag
     tags:
     - Sidearm

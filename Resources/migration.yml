@@ -1315,4 +1315,7 @@ ClothingOuterArmorBlueShield: null
 # 2026-10-11
 SecBreachingHammer: SunriseDetonatorBundleSpawner
 SyndieBreachingHammer: SunriseDetonatorBundleSpawner
+WeaponRevolverSnubRevolver: WeaponRevolverPython
+WeaponShotgunGA12: null
+SnubRevolverBox: null
 # region Sunrise-End
