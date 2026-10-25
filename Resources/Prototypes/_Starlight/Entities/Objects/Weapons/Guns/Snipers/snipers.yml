@@ -6,6 +6,11 @@
   components:
   - type: Sprite
     sprite: _Starlight/Objects/Weapons/Guns/Snipers/makeshift_rifle.rsi
+  # Sunrise added start - анимация ручного цикла затвора
+  - type: Appearance
+  - type: BallisticCycleVisuals
+    closedState: base
+  # Sunrise added end
   - type: Clothing
     sprite: _Starlight/Objects/Weapons/Guns/Snipers/makeshift_rifle.rsi
   - type: Item

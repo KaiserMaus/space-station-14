@@ -72,10 +72,15 @@
     sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
     layers:
     - state: base
+      map: [ "enum.GunVisualLayers.Base" ] # Sunrise-Edit - слой для анимации затвора
     - state: base1
       map: [ "enum.SolutionContainerLayers.Fill" ]
       visible: false
   - type: Appearance
+  # Sunrise added start - анимация ручного цикла затвора
+  - type: BallisticCycleVisuals
+    closedState: base
+  # Sunrise added end
   - type: SolutionContainerVisuals
     maxFillLevels: 1
     fillBaseName: base
@@ -135,6 +140,11 @@
     sprite: Objects/Weapons/Guns/Snipers/heavy_sniper.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/Snipers/heavy_sniper.rsi
+  # Sunrise added start - анимация ручного цикла затвора
+  - type: Appearance
+  - type: BallisticCycleVisuals
+    closedState: base
+  # Sunrise added end
   - type: GunRequiresWield
   - type: Gun
     pump: true # Sunrise-Edit
