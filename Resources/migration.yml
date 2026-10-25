@@ -1310,4 +1310,8 @@ ClothingHandsPowerGlovesUplinkNTERTCBURN: null
 ClothingHandsPowerGlovesUplinkNTERTEpsilon: null
 # 2026-09-10
 ClothingOuterArmorBlueShield: null
+# 2026-10-25
+WeaponRevolverSnubRevolver: WeaponRevolverPython
+WeaponShotgunGA12: WeaponShotgunCycler
+SnubRevolverBox: null
 # region Sunrise-End
