@@ -3,6 +3,7 @@ using Content.Shared.Interaction.Events;
 using Content.Shared.Popups;
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Systems;
+using Content.Shared.Verbs;
 using Robust.Shared.Containers;
 
 namespace Content.Shared._Sunrise.Weapons.Ranged;
@@ -28,6 +29,7 @@ public sealed partial class BeltFeedSystem : EntitySystem
         SubscribeLocalEvent<BeltFeedComponent, BoltClosedChangedEvent>(OnBoltClosedChanged);
         SubscribeLocalEvent<BeltFeedComponent, AttemptShootEvent>(OnAttemptShoot);
         SubscribeLocalEvent<BeltFeedComponent, UseInHandEvent>(OnUseInHand, before: [typeof(SharedGunSystem)]);
+        SubscribeLocalEvent<BeltFeedComponent, GetVerbsEvent<AlternativeVerb>>(OnAlternativeInteract);
         SubscribeLocalEvent<BeltFeedComponent, EntInsertedIntoContainerMessage>(OnMagazineInserted);
         SubscribeLocalEvent<BeltFeedComponent, EntRemovedFromContainerMessage>(OnMagazineRemoved);
     }
@@ -79,6 +81,27 @@ public sealed partial class BeltFeedSystem : EntitySystem
 
         if (ent.Comp.RequiresCycle && TryCycle((ent.Owner, ent.Comp), args.User))
             args.Handled = true;
+    }
+
+    private void OnAlternativeInteract(Entity<BeltFeedComponent> ent, ref GetVerbsEvent<AlternativeVerb> args)
+    {
+        if (!args.CanAccess || !args.CanInteract || !args.CanComplexInteract || args.Hands == null ||
+            !_chamberQuery.TryComp(ent, out var chamber) || chamber.BoltClosed != true ||
+            !_itemSlotsQuery.TryComp(ent, out var slots) ||
+            !_itemSlots.TryGetSlot(ent, MagazineSlot, out var magazineSlot, slots) ||
+            magazineSlot.Item == null)
+        {
+            return;
+        }
+
+        var user = args.User;
+
+        args.Verbs.Add(new AlternativeVerb
+        {
+            Text = Loc.GetString("gun-chamber-bolt-open"),
+            Priority = 3,
+            Act = () => _gun.SetBoltClosed(ent, chamber, false, user),
+        });
     }
 
     private void OnMagazineInserted(Entity<BeltFeedComponent> ent, ref EntInsertedIntoContainerMessage args)

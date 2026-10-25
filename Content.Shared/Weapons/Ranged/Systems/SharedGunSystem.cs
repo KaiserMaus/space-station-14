@@ -726,6 +726,10 @@ public abstract partial class SharedGunSystem : EntitySystem
         if (_hands.GetActiveItem(user) is not { } gunUid)
             return;
 
+        // Sunrise-Edit - ленточный пулемёт должен обновлять состояние досылания через собственную механику.
+        if (TryHandleBeltFeedCock(gunUid, user))
+            return;
+
         if (TryComp<ChamberMagazineAmmoProviderComponent>(gunUid, out var chamber))
         {
             UseChambered(gunUid, chamber, user);

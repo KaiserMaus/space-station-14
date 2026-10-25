@@ -1,3 +1,4 @@
+using Content.Shared._Sunrise.Weapons.Ranged;
 using Content.Shared.Weapons.Ranged.Components;
 
 // Файл намеренно находится в _Sunrise, но расширяет ванильный partial-класс.
@@ -6,6 +7,17 @@ namespace Content.Shared.Weapons.Ranged.Systems;
 
 public abstract partial class SharedGunSystem
 {
+    [Dependency] private BeltFeedSystem _beltFeed = default!;
+
+    private bool TryHandleBeltFeedCock(EntityUid uid, EntityUid user)
+    {
+        if (!TryComp<BeltFeedComponent>(uid, out var beltFeed))
+            return false;
+
+        _beltFeed.TryCycle((uid, beltFeed), user);
+        return true;
+    }
+
     /// <summary>
     /// Пытается вручную извлечь патрон из патронника без автоматического досылания следующего.
     /// </summary>
