@@ -5,6 +5,7 @@ using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Systems;
 using Content.Shared.Verbs;
 using Robust.Shared.Containers;
+using Robust.Shared.Timing;
 
 namespace Content.Shared._Sunrise.Weapons.Ranged;
 
@@ -18,6 +19,7 @@ public sealed partial class BeltFeedSystem : EntitySystem
     [Dependency] private SharedPopupSystem _popup = default!;
     [Dependency] private EntityQuery<ItemSlotsComponent> _itemSlotsQuery = default!;
     [Dependency] private EntityQuery<ChamberMagazineAmmoProviderComponent> _chamberQuery = default!;
+    [Dependency] private IGameTiming _timing = default!;
 
     private const string MagazineSlot = "gun_magazine";
 
@@ -107,14 +109,18 @@ public sealed partial class BeltFeedSystem : EntitySystem
 
     private void OnMagazineInserted(Entity<BeltFeedComponent> ent, ref EntInsertedIntoContainerMessage args)
     {
-        if (args.Container.ID == MagazineSlot)
-            SetRequiresCycle(ent, true);
+        if (args.Container.ID != MagazineSlot || _timing.ApplyingState)
+            return;
+
+        SetRequiresCycle(ent, true);
     }
 
     private void OnMagazineRemoved(Entity<BeltFeedComponent> ent, ref EntRemovedFromContainerMessage args)
     {
-        if (args.Container.ID == MagazineSlot)
-            SetRequiresCycle(ent, true);
+        if (args.Container.ID != MagazineSlot || _timing.ApplyingState)
+            return;
+
+        SetRequiresCycle(ent, true);
     }
 
     /// <summary>
@@ -149,7 +155,7 @@ public sealed partial class BeltFeedSystem : EntitySystem
         if (magazineSlot.Item != null)
         {
             if (!quiet && user != null)
-                _popup.PopupPredicted(Loc.GetString("belt-feed-cycle-remove-magazine"), ent, user.Value);
+                _popup.PopupClient(Loc.GetString("belt-feed-cycle-remove-magazine"), ent, user.Value);
 
             return false;
         }
@@ -158,7 +164,7 @@ public sealed partial class BeltFeedSystem : EntitySystem
             return true;
 
         if (!quiet && user != null)
-            _popup.PopupPredicted(Loc.GetString("belt-feed-cycle-cover-open"), ent, user.Value);
+            _popup.PopupClient(Loc.GetString("belt-feed-cycle-cover-open"), ent, user.Value);
 
         return false;
     }
