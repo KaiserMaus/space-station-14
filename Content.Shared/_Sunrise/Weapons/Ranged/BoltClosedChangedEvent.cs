@@ -1,7 +1,7 @@
 namespace Content.Shared._Sunrise.Weapons.Ranged;
 
 /// <summary>
-/// Вызывается направленно на оружии после изменения положения затвора.
+/// Raised on a weapon after its bolt state changes.
 /// </summary>
 [ByRefEvent]
 public readonly record struct BoltClosedChangedEvent(bool Closed);

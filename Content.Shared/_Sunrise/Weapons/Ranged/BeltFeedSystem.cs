@@ -9,7 +9,7 @@ using Robust.Shared.Containers;
 namespace Content.Shared._Sunrise.Weapons.Ranged;
 
 /// <summary>
-/// Управляет доступом к коробу с лентой через положение затвора.
+/// Controls access to the ammunition box through the weapon's feed cover state.
 /// </summary>
 public sealed partial class BeltFeedSystem : EntitySystem
 {
@@ -48,7 +48,9 @@ public sealed partial class BeltFeedSystem : EntitySystem
     private void OnBoltClosedChanged(Entity<BeltFeedComponent> ent, ref BoltClosedChangedEvent args)
     {
         SetMagazineLock(ent, args.Closed);
-        UpdateRequiresCycle(ent);
+
+        if (!args.Closed)
+            SetRequiresCycle(ent, true);
     }
 
     private void OnAttemptShoot(Entity<BeltFeedComponent> ent, ref AttemptShootEvent args)
@@ -88,8 +90,7 @@ public sealed partial class BeltFeedSystem : EntitySystem
         if (!args.CanAccess || !args.CanInteract || !args.CanComplexInteract || args.Hands == null ||
             !_chamberQuery.TryComp(ent, out var chamber) || chamber.BoltClosed != true ||
             !_itemSlotsQuery.TryComp(ent, out var slots) ||
-            !_itemSlots.TryGetSlot(ent, MagazineSlot, out var magazineSlot, slots) ||
-            magazineSlot.Item == null)
+            !_itemSlots.TryGetSlot(ent, MagazineSlot, out _, slots))
         {
             return;
         }
@@ -107,19 +108,19 @@ public sealed partial class BeltFeedSystem : EntitySystem
     private void OnMagazineInserted(Entity<BeltFeedComponent> ent, ref EntInsertedIntoContainerMessage args)
     {
         if (args.Container.ID == MagazineSlot)
-            UpdateRequiresCycle(ent);
+            SetRequiresCycle(ent, true);
     }
 
     private void OnMagazineRemoved(Entity<BeltFeedComponent> ent, ref EntRemovedFromContainerMessage args)
     {
         if (args.Container.ID == MagazineSlot)
-            UpdateRequiresCycle(ent);
+            SetRequiresCycle(ent, true);
     }
 
     /// <summary>
-    /// Пытается передёрнуть затвор после работы с ленточным питанием.
+    /// Attempts to cycle the weapon after manipulating its belt feed.
     /// </summary>
-    public bool TryCycle(Entity<BeltFeedComponent?> ent, EntityUid user)
+    public bool TryCycle(Entity<BeltFeedComponent?> ent, EntityUid? user)
     {
         if (!Resolve(ent, ref ent.Comp) || !CanCycle(ent, user))
             return false;
@@ -129,9 +130,9 @@ public sealed partial class BeltFeedSystem : EntitySystem
     }
 
     /// <summary>
-    /// Проверяет, можно ли передёрнуть затвор.
+    /// Checks whether the weapon can be cycled.
     /// </summary>
-    public bool CanCycle(Entity<BeltFeedComponent?> ent, EntityUid user, bool quiet = false)
+    public bool CanCycle(Entity<BeltFeedComponent?> ent, EntityUid? user, bool quiet = false)
     {
         if (!Resolve(ent, ref ent.Comp) || !_chamberQuery.TryComp(ent, out var chamber))
             return false;
@@ -147,8 +148,8 @@ public sealed partial class BeltFeedSystem : EntitySystem
 
         if (magazineSlot.Item != null)
         {
-            if (!quiet)
-                _popup.PopupPredicted(Loc.GetString("belt-feed-cycle-remove-magazine"), ent, user);
+            if (!quiet && user != null)
+                _popup.PopupPredicted(Loc.GetString("belt-feed-cycle-remove-magazine"), ent, user.Value);
 
             return false;
         }
@@ -156,13 +157,13 @@ public sealed partial class BeltFeedSystem : EntitySystem
         if (_gun.CanEjectChamberedRound((ent.Owner, chamber)))
             return true;
 
-        if (!quiet)
-            _popup.PopupPredicted(Loc.GetString("belt-feed-cycle-cover-open"), ent, user);
+        if (!quiet && user != null)
+            _popup.PopupPredicted(Loc.GetString("belt-feed-cycle-cover-open"), ent, user.Value);
 
         return false;
     }
 
-    private void DoCycle(Entity<BeltFeedComponent> ent, EntityUid user)
+    private void DoCycle(Entity<BeltFeedComponent> ent, EntityUid? user)
     {
         var chamber = _chamberQuery.Comp(ent);
 
@@ -173,8 +174,8 @@ public sealed partial class BeltFeedSystem : EntitySystem
             return;
         }
 
-        _gun.UseChambered(ent, chamber, user);
-        SetRequiresCycle(ent, false);
+        _gun.UseChamberedInternal(ent, chamber, user);
+        UpdateRequiresCycle(ent);
     }
 
     private void UpdateRequiresCycle(Entity<BeltFeedComponent> ent)

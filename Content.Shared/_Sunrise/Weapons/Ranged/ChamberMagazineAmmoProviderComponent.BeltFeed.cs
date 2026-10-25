@@ -6,7 +6,7 @@ namespace Content.Shared.Weapons.Ranged.Components;
 public sealed partial class ChamberMagazineAmmoProviderComponent
 {
     /// <summary>
-    /// Оставлять ли затвор открытым после выстрела последнего патрона.
+    /// Whether the bolt opens after firing the final round.
     /// </summary>
     [DataField, AutoNetworkedField]
     public bool BoltOpenOnEmpty = true;

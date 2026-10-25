@@ -97,6 +97,19 @@ public abstract partial class SharedGunSystem
     /// </summary>
     public void UseChambered(EntityUid uid, ChamberMagazineAmmoProviderComponent component, EntityUid? user = null)
     {
+        // Sunrise-Edit start - ленточное оружие использует собственный цикл передёргивания.
+        if (TryComp<BeltFeedComponent>(uid, out var beltFeed))
+        {
+            _beltFeed.TryCycle((uid, beltFeed), user);
+            return;
+        }
+        // Sunrise-Edit end
+
+        UseChamberedInternal(uid, component, user);
+    }
+
+    internal void UseChamberedInternal(EntityUid uid, ChamberMagazineAmmoProviderComponent component, EntityUid? user = null)
+    {
         if (component.BoltClosed == false)
         {
             ToggleBolt(uid, component, user);

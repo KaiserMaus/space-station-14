@@ -41,9 +41,6 @@
         params:
           volume: -10
           pitch: 0.8
-      soundAutoEject:
-        path: /Audio/Weapons/Guns/MagOut/lmg_magout.ogg
-      autoEject: true
     - type: ItemSlots
       slots:
         gun_magazine:

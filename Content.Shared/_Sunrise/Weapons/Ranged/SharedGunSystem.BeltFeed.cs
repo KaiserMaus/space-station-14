@@ -9,17 +9,8 @@ public abstract partial class SharedGunSystem
 {
     [Dependency] private BeltFeedSystem _beltFeed = default!;
 
-    private bool TryHandleBeltFeedCock(EntityUid uid, EntityUid user)
-    {
-        if (!TryComp<BeltFeedComponent>(uid, out var beltFeed))
-            return false;
-
-        _beltFeed.TryCycle((uid, beltFeed), user);
-        return true;
-    }
-
     /// <summary>
-    /// Пытается вручную извлечь патрон из патронника без автоматического досылания следующего.
+    /// Attempts to eject the chambered round without automatically feeding another one.
     /// </summary>
     public bool TryEjectChamberedRound(
         Entity<ChamberMagazineAmmoProviderComponent?> ent,
@@ -33,7 +24,7 @@ public abstract partial class SharedGunSystem
     }
 
     /// <summary>
-    /// Проверяет, есть ли в оружии патрон, который можно извлечь вручную.
+    /// Checks whether the weapon has a round that can be ejected manually.
     /// </summary>
     public bool CanEjectChamberedRound(Entity<ChamberMagazineAmmoProviderComponent?> ent)
     {
