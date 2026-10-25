@@ -732,11 +732,11 @@ public abstract partial class SharedGunSystem : EntitySystem
         }
         else if (TryComp<BallisticAmmoProviderComponent>(gunUid, out var ballistic))
         {
-            ManualCycle((gunUid, ballistic), TransformSystem.GetMapCoordinates(gunUid), user);
+            TryCycleBallistic((gunUid, ballistic), TransformSystem.GetMapCoordinates(gunUid), user);
         }
         else if (TryComp<RevolverAmmoProviderComponent>(gunUid, out var revolver))
         {
-            EmptyRevolver((gunUid, revolver), user);
+            TryToggleRevolverCylinder((gunUid, revolver), user);
         }
     }
     // Sunrise added end
@@ -791,4 +791,13 @@ public enum AmmoVisuals : byte
     HasAmmo, // used for generic visualizers. c# stuff can just check ammocount != 0
     MagLoaded,
     BoltClosed,
+    CycleCount, // Sunrise-Edit - счётчик ручных циклов для клиентской анимации затвора
 }
+
+// Sunrise added start - отдельный визуальный ключ состояния барабана
+[Serializable, NetSerializable]
+public enum RevolverVisuals : byte
+{
+    CylinderOpen,
+}
+// Sunrise added end

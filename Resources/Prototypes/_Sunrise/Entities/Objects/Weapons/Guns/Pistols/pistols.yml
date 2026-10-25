@@ -151,6 +151,12 @@
     sprite: _Sunrise/Objects/Weapons/Guns/Pistols/mateba.rsi
   - type: Clothing
     sprite: _Sunrise/Objects/Weapons/Guns/Pistols/mateba.rsi
+  - type: GenericVisualizer
+    visuals:
+      enum.RevolverVisuals.CylinderOpen:
+        enum.GunVisualLayers.Base:
+          True: { state: bolt-open }
+          False: { state: icon }
   - type: StealTarget
     stealGroup: HOSWeapon
 
@@ -223,11 +229,28 @@
     layers:
     - state: icon
       map: [ "enum.GunVisualLayers.Base" ]
+    - state: bolt-open
+      map: [ cylinderOpen ]
+      visible: false
   - type: RandomSprite
     available:
     - enum.GunVisualLayers.Base:
         icon: ""
+      cylinderOpen:
+        bolt-open: ""
+    - enum.GunVisualLayers.Base:
         icon_black: ""
+      cylinderOpen:
+        bolt-open_black: ""
+  - type: GenericVisualizer
+    visuals:
+      enum.RevolverVisuals.CylinderOpen:
+        enum.GunVisualLayers.Base:
+          True: { visible: false }
+          False: { visible: true }
+        cylinderOpen:
+          True: { visible: true }
+          False: { visible: false }
   - type: Clothing
     sprite: _RMC14/Objects/Weapons/Guns/Pistols/spearhead.rsi
   - type: Item

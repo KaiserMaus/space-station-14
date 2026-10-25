@@ -21445,7 +21445,7 @@ entities:
     - type: CollisionWake
       enabled: False
     - type: Conveyed
-- proto: WeaponShotgunGA12
+- proto: WeaponShotgunCycler
   entities:
   - uid: 1987
     components:

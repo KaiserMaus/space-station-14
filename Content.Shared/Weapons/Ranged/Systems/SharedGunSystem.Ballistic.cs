@@ -50,8 +50,9 @@ public abstract partial class SharedGunSystem
         if (args.Handled)
             return;
 
-        ManualCycle(ent, TransformSystem.GetMapCoordinates(ent), args.User);
-        args.Handled = true;
+        // Sunrise-Edit - публичный путь ручного цикла для переиспользования и тестирования
+        if (TryCycleBallistic(ent, TransformSystem.GetMapCoordinates(ent), args.User))
+            args.Handled = true;
     }
 
     private void OnBallisticInteractUsing(Entity<BallisticAmmoProviderComponent> ent, ref InteractUsingEvent args)
@@ -171,7 +172,7 @@ public abstract partial class SharedGunSystem
             {
                 Text = Loc.GetString("gun-ballistic-cycle"),
                 Disabled = GetBallisticShots(component) == 0,
-                Act = () => ManualCycle((uid, component), TransformSystem.GetMapCoordinates(uid), args.User),
+                Act = () => TryCycleBallistic((uid, component), TransformSystem.GetMapCoordinates(uid), args.User), // Sunrise-Edit
             });
 
         }
@@ -185,10 +186,29 @@ public abstract partial class SharedGunSystem
         args.PushMarkup(Loc.GetString("gun-magazine-examine", ("color", AmmoExamineColor), ("count", GetBallisticShots(ent.Comp))));
     }
 
-    private void ManualCycle(Entity<BallisticAmmoProviderComponent> ent, MapCoordinates coordinates, EntityUid? user = null, GunComponent? gunComp = null)
+    // Sunrise edit start - разделение проверки и выполнения ручного цикла
+    public bool TryCycleBallistic(Entity<BallisticAmmoProviderComponent> ent,
+        MapCoordinates coordinates,
+        EntityUid? user = null,
+        GunComponent? gunComp = null)
     {
-        if (!ent.Comp.Cycleable)
-            return;
+        if (!CanCycleBallistic(ent))
+            return false;
+
+        CycleBallistic(ent, coordinates, user, gunComp);
+        return true;
+    }
+
+    public bool CanCycleBallistic(Entity<BallisticAmmoProviderComponent> ent)
+    {
+        return ent.Comp.Cycleable;
+    }
+
+    private void CycleBallistic(Entity<BallisticAmmoProviderComponent> ent,
+        MapCoordinates coordinates,
+        EntityUid? user,
+        GunComponent? gunComp)
+    {
 
         // Reset shotting for cycling
         if (Resolve(ent, ref gunComp, false) &&
@@ -201,6 +221,11 @@ public abstract partial class SharedGunSystem
 
         Audio.PlayPredicted(ent.Comp.SoundRack, ent, user);
 
+        // Sunrise added start - передаём отдельный импульс для краткой анимации ручного цикла
+        Appearance.TryGetData<int>(ent, AmmoVisuals.CycleCount, out var cycleCount);
+        Appearance.SetData(ent, AmmoVisuals.CycleCount, cycleCount + 1);
+        // Sunrise added end
+
         var shots = GetBallisticShots(ent.Comp);
         Cycle(ent, coordinates);
 
@@ -210,6 +235,7 @@ public abstract partial class SharedGunSystem
         UpdateBallisticAppearance(ent);
         UpdateAmmoCount(ent);
     }
+    // Sunrise edit end
 
     protected abstract void Cycle(Entity<BallisticAmmoProviderComponent> ent, MapCoordinates coordinates);
 

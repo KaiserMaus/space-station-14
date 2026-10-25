@@ -54,6 +54,12 @@ gun-revolver-insert = Inserted
 gun-revolver-spin = Spin revolver
 gun-revolver-spun = Spun
 gun-speedloader-empty = Speedloader empty
+# Sunrise added start - состояние барабана револьвера
+gun-revolver-cylinder-open = Open cylinder
+gun-revolver-cylinder-close = Close cylinder
+gun-revolver-cylinder-opened = The cylinder is open
+gun-revolver-cylinder-closed = The cylinder is closed
+# Sunrise added end
 
 # GunSpreadModifier
 examine-gun-spread-modifier-reduction = The spread has been reduced by [color=yellow]{$percentage}%[/color].

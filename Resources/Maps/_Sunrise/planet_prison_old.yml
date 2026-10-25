@@ -39477,8 +39477,8 @@ entities:
           Telecrystal: 3
         disableRefund: False
         costModifiersBySourceId: {}
-      - id: UplinkPirateSnubRevolver
-        productEntity: WeaponRevolverSnubRevolver
+      - id: UplinkPirateRevolverPython
+        productEntity: WeaponRevolverPython
         name: null
         discountCategory: null
         description: null

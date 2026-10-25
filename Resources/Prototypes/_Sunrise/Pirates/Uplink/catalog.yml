@@ -339,14 +339,6 @@
   - UplinkPirateRangedWeaponry
 
 - type: listing
-  id: UplinkPirateSnubRevolver
-  productEntity: WeaponRevolverSnubRevolver
-  cost:
-    Doubloon: 10
-  categories:
-  - UplinkPirateRangedWeaponry
-
-- type: listing
   id: UplinkPirateRevolverSpearhead
   productEntity: WeaponRevolverSpearhead
   cost:

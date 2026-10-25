@@ -24,6 +24,13 @@ public sealed partial class RevolverAmmoProviderComponent : AmmoProviderComponen
     [DataField("currentSlot")]
     public int CurrentIndex;
 
+    // Sunrise added start - отдельное состояние открытого барабана
+    /// <summary>
+    /// Открыт ли барабан револьвера.
+    /// </summary>
+    public bool CylinderOpen;
+    // Sunrise added end
+
     [DataField("capacity")]
     public int Capacity = 6;
 

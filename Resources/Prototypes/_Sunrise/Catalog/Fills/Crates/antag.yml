@@ -184,8 +184,6 @@
           prob: 0.40
         - id: WeaponSniperRepeater
           prob: 0.40
-        - id: WeaponRevolverSnubRevolver
-          prob: 0.30
         - id: WeaponShotgunTrenchgun4034Sawn
           prob: 0.30
         - id: ToolboxElectricalTurret

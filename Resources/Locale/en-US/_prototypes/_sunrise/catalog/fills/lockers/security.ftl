@@ -18,9 +18,6 @@ ent-GunSafePistolM1984 = safe
     .suffix = M1984
     .desc = { ent-GunSafeBaseSecure.desc }
 
-ent-GunSafeSnubRevolver = safe
-    .suffix = Snub Revolver
-    .desc = { ent-GunSafeBaseSecure.desc }
 
 ent-GunSafePistolVP78 = safe
     .suffix = VP-78

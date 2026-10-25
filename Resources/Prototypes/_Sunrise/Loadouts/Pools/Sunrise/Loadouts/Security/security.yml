@@ -137,16 +137,6 @@
     - MK58Box
 
 - type: loadout
-  id: SnubRevolverBox
-  startingGear: SnubRevolverBox
-
-- type: startingGear
-  id: SnubRevolverBox
-  storage:
-    back:
-    - SnubRevolverBox
-
-- type: loadout
   id: MK58GoldBox
   startingGear: MK58GoldBox
   effects:
