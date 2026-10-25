@@ -1,0 +1,196 @@
+using Content.Shared.Containers.ItemSlots;
+using Content.Shared.Interaction.Events;
+using Content.Shared.Popups;
+using Content.Shared.Weapons.Ranged.Components;
+using Content.Shared.Weapons.Ranged.Systems;
+using Robust.Shared.Containers;
+
+namespace Content.Shared._Sunrise.Weapons.Ranged;
+
+/// <summary>
+/// Управляет доступом к коробу с лентой через положение затвора.
+/// </summary>
+public sealed partial class BeltFeedSystem : EntitySystem
+{
+    [Dependency] private ItemSlotsSystem _itemSlots = default!;
+    [Dependency] private SharedGunSystem _gun = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private EntityQuery<ItemSlotsComponent> _itemSlotsQuery = default!;
+    [Dependency] private EntityQuery<ChamberMagazineAmmoProviderComponent> _chamberQuery = default!;
+
+    private const string MagazineSlot = "gun_magazine";
+
+    public override void Initialize()
+    {
+        base.Initialize();
+
+        SubscribeLocalEvent<BeltFeedComponent, ComponentStartup>(OnStartup);
+        SubscribeLocalEvent<BeltFeedComponent, BoltClosedChangedEvent>(OnBoltClosedChanged);
+        SubscribeLocalEvent<BeltFeedComponent, AttemptShootEvent>(OnAttemptShoot);
+        SubscribeLocalEvent<BeltFeedComponent, UseInHandEvent>(OnUseInHand, before: [typeof(SharedGunSystem)]);
+        SubscribeLocalEvent<BeltFeedComponent, EntInsertedIntoContainerMessage>(OnMagazineInserted);
+        SubscribeLocalEvent<BeltFeedComponent, EntRemovedFromContainerMessage>(OnMagazineRemoved);
+    }
+
+    private void OnStartup(Entity<BeltFeedComponent> ent, ref ComponentStartup args)
+    {
+        ConfigureMagazineSlot(ent);
+
+        if (!_chamberQuery.TryComp(ent, out var chamber) || chamber.BoltClosed == null)
+            return;
+
+        SetMagazineLock(ent, chamber.BoltClosed.Value);
+        UpdateRequiresCycle(ent);
+    }
+
+    private void OnBoltClosedChanged(Entity<BeltFeedComponent> ent, ref BoltClosedChangedEvent args)
+    {
+        SetMagazineLock(ent, args.Closed);
+        UpdateRequiresCycle(ent);
+    }
+
+    private void OnAttemptShoot(Entity<BeltFeedComponent> ent, ref AttemptShootEvent args)
+    {
+        if (_chamberQuery.TryComp(ent, out var chamber) && chamber.BoltClosed == false)
+        {
+            args.Cancelled = true;
+            args.Message = Loc.GetString("belt-feed-shoot-cover-open");
+            return;
+        }
+
+        if (ent.Comp.RequiresCycle)
+        {
+            args.Cancelled = true;
+            args.Message = Loc.GetString("belt-feed-shoot-cycle-required");
+        }
+    }
+
+    private void OnUseInHand(Entity<BeltFeedComponent> ent, ref UseInHandEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        if (_chamberQuery.TryComp(ent, out var chamber) && chamber.BoltClosed == false)
+        {
+            args.Handled = true;
+            TryCycle((ent.Owner, ent.Comp), args.User);
+            return;
+        }
+
+        if (ent.Comp.RequiresCycle && TryCycle((ent.Owner, ent.Comp), args.User))
+            args.Handled = true;
+    }
+
+    private void OnMagazineInserted(Entity<BeltFeedComponent> ent, ref EntInsertedIntoContainerMessage args)
+    {
+        if (args.Container.ID == MagazineSlot)
+            UpdateRequiresCycle(ent);
+    }
+
+    private void OnMagazineRemoved(Entity<BeltFeedComponent> ent, ref EntRemovedFromContainerMessage args)
+    {
+        if (args.Container.ID == MagazineSlot)
+            UpdateRequiresCycle(ent);
+    }
+
+    /// <summary>
+    /// Пытается передёрнуть затвор после работы с ленточным питанием.
+    /// </summary>
+    public bool TryCycle(Entity<BeltFeedComponent?> ent, EntityUid user)
+    {
+        if (!Resolve(ent, ref ent.Comp) || !CanCycle(ent, user))
+            return false;
+
+        DoCycle((ent.Owner, ent.Comp), user);
+        return true;
+    }
+
+    /// <summary>
+    /// Проверяет, можно ли передёрнуть затвор.
+    /// </summary>
+    public bool CanCycle(Entity<BeltFeedComponent?> ent, EntityUid user, bool quiet = false)
+    {
+        if (!Resolve(ent, ref ent.Comp) || !_chamberQuery.TryComp(ent, out var chamber))
+            return false;
+
+        if (chamber.BoltClosed == true)
+            return true;
+
+        if (!_itemSlotsQuery.TryComp(ent, out var slots) ||
+            !_itemSlots.TryGetSlot(ent, MagazineSlot, out var magazineSlot, slots))
+        {
+            return false;
+        }
+
+        if (magazineSlot.Item != null)
+        {
+            if (!quiet)
+                _popup.PopupPredicted(Loc.GetString("belt-feed-cycle-remove-magazine"), ent, user);
+
+            return false;
+        }
+
+        if (_gun.CanEjectChamberedRound((ent.Owner, chamber)))
+            return true;
+
+        if (!quiet)
+            _popup.PopupPredicted(Loc.GetString("belt-feed-cycle-cover-open"), ent, user);
+
+        return false;
+    }
+
+    private void DoCycle(Entity<BeltFeedComponent> ent, EntityUid user)
+    {
+        var chamber = _chamberQuery.Comp(ent);
+
+        if (chamber.BoltClosed == false)
+        {
+            _gun.TryEjectChamberedRound((ent.Owner, chamber), user);
+            SetRequiresCycle(ent, true);
+            return;
+        }
+
+        _gun.UseChambered(ent, chamber, user);
+        SetRequiresCycle(ent, false);
+    }
+
+    private void UpdateRequiresCycle(Entity<BeltFeedComponent> ent)
+    {
+        SetRequiresCycle(ent, _gun.GetChamberEntity(ent) == null);
+    }
+
+    private void SetRequiresCycle(Entity<BeltFeedComponent> ent, bool requiresCycle)
+    {
+        if (ent.Comp.RequiresCycle == requiresCycle)
+            return;
+
+        ent.Comp.RequiresCycle = requiresCycle;
+        Dirty(ent);
+    }
+
+    private void SetMagazineLock(Entity<BeltFeedComponent> ent, bool locked)
+    {
+        if (!_itemSlotsQuery.TryComp(ent, out var slots) ||
+            !_itemSlots.TryGetSlot(ent, MagazineSlot, out var magazineSlot, slots))
+        {
+            return;
+        }
+
+        _itemSlots.SetLock(ent, magazineSlot, locked, slots);
+    }
+
+    private void ConfigureMagazineSlot(Entity<BeltFeedComponent> ent)
+    {
+        if (!_itemSlotsQuery.TryComp(ent, out var slots) ||
+            !_itemSlots.TryGetSlot(ent, MagazineSlot, out var magazineSlot, slots))
+        {
+            return;
+        }
+
+        if (!magazineSlot.Swap)
+            return;
+
+        magazineSlot.Swap = false;
+        Dirty(ent, slots);
+    }
+}
