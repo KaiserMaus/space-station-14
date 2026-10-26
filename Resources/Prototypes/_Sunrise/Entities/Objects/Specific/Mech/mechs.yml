@@ -943,7 +943,7 @@
 # Blyashanka
 - type: entity
   id: SunriseMechBlyashanka
-  parent: [ MechBreakageGygax, BaseMech, CombatMech, BaseMajorContraband ]
+  parent: [ MechBreakageBlyashanka, BaseMech, CombatMech, BaseMajorContraband ]
   name: Blyashanka
   suffix: Soviet Medium Mech
   description: A medium four-legged USSP walker protected by Syndicate armor plating.
@@ -1031,6 +1031,17 @@
   id: SunriseMechBlyashankaFilled
   parent: SunriseMechBlyashankaBattery
   suffix: Battery, Filled
+  components:
+  - type: Mech
+    startingEquipment:
+      - SunriseWeaponMechCombatRpd
+      - SunriseWeaponMechCombatRpd
+
+- type: entity
+  id: SunriseMechBlyashankaConstructed
+  parent: SunriseMechBlyashanka
+  categories: [ HideSpawnMenu ]
+  suffix: Constructed, Armed
   components:
   - type: Mech
     startingEquipment:
