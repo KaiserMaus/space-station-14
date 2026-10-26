@@ -1015,7 +1015,7 @@
     currentThresholdState: Alive
     thresholds:
       0: Alive
-      500: Critical
+      475: Critical
 
 - type: entity
   id: SunriseMechBlyashankaBattery

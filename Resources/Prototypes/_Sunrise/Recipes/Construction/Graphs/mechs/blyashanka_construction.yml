@@ -19,105 +19,125 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 3
+          data: 2
 
       - material: Manipulator
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 3
+
+      - tool: Screwing
+        doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
           data: 4
 
-      - tool: Screwing
-        doAfter: 1
+      - material: Cable
+        amount: 2
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
           data: 5
 
-      - material: Cable
-        amount: 2
+      - tool: Cutting
+        doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
           data: 6
 
-      - tool: Cutting
-        doAfter: 1
-        completed:
-        - !type:VisualizerDataInt
-          key: "enum.MechAssemblyVisuals.State"
-          data: 7
-
       - material: Manipulator
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 8
+          data: 7
 
       - tool: Screwing
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 9
+          data: 8
 
       - material: Cable
         amount: 2
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 10
+          data: 9
 
       - tool: Cutting
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 11
+          data: 10
 
       - material: Manipulator
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 13
+          data: 11
 
       - tool: Screwing
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 14
+          data: 12
 
       - material: Steel
         amount: 20
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
+          data: 13
+
+      - tool: Anchoring
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 14
+
+      - tool: Anchoring
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
           data: 15
-
-      - tool: Anchoring
-        doAfter: 1
-        completed:
-        - !type:VisualizerDataInt
-          key: "enum.MechAssemblyVisuals.State"
-          data: 16
-
-      - tool: Anchoring
-        doAfter: 1
-        completed:
-        - !type:VisualizerDataInt
-          key: "enum.MechAssemblyVisuals.State"
-          data: 17
 
       - material: Manipulator
         amount: 2
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 18
+          data: 16
 
       - tool: Screwing
         doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 17
+
+      - tag: Flash
+        name: construction-graph-tag-flash
+        icon:
+          sprite: Objects/Weapons/Melee/flash.rsi
+          state: flash
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 18
+
+      - tag: Flash
+        name: construction-graph-tag-flash
+        icon:
+          sprite: Objects/Weapons/Melee/flash.rsi
+          state: flash
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
@@ -143,21 +163,18 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 21
 
-      - tag: Flash
-        name: construction-graph-tag-flash
-        icon:
-          sprite: Objects/Weapons/Melee/flash.rsi
-          state: flash
+      - tool: Screwing
+        doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
           data: 22
 
-      - tag: Flash
-        name: construction-graph-tag-flash
+      - tag: GygaxCentralControlModule
+        name: construction-graph-tag-gygax-central-control-module
         icon:
-          sprite: Objects/Weapons/Melee/flash.rsi
-          state: flash
+          sprite: Objects/Misc/module.rsi
+          state: mainboard
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
@@ -170,11 +187,11 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 24
 
-      - tag: GygaxCentralControlModule
-        name: construction-graph-tag-gygax-central-control-module
+      - tag: GygaxPeripheralsControlModule
+        name: construction-graph-tag-gygax-peripherals-control-module
         icon:
           sprite: Objects/Misc/module.rsi
-          state: mainboard
+          state: id_mod
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
@@ -187,11 +204,11 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 26
 
-      - tag: GygaxPeripheralsControlModule
-        name: construction-graph-tag-gygax-peripherals-control-module
+      - tag: GygaxTargetingControlModule
+        name: construction-graph-tag-gygax-weapon-control-and-targeting-module
         icon:
           sprite: Objects/Misc/module.rsi
-          state: id_mod
+          state: mcontroller
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
@@ -204,11 +221,8 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 28
 
-      - tag: GygaxTargetingControlModule
-        name: construction-graph-tag-gygax-weapon-control-and-targeting-module
-        icon:
-          sprite: Objects/Misc/module.rsi
-          state: mcontroller
+      - material: ReinforcedGlass
+        amount: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
@@ -221,8 +235,12 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 30
 
-      - material: ReinforcedGlass
-        amount: 1
+      - tag: PowerCage
+        name: step-powercage-name
+        store: battery-container
+        icon:
+          sprite: Objects/Power/power_cages.rsi
+          state: small
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
@@ -235,12 +253,11 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 32
 
-      - tag: PowerCage
-        name: step-powercage-name
-        store: battery-container
+      - tag: MechAirTank
+        name: step-exosuit-air-tank-name
         icon:
-          sprite: Objects/Power/power_cages.rsi
-          state: small
+          sprite: Objects/Specific/Mech/mecha_equipment.rsi
+          state: mecha_air_tank
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
@@ -253,17 +270,14 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 34
 
-      - tag: MechAirTank
-        name: step-exosuit-air-tank-name
-        icon:
-          sprite: Objects/Specific/Mech/mecha_equipment.rsi
-          state: mecha_air_tank
+      - material: Steel
+        amount: 10
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
           data: 35
 
-      - tool: Screwing
+      - tool: Welding
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
@@ -284,25 +298,25 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 38
 
-      - material: Steel
-        amount: 10
+      - tag: SunriseBlyashankaArmor
+        name: construction-graph-tag-blyashanka-armor-plates
+        icon:
+          sprite: _Sunrise/Objects/Specific/Mech/blyashanka_construction.rsi
+          state: banka_armor
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
           data: 39
 
-      - tool: Welding
+      - tool: Anchoring
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
           data: 40
 
-      - tag: SunriseBlyashankaArmor
-        name: construction-graph-tag-blyashanka-armor-plates
-        icon:
-          sprite: _Sunrise/Objects/Specific/Mech/blyashanka_construction.rsi
-          state: banka_armor
+      - tool: Anchoring
+        doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
@@ -322,35 +336,21 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 43
 
-      - tool: Anchoring
-        doAfter: 1
+      - tag: SunriseBlyashankaRpd
+        name: construction-graph-tag-blyashanka-rpd
+        icon:
+          sprite: _Sunrise/Objects/Weapons/Guns/LMGs/rpd/big.rsi
+          state: icon
+
+      - tag: SunriseBlyashankaRpd
+        name: construction-graph-tag-blyashanka-rpd
+        icon:
+          sprite: _Sunrise/Objects/Weapons/Guns/LMGs/rpd/big.rsi
+          state: icon
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
           data: 44
-
-      - tool: Anchoring
-        doAfter: 1
-        completed:
-        - !type:VisualizerDataInt
-          key: "enum.MechAssemblyVisuals.State"
-          data: 45
-
-      - tag: SunriseBlyashankaRpd
-        name: construction-graph-tag-blyashanka-rpd
-        icon:
-          sprite: _Sunrise/Objects/Weapons/Guns/LMGs/rpd/big.rsi
-          state: icon
-
-      - tag: SunriseBlyashankaRpd
-        name: construction-graph-tag-blyashanka-rpd
-        icon:
-          sprite: _Sunrise/Objects/Weapons/Guns/LMGs/rpd/big.rsi
-          state: icon
-        completed:
-        - !type:VisualizerDataInt
-          key: "enum.MechAssemblyVisuals.State"
-          data: 46
 
   - node: blyashanka
     actions:

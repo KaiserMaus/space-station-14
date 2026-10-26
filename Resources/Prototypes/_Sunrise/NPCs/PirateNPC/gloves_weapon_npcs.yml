@@ -1019,6 +1019,30 @@
     reduction: 1
 
 - type: entity
+  parent: BaseSunriseHandsNoGlovesPirateMechArmor
+  id: ClothingHandsMechRPD
+  suffix: Mech RPD
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: MeleeThrowOnHit
+    distance: 1
+    speed: 14
+  - type: MeleeWeapon
+    wideAnimation: WeaponArcInvisibleNPC
+    animation: WeaponArcInvisibleNPC
+    hidden: true
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 35
+        Structural: 150
+    bluntStaminaDamageFactor: 1.5
+    soundHit:
+      collection: PunchHard
+  - type: FireProtection
+    reduction: 1
+
+- type: entity
   parent: BaseSunriseHandsNoGlovesPirateMechArmorHeavy
   id: ClothingHandsMechMaxim
   suffix: Mech Maxim

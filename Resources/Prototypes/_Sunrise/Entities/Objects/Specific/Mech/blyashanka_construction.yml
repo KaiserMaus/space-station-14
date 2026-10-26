@@ -124,7 +124,7 @@
     statePrefix: jar
   - type: Sprite
     noRot: true
-    state: jar2
+    state: jar1
   - type: Construction
     graph: SunriseBlyashanka
     node: chassis

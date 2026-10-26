@@ -52,8 +52,8 @@ ent-MobSovietT3Medic = soviet ranger medic
 
 ent-MobSovietT2Raider = soviet raider
     .desc = A hardened marine veteran carrying a high-rate submachine gun.
-ent-MobSovietT2Mech = Molot
-    .desc = A light USSP mech variant with a powerful auto-shotgun.
+ent-MobSovietT2Mech = Blyashanka
+    .desc = A medium four-legged USSP mech armed with twin RPD machine guns.
 ent-MobSovietT3Mech = Kolobok
     .desc = A heavy USSP mech variant with strong armor and suppressive firepower.
 

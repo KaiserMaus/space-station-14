@@ -41,6 +41,9 @@
       "name": "banka_armor"
     },
     {
+      "name": "jar1"
+    },
+    {
       "name": "jar2"
     },
     {
@@ -69,6 +72,9 @@
     },
     {
       "name": "jar11"
+    },
+    {
+      "name": "jar12"
     },
     {
       "name": "jar13"
@@ -165,12 +171,6 @@
     },
     {
       "name": "jar44"
-    },
-    {
-      "name": "jar45"
-    },
-    {
-      "name": "jar46"
     }
   ]
 }
