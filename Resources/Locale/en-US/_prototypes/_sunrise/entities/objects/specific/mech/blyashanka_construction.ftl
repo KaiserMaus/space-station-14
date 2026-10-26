@@ -14,4 +14,3 @@ ent-SunriseBlyashankaArmorPlate = Blyashanka armor plates
     .desc = Armor plates for the Blyashanka exosuit.
 ent-SunriseMechBlyashankaConstructed = { ent-SunriseMechBlyashanka }
     .desc = { ent-SunriseMechBlyashanka.desc }
-

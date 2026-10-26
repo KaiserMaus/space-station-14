@@ -14,4 +14,3 @@ ent-SunriseBlyashankaArmorPlate = бронеплиты Бляшанки
     .desc = Бронеплиты для экзокостюма Бляшанка.
 ent-SunriseMechBlyashankaConstructed = { ent-SunriseMechBlyashanka }
     .desc = { ent-SunriseMechBlyashanka.desc }
-
