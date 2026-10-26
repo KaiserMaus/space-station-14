@@ -52,6 +52,9 @@
     fireCost: 5
   - type: Appearance
   - type: AmmoCounter
+  - type: Tag
+    tags:
+    - SunriseBlyashankaRpd
   - type: StaticPrice
     price: 3500
 

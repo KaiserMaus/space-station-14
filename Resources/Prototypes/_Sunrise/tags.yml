@@ -471,6 +471,24 @@
 # region TODO: Make medical mech
 
 - type: Tag
+  id: SunriseBlyashankaArmor
+
+- type: Tag
+  id: SunriseBlyashankaLLeg
+
+- type: Tag
+  id: SunriseBlyashankaLLeg2
+
+- type: Tag
+  id: SunriseBlyashankaRLeg
+
+- type: Tag
+  id: SunriseBlyashankaRLeg2
+
+- type: Tag
+  id: SunriseBlyashankaRpd
+
+- type: Tag
   id: Kolobok
 
 - type: Tag
