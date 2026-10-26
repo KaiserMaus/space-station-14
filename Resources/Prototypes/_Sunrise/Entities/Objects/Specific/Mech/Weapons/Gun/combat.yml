@@ -54,6 +54,7 @@
   - type: AmmoCounter
   - type: Tag
     tags:
+    - CombatMech
     - SunriseBlyashankaRpd
   - type: StaticPrice
     price: 3500
