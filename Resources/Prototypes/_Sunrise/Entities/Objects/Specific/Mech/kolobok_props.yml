@@ -21,8 +21,9 @@
     scale: 1.08, 1.08
   - type: Appearance
   - type: Damageable
-    damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallic
+  - type: Injurable
+    damageContainer: StructuralInorganic
   - type: DamageVisuals
     thresholds: [50, 100, 150, 250, 350, 450]
     trackAllDamage: true
