@@ -5,7 +5,7 @@ using Content.Shared.Movement.Systems;
 namespace Content.Shared._Sunrise.Mech.Systems;
 
 /// <summary>
-/// Добавляет модификатор установленной батареи к скорости меха.
+/// Applies the installed battery's speed modifiers to the mech.
 /// </summary>
 public sealed class MechSpeedModifierSystem : EntitySystem
 {

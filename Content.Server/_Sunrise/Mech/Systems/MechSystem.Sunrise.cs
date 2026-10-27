@@ -10,6 +10,7 @@ using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Power.Components;
+using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.Mech.Systems;
@@ -36,6 +37,18 @@ public sealed partial class MechSystem
         _installedMechBattery.AttachBattery((uid, component), (batteryUid.Value, battery));
     }
 
+    private void OnBatteryInsertAttempt(Entity<MechComponent> ent, ref ContainerIsInsertingAttemptEvent args)
+    {
+        if (args.Container != ent.Comp.BatterySlot)
+            return;
+
+        if (!TryComp<BatteryComponent>(args.EntityUid, out var battery)
+            || !CanInsertBattery(ent.AsNullable(), (args.EntityUid, battery)))
+        {
+            args.Cancel();
+        }
+    }
+
     private void OnMechSay(EntityUid uid, MechComponent component, MechSayEvent args)
     {
         _chatSystem.TrySendInGameICMessage(uid,
@@ -45,8 +58,30 @@ public sealed partial class MechSystem
     }
 
     /// <summary>
-    /// Проверяет whitelist батареи меха, сохраняя совместимость со старыми прототипами без него.
+    /// Checks whether the battery can be inserted into the mech's currently empty battery slot.
     /// </summary>
+    public bool CanInsertBattery(Entity<MechComponent?> mech, Entity<BatteryComponent?> battery)
+    {
+        if (!Resolve(mech, ref mech.Comp, false) || !Resolve(battery, ref battery.Comp, false))
+            return false;
+
+        return mech.Comp.BatterySlot.ContainedEntity == null
+            && IsSunriseBatteryAllowed(mech.Comp, battery.Owner);
+    }
+
+    /// <summary>
+    /// Attempts to insert a compatible battery into the mech's battery slot.
+    /// </summary>
+    public bool TryInsertBattery(Entity<MechComponent?> mech, Entity<BatteryComponent?> battery)
+    {
+        if (!Resolve(mech, ref mech.Comp, false)
+            || !Resolve(battery, ref battery.Comp, false)
+            || !CanInsertBattery(mech, battery))
+            return false;
+
+        return _container.Insert(battery.Owner, mech.Comp.BatterySlot);
+    }
+
     private bool IsSunriseBatteryAllowed(MechComponent component, EntityUid battery)
     {
         if (component.BatteryWhitelist != null)

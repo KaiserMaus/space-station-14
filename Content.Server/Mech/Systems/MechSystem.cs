@@ -64,6 +64,7 @@ public sealed partial class MechSystem : SharedMechSystem
         base.Initialize();
 
         SubscribeLocalEvent<MechComponent, InteractUsingEvent>(OnInteractUsing);
+        SubscribeLocalEvent<MechComponent, ContainerIsInsertingAttemptEvent>(OnBatteryInsertAttempt); // Sunrise-Edit — проверка whitelist при прямой вставке в контейнер
         SubscribeLocalEvent<MechComponent, EntInsertedIntoContainerMessage>(OnInsertBattery);
         SubscribeLocalEvent<MechComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<MechComponent, GetVerbsEvent<AlternativeVerb>>(OnAlternativeVerb);
@@ -103,12 +104,13 @@ public sealed partial class MechSystem : SharedMechSystem
         if (TryComp<WiresPanelComponent>(uid, out var panel) && !panel.Open)
             return;
 
-        if (component.BatterySlot.ContainedEntity == null && TryComp<BatteryComponent>(args.Used, out var battery) && IsSunriseBatteryAllowed(component, args.Used)) // Sunrise-Edit — поддержка whitelist реакторов
+        // Sunrise edit start — единый путь проверки и вставки реактора
+        if (TryComp<BatteryComponent>(args.Used, out var battery)
+            && TryInsertBattery((uid, component), (args.Used, battery)))
         {
-            InsertBattery(uid, args.Used, component, battery);
-            _actionBlocker.UpdateCanMove(uid);
             return;
         }
+        // Sunrise edit end
 
         if (_toolSystem.HasQuality(args.Used, PryingQuality) && component.BatterySlot.ContainedEntity != null)
         {
@@ -403,14 +405,9 @@ public sealed partial class MechSystem : SharedMechSystem
         if (!Resolve(toInsert, ref battery, false))
             return;
 
-        _container.Insert(toInsert, component.BatterySlot);
-        component.Energy = _battery.GetCharge((toInsert, battery));
-        component.MaxEnergy = battery.MaxCharge;
-
-        _actionBlocker.UpdateCanMove(uid);
-
-        Dirty(uid, component);
-        UpdateUserInterface(uid, component);
+        // Sunrise edit start — сохраняем совместимость API и направляем вставку через общую проверку whitelist
+        TryInsertBattery((uid, component), (toInsert, battery));
+        // Sunrise edit end
     }
 
     public void RemoveBattery(EntityUid uid, MechComponent? component = null)

@@ -13,7 +13,7 @@ using Robust.Shared.Timing;
 namespace Content.Server._Sunrise.Mech.Systems;
 
 /// <summary>
-/// Связывает установленную батарею с мехом и синхронизирует вычисляемый заряд.
+/// Links an installed battery to its mech and synchronizes the derived charge state.
 /// </summary>
 public sealed partial class InstalledMechBatterySystem : EntitySystem
 {
@@ -82,16 +82,19 @@ public sealed partial class InstalledMechBatterySystem : EntitySystem
     }
 
     /// <summary>
-    /// Связывает установленную батарею с мехом и обновляет зависимые состояния.
+    /// Links an installed battery to its mech and refreshes dependent state.
     /// </summary>
-    public void AttachBattery(Entity<MechComponent> mech, Entity<BatteryComponent> battery)
+    public void AttachBattery(Entity<MechComponent?> mech, Entity<BatteryComponent?> battery)
     {
+        if (!Resolve(mech, ref mech.Comp, false) || !Resolve(battery, ref battery.Comp, false))
+            return;
+
         var installed = EnsureComp<InstalledMechBatteryComponent>(battery);
         installed.Mech = mech.Owner;
         installed.NextUpdate = _timing.CurTime + UpdateInterval;
 
-        SynchronizeEnergy(mech, battery);
-        _movementSpeedModifier.RefreshMovementSpeedModifiers(mech);
+        SynchronizeEnergy((mech.Owner, mech.Comp), (battery.Owner, battery.Comp));
+        _movementSpeedModifier.RefreshMovementSpeedModifiers(mech.Owner);
     }
 
     private void SynchronizeEnergy(Entity<MechComponent> mech, Entity<BatteryComponent> battery)
