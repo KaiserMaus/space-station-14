@@ -4,6 +4,7 @@ borg-slot-circuitboards-empty = Платы
 borg-slot-flatpacks-empty = Упакованные конструкции
 borg-slot-tiles-empty = Плитки
 borg-slot-topicals-empty = Наружная медицина
+borg-slot-injector-dropper-empty = прецизионные инжекторы
 borg-slot-small-containers-empty = Малые контейнеры
 borg-slot-chemical-containers-empty = Химические контейнеры
 borg-slot-documents-empty = Книги и бумаги

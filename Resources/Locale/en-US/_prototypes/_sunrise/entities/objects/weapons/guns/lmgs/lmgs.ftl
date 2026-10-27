@@ -1,8 +1,9 @@
-ent-WeaponLightMachineGunMG60 = MG-60
+ent-WeaponLightMachineGunMG60 = mG-60
     .desc = { ent-BaseWeaponLightMachineGun.desc }
-ent-WeaponLightMachineGunRPD = RPD
+ent-WeaponLightMachineGunRPD = rPD
     .desc = { ent-BaseWeaponLightMachineGun.desc }
-ent-WeaponMachineGunMG42 = MG-342
+ent-WeaponMachineGunMG42 = mG-342
     .desc = { ent-BaseWeaponLightMachineGun.desc }
-ent-WeaponDL6902 = DL6902 machine gun
-    .desc = Cybersun heavy machine gun.
+ent-WeaponLightMachineGunMG60Empty = { ent-WeaponLightMachineGunMG60 }
+    .suffix = Empty
+    .desc = { ent-WeaponLightMachineGunMG60.desc }

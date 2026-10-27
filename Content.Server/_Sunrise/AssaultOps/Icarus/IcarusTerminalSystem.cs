@@ -25,7 +25,7 @@ namespace Content.Server._Sunrise.AssaultOps.Icarus;
 /// <summary>
 /// Handle Icarus activation terminal
 /// </summary>
-public sealed class IcarusTerminalSystem : EntitySystem
+public sealed partial class IcarusTerminalSystem : EntitySystem
 {
     private const string IcarusBeamPrototypeId = "IcarusBeam";
     private const string FallbackStationName = "NT SS14";
@@ -33,16 +33,17 @@ public sealed class IcarusTerminalSystem : EntitySystem
     private static readonly SoundSpecifier IcarusAlertSound = new SoundPathSpecifier("/Audio/_Sunrise/AssaultOperatives/icarus_alarm.ogg");
     private static readonly SoundSpecifier IcarusFireSound = new SoundPathSpecifier("/Audio/_Sunrise/AssaultOperatives/sunbeam_fire.ogg");
 
-    [Dependency] private readonly ChatSystem _chatSystem = default!;
-    [Dependency] private readonly IRobustRandom _robustRandom = default!;
-    [Dependency] private readonly GameTicker _gameTicker = default!;
-    [Dependency] private readonly StationSystem _stationSystem = default!;
-    [Dependency] private readonly IcarusBeamSystem _icarusSystem = default!;
-    [Dependency] private readonly UserInterfaceSystem _userInterfaceSystem = default!;
-    [Dependency] private readonly RoundEndSystem _roundEndSystem = default!;
-    [Dependency] private readonly AudioSystem _audio = default!;
-    [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!;
-    [Dependency] private readonly AlertLevelSystem _alertLevel = default!;
+    [Dependency] private ChatSystem _chatSystem = default!;
+    [Dependency] private IRobustRandom _robustRandom = default!;
+    [Dependency] private GameTicker _gameTicker = default!;
+    [Dependency] private StationSystem _stationSystem = default!;
+    [Dependency] private IcarusBeamSystem _icarusSystem = default!;
+    [Dependency] private UserInterfaceSystem _userInterfaceSystem = default!;
+    [Dependency] private RoundEndSystem _roundEndSystem = default!;
+    [Dependency] private AudioSystem _audio = default!;
+    [Dependency] private ItemSlotsSystem _itemSlotsSystem = default!;
+    [Dependency] private AlertLevelSystem _alertLevel = default!;
+    [Dependency] private EntityQuery<TransformComponent> _xformQuery = default!;
 
     public override void Initialize()
     {
@@ -316,10 +317,9 @@ public sealed class IcarusTerminalSystem : EntitySystem
     /// <returns>Box of all station grids</returns>
     private Box2 GetStationArea()
     {
-        var xformQuery = GetEntityQuery<TransformComponent>();
         var areas = _stationSystem.GetStations().SelectMany(s =>
             Comp<StationDataComponent>(s).Grids.Select(g =>
-                xformQuery.GetComponent(g).WorldMatrix.TransformBox(Comp<MapGridComponent>(g).LocalAABB))).ToArray();
+                _xformQuery.GetComponent(g).WorldMatrix.TransformBox(Comp<MapGridComponent>(g).LocalAABB))).ToArray();
 
         var stationArea = areas[0];
         for (var i = 1; i < areas.Length; i++)
