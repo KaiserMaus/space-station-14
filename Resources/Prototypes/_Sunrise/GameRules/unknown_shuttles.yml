@@ -51,23 +51,30 @@
       - SunriseCBURNSpawnPoint
   - type: AntagLoadProfileRule
   - type: AntagSelection
-    definitions:
-    - spawnerPrototype: SpawnPointGhostSunriseCBURN
-      min: 1
-      max: 8
+    antags:
+    - !type:LinearAntagCount
+      proto: SunriseCBURN
       playerRatio: 12
-      pickPlayer: false
-      startingGear: CBURNGearEVA
-      roleLoadout:
-      - RoleSurvivalEVA
-      components:
-      - type: RandomMetadata
-        nameSegments:
-        - NamesMilitaryFirst
-        - NamesMilitaryLast
-        nameFormat: name-format-ert
-      mindRoles:
-      - MindRoleGhostCorporateAligned
+      range:
+        min: 1
+        max: 8
+
+- type: antagSpecifier
+  parent: BaseAntagSpecifier
+  id: SunriseCBURN
+  spawnerPrototype: SpawnPointGhostSunriseCBURN
+  pickPlayer: false
+  startingGear: CBURNGearEVA
+  roleLoadout:
+  - RoleSurvivalEVA
+  components:
+  - type: RandomMetadata
+    nameSegments:
+    - NamesMilitaryFirst
+    - NamesMilitaryLast
+    nameFormat: name-format-ert
+  mindRoles:
+  - MindRoleGhostCorporateAligned
 
 - type: entity
   id: ERTShuttleAssaultAmber

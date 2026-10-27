@@ -6,8 +6,8 @@ namespace Content.Server.GameTicking.Rules;
 public sealed partial class ZombieRuleSystem
 {
      // Sunrise-часть системы обрабатывает пороги заражения и запускает CBURN и Icarus.
-    [Dependency] private readonly GameTicker _gameTicker = default!;
-    [Dependency] private readonly IcarusTerminalSystem _icarus = default!;
+    [Dependency] private GameTicker _gameTicker = default!;
+    [Dependency] private IcarusTerminalSystem _icarus = default!;
 
     private static readonly TimeSpan ZombieIcarusBeamDelay = TimeSpan.FromSeconds(25);
 
