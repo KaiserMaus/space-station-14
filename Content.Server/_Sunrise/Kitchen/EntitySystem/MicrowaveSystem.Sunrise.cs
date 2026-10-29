@@ -9,7 +9,7 @@ using Content.Shared.Stacks;
 
 namespace Content.Server.Kitchen.EntitySystems;
 
-public sealed partial class MicrowaveSystem : EntitySystem
+public sealed partial class MicrowaveSystem
 {
     /// <summary>
     /// Runs a set of minimal pre-reqs to check the timing, needed to enable dummy-proof, one-button interface to Wzhzhzh
@@ -33,7 +33,7 @@ public sealed partial class MicrowaveSystem : EntitySystem
             // If a microwave recipe uses a stacked item, use the default stack prototype id instead of prototype id
             if (TryComp<StackComponent>(item, out var stackComp))
             {
-                solidID = _prototype.Index<StackPrototype>(stackComp.StackTypeId).Spawn;
+                solidID = ProtoMan.Index<StackPrototype>(stackComp.StackTypeId).Spawn;
                 amountToAdd = stackComp.Count;
             }
             else
@@ -137,7 +137,7 @@ public sealed partial class MicrowaveSystem : EntitySystem
         var portions = 0;
 
         // Frontier: microwave recipe machine types
-        if ((recipe.RecipeType & component.ValidRecipeTypes) == 0)
+        if ((recipe.RecipeType & component.ValidRecipeTypes) == MicrowaveRecipeType.None)
         {
             return (recipe, 0);
         }

@@ -77,3 +77,4 @@ research-technology-portable-fission = Портативный распад
 research-technology-advance-laser = Военное энергетическое вооружение
 research-technology-combat-powercells = Боевые Супербатареи
 research-technology-honk-weapons = Бананиумное вооружение
+research-technology-telesci = Теленаука
