@@ -1,13 +1,8 @@
-
 - type: entity
-  parent: [BaseItem, BaseSyndicateContraband]
-  id: SunriseEnergyShield
-  name: experimental energy shield
-  suffix: Self-Recharging
-  description: Exotic energy shield, when folded, can even fit in your pocket. That experimenal shield can recharge itself.
+  parent: BaseItem
+  id: BaseSunriseEnergyShield
+  abstract: true
   components:
-    - type: EnergySword
-    - type: EmpImmune
     - type: ItemToggle
       soundActivate:
         path: /Audio/Weapons/ebladeon.ogg
@@ -28,30 +23,8 @@
       components:
       - type: DisarmMalus
         malus: 0.6
-    - type: Sprite
-      sprite: Objects/Weapons/Melee/e_shield.rsi
-      layers:
-        - state: eshield-icon
-        - state: eshield-on
-          color: "#FFFFFF"
-          visible: false
-          shader: unshaded
-          map: [ "shield" ]
-    - type: Item
-      size: Small
-      sprite: Objects/Weapons/Melee/e_shield.rsi
-      heldPrefix: eshield
     - type: UseDelay
       delay: 0.5
-    - type: ToggleableVisuals
-      spriteLayer: shield
-      inhandVisuals:
-        left:
-          - state: inhand-left-shield
-            shader: unshaded
-        right:
-          - state: inhand-right-shield
-            shader: unshaded
     - type: PointLight
       netsync: false
       enabled: false
@@ -60,7 +33,7 @@
       color: white
     - type: ItemTogglePointLight
     - type: Reflect
-      reflectProb: 0.95
+      reflectProb: 0.15
       reflects:
         - Energy
     - type: Blocking
@@ -83,8 +56,14 @@
     - type: Damageable
     - type: Injurable
       damageContainer: Shield
-    - type: StaticPrice
-      price: 7000
+    - type: ExaminableDamage
+      messages: EnergyShieldMessages
+
+- type: entity
+  parent: BaseSunriseEnergyShield
+  id: BaseSunriseSelfRechargingEnergyShield
+  abstract: true
+  components:
     - type: BatterySelfRecharger
       autoRechargeRate: 250
       autoRechargePauseTime: 30
@@ -94,8 +73,44 @@
     - type: Battery
       maxCharge: 1500
       startingCharge: 1500
-    - type: ExaminableDamage
-      messages: EnergyShieldMessages
+
+- type: entity
+  parent: [BaseSunriseSelfRechargingEnergyShield, BaseSyndicateContraband]
+  id: SunriseEnergyShield
+  name: experimental energy shield
+  suffix: Self-Recharging
+  description: Exotic energy shield, when folded, can even fit in your pocket. That experimenal shield can recharge itself.
+  components:
+    - type: EnergySword
+    - type: EmpImmune
+    - type: Sprite
+      sprite: Objects/Weapons/Melee/e_shield.rsi
+      layers:
+        - state: eshield-icon
+        - state: eshield-on
+          color: "#FFFFFF"
+          visible: false
+          shader: unshaded
+          map: [ "shield" ]
+    - type: Item
+      size: Small
+      sprite: Objects/Weapons/Melee/e_shield.rsi
+      heldPrefix: eshield
+    - type: ToggleableVisuals
+      spriteLayer: shield
+      inhandVisuals:
+        left:
+          - state: inhand-left-shield
+            shader: unshaded
+        right:
+          - state: inhand-right-shield
+            shader: unshaded
+    - type: Reflect
+      reflectProb: 0.95
+      reflects:
+        - Energy
+    - type: StaticPrice
+      price: 7000
     - type: Destructible
       thresholds:
         - trigger:
@@ -120,32 +135,12 @@
                   max: 1
 
 - type: entity
-  parent: [BaseItem, BaseCentcommContraband ]
+  parent: [BaseSunriseSelfRechargingEnergyShield, BaseCentcommContraband]
   id: SunriseEnergyShieldERT
   name: prototype energy shield
   suffix: Self-Recharging, ERT
   description: A high-cost prototype of a security energy shield issued to NanoTrasen emergency response teams. It recharges itself, but can still break after several active charging and discharging cycles.
   components:
-    - type: ItemToggle
-      soundActivate:
-        path: /Audio/Weapons/ebladeon.ogg
-      soundDeactivate:
-        path: /Audio/Weapons/ebladeoff.ogg
-      deactivateUnequippedHand: false
-      predictable: false
-      soundFailToActivate:
-        path: /Audio/Machines/button.ogg
-        params:
-          variation: 0.250
-    - type: ItemToggleActiveSound
-      activeSound:
-        path: /Audio/Weapons/ebladehum.ogg
-    - type: ItemToggleSize
-      activatedSize: Ginormous
-    - type: ComponentToggler
-      components:
-      - type: DisarmMalus
-        malus: 0.6
     - type: HeldSpeedModifier
       walkModifier: 1
       sprintModifier: 0.95
@@ -163,8 +158,6 @@
       sprite: _Starlight/Objects/Weapons/Melee/cybershield.rsi
       heldPrefix: cybershield
       storedRotation: -90
-    - type: UseDelay
-      delay: 0.5
     - type: ToggleableVisuals
       spriteLayer: shield
       inhandVisuals:
@@ -175,49 +168,9 @@
           - state: inhand-right-ertshield
             shader: unshaded
     - type: PointLight
-      netsync: false
-      enabled: false
-      radius: 1.5
-      energy: 2
       color: cyan
-    - type: ItemTogglePointLight
-    - type: Reflect
-      reflectProb: 0.15
-      reflects:
-        - Energy
-    - type: Blocking
-      passiveBlockModifier:
-        coefficients:
-          Blunt: 1.0
-          Slash: 0.9
-          Piercing: 0.85
-          Heat: 0.6
-      activeBlockModifier:
-        coefficients:
-          Blunt: 1.2
-          Slash: 0.85
-          Piercing: 0.5
-          Heat: 0.4
-        flatReductions:
-          Heat: 1
-          Piercing: 1
-    - type: Appearance
-    - type: Damageable
-    - type: Injurable
-      damageContainer: Shield
     - type: StaticPrice
       price: 1500
-    - type: BatterySelfRecharger
-      autoRechargeRate: 250
-      autoRechargePauseTime: 30
-    - type: EnergyShield
-      energyCostPerDamage: 15
-    - type: ExaminableBattery
-    - type: Battery
-      maxCharge: 1500
-      startingCharge: 1500
-    - type: ExaminableDamage
-      messages: EnergyShieldMessages
     - type: Destructible
       thresholds:
         - trigger:
@@ -242,31 +195,11 @@
                   max: 1
 
 - type: entity
-  parent: [BaseItem, BaseSecurityContraband ]
+  parent: [BaseSunriseEnergyShield, BaseSecurityContraband]
   id: SunriseEnergyShieldSec
   name: security energy shield
   description: An experimental adaptation of security hard-light holoprojector technology. When folded, it can fit in a pocket.
   components:
-    - type: ItemToggle
-      soundActivate:
-        path: /Audio/Weapons/ebladeon.ogg
-      soundDeactivate:
-        path: /Audio/Weapons/ebladeoff.ogg
-      deactivateUnequippedHand: false
-      predictable: false
-      soundFailToActivate:
-        path: /Audio/Machines/button.ogg
-        params:
-          variation: 0.250
-    - type: ItemToggleActiveSound
-      activeSound:
-        path: /Audio/Weapons/ebladehum.ogg
-    - type: ItemToggleSize
-      activatedSize: Ginormous
-    - type: ComponentToggler
-      components:
-      - type: DisarmMalus
-        malus: 0.6
     - type: HeldSpeedModifier
       walkModifier: 1
       sprintModifier: 0.95
@@ -284,8 +217,6 @@
       sprite: _Starlight/Objects/Weapons/Melee/cybershield.rsi
       heldPrefix: cybershield
       storedRotation: -90
-    - type: UseDelay
-      delay: 0.5
     - type: ToggleableVisuals
       spriteLayer: shield
       inhandVisuals:
@@ -296,38 +227,7 @@
           - state: inhand-right-shield
             shader: unshaded
     - type: PointLight
-      netsync: false
-      enabled: false
-      radius: 1.5
-      energy: 2
       color: red
-    - type: ItemTogglePointLight
-    - type: Reflect
-      reflectProb: 0.15
-      reflects:
-        - Energy
-    - type: Blocking
-      passiveBlockModifier:
-        coefficients:
-          Blunt: 1.0
-          Slash: 0.9
-          Piercing: 0.85
-          Heat: 0.6
-      activeBlockModifier:
-        coefficients:
-          Blunt: 1.2
-          Slash: 0.85
-          Piercing: 0.5
-          Heat: 0.4
-        flatReductions:
-          Heat: 1
-          Piercing: 1
-    - type: Appearance
-    - type: Damageable
-    - type: Injurable
-      damageContainer: Shield
-    - type: ExaminableDamage
-      messages: EnergyShieldMessages
     - type: Destructible
       thresholds:
         - trigger:
