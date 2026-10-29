@@ -131,7 +131,8 @@
   categories:
   - UplinkWeaponry
 
-# - type: listing # Moved to _Sunrise catalog
+# Sunrise edit start - Перемещено в каталог _Sunrise
+# - type: listing
 #   id: UplinkEshield
 #   name: uplink-eshield-name
 #   description: uplink-eshield-desc
