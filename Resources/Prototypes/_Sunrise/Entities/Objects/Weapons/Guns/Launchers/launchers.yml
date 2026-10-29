@@ -114,13 +114,6 @@
     layers:
     - state: icon
       map: ["enum.GunVisualLayers.Base"]
-  - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-      enum.RevolverVisuals.CylinderOpen:
-        enum.GunVisualLayers.Base:
-          True: { state: bolt-open }
-          False: { state: icon }
   - type: Clothing
     sprite: _Sunrise/Objects/Weapons/Guns/Launchers/grenadegun_security.rsi
   - type: Item
