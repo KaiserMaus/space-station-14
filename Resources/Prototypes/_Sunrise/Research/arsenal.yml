@@ -1,6 +1,6 @@
 - type: technology
   id: EnergyBarriers
-  name: research-technology-energy_barriers
+  name: research-technology-energy-barriers
   icon:
     sprite: _Sunrise/Objects/Tools/EnergyDome/reinhardt.rsi
     state: icon
