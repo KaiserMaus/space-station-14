@@ -77,8 +77,10 @@
         - Carp
         - DoorBumpOpener
         - CannotSuicide
-        - NoPaint  # Sunrise-edit
-        - CarpRiftHealTarget  # Sunrise-edit
+        # Sunrise-start
+        - NoPaint
+        - CarpRiftHealTarget
+        # Sunrise-end
     - type: ReplacementAccent
       accent: genericAggressive
     - type: Speech
