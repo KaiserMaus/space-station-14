@@ -39,12 +39,4 @@ public sealed partial class DragonRiftComponent : SharedDragonRiftComponent
 
     [DataField("spawn")]
     public EntProtoId SpawnPrototype = "MobCarpDragon";
-
-    // Sunrise edit start
-    /// <summary>
-    /// Prototypes that can be spawned by this rift.
-    /// </summary>
-    [DataField]
-    public List<EntProtoId> SpawnPrototypes = new();
-    // Sunrise edit end
 }
