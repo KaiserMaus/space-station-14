@@ -130,7 +130,7 @@
   suffix: punct & tranex
   components:
   - type: Label
-    currentLabel: reagent-name-puncturase-tranexamic
+    localizedLabel: reagent-name-puncturase-tranexamic
   - type: Solution
     solution:
       reagents:
@@ -145,7 +145,7 @@
   suffix: pyra & derma
   components:
   - type: Label
-    currentLabel: reagent-name-pyrazine-dermaline
+    localizedLabel: reagent-name-pyrazine-dermaline
   - type: Solution
     solution:
       reagents:
@@ -160,7 +160,7 @@
   suffix: dex+ & saline
   components:
   - type: Label
-    currentLabel: reagent-name-dexalin-plus-saline
+    localizedLabel: reagent-name-dexalin-plus-saline
   - type: Solution
     solution:
       reagents:
@@ -175,7 +175,7 @@
   suffix: tricordrazine
   components:
   - type: Label
-    currentLabel: reagent-name-tricordrazine
+    localizedLabel: reagent-name-tricordrazine
   - type: Solution
     solution:
       reagents:
