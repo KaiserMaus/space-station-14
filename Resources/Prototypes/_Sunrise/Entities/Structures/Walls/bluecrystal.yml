@@ -8,7 +8,7 @@
     oreChance: 1.0
     currentOre: OreBluecrystal
   - type: Sprite
-    sprite: Structures/Walls/rock.rsi
+    sprite: _Sunrise/Structures/Walls/rock.rsi
     layers:
     - state: rock_asteroid
     - map: [ "enum.EdgeLayer.South" ]
