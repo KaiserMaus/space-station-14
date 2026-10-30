@@ -60,8 +60,6 @@ uplink-pistol-stechkin-magazine-desc = Пистолетный магазин н�
 uplink-pistol-magazine-c40r-desc = Магазин ПП на 24 патрона. Совместим с C-40r.
 uplink-skm28-ammo-desc = Винтовочный магазин на 20 патронов. Совместим с SKM-28.
 uplink-skm24-ammo-desc = Винтовочный магазин на 30 патронов 7,62x39. Совместим с SKM-24.
-uplink-estoc-ammo-name = Магазин для винтовки (.20)
-uplink-estoc-ammo-desc = Магазин на 25 патронов. Совместим с Эсток.
 ## Weapon (Sunrise)
 uplink-c40r-bundle-name = Набор "C-40r"
 uplink-c40r-bundle-desc = Более старый: Культовый пистолет-пулемет C-40r в комплекте с тремя магазинами тяжелого калибра.
@@ -105,8 +103,6 @@ uplink-armoured-jumpsuit-name = бронированный черный адво
 uplink-armoured-jumpsuit-desc = Казалось бы, простой деловой костюм... пока не отлетела пуля...
 uplink-clothing-thieving-gloves-name = Воровские перчатки
 uplink-clothing-thieving-gloves-desc = Незаметно обчищайте карманы и повышайте свой навык воровства с помощью этих новых модных перчаток, которые выглядят как обычные!
-uplink-clothing-chameleon-thieving-gloves-name = Воровские перчатки "Хамелеон"
-uplink-clothing-chameleon-thieving-gloves-desc = Незаметно обчищайте карманы и повышайте свой навык воровства с помощью этих новых модных перчаток, которые могут менять свой облик! Учтите что волокна остануться уникальные для этих перчаток.
 uplink-50blessing-name = Подарочный набор 50 благословений
 uplink-50blessing-desc = Для агентов, которые хотят скрыть свою личность стильно, с любовью от Егора Семёнова
 uplink-slipknotset-name = Подарочный набор масок Слипкнот
@@ -122,8 +118,6 @@ uplink-clothing-belt-syndicate-utility-chameleon-desc = Пояс для аген
 uplink-syndie-maid-raid-name = рейдерка горничной
 uplink-syndie-maid-raid-desc = синдикат разработал это специально для агентов женского пола, но носят это почему-то одни мужики
 ## Weapon
-uplink-briefcase-gun-name = Портфель-пулемёт
-uplink-briefcase-gun-desc = Неприметный портфель со встроенным сверхкомпактным C-20r. Постарайтесь не сжимать ручку слишком крепко!
 uplink-swat-helmet-syndicate-name = Шлем Спецназа
 uplink-swat-helmet-syndicate-desc = Прочный шлем, созданный специально для тех, кто ценит целостность своей головы и конфиденциальность своих коварных замыслов. Окрашен в фирменные цвета спецназа Синдиката.
 uplink-syndicate-rapier-name = Рапира Синдиката
