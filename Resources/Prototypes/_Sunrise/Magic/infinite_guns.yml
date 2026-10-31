@@ -1,0 +1,58 @@
+- type: entity
+  parent: BaseAction
+  id: ActionInfiniteGuns
+  name: Infinite Guns
+  description: Summon a stream of enchanted bolt-action rifles.
+  components:
+  - type: Magic
+  - type: Action
+    useDelay: 60
+    itemIconStyle: BigAction
+    raiseOnUser: true
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
+    state: base
+  - type: InstantAction
+    event: !type:InfiniteGunsActionEvent
+      weaponPrototype: EnchantedWeaponSniperMosin
+      spawnCount: 31
+      batchSize: 1
+  - type: ActionUpgrade
+    level: 1
+    effectedLevels:
+      2: ActionInfiniteGunsII
+      3: ActionInfiniteGunsIII
+
+- type: entity
+  parent: ActionInfiniteGuns
+  id: ActionInfiniteGunsII
+  name: Infinite Guns II
+  description: Summon pairs of enchanted flintlock pistols.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Snipers/flintlock.rsi
+    state: base
+  - type: InstantAction
+    event: !type:InfiniteGunsActionEvent
+      weaponPrototype: EnchantedWeaponPistolFlintlock
+      spawnCount: 31
+      batchSize: 2
+  - type: ActionUpgrade
+    level: 2
+
+- type: entity
+  parent: ActionInfiniteGuns
+  id: ActionInfiniteGunsIII
+  name: Infinite Guns III
+  description: Summon a stream of enchanted muskets.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Weapons/Guns/Snipers/musket.rsi
+    state: base
+  - type: InstantAction
+    event: !type:InfiniteGunsActionEvent
+      weaponPrototype: EnchantedMusket
+      spawnCount: 31
+      batchSize: 1
+  - type: ActionUpgrade
+    level: 3

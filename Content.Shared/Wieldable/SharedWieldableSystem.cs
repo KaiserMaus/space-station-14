@@ -306,12 +306,12 @@ public abstract partial class SharedWieldableSystem : EntitySystem
     ///     Attempts to wield an item, starting a UseDelay after.
     /// </summary>
     /// <returns>True if the attempt wasn't blocked.</returns>
-    public bool TryWield(Entity<WieldableComponent?> wieldable, EntityUid user)
+    public bool TryWield(Entity<WieldableComponent?> wieldable, EntityUid user, bool silent = false) // Sunrise-Edit: тихий автоматический хват без popup
     {
         if (!Resolve(wieldable, ref wieldable.Comp, false))
             return false;
 
-        if (!CanWield(wieldable, user))
+        if (!CanWield(wieldable, user, quiet: silent)) // Sunrise-Edit: не показываем ошибки автоматического хвата
             return false;
 
         if (TryComp(wieldable, out UseDelayComponent? useDelay) && wieldable.Comp.UseDelayOnWield)
@@ -325,7 +325,7 @@ public abstract partial class SharedWieldableSystem : EntitySystem
 
         if (attemptEv.Cancelled)
         {
-            if (attemptEv.Message != null)
+            if (!silent && attemptEv.Message != null) // Sunrise-Edit: не показываем ошибки автоматического хвата
                 _popup.PopupEntity(attemptEv.Message, user, user);
             return false;
         }
@@ -360,9 +360,14 @@ public abstract partial class SharedWieldableSystem : EntitySystem
             return false;
         }
 
-        var selfMessage = Loc.GetString("wieldable-component-successful-wield", ("item", wieldable.Owner));
-        var othersMessage = Loc.GetString("wieldable-component-successful-wield-other", ("user", Identity.Entity(user, EntityManager)), ("item", wieldable.Owner));
-        _popup.PopupEntity(selfMessage, othersMessage, user, user);
+        // Sunrise-Edit start: тихий автоматический хват для призванного оружия
+        if (!silent)
+        {
+            var selfMessage = Loc.GetString("wieldable-component-successful-wield", ("item", wieldable.Owner));
+            var othersMessage = Loc.GetString("wieldable-component-successful-wield-other", ("user", Identity.Entity(user, EntityManager)), ("item", wieldable.Owner));
+            _popup.PopupEntity(selfMessage, othersMessage, user, user);
+        }
+        // Sunrise-Edit end
 
         var ev = new ItemWieldedEvent(user);
         RaiseLocalEvent(wieldable.Owner, ref ev);

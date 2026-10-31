@@ -1,0 +1,38 @@
+- type: entity
+  parent: WeaponSniperMosin
+  id: EnchantedWeaponSniperMosin
+  name: enchanted Kardashev-Mosin
+  description: The old rifle hums with impatient magic.
+  components:
+  - type: EnchantedGun
+    ordinaryPrototype: WeaponSniperMosin
+  - type: Gun
+    resetOnHandSelected: false
+  - type: MeleeWeapon
+    resetOnHandSelected: false
+
+- type: entity
+  parent: WeaponPistolFlintlock
+  id: EnchantedWeaponPistolFlintlock
+  name: enchanted flintlock pistol
+  description: Sparks dance along the lock as it waits to fire.
+  components:
+  - type: EnchantedGun
+    ordinaryPrototype: WeaponPistolFlintlock
+  - type: Gun
+    resetOnHandSelected: false
+  - type: CanDualWield
+    dualWieldFireRatePenalty: -1
+
+- type: entity
+  parent: Musket
+  id: EnchantedMusket
+  name: enchanted musket
+  description: A museum piece made eager by impossible magic.
+  components:
+  - type: EnchantedGun
+    ordinaryPrototype: Musket
+  - type: Gun
+    resetOnHandSelected: false
+  - type: MeleeWeapon
+    resetOnHandSelected: false

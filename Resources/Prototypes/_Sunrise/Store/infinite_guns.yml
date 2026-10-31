@@ -1,0 +1,35 @@
+- type: listing
+  id: SpellbookInfiniteGuns
+  name: spellbook-infinite-guns-name
+  description: spellbook-infinite-guns-description
+  productAction: ActionInfiniteGuns
+  productUpgradeId: SpellbookInfiniteGunsUpgrade
+  icon:
+    sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
+    state: base
+  cost:
+    WizCoin: 3
+  categories:
+  - SpellbookOffensive
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: SpellbookInfiniteGunsUpgrade
+  productUpgradeId: SpellbookInfiniteGunsUpgrade
+  name: spellbook-upgrade-infinite-guns-name
+  description: spellbook-upgrade-infinite-guns-description
+  icon:
+    sprite: Objects/Weapons/Guns/Snipers/flintlock.rsi
+    state: base
+  cost:
+    WizCoin: 1
+  categories:
+  - SpellbookOffensive
+  conditions:
+  - !type:BuyBeforeCondition
+    whitelist:
+    - SpellbookInfiniteGuns
+  - !type:ListingLimitedStockCondition
+    stock: 2
