@@ -997,10 +997,11 @@
     baseState: base
     openState: base-open
     brokenState: base-broken
-    mechToPilotDamageMultiplier: 0.0
     airtight: true
     maxEquipmentAmount: 2
-    pilotWhitelist:
+  - type: Vehicle
+    transferDamage: false
+    operatorWhitelist:
       components:
       - HumanoidProfile
   - type: MeleeWeapon
@@ -1028,8 +1029,9 @@
   - type: MovementAlwaysTouching
   - type: AccessReader
     access: [[]]
+  - type: MobState
+    currentState: Alive
   - type: MobThresholds
-    currentThresholdState: Alive
     thresholds:
       0: Alive
       475: Critical

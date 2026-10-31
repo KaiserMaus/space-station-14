@@ -89,7 +89,7 @@
 - type: entity
   id: SunriseBlyashankaLLeg2
   parent: BaseSunriseBlyashankaPartItem
-  name: Blyashanka left leg 2
+  name: left rear leg
   description: The second left leg of the Blyashanka. It belongs on the chassis of the mech.
   components:
   - type: Sprite
@@ -101,7 +101,7 @@
 - type: entity
   id: SunriseBlyashankaRLeg2
   parent: BaseSunriseBlyashankaPartItem
-  name: Blyashanka right leg 2
+  name: right rear leg
   description: The second right leg of the Blyashanka. It belongs on the chassis of the mech.
   components:
   - type: Sprite

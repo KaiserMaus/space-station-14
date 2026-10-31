@@ -1540,8 +1540,6 @@
           Heat: 1.5
     - type: Reflect
     - type: RadarBlip
-  - type: SpawnOnTrigger
-    proto: MobSovietT2Rifle
   - type: Destructible
     thresholds:
     - trigger:
@@ -1556,6 +1554,9 @@
           ScrapSteel:
             min: 2
             max: 4
+          MobSovietT2Rifle:
+            min: 1
+            max: 1
           MechKolobokHarnessSpawnerLow:
             min: 1
             max: 1
