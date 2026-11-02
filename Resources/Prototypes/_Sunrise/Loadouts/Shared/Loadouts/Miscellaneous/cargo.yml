@@ -135,6 +135,28 @@
 # Neck
 
 - type: loadout
+  id: SunriseLoadoutSunriseClothingNeckMantleSalvager
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSalvageSpecialist
+      time: 216000 # 60 часов
+  equipment:
+    neck: SunriseClothingNeckMantleSalvager
+
+- type: loadout
+  id: SunriseLoadoutSunriseClothingNeckMantleVeteranSalvager
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSalvageSpecialist
+      time: 360000 # 100 часов
+  equipment:
+    neck: SunriseClothingNeckMantleVeteranSalvager
+
+- type: loadout
   id: SalvageSpecialistAliveMantle
   effects:
   - !type:JobRequirementLoadoutEffect

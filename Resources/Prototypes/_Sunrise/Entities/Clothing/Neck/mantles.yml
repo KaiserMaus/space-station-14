@@ -87,6 +87,28 @@
       sprite: _Sunrise/Clothing/Neck/Mantles/captain_mantle_black_shoulder.rsi
 
 - type: entity
+  parent: [ClothingNeckBase, BaseSalvageContraband]
+  id: SunriseClothingNeckMantleSalvager
+  name: ceremonial salvager's mantle
+  description: A ceremonial mantle worn by salvagers who have distinguished themselves.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Neck/Mantles/salvagemantle.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Neck/Mantles/salvagemantle.rsi
+
+- type: entity
+  parent: [ClothingNeckBase, BaseSalvageContraband]
+  id: SunriseClothingNeckMantleVeteranSalvager
+  name: veteran salvager's mantle
+  description: A ceremonial mantle with waist capes worn by veteran salvagers who have distinguished themselves even further.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Neck/Mantles/veteran_salvagemantle.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Neck/Mantles/veteran_salvagemantle.rsi
+
+- type: entity
   parent: ClothingCloakBase
   id: ClothingNeckMantleGoliathAlive
   name: alive mantle
