@@ -1,0 +1,21 @@
+- type: entity
+  parent: [BaseNinjaObjective, BaseCodeObjective]
+  id: SunriseNinjaExtractObjective
+  name: extract from station
+  description: Use your gloves on an escape pod console to extract from the station.
+  components:
+  - type: Objective
+    icon:
+      sprite: Clothing/Mask/ninja.rsi
+      state: icon
+
+- type: weightedRandom
+  id: SunriseNinjaFinalObjectiveGroups
+  weights:
+    SunriseNinjaFinalObjectiveGroup: 1
+
+- type: weightedRandom
+  id: SunriseNinjaFinalObjectiveGroup
+  weights:
+    SunriseNinjaExtractObjective: 4
+    NinjaSurviveObjective: 1

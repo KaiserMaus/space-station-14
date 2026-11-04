@@ -290,7 +290,13 @@
     - SpiderChargeObjective
     - TerrorObjective
     - MassArrestObjective
-    - NinjaSurviveObjective
+  # Sunrise-Edit start - выдаём одну финальную цель: эвакуация в 80% случаев или выживание в 20%.
+  - type: AntagRandomObjectives
+    sets:
+    - groups: SunriseNinjaFinalObjectiveGroups
+      maxPicks: 1
+    maxDifficulty: 1.5
+  # Sunrise-Edit end
   - type: AntagSelection
     agentName: ninja-round-end-agent-name
     antags:

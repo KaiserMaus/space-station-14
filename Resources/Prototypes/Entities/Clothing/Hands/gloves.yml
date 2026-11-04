@@ -301,6 +301,11 @@
     - objective: MassArrestObjective
       components:
       - type: CriminalRecordsHacker
+    # Sunrise edit start - добавляем способность для выполнения цели эвакуации ниндзя.
+    - objective: SunriseNinjaExtractObjective
+      components:
+      - type: NinjaPodHacker
+    # Sunrise edit end
 
 - type: entity
   parent: [ ClothingHandsGlovesColorBlack, BaseSecurityEngineeringContraband, BaseSlicingRefinable ] # Sunrise-Edit - сохраняем разрезание перчаток через актуальный ToolRefinable API.

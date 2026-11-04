@@ -1,0 +1,18 @@
+- type: entity
+  parent: [BaseWallmountMachine, StructureHealthMachineWeak]
+  id: SunriseWallmountPodConsole
+  name: escape pod console
+  description: Controls the escape pod's launch systems.
+  suffix: Wall
+  components:
+  - type: TTS
+    voice: IgnatiaFlootravel
+  - type: Speech
+    speechVerb: Robotic
+  - type: PodConsole
+  - type: WallMount
+    arc: 360
+  - type: Sprite
+    sprite: _Sunrise/Structures/Wallmounts/pod_console.rsi
+    layers:
+    - state: base

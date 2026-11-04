@@ -1268,6 +1268,8 @@
   suffix: External, Escape 3x4, Glass, Docking
   components:
   - type: GridFill
+    # Sunrise-Edit - используем капсулу Sunrise с консолью для эвакуации ниндзя.
+    path: /Maps/_Sunrise/Shuttles/EscapePods/escape_pod_small.yml
     addComponents:
     - type: IFF
       flags:
