@@ -5,15 +5,6 @@
   name: flippo lighter
   description: A reliable metal lighter designed to last a long time.
   components:
-  - type: Sprite
-    sprite: _Sunrise/Objects/Misc/zippos.rsi
-    layers:
-    - state: zippo
-      map: ["base"]
-    - state: zippoon
-      map: ["open"]
-      visible: false
-      shader: unshaded
   - type: ItemToggle
     predictable: false
     soundActivate:
@@ -46,7 +37,7 @@
           True: { visible: false }
           False: { visible: true }
   - type: Solution
-    id: Welder
+    id: welder
     solution:
       reagents:
       - ReagentId: WeldingFuel
@@ -88,6 +79,7 @@
   id: FlippoLighterSunriseCe
   components:
   - type: Sprite
+    sprite: _Sunrise/Objects/Tools/Lighters/ce.rsi
     layers:
     - state: zippo_ce
       map: ["base"]
@@ -95,12 +87,15 @@
       map: ["open"]
       visible: false
       shader: unshaded
+  - type: StealTarget
+    stealGroup: HeadLighter
 
 - type: entity
   parent: FlippoLighterSunriseBase
   id: FlippoLighterSunriseCmo
   components:
   - type: Sprite
+    sprite: _Sunrise/Objects/Tools/Lighters/cmo.rsi
     layers:
     - state: zippo_cmo
       map: ["base"]
@@ -108,12 +103,15 @@
       map: ["open"]
       visible: false
       shader: unshaded
+  - type: StealTarget
+    stealGroup: HeadLighter
 
 - type: entity
   parent: FlippoLighterSunriseBase
   id: FlippoLighterSunriseCap
   components:
   - type: Sprite
+    sprite: _Sunrise/Objects/Tools/Lighters/cap.rsi
     layers:
     - state: zippo_cap
       map: ["base"]
@@ -121,6 +119,8 @@
       map: ["open"]
       visible: false
       shader: unshaded
+  - type: StealTarget
+    stealGroup: HeadLighter
   - type: PhysicalComposition
     materialComposition:
       Steel: 260
@@ -131,6 +131,7 @@
   id: FlippoLighterSunriseHos
   components:
   - type: Sprite
+    sprite: _Sunrise/Objects/Tools/Lighters/hos.rsi
     layers:
     - state: zippo_hos
       map: ["base"]
@@ -138,12 +139,15 @@
       map: ["open"]
       visible: false
       shader: unshaded
+  - type: StealTarget
+    stealGroup: HeadLighter
 
 - type: entity
   parent: FlippoLighterSunriseBase
   id: FlippoLighterSunriseQm
   components:
   - type: Sprite
+    sprite: _Sunrise/Objects/Tools/Lighters/qm.rsi
     layers:
     - state: zippo_qm
       map: ["base"]
@@ -151,12 +155,15 @@
       map: ["open"]
       visible: false
       shader: unshaded
+  - type: StealTarget
+    stealGroup: HeadLighter
 
 - type: entity
   parent: FlippoLighterSunriseBase
   id: FlippoLighterSunriseRd
   components:
   - type: Sprite
+    sprite: _Sunrise/Objects/Tools/Lighters/rd.rsi
     layers:
     - state: zippo_rd
       map: ["base"]
@@ -164,12 +171,15 @@
       map: ["open"]
       visible: false
       shader: unshaded
+  - type: StealTarget
+    stealGroup: HeadLighter
 
 - type: entity
   parent: FlippoLighterSunriseBase
   id: FlippoLighterSunriseHop
   components:
   - type: Sprite
+    sprite: _Sunrise/Objects/Tools/Lighters/hop.rsi
     layers:
     - state: zippo_hop
       map: ["base"]
@@ -177,29 +187,15 @@
       map: ["open"]
       visible: false
       shader: unshaded
-
-- type: entity
-  parent: FlippoLighterSunriseBase
-  id: FlippoLighterSunriseNt
-  components:
-  - type: Sprite
-    layers:
-    - state: zippo_nt_off
-      map: ["base"]
-    - state: zippo_nt_on
-      map: ["open"]
-      visible: false
-      shader: unshaded
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 260
-      Gold: 120
+  - type: StealTarget
+    stealGroup: HeadLighter
 
 - type: entity
   parent: FlippoLighterSunriseBase
   id: FlippoLighterSunriseGonzo
   components:
   - type: Sprite
+    sprite: _Sunrise/Objects/Tools/Lighters/gonzo.rsi
     layers:
     - state: gonzozippo
       map: ["base"]
@@ -213,6 +209,7 @@
   id: FlippoLighterSunriseContractor
   components:
   - type: Sprite
+    sprite: _Sunrise/Objects/Tools/Lighters/contractor.rsi
     layers:
     - state: contractorzippo
       map: ["base"]
@@ -226,6 +223,7 @@
   id: FlippoLighterSunriseBlack
   components:
   - type: Sprite
+    sprite: _Sunrise/Objects/Tools/Lighters/black.rsi
     layers:
     - state: blackzippo
       map: ["base"]
@@ -239,6 +237,7 @@
   id: FlippoLighterSunriseBlue
   components:
   - type: Sprite
+    sprite: _Sunrise/Objects/Tools/Lighters/blue.rsi
     layers:
     - state: bluezippo
       map: ["base"]

@@ -86,6 +86,7 @@
   weights:
     HeadCloakStealCollectionObjective: 1                #command
     HeadBedsheetStealCollectionObjective: 1
+    HeadLighterStealCollectionObjective: 1              # Sunrise-Edit - коллекционное задание на должностные зажигалки глав.
     StampStealCollectionObjective: 1
     DoorRemoteStealCollectionObjective: 1
     OfficerHandgunsStealCollectionObjective: 1         #sec

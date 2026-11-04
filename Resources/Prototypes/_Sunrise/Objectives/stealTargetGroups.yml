@@ -39,3 +39,10 @@
   sprite:
     sprite: _Sunrise/Objects/Tanks/Jetpacks/ce_void.rsi
     state: icon
+
+- type: stealTargetGroup
+  id: HeadLighter
+  name: steal-target-groups-heads-lighters
+  sprite:
+    sprite: _Sunrise/Objects/Tools/Lighters/cap.rsi
+    state: zippo_cap
