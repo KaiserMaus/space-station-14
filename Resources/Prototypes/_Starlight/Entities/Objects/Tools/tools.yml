@@ -302,13 +302,13 @@
       shader: unshaded
       map: ["enum.ToggleableVisuals.Layer"]
   - type: RefillableSolution
-    solution: Welder
+    solution: welder
   - type: Tool
     useSound:
       collection: Welder
     qualities: [ Welding ]
   - type: Solution
-    id: Welder
+    id: welder
     solution:
       reagents:
       - ReagentId: WeldingFuel
@@ -485,7 +485,7 @@
         - type: ToggleableVisuals
           spriteLayer: flame
         - type: RefillableSolution
-          solution: Welder
+          solution: welder
         - type: Tool
           useSound:
             collection: Welder
@@ -554,13 +554,13 @@
       shader: unshaded
       map: ["enum.ToggleableVisuals.Layer"]
   - type: RefillableSolution
-    solution: Welder
+    solution: welder
   - type: Tool
     useSound:
       collection: Welder
     qualities: [ Welding ]
   - type: Solution
-    id: Welder
+    id: welder
     solution:
       reagents:
       - ReagentId: WeldingFuel
@@ -728,7 +728,7 @@
         - type: ToggleableVisuals
           spriteLayer: flame
         - type: RefillableSolution
-          solution: Welder
+          solution: welder
         - type: Tool
           useSound:
             collection: Welder

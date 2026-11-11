@@ -179,6 +179,56 @@
       - Wrench
 
 - type: entity
+  name: crowbar-wrench
+  parent: GoldenCrowbarWrench
+  id: CrowbarWrench
+  description: 'The ultimate tool for loosening and fastening just about anything. Also features a crowbar end for prying open airlocks or persuading anyone unhappy with your work.'
+  components:
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/crowbar_drop.ogg
+  - type: Sprite
+    sprite: _Sunrise/Objects/Tools/crowrench.rsi
+    state: wrench
+  - type: Item
+    sprite: _Sunrise/Objects/Tools/crowrench.rsi
+    storedSprite:
+      sprite: _Sunrise/Objects/Tools/crowrench.rsi
+      state: storage
+  - type: Prying
+    enabled: false
+  - type: ToolTileCompatible
+  - type: Tool
+    qualities:
+      - Anchoring
+    useSound:
+      path: /Audio/Items/ratchet.ogg
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 9
+  - type: MultipleTool
+    statusShowBehavior: true
+    entries:
+      - behavior: [ Anchoring ]
+        sprite:
+          sprite: _Sunrise/Objects/Tools/crowrench.rsi
+          state: wrench
+        useSound:
+          path: /Audio/Items/ratchet.ogg
+      - behavior: [ Prying ]
+        sprite:
+          sprite: _Sunrise/Objects/Tools/crowrench.rsi
+          state: crowbar
+        useSound:
+          path: /Audio/Items/crowbar.ogg
+  - type: Tag
+    tags:
+      - Crowbar
+      - Wrench
+
+- type: entity
   parent: [ HandHeldMassScannerBorg, BaseHighlyIllegalContraband ]
   id: HandHeldMassScannerPirate
   name: holographic pirate map

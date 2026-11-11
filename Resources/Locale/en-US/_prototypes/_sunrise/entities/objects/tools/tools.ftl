@@ -11,3 +11,5 @@ ent-MultitoolAbductor = abductor's multitool
     .desc = { ent-Multitool.desc }
 ent-HandHeldMassScannerPirate = holographic pirate map
     .desc = A hand-held mass scanner disguised as a glowing pirate chart.
+ent-CrowbarWrench = crowbar-wrench
+    .desc = The ultimate tool for loosening and fastening just about anything. Also features a crowbar end for prying open airlocks or persuading anyone unhappy with your work.
