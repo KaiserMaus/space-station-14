@@ -310,6 +310,10 @@ public abstract partial class SharedResearchSystem : EntitySystem
             return;
 
         comp.UnlockedTechnologies.Clear();
+        // Sunrise added start - Clear theft and technology disk state.
+        comp.StolenTechnologies.Clear();
+        comp.DiskRestoredRecipes.Clear();
+        // Sunrise added end
         // Sunrise-Edit - Reset research expansion state.
         ResetResearchExpansion(comp);
         Dirty(uid, comp);

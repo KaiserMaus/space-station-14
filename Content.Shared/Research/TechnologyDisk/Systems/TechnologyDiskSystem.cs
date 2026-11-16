@@ -139,7 +139,7 @@ public sealed partial class TechnologyDiskSystem : EntitySystem
         {
             foreach (var recipe in ent.Comp.Recipes)
             {
-                _research.AddLatheRecipe(target, recipe, database);
+                _research.AddTechnologyDiskRecipe((target, database), recipe); // Sunrise-Edit - Track recipes restored independently from technology disks.
             }
         }
         _popup.PopupEntity(Loc.GetString("tech-disk-inserted"), target, args.User);

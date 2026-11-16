@@ -23,6 +23,10 @@ public sealed partial class ResearchSystem
         primaryDb.MaximumTechnologyTier = otherDb.MaximumTechnologyTier;
         primaryDb.DisciplineLockoutTier = otherDb.DisciplineLockoutTier;
         // Sunrise added end
+        // Sunrise added start - Synchronize theft and disk restoration state.
+        primaryDb.StolenTechnologies = new(otherDb.StolenTechnologies);
+        primaryDb.DiskRestoredRecipes = new(otherDb.DiskRestoredRecipes);
+        // Sunrise added end
         primaryDb.CurrentTechnologyCards = otherDb.CurrentTechnologyCards;
         primaryDb.SupportedDisciplines = otherDb.SupportedDisciplines;
         primaryDb.UnlockedTechnologies = otherDb.UnlockedTechnologies;
@@ -184,6 +188,10 @@ public sealed partial class ResearchSystem
         component.MainDiscipline = null;
         component.AdditionalDisciplines.Clear(); // Sunrise-Edit - Reset additional disciplines.
         component.ResearchDisciplineLimit = 1; // Sunrise-Edit - Restore the initial discipline limit.
+        // Sunrise added start - Reset the local theft and technology disk state.
+        component.StolenTechnologies.Clear();
+        component.DiskRestoredRecipes.Clear();
+        // Sunrise added end
         component.CurrentTechnologyCards = new List<string>();
         component.SupportedDisciplines = new List<ProtoId<TechDisciplinePrototype>>();
         component.UnlockedTechnologies = new List<ProtoId<TechnologyPrototype>>();
