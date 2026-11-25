@@ -1,3 +1,50 @@
+# Цели на саботаж исследований
+- type: entity
+  parent: BaseTraitorObjective
+  id: SunriseStealResearchDataObjective
+  name: Steal research data
+  description: Deploy the supplied relay and download the required number of unique technologies from station research servers.
+  components:
+  - type: Objective
+    difficulty: 3
+    icon:
+      sprite: Objects/Tools/hijack_beacon.rsi
+      state: extraction_point
+  - type: StealResearchDataCondition
+  - type: NumberObjective
+    min: 3
+    max: 10
+    title: objective-condition-steal-research-data-title
+    description: objective-condition-steal-research-data-description
+  - type: ResearchServerObjectiveRequirement
+    allowLimitedServers: true
+  - type: ObjectiveBlacklistRequirement
+    blacklist:
+      components:
+      - OverheatResearchServerCondition
+  - type: ObjectiveLimit
+    limit: 1
+
+- type: entity
+  parent: BaseTraitorObjective
+  id: SunriseOverheatResearchServerObjective
+  name: Overheat an R&D server
+  description: Spill any liquid on a full station R&D server and begin its irreversible overheating sequence.
+  components:
+  - type: Objective
+    difficulty: 3
+    icon:
+      sprite: Structures/Machines/server.rsi
+      state: server-on
+  - type: OverheatResearchServerCondition
+  - type: ResearchServerObjectiveRequirement
+  - type: ObjectiveBlacklistRequirement
+    blacklist:
+      components:
+      - StealResearchDataCondition
+  - type: ObjectiveLimit
+    limit: 1
+
 # Kill objectives
 - type: entity
   parent: [BaseTraitorObjective, BaseKillObjective]

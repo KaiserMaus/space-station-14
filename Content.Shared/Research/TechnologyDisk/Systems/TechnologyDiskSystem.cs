@@ -66,6 +66,10 @@ public sealed partial class TechnologyDiskSystem : EntitySystem
         var bundles = new HashSet<(ProtoId<LatheRecipePrototype> recipe, ProtoId<TechDisciplinePrototype> discipline)>();
         foreach (var tech in ProtoMan.EnumeratePrototypes<TechnologyPrototype>())
         {
+            // Sunrise-Edit - Финальные технологии не должны выпадать на технологических дисках.
+            if (tech.RequiresResearchCompletion)
+                continue;
+
             if (tech.Tier != tier)
                 continue;
             if (ent.Comp.Discipline != null && tech.Discipline != ent.Comp.Discipline.Value)
@@ -135,7 +139,7 @@ public sealed partial class TechnologyDiskSystem : EntitySystem
         {
             foreach (var recipe in ent.Comp.Recipes)
             {
-                _research.AddLatheRecipe(target, recipe, database);
+                _research.AddTechnologyDiskRecipe((target, database), recipe); // Sunrise-Edit - Сохраняем независимое происхождение рецепта с технологического диска.
             }
         }
         _popup.PopupEntity(Loc.GetString("tech-disk-inserted"), target, args.User);

@@ -59,6 +59,7 @@
   id: TraitorObjectiveGroupSabotage
   weights:
     SupercritAnomaliesObjective: 1
+    SunriseOverheatResearchServerObjective: 0.1 # Sunrise-Edit - Редкая цель на уничтожение полноценного сервера РНД.
 
 #misc objectives that don't fall other another category
 - type: weightedRandom
@@ -66,6 +67,7 @@
   weights:
     # HijackTradeStationObjective: 1 # Sunrise-Edit - торговая станция отсутствует на картах Sunrise.
     MailFraudObjective: 1
+    SunriseStealResearchDataObjective: 1 # Sunrise-Edit - Шанс сопоставим с ванильной целью на захват ATS.
 
 
 #Thief groups

@@ -1,6 +1,7 @@
 using System.Linq;
 using Content.Shared.Lathe;
 using Content.Shared.Research.Components;
+using Content.Shared.Research.Events;
 using Content.Shared.Research.Prototypes;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
@@ -69,6 +70,10 @@ public abstract partial class SharedResearchSystem : EntitySystem
         if (tech.Hidden)
             return false;
 
+        // Sunrise-Edit - Отдельные базы исследований могут быть ограничены уровнем целых технологий.
+        if (!IsTechnologyWithinTierLimit(component, tech))
+            return false;
+
         if (!component.SupportedDisciplines.Contains(tech.Discipline))
             return false;
 
@@ -83,6 +88,10 @@ public abstract partial class SharedResearchSystem : EntitySystem
             if (!component.UnlockedTechnologies.Contains(prereq))
                 return false;
         }
+
+        // Sunrise-Edit - Финальные технологии доступны только после завершения обычного дерева исследований.
+        if (tech.RequiresResearchCompletion && !HasCompletedResearch(component))
+            return false;
 
         return true;
     }
@@ -106,12 +115,14 @@ public abstract partial class SharedResearchSystem : EntitySystem
     public int GetHighestDisciplineTier(TechnologyDatabaseComponent component, TechDisciplinePrototype techDiscipline)
     {
         var allTech = ProtoMan.EnumeratePrototypes<TechnologyPrototype>()
-            .Where(p => p.Discipline == techDiscipline.ID && !p.Hidden).ToList();
+            // Sunrise-Edit - Финальные технологии не участвуют в расчёте прогресса дисциплины.
+            .Where(p => p.Discipline == techDiscipline.ID && !p.Hidden && !p.RequiresResearchCompletion).ToList();
         var allUnlocked = new List<TechnologyPrototype>();
         foreach (var recipe in component.UnlockedTechnologies)
         {
             var proto = ProtoMan.Index<TechnologyPrototype>(recipe);
-            if (proto.Discipline != techDiscipline.ID)
+            // Sunrise-Edit - Финальные технологии не участвуют в расчёте прогресса дисциплины.
+            if (proto.Discipline != techDiscipline.ID || proto.RequiresResearchCompletion)
                 continue;
             allUnlocked.Add(proto);
         }
@@ -135,10 +146,12 @@ public abstract partial class SharedResearchSystem : EntitySystem
             if (percent < techDiscipline.TierPrerequisites[tier])
                 break;
 
+            // Sunrise edit start - Учитываем купленные слоты и дополнительные дисциплины.
             if (tier >= techDiscipline.LockoutTier &&
-                component.MainDiscipline != null &&
-                techDiscipline.ID != component.MainDiscipline)
+                !IsResearchDisciplineSelected(component, techDiscipline.ID) &&
+                GetSelectedDisciplines(component).Count >= component.ResearchDisciplineLimit)
                 break;
+            // Sunrise edit end
             tier++;
         }
 
@@ -222,10 +235,25 @@ public abstract partial class SharedResearchSystem : EntitySystem
             return;
 
         var discipline = ProtoMan.Index(prototype.Discipline);
-        if (prototype.Tier < discipline.LockoutTier)
+        // Sunrise edit start - Один слот соответствует одной выбранной дисциплине.
+        if (prototype.Tier < discipline.LockoutTier || prototype.RequiresResearchCompletion)
             return;
-        component.MainDiscipline = prototype.Discipline;
+
+        if (IsResearchDisciplineSelected(component, prototype.Discipline))
+            return;
+
+        if (component.MainDiscipline == null)
+            component.MainDiscipline = prototype.Discipline;
+        else if (GetSelectedDisciplines(component).Count < component.ResearchDisciplineLimit)
+            component.AdditionalDisciplines.Add(prototype.Discipline);
+        else
+            return;
+        // Sunrise edit end
         Dirty(uid, component);
+
+        // Sunrise-Edit - Оповещение об успешно выбранной дисциплине обрабатывается на сервере.
+        var selectedEvent = new ResearchDisciplineSelectedEvent(prototype.Discipline);
+        RaiseLocalEvent(uid, ref selectedEvent);
 
         var ev = new TechnologyDatabaseModifiedEvent();
         RaiseLocalEvent(uid, ref ev);
@@ -278,10 +306,15 @@ public abstract partial class SharedResearchSystem : EntitySystem
     [PublicAPI]
     public void ClearTechs(EntityUid uid, TechnologyDatabaseComponent? comp = null)
     {
-        if (!Resolve(uid, ref comp) || comp.UnlockedTechnologies.Count == 0)
+        if (!Resolve(uid, ref comp))
             return;
 
         comp.UnlockedTechnologies.Clear();
+        // Sunrise-Edit - Сброс исследований также очищает данные кражи и технологических дисков.
+        comp.StolenTechnologies.Clear();
+        comp.DiskRestoredRecipes.Clear();
+        // Sunrise-Edit - Сброс исследований также сбрасывает расширение базы.
+        ResetResearchExpansion(comp);
         Dirty(uid, comp);
     }
 

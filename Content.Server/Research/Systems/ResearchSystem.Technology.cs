@@ -17,6 +17,13 @@ public sealed partial class ResearchSystem
             return;
 
         primaryDb.MainDiscipline = otherDb.MainDiscipline;
+        // Sunrise added start - Синхронизация расширяемых дисциплин.
+        primaryDb.AdditionalDisciplines = new(otherDb.AdditionalDisciplines);
+        primaryDb.ResearchDisciplineLimit = otherDb.ResearchDisciplineLimit;
+        primaryDb.MaximumTechnologyTier = otherDb.MaximumTechnologyTier;
+        primaryDb.StolenTechnologies = new(otherDb.StolenTechnologies);
+        primaryDb.DiskRestoredRecipes = new(otherDb.DiskRestoredRecipes);
+        // Sunrise added end
         primaryDb.CurrentTechnologyCards = otherDb.CurrentTechnologyCards;
         primaryDb.SupportedDisciplines = otherDb.SupportedDisciplines;
         primaryDb.UnlockedTechnologies = otherDb.UnlockedTechnologies;
@@ -81,7 +88,6 @@ public sealed partial class ResearchSystem
             return false;
 
         AddTechnology(serverEnt.Value, prototype);
-        TrySetMainDiscipline(prototype, serverEnt.Value);
         ModifyServerPoints(serverEnt.Value, -prototype.Cost);
         UpdateTechnologyCards(serverEnt.Value);
 
@@ -112,14 +118,20 @@ public sealed partial class ResearchSystem
         if (!Resolve(uid, ref component))
             return;
 
-        //todo this needs to support some other stuff, too
+        // Sunrise-Edit - Ограниченная база не принимает целые технологии выше своего уровня.
+        if (!IsTechnologyWithinTierLimit(component, technology))
+            return;
+
+        TrySetMainDiscipline(technology, uid, component); // Sunrise-Edit - Выбор дисциплины выполняется для всех способов добавления технологии.
         foreach (var generic in technology.GenericUnlocks)
         {
             if (generic.PurchaseEvent != null)
-                RaiseLocalEvent(generic.PurchaseEvent);
+                RaiseLocalEvent(uid, generic.PurchaseEvent); // Sunrise-Edit - Эффект применяется к конкретной базе исследований.
         }
 
-        component.UnlockedTechnologies.Add(technology.ID);
+        // Sunrise-Edit - Повторяемые технологии не сохраняются как разблокированные.
+        if (!technology.Repeatable)
+            component.UnlockedTechnologies.Add(technology.ID);
         var addedRecipes = new List<string>();
         foreach (var unlock in technology.RecipeUnlocks)
         {
@@ -148,11 +160,14 @@ public sealed partial class ResearchSystem
         if (!Resolve(uid, ref client, ref database, false))
             return false;
 
-        if (!TryGetClientServer(uid, out _, out var serverComp, client))
+        // Sunrise edit start - Доступность проверяется по общей серверной базе, а не по устаревшей копии клиента.
+        if (!TryGetClientServer(uid, out var server, out var serverComp, client) ||
+            !TryComp<TechnologyDatabaseComponent>(server, out var serverDatabase))
             return false;
 
-        if (!IsTechnologyAvailable(database, technology))
+        if (!IsTechnologyAvailable(serverDatabase, technology))
             return false;
+        // Sunrise edit end
 
         if (technology.Cost > serverComp.Points)
             return false;
@@ -165,6 +180,12 @@ public sealed partial class ResearchSystem
         if (args.Server != null)
             return;
         component.MainDiscipline = null;
+        component.AdditionalDisciplines.Clear(); // Sunrise-Edit - Сброс дополнительных дисциплин.
+        component.ResearchDisciplineLimit = 1; // Sunrise-Edit - Восстановление исходного лимита дисциплин.
+        // Sunrise added start - Сброс локальной копии состояния кражи и технологических дисков.
+        component.StolenTechnologies.Clear();
+        component.DiskRestoredRecipes.Clear();
+        // Sunrise added end
         component.CurrentTechnologyCards = new List<string>();
         component.SupportedDisciplines = new List<ProtoId<TechDisciplinePrototype>>();
         component.UnlockedTechnologies = new List<ProtoId<TechnologyPrototype>>();

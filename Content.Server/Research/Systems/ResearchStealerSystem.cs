@@ -26,17 +26,17 @@ public sealed partial class ResearchStealerSystem : SharedResearchStealerSystem
         if (!TryComp<TechnologyDatabaseComponent>(target, out var database))
             return;
 
+        // Sunrise added start - Кража сохраняет историю исследования и пропускает уже украденные и финальные технологии.
+        var stealable = _research.GetStealableTechnologies(database);
         var ev = new ResearchStolenEvent(uid, target, new());
         var count = _random.Next(comp.MinToSteal, comp.MaxToSteal + 1);
-        for (var i = 0; i < count; i++)
+        for (var i = 0; i < count && stealable.Count > 0; i++)
         {
-            if (database.UnlockedTechnologies.Count == 0)
-                break;
-
-            var toRemove = _random.Pick(database.UnlockedTechnologies);
-            if (_research.TryRemoveTechnology((target, database), toRemove))
-                ev.Techs.Add(toRemove);
+            var technology = _random.PickAndTake(stealable);
+            if (_research.TryStealTechnology((target, database), technology.ID))
+                ev.Techs.Add(technology.ID);
         }
+        // Sunrise added end
         RaiseLocalEvent(uid, ref ev);
 
         args.Handled = true;
