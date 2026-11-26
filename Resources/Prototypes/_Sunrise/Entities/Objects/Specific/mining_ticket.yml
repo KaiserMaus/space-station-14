@@ -1,0 +1,130 @@
+- type: currency
+  id: MiningTicket
+  displayName: currency-mining-ticket
+  cash:
+    1: MiningTicket
+  canWithdraw: true
+
+- type: entity
+  parent: SalvageTicket
+  id: MiningTicket
+  name: mining ticket
+  description: Exchange these tickets for mining equipment.
+  components:
+  - type: PhysicalComposition
+    materialComposition:
+      MiningTicket: 1
+  - type: Stack
+    stackType: MiningTicket
+    count: 1
+  - type: Sprite
+    layers:
+    - state: icon
+      map: ["base"]
+      color: "#9be792"
+  - type: Currency
+    price:
+      MiningTicket: 1
+  - type: CargoSellBlacklist
+
+- type: material
+  id: MiningTicket
+  name: material-mining-ticket
+  unit: materials-unit-tickets
+  stackEntity: MiningTicket
+  icon: { sprite: /Textures/_Sunrise/Objects/Economy/salvage_ticket.rsi, state: icon }
+  price: 1
+
+- type: stack
+  id: MiningTicket
+  name: stack-mining-ticket
+  icon: { sprite: /Textures/_Sunrise/Objects/Economy/salvage_ticket.rsi, state: icon }
+  spawn: MiningTicket
+
+- type: entity
+  parent: MiningTicket
+  id: MiningTicket2
+  suffix: 2
+  components:
+  - type: Stack
+    count: 2
+
+- type: entity
+  parent: MiningTicket
+  id: MiningTicket3
+  suffix: 3
+  components:
+  - type: Stack
+    count: 3
+
+- type: entity
+  parent: MiningTicket
+  id: MiningTicket4
+  suffix: 4
+  components:
+  - type: Stack
+    count: 4
+
+- type: entity
+  parent: MiningTicket
+  id: MiningTicket5
+  suffix: 5
+  components:
+  - type: Stack
+    count: 5
+
+- type: entity
+  parent: MiningTicket
+  id: MiningTicket10
+  suffix: 10
+  components:
+  - type: Stack
+    count: 10
+
+- type: entity
+  parent: MiningTicket
+  id: MiningTicket20
+  suffix: 20
+  components:
+  - type: Stack
+    count: 20
+
+- type: entity
+  parent: MiningTicket
+  id: MiningTicket15
+  suffix: 15
+  components:
+  - type: Stack
+    count: 15
+
+- type: entity
+  parent: MiningTicket
+  id: MiningTicket25
+  suffix: 25
+  components:
+  - type: Stack
+    count: 25
+
+- type: entity
+  parent: MiningTicket
+  id: MiningTicket30
+  suffix: 30
+  components:
+  - type: Stack
+    count: 30
+
+- type: entity
+  parent: MiningTicket
+  id: MiningTicket50
+  suffix: 50
+  components:
+  - type: Stack
+    count: 50
+
+- type: entity
+  parent: MiningTicket
+  id: MiningTicket100
+  suffix: 100
+  components:
+  - type: Stack
+    count: 100

@@ -1,10 +1,17 @@
 ﻿# equipment
+- type: listing
+  id: SunriseVendorSalvageCash
+  productEntity: SpaceCash100
+  cost:
+    SalvageTicket: 50
+  categories:
+  - SalvageEquipment
 
 - type: listing
   id: VendorSalvageClothingMaskGasExplorer
   productEntity: ClothingMaskGasExplorer
   cost:
-    SalvageTicket: 50
+    SalvageTicket: 75
   categories:
   - SalvageEquipment
 
@@ -235,7 +242,7 @@
   - !type:ListingLimitedStockCondition
     stock: 8
 
-# weapons
+# region weapons
 - type: listing
   id: VendorSalvageWeaponLaserSvalinn
   productEntity: WeaponLaserSvalinn
@@ -307,7 +314,7 @@
   - !type:ListingLimitedStockCondition
     stock: 3
 
-# consumables
+# region consumables
 
 - type: listing
   id: VendorSalvageSpeedLoaderShotgunEmpty

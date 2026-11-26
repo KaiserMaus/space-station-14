@@ -1,0 +1,64 @@
+- type: cargoProduct
+  id: SunriseCargoSalvageGauntletDrill
+  icon:
+    sprite: _Sunrise/Objects/Weapons/Melee/moledrill.rsi
+    state: icon
+  product: WeaponGauntletDrill
+  container:
+    entity: WrappedParcel
+    containerId: contents
+  cost: 7500
+  category: cargoproduct-category-name-cargo
+  group: SalvageJobReward3
+
+- type: cargoProduct
+  id: SunriseCargoSalvageShuttleGunKineticFlatpack
+  icon:
+    sprite: Objects/Devices/flatpack.rsi
+    state: base
+  product: ShuttleGunKineticFlatpack
+  container:
+    entity: WrappedParcel
+    containerId: contents
+  cost: 5000
+  category: cargoproduct-category-name-cargo
+  group: SalvageJobReward3
+
+- type: cargoProduct
+  id: SunriseCargoSalvageGunneryCircuitboard
+  icon:
+    sprite: Objects/Misc/module.rsi
+    state: cpu_security
+  product: ComputerGunneryCircuitboard
+  container:
+    entity: WrappedParcel
+    containerId: contents
+  cost: 10000
+  category: cargoproduct-category-name-cargo
+  group: SalvageJobReward3
+
+- type: cargoProduct
+  id: SunriseCargoSalvageCrusherBroadAxe
+  icon:
+    sprite: _Sunrise/Objects/Weapons/Melee/crusher_broadaxe.rsi
+    state: icon
+  product: WeaponCrusherBroadAxe
+  container:
+    entity: WrappedParcel
+    containerId: contents
+  cost: 15000
+  category: cargoproduct-category-name-cargo
+  group: SalvageJobRewardMAX
+
+- type: cargoProduct
+  id: SunriseCargoSalvageHardsuitMaxim
+  icon:
+    sprite: Clothing/OuterClothing/Hardsuits/maxim.rsi
+    state: icon
+  product: ClothingOuterHardsuitMaxim
+  container:
+    entity: WrappedParcel
+    containerId: contents
+  cost: 25000
+  category: cargoproduct-category-name-cargo
+  group: SalvageJobRewardMAX

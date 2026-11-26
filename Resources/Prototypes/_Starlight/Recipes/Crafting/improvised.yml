@@ -469,16 +469,6 @@
   description: crafting-menu-text-FSH
 
 - type: construction
-  name: crafting-menu-name-FSHT
-  id: ForgedShieldTower
-  graph: ForgedShieldTowerGraph
-  startNode: start
-  targetNode: shield
-  category: construction-category-weapons
-  objectType: Item
-  description: crafting-menu-text-FSHT
-
-- type: construction
   name: crafting-menu-name-PSH
   id: PaladinShield
   graph: PaladinShieldGraph

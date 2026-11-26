@@ -3,6 +3,7 @@ using System.Linq;
 using Content.Server.Cargo.Components;
 using Content.Server.Cargo.Systems;
 using Content.Server.Radio.EntitySystems;
+using Content.Server.Stack; // Sunrise added - ticket rewards for salvage jobs
 using Content.Server.Station.Systems;
 using Content.Shared.Cargo.Components;
 using Content.Shared.Cargo.Prototypes;
@@ -10,6 +11,7 @@ using Content.Shared.Labels.EntitySystems;
 using Content.Shared.Paper;
 using Content.Shared.Radio;
 using Content.Shared.Salvage.JobBoard;
+using Content.Shared.Stacks; // Sunrise added - ticket stack prototype
 using Robust.Server.Audio;
 using Robust.Server.GameObjects;
 using Robust.Shared.Prototypes;
@@ -28,6 +30,7 @@ public sealed partial class SalvageJobBoardSystem : EntitySystem
     [Dependency] private RadioSystem _radio = default!;
     [Dependency] private StationSystem _station = default!;
     [Dependency] private UserInterfaceSystem _ui = default!;
+    [Dependency] private StackSystem _stack = default!; // Sunrise added - ticket rewards for salvage jobs
 
     /// <summary>
     /// Radio channel that unlock messages are broadcast on.
@@ -55,7 +58,7 @@ public sealed partial class SalvageJobBoardSystem : EntitySystem
         {
             if (!FulfillsSalvageJob(sold, (args.Station, salvageJobsData), out var jobId))
                 continue;
-            TryCompleteSalvageJob((args.Station, salvageJobsData), jobId.Value);
+            TryCompleteSalvageJob((args.Station, salvageJobsData), jobId.Value, sold); // Sunrise edit - spawn tickets next to the shipment
         }
     }
 
@@ -154,7 +157,7 @@ public sealed partial class SalvageJobBoardSystem : EntitySystem
     /// <param name="ent"></param>
     /// <param name="job"></param>
     /// <returns></returns>
-    public bool TryCompleteSalvageJob(Entity<SalvageJobsDataComponent> ent, ProtoId<CargoBountyPrototype> job)
+    public bool TryCompleteSalvageJob(Entity<SalvageJobsDataComponent> ent, ProtoId<CargoBountyPrototype> job, EntityUid? sourceEntity = null) // Sunrise edit - reward spawn position
     {
         if (!GetAvailableJobs(ent).Contains(job))
             return false;
@@ -175,6 +178,11 @@ public sealed partial class SalvageJobBoardSystem : EntitySystem
                 jobProto.Reward,
                 _cargo.CreateAccountDistribution((ent,  stationBankAccount)));
         }
+
+        // Sunrise added start - Ticket with sended reward
+        if (jobProto.Tickets > 0 && sourceEntity is { Valid: true } source)
+            _stack.SpawnMultipleAtPosition(new ProtoId<StackPrototype>("SalvageTicket"), jobProto.Tickets, Transform(source).Coordinates);
+        // Sunrise added end
 
         // We ranked up!
         if (oldRank != newRank)
@@ -276,7 +284,7 @@ public sealed partial class SalvageJobBoardSystem : EntitySystem
                 ("amount", entry.Amount),
                 ("item", Loc.GetString(entry.Name))));
         }
-        _paper.SetContent(label, Loc.GetString("job-board-label-text", ("target", string.Join(',', target)), ("reward", job.Reward)));
+        _paper.SetContent(label, Loc.GetString("job-board-label-text", ("target", string.Join(',', target)), ("reward", job.Reward), ("tickets", job.Tickets))); // Sunrise edit - ticket reward на этикетке
 
         ent.Comp.NextPrintTime = _timing.CurTime + ent.Comp.PrintDelay;
     }

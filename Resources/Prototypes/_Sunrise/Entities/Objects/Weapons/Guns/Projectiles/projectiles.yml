@@ -1539,6 +1539,8 @@
     chance: 0.2
   - type: StaminaDamageOnCollide
     damage: 3
+  - type: TimedDespawn
+    lifetime: 0.2 # roughly 5.5 tiles
 
 - type: entity
   id: BulletKineticWeakSpread
@@ -1549,7 +1551,48 @@
     proto: PelletKineticWeak
     count: 6
     spread: 20
+
+- type: entity
+  id: BulletKineticSub
+  name: small kinetic bolt
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Reflective
+    reflective:
+    - NonEnergy
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: chronobolt
+      shader: unshaded
+  - type: Projectile
+    impactEffect: BulletImpactEffectKinetic
+    damage:
+      types:
+        Blunt: 10
+        Structural: 15
+  - type: TimedDespawn
+    lifetime: 0.275
+  - type: GatheringProjectile
+    chance: 0.5
+
+- type: entity
+  id: BulletKineticChain
+  parent: BulletKineticSub
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 10
+        Structural: 10
+  - type: TimedDespawn
+    lifetime: 0.5
+
 # end region PKA
+
 # Тяжёлый лазерный снаряд Sunrise, ранее находившийся в vanilla projectiles.yml.
 - type: entity
   id: BulletLaserDestroy

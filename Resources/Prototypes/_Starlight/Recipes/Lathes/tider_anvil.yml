@@ -60,17 +60,6 @@
      Plasteel: 300
 
 - type: latheRecipe
-  id: TowerForgedTA
-  result: UnfinishedForgedShieldTower
-  completetime: 120
-  materials:
-     Steel: 1300
-     Glass: 300
-     Plastic: 450
-     Cloth: 600
-     Plasteel: 600
-
-- type: latheRecipe
   id: ShotgunForgedTA
   result: UnfinishedForgedShotgun
   completetime: 90

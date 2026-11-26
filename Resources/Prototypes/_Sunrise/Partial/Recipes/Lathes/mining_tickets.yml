@@ -1,0 +1,72 @@
+- type: !PartialOnly latheRecipe
+  id: SheetSteel
+  ticketProtoId: MiningTicket
+
+- type: !PartialOnly latheRecipe
+  id: SheetGlass1
+  ticketProtoId: MiningTicket
+
+- type: !PartialOnly latheRecipe
+  id: SheetRGlass
+  ticketProtoId: MiningTicket
+
+- type: !PartialOnly latheRecipe
+  id: SheetRGlassRaw
+  ticketProtoId: MiningTicket2
+
+- type: !PartialOnly latheRecipe
+  id: SheetPGlass1
+  ticketProtoId: MiningTicket2
+
+- type: !PartialOnly latheRecipe
+  id: SheetRPGlass1
+  ticketProtoId: MiningTicket3
+
+- type: !PartialOnly latheRecipe
+  id: SheetPlasma1
+  ticketProtoId: MiningTicket
+
+- type: !PartialOnly latheRecipe
+  id: SheetPlasteel1
+  ticketProtoId: MiningTicket2
+
+- type: !PartialOnly latheRecipe
+  id: SheetUGlass1
+  ticketProtoId: MiningTicket3
+
+- type: !PartialOnly latheRecipe
+  id: SheetRUGlass1
+  ticketProtoId: MiningTicket4
+
+- type: !PartialOnly latheRecipe
+  id: MaterialDiamond
+  ticketProtoId: MiningTicket20
+
+- type: !PartialOnly latheRecipe
+  id: SheetUranium1
+  ticketProtoId: MiningTicket2
+
+- type: !PartialOnly latheRecipe
+  id: IngotGold1
+  ticketProtoId: MiningTicket
+
+- type: !PartialOnly latheRecipe
+  id: IngotSilver1
+  ticketProtoId: MiningTicket
+
+- type: !PartialOnly latheRecipe
+  id: SheetPlastic
+  ticketProtoId: MiningTicket
+
+- type: !PartialOnly latheRecipe
+  id: MaterialBananium1
+  ticketProtoId: MiningTicket5
+
+- type: !PartialOnly latheRecipe
+  id: MaterialSheetMeat
+  ticketProtoId: MiningTicket
+
+- type: !PartialOnly latheRecipe
+  id: SheetPaper
+  ticketProtoId: MiningTicket
+

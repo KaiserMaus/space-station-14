@@ -296,6 +296,9 @@
   id: WeaponRifleSKM24
   description: Cheap and reliable. Enough firepower, little accuracy. Easy to repair, hard to control during sustained.
   components:
+  - type: Tag
+    tags:
+    - SunriseSalvageSKM
   - type: Sprite
     scale: 0.9,0.9
     sprite: _Sunrise/Objects/Weapons/Guns/Rifles/skm24/Base/big.rsi
@@ -501,6 +504,9 @@
   id: WeaponRifleSKM28
   description: A marksman conversion of the standard SKM-24. Features an extended heavy barrel, reworked internals, and a mounted optical sight. Chambered in .308.
   components:
+  - type: Tag
+    tags:
+    - SunriseSalvageSKM
   - type: Sprite
     sprite: _Sunrise/Objects/Weapons/Guns/Rifles/skm28/Base/big.rsi
     layers:

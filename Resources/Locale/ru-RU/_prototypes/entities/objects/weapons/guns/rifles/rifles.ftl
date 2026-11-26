@@ -1,4 +1,4 @@
-ent-WeaponRifleAk = АКМС
+ent-WeaponRifleAk = АКМ
     .desc = Культовое оружие всех войн. Использует патроны калибра 7,62.
     .suffix = Автомат
 ent-WeaponRifleM90GrenadeLauncher = м-90-гр

@@ -275,6 +275,16 @@
   priority: 2
 
 - type: storeCategory
+  id: MiningTicketTools
+  name: store-category-ticket-tools
+  priority: 1
+
+- type: storeCategory
+  id: MiningTicketConsumeables
+  name: store-category-ticket-consumeables
+  priority: 2
+
+- type: storeCategory
   id: SalvageAmmo
   name: store-category-salvage-ammo
   priority: 3

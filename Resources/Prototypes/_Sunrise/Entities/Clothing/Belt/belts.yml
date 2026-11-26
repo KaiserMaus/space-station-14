@@ -469,6 +469,9 @@
   name: marine bandolier
   description: Smells of oil, sweat, and questionable decisions.
   components:
+  - type: Tag
+    tags:
+    - Bandolier
   - type: Sprite
     sprite: _Sunrise/Clothing/Belt/soviet_bandolier.rsi
   - type: Clothing

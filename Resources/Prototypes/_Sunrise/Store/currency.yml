@@ -35,7 +35,7 @@
 
 - type: currency
   id: SalvageTicket
-  displayName: materials-unit-tickets
+  displayName: currency-salvage-ticket
   cash:
     1: SalvageTicket
   canWithdraw: true

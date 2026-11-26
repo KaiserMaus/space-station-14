@@ -1041,7 +1041,6 @@ WeaponEnergyGunMultiphase: WeaponMultiphaseGun
 ClothingBeltAssaultFilled: null
 MagazinePistolSubMachineGunCaseless: BaseMagazinePistolCaselessRifleExtended
 SyndicateCircuitBoard: SyndimovCircuitBoard
-WeaponRifleAKM: WeaponRifleSKM24
 CrateArmoryAKMS: null
 SpawnPointPrisonGuard: null
 # 2025-12-21
@@ -1329,6 +1328,13 @@ WallRiveted: WallReinforced
 # 2026-11-07
 BluespaceBox: null
 ClothingOuterSuitCargo: null
+
+# Migrate the former cult mirror shield
+CultMirrorShield: MirrorShield
+
+# Remove the forged tower shield and its unfinished version
+ForgedShieldTower: null
+UnfinishedForgedShieldTower: null
 # region Sunrise-End
 
 # 2026-07-16

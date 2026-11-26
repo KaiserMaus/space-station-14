@@ -254,7 +254,7 @@
   id: VendorSalvageWeaponProtoKineticShotgun
   productEntity: WeaponProtoKineticShotgun
   cost:
-    SalvageTicket: 175
+    SalvageTicket: 200
   categories:
   - TicketTools
   conditions:
@@ -265,7 +265,7 @@
   id: VendorSalvageWeaponProtoKineticRepeater
   productEntity: WeaponProtoKineticRepeater
   cost:
-    SalvageTicket: 125
+    SalvageTicket: 150
   categories:
   - TicketTools
   conditions:
@@ -273,15 +273,26 @@
     stock: 3
 
 - type: listing
-  id: VendorSalvageWeaponProtoKineticHeavy
-  productEntity: WeaponProtoKineticHeavy
+  id: SunriseVendorSalvageWeaponSPKA
+  productEntity: WeaponSPKA
   cost:
-    SalvageTicket: 600
+    SalvageTicket: 200
   categories:
   - TicketTools
   conditions:
   - !type:ListingLimitedStockCondition
-    stock: 2
+    stock: 3
+
+- type: listing
+  id: SunriseVendorSalvageWeaponChainAccelerator
+  productEntity: WeaponChainAccelerator
+  cost:
+    SalvageTicket: 300
+  categories:
+  - TicketTools
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 3
 
 - type: listing
   id: VendorSalvageBoxFlare

@@ -1,5 +1,5 @@
-ent-SalvageTicket = ticket
-    .desc = Can be exchanged for equipment at ticket machines.
+ent-SalvageTicket = salvage ticket
+    .desc = Can be exchanged for equipment at the salvage ticket machine.
 ent-SalvageTicket2 = { ent-SalvageTicket }
     .desc = { ent-SalvageTicket.desc }
 ent-SalvageTicket3 = { ent-SalvageTicket }

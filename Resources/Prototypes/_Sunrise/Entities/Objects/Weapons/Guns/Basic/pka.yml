@@ -89,6 +89,13 @@
     dualWieldInaccuracyPenalty: 1
     dualWieldFireRatePenalty: 0.3
     dualWieldRecoilPenalty: 0.3
+  - type: PriceGun
+  - type: UseDelay
+    delay: 3
+  - type: Tag
+    tags:
+    - AppraisalTool
+    - Sidearm
 
 - type: entity
   name: portable proto-kinetic "Matter Dematerializer"
@@ -162,3 +169,128 @@
   - type: ContainerContainer
     containers:
       upgrades: !type:Container
+
+- type: entity
+  name: SPKA
+  id: WeaponSPKA
+  parent: [WeaponProtoKineticAcceleratorBase, BaseSalvageContraband]
+  description: Fires a barrage of low-damage kinetic bolts at a short range.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Weapons/Guns/Basic/spka.rsi
+    layers:
+    - state: icon
+  - type: Item
+    sprite: _Sunrise/Objects/Weapons/Guns/Basic/spka.rsi
+  - type: Clothing
+    sprite: _Sunrise/Objects/Weapons/Guns/Basic/spka.rsi
+    quickEquip: false
+    slots:
+    - suitStorage
+    - Belt
+  - type: UpgradeableGun
+    whitelist:
+      tags:
+      - PKAUpgrade
+  - type: ContainerContainer
+    containers:
+      upgrades: !type:Container
+  - type: Gun
+    projectileSpeed: 20
+    fireRate: 2
+    selectedMode: FullAuto
+    angleDecay: 45
+    minAngle: 21
+    maxAngle: 32
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
+      params:
+        pitch: 1.5
+        variation: 0.12
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 3
+    rechargeSound:
+      path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+      params:
+        pitch: 1.8
+        variation: 0.08
+  - type: BasicEntityAmmoProvider
+    proto: BulletKineticSub
+    capacity: 8
+    count: 8
+  - type: CanDualWield
+    dualWieldInaccuracyPenalty: 0.68
+  - type: GunWieldBonus
+    minAngle: -19
+    maxAngle: -16
+
+- type: entity
+  name: Chain Accelerator
+  id: WeaponChainAccelerator
+  parent: [WeaponProtoKineticAcceleratorBase, BaseSalvageContraband]
+  description: Fires a steady stream of low-damage kinetic bolts at a short range.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Weapons/Guns/Basic/pkmg.rsi
+    layers:
+    - state: icon
+  - type: Item
+    sprite: _Sunrise/Objects/Weapons/Guns/Basic/pkmg.rsi
+    size: Huge
+    shape:
+    - 0,0,4,3
+  - type: Clothing
+    sprite: _Sunrise/Objects/Weapons/Guns/Basic/pkmg.rsi
+    quickEquip: false
+    slots:
+    - suitStorage
+    - Belt
+  - type: UpgradeableGun
+    whitelist:
+      tags:
+      - PKAUpgrade
+  - type: ContainerContainer
+    containers:
+      upgrades: !type:Container
+  - type: Gun
+    projectileSpeed: 20
+    fireRate: 1.75
+    minAngle: 24
+    maxAngle: 45
+    angleIncrease: 4
+    angleDecay: 16
+    selectedMode: FullAuto
+    availableModes:
+      - SemiAuto
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
+      params:
+        pitch: 1.9
+        variation: 0.12
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: .9
+    rechargeSound:
+      path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+      params:
+        pitch: 1.8
+        variation: 0.08
+  - type: BasicEntityAmmoProvider
+    proto: BulletKineticChain
+    capacity: 12
+    count: 12
+  - type: GunWieldBonus
+    minAngle: -20
+    maxAngle: -25
+  - type: ClothingSpeedModifier
+    walkModifier: .8
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier
+    walkModifier: .6
+    sprintModifier: 0.4
+  - type: GunRequiresWield
+  - type: UseDelay
+    delay: 1

@@ -5,7 +5,8 @@
 
 - type: cargoBounty
   id: BountyTeethSpaceCarp
-  reward: 7500
+  reward: 50 # Sunrise edit - move the reward to tickets
+  tickets: 500 # Sunrise added - ticket reward
   description: bounty-description-tooth-space-carp
   group: SalvageJobTier1
   sprite:
@@ -20,7 +21,8 @@
 
 - type: cargoBounty
   id: BountySalvageScrap
-  reward: 7500
+  reward: 50 # Sunrise edit - move the reward to tickets
+  tickets: 500 # Sunrise added - ticket reward
   description: bounty-description-salvage-scrap
   group: SalvageJobTier1
   sprite:
@@ -35,7 +37,8 @@
 
 - type: cargoBounty
   id: BountySalvageOreGold
-  reward: 7500
+  reward: 50 # Sunrise edit - move the reward to tickets
+  tickets: 600 # Sunrise added - ticket reward
   description: bounty-description-salvage-ore-gold
   group: SalvageJobTier1
   sprite:
@@ -50,7 +53,8 @@
 
 - type: cargoBounty
   id: BountySalvageOreSilver
-  reward: 7500
+  reward: 50 # Sunrise edit - move the reward to tickets
+  tickets: 500 # Sunrise added - ticket reward
   description: bounty-description-salvage-ore-silver
   group: SalvageJobTier1
   sprite:
@@ -67,7 +71,8 @@
 
 - type: cargoBounty
   id: BountyTeethSharkminnow
-  reward: 12500
+  reward: 50 # Sunrise edit - move the reward to tickets
+  tickets: 1000 # Sunrise added - ticket reward
   description: bounty-description-tooth-sharkminnow
   group: SalvageJobTier2
   sprite:
@@ -82,7 +87,8 @@
 
 - type: cargoBounty
   id: BountySalvageOrePlasma
-  reward: 12500
+  reward: 50 # Sunrise edit - move the reward to tickets
+  tickets: 800 # Sunrise added - ticket reward
   description: bounty-description-salvage-ore-plasma
   group: SalvageJobTier2
   sprite:
@@ -97,7 +103,8 @@
 
 - type: cargoBounty
   id: BountySalvageOreUranium
-  reward: 12500
+  reward: 50 # Sunrise edit - move the reward to tickets
+  tickets: 800 # Sunrise added - ticket reward
   description: bounty-description-salvage-ore-uranium
   group: SalvageJobTier2
   sprite:
@@ -112,7 +119,8 @@
 
 - type: cargoBounty
   id: BountySalvageOreBananium
-  reward: 12500
+  reward: 50 # Sunrise edit - move the reward to tickets
+  tickets: 1000 # Sunrise added - ticket reward
   description: bounty-description-salvage-ore-bananium
   group: SalvageJobTier2
   sprite:
@@ -129,7 +137,8 @@
 
 - type: cargoBounty
   id: BountyGoliathPlates
-  reward: 20000
+  reward: 50 # Sunrise edit - move the reward to tickets
+  tickets: 1500 # Sunrise added - ticket reward
   description: bounty-description-plates
   group: SalvageJobTier3
   sprite:
@@ -144,7 +153,8 @@
 
 - type: cargoBounty
   id: BountyHivelordRemains
-  reward: 20000
+  reward: 50 # Sunrise edit - move the reward to tickets
+  tickets: 1500 # Sunrise added - ticket reward
   description: bounty-description-remains
   group: SalvageJobTier3
   sprite:
@@ -159,7 +169,8 @@
 
 - type: cargoBounty
   id: BountySalvageDiamond
-  reward: 20000
+  reward: 50 # Sunrise edit - move the reward to tickets
+  tickets: 1500 # Sunrise added - ticket reward
   description: bounty-description-diamond
   group: SalvageJobTier3
   sprite:

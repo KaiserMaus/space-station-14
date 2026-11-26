@@ -303,27 +303,6 @@
 
 - type: entity
   parent: BaseItem
-  id: UnfinishedForgedShieldTower
-  name: forged tower shield parts
-  description: Some assembly required, and welding too.
-  components:
-  - type: Item
-    size: Ginormous
-  - type: Sprite
-    sprite: _Starlight/Objects/Weapons/Melee/forged_tower_shield.rsi
-    state: unfinished
-  - type: ToolRefinable
-    refineResult:
-    - id: ForgedShieldTower
-  - type: Tag
-    tags:
-    - Metal
-  - type: Construction
-    graph: ForgedShieldTowerGraph
-    node: shield
-
-- type: entity
-  parent: BaseItem
   id: UnfinishedPaladinShield
   name: paladin shield parts
   description: The shield of a true paladin..! In pieces. Needs some welding.

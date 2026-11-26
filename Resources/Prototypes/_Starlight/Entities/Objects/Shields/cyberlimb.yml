@@ -63,22 +63,15 @@
       reflectProb: 0.15
       reflects:
         - Energy
+    # Sunrise edit start - use flat reductions
     - type: Blocking
       passiveBlockModifier:
-        coefficients:
-          Blunt: 0.75
-          Slash: 0.75
-          Piercing: 0.75
-          Heat: 0.75
-      activeBlockModifier:
-        coefficients:
-          Blunt: 0.45
-          Slash: 0.45
-          Piercing: 0.45
-          Heat: 0.45
         flatReductions:
-          Heat: 1
-          Piercing: 1
+          Blunt: 3
+          Slash: 3
+          Piercing: 9
+          Heat: 24
+    # Sunrise edit end
     - type: Appearance
     - type: Damageable
     - type: Injurable

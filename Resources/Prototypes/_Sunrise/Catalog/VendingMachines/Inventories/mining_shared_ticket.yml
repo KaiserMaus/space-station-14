@@ -1,0 +1,326 @@
+# Shared ticket-vendor items priced in mining tickets
+# categories: MiningTicketTools, MiningTicketConsumeables
+
+- type: listing
+  id: MiningCurrencyVendorMiningBinoculars
+  productEntity: Binoculars
+  cost:
+    MiningTicket: 25
+  categories:
+  - MiningTicketTools
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 3
+
+- type: listing
+  id: MiningCurrencyVendorMiningMiningDrill
+  productEntity: MiningDrill
+  cost:
+    MiningTicket: 180
+  categories:
+  - MiningTicketTools
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 3
+
+- type: listing
+  id: MiningCurrencyVendorMiningMassScanner
+  productEntity: HandHeldMassScanner
+  cost:
+    MiningTicket: 200
+  categories:
+  - MiningTicketTools
+
+- type: listing
+  id: MiningCurrencyVendorMiningWeaponPlasmaCutter
+  productEntity: WeaponPlasmaCutter
+  cost:
+    MiningTicket: 550
+  categories:
+  - MiningTicketTools
+
+- type: listing
+  id: MiningCurrencyVendorMiningEnergyPickaxe
+  productEntity: EnergyPickaxe
+  cost:
+    MiningTicket: 600
+  categories:
+  - MiningTicketTools
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 3
+
+- type: listing
+  id: MiningCurrencyVendorMiningMedkitAdvancedFilled
+  productEntity: MedkitAdvancedFilled
+  cost:
+    MiningTicket: 250
+  categories:
+  - MiningTicketConsumeables
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 9
+
+- type: listing
+  id: MiningCurrencyVendorMiningMedkitFilled
+  productEntity: MedkitFilled
+  cost:
+    MiningTicket: 150
+  categories:
+  - MiningTicketConsumeables
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 9
+
+- type: listing
+  id: MiningCurrencyVendorMiningMedkitCombatFilled
+  productEntity: MedkitCombatFilled
+  cost:
+    MiningTicket: 400
+  categories:
+  - MiningTicketConsumeables
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 9
+
+- type: listing
+  id: MiningCurrencyVendorTicketReviverImplant
+  productEntity: ReviverImplant
+  cost:
+    MiningTicket: 800
+  categories:
+  - MiningTicketConsumeables
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 6
+
+- type: listing
+  id: MiningCurrencyVendorMiningAmpulaBica
+  productEntity: AmpulaBica
+  cost:
+    MiningTicket: 35
+  categories:
+  - MiningTicketConsumeables
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 30
+
+- type: listing
+  id: MiningCurrencyVendorMiningPatchPackBruteHeat
+  productEntity: PatchPackBruteHeat
+  cost:
+    MiningTicket: 50
+  categories:
+  - MiningTicketConsumeables
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 15
+
+- type: listing
+  id: MiningCurrencyVendorMiningBoxMRE
+  productEntity: BoxMRE
+  cost:
+    MiningTicket: 30
+  categories:
+  - MiningTicketConsumeables
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 10
+
+- type: listing
+  id: MiningCurrencyVendorMiningFulton
+  productEntity: Fulton
+  cost:
+    MiningTicket: 80
+  categories:
+  - MiningTicketConsumeables
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: MiningCurrencyVendorSalvageGrapplingGun
+  productEntity: WeaponGrapplingGun
+  cost:
+    MiningTicket: 40
+  categories:
+  - MiningTicketTools
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 3
+
+- type: listing
+  id: MiningCurrencyVendorSalvagePickaxe
+  productEntity: Pickaxe
+  cost:
+    MiningTicket: 25
+  categories:
+  - MiningTicketTools
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 9
+
+- type: listing
+  id: MiningCurrencyVendorSalvageMiningDrillDiamond
+  productEntity: MiningDrillDiamond
+  cost:
+    MiningTicket: 515
+  categories:
+  - MiningTicketTools
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
+
+- type: listing
+  id: MiningCurrencyVendorSalvageWeaponGauntletDrill
+  productEntity: WeaponGauntletDrill
+  cost:
+    MiningTicket: 525
+  categories:
+  - MiningTicketTools
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
+
+- type: listing
+  id: MiningCurrencyVendorSalvageMineralScanner
+  productEntity: MineralScanner
+  cost:
+    MiningTicket: 350
+  categories:
+  - MiningTicketTools
+
+- type: listing
+  id: MiningCurrencyVendorSalvagePKAUpgradeDamage
+  productEntity: PKAUpgradeDamage
+  cost:
+    MiningTicket: 200
+  categories:
+  - MiningTicketTools
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: MiningCurrencyVendorSalvagePKAUpgradeRange
+  productEntity: PKAUpgradeRange
+  cost:
+    MiningTicket: 200
+  categories:
+  - MiningTicketTools
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: MiningCurrencyVendorSalvagePKAUpgradeFireRate
+  productEntity: PKAUpgradeFireRate
+  cost:
+    MiningTicket: 200
+  categories:
+  - MiningTicketTools
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: MiningCurrencyVendorSalvageFloodlight
+  productEntity: Floodlight
+  cost:
+    MiningTicket: 55
+  categories:
+  - MiningTicketTools
+
+- type: listing
+  id: MiningCurrencyVendorSalvageWeaponFlareGun
+  productEntity: WeaponFlareGun
+  cost:
+    MiningTicket: 30
+  categories:
+  - MiningTicketTools
+
+- type: listing
+  id: MiningCurrencyVendorSalvageWeaponProtoKineticAccelerator
+  productEntity: WeaponProtoKineticAccelerator
+  cost:
+    MiningTicket: 60
+  categories:
+  - MiningTicketTools
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: MiningCurrencyVendorSalvageWeaponProtoKineticShotgun
+  productEntity: WeaponProtoKineticShotgun
+  cost:
+    MiningTicket: 175
+  categories:
+  - MiningTicketTools
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 3
+
+- type: listing
+  id: MiningCurrencyVendorSalvageWeaponProtoKineticRepeater
+  productEntity: WeaponProtoKineticRepeater
+  cost:
+    MiningTicket: 125
+  categories:
+  - MiningTicketTools
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 3
+
+- type: listing
+  id: MiningCurrencyVendorSalvageWeaponProtoKineticHeavy
+  productEntity: WeaponProtoKineticHeavy
+  cost:
+    MiningTicket: 600
+  categories:
+  - MiningTicketTools
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
+
+- type: listing
+  id: MiningCurrencyVendorSalvageBoxFlare
+  productEntity: BoxFlare
+  cost:
+    MiningTicket: 15
+  categories:
+  - MiningTicketConsumeables
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 8
+
+- type: listing
+  id: MiningCurrencyVendorSalvageBoxShotgunFlare
+  productEntity: BoxShotgunFlare
+  cost:
+    MiningTicket: 25
+  categories:
+  - MiningTicketConsumeables
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 8
+
+- type: listing
+  id: MiningCurrencyVendorSalvageFultonBeacon
+  productEntity: FultonBeacon
+  cost:
+    MiningTicket: 100
+  categories:
+  - MiningTicketConsumeables
+
+- type: listing
+  id: MiningCurrencyVendorSalvageFulton1
+  productEntity: Fulton1
+  cost:
+    MiningTicket: 5
+  categories:
+  - MiningTicketConsumeables
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 20
+

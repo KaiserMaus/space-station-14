@@ -148,7 +148,7 @@
       0:
         title: salvage-job-rank-title-0
         bountyGroup: SalvageJobTier1
-      3:
+      4: # Sunrise edit - account for additional salvage jobs
         title: salvage-job-rank-title-1
         bountyGroup: SalvageJobTier2
         unlockedMarket: SalvageJobReward2

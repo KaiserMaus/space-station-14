@@ -270,7 +270,7 @@
       cultistFactoryProduction-ArmorCult:
         - CultRobeModify
       cultistFactoryProduction-RobeModify:
-        - CultMirrorShield
+        - MirrorShield
       cultistFactoryProduction-MirrorShield:
         - TrueHalberd
   - type: UserInterface
@@ -457,7 +457,7 @@
       cultistFactoryProduction-RobeModify:
       - CultRobeModify
       cultistFactoryProduction-MirrorShield:
-      - CultMirrorShield
+      - MirrorShield
       cultistFactoryProduction-Halberd:
       - NarsieHalberd
 
@@ -485,7 +485,7 @@
       cultistFactoryProduction-RobeModify:
       - CultRobeModify
       cultistFactoryProduction-MirrorShield:
-      - CultMirrorShield
+      - MirrorShield
       cultistFactoryProduction-Halberd:
       - NarbeeHalberd
 
@@ -513,7 +513,7 @@
       cultistFactoryProduction-RobeModify:
       - CultRobeModify
       cultistFactoryProduction-MirrorShield:
-      - CultMirrorShield
+      - MirrorShield
       cultistFactoryProduction-Halberd:
       - ReaperHalberd
 

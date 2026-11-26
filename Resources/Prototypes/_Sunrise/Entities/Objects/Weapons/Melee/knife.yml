@@ -8,6 +8,7 @@
     tags:
     - CombatKnife
     - Knife
+    - CommieBasicWeapon
   - type: Sprite
     sprite: _Sunrise/Objects/Weapons/Melee/finka.rsi
     state: icon

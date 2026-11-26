@@ -23,6 +23,10 @@
   name: Vodkizine bottle
   description: The best cure for and cause of a hangover.
   components:
+  - type: Tag
+    tags:
+    - DrinkBottle
+    - Vodkizine
   - type: Solution
     id: drink
     solution:

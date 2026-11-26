@@ -250,8 +250,8 @@
     name: vendor-mining-ticket-machine
     categories:
     - MiningEquipment
-    - TicketTools
+    - MiningTicketTools
     - MiningMech
-    - TicketConsumeables
+    - MiningTicketConsumeables
     currencyWhitelist:
-    - SalvageTicket
+    - MiningTicket

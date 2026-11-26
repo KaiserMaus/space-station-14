@@ -741,7 +741,7 @@
     layers:
     - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
       state: human
-    - sprite: _Sunrise/Clothing/Uniforms/Jumpsuit/alcoholichka.rsi
+    - sprite: _Sunrise/Clothing/Uniforms/Jumpsuit/soviet_marine.rsi
       state: equipped-INNERCLOTHING
     - sprite: Clothing/Mask/merc.rsi
       state: equipped-MASK
@@ -856,7 +856,7 @@
     layers:
     - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
       state: human
-    - sprite: _Sunrise/Clothing/Uniforms/Jumpsuit/alcoholichka.rsi
+    - sprite: _Sunrise/Clothing/Uniforms/Jumpsuit/soviet_marine.rsi
       state: equipped-INNERCLOTHING
     - sprite: Clothing/Mask/merc.rsi
       state: equipped-MASK
@@ -882,7 +882,7 @@
     layers:
     - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
       state: human
-    - sprite: _Sunrise/Clothing/Uniforms/Jumpsuit/alcoholichka.rsi
+    - sprite: _Sunrise/Clothing/Uniforms/Jumpsuit/soviet_marine.rsi
       state: equipped-INNERCLOTHING
     - sprite: Clothing/Mask/merc.rsi
       state: equipped-MASK
@@ -908,7 +908,7 @@
     layers:
     - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
       state: human
-    - sprite: _Sunrise/Clothing/Uniforms/Jumpsuit/alcoholichka.rsi
+    - sprite: _Sunrise/Clothing/Uniforms/Jumpsuit/soviet_marine.rsi
       state: equipped-INNERCLOTHING
     - sprite: Clothing/OuterClothing/Coats/hos_trenchcoat.rsi
       state: equipped-OUTERCLOTHING
@@ -948,7 +948,7 @@
     layers:
     - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
       state: human
-    - sprite: _Sunrise/Clothing/Uniforms/Jumpsuit/alcoholichka.rsi
+    - sprite: _Sunrise/Clothing/Uniforms/Jumpsuit/soviet_marine.rsi
       state: equipped-INNERCLOTHING
     - sprite: _Sunrise/Clothing/Head/Hats/beret_atmos.rsi
       state: equipped-HELMET
@@ -973,7 +973,7 @@
     layers:
     - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
       state: human
-    - sprite: _Sunrise/Clothing/Uniforms/Jumpsuit/alcoholichka.rsi
+    - sprite: _Sunrise/Clothing/Uniforms/Jumpsuit/soviet_marine.rsi
       state: equipped-INNERCLOTHING
     - sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
       state: HOS-equipped-OUTERCLOTHING
@@ -1001,7 +1001,7 @@
     layers:
     - sprite: _Sunrise/Mobs/Species/Templates/human.rsi
       state: human
-    - sprite: _Sunrise/Clothing/Uniforms/Jumpsuit/alcoholichka.rsi
+    - sprite: _Sunrise/Clothing/Uniforms/Jumpsuit/soviet_marine.rsi
       state: equipped-INNERCLOTHING
     - sprite: Clothing/Mask/merc.rsi
       state: equipped-MASK

@@ -174,16 +174,11 @@
       price: 90
     - type: Blocking
       passiveBlockModifier:
-        coefficients:
-          Blunt: 0.7
-          Slash: 0.7
-      activeBlockModifier:
-        coefficients:
-          Blunt: 0.5
-          Slash: 0.5
         flatReductions:
-          Blunt: 3
-          Slash: 3
+          Blunt: 12
+          Slash: 9
+          Piercing: 3
+          Heat: 3
     - type: Damageable
     - type: Injurable
       damageContainer: Shield
